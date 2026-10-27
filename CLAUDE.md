@@ -9,8 +9,8 @@ Intelligence Company site. Started 27 Oct 2026 at Tom's request after a review o
   Mission Control).
 - Intelligence Company products: Watchfloor (beta; CONTEXT's rebuild, `D:\Projects\more-context`), Noisefloor
   (one word since 27 Oct; `D:\Projects\noise-floor`), Vigil, CONTEXT (`D:\Projects\geo-context`), PropertyCast
-  (stays here for now), Title 10 Field Guide (`activation.`), Listening Post (sign-in job app; not listed on the hub
-  until Tom says).
+  (stays here for now), Title 10 Field Guide (`activation.`), Listening Post (invite-only job-search app; listed on the hub
+  as "Invite only" since 27 Oct).
 - Names for new intel products come from the vocabulary of watching and listening.
 - Each product keeps its own colours. Every site carries the house layer: the footer pattern (who, updated date,
   source code and licence if public, terms, data credits, Sources page), the same About structure (what it is,
@@ -33,7 +33,9 @@ Intelligence Company site. Started 27 Oct 2026 at Tom's request after a review o
 - Static files in `site/`, no build step. Firebase Hosting site `theintelligencecompany` in project
   context-484804: https://theintelligencecompany.web.app. Deploy (needs Tom's yes):
   `firebase deploy --only hosting:hub --project context-484804`.
-- Hidden from search engines (meta, X-Robots-Tag, robots.txt) until Tom approves going public.
+- Hidden from search engines (meta, X-Robots-Tag, robots.txt) until Tom approves going public. Tom, 27 Oct: stay
+  hidden until  points at the hub.
+- Contact shown on the hub: support@theintelligence.company (Tom, 27 Oct). The About names Tom only (his choice).
 - Apex domain: Tom adds `theintelligence.company` in the Firebase console (Hosting, theintelligencecompany site,
   Add custom domain) and puts the A/TXT records it shows into Squarespace DNS. Claude is blocked from DNS changes.
 - Times: store UTC; display per the shared module. Messages to Tom use Central time.
