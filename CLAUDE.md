@@ -16,9 +16,14 @@ Intelligence Company site. Started 27 Oct 2026 at Tom's request after a review o
   source code and licence if public, terms, data credits, Sources page), the same About structure (what it is,
   method, limits, sources), and the shared time settings.
 - Folders from other work belong to neither house.
+- Licences: products that may earn money stay on public GitHub under GNU AGPL-3.0 (Vigil, `4b6bc35`; Noisefloor,
+  `cf0aa94`; Tom, 27 Oct 2026). Title 10, PropertyCast and Watchfloor have no licence file yet; ask Tom before
+  adding one.
 
 ## Shared code
-- `site/shared/tic-time.js` + `tic-time.css` (v1.0): time display. House rule: store UTC; show the viewer's own
+- `site/shared/tic-time.js` + `tic-time.css` (v1.2; v1.2 fixed a first visit saving zone=undefined, which opened
+  the dialog on "Other"): time display. Copies: Watchfloor `web/`, Title 10 `deploy/public/`, Noisefloor
+  `site_src/`, PropertyCast `src/wx/static/`, CONTEXT `public/`, Vigil `public/`, Listening Post `web/public/`. House rule: store UTC; show the viewer's own
   zone by default, always naming it; a settings menu for zone (automatic, Zulu/UTC, major zones, any IANA zone) and
   12/24-hour clock. On `*.theintelligence.company` the choice is kept in a domain-wide cookie so it follows the
   visitor across sites. Copy the files into each site and keep the version line; the hub also serves them at
