@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "hub",
+      "public": "site",
+      "ignore": ["**/.*"],
+      "headers": [
+        {"source": "**/*.@(html|js|css)", "headers": [{"key": "Cache-Control", "value": "no-cache"}]},
+        {"source": "**", "headers": [
+          {"key": "X-Content-Type-Options", "value": "nosniff"},
+          {"key": "Referrer-Policy", "value": "strict-origin-when-cross-origin"},
+          {"key": "X-Robots-Tag", "value": "noindex, nofollow"},
+          {"key": "Content-Security-Policy", "value": "default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; frame-ancestors 'none'; base-uri 'self'"}
+        ]},
+        {"source": "/shared/**", "headers": [{"key": "Access-Control-Allow-Origin", "value": "*"}]}
+      ]
+    }
+  ]
+}
