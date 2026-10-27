@@ -1,4 +1,4 @@
-/*! tic-time.js v1.0 · The Intelligence Company shared time display · canonical copy:
+/*! tic-time.js v1.1 · The Intelligence Company shared time display · canonical copy:
  *  [local path] (copy this file into each site; keep the version line).
  *
  *  House rule (Tom, 27 Oct 2026): store UTC; show times in the viewer's own time zone by default, always naming
@@ -8,6 +8,9 @@
  *
  *  Classic script: load it before your own code; it defines window.TicTime. No dependencies. Pair with tic-time.css.
  *    TicTime.format(isoOrDate, {date: true, seconds: false})  -> "27 Oct, 9:05 PM CDT" / "27 Oct 02:05Z"
+ *      options: date (default true), time (default true), seconds, year, weekday (v1.1: "Mon 14:00 CDT"),
+ *      zoneName: false (v1.1: leave the zone off, e.g. chart axes when the page names the zone once;
+ *      TicTime.zoneLabel() gives that name, e.g. "CDT" or "Zulu (UTC)")
  *    TicTime.onChange(fn)              re-render when the setting changes (also from another tab)
  *    TicTime.mountSettings(el)         adds a "Time" button that opens the settings dialog
  *    TicTime.renderAll(root)           fills every <time datetime="..." data-tic="datetime|time|date"> in root
@@ -88,20 +91,31 @@
     if (!d || isNaN(d.getTime())) return "—";
     var z = zone(), h12 = hour12(), showDate = opts.date !== false, showTime = opts.time !== false;
     if (z === "UTC" && !h12) {
-      var p = new Intl.DateTimeFormat("en-GB", { timeZone: "UTC", day: "numeric", month: "short", hour: "2-digit",
-        minute: "2-digit", second: opts.seconds ? "2-digit" : undefined, hourCycle: "h23" }).formatToParts(d);
+      var p = new Intl.DateTimeFormat("en-GB", { timeZone: "UTC", weekday: "short", day: "numeric", month: "short",
+        hour: "2-digit", minute: "2-digit", second: opts.seconds ? "2-digit" : undefined, hourCycle: "h23" }).formatToParts(d);
       var get = function (t) { var x = p.filter(function (q) { return q.type === t; })[0]; return x ? x.value : ""; };
       var t = get("hour") + ":" + get("minute") + (opts.seconds ? ":" + get("second") : "") + "Z";
       var day = get("day") + " " + get("month");
-      return showDate && showTime ? day + " " + t : showTime ? t : day;
+      var wd = opts.weekday ? get("weekday") + " " : "";
+      return wd + (showDate && showTime ? day + " " + t : showTime ? t : day);
     }
     var o = { timeZone: z };
+    if (opts.weekday) o.weekday = "short";
     if (showDate) { o.day = "numeric"; o.month = "short"; if (opts.year) o.year = "numeric"; }
     if (showTime) {
       o.hour = "numeric"; o.minute = "2-digit"; if (opts.seconds) o.second = "2-digit";
-      o.hourCycle = h12 ? "h12" : "h23"; o.timeZoneName = "short";
+      o.hourCycle = h12 ? "h12" : "h23"; if (opts.zoneName !== false) o.timeZoneName = "short";
     }
     try { return new Intl.DateTimeFormat(undefined, o).format(d); } catch (e) { return d.toISOString(); }
+  }
+
+  function zoneLabel() {
+    if (zone() === "UTC") return "Zulu (UTC)";
+    try {
+      var p = new Intl.DateTimeFormat("en-US", { timeZone: zone(), timeZoneName: "short" }).formatToParts(new Date());
+      var n = p.filter(function (q) { return q.type === "timeZoneName"; })[0];
+      return n ? n.value : zone();
+    } catch (e) { return zone(); }
   }
 
   function set(partial) {
@@ -185,6 +199,6 @@
     return btn;
   }
 
-  window.TicTime = { version: "1.0", format: format, zone: zone, hour12: hour12, get: function () { return Object.assign({}, settings); },
+  window.TicTime = { version: "1.1", format: format, zone: zone, zoneLabel: zoneLabel, hour12: hour12, get: function () { return Object.assign({}, settings); },
     set: set, onChange: onChange, renderAll: renderAll, mountSettings: mountSettings, zones: ZONES.slice() };
 })();
