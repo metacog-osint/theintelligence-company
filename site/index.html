@@ -6,101 +6,158 @@
 <meta name="robots" content="noindex, nofollow">
 <title>The Intelligence Company</title>
 <meta name="description" content="Open-source intelligence tools from the Red River Valley: conflict warning, the contested radio spectrum, cyber threats and verified forecasting.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23142235'/%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='%23e3a83b' stroke-width='2.5'/%3E%3Ccircle cx='16' cy='16' r='2' fill='%23e3a83b'/%3E%3C/svg%3E">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23142235'/%3E%3Ccircle cx='16' cy='16' r='9' fill='none' stroke='%23e3a83b' stroke-width='3'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%23e3a83b'/%3E%3C/svg%3E">
+<link rel="preload" href="fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/ibm-plex-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="shared/tic-time.css">
 </head>
 <body>
-<header class="top">
-  <div class="wrap top-inner">
-    <a class="brand" href="/"><span class="mark" aria-hidden="true"></span>The Intelligence Company</a>
-    <nav aria-label="Main"><a href="#products">Products</a><a href="#about">About</a><span id="time-settings"></span></nav>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="util">
+  <div class="wrap util-inner">
+    <span>Moorhead, Minnesota · Publicly available information only</span>
+    <span class="util-time"><span id="clock" aria-live="off"></span><span id="time-settings"></span></span>
+  </div>
+</div>
+
+<header class="wrap mast">
+  <div class="mast-inner">
+    <a class="brand" href="/">
+      <svg class="mark" width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="13" fill="none" stroke="#E3A83B" stroke-width="3.5"/><circle cx="17" cy="17" r="4.5" class="mark-dot"/></svg>
+      <span>The Intelligence Company</span>
+    </a>
+    <nav aria-label="Main">
+      <a href="#products">Products</a>
+      <a href="#standards">How we work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </div>
 </header>
 
-<main class="wrap">
-  <section class="hero">
-    <h1>Open-source intelligence, built in the Red River Valley.</h1>
-    <p class="lede">We build monitoring and analysis tools from publicly available information: warning on conflict,
-      the contested radio spectrum, cyber threats, and forecasts that check themselves. Every product credits its
-      sources, dates its claims and publishes its methods.</p>
+<main id="main">
+  <section class="wrap hero">
+    <div>
+      <p class="kicker">Open-source intelligence · Red River Valley</p>
+      <h1>Open-source intelligence, built in the Red River Valley.</h1>
+      <p class="lede">We build monitoring and analysis tools from publicly available information: warning on conflict,
+        the contested radio spectrum, cyber threats, and forecasts that check themselves. Every product credits its
+        sources, dates its claims and publishes its methods.</p>
+      <p class="actions">
+        <a class="btn" href="#products">See the products</a>
+        <a class="btn btn-line" href="#standards">How we work</a>
+      </p>
+    </div>
+
+    <aside class="latest" aria-labelledby="latest-h">
+      <h2 id="latest-h" class="label">Latest from the products</h2>
+      <article class="latest-item" id="latest-noisefloor">
+        <p class="latest-meta">Noisefloor</p>
+        <p class="latest-text">Today's briefing on GPS interference worldwide, from aircraft, satellite and official sources.</p>
+        <a class="latest-link" href="https://noisefloor.theintelligence.company">Open Noisefloor →</a>
+      </article>
+      <article class="latest-item" id="latest-watchfloor">
+        <p class="latest-meta">Watchfloor</p>
+        <p class="latest-text">How the world's news covered each conflict zone yesterday, against its own usual level.</p>
+        <a class="latest-link" href="https://watchfloor.theintelligence.company">Open Watchfloor →</a>
+      </article>
+    </aside>
   </section>
 
-  <section id="products" aria-labelledby="products-h">
-    <h2 id="products-h">Products</h2>
+  <section id="products" class="products" aria-labelledby="products-h">
+    <div class="wrap">
+      <p class="kicker">Products</p>
+      <h2 id="products-h" class="section-h">Tools that show their sources and their working.</h2>
 
-    <h3>Warning and monitoring</h3>
-    <div class="cards">
-      <a class="card" href="https://watchfloor.web.app">
-        <span class="card-top"><span class="name">Watchfloor</span><span class="badge beta">Beta</span></span>
-        <span class="what">A daily warning picture for 15 conflict zones and 5 strategic topics, built from the world's news:
-          what changed, and how each side is telling it.</span>
-      </a>
-      <a class="card" href="https://noisefloor.theintelligence.company">
-        <span class="card-top"><span class="name">Noisefloor</span><span class="badge live">Live</span></span>
-        <span class="what">Where the radio spectrum is contested: GNSS jamming and spoofing, and what it does to
-          navigation and satellite links. Measures effects and states its evidence.</span>
-      </a>
-      <a class="card" href="https://vigil.theintelligence.company">
-        <span class="card-top"><span class="name">Vigil</span><span class="badge live">Live</span></span>
-        <span class="what">Cyber threat intelligence: ransomware, exploited vulnerabilities and threat indicators,
-          with the history kept.</span>
-      </a>
-      <a class="card" href="https://context.theintelligence.company">
-        <span class="card-top"><span class="name">CONTEXT</span><span class="badge live">Live</span></span>
-        <span class="what">How the world's press is covering 15 conflict zones and 5 strategic topics, refreshed
-          twice a day. Watchfloor's predecessor.</span>
-      </a>
-    </div>
+      <div class="feature">
+        <div>
+          <p class="meta">Warning and monitoring · <span class="st-live">Live</span></p>
+          <h3 class="feature-h">Noisefloor</h3>
+          <p class="feature-text">Where the radio spectrum is contested: GNSS jamming and spoofing, and what it does to
+            navigation and satellite links. Measures effects and states its evidence.</p>
+          <ul class="points">
+            <li>A daily map of where aircraft lost GPS, every day since 1 October 2025</li>
+            <li>Spoofing, satellite noise floor and radar-emitter layers</li>
+            <li>Every object in the geostationary belt on a globe</li>
+          </ul>
+          <a class="more" href="https://noisefloor.theintelligence.company">Open Noisefloor →</a>
+        </div>
+        <figure>
+          <img src="img/noisefloor-map.webp" width="1600" height="909" loading="lazy" alt="Noisefloor map of North America, Europe, Africa and the Middle East, with cells where aircraft lost GPS shaded orange and brown around the Baltic, the Black Sea and the Gulf">
+          <figcaption>Noisefloor's map of where aircraft lost GPS (screenshot, 28 Oct 2026).</figcaption>
+        </figure>
+      </div>
 
-    <h3>Forecasting</h3>
-    <div class="cards">
-      <a class="card" href="https://propertycast.theintelligence.company">
-        <span class="card-top"><span class="name">PropertyCast</span><span class="badge live">Live</span></span>
-        <span class="what">A hyperlocal forecast for one property that verifies itself every hour against its own
-          weather station, with a garden decision layer.</span>
-      </a>
-    </div>
+      <div class="feature feature-rev">
+        <figure>
+          <img src="img/watchfloor.webp" width="1600" height="1029" loading="lazy" alt="Watchfloor's table of conflict zones with story counts and each zone's attention against its typical level">
+          <figcaption>Watchfloor's zone board (screenshot, 28 Oct 2026).</figcaption>
+        </figure>
+        <div>
+          <p class="meta">Warning and monitoring · <span class="st-beta">Beta</span></p>
+          <h3 class="feature-h">Watchfloor</h3>
+          <p class="feature-text">A daily warning picture for 15 conflict zones and 5 strategic topics, built from the
+            world's news: what changed, and how each side is telling it.</p>
+          <a class="more" href="https://watchfloor.theintelligence.company">Open Watchfloor →</a>
+        </div>
+      </div>
 
-    <h3>For Guard members</h3>
-    <div class="cards">
-      <a class="card" href="https://activation.theintelligence.company">
-        <span class="card-top"><span class="name">Title 10 Field Guide</span><span class="badge live">Live</span></span>
-        <span class="what">What activated Air Guard members earn on federal orders, what gets missed, and what to do
-          before and after release. Unofficial; compiled from public sources.</span>
-      </a>
-    </div>
-
-    <h3>Job search</h3>
-    <div class="cards">
-      <a class="card" href="https://listeningpost.theintelligence.company">
-        <span class="card-top"><span class="name">Listening Post</span><span class="badge invite">Invite only</span></span>
-        <span class="what">A job-search workspace: each opening scored against your own criteria, new postings found by a
-          weekly sweep, and drafts you review and send yourself. Google sign-in, by invitation.</span>
-      </a>
+      <h3 class="label list-h">Every product</h3>
+      <ul class="plist">
+        <li><a href="https://noisefloor.theintelligence.company"><span class="p-name">Noisefloor</span><span class="p-what">Where the radio spectrum is contested: GNSS jamming and spoofing, and its effects on navigation and satellite links.</span><span class="p-st st-live">Live · Open →</span></a></li>
+        <li><a href="https://watchfloor.theintelligence.company"><span class="p-name">Watchfloor</span><span class="p-what">A daily warning picture for 15 conflict zones and 5 strategic topics, built from the world's news.</span><span class="p-st st-beta">Beta · Open →</span></a></li>
+        <li><a href="https://vigil.theintelligence.company"><span class="p-name">Vigil</span><span class="p-what">Cyber threat intelligence: ransomware, exploited vulnerabilities and threat indicators, with the history kept.</span><span class="p-st st-live">Live · Open →</span></a></li>
+        <li><a href="https://context.theintelligence.company"><span class="p-name">CONTEXT</span><span class="p-what">How the world's press is covering 15 conflict zones and 5 strategic topics, refreshed twice a day. Watchfloor's predecessor.</span><span class="p-st st-live">Live · Open →</span></a></li>
+        <li><a href="https://propertycast.theintelligence.company"><span class="p-name">PropertyCast</span><span class="p-what">A hyperlocal forecast for one property that verifies itself every hour against its own weather station, with a garden decision layer.</span><span class="p-st st-live">Live · Open →</span></a></li>
+        <li><a href="https://activation.theintelligence.company"><span class="p-name">Title 10 Field Guide</span><span class="p-what">What activated Air Guard members earn on federal orders, what gets missed, and what to do before and after release. Unofficial; compiled from public sources.</span><span class="p-st st-live">Live · Open →</span></a></li>
+        <li><a href="https://listeningpost.theintelligence.company"><span class="p-name">Listening Post</span><span class="p-what">A job-search workspace: each opening scored against your own criteria, new postings found by a weekly sweep, and drafts you review and send yourself. Google sign-in, by invitation.</span><span class="p-st st-invite">Invite only · Open →</span></a></li>
+      </ul>
     </div>
   </section>
 
-  <section id="about" aria-labelledby="about-h" class="about">
-    <h2 id="about-h">About</h2>
-    <p>The Intelligence Company is based in Moorhead, Minnesota, and run by Thomas Brummer. It applies professional
-      analytic standards to public information: sources credited and licensed, claims dated, uncertainty stated,
-      and methods and validation published alongside the products.</p>
-    <ul class="principles">
-      <li><strong>Publicly available information only.</strong> No classified or proprietary material, ever.</li>
-      <li><strong>Every source credited.</strong> Each product lists its sources and their licences.</li>
-      <li><strong>Methods in the open.</strong> How each measure works, and how well it has been checked.</li>
-      <li><strong>Your clock.</strong> Times show in your own time zone; use the Time button to choose another, Zulu
-        included, and a 12- or 24-hour clock.</li>
-    </ul>
+  <section id="standards" class="band" aria-labelledby="standards-h">
+    <div class="wrap">
+      <h2 id="standards-h" class="section-h">How we work</h2>
+      <ol class="standards">
+        <li><span class="num">01</span><h3>Publicly available information only</h3><p>No classified or proprietary material, ever.</p></li>
+        <li><span class="num">02</span><h3>Every source credited</h3><p>Each product lists its sources and their licences.</p></li>
+        <li><span class="num">03</span><h3>Methods in the open</h3><p>How each measure works, and how well it has been checked.</p></li>
+        <li><span class="num">04</span><h3>Your clock</h3><p>Times show in your own time zone; use the Time button to choose another, Zulu included, and a 12- or 24-hour clock.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="about" class="wrap about" aria-labelledby="about-h">
+    <p class="kicker">About</p>
+    <h2 id="about-h" class="section-h">Professional analytic standards, applied to public information.</h2>
+    <div class="about-text">
+      <p>The Intelligence Company is based in Moorhead, Minnesota, and run by Thomas Brummer: a 25-year Air National
+        Guard intelligence professional, an OSINT and space-domain-awareness analyst, and a former USAF weather
+        forecaster.</p>
+      <p>Sources credited and licensed, claims dated, uncertainty stated, and methods and validation published
+        alongside the products.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="contact" aria-labelledby="contact-h">
+    <div class="wrap contact-inner">
+      <h2 id="contact-h" class="section-h">Get in touch</h2>
+      <div>
+        <a class="contact-mail" href="mailto:support@theintelligence.company">support@theintelligence.company</a>
+        <p class="contact-where">Moorhead, Minnesota · Central time</p>
+      </div>
+    </div>
   </section>
 </main>
 
 <footer class="foot">
-  <div class="wrap">
-    <p>The Intelligence Company · Moorhead, Minnesota · Updated <time id="updated" datetime="2026-10-27T17:00:00Z" data-tic="date">27 Oct 2026</time>.</p>
-    <p>Contact: <a href="mailto:support@theintelligence.company">support@theintelligence.company</a></p>
-    <p>Each product credits its own data sources and licences on its Sources page.</p>
+  <div class="wrap foot-inner">
+    <p>The Intelligence Company · Moorhead, Minnesota · Updated <time datetime="2026-10-29T01:00:00Z" data-tic="date">29 Oct 2026</time></p>
+    <p>Each product credits its own data sources and licences on its Sources page. The latest lines come from
+      Noisefloor and Watchfloor. Type: Newsreader and IBM Plex, under the SIL Open Font License.</p>
   </div>
 </footer>
 <script src="shared/tic-time.js"></script>

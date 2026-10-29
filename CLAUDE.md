@@ -40,5 +40,19 @@ Intelligence Company site. Started 27 Oct 2026 at Tom's request after a review o
   theintelligencecompany site since 28 Oct 2026. Squarespace DNS holds `A @ 199.36.158.100`,
   `TXT @ hosting-site=theintelligencecompany` and `CNAME www → theintelligencecompany.web.app`; the Google Workspace
   MX/SPF/DKIM/DMARC records are untouched. Claude set it up at Tom's request; method in
-  `D:\Projects\CLAUDE_HANDOVER.md` §3.11. The hub still links to `watchfloor.web.app`.
+  `D:\Projects\CLAUDE_HANDOVER.md` §3.11.
+- **Design "The Briefing"** (Tom picked it from three mockups, 29 Oct 2026; canvas
+  https://claude.ai/artifact/6fJpchGrjgQAgLEXKBWBfh): Newsreader headlines over IBM Plex Sans/Mono, paper `#F7F5F0`, navy
+  `#14202E`, amber mark `#E3A83B`, text accent `#8F5509`; light and dark. Fonts are self-hosted in `site/fonts/` (SIL OFL,
+  licence files beside them; Newsreader from Google Fonts, Plex copied from Noisefloor) because the CSP allows only
+  'self'. No inline styles or scripts (CSP).
+- **"Latest from the products"** (`site.js`): Noisefloor's `data/board.json` (`brief`, `freshness.aircraft_day`) and
+  Watchfloor's public API `/summary` (the conflict zone with the highest attention z, named only when Watchfloor raised an
+  alarm; keys starting `T` are topics). Both send `Access-Control-Allow-Origin: *`; `firebase.json`'s `connect-src`
+  lists the two origins. A feed that fails leaves the static line. PropertyCast has no JSON feed yet.
+- Product screenshots in `site/img/` (WebP, 2x, captions dated): retake with headless Edge when a product changes.
+- Local preview: `firebase serve --only hosting:hub --port 5055 --project context-484804` (it does not apply the
+  `firebase.json` headers, so check the CSP on the live site after a deploy).
+- The About bio (25-year ANG intelligence professional, OSINT and SDA analyst, former USAF weather forecaster) comes from
+  Claude's notes; Tom to confirm before it ships. A headshot slot can be added when Tom sends one.
 - Times: store UTC; display per the shared module. Messages to Tom use Central time.

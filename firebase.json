@@ -6,11 +6,13 @@
       "ignore": ["**/.*"],
       "headers": [
         {"source": "**/*.@(html|js|css)", "headers": [{"key": "Cache-Control", "value": "no-cache"}]},
+        {"source": "/fonts/**", "headers": [{"key": "Cache-Control", "value": "public, max-age=31536000"}]},
+        {"source": "/img/**", "headers": [{"key": "Cache-Control", "value": "public, max-age=86400"}]},
         {"source": "**", "headers": [
           {"key": "X-Content-Type-Options", "value": "nosniff"},
           {"key": "Referrer-Policy", "value": "strict-origin-when-cross-origin"},
           {"key": "X-Robots-Tag", "value": "noindex, nofollow"},
-          {"key": "Content-Security-Policy", "value": "default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; frame-ancestors 'none'; base-uri 'self'"}
+          {"key": "Content-Security-Policy", "value": "default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src 'self' https://noisefloor.theintelligence.company https://mc-api-odg3xhcd4a-uc.a.run.app; frame-ancestors 'none'; base-uri 'self'"}
         ]},
         {"source": "/shared/**", "headers": [{"key": "Access-Control-Allow-Origin", "value": "*"}]}
       ]
