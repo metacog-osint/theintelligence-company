@@ -37,6 +37,11 @@ Intelligence Company site. Started 27 Oct 2026 at Tom's request after a review o
   robots.txt block are gone, and the page names `https://theintelligence.company/` as canonical so the `web.app` copy
   isn't indexed separately. Watchfloor's noindex is a separate decision. The root `/` has its own `no-cache` rule because
   the `**/*.@(html|js|css)` pattern doesn't match it.
+- **Google Search Console** (set up 29 Oct 2026 UTC, account metacog@): Domain property `theintelligence.company`, so it
+  covers every subdomain. Google auto-verified it ("Domain name provider") through the existing Google verification
+  CNAMEs in Squarespace DNS (`l6g3iae2wlli` and `pgso2rwhxeyj` → `gv-….dv.googlehosted.com`); don't delete them.
+  Indexing of `https://theintelligence.company/` was requested the same day (Google's first crawl had seen the old
+  noindex tag).
 - Contact shown on the hub: support@theintelligence.company (Tom, 27 Oct). The About names Tom only (his choice).
 - Apex domain: `theintelligence.company` and `www.` (redirects to the apex) are Firebase custom domains on the
   theintelligencecompany site since 28 Oct 2026. Squarespace DNS holds `A @ 199.36.158.100`,
