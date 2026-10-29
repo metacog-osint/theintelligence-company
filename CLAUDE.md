@@ -33,8 +33,10 @@ Intelligence Company site. Started 27 Oct 2026 at Tom's request after a review o
 - Static files in `site/`, no build step. Firebase Hosting site `theintelligencecompany` in project
   context-484804: https://theintelligencecompany.web.app. Deploy (needs Tom's yes):
   `firebase deploy --only hosting:hub --project context-484804`.
-- Hidden from search engines (meta, X-Robots-Tag, robots.txt) until Tom approves going public. Tom, 27 Oct: stay
-  hidden until `theintelligence.company` points at the hub.
+- **Public since 29 Oct 2026 UTC** (Tom's go-ahead, evening of 28 Oct CDT): the noindex meta, X-Robots-Tag header and
+  robots.txt block are gone, and the page names `https://theintelligence.company/` as canonical so the `web.app` copy
+  isn't indexed separately. Watchfloor's noindex is a separate decision. The root `/` has its own `no-cache` rule because
+  the `**/*.@(html|js|css)` pattern doesn't match it.
 - Contact shown on the hub: support@theintelligence.company (Tom, 27 Oct). The About names Tom only (his choice).
 - Apex domain: `theintelligence.company` and `www.` (redirects to the apex) are Firebase custom domains on the
   theintelligencecompany site since 28 Oct 2026. Squarespace DNS holds `A @ 199.36.158.100`,
@@ -53,6 +55,6 @@ Intelligence Company site. Started 27 Oct 2026 at Tom's request after a review o
 - Product screenshots in `site/img/` (WebP, 2x, captions dated): retake with headless Edge when a product changes.
 - Local preview: `firebase serve --only hosting:hub --port 5055 --project context-484804` (it does not apply the
   `firebase.json` headers, so check the CSP on the live site after a deploy).
-- The About bio (25-year ANG intelligence professional, OSINT and SDA analyst, former USAF weather forecaster) comes from
-  Claude's notes; Tom to confirm before it ships. A headshot slot can be added when Tom sends one.
+- The About bio (25-year ANG intelligence professional, OSINT and SDA analyst, former USAF weather forecaster): Tom
+  confirmed it 28 Oct 2026 CDT. A headshot slot can be added when Tom sends one.
 - Times: store UTC; display per the shared module. Messages to Tom use Central time.
