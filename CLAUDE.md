@@ -60,9 +60,13 @@ Intelligence Company site. Started 27 Oct 2026 at Tom's request after a review o
 - Product screenshots in `site/img/` (WebP, 2x, captions dated): retake with headless Edge when a product changes.
 - Local preview: `firebase serve --only hosting:hub --port 5055 --project context-484804` (it does not apply the
   `firebase.json` headers, so check the CSP on the live site after a deploy).
-- The About bio: "an intelligence professional with 25 years in the Air National Guard, an OSINT and
-  space-domain-awareness analyst, and a former USAF weather forecaster" (Tom, 30 Oct 2026). Never "25-year ..." before
-  a noun: readers took it as his age. A headshot slot can be added when Tom sends one.
+- The About bio (Tom approved 30 Oct 2026): builds intelligence programs and leads the analysts who run them; 25 years
+  of service (all Air National Guard: "25 years of service" and "25 years in the ANG" are the same thing), starting as
+  an F-16 crew chief and Air Force weather forecaster, more than half his career a SIGINT analyst, today in the Guard;
+  leads an open-source research team, trained 100+ analysts, wrote AI-assisted analysis standards (a person checks
+  every product). Second paragraph: every job means judging the state of a complex system under pressure and saying
+  how sure you are. Kept in step with Tom's LinkedIn About (same opening line and order). The hub leaves out other career details. Never "25-year ..." before a noun: readers took it as his
+  age. A headshot slot can be added when Tom sends one.
 - **Location on every public page: "Fargo-Moorhead"**, never "Moorhead, Minnesota" (the LLC is registered in Fargo;
   Tom, 30 Oct 2026). PropertyCast's forecast point is the Moorhead yard itself, which stays as it is.
 - Times: store UTC; display per the shared module. Messages to Tom use Central time.
