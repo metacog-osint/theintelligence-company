@@ -60,6 +60,9 @@ Intelligence Company site. Started 27 Oct 2026 at Tom's request after a review o
 - Product screenshots in `site/img/` (WebP, 2x, captions dated): retake with headless Edge when a product changes.
 - Local preview: `firebase serve --only hosting:hub --port 5055 --project context-484804` (it does not apply the
   `firebase.json` headers, so check the CSP on the live site after a deploy).
-- The About bio (25-year ANG intelligence professional, OSINT and SDA analyst, former USAF weather forecaster): Tom
-  confirmed it 28 Oct 2026 CDT. A headshot slot can be added when Tom sends one.
+- The About bio: "an intelligence professional with 25 years in the Air National Guard, an OSINT and
+  space-domain-awareness analyst, and a former USAF weather forecaster" (Tom, 30 Oct 2026). Never "25-year ..." before
+  a noun: readers took it as his age. A headshot slot can be added when Tom sends one.
+- **Location on every public page: "Fargo-Moorhead"**, never "Moorhead, Minnesota" (the LLC is registered in Fargo;
+  Tom, 30 Oct 2026). PropertyCast's forecast point is the Moorhead yard itself, which stays as it is.
 - Times: store UTC; display per the shared module. Messages to Tom use Central time.
