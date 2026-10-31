@@ -57,9 +57,21 @@ Intelligence Company site. Started 27 Oct 2026 at Tom's request after a review o
   Watchfloor's public API `/summary` (the conflict zone with the highest attention z, named only when Watchfloor raised an
   alarm; keys starting `T` are topics). Both send `Access-Control-Allow-Origin: *`; `firebase.json`'s `connect-src`
   lists the two origins. A feed that fails leaves the static line. PropertyCast has no JSON feed yet.
+- **"How the programs fit"** (`#layers`, built 31 Oct 2026 from Tom's interactive draft and his 14 review points):
+  a dark band after the hero. The artwork is inline SVG in `index.html` (seven plates adapted from JP 2-01.3 Fig I-1);
+  `site/oe/oe.js` draws everything that changes from one data table: program tags on each home layer (live, beta or
+  in development, planned, core), the reach line through every layer a program touches, the question-led guide
+  ("Find your way in", no numbered start), the panels, and the live zone and topic counts from Watchfloor's
+  `/summary` (shared with `site.js` through `window.ticWatchfloor`). **To add or move a program, edit `PROGRAMS`**
+  (`home`, `reach`, `at`). Rules from Tom: no fixed counts in copy (zones change); the right column is doctrine's
+  grouping, always on, with JP citations only in the sources line under the figure, and only publicly released
+  documents cited; actors are described by role as sources describe them, never as hostile; PropertyCast stays off the
+  drawing (it's in the product list). On phones, planned programs show as rings only.
+- Local preview with the live headers: `python tools/serve.py 5055` serves `site/` with every `firebase.json` header,
+  CSP included (`firebase serve` skips them).
 - Product screenshots in `site/img/` (WebP, 2x, captions dated): retake with headless Edge when a product changes.
-- Local preview: `firebase serve --only hosting:hub --port 5055 --project context-484804` (it does not apply the
-  `firebase.json` headers, so check the CSP on the live site after a deploy).
+- Local preview: `python tools/serve.py 5055` (applies the `firebase.json` headers). `firebase serve --only hosting:hub
+  --port 5055 --project context-484804` also works but skips the headers, so a CSP problem only shows up live.
 - The About bio (short version, Tom approved 30 Oct 2026, so it doesn't read as a résumé): 25 years of service (all
   Air National Guard: "25 years of service" and "25 years in the ANG" are the same thing), starting as an F-16 crew
   chief and Air Force weather forecaster, more than half his career a SIGINT analyst, today in the Guard. Second
