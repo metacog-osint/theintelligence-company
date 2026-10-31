@@ -64,7 +64,7 @@
     var el = document.getElementById(id);
     if (!el || !text) return;
     el.querySelector(".latest-meta").textContent = meta;
-    el.querySelector(".latest-text").textContent = text;
+    el.querySelector(".latest-body").textContent = text; // the topic lead-in ("GPS interference:") stays
   }
 
   // Noisefloor: the briefing's bottom line for the newest aircraft day.

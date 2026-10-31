@@ -95,6 +95,7 @@ h1 { font: 500 clamp(2.6rem, 5.6vw, 4.75rem)/1.04 var(--serif); letter-spacing: 
 .latest h2 + .latest-item { margin-top: 14px; }
 .latest-meta { font: 400 13px/1.4 var(--mono); color: var(--acc); margin-bottom: 6px; }
 .latest-text { font: 400 21px/1.35 var(--serif); margin-bottom: 10px; }
+.latest-topic { font-weight: 600; } /* says what each line measures, whatever the feed's own wording */
 .latest-link { font-size: 15px; font-weight: 500; }
 
 /* Products */
@@ -147,7 +148,13 @@ figcaption { margin-top: 10px; font: 400 13px/1.45 var(--mono); color: var(--mut
 /* About and contact */
 .about { padding-top: 88px; padding-bottom: 88px; }
 .about .section-h { max-width: 20em; margin-bottom: 28px; }
+.about-body { display: grid; grid-template-columns: 200px minmax(0, 40em); gap: 24px 48px; align-items: start; }
+.about-photo img { width: 200px; height: 200px; object-fit: cover; }
 .about-text { max-width: 40em; display: flex; flex-direction: column; gap: 18px; font-size: 18px; }
+@media (max-width: 640px) {
+  .about-body { grid-template-columns: 1fr; }
+  .about-photo img { width: 140px; height: 140px; }
+}
 .about-text p + p { color: var(--body); }
 .contact { border-top: 1px solid var(--rule); }
 .contact-inner { display: flex; flex-wrap: wrap; gap: 20px 64px; align-items: baseline; justify-content: space-between; padding-top: 72px; padding-bottom: 72px; }

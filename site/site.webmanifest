@@ -1,7 +1,7 @@
 {
   "name": "The Intelligence Company",
   "short_name": "Intelligence",
-  "description": "Open-source intelligence tools from Fargo-Moorhead, ND/MN: conflict warning, the contested radio spectrum, cyber threats and verified forecasting.",
+  "description": "Open-source intelligence tools from Fargo-Moorhead, ND/MN: conflict warning, GPS jamming and spoofing, cyber threats and verified forecasting.",
   "start_url": "/",
   "scope": "/",
   "display": "browser",
