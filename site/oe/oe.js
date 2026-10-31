@@ -115,18 +115,20 @@
       line: "Where GPS and other satellite navigation is jammed or spoofed, mapped every day from aircraft and ship position reports, with satellite and space-weather context." },
 
     { id: "fieldcast", name: "FieldCast", status: "dev", home: "space", reach: ["ems", "air", "land"], at: [610, 900],
-      ask: "Will space weather throw off GNSS in the field?",
-      line: "An outlook for GNSS and RTK reliability in the field, from ionospheric disturbance measured at public base stations. Validated on the May and October 2024 storms." },
+      ask: "Will space weather throw off GPS in the field?",
+      line: "An outlook for GPS reliability in the field, including high-precision (RTK) positioning, from ionospheric disturbance measured at public base stations. Validated on the May and October 2024 storms." },
     { id: "orbit", name: "Orbit", status: "planned", home: "space", reach: ["ems", "land", "systems"], at: [862, 904],
       line: "Space: catalog changes, launches, manoeuvres and counterspace events." },
 
-    { id: "cordon", name: "Cordon", status: "planned", home: "air", reach: ["land", "space", "systems", "human"], at: [756, 1036], end: true,
-      line: "Hazard notices: NOTAMs, navigational warnings, launch hazard areas, conflict-zone bulletins, and State Department travel advisories and embassy posture." },
+    { id: "cordon", name: "Cordon", status: "beta", home: "air", reach: ["land", "space", "systems", "human"], at: [756, 1036], end: true,
+      href: "https://metacog-osint.github.io/cordon/", ask: "Where are authorities warning people away?",
+      line: "Where authorities warn people away: State Department travel advisories and embassy departure status, EASA conflict-zone bulletins for airspace, and NGA navigational warnings at sea. NOTAMs and launch hazard areas are planned." },
     { id: "weather", name: "Weather impact", status: "planned", working: true, home: "air", reach: ["land", "space"], at: [560, 1018],
       line: "Theatre weather and illumination, and their effects on operations in each zone." },
 
-    { id: "elements", name: "Elements", status: "planned", home: "land", reach: ["air", "systems", "human"], at: [530, 1125],
-      line: "Natural hazards: quakes, volcanoes, fires, floods and storms, with a US nuclear and radiation lane." },
+    { id: "elements", name: "Elements", status: "beta", home: "land", reach: ["air", "systems", "human"], at: [530, 1125],
+      href: "https://metacog-osint.github.io/elements/", ask: "Where are natural hazards hitting?",
+      line: "Natural hazards as the authorities report them: USGS earthquakes with impact alerts, GDACS alerts, hurricane-center storms and Copernicus disaster mapping on one map. Fires, volcanoes and a radiation lane are planned." },
     { id: "wake", name: "Wake", status: "planned", home: "land", reach: ["ems", "systems"], at: [900, 1152],
       line: "Maritime: AIS gaps, the shadow fleet, chokepoint and port throughput, and piracy." }
   ];

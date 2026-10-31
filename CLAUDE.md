@@ -11,7 +11,12 @@ Intelligence Company site. Started 27 Oct 2026 at Tom's request after a review o
   (one word since 27 Oct; `[local path]`), Vigil, CONTEXT (`[local path]`), PropertyCast
   (stays here for now), Title 10 Field Guide (`activation.`), Listening Post (invite-only job-search app; listed on the hub
   as "Invite only" since 27 Oct), COP (`cop.`, `[local path]`; the common operational picture, beta since 31 Oct
-  2026, public and non-commercial for now).
+  2026, public and non-commercial for now), Elements (natural hazards) and Cordon (where authorities warn people
+  away), both beta on the hub since 31 Oct 2026 (Tom's yes). Both are still on GitHub Pages
+  (`metacog-osint.github.io/elements/`, `/cordon/`), not subdomains, so the shared time cookie doesn't reach them;
+  moving them to `elements.` and `cordon.` takes a Squarespace DNS record each. Their drawing lines say what v0
+  covers and what is planned (Elements: fires, volcanoes, radiation; Cordon: NOTAMs, launch hazard areas); update
+  the lines as those arrive.
 - Names for new intel products come from the vocabulary of watching and listening.
 - Each product keeps its own colours. Every site carries the house layer: the footer pattern (who, updated date,
   source code and licence if public, terms, data credits, Sources page), the same About structure (what it is,
@@ -74,8 +79,26 @@ Intelligence Company site. Started 27 Oct 2026 at Tom's request after a review o
 - Local preview with the live headers: `python tools/serve.py 5055` serves `site/` with every `firebase.json` header,
   CSP included (`firebase serve` skips them).
 - Product screenshots in `site/img/` (WebP, 2x, captions dated): retake with headless Edge when a product changes.
+  **They must show the real site with real data, as a signed-in user sees it, header included** (Tom, 31 Oct 2026),
+  never a signed-out landing page, demo mode (Vigil's demo is mock data) or a bare map. Current:
+  `noisefloor-today.webp` and `watchfloor-zones.webp` (whole 1280×800 view at 2x, scaled to 1600×1000; Noisefloor's
+  map needs WebGL, so run Edge with `--enable-unsafe-swiftshader --use-angle=swiftshader`, not `--disable-gpu`).
+  Signed-in captures: Tom signs in once in a visible Edge window using a separate profile
+  (`--user-data-dir=%TEMP%\edge-vigil`); after he closes it (stop any Edge processes still on that profile), a
+  Playwright script using Vigil's own `node_modules/playwright-core` with `channel: "msedge"`,
+  `launchPersistentContext` on that profile, 1280×800 at `deviceScaleFactor: 2` captures the pages. Then the profile
+  folder is deleted so no session is left on disk. Claude never sees the password or the session. Vigil's welcome
+  tour covers the page on a fresh profile; it is remembered only in local storage (`vigil_tour_completed`), so the
+  script sets that key with `addInitScript`, with no clicks and nothing changed on Tom's account.
+  `vigil-actors.webp` (31 Oct 2026) is the signed-in Threat Actors view: real data, group names only. The signed-in
+  dashboard's AI summary names victims, so it isn't used.
 - Local preview: `python tools/serve.py 5055` (applies the `firebase.json` headers). `firebase serve --only hosting:hub
   --port 5055 --project context-484804` also works but skips the headers, so a CSP problem only shows up live.
+- About bio, reworded 31 Oct 2026 because "In 25 years of service he began…" read clunkily (Tom): "…and run by Thomas
+  Brummer. He has served in the Air National Guard for 25 years. He started as an F-16 crew chief and an Air Force
+  weather forecaster, and has spent more than half his career as a signals intelligence (SIGINT) analyst." Under the
+  About sits a "Thomas Brummer on LinkedIn" link (https://www.linkedin.com/in/tom-brummer/, also `sameAs` on the
+  founder in the JSON-LD). LinkedIn shows signed-out visitors a sign-in wall, so his photo can't be fetched from there.
 - The About bio (short version, Tom approved 30 Oct 2026, so it doesn't read as a résumé): 25 years of service (all
   Air National Guard: "25 years of service" and "25 years in the ANG" are the same thing), starting as an F-16 crew
   chief and Air Force weather forecaster, more than half his career a SIGINT analyst, today in the Guard. Second
@@ -103,7 +126,13 @@ Intelligence Company site. Started 27 Oct 2026 at Tom's request after a review o
     http://127.0.0.1:5056/tools/og-card.html` (512,512 and `logo.html` for the logo). Edge is at
     `C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe`. LinkedIn caches previews; its Post Inspector
     refreshes one.
-  - **Hero top line:** "Warning · Spectrum · Cyber · Forecasting" (it used to repeat the headline).
+  - **Hero top line:** "Conflict · GPS interference · Cyber threats · Forecasting" since 31 Oct 2026 (first
+    "Warning · Spectrum · Cyber · Forecasting"; it used to repeat the headline). Keep it to one line at 1280 px.
+  - **Say what each line measures** (Tom, 31 Oct 2026: readers must know Noisefloor is about GPS interference, and
+    the same goes for every summary). Each "Latest" item starts with a bold topic (`.latest-topic`: "GPS
+    interference:", "Conflict warning:", "Cyber threats:"), and `setItem` fills only `.latest-body`, so the topic
+    stays whatever the feed says. The hub says "GPS" for Noisefloor and FieldCast, never "GNSS" or "the contested
+    radio spectrum". Noisefloor's own brief still says "degraded aircraft", which is Noisefloor's wording to fix.
   - **Footer date** uses `data-tic-year`: "Updated 31 Oct 2026" in the viewer's zone.
   - **Footer Sources links:** Noisefloor `/sources`, Watchfloor `/#/sources`, Vigil `/sources`, PropertyCast
     `/#sources`, Title 10 `/#contacts` ("Contacts & sources"). Context and Listening Post have no Sources page yet, so
@@ -131,7 +160,7 @@ Intelligence Company site. Started 27 Oct 2026 at Tom's request after a review o
   - **"Updated … ago"** under Noisefloor and Watchfloor in the product list (`site.js` `setFresh`, keyed by
     `li[data-product]`), from Noisefloor's `built_utc` and Watchfloor's `built_at`; the tooltip gives the full time in the
     viewer's zone. Add a product by giving its row `data-product` and calling `setFresh` with its feed's build time.
-  - **Vigil feature block** with `img/vigil.webp`: Vigil's public landing page, captured with headless Edge at
+  - **Vigil feature block** (first shot `img/vigil.webp`, the signed-out landing page, replaced on 31 Oct 2026 by the signed-in `vigil-actors.webp`; see Product screenshots). The first was captured with headless Edge at
     1280×800 and `--force-device-scale-factor=2`, then cropped to box (0, 115, 1500, 1485) with Pillow. The crop
     deliberately leaves out "Recent Incidents": **don't put leak-site victim names on the hub.** The three points are
     from Vigil's README. Vigil's other pages need an account.
@@ -150,6 +179,13 @@ Intelligence Company site. Started 27 Oct 2026 at Tom's request after a review o
     scoring, which COP doesn't do). `kind()` and `statusWords()` now follow status for core programs too: a planned
     core program (Verdict) keeps the dashed "core" mark, while a core program that is out draws as live or beta and
     reads "Beta, core". COP is also in "Every product" and `404.html`, after Context.
-  - **Headshot**: still to do. LinkedIn shows a sign-in wall, and `Downloads\headshot.jfif` carries a Gemini watermark
-    and isn't Tom's LinkedIn photo, so it wasn't used.
+  - **Headshot** (31 Oct 2026): Tom sent his photo in chat; it is `img/thomas-brummer.webp` (480 px square), beside
+    the bio (200 px; above it on phones, 140 px) and as the founder's `image` in the JSON-LD.
+    `Downloads\headshot.jfif` is not Tom (it carries a Gemini watermark); never use it.
+  - **Copyright notice** (Tom, 31 Oct 2026: "use the copyright symbol, and my name"): "Drawing © 2026 Thomas Brummer,
+    adapted from JP 2-01.3…" under the drawing, and "© 2026 Thomas Brummer" first in the footer of `index.html` and
+    `404.html`. Registration was discussed and not done: $45 single or $65 standard at copyright.gov (a rise to $55
+    and $85 was proposed for about Nov 2026, unconfirmed). Only the human-authored parts are protectable, since the
+    JP figure is public domain and AI-generated material must be disclaimed. Trademark fits names and logos, not the
+    drawing.
 - Times: store UTC; display per the shared module. Messages to Tom use Central time.
