@@ -139,7 +139,6 @@ figcaption { margin-top: 10px; font: 400 13px/1.45 var(--mono); color: var(--mut
 .contact { border-top: 1px solid var(--rule); }
 .contact-inner { display: flex; flex-wrap: wrap; gap: 20px 64px; align-items: baseline; justify-content: space-between; padding-top: 72px; padding-bottom: 72px; }
 .contact-mail { font-size: 20px; font-weight: 500; overflow-wrap: anywhere; }
-.contact-where { margin-top: 6px; font-size: 16px; color: var(--mut); }
 
 /* Footer: the house layer */
 .foot { border-top: 3px double var(--ink); }

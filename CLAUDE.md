@@ -79,6 +79,14 @@ Intelligence Company site. Started 27 Oct 2026 at Tom's request after a review o
   leads into the products' standards. The longer credentials (builds programs and leads analysts, research team, 100+
   analysts trained, AI-assisted analysis standards) live in his LinkedIn About, not here; nor do other career details. Never "25-year ..." before a noun: readers took it as his age. A
   headshot slot can be added when Tom sends one.
-- **Location on every public page: "Fargo-Moorhead"**, never "Moorhead, Minnesota" (the LLC is registered in Fargo;
-  Tom, 30 Oct 2026). PropertyCast's forecast point is the Moorhead yard itself, which stays as it is.
+- **Location on every public page: "Fargo-Moorhead, ND/MN"** in labels, or "Fargo-Moorhead, on the North
+  Dakota–Minnesota border" in prose (anchor added 31 Oct 2026 so readers outside the region can place it); never
+  "Moorhead, Minnesota" (the LLC is registered in Fargo; Tom, 30 Oct 2026). PropertyCast's forecast point is the
+  Moorhead yard itself, which stays as it is. On the hub it appears in the top bar, the About and the footer; the contact
+  block no longer repeats it.
+- **Links to the products open in a new tab** (Tom, 31 Oct 2026): `target="_blank" rel="noopener"
+  aria-describedby="newtab"`, where `#newtab` is a hidden "Opens in a new tab" note for screen readers. `oe/oe.js`
+  builds its "Open" links the same way; keep both in step when adding a product.
+- **No clock in the top bar** since 31 Oct 2026: the Time button already names the viewer's zone, and Tom found the
+  zone repeated (clock, button, and "Central time" in the contact block, all removed except the button).
 - Times: store UTC; display per the shared module. Messages to Tom use Central time.

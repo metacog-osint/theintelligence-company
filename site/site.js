@@ -1,4 +1,4 @@
-// The Intelligence Company hub: time settings, the clock, the "Updated" date and the latest lines from the products.
+// The Intelligence Company hub: time settings, the "Updated" date and the latest lines from the products.
 // No dependencies. Text from the feeds is inserted as text, never as HTML. A feed that fails leaves the static line.
 (function () {
   "use strict";
@@ -7,16 +7,12 @@
   var NOISEFLOOR = "https://noisefloor.theintelligence.company/data/board.json";
   var WATCHFLOOR = "https://mc-api-odg3xhcd4a-uc.a.run.app/summary"; // Watchfloor's public API; newest built day
 
-  // Time: the Time button, every <time data-tic>, and a clock in the viewer's zone (always named).
+  // Time: the Time button (it names the viewer's zone) and every <time data-tic>.
   var holder = document.getElementById("time-settings");
-  var clock = document.getElementById("clock");
-  function tick() { if (T && clock) clock.textContent = T.format(new Date()); }
   if (T) {
     if (holder) T.mountSettings(holder);
     T.renderAll(document);
-    tick();
-    setInterval(tick, 30000);
-    T.onChange(function () { T.renderAll(document); tick(); });
+    T.onChange(function () { T.renderAll(document); });
   }
 
   // "2026-10-27" -> "27 Oct 2026" (a UTC data day, shown as a plain date)
