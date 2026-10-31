@@ -12,9 +12,11 @@ Intelligence Company site. Started 27 Oct 2026 at Tom's request after a review o
   (stays here for now), Title 10 Field Guide (`activation.`), Listening Post (invite-only job-search app; listed on the hub
   as "Invite only" since 27 Oct), COP (`cop.`, `D:\Projects\cop`; the common operational picture, beta since 31 Oct
   2026, public and non-commercial for now), Elements (natural hazards) and Cordon (where authorities warn people
-  away), both beta on the hub since 31 Oct 2026 (Tom's yes). Both are still on GitHub Pages
-  (`metacog-osint.github.io/elements/`, `/cordon/`), not subdomains, so the shared time cookie doesn't reach them;
-  moving them to `elements.` and `cordon.` takes a Squarespace DNS record each. Their drawing lines say what v0
+  away), both beta on the hub since 31 Oct 2026 (Tom's yes). Since 31 Oct 2026 they are at
+  `elements.theintelligence.company` and `cordon.theintelligence.company`: GitHub Pages (Actions builds, repos
+  `metacog-osint/elements` and `/cordon`) with custom domains set through the Pages API (no CNAME file needed for
+  Actions builds), HTTPS enforced, and Squarespace `CNAME elements|cordon → metacog-osint.github.io`. The old
+  `metacog-osint.github.io/elements/` and `/cordon/` addresses 301 to the subdomains. Their drawing lines say what v0
   covers and what is planned (Elements: fires, volcanoes, radiation; Cordon: NOTAMs, launch hazard areas); update
   the lines as those arrive.
 - Names for new intel products come from the vocabulary of watching and listening.

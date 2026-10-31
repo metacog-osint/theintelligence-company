@@ -121,13 +121,13 @@
       line: "Space: catalog changes, launches, manoeuvres and counterspace events." },
 
     { id: "cordon", name: "Cordon", status: "beta", home: "air", reach: ["land", "space", "systems", "human"], at: [756, 1036], end: true,
-      href: "https://metacog-osint.github.io/cordon/", ask: "Where are authorities warning people away?",
+      href: "https://cordon.theintelligence.company", ask: "Where are authorities warning people away?",
       line: "Where authorities warn people away: State Department travel advisories and embassy departure status, EASA conflict-zone bulletins for airspace, and NGA navigational warnings at sea. NOTAMs and launch hazard areas are planned." },
     { id: "weather", name: "Weather impact", status: "planned", working: true, home: "air", reach: ["land", "space"], at: [560, 1018],
       line: "Theatre weather and illumination, and their effects on operations in each zone." },
 
     { id: "elements", name: "Elements", status: "beta", home: "land", reach: ["air", "systems", "human"], at: [530, 1125],
-      href: "https://metacog-osint.github.io/elements/", ask: "Where are natural hazards hitting?",
+      href: "https://elements.theintelligence.company", ask: "Where are natural hazards hitting?",
       line: "Natural hazards as the authorities report them: USGS earthquakes with impact alerts, GDACS alerts, hurricane-center storms and Copernicus disaster mapping on one map. Fires, volcanoes and a radiation lane are planned." },
     { id: "wake", name: "Wake", status: "planned", home: "land", reach: ["ems", "systems"], at: [900, 1152],
       line: "Maritime: AIS gaps, the shadow fleet, chokepoint and port throughput, and piracy." }
