@@ -3,11 +3,13 @@
 <head>
 <meta charset="utf-8">
 <title>Logo</title>
-<!-- Source for site/img/logo-512.png: the favicon's mark on a full navy square, for the search markup ("logo").
-     Regenerate with the command in CLAUDE.md ("Link preview"). Not deployed: only site/ is published. -->
-<style>html, body { margin: 0; } body { width: 512px; height: 512px; overflow: hidden; } svg { display: block; }</style>
+<!-- Source for the square icons: the favicon's mark on a full navy square. It fills the window, so the window size
+     sets the output: 512 -> site/img/logo-512.png (search markup and manifest), 192 -> site/img/icon-192.png
+     (manifest), 180 -> site/img/apple-touch-icon.png (iPhone home screen). The mark sits inside the maskable safe
+     zone. Regenerate with the command in CLAUDE.md ("Link preview"). Not deployed: only site/ is published. -->
+<style>html, body { margin: 0; } body { width: 100vw; height: 100vh; overflow: hidden; } svg { display: block; width: 100vw; height: 100vh; }</style>
 </head>
 <body>
-<svg width="512" height="512" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" fill="#142235"/><circle cx="16" cy="16" r="9" fill="none" stroke="#E3A83B" stroke-width="3"/><circle cx="16" cy="16" r="3" fill="#E3A83B"/></svg>
+<svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" fill="#142235"/><circle cx="16" cy="16" r="9" fill="none" stroke="#E3A83B" stroke-width="3"/><circle cx="16" cy="16" r="3" fill="#E3A83B"/></svg>
 </body>
 </html>

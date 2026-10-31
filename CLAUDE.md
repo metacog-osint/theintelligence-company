@@ -10,7 +10,8 @@ Intelligence Company site. Started 27 Oct 2026 at Tom's request after a review o
 - Intelligence Company products: Watchfloor (beta; CONTEXT's rebuild, `D:\Projects\more-context`), Noisefloor
   (one word since 27 Oct; `D:\Projects\noise-floor`), Vigil, CONTEXT (`D:\Projects\geo-context`), PropertyCast
   (stays here for now), Title 10 Field Guide (`activation.`), Listening Post (invite-only job-search app; listed on the hub
-  as "Invite only" since 27 Oct).
+  as "Invite only" since 27 Oct), COP (`cop.`, `D:\Projects\cop`; the common operational picture, beta since 31 Oct
+  2026, public and non-commercial for now).
 - Names for new intel products come from the vocabulary of watching and listening.
 - Each product keeps its own colours. Every site carries the house layer: the footer pattern (who, updated date,
   source code and licence if public, terms, data credits, Sources page), the same About structure (what it is,
@@ -117,4 +118,38 @@ Intelligence Company site. Started 27 Oct 2026 at Tom's request after a review o
 - Phone layout fix (31 Oct 2026): the `max-width: 560px` rule set `.wrap { padding: 0 16px }`, which also zeroed the
   top and bottom padding of every block that is also `.wrap` (top bar, masthead, contact, footer). It now sets the
   sides only.
+- **Second batch, 31 Oct 2026 (Tom approved items 1–9):**
+  - **Search title** "The Intelligence Company · OSINT from Fargo-Moorhead, ND/MN"; the description and
+    `og:description` name Fargo-Moorhead, ND/MN.
+  - **`site/404.html`**: Firebase serves it for any missing path at any depth, so every URL in it is absolute. Its
+    product list is a copy of the home page's; keep the two in step.
+  - **Home-screen icons**: `img/apple-touch-icon.png` (180), `img/icon-192.png`, `img/logo-512.png`, `site.webmanifest`,
+    and `theme-color` for light and dark. Headless Edge won't render a window narrower than about 500 px, so the 180
+    and 192 are downscaled from the 512 render (System.Drawing, high-quality bicubic).
+  - **`sitemap.xml`** (apex only) and a `Sitemap:` line in `robots.txt`. Bump `<lastmod>` when the page changes
+    materially.
+  - **"Updated … ago"** under Noisefloor and Watchfloor in the product list (`site.js` `setFresh`, keyed by
+    `li[data-product]`), from Noisefloor's `built_utc` and Watchfloor's `built_at`; the tooltip gives the full time in the
+    viewer's zone. Add a product by giving its row `data-product` and calling `setFresh` with its feed's build time.
+  - **Vigil feature block** with `img/vigil.webp`: Vigil's public landing page, captured with headless Edge at
+    1280×800 and `--force-device-scale-factor=2`, then cropped to box (0, 115, 1500, 1485) with Pillow. The crop
+    deliberately leaves out "Recent Incidents": **don't put leak-site victim names on the hub.** The three points are
+    from Vigil's README. Vigil's other pages need an account.
+  - **Vigil "Latest" line** from `https://vigil.theintelligence.company/api/summary` (Vigil commit `9d40d75` on
+    `feat/public-summary`, built by a separate session; live only once Tom merges it into Vigil's `main`). It returns
+    `brief`, `day` and `built_at` with open CORS and an hour of CDN cache, or a 503 whenever Vigil can't stand behind a
+    number, including a zero day. Then the hub keeps the static line. Rules from that session: insert `brief` as
+    text only (group names come from criminal leak sites); `day` is RansomLook's calendar day, one to two hours ahead
+    of UTC, so never label it UTC; credit RansomLook (CC BY 4.0) in the footer, which the hub does. Vigil's origin
+    is in `connect-src`, and `setFresh("vigil", built_at)` drives "Updated … ago" in the product list.
+  - **"Work with us"** (`#services`, between Products and How we work; in the menu, and the hero's second button):
+    custom monitoring, briefings, analyst training, tools and consulting (Tom confirmed all four, 31 Oct 2026). The
+    button opens a mail to support@ with a subject line. Career details stay off the page, as with the About.
+  - **COP on the hub** (asked by the COP session for Tom, 31 Oct 2026): `PROGRAMS` entry `cop` is `status: "beta"`
+    with `href` and a guide question, and its line now says what v0 does (the old line promised cross-layer
+    scoring, which COP doesn't do). `kind()` and `statusWords()` now follow status for core programs too: a planned
+    core program (Verdict) keeps the dashed "core" mark, while a core program that is out draws as live or beta and
+    reads "Beta, core". COP is also in "Every product" and `404.html`, after Context.
+  - **Headshot**: still to do. LinkedIn shows a sign-in wall, and `Downloads\headshot.jfif` carries a Gemini watermark
+    and isn't Tom's LinkedIn photo, so it wasn't used.
 - Times: store UTC; display per the shared module. Messages to Tom use Central time.
