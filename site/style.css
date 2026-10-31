@@ -117,10 +117,23 @@ figcaption { margin-top: 10px; font: 400 13px/1.45 var(--mono); color: var(--mut
 .p-name { font: 500 26px/1.2 var(--serif); }
 .p-what { color: var(--body); font-size: 16px; }
 .p-st { font: 400 13px/1.4 var(--mono); white-space: nowrap; text-align: right; }
+.p-fresh { display: block; margin-top: 6px; font: 400 13px/1.4 var(--mono); color: var(--mut); }
 @media (max-width: 760px) {
   .plist a { grid-template-columns: 1fr; gap: 6px; }
   .p-st { text-align: left; }
 }
+
+/* Work with us */
+.services { padding-top: 72px; }
+.services .section-h { max-width: 18em; margin-bottom: 20px; }
+.services-lede { font-size: 18px; color: var(--body); max-width: 40em; margin-bottom: 44px; }
+.offer { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: 32px 40px; margin-bottom: 44px; }
+.offer li { border-top: 2px solid var(--mark); padding-top: 18px; }
+.offer h3 { font: 500 24px/1.2 var(--serif); margin-bottom: 8px; }
+.offer p { color: var(--body); font-size: 16px; }
+.services-cta { display: flex; flex-wrap: wrap; gap: 14px 24px; align-items: center; }
+.services-cta p { color: var(--mut); font-size: 15px; }
 
 /* How we work */
 .band { background: var(--band); color: var(--band-ink); margin-top: 72px; padding: 80px 0; }
@@ -140,6 +153,11 @@ figcaption { margin-top: 10px; font: 400 13px/1.45 var(--mono); color: var(--mut
 .contact-inner { display: flex; flex-wrap: wrap; gap: 20px 64px; align-items: baseline; justify-content: space-between; padding-top: 72px; padding-bottom: 72px; }
 .contact-mail { font-size: 20px; font-weight: 500; overflow-wrap: anywhere; }
 .contact-note { margin-top: 6px; font-size: 16px; color: var(--mut); }
+
+/* Error page (404.html) */
+.notfound { padding-top: 64px; padding-bottom: 80px; }
+.notfound .lede { margin-bottom: 8px; }
+.notfound .plist { margin-bottom: 40px; }
 
 /* Footer: the house layer */
 .foot { border-top: 3px double var(--ink); }

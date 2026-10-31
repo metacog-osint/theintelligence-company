@@ -71,8 +71,9 @@
 
   // Programs. status: live, beta, dev, planned. core: reads every layer. working: a working name, not final.
   var PROGRAMS = [
-    { id: "cop", name: "COP", status: "planned", core: true, at: [652, 196],
-      line: "The common operational picture: every program on one map, read together, with agreement across layers flagged and scored." },
+    { id: "cop", name: "COP", status: "beta", core: true, at: [652, 196],
+      href: "https://cop.theintelligence.company", ask: "What stands out across every program today?",
+      line: "The common operational picture: every program's latest findings on one map, with today's top five, what else is unusual, and each feed's health." },
     { id: "verdict", name: "Verdict", status: "planned", core: true, at: [772, 196],
       line: "Logs every forecast and warning with the rule that will settle it, then scores them in public." },
 
@@ -169,8 +170,14 @@
     return p ? Number(p[3]) + " " + MONTHS[Number(p[2]) - 1] + " " + p[1] : "";
   }
   function n(x) { return Number(x).toLocaleString("en-US"); }
-  function statusWords(p) { return (p.core ? "Planned, core" : STATUS[p.status]) + (p.working ? ", working name" : ""); }
-  function kind(p) { return p.core ? "core" : p.status === "live" ? "live" : (p.status === "beta" || p.status === "dev") ? "dev" : "plan"; }
+  // A core program reads every layer; its status still decides how it is drawn. Only a planned core program gets the
+  // dashed "core" mark; a core program that is out (COP, beta since 31 Oct 2026) draws like any live or beta program.
+  function statusWords(p) { return (p.core ? SHORT[p.status] + ", core" : STATUS[p.status]) + (p.working ? ", working name" : ""); }
+  function kind(p) {
+    if (p.status === "live") return "live";
+    if (p.status === "beta" || p.status === "dev") return "dev";
+    return p.core ? "core" : "plan";
+  }
   function layersOf(p) { return p.core ? LK.slice() : [p.home].concat(p.reach || []); }
   function scopeBar(p) {
     var on = layersOf(p);
@@ -335,10 +342,10 @@
       '<div class="oe-sec"><p class="oe-k">Layers</p><div class="oe-plist">' + Z.layers.map(layerChip).join("") + "</div></div>";
   }
   function allHTML() {
-    var groups = [["Live", function (p) { return !p.core && (p.status === "live" || p.status === "beta"); }],
+    var groups = [["Live", function (p) { return p.status === "live" || p.status === "beta"; }],
       ["In development", function (p) { return p.status === "dev"; }],
       ["Planned", function (p) { return !p.core && p.status === "planned"; }],
-      ["Core, planned", function (p) { return p.core; }]];
+      ["Core, planned", function (p) { return p.core && p.status === "planned"; }]];
     return CLOSE + '<p class="oe-k">Every program</p><h3>Current and planned</h3>' + groups.map(function (g) {
       var ps = PROGRAMS.filter(g[1]);
       ps.sort(function (a, b) { return LK.indexOf(a.home) - LK.indexOf(b.home); });
