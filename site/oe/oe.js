@@ -326,7 +326,7 @@
       '<h3><i class="oe-sdot k-' + kind(p) + '" aria-hidden="true"></i>' + esc(p.name) + "</h3><p>" + esc(p.line) + "</p>" + stat +
       '<div class="oe-sec">' + home + "</div>" + reach +
       (p.working ? '<p class="oe-note">Working name; the final name is still to be chosen.</p>' : "") +
-      '<div class="oe-actions">' + (p.href ? '<a class="oe-btn" href="' + esc(p.href) + '">Open ' + esc(p.name) + ' <span aria-hidden="true">→</span></a>' : "") +
+      '<div class="oe-actions">' + (p.href ? '<a class="oe-btn" href="' + esc(p.href) + '" target="_blank" rel="noopener" aria-describedby="newtab">Open ' + esc(p.name) + ' <span aria-hidden="true">→</span></a>' : "") +
       '<button type="button" class="oe-btn2" data-how>Back to the guide</button></div>';
   }
   function zoneHTML(z, isDoc) {
@@ -356,7 +356,7 @@
         return '<li><button type="button" class="oe-q" data-p="' + p.id + '"><span class="oe-qt">' + esc(p.ask) + "</span>" +
           '<span class="oe-qm"><i class="oe-sdot k-' + kind(p) + '" aria-hidden="true"></i>' + esc(p.name) + " · " + esc(SHORT[p.status]) +
           (p.short_stat ? " · " + esc(p.short_stat) : "") + "</span>" + scopeBar(p) + "</button>" +
-          (p.href ? '<a class="oe-open" href="' + esc(p.href) + '">Open <span aria-hidden="true">→</span><span class="oe-sr"> ' + esc(p.name) + "</span></a>" : "") + "</li>";
+          (p.href ? '<a class="oe-open" href="' + esc(p.href) + '" target="_blank" rel="noopener" aria-describedby="newtab">Open <span aria-hidden="true">→</span><span class="oe-sr"> ' + esc(p.name) + "</span></a>" : "") + "</li>";
       }).join("") + '</ul><button type="button" class="oe-all-btn" data-all>Every program, current and planned <span aria-hidden="true">→</span></button>';
   }
   function chipsHTML() {
