@@ -21,8 +21,11 @@ Intelligence Company site. Started 27 Oct 2026 at Tom's request after a review o
   adding one.
 
 ## Shared code
-- `site/shared/tic-time.js` + `tic-time.css` (v1.2; v1.2 fixed a first visit saving zone=undefined, which opened
-  the dialog on "Other"): time display. Copies: Watchfloor `web/`, Title 10 `deploy/public/`, Noisefloor
+- `site/shared/tic-time.js` + `tic-time.css` (v1.3; v1.3, 31 Oct 2026, makes the `year` option give a full date in the
+  house style, "31 Oct 2026", in every zone and clock, Zulu included (it used to be ignored in Zulu), and `renderAll`
+  reads `data-tic-year`; v1.2 fixed a first visit saving zone=undefined, which opened the dialog on "Other"): time
+  display. Only the hub has v1.3 so far; the copies below are v1.2, which is compatible, so copy v1.3 over when a site
+  next needs a full date. Copies: Watchfloor `web/`, Title 10 `deploy/public/`, Noisefloor
   `site_src/`, PropertyCast `src/wx/static/`, CONTEXT `public/`, Vigil `public/`, Listening Post `web/public/`. House rule: store UTC; show the viewer's own
   zone by default, always naming it; a settings menu for zone (automatic, Zulu/UTC, major zones, any IANA zone) and
   12/24-hour clock. On `*.theintelligence.company` the choice is kept in a domain-wide cookie so it follows the
@@ -87,6 +90,31 @@ Intelligence Company site. Started 27 Oct 2026 at Tom's request after a review o
 - **Links to the products open in a new tab** (Tom, 31 Oct 2026): `target="_blank" rel="noopener"
   aria-describedby="newtab"`, where `#newtab` is a hidden "Opens in a new tab" note for screen readers. `oe/oe.js`
   builds its "Open" links the same way; keep both in step when adding a product.
+  Links that open a new tab end in **↗**; arrows on in-page controls stay →.
 - **No clock in the top bar** since 31 Oct 2026: the Time button already names the viewer's zone, and Tom found the
   zone repeated (clock, button, and "Central time" in the contact block, all removed except the button).
+- **Seven improvements, 31 Oct 2026 (Tom asked for all seven):**
+  - **Link preview:** Open Graph and Twitter card tags in `<head>`, image `site/img/og-card.png` (1200×630). Its source
+    is `tools/og-card.html` (site fonts and colours); `site/img/logo-512.png` comes from `tools/logo.html`. Neither
+    source is deployed. To regenerate: from the project root run `python -m http.server 5056 --bind 127.0.0.1` (the
+    fonts need http), then `msedge --headless=new --disable-gpu --hide-scrollbars --user-data-dir=%TEMP%\edge-og
+    --window-size=1200,630 --virtual-time-budget=5000 --screenshot=<project>\site\img\og-card.png
+    http://127.0.0.1:5056/tools/og-card.html` (512,512 and `logo.html` for the logo). Edge is at
+    `C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe`. LinkedIn caches previews; its Post Inspector
+    refreshes one.
+  - **Hero top line:** "Warning · Spectrum · Cyber · Forecasting" (it used to repeat the headline).
+  - **Footer date** uses `data-tic-year`: "Updated 31 Oct 2026" in the viewer's zone.
+  - **Footer Sources links:** Noisefloor `/sources`, Watchfloor `/#/sources`, Vigil `/sources`, PropertyCast
+    `/#sources`, Title 10 `/#contacts` ("Contacts & sources"). Context and Listening Post have no Sources page yet, so
+    they're left out; add them when they get one.
+  - **Privacy line:** "No analytics or tracking. Time settings, if you change them, stay in your browser." True as
+    of 31 Oct 2026: no analytics or third-party scripts, and `tic-time.js` writes its cookie and local storage only
+    when the visitor changes a setting. Change the line before adding anything that tracks.
+  - **Search markup:** JSON-LD in `<head>` (Organization with logo, email, founder Thomas Brummer, address Fargo, ND,
+    the LLC's registered city; plus WebSite). A JSON-LD block isn't executed, so the `script-src 'self'` CSP allows it
+    (checked: no console violation).
+  - **Contact note:** "Corrections, data questions and collaboration." under the email.
+- Phone layout fix (31 Oct 2026): the `max-width: 560px` rule set `.wrap { padding: 0 16px }`, which also zeroed the
+  top and bottom padding of every block that is also `.wrap` (top bar, masthead, contact, footer). It now sets the
+  sides only.
 - Times: store UTC; display per the shared module. Messages to Tom use Central time.
