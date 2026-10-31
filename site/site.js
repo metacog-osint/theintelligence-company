@@ -47,7 +47,9 @@
   }).catch(function () { /* keep the static line */ });
 
   // Watchfloor: the conflict zone furthest above its usual coverage, if Watchfloor raised an alarm for it.
-  getJSON(WATCHFLOOR).then(function (s) {
+  // The same request also feeds the live counts in the layers drawing (oe/oe.js).
+  window.ticWatchfloor = getJSON(WATCHFLOOR);
+  window.ticWatchfloor.then(function (s) {
     var zones = [];
     Object.keys(s.entities || {}).forEach(function (k) {
       var v = s.entities[k];
