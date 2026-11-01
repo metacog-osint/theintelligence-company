@@ -54,7 +54,10 @@ Intelligence Company site. Started 27 Oct 2026 at Tom's request after a review o
   the next daily publish), Context (b86602f; deploys only with `npx vercel --prod`, so copy `.vercel/project.json` into
   the worktree; new `/sources` page), Vigil (6afc178; Vercel deploys on push to main), Listening Post (which
   has **no git**: back up files before editing; new public `/sources.html`; `firebase deploy --only hosting`).
-  Still to do: COP, Elements, Cordon. Method: a git worktree per repo, test locally, Tom's yes, push to main, deploy the
+  COP (d447aaf; COP is a fixed full-screen layout, so `cop.css` pins the bar and moves `.bar` and `.app` down 34px,
+  under `body:has(> .tic-house)`), Elements (22a67c1) and Cordon (33cd380; both copy `site_src/` to `site/` at build
+  and deploy to GitHub Pages on push). **All ten program sites done, 1 Nov 2026.** When a program is added or
+  renamed, update `PROGRAMS` in `tic-nav.js` and copy it to every site. Method: a git worktree per repo, test locally, Tom's yes, push to main, deploy the
   repo's own way. **Stop local preview servers with Stop-Process on their node or esbuild PIDs:** stopping the task
   only kills the shell, and the leftover processes lock the worktree folder. **The house bar** on every program site
   (Tom: "I need a
