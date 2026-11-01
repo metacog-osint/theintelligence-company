@@ -128,7 +128,7 @@
 
     { id: "elements", name: "Elements", status: "beta", home: "land", reach: ["air", "systems", "human"], at: [530, 1125],
       href: "https://elements.theintelligence.company", ask: "Where are natural hazards hitting?",
-      line: "Natural hazards as the authorities report them: USGS earthquakes with impact alerts, GDACS alerts, hurricane-center storms and Copernicus disaster mapping on one map. Fires, volcanoes and a radiation lane are planned." },
+      line: "Natural hazards as the authorities report them: USGS earthquakes with impact alerts, volcano alert levels, NASA satellite fire detections, GDACS alerts, hurricane-center storms and Copernicus disaster mapping on one map. A radiation lane is planned." },
     { id: "wake", name: "Wake", status: "planned", home: "land", reach: ["ems", "systems"], at: [900, 1152],
       line: "Maritime: AIS gaps, the shadow fleet, chokepoint and port throughput, and piracy." }
   ];
