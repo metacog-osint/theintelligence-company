@@ -7,6 +7,9 @@
   var NOISEFLOOR = "https://noisefloor.theintelligence.company/data/board.json";
   var WATCHFLOOR = "https://mc-api-odg3xhcd4a-uc.a.run.app/summary"; // Watchfloor's public API; newest built day
   var VIGIL = "https://vigil.theintelligence.company/api/summary"; // Vigil's public daily summary; 503 when unsure
+  var COP_HEALTH = "https://cop.theintelligence.company/data/health.json"; // COP's check of every program's feed
+  var ELEMENTS_FEED = "https://elements.theintelligence.company/data/feed.geojson"; // read by HEAD only (Last-Modified)
+  var CORDON_FEED = "https://cordon.theintelligence.company/data/feed.geojson";
 
   // Time: the Time button (it names the viewer's zone) and every <time data-tic>.
   var holder = document.getElementById("time-settings");
@@ -30,9 +33,23 @@
       return r.json();
     });
   }
-  // "Updated 2 h ago" under a product in the list, from the build time its feed reports. The full time, in the
-  // viewer's zone and named, is in the tooltip. Products without a feed show nothing.
-  var fresh = [];
+  // The latest-modified time of a file, read with HEAD so a large feed isn't downloaded. Last-Modified is one of the
+  // headers a browser always lets another site read.
+  function getModified(url) {
+    var ctl = "AbortController" in window ? new AbortController() : null;
+    var timer = ctl ? setTimeout(function () { ctl.abort(); }, 8000) : null;
+    return fetch(url, ctl ? { method: "HEAD", signal: ctl.signal } : { method: "HEAD" }).then(function (r) {
+      if (timer) clearTimeout(timer);
+      if (!r.ok) throw new Error("HTTP " + r.status);
+      return r.headers.get("last-modified");
+    });
+  }
+
+  // "Updated 2 h ago" under each live program in the list, from the most direct time each one publishes (see the
+  // calls below). The full time, in the viewer's zone and named, is in the tooltip. When COP's health check marks a
+  // program's feed stale (older than that program's own limit), the line adds "running late". Programs without a
+  // feed (PropertyCast, Title 10, Listening Post) show nothing.
+  var fresh = {}, late = {};
   function ago(t) {
     var mins = Math.round((Date.now() - t) / 60000);
     if (mins < 1) return "just now";
@@ -41,24 +58,44 @@
     return h < 48 ? h + " h ago" : Math.round(h / 24) + " days ago";
   }
   function paintFresh() {
-    fresh.forEach(function (f) {
-      f.el.textContent = "Updated " + ago(f.t);
-      if (T) f.el.title = T.format(f.iso, { year: true });
+    Object.keys(fresh).forEach(function (k) {
+      var f = fresh[k];
+      f.el.textContent = "Updated " + ago(f.t) + (late[k] ? " · running late" : "");
+      f.el.classList.toggle("late", !!late[k]);
+      if (T) f.el.title = T.format(f.iso, { year: true }) + (late[k] ? " (later than this feed's usual schedule)" : "");
     });
   }
-  function setFresh(product, iso) {
-    var t = Date.parse(iso || "");
+  function setFresh(product, when) {
+    var t = Date.parse(when || "");
     var what = document.querySelector('.plist [data-product="' + product + '"] .p-what');
     if (!what || isNaN(t)) return;
-    var el = document.createElement("time");
-    el.className = "p-fresh";
-    el.setAttribute("datetime", iso);
-    what.appendChild(el);
-    fresh.push({ el: el, t: t, iso: iso });
+    var f = fresh[product];
+    if (!f) {
+      f = fresh[product] = { el: document.createElement("time") };
+      f.el.className = "p-fresh";
+      what.appendChild(f.el);
+    }
+    f.t = t;
+    f.iso = new Date(t).toISOString();
+    f.el.setAttribute("datetime", f.iso);
     paintFresh();
   }
   setInterval(paintFresh, 60000);
   if (T) T.onChange(paintFresh);
+
+  // COP: its own build time, Context's (COP reads Context's feed; Context has no small file of its own), and any
+  // program COP marks stale.
+  getJSON(COP_HEALTH).then(function (h) {
+    setFresh("cop", h.generated_at);
+    (h.programs || []).forEach(function (p) {
+      if (p.id === "context") setFresh("context", p.data_as_of);
+      if (p.state === "stale") late[p.id] = true;
+    });
+    paintFresh();
+  }).catch(function () { /* no line for these */ });
+  // Elements and Cordon: when their feed was last published.
+  getModified(ELEMENTS_FEED).then(function (m) { setFresh("elements", m); }).catch(function () {});
+  getModified(CORDON_FEED).then(function (m) { setFresh("cordon", m); }).catch(function () {});
 
   function setItem(id, meta, text) {
     var el = document.getElementById(id);
