@@ -119,6 +119,7 @@ figcaption { margin-top: 10px; font: 400 13px/1.45 var(--mono); color: var(--mut
 .p-what { color: var(--body); font-size: 16px; }
 .p-st { font: 400 13px/1.4 var(--mono); white-space: nowrap; text-align: right; }
 .p-fresh { display: block; margin-top: 6px; font: 400 13px/1.4 var(--mono); color: var(--mut); }
+.p-fresh.late { color: var(--beta); }
 @media (max-width: 760px) {
   .plist a { grid-template-columns: 1fr; gap: 6px; }
   .p-st { text-align: left; }

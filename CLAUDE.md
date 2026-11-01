@@ -159,9 +159,15 @@ Intelligence Company site. Started 27 Oct 2026 at Tom's request after a review o
     and 192 are downscaled from the 512 render (System.Drawing, high-quality bicubic).
   - **`sitemap.xml`** (apex only) and a `Sitemap:` line in `robots.txt`. Bump `<lastmod>` when the page changes
     materially.
-  - **"Updated … ago"** under Noisefloor and Watchfloor in the product list (`site.js` `setFresh`, keyed by
-    `li[data-product]`), from Noisefloor's `built_utc` and Watchfloor's `built_at`; the tooltip gives the full time in the
-    viewer's zone. Add a product by giving its row `data-product` and calling `setFresh` with its feed's build time.
+  - **"Updated … ago"** under every live program in the product list (`site.js` `setFresh`, keyed by
+    `li[data-product]`; one line per program, updated in place). Since 1 Nov 2026 UTC each time comes from the most
+    direct source: Noisefloor `board.json` `built_utc`, Watchfloor `/summary` `built_at`, Vigil `/api/summary`
+    `built_at`, COP `data/health.json` `generated_at`, Context from COP's health entry (`data_as_of`; Context has no
+    small file of its own), and Elements and Cordon from a HEAD request's `Last-Modified` on their `data/feed.geojson`
+    (400–500 KB, so it is never downloaded). If COP's health marks a program `state: "stale"` (older than that
+    program's own `stale_hours`), the line adds "· running late" in amber, with the reason in the tooltip. The
+    tooltip gives the full time in the viewer's zone. `connect-src` lists the cop., elements. and cordon. origins.
+    Add a program by giving its row `data-product` and calling `setFresh` with its most direct publish time.
   - **Vigil feature block** (first shot `img/vigil.webp`, the signed-out landing page, replaced on 31 Oct 2026 by the signed-in `vigil-actors.webp`; see Product screenshots). The first was captured with headless Edge at
     1280×800 and `--force-device-scale-factor=2`, then cropped to box (0, 115, 1500, 1485) with Pillow. The crop
     deliberately leaves out "Recent Incidents": **don't put leak-site victim names on the hub.** The three points are
