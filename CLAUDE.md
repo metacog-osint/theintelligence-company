@@ -17,8 +17,12 @@ Intelligence Company site. Started 27 Oct 2026 at Tom's request after a review o
   `metacog-osint/elements` and `/cordon`) with custom domains set through the Pages API (no CNAME file needed for
   Actions builds), HTTPS enforced, and Squarespace `CNAME elements|cordon → metacog-osint.github.io`. The old
   `metacog-osint.github.io/elements/` and `/cordon/` addresses 301 to the subdomains. Their drawing lines say what v0
-  covers and what is planned (Elements: fires, volcanoes, radiation; Cordon: NOTAMs, launch hazard areas); update
-  the lines as those arrive.
+  covers and what is planned (Elements: radiation, since NASA FIRMS fires and USGS volcano alert levels arrived
+  by 1 Nov 2026; Cordon: NOTAMs, launch hazard areas); update the lines as those arrive (Tom asked for this
+  upkeep, 1 Nov 2026). Check by counting `properties.sources[].publisher` in each `data/feed.geojson`.
+- **Context vs Watchfloor is parked** (Tom, 1 Nov 2026: "stop it, i'm not deciding on this yet"). Both may stay with
+  different scopes. Leave Context's "Watchfloor's predecessor" line alone, and don't raise the question again until
+  Tom does. Watchfloor's noindex and copyright registration or ™ are also left as they are for now.
 - Names for new intel products come from the vocabulary of watching and listening.
 - Each product keeps its own colours. Every site carries the house layer: the footer pattern (who, updated date,
   source code and licence if public, terms, data credits, Sources page), the same About structure (what it is,
@@ -39,6 +43,19 @@ Intelligence Company site. Started 27 Oct 2026 at Tom's request after a review o
   12/24-hour clock. On `*.theintelligence.company` the choice is kept in a domain-wide cookie so it follows the
   visitor across sites. Copy the files into each site and keep the version line; the hub also serves them at
   `/shared/` (CORS open) once the domain is live.
+  Tom, 1 Nov 2026: roll v1.3 out to every program site (with tic-nav below), which a separate rollout session does
+  site by site. COP, Elements and Cordon also carry copies.
+- `site/shared/tic-nav.js` + `tic-nav.css` (v1.0, 1 Nov 2026): **the house bar** on every program site (Tom: "I need a
+  link back to the home page on each subsite… a dropdown menu of all programs with their primary layer area or topic
+  labeled (and a more in-depth description upon mouse-over)"). It is a slim navy bar with "← The Intelligence Company"
+  and a **Programs ▾** disclosure menu. That menu lists every live program grouped "Across the layers" and "Other
+  tools", each with its layer and topic label, its status (Live, Beta or Invite only) and "You are here", and a side
+  panel with the long description on hover or focus. Phones show the label and a one-line summary instead.
+  Keyboard: arrows, Home and End move; Esc closes. It is CSP-safe, with no inline styles and no HTML strings, mounts
+  first in `<body>` or into `#tic-nav`, finds the current program from the host name (or `data-current`), and opens
+  program links in the same tab, since it is site navigation. **Keep its `PROGRAMS` in step with `oe/oe.js` and the
+  product list** when a program is added, renamed or goes live. Test page: `tools/tic-nav-demo.html` (serve the
+  project root). The hub itself doesn't use the bar; it has its own masthead.
 
 ## Site
 - Static files in `site/`, no build step. Firebase Hosting site `theintelligencecompany` in project

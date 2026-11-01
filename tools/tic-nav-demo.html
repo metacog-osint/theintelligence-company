@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tic-nav demo</title>
+<!-- Local test page for site/shared/tic-nav.js (not deployed). Pretends to be Vigil so "You are here" shows.
+     Serve the project root (python -m http.server 5056 --bind 127.0.0.1) and open /tools/tic-nav-demo.html. -->
+<link rel="stylesheet" href="../site/shared/tic-nav.css">
+<style>
+  body { margin: 0; font: 16px/1.5 system-ui, sans-serif; background: #0b0f17; color: #e5e7eb; }
+  header { padding: 16px 24px; border-bottom: 1px solid #1f2937; font-weight: 700; color: #22c55e; }
+  main { padding: 24px; max-width: 60em; }
+</style>
+</head>
+<body>
+<header>VIGIL · a stand-in product header</header>
+<main><p>Product page content. The house bar above should show "← The Intelligence Company" and a Programs menu.</p></main>
+<script src="../site/shared/tic-nav.js" data-current="vigil"></script>
+</body>
+</html>
