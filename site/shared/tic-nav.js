@@ -1,4 +1,4 @@
-/*! tic-nav.js v1.0 · The Intelligence Company house bar: a link home and a Programs menu · canonical copy:
+/*! tic-nav.js v1.1 · The Intelligence Company house bar: a link home and a Programs menu · canonical copy:
  *  [local path] (copy into each site with tic-nav.css; keep the version line).
  *
  *  Tom, 1 Nov 2026: every program site needs a link back to the home page, and a dropdown of all programs, each
@@ -183,6 +183,6 @@
     if (slot) slot.append(nav); else document.body.insertBefore(nav, document.body.firstChild);
   }
 
-  window.TicNav = { version: "1.0", programs: PROGRAMS.slice(), mount: mount };
+  window.TicNav = { version: "1.1", programs: PROGRAMS.slice(), mount: mount };
   if (document.body) mount(); else document.addEventListener("DOMContentLoaded", function () { mount(); });
 })();

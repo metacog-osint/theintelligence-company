@@ -45,7 +45,10 @@ Intelligence Company site. Started 27 Oct 2026 at Tom's request after a review o
   `/shared/` (CORS open) once the domain is live.
   Tom, 1 Nov 2026: roll v1.3 out to every program site (with tic-nav below), which a separate rollout session does
   site by site. COP, Elements and Cordon also carry copies.
-- `site/shared/tic-nav.js` + `tic-nav.css` (v1.0, 1 Nov 2026): **the house bar** on every program site (Tom: "I need a
+- `site/shared/tic-nav.js` + `tic-nav.css` (v1.1, 1 Nov 2026; v1.1 raises the bar's z-index to 10000 so its menu
+  covers headers with their own stacking, such as Noisefloor's z-index 1100, and resets `display`, margins, padding and
+  borders on the bar so a site's generic `nav` rules can't reshape it, such as Watchfloor's flex `nav`. Title 10 still
+  has v1.0, which works there; copy v1.1 when next touched): **the house bar** on every program site (Tom: "I need a
   link back to the home page on each subsite… a dropdown menu of all programs with their primary layer area or topic
   labeled (and a more in-depth description upon mouse-over)"). It is a slim navy bar with "← The Intelligence Company"
   and a **Programs ▾** disclosure menu. That menu lists every live program grouped "Across the layers" and "Other
