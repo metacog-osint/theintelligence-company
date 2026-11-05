@@ -75,7 +75,7 @@
   var PROGRAMS = [
     { id: "cop", name: "COP", status: "beta", core: true, at: [652, 196],
       href: "https://cop.theintelligence.company", ask: "What stands out across every program today?",
-      line: "The common operational picture: every program's latest findings on one map, with today's top five, multi-program country convergence, and each feed's health." },
+      line: "The common operational picture: every program's latest findings on one map, with today's top five, what else is unusual, and each feed's health." },
     { id: "verdict", name: "Verdict", status: "dev", core: true, at: [772, 196],
       ask: "How accurate are the forecasts?",
       line: "Logs every forecast and warning with the rule that will settle it, syncs the event calendar, and scores calibration in public." },
@@ -135,7 +135,7 @@
 
     { id: "elements", name: "Elements", status: "beta", home: "land", reach: ["air", "systems", "human"], at: [530, 1125],
       href: "https://elements.theintelligence.company", ask: "Where are natural hazards hitting?",
-      line: "Natural hazards as the authorities report them: USGS earthquakes with impact alerts and volcano alert levels, NASA satellite fire detections, NOAA weather warnings and severe-storm, hurricane and tsunami products, the US Drought Monitor, GDACS alerts and Copernicus disaster mapping on one map. A radiation lane is planned." },
+      line: "Natural hazards as the authorities report them, on one map. Worldwide: USGS earthquakes with impact alerts, NASA satellite fire detections, GDACS alerts and Copernicus disaster mapping. Regional: NOAA hurricane-center storms, and tsunami messages for North America, the Pacific and the Caribbean. US only for now: NOAA weather warnings and severe-storm outlooks, the US Drought Monitor and USGS volcano alert levels. Global weather and a radiation lane are planned." },
     { id: "wake", name: "Wake", status: "dev", home: "land", reach: ["ems", "systems"], at: [900, 1152],
       ask: "What is moving through maritime chokepoints?",
       line: "Maritime: chokepoint and port throughput (IMF PortWatch), Baltic open AIS gaps, undersea cable corridors and navigational hazards." }
