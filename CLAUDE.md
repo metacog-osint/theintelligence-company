@@ -3,6 +3,9 @@
 The company's home page (to serve `theintelligence.company`) and the canonical home of code shared by every
 Intelligence Company site. Started 27 Oct 2026 at Tom's request after a review of all his projects.
 
+> **Current state: read [`HANDOFF.md`](./HANDOFF.md) first.** It is the 4 Nov 2026 handoff: what is live, what
+> shipped last, next steps, and the Vigil summary-feed work.
+
 ## Family (decided with Tom, 27 Oct 2026)
 - Two houses. **The Intelligence Company** (`theintelligence.company`): analysis, warning and professional tools.
   **Oddly Specific Studio** (`oddlyspecific.studio`): games and family apps (Whiteout, Mole Hunt, Tres Casas,
@@ -36,8 +39,7 @@ Intelligence Company site. Started 27 Oct 2026 at Tom's request after a review o
 - `site/shared/tic-time.js` + `tic-time.css` (v1.3; v1.3, 31 Oct 2026, makes the `year` option give a full date in the
   house style, "31 Oct 2026", in every zone and clock, Zulu included (it used to be ignored in Zulu), and `renderAll`
   reads `data-tic-year`; v1.2 fixed a first visit saving zone=undefined, which opened the dialog on "Other"): time
-  display. Only the hub has v1.3 so far; the copies below are v1.2, which is compatible, so copy v1.3 over when a site
-  next needs a full date. Copies: Watchfloor `web/`, Title 10 `deploy/public/`, Noisefloor
+  display. Every copy is v1.3 on its repo's main branch (checked 5 Nov 2026; some local trees lag). Copies: Watchfloor `web/`, Title 10 `deploy/public/`, Noisefloor
   `site_src/`, PropertyCast `src/wx/static/`, CONTEXT `public/`, Vigil `public/`, Listening Post `web/public/`. House rule: store UTC; show the viewer's own
   zone by default, always naming it; a settings menu for zone (automatic, Zulu/UTC, major zones, any IANA zone) and
   12/24-hour clock. On `*.theintelligence.company` the choice is kept in a domain-wide cookie so it follows the
@@ -99,13 +101,20 @@ Intelligence Company site. Started 27 Oct 2026 at Tom's request after a review o
 - **"Latest from the products"** (`site.js`): Noisefloor's `data/board.json` (`brief`, `freshness.aircraft_day`) and
   Watchfloor's public API `/summary` (the conflict zone with the highest attention z, named only when Watchfloor raised an
   alarm; keys starting `T` are topics). Both send `Access-Control-Allow-Origin: *`; `firebase.json`'s `connect-src`
-  lists the two origins. A feed that fails leaves the static line. PropertyCast has no JSON feed yet.
+  lists the two origins. A feed that fails leaves the static line. PropertyCast has no JSON feed yet. Vigil's line is
+  below. Since 5 Nov 2026 a fourth line, "All layers:", comes from COP's `data/health.json`: feeds in state `fresh`
+  out of all, and the sum of `placed` findings. `site.js` shares the Noisefloor, Vigil and COP fetches with `oe.js`
+  (`window.ticNoisefloor`, `ticVigil`, `ticCopHealth`).
 - **"How the programs fit"** (`#layers`, built 31 Oct 2026 from Tom's interactive draft and his 14 review points):
   a dark band after the hero. The artwork is inline SVG in `index.html` (seven plates adapted from JP 2-01.3 Fig I-1);
   `site/oe/oe.js` draws everything that changes from one data table: program tags on each home layer (live, beta or
   in development, planned, core), the reach line through every layer a program touches, the question-led guide
   ("Find your way in", no numbered start), the panels, and the live zone and topic counts from Watchfloor's
-  `/summary` (shared with `site.js` through `window.ticWatchfloor`). **To add or move a program, edit `PROGRAMS`**
+  `/summary` (shared with `site.js` through `window.ticWatchfloor`). **The guide** (Tom, 4 Nov 2026, instead of
+  trimming 14 questions) starts as three questions, one per band of the drawing (`GROUPS` in `oe.js`: conflict and
+  pressure; networks, signals and satellites; ground, sea and air), each opening to its programs' own `ask` lines.
+  One opens at a time, lights its layers and programs, and shows a group panel. Every program with an `ask` must be
+  in exactly one group. Phones keep the row of program chips, in group order. **To add or move a program, edit `PROGRAMS`**
   (`home`, `reach`, `at`). Rules from Tom: no fixed counts in copy (zones change); the right column is doctrine's
   grouping, always on, with JP citations only in the sources line under the figure, and only publicly released
   documents cited; actors are described by role as sources describe them, never as hostile; PropertyCast stays off the
@@ -138,8 +147,8 @@ Intelligence Company site. Started 27 Oct 2026 at Tom's request after a review o
   chief and Air Force weather forecaster, more than half his career a SIGINT analyst, today in the Guard. Second
   paragraph: every job means judging the state of a complex system under pressure and saying how sure you are, which
   leads into the products' standards. The longer credentials (builds programs and leads analysts, research team, 100+
-  analysts trained, AI-assisted analysis standards) live in his LinkedIn About, not here; nor do other career details. Never "25-year ..." before a noun: readers took it as his age. A
-  headshot slot can be added when Tom sends one.
+  analysts trained, AI-assisted analysis standards) live in his LinkedIn About, not here; nor do other career details. Never "25-year ..." before a noun: readers took it as his age. The
+  headshot is in (see Headshot below).
 - **Location on every public page: "Fargo-Moorhead, ND/MN"** in labels, or "Fargo-Moorhead, on the North
   Dakota–Minnesota border" in prose (anchor added 31 Oct 2026 so readers outside the region can place it); never
   "Moorhead, Minnesota" (the LLC is registered in Fargo; Tom, 30 Oct 2026). PropertyCast's forecast point is the
@@ -169,8 +178,8 @@ Intelligence Company site. Started 27 Oct 2026 at Tom's request after a review o
     radio spectrum". Noisefloor's own brief still says "degraded aircraft", which is Noisefloor's wording to fix.
   - **Footer date** uses `data-tic-year`: "Updated 31 Oct 2026" in the viewer's zone.
   - **Footer Sources links:** Noisefloor `/sources`, Watchfloor `/#/sources`, Vigil `/sources`, PropertyCast
-    `/#sources`, Title 10 `/#contacts` ("Contacts & sources"). Context and Listening Post have no Sources page yet, so
-    they're left out; add them when they get one.
+    `/#sources`, Title 10 `/#contacts` ("Contacts & sources"), Context `/sources` and Listening Post `/sources.html`
+    (both linked since `4d05cf2`).
   - **Privacy line:** "No analytics or tracking. Time settings, if you change them, stay in your browser." True as
     of 31 Oct 2026: no analytics or third-party scripts, and `tic-time.js` writes its cookie and local storage only
     when the visitor changes a setting. Change the line before adding anything that tracks.
@@ -196,16 +205,18 @@ Intelligence Company site. Started 27 Oct 2026 at Tom's request after a review o
     direct source: Noisefloor `board.json` `built_utc`, Watchfloor `/summary` `built_at`, Vigil `/api/summary`
     `built_at`, COP `data/health.json` `generated_at`, Context from COP's health entry (`data_as_of`; Context has no
     small file of its own), and Elements and Cordon from a HEAD request's `Last-Modified` on their `data/feed.geojson`
-    (400–500 KB, so it is never downloaded). If COP's health marks a program `state: "stale"` (older than that
-    program's own `stale_hours`), the line adds "· running late" in amber, with the reason in the tooltip. The
+    (400–500 KB, so it is never downloaded). Since 5 Nov 2026 the line adds "· running late" in amber when its own
+    "Updated … ago" is older than that program's `fresh_hours` in COP's health (COP's own `state` judges the newest
+    data, not publication, so it isn't used); the reason is in the tooltip. If Vigil's `/api/summary` 503s, Vigil's
+    time falls back to COP's `data_as_of`. The
     tooltip gives the full time in the viewer's zone. `connect-src` lists the cop., elements. and cordon. origins.
     Add a program by giving its row `data-product` and calling `setFresh` with its most direct publish time.
   - **Vigil feature block** (first shot `img/vigil.webp`, the signed-out landing page, replaced on 31 Oct 2026 by the signed-in `vigil-actors.webp`; see Product screenshots). The first was captured with headless Edge at
     1280×800 and `--force-device-scale-factor=2`, then cropped to box (0, 115, 1500, 1485) with Pillow. The crop
     deliberately leaves out "Recent Incidents": **don't put leak-site victim names on the hub.** The three points are
     from Vigil's README. Vigil's other pages need an account.
-  - **Vigil "Latest" line** from `https://vigil.theintelligence.company/api/summary` (Vigil commit `9d40d75` on
-    `feat/public-summary`, built by a separate session; live only once Tom merges it into Vigil's `main`). It returns
+  - **Vigil "Latest" line** from `https://vigil.theintelligence.company/api/summary` (live since Vigil PR #83, merged
+    31 Oct 2026 as `c4c55d3`). It returns
     `brief`, `day` and `built_at` with open CORS and an hour of CDN cache, or a 503 whenever Vigil can't stand behind a
     number, including a zero day. Then the hub keeps the static line. Rules from that session: insert `brief` as
     text only (group names come from criminal leak sites); `day` is RansomLook's calendar day, one to two hours ahead
