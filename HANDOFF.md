@@ -27,8 +27,8 @@ Tom's yes.
   - Elements: `aeff62f` is on `main`, but the live site still served v1.1 at 1:10 PM CST. The push's Pages deploy hung
     on "updating_pages" and timed out at 1:05 PM CST. Since then GitHub refuses new Pages deployments "due to in
     progress deployment" `aeff62f…`, although that deployment reads `deployment_cancelled` (cancel API also called).
-    Two dispatched runs failed that way. A retry was scheduled for about 1:25 PM CST; if Pages is still stuck, the next
-    `update.yml` run deploys it (the gate allows it, since the last deploy was 16:42 UTC).
+    Two dispatched runs failed that way. A retry 15 minutes later (run 42093792626) deployed: v1.2 live at 1:26 PM
+    CST. If Pages sticks like this again, wait about 15 minutes before dispatching `update.yml` again.
   - PropertyCast: `3473dbc`, live with its next daily publish (about 4:23 AM CST).
   - Vigil: PR #90 (https://github.com/metacog-osint/vigil/pull/90), a pull request because a Vigil session was working
     there. All nine checks passed, including e2e in Chromium, Firefox and WebKit, which had been failing on `main`
@@ -66,8 +66,7 @@ Tom's yes.
   `firebase login --reauth` and the deploy went through. Expect it before most deploys.
 
 ## Next steps
-1. **Confirm v1.2 is live on Elements** (`https://elements.theintelligence.company/tic-nav.js`, `version: "1.2"`; see
-   the GitHub Pages problem above) **and on PropertyCast** after its daily publish (about 4:23 AM CST, 6 Nov).
+1. **Confirm v1.2 is live on PropertyCast** after its daily publish (about 4:23 AM CST, 6 Nov).
 2. **When Elements' EMSC earthquake and NIFC wildfire lanes go live** (built 4 Nov, not yet committed), add them to
    both Elements lines (EMSC is worldwide; NIFC wildfires are US only) and roll the bar again (v1.3).
 3. Retake product screenshots when products change; keep the Elements and Cordon lines current as their planned
