@@ -1,9 +1,41 @@
-# Hub handoff: where things stand (4 Nov 2026, 11:05 PM CST; Vigil `data_as_of` added by its side session; Title 10 bar v1.1, 5 Nov 12:36 PM CST)
+# Hub handoff: where things stand (5 Nov 2026, about 1:10 PM CST: house bar v1.2 rolled out)
 
 Read with `CLAUDE.md` (the project's notes). Times are Central (CST since 1 Nov). Each commit, push and deploy needs
 Tom's yes.
 
 ## Live and finished
+- **House bar v1.2, 5 Nov 2026** (Tom asked for it). Tom: "US-based weather content is just a small slice of what I
+  need Elements to be; I need global weather data." So Elements' text in `tic-nav.js` (`long`) and in `oe.js` (`line`)
+  now splits its sources, measured from the live feed and the code that day:
+  - **Worldwide:** USGS earthquakes (PAGER), NASA FIRMS fires, GDACS and Copernicus EMS.
+  - **Regional:** NHC storms, and NTWC/PTWC tsunami messages (US and Canadian coasts, Hawaii, the Pacific and the
+    Caribbean).
+  - **US only for now:** NWS warnings, SPC outlooks, the Drought Monitor and USGS volcano alert levels.
+  - Both end "Global weather is planned" (the `oe.js` line adds the radiation lane).
+- **Same commit, hub fix:** the drawing's COP line no longer claims "multi-program country convergence". It had since
+  `bd02c67` (4 Nov), but convergence is only on COP's unpushed `wip/2026-11-01-unreviewed` branch.
+- **Hub:** `0d92a8b`, deployed about 12:45 PM CST. The new text fits the menu's hover panel (247 × 222 px at
+  1440 px).
+- **Sites:** the same one-file copy, checked live (`version: "1.2"`) unless noted:
+  - Title 10: `3ec73d0`, `sw.js` `t10-2026-11-05b`, deployed from a clean worktree.
+  - Watchfloor: `0362938`, `build_web.py`, then `firebase deploy --only hosting:watchfloor`.
+  - Listening Post: no git; v1.1 backed up first; `firebase deploy --only hosting`.
+  - Context: `68d027f`, `npx vercel --prod`.
+  - COP: `063768f`.
+  - Cordon: `26a03aa`.
+  - Noisefloor: `d22d49f` failed CI because `site/` wasn't rebuilt; fixed in `dde6607` (`tools/build_site.py`).
+  - Elements: `aeff62f` is on `main`, but the live site still served v1.1 at 1:10 PM CST. The push's Pages deploy hung
+    on "updating_pages" and timed out at 1:05 PM CST. Since then GitHub refuses new Pages deployments "due to in
+    progress deployment" `aeff62f…`, although that deployment reads `deployment_cancelled` (cancel API also called).
+    Two dispatched runs failed that way. A retry was scheduled for about 1:25 PM CST; if Pages is still stuck, the next
+    `update.yml` run deploys it (the gate allows it, since the last deploy was 16:42 UTC).
+  - PropertyCast: `3473dbc`, live with its next daily publish (about 4:23 AM CST).
+  - Vigil: PR #90 (https://github.com/metacog-osint/vigil/pull/90), a pull request because a Vigil session was working
+    there. All nine checks passed, including e2e in Chromium, Firefox and WebKit, which had been failing on `main`
+    since 1 Nov. Merged with Tom's yes as `c83229b` at 1:05 PM CST; Vercel deploys on merge.
+- **Global weather for Elements** is its own session ("Elements: global weather sources", started 5 Nov). It is
+  assessing global sources and licences before building. When a lane goes live, update both Elements lines and roll
+  the bar again.
 - Hub `master` is on GitHub and live at https://theintelligence.company (deployed 4 Nov, about 10:35 PM CST). Site
   commit `bd02c67`; the notes commit follows it. Checked live at 1440 px and 375 px: no console errors, no sideways
   scroll on phones.
@@ -28,21 +60,21 @@ Tom's yes.
   Vigil side: PR #86, below.
 - A local preview config is at `.claude/launch.json` (untracked; runs `tools/serve.py 5055`). An older `serve.py`
   from 2:53 PM CST on 4 Nov (PIDs 30668/31228) was still listening on 5055 at 11 PM. The app's preview then
-  opens its tab on 5056, but `serve.py` takes its port from the command line, so nothing answers there. Stop the old
-  process (`Stop-Process`) before the next preview, or open http://127.0.0.1:5055 by hand.
+  opens its tab on 5056, but `serve.py` takes its port from the command line, so nothing answers there. On 5 Nov
+  nothing held 5055 and the app still chose 5056, so open http://127.0.0.1:5055 by hand after starting it.
 - The Firebase CLI login expired on 4 Nov and again on 5 Nov (before the Title 10 deploy); each time Tom ran
   `firebase login --reauth` and the deploy went through. Expect it before most deploys.
 
 ## Next steps
-1. **tic-nav's Elements description lags** (found 5 Nov 2026): the hub's product list and `oe.js` name everything
-   Elements publishes, but `tic-nav.js`'s Elements `long` line leaves out NOAA weather warnings, tsunami products and
-   the US Drought Monitor. Fix it in v1.2 when the bar is next rolled out (all ten sites; wait for Elements' EMSC
-   earthquake and NIFC wildfire lanes, built 4 Nov and not yet committed, so one rollout covers both).
-2. Retake product screenshots when products change; keep the Elements and Cordon lines current as their planned
+1. **Confirm v1.2 is live on Elements** (`https://elements.theintelligence.company/tic-nav.js`, `version: "1.2"`; see
+   the GitHub Pages problem above) **and on PropertyCast** after its daily publish (about 4:23 AM CST, 6 Nov).
+2. **When Elements' EMSC earthquake and NIFC wildfire lanes go live** (built 4 Nov, not yet committed), add them to
+   both Elements lines (EMSC is worldwide; NIFC wildfires are US only) and roll the bar again (v1.3).
+3. Retake product screenshots when products change; keep the Elements and Cordon lines current as their planned
    pieces arrive (count `properties.sources[].publisher`).
-3. **Before the hub links Blackout, Wake, Orbit or Headwind:** they need live collectors, or their seed data labelled
+4. **Before the hub links Blackout, Wake, Orbit or Headwind:** they need live collectors, or their seed data labelled
    as test. Today they show invented numbers as observed data.
-4. Parked (don't raise): Context vs Watchfloor; Watchfloor's noindex; copyright registration or ™.
+5. Parked (don't raise): Context vs Watchfloor; Watchfloor's noindex; copyright registration or ™.
 
 ## Vigil: public daily summary feed session
 Full notes, with the real response, the counting rules and the measurements behind them:

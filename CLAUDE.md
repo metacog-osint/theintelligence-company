@@ -21,7 +21,9 @@ Intelligence Company site. Started 27 Oct 2026 at Tom's request after a review o
   Actions builds), HTTPS enforced, and Squarespace `CNAME elements|cordon → metacog-osint.github.io`. The old
   `metacog-osint.github.io/elements/` and `/cordon/` addresses 301 to the subdomains. Their drawing lines say what v0
   covers and what is planned (Elements: radiation, since NASA FIRMS fires and USGS volcano alert levels arrived
-  by 1 Nov 2026; Cordon: NOTAMs, launch hazard areas); update the lines as those arrive (Tom asked for this
+  by 1 Nov 2026, and global weather: Tom, 5 Nov 2026, "US-based weather content is just a small slice of what I need
+  Elements to be; I need global weather data", so Elements' text separates worldwide, regional and US-only sources;
+  Cordon: NOTAMs, launch hazard areas); update the lines as those arrive (Tom asked for this
   upkeep, 1 Nov 2026). Check by counting `properties.sources[].publisher` in each `data/feed.geojson`.
 - **Context vs Watchfloor is parked** (Tom, 1 Nov 2026: "stop it, i'm not deciding on this yet"). Both may stay with
   different scopes. Leave Context's "Watchfloor's predecessor" line alone, and don't raise the question again until
@@ -49,11 +51,15 @@ Intelligence Company site. Started 27 Oct 2026 at Tom's request after a review o
   site by site. COP, Elements and Cordon also carry copies.
 - `site/shared/tic-nav.js` + `tic-nav.css` (v1.1, 1 Nov 2026; v1.1 raises the bar's z-index to 10000 so its menu
   covers headers with their own stacking, such as Noisefloor's z-index 1100, and resets `display`, margins, padding and
-  borders on the bar so a site's generic `nav` rules can't reshape it, such as Watchfloor's flex `nav`). **Rolled out
+  borders on the bar so a site's generic `nav` rules can't reshape it, such as Watchfloor's flex `nav`). **v1.2** (5 Nov
+  2026, hub `0d92a8b`; `tic-nav.css` stays v1.1) changes only Elements' `long` text: worldwide, regional and "US only
+  for now" sources, and "Global weather is planned". It went to all ten sites the same day (commits in `HANDOFF.md`).
+  **Rolled out
   (1 Nov 2026 UTC):** Title 10 (e7286a4, v1.0; v1.1 since 5 Nov 2026, 49a49c5, deployed from a clean worktree because
   its main folder holds an untracked `deploy/public/data/benefits-pack.json` that must not ship),
   Watchfloor (478fc95), Noisefloor (319242c; its pre-commit hook needs the private term list, so commit from a
-  worktree with `FORBIDDEN_TERMS="$(cat <main>/private/forbidden_terms.txt)"`), PropertyCast (57b22f1, goes live with
+  worktree with `FORBIDDEN_TERMS="$(cat <main>/private/forbidden_terms.txt)"`; after copying, run
+  `python tools/build_site.py` so the `site/` pages carry the new file's `?v=` hash, or CI fails and the deploy is skipped), PropertyCast (57b22f1, goes live with
   the next daily publish), Context (b86602f; deploys only with `npx vercel --prod`, so copy `.vercel/project.json` into
   the worktree; new `/sources` page), Vigil (6afc178; Vercel deploys on push to main), Listening Post (which
   has **no git**: back up files before editing; new public `/sources.html`; `firebase deploy --only hosting`).
