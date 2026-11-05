@@ -46,10 +46,12 @@
   }
 
   // "Updated 2 h ago" under each live program in the list, from the most direct time each one publishes (see the
-  // calls below). The full time, in the viewer's zone and named, is in the tooltip. When COP's health check marks a
-  // program's feed stale (older than that program's own limit), the line adds "running late". Programs without a
-  // feed (PropertyCast, Title 10, Listening Post) show nothing.
-  var fresh = {}, late = {};
+  // calls below). The full time, in the viewer's zone and named, is in the tooltip. When that time is older than the
+  // program's usual cycle (COP health's fresh_hours), the line adds "running late". It judges the same time the line
+  // shows: COP's own state judges the newest data instead, and mixing the two read "Updated 2 min ago, running late".
+  // Programs without a feed (PropertyCast, Title 10, Listening Post) show nothing.
+  var fresh = {}, cycle = {};
+  function isLate(k) { return cycle[k] > 0 && fresh[k] && (Date.now() - fresh[k].t) / 3600000 > cycle[k]; }
   function ago(t) {
     var mins = Math.round((Date.now() - t) / 60000);
     if (mins < 1) return "just now";
@@ -60,9 +62,11 @@
   function paintFresh() {
     Object.keys(fresh).forEach(function (k) {
       var f = fresh[k];
-      f.el.textContent = "Updated " + ago(f.t) + (late[k] ? " · running late" : "");
-      f.el.classList.toggle("late", !!late[k]);
-      if (T) f.el.title = T.format(f.iso, { year: true }) + (late[k] ? " (later than this feed's usual schedule)" : "");
+      var l = isLate(k);
+      f.el.textContent = "Updated " + ago(f.t) + (l ? " · running late" : "");
+      f.el.classList.toggle("late", l);
+      if (T) f.el.title = T.format(f.iso, { year: true }) +
+        (l ? " (it usually updates at least every " + cycle[k] + " h)" : "");
     });
   }
   function setFresh(product, when) {
@@ -83,20 +87,6 @@
   setInterval(paintFresh, 60000);
   if (T) T.onChange(paintFresh);
 
-  // COP: its own build time, Context's (COP reads Context's feed; Context has no small file of its own), and any
-  // program COP marks stale.
-  getJSON(COP_HEALTH).then(function (h) {
-    setFresh("cop", h.generated_at);
-    (h.programs || []).forEach(function (p) {
-      if (p.id === "context") setFresh("context", p.data_as_of);
-      if (p.state === "stale") late[p.id] = true;
-    });
-    paintFresh();
-  }).catch(function () { /* no line for these */ });
-  // Elements and Cordon: when their feed was last published.
-  getModified(ELEMENTS_FEED).then(function (m) { setFresh("elements", m); }).catch(function () {});
-  getModified(CORDON_FEED).then(function (m) { setFresh("cordon", m); }).catch(function () {});
-
   function setItem(id, meta, text) {
     var el = document.getElementById(id);
     if (!el || !text) return;
@@ -104,8 +94,33 @@
     el.querySelector(".latest-body").textContent = text; // the topic lead-in ("GPS interference:") stays
   }
 
-  // Noisefloor: the briefing's bottom line for the newest aircraft day.
-  getJSON(NOISEFLOOR).then(function (b) {
+  // COP: its own build time, Context's (COP reads Context's feed; Context has no small file of its own), and any
+  // program's usual cycle (fresh_hours). Shared with oe/oe.js through window.ticCopHealth.
+  window.ticCopHealth = getJSON(COP_HEALTH);
+  window.ticCopHealth.then(function (h) {
+    setFresh("cop", h.generated_at);
+    var progs = h.programs || [];
+    var current = progs.filter(function (p) { return p.state === "fresh"; }).length;
+    var placed = progs.reduce(function (acc, p) { return acc + (Number(p.placed) || 0); }, 0);
+    var day = plainDay(h.generated_at);
+    if (progs.length) {
+      setItem("latest-cop", "COP" + (day ? " · " + day : ""),
+        current + " of " + progs.length + " program feeds up to date, with " + placed.toLocaleString("en-US") +
+        " findings placed on the map.");
+    }
+    progs.forEach(function (p) {
+      if (p.id === "context") setFresh("context", p.data_as_of);
+      if (Number(p.fresh_hours) > 0) cycle[p.id] = Number(p.fresh_hours);
+    });
+    paintFresh();
+  }).catch(function () { /* no line for these */ });
+  // Elements and Cordon: when their feed was last published.
+  getModified(ELEMENTS_FEED).then(function (m) { setFresh("elements", m); }).catch(function () {});
+  getModified(CORDON_FEED).then(function (m) { setFresh("cordon", m); }).catch(function () {});
+
+  // Noisefloor: the briefing's bottom line for the newest aircraft day. Shared with oe/oe.js.
+  window.ticNoisefloor = getJSON(NOISEFLOOR);
+  window.ticNoisefloor.then(function (b) {
     var day = plainDay(b.freshness && b.freshness.aircraft_day);
     setItem("latest-noisefloor", "Noisefloor" + (day ? " · " + day : ""), b.brief);
     setFresh("noisefloor", b.built_utc || (b.freshness && b.freshness.board_built));
@@ -114,11 +129,17 @@
   // Vigil: new victim claims on ransomware leak sites for the latest complete day. `brief` comes with group names
   // taken from criminal leak sites, so it is inserted as text only (setItem). `day` is RansomLook's calendar day,
   // which runs one to two hours ahead of UTC, so it is shown as a plain date and never labelled UTC.
-  getJSON(VIGIL).then(function (v) {
+  window.ticVigil = getJSON(VIGIL);
+  window.ticVigil.then(function (v) {
     var day = plainDay(v.day);
     setItem("latest-vigil", "Vigil" + (day ? " · " + day : ""), v.brief);
     setFresh("vigil", v.built_at);
-  }).catch(function () { /* keep the static line */ });
+  }).catch(function () {
+    // Keep the static line, but say how old Vigil's newest data is, from COP's health check.
+    window.ticCopHealth.then(function (h) {
+      (h.programs || []).forEach(function (p) { if (p.id === "vigil") setFresh("vigil", p.data_as_of); });
+    }).catch(function () {});
+  });
 
   // Watchfloor: the conflict zone furthest above its usual coverage, if Watchfloor raised an alarm for it.
   // The same request also feeds the live counts in the layers drawing (oe/oe.js).

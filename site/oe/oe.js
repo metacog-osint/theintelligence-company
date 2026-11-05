@@ -1,5 +1,5 @@
 // "Every layer of the world, read together": the hub's guide to the programs, drawn on the operational environment.
-// Data first (layers, programs, the two groupings), then drawing and interaction. No dependencies.
+// Data first (layers, programs, threads, the two groupings), then drawing and interaction. No dependencies.
 // CSP-safe: no inline styles, colours come from classes in oe.css, and feed text is inserted as text.
 // To add, move or rename a program, edit PROGRAMS below: `home` is its layer, `reach` the other layers it touches,
 // `at` the tag's position on the drawing ([x, y] in SVG units; `end: true` puts the label left of x).
@@ -22,13 +22,15 @@
     { k: "systems", name: "Systems", y: 340,
       sub: "Political, military, economic, social, information and infrastructure systems, and the links between them.",
       feeds: [["World news (GDELT)", "now", "Watchfloor, Context"], ["Saved news searches per zone", "now", "Watchfloor"],
-        ["Sanctions and export-control lists", "planned", "Headwind"], ["Prices, currency and energy", "planned", "Headwind"],
+        ["Travel advisories and embassy posture", "now", "Cordon"],
+        ["Sanctions and export-control lists", "dev", "Headwind"], ["Prices, currency and energy", "dev", "Headwind"],
         ["Critical-mineral supply", "planned", "Critical minerals"], ["Governance and fragility indices", "planned", "Fragility baseline"],
         ["Treaty bodies, courts and the Security Council", "planned", "Proliferation and legal events"],
         ["Exercises and deployments", "planned", "Tempo"]] },
     { k: "human", name: "Human", y: 470,
       sub: "People and groups: who acts, what they say and believe, and how they decide, shaped by sociocultural factors.",
       feeds: [["Press attention and framing", "now", "Context"], ["Coverage split by source group", "now", "Watchfloor"],
+        ["US embassy security and demonstration alerts", "now", "Cordon"],
         ["Official statements and votes", "planned", "Readout"], ["Unrest and displacement", "planned", "Temper"],
         ["Press freedom", "planned", "Temper"], ["Humanitarian needs and funding", "planned", "Humanitarian response"],
         ["Attributed influence operations", "planned", "Influence operations"]],
@@ -38,32 +40,32 @@
     { k: "cyber", name: "Cyberspace", y: 600,
       sub: "Networks, the services that run on them and the personas that use them.",
       feeds: [["Ransomware leak sites", "now", "Vigil"], ["Exploited vulnerabilities (CISA KEV, NVD)", "now", "Vigil"],
-        ["CISA and ICS advisories", "now", "Vigil"], ["Internet outages and shutdowns", "planned", "Blackout"],
-        ["Routing (BGP)", "planned", "Blackout"], ["Censorship lists", "planned", "Blackout"]] },
+        ["CISA and ICS advisories", "now", "Vigil"], ["Internet outages and shutdowns (IODA)", "dev", "Blackout"],
+        ["Routing (BGP)", "dev", "Blackout"], ["Censorship and app blocks (OONI)", "dev", "Blackout"]] },
     { k: "ems", name: "Electromagnetic spectrum", short: "Spectrum", y: 730,
       sub: "Navigation, communication and radar signals that run through every physical layer and carry the information above.",
       feeds: [["Aircraft navigation integrity (ADS-B)", "now", "Noisefloor"], ["Spoofed aircraft and ship positions", "now", "Noisefloor"],
         ["Interference seen by satellites (CYGNSS, NISAR)", "now", "Noisefloor"], ["GNSS reference stations", "now", "Noisefloor"],
-        ["Declared tests and interference notices", "now", "Noisefloor"], ["Ship AIS signal gaps", "planned", "Wake"],
+        ["Declared tests and interference notices", "now", "Noisefloor"], ["Ship AIS signal gaps", "dev", "Wake"],
         ["Satellite spectrum filings", "planned", "Orbit"], ["HF, satellite-link and radar interference", "research", ""]] },
     { k: "space", name: "Space", y: 860,
       sub: "Orbits, satellites, launches and space weather.",
       feeds: [["Satellite catalog (Space-Track)", "now", "Noisefloor"], ["Space weather (NOAA, ESA)", "now", "Noisefloor"],
         ["Ionospheric disturbance from GNSS base stations", "dev", "FieldCast"],
-        ["Launches, manoeuvres and counterspace events", "planned", "Orbit"], ["Launch hazard areas", "planned", "Cordon"],
+        ["Launches, manoeuvres and counterspace events", "dev", "Orbit"], ["Launch hazard areas", "planned", "Cordon"],
         ["Ground segment and cislunar activity", "research", ""]] },
     { k: "air", name: "Air", y: 990,
       sub: "Airspace, flights, notices to aviation and weather.",
-      feeds: [["Flight tracks (ADS-B)", "now", "Noisefloor"], ["EASA conflict-zone bulletins", "now", "Noisefloor"],
-        ["FAA GPS interference tests", "now", "Noisefloor"], ["NOTAMs", "planned", "Cordon"],
-        ["Theatre weather and illumination", "planned", "Weather impact"], ["Storm warnings (NHC, SPC)", "planned", "Elements"],
+      feeds: [["Flight tracks (ADS-B)", "now", "Noisefloor"], ["EASA conflict-zone bulletins", "now", "Noisefloor, Cordon"],
+        ["FAA GPS interference tests", "now", "Noisefloor"], ["Storm warnings (NHC, SPC)", "now", "Elements"],
+        ["Operational weather and illumination", "dev", "Vis"], ["NOTAMs", "planned", "Cordon"],
         ["Military flights", "planned", "Tempo"]] },
     { k: "land", name: "Land and maritime", y: 1120,
       sub: "Terrain, settlements, infrastructure, coasts and sea lanes, down to the seabed.",
-      feeds: [["Conflict events (GDELT)", "now", "Watchfloor"], ["Ship positions (Finland's open AIS)", "now", "Noisefloor"],
-        ["Navigational warnings (NGA)", "now", "Noisefloor"], ["Quakes, volcanoes, fires and floods", "planned", "Elements"],
-        ["Ports, chokepoints and the shadow fleet", "planned", "Wake"], ["Night lights and power", "planned", "Blackout"],
-        ["Undersea cable faults", "research", ""]] }
+      feeds: [["Conflict events (GDELT)", "now", "Watchfloor"], ["Ship positions (Finland's open AIS)", "now", "Noisefloor, Wake"],
+        ["Navigational warnings (NGA)", "now", "Noisefloor, Cordon"], ["Quakes, volcanoes, fires and floods", "now", "Elements"],
+        ["Ports, chokepoints and transit volume (IMF PortWatch)", "dev", "Wake"], ["Undersea cable corridors", "dev", "Wake, Blackout"],
+        ["Night lights and power", "planned", "Blackout"]] }
   ];
   var LK = LAYERS.map(function (l) { return l.k; });
   var L = {};
@@ -73,17 +75,19 @@
   var PROGRAMS = [
     { id: "cop", name: "COP", status: "beta", core: true, at: [652, 196],
       href: "https://cop.theintelligence.company", ask: "What stands out across every program today?",
-      line: "The common operational picture: every program's latest findings on one map, with today's top five, what else is unusual, and each feed's health." },
-    { id: "verdict", name: "Verdict", status: "planned", core: true, at: [772, 196],
-      line: "Logs every forecast and warning with the rule that will settle it, then scores them in public." },
+      line: "The common operational picture: every program's latest findings on one map, with today's top five, multi-program country convergence, and each feed's health." },
+    { id: "verdict", name: "Verdict", status: "dev", core: true, at: [772, 196],
+      ask: "How accurate are the forecasts?",
+      line: "Logs every forecast and warning with the rule that will settle it, syncs the event calendar, and scores calibration in public." },
 
     { id: "watchfloor", name: "Watchfloor", status: "beta", home: "systems", reach: LK.slice(1), at: [800, 300],
       href: "https://watchfloor.theintelligence.company", ask: "Which conflicts are escalating?",
       line: "A daily warning picture for the conflict zones and strategic topics on its watch list, built from the world's news and split by source group." },
     { id: "tempo", name: "Tempo", status: "planned", home: "systems", reach: ["air", "land", "space"], at: [728, 322], end: true,
       line: "Military activity: exercises, deployments and flights." },
-    { id: "headwind", name: "Headwind", status: "planned", home: "systems", reach: ["land"], at: [905, 336],
-      line: "Sanctions, export controls, prices, currency and energy." },
+    { id: "headwind", name: "Headwind", status: "dev", home: "systems", reach: ["land"], at: [905, 336],
+      ask: "Which sanctions, export controls or food benchmarks moved?",
+      line: "Sanctions deltas (OFAC SDN), export-control deadlines (Verdict calendar) and food price benchmarks (the FAO Food Price Index and the International Grains Council's Grains and Oilseeds Index)." },
     { id: "minerals", name: "Critical minerals", status: "planned", working: true, home: "systems", reach: ["land"], at: [905, 378],
       line: "Critical-mineral lists, supply and import dependence. It may become part of Headwind." },
     { id: "fragility", name: "Fragility baseline", status: "planned", working: true, home: "systems", reach: ["human"], at: [596, 362], end: true,
@@ -107,8 +111,9 @@
     { id: "vigil", name: "Vigil", status: "live", home: "cyber", reach: ["systems", "human"], at: [914, 610],
       href: "https://vigil.theintelligence.company", ask: "Who is ransomware hitting?",
       line: "Cyber threat intelligence: ransomware groups and their victims, exploited vulnerabilities and advisories, with the history kept." },
-    { id: "blackout", name: "Blackout", status: "planned", home: "cyber", reach: ["land", "systems", "human"], at: [690, 650],
-      line: "Internet and power outages, shutdowns, censorship and routing." },
+    { id: "blackout", name: "Blackout", status: "dev", home: "cyber", reach: ["land", "systems", "human"], at: [690, 650],
+      ask: "Where are the internet or routing out?",
+      line: "Internet and power outages, BGP routing drops, state shutdowns and censorship." },
 
     { id: "noisefloor", name: "Noisefloor", status: "live", home: "ems", reach: ["air", "space", "land"], at: [578, 694],
       href: "https://noisefloor.theintelligence.company", ask: "Is GPS being jammed or spoofed?",
@@ -117,25 +122,80 @@
     { id: "fieldcast", name: "FieldCast", status: "dev", home: "space", reach: ["ems", "air", "land"], at: [610, 900],
       ask: "Will space weather throw off GPS in the field?",
       line: "An outlook for GPS reliability in the field, including high-precision (RTK) positioning, from ionospheric disturbance measured at public base stations. Validated on the May and October 2024 storms." },
-    { id: "orbit", name: "Orbit", status: "planned", home: "space", reach: ["ems", "land", "systems"], at: [862, 904],
-      line: "Space: catalog changes, launches, manoeuvres and counterspace events." },
+    { id: "orbit", name: "Orbit", status: "dev", home: "space", reach: ["ems", "land", "systems"], at: [862, 904],
+      ask: "Which satellites manoeuvred or changed orbit?",
+      line: "Space domain awareness: catalog changes (Jonathan McDowell's GCAT), orbital manoeuvre delta-v and hypothesis comparison, and TLE tracking gaps." },
 
     { id: "cordon", name: "Cordon", status: "beta", home: "air", reach: ["land", "space", "systems", "human"], at: [756, 1036], end: true,
       href: "https://cordon.theintelligence.company", ask: "Where are authorities warning people away?",
       line: "Where authorities warn people away: State Department travel advisories and embassy departure status, EASA conflict-zone bulletins for airspace, and NGA navigational warnings at sea. NOTAMs and launch hazard areas are planned." },
-    { id: "weather", name: "Weather impact", status: "planned", working: true, home: "air", reach: ["land", "space"], at: [560, 1018],
-      line: "Theatre weather and illumination, and their effects on operations in each zone." },
+    { id: "vis", name: "Vis", status: "dev", home: "air", reach: ["land", "space"], at: [560, 1018],
+      ask: "Will weather or darkness limit operations?",
+      line: "Operational weather and illumination: 7-day ensemble hazard likelihood and night illumination for each conflict zone." },
 
     { id: "elements", name: "Elements", status: "beta", home: "land", reach: ["air", "systems", "human"], at: [530, 1125],
       href: "https://elements.theintelligence.company", ask: "Where are natural hazards hitting?",
       line: "Natural hazards as the authorities report them: USGS earthquakes with impact alerts and volcano alert levels, NASA satellite fire detections, NOAA weather warnings and severe-storm, hurricane and tsunami products, the US Drought Monitor, GDACS alerts and Copernicus disaster mapping on one map. A radiation lane is planned." },
-    { id: "wake", name: "Wake", status: "planned", home: "land", reach: ["ems", "systems"], at: [900, 1152],
-      line: "Maritime: AIS gaps, the shadow fleet, chokepoint and port throughput, and piracy." }
+    { id: "wake", name: "Wake", status: "dev", home: "land", reach: ["ems", "systems"], at: [900, 1152],
+      ask: "What is moving through maritime chokepoints?",
+      line: "Maritime: chokepoint and port throughput (IMF PortWatch), Baltic open AIS gaps, undersea cable corridors and navigational hazards." }
   ];
   var P = {};
   PROGRAMS.forEach(function (p) { P[p.id] = p; if (p.core) { p.home = null; p.reach = LK.slice(); } });
-  var GUIDE = PROGRAMS.filter(function (p) { return p.ask; })
-    .sort(function (a, b) { return LK.indexOf(a.home) - LK.indexOf(b.home); });
+  // The guide: three questions, one per band of the drawing (top, middle, bottom). Each opens to the questions of the
+  // programs under it. Every program with an `ask` belongs to exactly one group; sites first, then in development.
+  var GROUPS = [
+    { id: "g1", q: "Where is conflict or pressure building?", layers: ["systems", "human"],
+      programs: ["cop", "watchfloor", "context", "headwind", "verdict"] },
+    { id: "g2", q: "What's hitting networks, signals and satellites?", layers: ["cyber", "ems", "space"],
+      programs: ["vigil", "noisefloor", "blackout", "fieldcast", "orbit"] },
+    { id: "g3", q: "What's happening on the ground, at sea and in the air?", layers: ["air", "land"],
+      programs: ["cordon", "elements", "vis", "wake"] }
+  ];
+  var G = {};
+  GROUPS.forEach(function (g) { G[g.id] = g; });
+  var GUIDE = [];
+  GROUPS.forEach(function (g) { g.programs.forEach(function (id) { GUIDE.push(P[id]); }); });
+
+  // Cross-layer threads (.th in the SVG, in DOM order t0..t5): how tips move between layers and programs.
+  var THREADS = {
+    t0: {
+      name: "Seabed cables to network outages",
+      layers: ["land", "cyber", "systems"],
+      programs: ["wake", "blackout", "watchfloor", "cop"],
+      line: "An NGA cable-work warning or loitering vessel over a submarine cable corridor (Wake) pairs with a country-level BGP or probing drop (Blackout) and tips Watchfloor's infrastructure indicators."
+    },
+    t1: {
+      name: "Contested airspace and navigation",
+      layers: ["air", "ems", "human", "systems"],
+      programs: ["cordon", "noisefloor", "watchfloor", "cop"],
+      line: "Aircraft losing GPS in the radio spectrum (Noisefloor) and EASA conflict-zone airspace bulletins or embassy departures (Cordon) tip Watchfloor's conflict zones as independent non-news evidence."
+    },
+    t2: {
+      name: "Maritime chokepoints and spoofing",
+      layers: ["land", "ems", "human", "systems"],
+      programs: ["wake", "cordon", "noisefloor", "watchfloor"],
+      line: "Drops in daily chokepoint transits (Wake), NGA maritime hazard warnings (Cordon), and spoofed ship AIS positions (Noisefloor) converge on the same sea lane."
+    },
+    t3: {
+      name: "Space weather to spectrum and networks",
+      layers: ["space", "ems", "cyber", "human"],
+      programs: ["fieldcast", "noisefloor", "blackout", "context"],
+      line: "Geomagnetic and ionospheric storms (FieldCast) degrade HF and satellite links in the spectrum (Noisefloor) and help rule out natural causes before attributing an outage."
+    },
+    t4: {
+      name: "Natural hazards and cyber pressure on lifelines",
+      layers: ["land", "cyber", "human", "systems"],
+      programs: ["elements", "vigil", "watchfloor", "cop"],
+      line: "Severe natural hazards (Elements) and ransomware or exploited-vulnerability campaigns hitting critical sectors (Vigil) meet in COP, where a FEMA Community Lifelines layer is planned."
+    },
+    t5: {
+      name: "Ionosphere to GPS receiver",
+      layers: ["space", "ems"],
+      programs: ["fieldcast", "noisefloor"],
+      line: "Total electron content gradients in the ionosphere (FieldCast) cross directly into GPS receiver integrity in the spectrum (Noisefloor)."
+    }
+  };
 
   // The two groupings: ours on the left (by kind), doctrine's on the right.
   var ZONES = {
@@ -192,9 +252,27 @@
     return '<button type="button" class="oe-pchip k-' + kind(p) + '" data-p="' + p.id + '"><i aria-hidden="true"></i>' + esc(p.name) + "</button>";
   }
 
-  // ---------------------------------------------------------------- drawing: program tags
+  // ---------------------------------------------------------------- drawing: program tags and thread hit targets
   var chipG = svg.querySelector(".chips");
   var reachG = svg.querySelector(".reach");
+  var thHitsG = el("g", { "class": "th-hits" });
+  svg.insertBefore(thHitsG, reachG);
+  svg.querySelectorAll(".th").forEach(function (thEl, idx) {
+    var key = "t" + idx, meta = THREADS[key];
+    if (!meta) return;
+    thEl.setAttribute("data-thread", key);
+    var pathEl = thEl.querySelector("path");
+    if (!pathEl) return;
+    thHitsG.appendChild(el("path", {
+      "class": "thit",
+      "data-thread": key,
+      tabindex: "0",
+      role: "button",
+      "aria-label": "Cross-layer thread: " + meta.name,
+      d: pathEl.getAttribute("d")
+    }));
+  });
+
   var chipEls = {};
   PROGRAMS.forEach(function (p) {
     var k = kind(p), x = p.at[0], y = p.at[1];
@@ -252,7 +330,7 @@
 
   // ---------------------------------------------------------------- highlight
   function highlight(sel) {
-    var on = [], near = [], chipsOn = [], chipsNear = [], zone = null, dzone = null;
+    var on = [], near = [], chipsOn = [], chipsNear = [], zone = null, dzone = null, thread = null;
     if (sel) {
       if (sel.type === "program") {
         var p = P[sel.key];
@@ -264,6 +342,16 @@
           if (q.home === sel.key) chipsOn.push(q.id);
           else if (layersOf(q).indexOf(sel.key) >= 0) chipsNear.push(q.id);
         });
+      } else if (sel.type === "thread") {
+        thread = sel.key;
+        var tm = THREADS[thread];
+        if (tm) {
+          on = tm.layers.slice();
+          chipsOn = tm.programs.slice();
+        }
+      } else if (sel.type === "group") {
+        on = G[sel.key].layers.slice();
+        chipsOn = G[sel.key].programs.slice();
       } else if (sel.type === "zone") { zone = sel.key; on = ZONES[zone].layers.slice(); }
       else if (sel.type === "dzone") { dzone = sel.key; on = DZONES[dzone].layers.slice(); }
     }
@@ -276,8 +364,12 @@
       e.classList.toggle("near", !ls.some(function (k) { return on.indexOf(k) >= 0; }) && ls.some(function (k) { return near.indexOf(k) >= 0; }));
     });
     fig.querySelectorAll(".th").forEach(function (e) {
-      var ls = e.getAttribute("data-layer").split(" ");
-      e.classList.toggle("on", ls.filter(function (k) { return lit.indexOf(k) >= 0; }).length >= 2);
+      if (thread) {
+        e.classList.toggle("on", e.getAttribute("data-thread") === thread);
+      } else {
+        var ls = e.getAttribute("data-layer").split(" ");
+        e.classList.toggle("on", ls.filter(function (k) { return lit.indexOf(k) >= 0; }).length >= 2);
+      }
     });
     fig.querySelectorAll(".zone").forEach(function (e) { e.classList.toggle("on", e.getAttribute("data-zone") === zone); });
     fig.querySelectorAll(".dzone").forEach(function (e) { e.classList.toggle("on", e.getAttribute("data-dzone") === dzone); });
@@ -299,8 +391,8 @@
       '<li><span class="oe-n">1</span><span><b>Collect</b>One pipeline per program, on public, licence-checked feeds. Each program reaches every layer its sources touch.</span></li>' +
       '<li><span class="oe-n">2</span><span><b>Analyze</b>Each layer against its own baseline, then every layer read together in the COP.</span></li>' +
       '<li><span class="oe-n">3</span><span><b>Publish</b>Daily pictures, warnings and forecasts, with sources, methods and a public scorecard.</span></li></ol>' +
-      '<p class="oe-sec">Each plate is one layer, registered to the same ground. The left column groups the layers by kind; the right column shows doctrine’s grouping of the same layers. A tag sits on a program’s home layer: ' +
-      (phone.matches ? "tap" : "select") + ' one to trace every layer it reaches.</p>';
+      '<p class="oe-sec">Each plate is one layer, registered to the same ground. The left column groups the layers by kind; the right column shows doctrine’s grouping of the same layers. A tag sits on a program’s home layer, and the vertical threads show how tips travel across layers: ' +
+      (phone.matches ? "tap" : "select") + ' any plate, tag or thread to inspect it.</p>';
   }
   function feedList(l) {
     var groups = {};
@@ -338,6 +430,21 @@
       '<div class="oe-actions">' + (p.href ? '<a class="oe-btn" href="' + esc(p.href) + '" target="_blank" rel="noopener" aria-describedby="newtab">Open ' + esc(p.name) + ' <span aria-hidden="true">↗</span></a>' : "") +
       '<button type="button" class="oe-btn2" data-how>Back to the guide</button></div>';
   }
+  function threadHTML(key) {
+    var t = THREADS[key];
+    return CLOSE + '<p class="oe-k">Cross-layer tip chain</p>' +
+      '<h3>' + esc(t.name) + "</h3><p>" + esc(t.line) + "</p>" +
+      '<div class="oe-sec"><p class="oe-k">Layers connected</p><div class="oe-plist">' + t.layers.map(layerChip).join("") + "</div></div>" +
+      '<div class="oe-sec"><p class="oe-k">Programs on this thread</p><div class="oe-plist">' + t.programs.map(function (id) { return progChip(P[id]); }).join("") + "</div></div>" +
+      '<div class="oe-actions"><button type="button" class="oe-btn2" data-how>Back to the guide</button></div>';
+  }
+  function groupHTML(id) {
+    var g = G[id];
+    return CLOSE + '<p class="oe-k">Find your way in · ' + g.programs.length + " programs</p><h3>" + esc(g.q) + "</h3>" +
+      '<div class="oe-sec"><p class="oe-k">Programs</p><div class="oe-plist">' + g.programs.map(function (pid) { return progChip(P[pid]); }).join("") + "</div></div>" +
+      '<div class="oe-sec"><p class="oe-k">Layers</p><div class="oe-plist">' + g.layers.map(layerChip).join("") + "</div></div>" +
+      '<div class="oe-actions"><button type="button" class="oe-btn2" data-how>Back to the guide</button></div>';
+  }
   function zoneHTML(z, isDoc) {
     var Z = isDoc ? DZONES[z] : ZONES[z];
     return CLOSE + '<p class="oe-k">' + (isDoc ? "Doctrine’s grouping" : "Grouped by kind") + '</p><h3 class="' + Z.c + '">' + esc(Z.name) + "</h3><p>" + esc(Z.line) + "</p>" +
@@ -350,6 +457,7 @@
       ["Core, planned", function (p) { return p.core && p.status === "planned"; }]];
     return CLOSE + '<p class="oe-k">Every program</p><h3>Current and planned</h3>' + groups.map(function (g) {
       var ps = PROGRAMS.filter(g[1]);
+      if (!ps.length) return "";
       ps.sort(function (a, b) { return LK.indexOf(a.home) - LK.indexOf(b.home); });
       return '<div class="oe-sec"><p class="oe-k">' + g[0] + '</p><ul class="oe-all">' + ps.map(function (p) {
         return '<li><button type="button" data-p="' + p.id + '"><i class="oe-sdot k-' + kind(p) + '" aria-hidden="true"></i><b>' + esc(p.name) + "</b>" +
@@ -359,14 +467,33 @@
   }
 
   // ---------------------------------------------------------------- guide (left column) and phone chips
+  var openGroup = null;   // the guide question that is open, if any (one at a time)
+  function questionHTML(p) {
+    return '<li><button type="button" class="oe-q" data-p="' + p.id + '"><span class="oe-qt">' + esc(p.ask) + "</span>" +
+      '<span class="oe-qm"><i class="oe-sdot k-' + kind(p) + '" aria-hidden="true"></i>' + esc(p.name) + " · " + esc(SHORT[p.status]) +
+      (p.short_stat ? " · " + esc(p.short_stat) : "") + "</span>" + scopeBar(p) + "</button>" +
+      (p.href ? '<a class="oe-open" href="' + esc(p.href) + '" target="_blank" rel="noopener" aria-describedby="newtab">Open <span aria-hidden="true">↗</span><span class="oe-sr"> ' + esc(p.name) + "</span></a>" : "") + "</li>";
+  }
   function guideHTML() {
-    return '<h3 class="oe-gh">Find your way in</h3><p class="oe-gsub">Ask a question, pick a layer on the drawing, or browse every program.</p><ul class="oe-glist">' +
-      GUIDE.map(function (p) {
-        return '<li><button type="button" class="oe-q" data-p="' + p.id + '"><span class="oe-qt">' + esc(p.ask) + "</span>" +
-          '<span class="oe-qm"><i class="oe-sdot k-' + kind(p) + '" aria-hidden="true"></i>' + esc(p.name) + " · " + esc(SHORT[p.status]) +
-          (p.short_stat ? " · " + esc(p.short_stat) : "") + "</span>" + scopeBar(p) + "</button>" +
-          (p.href ? '<a class="oe-open" href="' + esc(p.href) + '" target="_blank" rel="noopener" aria-describedby="newtab">Open <span aria-hidden="true">↗</span><span class="oe-sr"> ' + esc(p.name) + "</span></a>" : "") + "</li>";
+    return '<h3 class="oe-gh">Find your way in</h3><p class="oe-gsub">Open a question to see the programs that answer it, pick a layer or thread on the drawing, or browse every program.</p><ul class="oe-groups">' +
+      GROUPS.map(function (g) {
+        var open = g.id === openGroup;
+        return '<li class="oe-grp' + (open ? " open" : "") + '"><button type="button" class="oe-gq" data-g="' + g.id + '" aria-expanded="' + open + '" aria-controls="oe-grp-' + g.id + '">' +
+          '<span class="oe-qt">' + esc(g.q) + '</span><span class="oe-gm">' + g.programs.map(function (id) { return esc(P[id].name); }).join(" · ") + "</span>" +
+          '<span class="oe-chev" aria-hidden="true"></span></button>' +
+          '<ul class="oe-glist" id="oe-grp-' + g.id + '"' + (open ? "" : " hidden") + ">" + g.programs.map(function (id) { return questionHTML(P[id]); }).join("") + "</ul></li>";
       }).join("") + '</ul><button type="button" class="oe-all-btn" data-all>Every program, current and planned <span aria-hidden="true">→</span></button>';
+  }
+  // Open or close a question in place (no re-render, so keyboard focus stays on its button) and show it on the drawing.
+  function toggleGroup(id) {
+    openGroup = openGroup === id ? null : id;
+    guide.querySelectorAll("[data-g]").forEach(function (b) {
+      var gid = b.getAttribute("data-g"), on = gid === openGroup;
+      b.setAttribute("aria-expanded", on ? "true" : "false");
+      b.parentNode.classList.toggle("open", on);
+      document.getElementById("oe-grp-" + gid).hidden = !on;
+    });
+    pin(openGroup ? { type: "group", key: openGroup } : null, false);
   }
   function chipsHTML() {
     return '<button type="button" class="oe-chip how" data-how>How to read</button><button type="button" class="oe-chip how" data-all>All programs</button>' +
@@ -379,13 +506,16 @@
   function render(sel) {
     highlight(sel && sel.type !== "all" ? sel : null);
     panel.innerHTML = !sel ? howHTML() : sel.type === "all" ? allHTML() : sel.type === "layer" ? layerHTML(sel.key)
-      : sel.type === "program" ? programHTML(sel.key) : zoneHTML(sel.key, sel.type === "dzone");
+      : sel.type === "program" ? programHTML(sel.key) : sel.type === "thread" ? threadHTML(sel.key)
+      : sel.type === "group" ? groupHTML(sel.key) : zoneHTML(sel.key, sel.type === "dzone");
   }
   function pin(sel, open) {
     pinned = sel;
     render(sel);
     if (phone.matches) {
-      var ls = !sel || sel.type === "all" ? [] : sel.type === "layer" ? [sel.key] : sel.type === "program" ? (P[sel.key].core ? [] : [P[sel.key].home]) : [];
+      var ls = !sel || sel.type === "all" ? [] : sel.type === "layer" ? [sel.key]
+        : sel.type === "thread" ? THREADS[sel.key].layers : sel.type === "group" ? G[sel.key].layers
+        : sel.type === "program" ? (P[sel.key].core ? [] : [P[sel.key].home]) : [];
       root.classList.toggle("top", ls.some(function (k) { return ["ems", "space", "air", "land"].indexOf(k) >= 0; }));
       root.classList.toggle("sheet", open !== false);
     }
@@ -393,12 +523,13 @@
   function same(a, b) { return a && b && a.type === b.type && a.key === b.key; }
   function selFor(e) {
     if (e.hasAttribute("data-p")) return { type: "program", key: e.getAttribute("data-p") };
+    if (e.hasAttribute("data-thread")) return { type: "thread", key: e.getAttribute("data-thread") };
     if (e.hasAttribute("data-hit")) return { type: "layer", key: e.getAttribute("data-hit") };
     if (e.hasAttribute("data-zone")) return { type: "zone", key: e.getAttribute("data-zone") };
     if (e.hasAttribute("data-dzone")) return { type: "dzone", key: e.getAttribute("data-dzone") };
     return null;
   }
-  var TARGETS = ".chip,.hit,.zhit,.dhit";
+  var TARGETS = ".chip,.thit,.hit,.zhit,.dhit";
 
   // Figure: hover previews, click pins.
   fig.addEventListener("pointerover", function (ev) {
@@ -427,21 +558,22 @@
     if (b.hasAttribute("data-how")) return pin(null, phone.matches);
     if (b.hasAttribute("data-all")) return pin({ type: "all", key: "all" });
     if (b.hasAttribute("data-layer")) return pin({ type: "layer", key: b.getAttribute("data-layer") });
+    if (b.hasAttribute("data-g")) return toggleGroup(b.getAttribute("data-g"));
     if (b.hasAttribute("data-p")) {
       var s = { type: "program", key: b.getAttribute("data-p") };
-      return same(s, pinned) && !phone.matches ? pin(null) : pin(s);
+      // A second click on the pinned program steps back to its open question, if one is open.
+      return same(s, pinned) && !phone.matches ? pin(openGroup ? { type: "group", key: openGroup } : null) : pin(s);
     }
   });
   if (guide) guide.addEventListener("pointerover", function (ev) {
     if (pinned || ev.pointerType === "touch") return;
-    var b = ev.target.closest("button[data-p]");
-    if (b) render({ type: "program", key: b.getAttribute("data-p") });
+    var b = ev.target.closest("button[data-p],button[data-g]");
+    if (b) render(b.hasAttribute("data-g") ? { type: "group", key: b.getAttribute("data-g") } : { type: "program", key: b.getAttribute("data-p") });
   });
   if (guide) guide.addEventListener("pointerleave", function () { if (!pinned) render(null); });
   phone.addEventListener("change", function () { root.classList.remove("sheet"); fit(); render(pinned); });
 
-  // ---------------------------------------------------------------- live counts (Watchfloor's public summary)
-  // Counts come from the feed, so they stay right as zones and topics are added or retired.
+  // ---------------------------------------------------------------- live counts (shared with site.js)
   var wf = window.ticWatchfloor || fetch("https://mc-api-odg3xhcd4a-uc.a.run.app/summary").then(function (r) {
     if (!r.ok) throw new Error("HTTP " + r.status); return r.json();
   });
@@ -450,12 +582,43 @@
     var topics = keys.filter(function (k) { return /^T\d/.test(k); }).length, zones = keys.length - topics;
     if (!zones) return;
     var day = plainDay(s.day), p = P.watchfloor;
-    p.short_stat = zones + " zones, " + topics + " topics";
+    p.short_stat = zones + "\u00a0zones, " + topics + "\u00a0topics";
     p.stat = (day ? day + (s.partial ? ", so far" : "") + ": " : "") + zones + " conflict zones and " + topics + " strategic topics" +
       (s.gdelt_articles ? ", from " + n(s.gdelt_articles) + " GDELT articles" + (s.rss_items ? " and " + n(s.rss_items) + " feed items" : "") : "") + ".";
     drawGuide();
     render(pinned);
   }).catch(function () { /* keep the wording without numbers */ });
+
+  if (window.ticCopHealth) {
+    window.ticCopHealth.then(function (h) {
+      var progs = h.programs || [];
+      if (!progs.length) return;
+      var current = progs.filter(function (p) { return p.state === "fresh"; }).length;   // states: fresh, late, stale
+      var placed = progs.reduce(function (acc, p) { return acc + (Number(p.placed) || 0); }, 0);
+      P.cop.short_stat = current + "/" + progs.length + "\u00a0feeds up to date";
+      P.cop.stat = current + " of " + progs.length + " program feeds up to date, with " + n(placed) + " findings placed on the map.";
+      drawGuide();
+      render(pinned);
+    }).catch(function () {});
+  }
+
+  if (window.ticNoisefloor) {
+    window.ticNoisefloor.then(function (b) {
+      if (!b || !b.brief) return;
+      var day = plainDay(b.freshness && b.freshness.aircraft_day);
+      P.noisefloor.stat = (day ? day + ": " : "") + b.brief;
+      render(pinned);
+    }).catch(function () {});
+  }
+
+  if (window.ticVigil) {
+    window.ticVigil.then(function (v) {
+      if (!v || !v.brief) return;
+      var day = plainDay(v.day);
+      P.vigil.stat = (day ? day + ": " : "") + v.brief;
+      render(pinned);
+    }).catch(function () {});
+  }
 
   drawGuide();
   render(null);
