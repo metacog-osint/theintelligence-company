@@ -128,12 +128,14 @@
 
   // Vigil: new victim claims on ransomware leak sites for the latest complete day. `brief` comes with group names
   // taken from criminal leak sites, so it is inserted as text only (setItem). `day` is RansomLook's calendar day,
-  // which runs one to two hours ahead of UTC, so it is shown as a plain date and never labelled UTC.
+  // which runs one to two hours ahead of UTC, so it is shown as a plain date and never labelled UTC. "Updated … ago"
+  // is `data_as_of`, Vigil's last successful RansomLook run; `built_at` is only when the summary was assembled, so it
+  // always read "just now", and is the fallback for a response without `data_as_of`.
   window.ticVigil = getJSON(VIGIL);
   window.ticVigil.then(function (v) {
     var day = plainDay(v.day);
     setItem("latest-vigil", "Vigil" + (day ? " · " + day : ""), v.brief);
-    setFresh("vigil", v.built_at);
+    setFresh("vigil", v.data_as_of || v.built_at);
   }).catch(function () {
     // Keep the static line, but say how old Vigil's newest data is, from COP's health check.
     window.ticCopHealth.then(function (h) {
