@@ -203,7 +203,9 @@ Intelligence Company site. Started 27 Oct 2026 at Tom's request after a review o
   - **"Updated … ago"** under every live program in the product list (`site.js` `setFresh`, keyed by
     `li[data-product]`; one line per program, updated in place). Since 1 Nov 2026 UTC each time comes from the most
     direct source: Noisefloor `board.json` `built_utc`, Watchfloor `/summary` `built_at`, Vigil `/api/summary`
-    `built_at`, COP `data/health.json` `generated_at`, Context from COP's health entry (`data_as_of`; Context has no
+    `data_as_of` (its last successful RansomLook run, since Vigil PR #86, 5 Nov 2026 UTC; falls back to `built_at`, which is
+    only when the summary was assembled and always read "just now"), COP `data/health.json` `generated_at`, Context
+    from COP's health entry (`data_as_of`; Context has no
     small file of its own), and Elements and Cordon from a HEAD request's `Last-Modified` on their `data/feed.geojson`
     (400–500 KB, so it is never downloaded). Since 5 Nov 2026 the line adds "· running late" in amber when its own
     "Updated … ago" is older than that program's `fresh_hours` in COP's health (COP's own `state` judges the newest
@@ -217,11 +219,14 @@ Intelligence Company site. Started 27 Oct 2026 at Tom's request after a review o
     from Vigil's README. Vigil's other pages need an account.
   - **Vigil "Latest" line** from `https://vigil.theintelligence.company/api/summary` (live since Vigil PR #83, merged
     31 Oct 2026 as `c4c55d3`). It returns
-    `brief`, `day` and `built_at` with open CORS and an hour of CDN cache, or a 503 whenever Vigil can't stand behind a
-    number, including a zero day. Then the hub keeps the static line. Rules from that session: insert `brief` as
-    text only (group names come from criminal leak sites); `day` is RansomLook's calendar day, one to two hours ahead
-    of UTC, so never label it UTC; credit RansomLook (CC BY 4.0) in the footer, which the hub does. Vigil's origin
-    is in `connect-src`, and `setFresh("vigil", built_at)` drives "Updated … ago" in the product list.
+    `brief`, `day`, `data_as_of` and `built_at` with open CORS and an hour of CDN cache, or a 503 whenever Vigil can't
+    stand behind a number, including a zero day. Then the hub keeps the static line. Rules from that session: insert
+    `brief` as text only (group names come from criminal leak sites); `day` is RansomLook's calendar day, one to two
+    hours ahead of UTC, so never label it UTC; credit RansomLook (CC BY 4.0) in the footer, which the hub does. Vigil's
+    origin is in `connect-src`, and `setFresh("vigil", data_as_of || built_at)` drives "Updated … ago" in the product
+    list. **Vigil PR #86** (merged 5 Nov 2026 UTC as `224b358`, `method: "vigil-summary-2"`) added `data_as_of` and lets a gap over 12 h between
+    RansomLook runs count as complete when the run closing it skipped stored claims (`sync_log.metadata.result.skipped
+    > 0`), which is how the 3–4 Nov outage closed.
   - **"Work with us"** (`#services`, between Products and How we work; in the menu, and the hero's second button):
     custom monitoring, briefings, analyst training, tools and consulting (Tom confirmed all four, 31 Oct 2026). The
     button opens a mail to support@ with a subject line. Career details stay off the page, as with the About.
