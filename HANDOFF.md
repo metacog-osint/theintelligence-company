@@ -1,4 +1,4 @@
-# Hub handoff: where things stand (4 Nov 2026, 11:05 PM CST; Vigil `data_as_of` added by its side session)
+# Hub handoff: where things stand (4 Nov 2026, 11:05 PM CST; Vigil `data_as_of` added by its side session; Title 10 bar v1.1, 5 Nov 12:36 PM CST)
 
 Read with `CLAUDE.md` (the project's notes). Times are Central (CST since 1 Nov). Each commit, push and deploy needs
 Tom's yes.
@@ -16,7 +16,11 @@ Tom's yes.
     Headwind, Blackout, Orbit, Wake and Vis on the drawing as in development (none of them linked), and "running
     late" judged against each program's `fresh_hours` from COP's health.
   - Footer updated date and `sitemap.xml` `<lastmod>`: 5 Nov 2026 (UTC).
-- The house bar (`site/shared/tic-nav.js` + `.css`, v1.1) is live on all ten program sites (Title 10 has v1.0).
+- The house bar (`site/shared/tic-nav.js` + `.css`, v1.1) is live on all ten program sites. Title 10 moved from v1.0
+  to v1.1 on 5 Nov 2026 (commit `49a49c5`, pushed and deployed 12:36 PM CST, `sw.js` VERSION `t10-2026-11-05a`;
+  tested locally on the guide, Money Kit and changes page at 1440 px and 375 px, then checked live byte for byte).
+  Deploy Title 10 from a clean worktree: its main folder holds untracked `benefits-pack` files from 1 Nov
+  (`data/`, `deploy/public/data/`, `tools/check-benefits-pack.js`) that no session has claimed and that must not ship.
   tic-time v1.3 is on every program repo's main branch (checked 5 Nov; the local PropertyCast and Context trees lag).
 - **Vigil's "Updated … ago"** now shows when Vigil last took in claims (`data_as_of`, its last successful RansomLook
   run), not when its summary was assembled (`built_at`, which always read "just now"). Hub commit `4b26bf5`, deployed
@@ -26,10 +30,14 @@ Tom's yes.
   from 2:53 PM CST on 4 Nov (PIDs 30668/31228) was still listening on 5055 at 11 PM. The app's preview then
   opens its tab on 5056, but `serve.py` takes its port from the command line, so nothing answers there. Stop the old
   process (`Stop-Process`) before the next preview, or open http://127.0.0.1:5055 by hand.
-- The Firebase CLI login expired on 4 Nov; Tom ran `firebase login --reauth` and the deploy went through.
+- The Firebase CLI login expired on 4 Nov and again on 5 Nov (before the Title 10 deploy); each time Tom ran
+  `firebase login --reauth` and the deploy went through. Expect it before most deploys.
 
 ## Next steps
-1. Copy tic-nav v1.1 to Title 10 (bump `sw.js` VERSION).
+1. **tic-nav's Elements description lags** (found 5 Nov 2026): the hub's product list and `oe.js` name everything
+   Elements publishes, but `tic-nav.js`'s Elements `long` line leaves out NOAA weather warnings, tsunami products and
+   the US Drought Monitor. Fix it in v1.2 when the bar is next rolled out (all ten sites; wait for Elements' EMSC
+   earthquake and NIFC wildfire lanes, built 4 Nov and not yet committed, so one rollout covers both).
 2. Retake product screenshots when products change; keep the Elements and Cordon lines current as their planned
    pieces arrive (count `properties.sources[].publisher`).
 3. **Before the hub links Blackout, Wake, Orbit or Headwind:** they need live collectors, or their seed data labelled

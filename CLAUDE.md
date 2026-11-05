@@ -49,8 +49,9 @@ Intelligence Company site. Started 27 Oct 2026 at Tom's request after a review o
   site by site. COP, Elements and Cordon also carry copies.
 - `site/shared/tic-nav.js` + `tic-nav.css` (v1.1, 1 Nov 2026; v1.1 raises the bar's z-index to 10000 so its menu
   covers headers with their own stacking, such as Noisefloor's z-index 1100, and resets `display`, margins, padding and
-  borders on the bar so a site's generic `nav` rules can't reshape it, such as Watchfloor's flex `nav`. Title 10 still
-  has v1.0, which works there; copy v1.1 when next touched). **Rolled out (1 Nov 2026 UTC):** Title 10 (e7286a4, v1.0),
+  borders on the bar so a site's generic `nav` rules can't reshape it, such as Watchfloor's flex `nav`). **Rolled out
+  (1 Nov 2026 UTC):** Title 10 (e7286a4, v1.0; v1.1 since 5 Nov 2026, 49a49c5, deployed from a clean worktree because
+  its main folder holds an untracked `deploy/public/data/benefits-pack.json` that must not ship),
   Watchfloor (478fc95), Noisefloor (319242c; its pre-commit hook needs the private term list, so commit from a
   worktree with `FORBIDDEN_TERMS="$(cat <main>/private/forbidden_terms.txt)"`), PropertyCast (57b22f1, goes live with
   the next daily publish), Context (b86602f; deploys only with `npx vercel --prod`, so copy `.vercel/project.json` into
