@@ -1,4 +1,4 @@
-# Hub handoff: where things stand (5 Nov 2026, about 1:10 PM CST: house bar v1.2 rolled out)
+# Hub handoff: where things stand (5 Nov 2026, 8:55 PM CST: house bar v1.2 rolled out; v1.3 next for MeteoAlarm)
 
 Read with `CLAUDE.md` (the project's notes). Times are Central (CST since 1 Nov). Each commit, push and deploy needs
 Tom's yes.
@@ -33,9 +33,11 @@ Tom's yes.
   - Vigil: PR #90 (https://github.com/metacog-osint/vigil/pull/90), a pull request because a Vigil session was working
     there. All nine checks passed, including e2e in Chromium, Firefox and WebKit, which had been failing on `main`
     since 1 Nov. Merged with Tom's yes as `c83229b` at 1:05 PM CST; Vercel deploys on merge.
-- **Global weather for Elements** is its own session ("Elements: global weather sources", started 5 Nov). It is
-  assessing global sources and licences before building. When a lane goes live, update both Elements lines and roll
-  the bar again.
+- **Global weather for Elements:** the "Elements: global weather sources" session (started 5 Nov) wrote a source
+  assessment, `~\AppData\Local\Claude-Data\claude_pzs8sxrjxfjjc\side-session-notes\local_8abbc62d-0c25-4eec-8a42-7af7062ba56a\elements-global-weather-sources.md`,
+  and put the first lane live: **MeteoAlarm** European weather warnings (EUMETNET, 39 countries; Elements commit
+  `66bf4e4`). The live feed at 8:46 PM CST, 5 Nov held 28 MeteoAlarm items, some credited to national services
+  (Météo-France, IPMA). This makes the v1.2 Elements text out of date: see Next steps 1.
 - Hub `master` is on GitHub and live at https://theintelligence.company (deployed 4 Nov, about 10:35 PM CST). Site
   commit `bd02c67`; the notes commit follows it. Checked live at 1440 px and 375 px: no console errors, no sideways
   scroll on phones.
@@ -66,9 +68,19 @@ Tom's yes.
   `firebase login --reauth` and the deploy went through. Expect it before most deploys.
 
 ## Next steps
-1. **Confirm v1.2 is live on PropertyCast** after its daily publish (about 4:23 AM CST, 6 Nov).
-2. **When Elements' EMSC earthquake and NIFC wildfire lanes go live** (built 4 Nov, not yet committed), add them to
-   both Elements lines (EMSC is worldwide; NIFC wildfires are US only) and roll the bar again (v1.3).
+1. **House bar v1.3: Elements' weather text.** Since MeteoAlarm went live (`66bf4e4`), both Elements lines are wrong
+   where they say weather warnings are "US only for now" and "Global weather is planned". Today's lines are
+   `site/shared/tic-nav.js` (`long`) and `site/oe/oe.js` (`line`).
+   - **Before writing:** re-measure the live feed (publishers in `data/feed.geojson`) and read the assessment for
+     MeteoAlarm's coverage and licence and for which global lanes come next.
+   - **Wording:** move weather warnings out of "US only" (US: NWS; Europe: MeteoAlarm), and keep "planned" only for
+     what is still planned. Get Tom's OK on the wording.
+   - **Roll out** to all ten sites the way v1.2 went (commits above). Noisefloor needs `tools/build_site.py`; Title 10
+     needs a `sw.js` bump and a clean worktree; Vigil goes as a PR if a Vigil session is working there.
+   - **Fold in Elements' EMSC earthquake and NIFC wildfire lanes** if they are live by then (built 4 Nov, uncommitted
+     on 5 Nov; not in the feed at 8:46 PM CST). EMSC is worldwide; NIFC wildfires are US only.
+2. **Confirm v1.2 is live on PropertyCast** after its daily publish (about 4:23 AM CST, 6 Nov). It still served v1.1
+   at 8:50 PM CST, 5 Nov, as expected.
 3. Retake product screenshots when products change; keep the Elements and Cordon lines current as their planned
    pieces arrive (count `properties.sources[].publisher`).
 4. **Before the hub links Blackout, Wake, Orbit or Headwind:** they need live collectors, or their seed data labelled
