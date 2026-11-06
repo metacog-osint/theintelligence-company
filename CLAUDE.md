@@ -85,6 +85,36 @@ Intelligence Company site. Started 27 Oct 2026 at Tom's request after a review o
   product list** when a program is added, renamed or goes live. Test page: `tools/tic-nav-demo.html` (serve the
   project root). The hub itself doesn't use the bar; it has its own masthead.
 
+## Dispatch Worker (`dispatch/`, Cloudflare Worker `tic-dispatch`)
+- Built 5 Nov 2026 at Tom's request ("Yes, build it"). GitHub starts scheduled runs on this account only every 4 to 9
+  hours, whatever the cron says: Elements' and Cordon's scheduled runs came 4.4 to 8.3 hours apart on 4–5 Nov.
+  `dispatch/worker.js` runs on one Cloudflare cron (every 5 minutes; one of the free plan's 5 cron triggers, and
+  PropertyCast's trigger uses another) and calls GitHub's workflow_dispatch API for each line of `JOBS`: Elements
+  `update.yml` at :05 and :35 UTC, Cordon `update.yml` at :10 and :40. Their gate job skips only scheduled runs, so
+  their own crons stay as a fallback and skip whenever a dispatched run deployed in the last 45 minutes.
+- Checked 5 Nov: GitHub Pages' soft limit of 10 builds an hour doesn't apply to sites published by a custom Actions
+  workflow (both are); a run takes under 75 seconds; both repos are public, so their minutes are free; Elements' repo
+  was 1.3 MB after a week of data commits.
+- Deploy: `.github/workflows/dispatch-deploy.yml` runs on a push to `master` that touches `dispatch/**` (or by hand),
+  tests first (`node --test` in `dispatch/`, no network), then `wrangler deploy` and the secret upload, in
+  PropertyCast's order. Hub repo secrets, set by Tom: `DISPATCH_TOKEN` (fine-grained; elements and cordon only;
+  Actions: read and write), `CLOUDFLARE_API_TOKEN` ("Edit Cloudflare Workers" template), `CLOUDFLARE_ACCOUNT_ID`. The
+  `CLOUDFLARE_API_TOKEN` in this machine's environment sees Pages projects but not Workers, so it can't deploy this.
+- **`DISPATCH_TOKEN` expires 5 Nov 2027** (Tom, 5 Nov 2026). Before then Tom makes a new one the same way, runs
+  `gh secret set DISPATCH_TOKEN --repo metacog-osint/theintelligence-company`, and runs `dispatch-deploy` by hand to
+  upload it. The Cloudflare token doesn't expire.
+- No public URL (`workers_dev = false`). A start that fails (expired token, a workflow without `workflow_dispatch`)
+  marks that cron event as failed in Cloudflare (Workers & Pages → tic-dispatch); on the hub it shows up as "running
+  late" on Elements or Cordon. The error carries GitHub's message, never the token.
+- To add a workflow: give it `workflow_dispatch:`, add a `JOBS` line (minutes are multiples of 5, in a slot of its
+  own), add its repo to the token's repository access, push.
+- Local test without deploying: Wrangler is installed in `[local path]`. Run
+  `wrangler dev --test-scheduled --var DISPATCH_TOKEN:fake` in `dispatch/`, then POST
+  `/cdn-cgi/local/explorer/api/local/scheduled?worker=tic-dispatch` with `{"cron":"*/5 * * * *","scheduled_time":<ms>}`
+  (the older `/cdn-cgi/handler/scheduled?time=` ignores the time). The fake token reaches GitHub and gets "401 Bad
+  credentials", which proves the path. Afterwards stop the node and workerd processes by PID and delete
+  `dispatch/.wrangler/`.
+
 ## Site
 - Static files in `site/`, no build step. Firebase Hosting site `theintelligencecompany` in project
   context-484804: https://theintelligencecompany.web.app. Deploy (needs Tom's yes):
