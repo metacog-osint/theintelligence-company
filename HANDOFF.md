@@ -1,9 +1,22 @@
-# Hub handoff: where things stand (5 Nov 2026, 9:45 PM CST: house bar v1.3 rolled out for MeteoAlarm)
+# Hub handoff: where things stand (5 Nov 2026, 10:45 PM CST: dispatch Worker live)
 
 Read with `CLAUDE.md` (the project's notes). Times are Central (CST since 1 Nov). Each commit, push and deploy needs
 Tom's yes.
 
 ## Live and finished
+- **Dispatch Worker `tic-dispatch`, live 5 Nov 2026** (Tom: "Yes, build it", then "proceed with sharing propertycast's
+  timer"). Elements and Cordon now start every 30 minutes instead of every 4 to 9 hours. Details in `CLAUDE.md`
+  ("Dispatch Worker").
+  - Code: `dispatch/` (hub `ecd1736`, then `1148227`), deployed by `.github/workflows/dispatch-deploy.yml`. PropertyCast
+    side: `7a4d07f` (`trigger/`: service binding `DISPATCH` and `lend()`; 14/14 checks in `tools/test_live.mjs`).
+  - Why no cron of its own: the free plan's 5 cron triggers are all in use (PropertyCast 1, Vigil 4); the first deploy
+    was refused (code 10072). Tom chose sharing PropertyCast's 5-minute clock over Workers Paid ($5/month).
+  - Checked live: Elements' dispatched run started 10:35:51 PM CST and published at 10:36:48; Cordon's started
+    10:40:50 and published at 10:41:22. PropertyCast's own feed kept updating (10:40:49 PM).
+  - Secrets on the hub repo, set by Tom: `DISPATCH_TOKEN` (expires **5 Nov 2027**), `CLOUDFLARE_API_TOKEN` (no
+    expiry; rolled once on 5 Nov after the first value was lost), `CLOUDFLARE_ACCOUNT_ID`.
+  - Tom also loosened the cost rule the same night: new costs can be considered when a program needs them, with the
+    price, what it buys and the free alternative, and his yes first (global `CLAUDE.md`).
 - **House bar v1.3, 5 Nov 2026** (Tom approved the wording, then said "Yes, roll it out"). MeteoAlarm went live on
   Elements (`66bf4e4`), so Elements' text moves weather warnings from "US only for now" to **Regional**:
   - `tic-nav.js` (`long`): "Regional: weather warnings for the US and Europe, hurricane-center storms, and tsunami
@@ -95,6 +108,11 @@ Tom's yes.
   `firebase login --reauth` and the deploy went through. Expect it before most deploys.
 
 ## Next steps
+0. **Merge Vigil's four crons into one** (Tom, 5 Nov 2026): `15 * * * *`, `0 */6 * * *`, `0 3 * * *` and
+   `0 4 * * SUN` in `Vigil/workers/wrangler.toml` become one trigger (for example `0,15 * * * *`), with `scheduled()`
+   choosing the job from the time. That frees three of the free plan's five cron triggers. Do it in a Vigil session,
+   as a PR; the ingestion Worker is deployed by hand. Optional after that: cut Elements' and Cordon's own crons from
+   four an hour to one, the fallback their notes planned once the dispatcher worked.
 1. **Confirm v1.3 is live on PropertyCast** after its daily publish (about 4:23 AM CST, 6 Nov): the home page's
    HTML should hold `TicNav = { version: "1.3"`. It held v1.1 at 9:40 PM CST, 5 Nov, as expected.
 2. **Next Elements text update (v1.4)** when more lanes go live. Count publishers in the live `data/feed.geojson`
