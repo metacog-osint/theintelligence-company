@@ -1,10 +1,52 @@
-# Hub handoff: where things stand (6 Nov 2026, 10:15 AM CST: site effort wrapped up)
+# Hub handoff: where things stand (6 Nov 2026, 11:10 AM CST: house bar v1.4 live)
 
 Read with `CLAUDE.md` (the project's notes). Times are Central (CST since 1 Nov). Each commit, push and deploy needs
 Tom's yes.
 
+## House bar v1.4, 6 Nov 2026 (Tom approved the wording, then said "Yes, roll it out")
+- **Why:** Elements `8f6cfb4` put two lanes live:
+  - **EMSC earthquakes:** a second worldwide catalogue, M4.5 and up, matched against USGS within 90 s and 150 km.
+    EMSC-only events become their own items.
+  - **NIFC wildfire incidents** (WFIGS), US only: wildfires not declared out that are still uncontained or were
+    found in the last 14 days.
+- **Measured first:** the live feed generated 10:06 AM CST held 390 items: NASA FIRMS 95, USGS 91, EMSC 91, GDACS 49,
+  NWS 49, NIFC (WFIGS) 30, MeteoAlarm 51 (AEMET 23, MeteoAlarm 20, IPMA 8), Copernicus EMS 5, USGS Volcano Hazards 3,
+  SPC 2, tsunami centres 2, Drought Monitor 1.
+- **Text:**
+  - `tic-nav.js` (`long`): "Worldwide: earthquakes from USGS (with impact alerts) and EMSC, …" and "US only for now:
+    wildfire incidents, severe-storm outlooks, drought and volcano alert levels." Regional and "Weather for more of
+    the world is planned" are unchanged.
+  - `oe.js` (`line`): "earthquakes from USGS (with impact alerts) and from EMSC's independent catalogue" and "US only
+    for now: wildfire incidents (NIFC), …". It still ends "Weather for more of the world and a radiation lane are
+    planned."
+  - "With impact alerts" stays with USGS: the alerts are USGS PAGER's, and EMSC-only events have none.
+- **Tested at 1440 px:** the menu's Elements panel is 270 × 322 px (was 302), shorter than the 545 px program list,
+  so the menu doesn't scroll. The drawing's Elements panel is 403 × 541 px (was 520) beside the 820 px figure. No
+  console errors.
+- **Hub** `58a54ea`, pushed to `master` and deployed about 11:00 AM CST.
+- **Sites:** a worktree per repo off its main branch, pushed straight to main (no conflicts). All were checked live
+  with `version: "1.4"` at 11:01 AM CST, except PropertyCast:
+  - COP `44368ea`, Cordon `b6950bd`, Elements `1f3d645`: deploy on push.
+  - Vigil `7c0a807`: straight to `main`, since no Vigil session was active. CI and CodeQL passed.
+  - Noisefloor `8cd36d0`: the file and the rebuilt `site/` in one commit; ci and deploy-site passed. Pages load
+    `tic-nav.js?v=53c8f2a0e7`.
+  - Context `304625d`: `npx vercel --prod`. The first try said "Not authorized"; the retry deployed.
+  - Watchfloor `721058a`: `scripts/build_web.py`, then `firebase deploy --only hosting:watchfloor`.
+  - Title 10 `f5f8d8b`: `sw.js` `t10-2026-11-06a` and the deploy README line, deployed from `deploy/` in a clean
+    worktree.
+  - Listening Post: no git. v1.3 was backed up to `_backups/tic-nav-v1.3-2026-11-06/`, then `firebase deploy --only
+    hosting`, whose predeploy builds `web/dist` from `web/public`.
+  - PropertyCast `7a2facb`: live with the next daily publish. See Next steps 1.
+- **Along the way:**
+  - The Firebase login expired again before the hub deploy; Tom ran `firebase login --reauth`.
+  - The external D: drive dropped off at about 10:50 AM CST, mid-rollout: Windows listed no D: disk at all.
+    Everything was already pushed, and Tom reconnected it.
+  - All nine worktrees and their `tic-nav-v1.4` branches were removed after checking each branch was on its main.
+  - After the local preview stopped, port 5055 still showed as listening, owned by PID 0 (no process). Harmless, but
+    the next preview may need another port.
+
 ## Wrap-up, 6 Nov 2026 (about 10:15 AM CST; Tom asked to wrap up the site effort and all branches)
-- **House bar v1.3** is live on the hub and all ten sites (checked).
+- **House bar v1.3** was live on the hub and all ten sites (checked); v1.4 (above) replaced it the same morning.
 - **Notes trim:** done and pushed for Listening Post, Watchfloor, PropertyCast, the hub, Noisefloor and Context.
   - The originals are archived at `D:\Backups\notes-before-trim-2026-11-05`.
   - Noisefloor's local folder is on another session's `docs/satcom-reconcile` branch, so it still holds the old,
@@ -149,14 +191,13 @@ Tom's yes.
    choosing the job from the time. That frees three of the free plan's five cron triggers. Do it in a Vigil session,
    as a PR; the ingestion Worker is deployed by hand. Optional after that: cut Elements' and Cordon's own crons from
    four an hour to one, the fallback their notes planned once the dispatcher worked.
-1. **Done 6 Nov 2026:** v1.3 is live everywhere. At about 10:10 AM CST the bar's `TicNav` version read 1.3 on the
-   hub and all ten sites, PropertyCast included.
-2. **Next Elements text update (v1.4)** when more lanes go live. Count publishers in the live `data/feed.geojson`
+1. **PropertyCast to v1.4:** check its home page's HTML for `TicNav = { version: "1.4"` after the daily publish at
+   about 4:23 AM CST, 7 Nov. (v1.3 was done everywhere by 10:11 AM CST, 6 Nov, PropertyCast included.)
+2. **Next Elements text update (v1.5)** when more lanes go live. Count publishers in the live `data/feed.geojson`
    first, then get Tom's OK on the wording.
-   - EMSC earthquakes (worldwide) and NIFC wildfires (US only): built 4 Nov, still uncommitted in
-     `D:\Projects\elements` at 9:20 PM CST, 5 Nov, and not in the feed.
-   - More weather: the assessment's next CAP countries are Canada (ECCC Datamart), then Japan (JMA).
-   - Roll out the way v1.2 and v1.3 went. Noisefloor needs `tools/build_site.py` and the private term list at commit;
+   - Still planned: more of the world's weather (the assessment's next CAP countries are Canada (ECCC Datamart), then
+     Japan (JMA)) and, on the drawing, the radiation lane.
+   - Roll out the way v1.4 went (commits above). Noisefloor needs `tools/build_site.py` and the private term list at commit;
      Title 10 needs a `sw.js` bump and a clean worktree; Context needs `.vercel/project.json` copied into its
      worktree; Listening Post has no git, so back up first; Vigil goes as a PR if a Vigil session is working there.
    - `D:\Projects\vis\site\tic-nav.js` is still v1.1. Vis is in development and not one of the ten; bring it up to

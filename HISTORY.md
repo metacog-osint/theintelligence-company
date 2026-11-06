@@ -27,6 +27,9 @@ stays short. Nothing here loads automatically. `CLAUDE.md` is the current refere
   Europe" now that MeteoAlarm is live on Elements, and says "Weather for more of the world is planned"; `oe.js` names
   NOAA and MeteoAlarm (38 European countries and Israel). Rolled out to all ten sites that evening; PropertyCast
   builds the bar into its page at its daily publish, so check its home page's HTML, not `/tic-nav.js`.
+  **v1.4** (6 Nov 2026, hub `58a54ea`; Tom approved the wording) adds EMSC under Worldwide earthquakes (impact alerts
+  stay with USGS) and wildfire incidents (NIFC) under "US only for now", after Elements `8f6cfb4` put both lanes live.
+  Rolled out to all ten sites that morning (commits in `HANDOFF.md`); PropertyCast with its 7 Nov publish.
   **Rolled out
   (1 Nov 2026 UTC):** Title 10 (e7286a4, v1.0; v1.1 since 5 Nov 2026, 49a49c5, deployed from a clean worktree because
   its main folder holds an untracked `deploy/public/data/benefits-pack.json` that must not ship),

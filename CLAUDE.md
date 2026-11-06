@@ -3,8 +3,8 @@
 The company's home page (to serve `theintelligence.company`) and the canonical home of code shared by every
 Intelligence Company site. Started 27 Oct 2026 at Tom's request after a review of all his projects.
 
-> **Current state: read [`HANDOFF.md`](./HANDOFF.md) first.** It is the 5 Nov 2026 handoff: what is live, what
-> shipped last (house bar v1.3 for Elements' MeteoAlarm lane), next steps, and the Vigil summary-feed work.
+> **Current state: read [`HANDOFF.md`](./HANDOFF.md) first.** It is the 6 Nov 2026 handoff: what is live, what
+> shipped last (house bar v1.4 for Elements' EMSC and NIFC lanes), next steps, and the Vigil summary-feed work.
 
 Dated history (version-by-version changes to the shared files, rollout commits, one-off fixes, superseded details)
 is in [`HISTORY.md`](./HISTORY.md). Procedures needed now and then (the Dispatch Worker's checks and local test,
@@ -26,8 +26,9 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   Actions builds), HTTPS enforced, and Squarespace `CNAME elements|cordon → metacog-osint.github.io`. The old
   `metacog-osint.github.io/elements/` and `/cordon/` addresses 301 to the subdomains. Their drawing lines say what v0
   covers and what is planned (Elements: radiation, since NASA FIRMS fires and USGS volcano alert levels arrived
-  by 1 Nov 2026, and global weather: Tom, 5 Nov 2026, "US-based weather content is just a small slice of what I need
-  Elements to be; I need global weather data", so Elements' text separates worldwide, regional and US-only sources;
+  by 1 Nov 2026 and EMSC earthquakes and NIFC wildfires by 6 Nov, and global weather: Tom, 5 Nov 2026, "US-based
+  weather content is just a small slice of what I need Elements to be; I need global weather data", so Elements'
+  text separates worldwide, regional and US-only sources;
   Cordon: NOTAMs, launch hazard areas); update the lines as those arrive (Tom asked for this
   upkeep, 1 Nov 2026). Check by counting `properties.sources[].publisher` in each `data/feed.geojson`.
 - **Context vs Watchfloor is parked** (Tom, 1 Nov 2026: "stop it, i'm not deciding on this yet"). Both may stay with
@@ -52,7 +53,7 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   repo's main branch (checked 5 Nov 2026; some local trees lag): Watchfloor `web/`, Title 10 `deploy/public/`,
   Noisefloor `site_src/`, PropertyCast `src/wx/static/`, CONTEXT `public/`, Vigil `public/`, Listening Post
   `web/public/`, and COP, Elements and Cordon.
-- `site/shared/tic-nav.js` (v1.3) + `tic-nav.css` (v1.1): **the house bar** on every program site (Tom: "I need a
+- `site/shared/tic-nav.js` (v1.4) + `tic-nav.css` (v1.1): **the house bar** on every program site (Tom: "I need a
   link back to the home page on each subsite… a dropdown menu of all programs with their primary layer area or topic
   labeled (and a more in-depth description upon mouse-over)"). It is a slim navy bar with "← The Intelligence Company"
   and a **Programs ▾** disclosure menu. That menu lists every live program grouped "Across the layers" and "Other
@@ -66,9 +67,10 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   - Its z-index is 10000 so its menu covers headers with their own stacking, such as Noisefloor's z-index 1100, and it
     resets `display`, margins, padding and borders so a site's generic `nav` rules can't reshape it, such as
     Watchfloor's flex `nav`.
-  - Elements' `long` text is the v1.3 wording Tom approved on 5 Nov 2026: weather warnings "Regional: … for the US and
-    Europe" and "Weather for more of the world is planned"; `oe.js` names NOAA and MeteoAlarm (38 European countries
-    and Israel).
+  - Elements' `long` text is the v1.4 wording Tom approved on 6 Nov 2026: "Worldwide: earthquakes from USGS (with
+    impact alerts) and EMSC, …", weather warnings "Regional: … for the US and Europe", "US only for now: wildfire
+    incidents, …" and "Weather for more of the world is planned". `oe.js` names EMSC ("EMSC's independent
+    catalogue"), NOAA, MeteoAlarm (38 European countries and Israel) and NIFC.
   - PropertyCast builds the bar into its page at its daily publish, so check its home page's HTML, not `/tic-nav.js`.
 - **Rolling out a shared file** (all ten program sites carry both). When a program is added or renamed, update
   `PROGRAMS` in `tic-nav.js` and copy it to every site. Method: a git worktree per repo, test locally, Tom's yes, push
