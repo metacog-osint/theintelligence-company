@@ -3,7 +3,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { JOBS, due, run, dispatch } from "./dispatch.js";
 
-const at = (min) => new Date(Date.UTC(2026, 10, 6, 3, min));
+const at = (min, hour = 3) => new Date(Date.UTC(2026, 10, 6, hour, min));
 
 function recorder(status = 204, body = null) {
   const calls = [];
@@ -27,12 +27,37 @@ test("every job's minutes are whole 5-minute slots inside the hour", () => {
   }
 });
 
+test("every job's hours, when given, are UTC hours 0-23", () => {
+  for (const j of JOBS.filter((j) => j.hours)) {
+    assert.ok(j.hours.length > 0, j.repo);
+    for (const h of j.hours) assert.ok(Number.isInteger(h) && h >= 0 && h < 24, `${j.repo} ${h}`);
+  }
+});
+
 test("Elements and Cordon each run twice an hour, never in the same slot", () => {
   const slots = (repo) => JOBS.find((j) => j.repo === repo).minutes;
   assert.deepEqual(slots("metacog-osint/elements"), [5, 35]);
   assert.deepEqual(slots("metacog-osint/cordon"), [10, 40]);
-  const all = JOBS.flatMap((j) => j.minutes);
-  assert.equal(new Set(all).size, all.length);
+});
+
+test("COP runs every two hours, at :20 on even UTC hours", () => {
+  const cop = JOBS.find((j) => j.repo === "metacog-osint/cop");
+  assert.equal(cop.workflow, "build.yml");
+  assert.deepEqual(cop.minutes, [20]);
+  assert.deepEqual(cop.hours, [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22]);
+});
+
+test("no two jobs ever start in the same 5-minute slot", () => {
+  const seen = new Set();
+  for (const j of JOBS) {
+    for (const h of j.hours || [...Array(24).keys()]) {
+      for (const m of j.minutes) {
+        const slot = `${h}:${m}`;
+        assert.ok(!seen.has(slot), `${j.repo} shares ${slot}`);
+        seen.add(slot);
+      }
+    }
+  }
 });
 
 test("due picks only the jobs for this minute", () => {
@@ -40,6 +65,22 @@ test("due picks only the jobs for this minute", () => {
   assert.deepEqual(due(JOBS, at(40)).map((j) => j.repo), ["metacog-osint/cordon"]);
   assert.deepEqual(due(JOBS, at(0)), []);
   assert.deepEqual(due(JOBS, at(15)), []);
+});
+
+test("due respects a job's hours", () => {
+  assert.deepEqual(due(JOBS, at(20, 4)).map((j) => j.repo), ["metacog-osint/cop"]);
+  assert.deepEqual(due(JOBS, at(20, 0)).map((j) => j.repo), ["metacog-osint/cop"]);
+  assert.deepEqual(due(JOBS, at(20, 3)), []);
+  assert.deepEqual(due(JOBS, at(20, 23)), []);
+  // A job without hours still runs every hour.
+  assert.deepEqual(due(JOBS, at(5, 23)).map((j) => j.repo), ["metacog-osint/elements"]);
+});
+
+test("COP is dispatched to its build workflow on main", async () => {
+  const { calls, fetcher } = recorder(204);
+  assert.deepEqual(await run({ DISPATCH_TOKEN: "t" }, at(20, 14), JOBS, fetcher), ["metacog-osint/cop"]);
+  assert.equal(calls[0].url, "https://api.github.com/repos/metacog-osint/cop/actions/workflows/build.yml/dispatches");
+  assert.deepEqual(JSON.parse(calls[0].init.body), { ref: "main" });
 });
 
 test("a minute with nothing due makes no request, even without a token", async () => {
