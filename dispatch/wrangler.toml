@@ -1,0 +1,9 @@
+name = "tic-dispatch"
+main = "worker.js"
+compatibility_date = "2026-09-01"
+workers_dev = false   # cron only; no public URL
+
+[triggers]
+crons = ["*/5 * * * *"]   # UTC; worker.js JOBS says which workflows start in which slot
+
+# Secret (uploaded by .github/workflows/dispatch-deploy.yml from the hub repo's GitHub secrets): DISPATCH_TOKEN

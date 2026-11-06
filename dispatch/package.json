@@ -1,0 +1,9 @@
+{
+  "name": "tic-dispatch",
+  "private": true,
+  "type": "module",
+  "description": "Cloudflare Worker that starts GitHub workflows on a reliable clock",
+  "scripts": {
+    "test": "node --test"
+  }
+}
