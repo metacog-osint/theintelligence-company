@@ -102,17 +102,20 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   COP's gate skips a scheduled run when a build succeeded in the last 45 minutes, so the fallback cron doesn't double
   that. Tom added `cop` to the `DISPATCH_TOKEN` token's repository access the same day (no new token). If that
   access is ever lost, COP's start fails with GitHub's 404 every two hours and Elements and Cordon carry on.
-- **Its clock is PropertyCast's.** The free plan allows 5 cron triggers per account and all 5 are in use: PropertyCast's
-  trigger 1 (`*/5`), Vigil's ingestion Worker 4 (`15 * * * *`, `0 */6 * * *`, `0 3 * * *`, `0 4 * * SUN`). The first
-  deploy, with a cron of its own, was refused (code 10072). So `tic-dispatch` has `crons = []`, and
+- **Its clock is PropertyCast's.** The free plan allows 5 cron triggers per account, and on 5 Nov all 5 were in use:
+  PropertyCast's trigger 1 (`*/5`), Vigil's ingestion Worker 4. The first deploy, with a cron of its own, was refused
+  (code 10072). So `tic-dispatch` has `crons = []`, and
   `propertycast-trigger` calls its `tick(scheduledTime)` on every 5-minute wake through the service binding `DISPATCH`
   (`PropertyCast/trigger/wrangler.toml`; `lend()` in its `worker.js` logs tic-dispatch's failures and never throws).
   Tom chose this over Workers Paid ($5/month: 250 cron triggers per the docs, the error said 1,000) and over merging
   Vigil's crons, 5 Nov 2026. If PropertyCast's trigger is ever removed, the dispatcher stops: give it a cron of its
   own first (its `scheduled()` handler is ready).
-- **To do: merge Vigil's four crons into one** (Tom, 5 Nov 2026). One trigger such as `0,15 * * * *`, with
-  `scheduled()` choosing the job from the time, frees three. Do it in a Vigil session, as a PR; the ingestion Worker
-  is deployed by hand.
+- **Vigil's crons merged, 6 Nov 2026** (Tom asked, 5 Nov; Vigil PR #92, merge `a2383f5`; Worker deployed by hand
+  about 3:20 PM CST): one trigger, `15,45 * * * *`, so 2 of the account's 5 are in use and 3 are free. Vigil's four
+  triggers were only ticks (its scheduler runs whatever is overdue), but one hourly trigger would have overloaded it:
+  its registry declares about 900 subrequests a day, and 24 ticks admit 768. Vigil's
+  `workers/src/lib/__tests__/capacity.test.js` fails if that stops fitting. `tic-dispatch` still runs on PropertyCast's
+  clock; a cron of its own is now possible (Tom's call).
 - Deploy: `.github/workflows/dispatch-deploy.yml` runs on a push to `master` that touches `dispatch/**` (or by hand),
   tests first (`node --test` in `dispatch/`, no network), then `wrangler deploy` and the secret upload, in
   PropertyCast's order. Deploy `tic-dispatch` before any PropertyCast trigger deploy that adds the binding: a binding

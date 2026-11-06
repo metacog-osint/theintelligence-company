@@ -1,7 +1,27 @@
-# Hub handoff: where things stand (6 Nov 2026, 11:10 AM CST: house bar v1.4 live)
+# Hub handoff: where things stand (6 Nov 2026, 3:30 PM CST: Vigil on one cron trigger)
 
 Read with `CLAUDE.md` (the project's notes). Times are Central (CST since 1 Nov). Each commit, push and deploy needs
 Tom's yes.
+
+## Vigil's four cron triggers merged into one, 6 Nov 2026 (Tom: "pick one or more of the recommended tasks")
+- **Done:** Vigil PR #92 (https://github.com/metacog-osint/vigil/pull/92), commit `c4d3aa9`, merged as `a2383f5` at
+  3:18 PM CST with Tom's go. The ingestion Worker was deployed by hand at about 3:20 PM CST: wrangler reported
+  `schedule: 15,45 * * * *` (version `4b35666a`). The account now uses 2 of its 5 free cron triggers (PropertyCast 1,
+  Vigil 1).
+- **Checked live:** the first tick on the new trigger ran at 3:45 PM CST (`worker-run` row, trigger `15,45 * * * *`,
+  success, 2 jobs, 24 s, nothing deferred).
+- **Why twice an hour:** the four triggers were only ticks; Vigil's scheduler runs whatever is overdue. Its 35 jobs
+  declare about 898 subrequests a day; a tick admits 32. Four triggers gave about 29 ticks (933, 96% full); one
+  hourly trigger would give 768 (117%). `15,45` gives 1,536 (58%). In the 48 hours before, ThreatFox and alert-rules
+  averaged 78 and 81 minutes against 60.
+- **Guard:** Vigil's new `workers/src/lib/__tests__/capacity.test.js` fails on more than one trigger, a job costing
+  more than a tick, or daily demand over 75% of capacity. The limits moved to `workers/src/lib/limits.js`.
+- **Checks:** 1,367 Vigil tests passed; lint-and-test, build, CodeQL and Vercel passed on the PR. Tom chose to merge
+  while the three e2e browser checks were still running (the PR touches only `workers/` and docs).
+- **Left:** the `worker-one-cron` branch on GitHub (merged; Tom may prune it). Vigil's `docs/SESSION_HANDOFF.md` still
+  says "4 of 5" in its dated 22 Sep table; another session has uncommitted edits to that file, so it wasn't touched.
+- **Not done, on purpose:** cutting Elements' and Cordon's fallback crons to one an hour. GitHub fired only 4 scheduled
+  runs a day on each regardless of the cron, so it would change nothing measurable.
 
 ## House bar v1.4, 6 Nov 2026 (Tom approved the wording, then said "Yes, roll it out")
 - **Why:** Elements `8f6cfb4` put two lanes live:
@@ -186,11 +206,8 @@ Tom's yes.
   `firebase login --reauth` and the deploy went through. Expect it before most deploys.
 
 ## Next steps
-0. **Merge Vigil's four crons into one** (Tom, 5 Nov 2026): `15 * * * *`, `0 */6 * * *`, `0 3 * * *` and
-   `0 4 * * SUN` in `Vigil/workers/wrangler.toml` become one trigger (for example `0,15 * * * *`), with `scheduled()`
-   choosing the job from the time. That frees three of the free plan's five cron triggers. Do it in a Vigil session,
-   as a PR; the ingestion Worker is deployed by hand. Optional after that: cut Elements' and Cordon's own crons from
-   four an hour to one, the fallback their notes planned once the dispatcher worked.
+0. **Done 6 Nov 2026:** Vigil's crons are one trigger (section above). Optional, Tom's call: give `tic-dispatch` a
+   cron of its own so it no longer depends on PropertyCast's trigger (a free slot now exists).
 1. **PropertyCast to v1.4:** check its home page's HTML for `TicNav = { version: "1.4"` after the daily publish at
    about 4:23 AM CST, 7 Nov. (v1.3 was done everywhere by 10:11 AM CST, 6 Nov, PropertyCast included.)
 2. **Next Elements text update (v1.5)** when more lanes go live. Count publishers in the live `data/feed.geojson`
