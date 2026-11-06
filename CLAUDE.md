@@ -3,8 +3,8 @@
 The company's home page (to serve `theintelligence.company`) and the canonical home of code shared by every
 Intelligence Company site. Started 27 Oct 2026 at Tom's request after a review of all his projects.
 
-> **Current state: read [`HANDOFF.md`](./HANDOFF.md) first.** It is the 4 Nov 2026 handoff: what is live, what
-> shipped last, next steps, and the Vigil summary-feed work.
+> **Current state: read [`HANDOFF.md`](./HANDOFF.md) first.** It is the 5 Nov 2026 handoff: what is live, what
+> shipped last (house bar v1.2), next steps (v1.3 for Elements' MeteoAlarm lane), and the Vigil summary-feed work.
 
 ## Family (decided with Tom, 27 Oct 2026)
 - Two houses. **The Intelligence Company** (`theintelligence.company`): analysis, warning and professional tools.
