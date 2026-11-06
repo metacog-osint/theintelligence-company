@@ -93,6 +93,13 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   `tic-dispatch` calls GitHub's workflow_dispatch API for each line of `JOBS` in `dispatch/dispatch.js`: Elements
   `update.yml` at :05 and :35 UTC, Cordon `update.yml` at :10 and :40. Their gate job skips only scheduled runs, so
   their own crons stay as a fallback and skip whenever a dispatched run deployed in the last 45 minutes.
+- **COP joins (6 Nov 2026, Tom's yes; pushed that day):** COP `build.yml` at :20 past every even UTC
+  hour. COP's own "every two hours" cron had fired only every 7 to 14 hours (16:29, 23:38 and 06:47 UTC on 5–6 Nov),
+  which also left its MCP server's answers stale. A JOBS line can now carry `hours` (UTC hours it may run in; without
+  it, every hour). COP's repo is private, so 12 runs a day spend about 600 of the free 2,000 Actions minutes a month;
+  COP's gate skips a scheduled run when a build succeeded in the last 45 minutes, so the fallback cron doesn't double
+  that. Tom added `cop` to the `DISPATCH_TOKEN` token's repository access the same day (no new token). If that
+  access is ever lost, COP's start fails with GitHub's 404 every two hours and Elements and Cordon carry on.
 - **Its clock is PropertyCast's.** The free plan allows 5 cron triggers per account and all 5 are in use: PropertyCast's
   trigger 1 (`*/5`), Vigil's ingestion Worker 4 (`15 * * * *`, `0 */6 * * *`, `0 3 * * *`, `0 4 * * SUN`). The first
   deploy, with a cron of its own, was refused (code 10072). So `tic-dispatch` has `crons = []`, and
@@ -107,7 +114,7 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
 - Deploy: `.github/workflows/dispatch-deploy.yml` runs on a push to `master` that touches `dispatch/**` (or by hand),
   tests first (`node --test` in `dispatch/`, no network), then `wrangler deploy` and the secret upload, in
   PropertyCast's order. Deploy `tic-dispatch` before any PropertyCast trigger deploy that adds the binding: a binding
-  to a missing Worker fails. Hub repo secrets, set by Tom: `DISPATCH_TOKEN` (fine-grained; elements and cordon only;
+  to a missing Worker fails. Hub repo secrets, set by Tom: `DISPATCH_TOKEN` (fine-grained; elements, cordon and cop only;
   Actions: read and write), `CLOUDFLARE_API_TOKEN` ("Edit Cloudflare Workers" template), `CLOUDFLARE_ACCOUNT_ID`. The
   `CLOUDFLARE_API_TOKEN` in this machine's environment sees Pages projects but not Workers, so it can't deploy this.
 - **`DISPATCH_TOKEN` expires 5 Nov 2027** (Tom, 5 Nov 2026). Before then Tom makes a new one the same way, runs
@@ -116,7 +123,8 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
 - No public URL (`workers_dev = false`, `preview_urls = false`); only the binding reaches it. How a failed start
   shows up, the 5 Nov checks on GitHub's limits, and a local test without deploying: [`RUNBOOKS.md`](./RUNBOOKS.md).
 - To add a workflow: give it `workflow_dispatch:`, add a `JOBS` line (minutes are multiples of 5, in a slot of its
-  own), add its repo to the token's repository access, push.
+  own; optional `hours` for less than hourly; a test checks no two jobs share an hour and minute), add its repo to
+  the token's repository access, push.
 
 ## Site
 - Static files in `site/`, no build step. Firebase Hosting site `theintelligencecompany` in project

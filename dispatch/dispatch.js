@@ -9,19 +9,26 @@
 // tick() on each wake through a service binding (DISPATCH).
 //
 // To add a workflow: give it a `workflow_dispatch:` trigger, add a line to JOBS, add its repo to the token's
-// repository access, and push. Minutes are UTC and must be multiples of 5, the clock's step.
+// repository access, and push. Minutes are UTC and must be multiples of 5, the clock's step. `hours` is optional:
+// without it a job runs every hour; with it, only in those UTC hours.
+
+const EVEN_HOURS = [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22];
 
 export const JOBS = [
   // Every 30 minutes, five minutes apart so the two don't start together.
   { repo: "metacog-osint/elements", workflow: "update.yml", ref: "main", minutes: [5, 35] },
   { repo: "metacog-osint/cordon", workflow: "update.yml", ref: "main", minutes: [10, 40] },
+  // COP every two hours. Its own "every two hours" cron fired only every 7 to 14 hours (5-6 Nov 2026). COP's repo is
+  // private, so each run spends Actions minutes: 12 runs a day is about 600 of the free 2,000 a month.
+  { repo: "metacog-osint/cop", workflow: "build.yml", ref: "main", minutes: [20], hours: EVEN_HOURS },
 ];
 
 // The jobs due at this minute. The caller passes the cron's slot time, not when it woke, so a late start still
 // matches.
 export function due(jobs, when) {
   const m = when.getUTCMinutes();
-  return jobs.filter((j) => j.minutes.includes(m));
+  const h = when.getUTCHours();
+  return jobs.filter((j) => j.minutes.includes(m) && (!j.hours || j.hours.includes(h)));
 }
 
 // Start every due job. One failure doesn't stop the others; any failure is thrown at the end, so it shows as an

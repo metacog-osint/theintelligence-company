@@ -3,6 +3,16 @@
 Read with `CLAUDE.md` (the project's notes). Times are Central (CST since 1 Nov). Each commit, push and deploy needs
 Tom's yes.
 
+## Pushed 6 Nov 2026 (Tom's yes): COP on the dispatch clock
+- **COP on the dispatch clock**, worktree `[local path]`, branch `dispatch-cop` (from
+  `origin/master` `3563f8e`), pushed to `master` 6 Nov (Tom added `cop` to the token first): `dispatch/dispatch.js` (optional `hours` per job; COP `build.yml` at :20
+  on even UTC hours) and `dispatch/dispatch.test.js` (15 tests pass). Part of COP's MCP server work (COP worktree
+  `[local path]`, branch `mcp-server`; plan `~\.claude\plans\compiled-toasting-treehouse.md`).
+  Done in that order on 6 Nov: COP `9e421f9` first (its gate and the MCP server at
+  https://cop.theintelligence.company/mcp, live and checked), then this, rebased onto `aa27ba7` (the notes trim).
+  To confirm: COP's first dispatched build at 16:20 UTC (10:20 AM CST), `gh run list -R metacog-osint/cop
+  --event workflow_dispatch`. Details in `CLAUDE.md` ("COP joins").
+
 ## Live and finished
 - **Dispatch Worker `tic-dispatch`, live 5 Nov 2026** (Tom: "Yes, build it", then "proceed with sharing propertycast's
   timer"). Elements and Cordon now start every 30 minutes instead of every 4 to 9 hours. Details in `CLAUDE.md`
