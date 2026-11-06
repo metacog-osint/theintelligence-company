@@ -20,7 +20,8 @@ Tom's yes.
   - Hub `3afcdf9` (made on branch `tic-nav-v1.3`, fast-forwarded into `master`, pushed), deployed about 9:30 PM CST.
   - Sites, each from a worktree off its main branch, all checked live with `version: "1.3"` by 9:42 PM CST unless
     noted: COP `da940a8`, Cordon `110e10d`, Elements `19c0013`, Vigil `6e5c514` (straight to `main`: no Vigil
-    session was working), Watchfloor `e629282` (`scripts/build_web.py`, then `firebase deploy --only
+    session was working; all CI jobs passed, Firefox e2e on a rerun at 9:58 PM CST after the first attempt spent
+    18.5 minutes downloading Firefox and hit the job's 20-minute limit), Watchfloor `e629282` (`scripts/build_web.py`, then `firebase deploy --only
     hosting:watchfloor`), Context `026bbcb` (`npx vercel --prod`; the first try errored, the retry went through),
     Title 10 `12c3f1c` (`sw.js` `t10-2026-11-05c`, deploy README line, clean worktree, `firebase deploy --only
     hosting`), Noisefloor `ef399c5` (file and rebuilt `site/` in one commit; CI and deploy-site passed; pages load
@@ -144,15 +145,13 @@ Full notes, with the real response, the counting rules and the measurements behi
    locally and on GitHub (optional).
 
 **Follow-ups noted, not started**
-- **Vigil's e2e tests failed in all three browsers on the last CI run on `main`** (1 Nov, `6afc178`, the house-bar
-  commit). PR #86 was merged once lint-and-test and CodeQL passed, per Tom's condition; its e2e runs were still
-  going at merge time.
-- **`useFilters.test.jsx` "should set days and update range"** reads the real clock: in US Central time a 7-day span
-  that crosses the 1 Nov fall-back hour measures 8 days, so it fails locally this week (passes with `TZ=UTC`, as in
-  CI). Fix by faking the time in the test.
-- **Vigil's "Feed health" workflow has failed on every run since 3 Nov 14:51 UTC** (last success 3 Nov 01:26 UTC);
-  likely the `cisa-advisories` 403 and the daily `ofac-sdn` reading late. Not investigated.
-- The `cisa-advisories` 403 itself.
+- **Fixed, checked 5 Nov 9:55 PM CST:** Vigil's e2e tests and the `useFilters` clock test. Both were fixed by Vigil
+  PR #87 (`5e7e500`, 10:11 AM CST, 5 Nov), whose specs now find Vigil's own menu rather than the house bar and whose
+  `useFilters` test pins the clock. CI on `main` has passed on every run since then, the v1.3 push included. e2e had failed on `main` from
+  `6afc178` (1 Nov) through `224b358` (PR #86).
+- **Vigil's "Feed health" workflow passed at 5:56 PM CST, 5 Nov**, its first success since 3 Nov 01:26 UTC (it failed
+  on all five runs between). The cause of the failures and of the recovery was not checked.
+- The `cisa-advisories` 403: not rechecked.
 - `/api/feed` counts claims with `claims.length` from a `limit=300` query, and similar caps exist for KEV and
   disclosures. Today's counts are correct, but past the cap they would stop rising and give no warning.
 - COP's test fixture `[local path]` is stale.
