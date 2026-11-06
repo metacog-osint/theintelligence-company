@@ -1,7 +1,34 @@
-# Hub handoff: where things stand (5 Nov 2026, 10:45 PM CST: dispatch Worker live)
+# Hub handoff: where things stand (6 Nov 2026, 10:15 AM CST: site effort wrapped up)
 
 Read with `CLAUDE.md` (the project's notes). Times are Central (CST since 1 Nov). Each commit, push and deploy needs
 Tom's yes.
+
+## Wrap-up, 6 Nov 2026 (about 10:15 AM CST; Tom asked to wrap up the site effort and all branches)
+- **House bar v1.3** is live on the hub and all ten sites (checked).
+- **Notes trim:** done and pushed for Listening Post, Watchfloor, PropertyCast, the hub, Noisefloor and Context.
+  - The originals are archived at `D:\Backups\notes-before-trim-2026-11-05`.
+  - Noisefloor's local folder is on another session's `docs/satcom-reconcile` branch, so it still holds the old,
+    long notes until that branch takes in `main`.
+- **No leftover worktrees** in the hub, Title 10, Watchfloor, Noisefloor, PropertyCast, Context, Vigil, COP, Elements
+  or Cordon. `D:\Projects\_worktrees` is an empty folder.
+- **Merged branches, not yet deleted.** Claude's attempt was blocked by auto mode's safety check, so Tom decides.
+  Every one is already contained in its repo's main branch:
+  - Vigil: 37 local and 50 on GitHub.
+  - Noisefloor: 4 on GitHub (`cosmic2-layer`, `s6-layer`, `smap-layer`, `today-orbit`).
+  - PropertyCast: 9 local and 1 on GitHub.
+  - The script that re-checks each branch before deleting it, then removes the empty `_worktrees` folder:
+    `D:\Projects\theintelligence-company\tools\prune_merged.sh` (run with `bash`).
+- **Unmerged branches, kept on purpose:**
+  - COP and Watchfloor `wip/2026-11-01-unreviewed`: waiting on Tom's review (COP convergence for the mosaic
+    effect; Watchfloor's 13 charter indicators).
+  - Noisefloor `docs/satcom-reconcile`: another session's live SATCOM work.
+  - Vigil:
+    - `dependabot/...` (2): open PRs #57 and #66, which need review.
+    - `pr-assets/house-bar-layout` and `pr-assets/phone-overflow`: PR screenshots that PR pages link to.
+    - `feat/evidence-tiers` and `docs/handover-24-september` (24 Sep, 2 commits each, not in `main`): review before
+      deleting.
+- **Uncommitted work belonging to other sessions** is untouched: Vigil (33 files), Cordon (9: the Google News
+  fallback), PropertyCast (`tools/smoke_garden.py`), and Title 10's `benefits-pack` files.
 
 ## Pushed 6 Nov 2026 (Tom's yes): COP on the dispatch clock
 - **COP on the dispatch clock**, worktree `D:\Projects\_worktrees\hub-dispatch-cop`, branch `dispatch-cop` (from
@@ -123,8 +150,8 @@ Tom's yes.
    choosing the job from the time. That frees three of the free plan's five cron triggers. Do it in a Vigil session,
    as a PR; the ingestion Worker is deployed by hand. Optional after that: cut Elements' and Cordon's own crons from
    four an hour to one, the fallback their notes planned once the dispatcher worked.
-1. **Confirm v1.3 is live on PropertyCast** after its daily publish (about 4:23 AM CST, 6 Nov): the home page's
-   HTML should hold `TicNav = { version: "1.3"`. It held v1.1 at 9:40 PM CST, 5 Nov, as expected.
+1. **Done 6 Nov 2026:** v1.3 is live everywhere. At about 10:10 AM CST the bar's `TicNav` version read 1.3 on the
+   hub and all ten sites, PropertyCast included.
 2. **Next Elements text update (v1.4)** when more lanes go live. Count publishers in the live `data/feed.geojson`
    first, then get Tom's OK on the wording.
    - EMSC earthquakes (worldwide) and NIFC wildfires (US only): built 4 Nov, still uncommitted in
@@ -169,8 +196,7 @@ Full notes, with the real response, the counting rules and the measurements behi
   `api/_lib/doctrineFeed.js`, `docs/SESSION_HANDOFF.md`, `doctrine/kit/KIT.json`).
 
 **Decisions waiting on Tom**
-1. **Delete the merged branches** `feat/public-summary`, `fix/feed-summary-counts` and `fix/summary-data-as-of`,
-   locally and on GitHub (optional).
+1. **Delete the merged branches:** covered by the branch wrap-up at the top of this file.
 
 **Follow-ups noted, not started**
 - **Fixed, checked 5 Nov 9:55 PM CST:** Vigil's e2e tests and the `useFilters` clock test. Both were fixed by Vigil
