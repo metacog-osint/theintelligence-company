@@ -10,14 +10,13 @@ Tom's yes.
   - Noisefloor's local folder is on another session's `docs/satcom-reconcile` branch, so it still holds the old,
     long notes until that branch takes in `main`.
 - **No leftover worktrees** in the hub, Title 10, Watchfloor, Noisefloor, PropertyCast, Context, Vigil, COP, Elements
-  or Cordon. `D:\Projects\_worktrees` is an empty folder.
-- **Merged branches, not yet deleted.** Claude's attempt was blocked by auto mode's safety check, so Tom decides.
-  Every one is already contained in its repo's main branch:
+  or Cordon. The empty `D:\Projects\_worktrees` folder was removed; `git worktree add` recreates it when needed.
+- **Merged branches deleted** by Tom on 6 Nov, using `tools/prune_merged.sh` (it re-checks each branch is in main
+  before deleting; Claude's own attempt was blocked by auto mode's safety check):
   - Vigil: 37 local and 50 on GitHub.
-  - Noisefloor: 4 on GitHub (`cosmic2-layer`, `s6-layer`, `smap-layer`, `today-orbit`).
+  - Noisefloor: 4 on GitHub.
   - PropertyCast: 9 local and 1 on GitHub.
-  - The script that re-checks each branch before deleting it, then removes the empty `_worktrees` folder:
-    `D:\Projects\theintelligence-company\tools\prune_merged.sh` (run with `bash`).
+  - Confirmed on GitHub afterwards: only the branches below and each repo's main remain.
 - **Unmerged branches, kept on purpose:**
   - COP and Watchfloor `wip/2026-11-01-unreviewed`: waiting on Tom's review (COP convergence for the mosaic
     effect; Watchfloor's 13 charter indicators).
