@@ -6,6 +6,11 @@ Intelligence Company site. Started 27 Oct 2026 at Tom's request after a review o
 > **Current state: read [`HANDOFF.md`](./HANDOFF.md) first.** It is the 5 Nov 2026 handoff: what is live, what
 > shipped last (house bar v1.3 for Elements' MeteoAlarm lane), next steps, and the Vigil summary-feed work.
 
+Dated history (version-by-version changes to the shared files, rollout commits, one-off fixes, superseded details)
+is in [`HISTORY.md`](./HISTORY.md). Procedures needed now and then (the Dispatch Worker's checks and local test,
+signed-in product screenshots, the link-preview image) are in [`RUNBOOKS.md`](./RUNBOOKS.md). Both were moved there
+verbatim on 6 Nov 2026 and aren't auto-loaded.
+
 ## Family (decided with Tom, 27 Oct 2026)
 - Two houses. **The Intelligence Company** (`theintelligence.company`): analysis, warning and professional tools.
   **Oddly Specific Studio** (`oddlyspecific.studio`): games and family apps (Whiteout, Mole Hunt, Tres Casas,
@@ -38,42 +43,16 @@ Intelligence Company site. Started 27 Oct 2026 at Tom's request after a review o
   adding one.
 
 ## Shared code
-- `site/shared/tic-time.js` + `tic-time.css` (v1.3; v1.3, 31 Oct 2026, makes the `year` option give a full date in the
-  house style, "31 Oct 2026", in every zone and clock, Zulu included (it used to be ignored in Zulu), and `renderAll`
-  reads `data-tic-year`; v1.2 fixed a first visit saving zone=undefined, which opened the dialog on "Other"): time
-  display. Every copy is v1.3 on its repo's main branch (checked 5 Nov 2026; some local trees lag). Copies: Watchfloor `web/`, Title 10 `deploy/public/`, Noisefloor
-  `site_src/`, PropertyCast `src/wx/static/`, CONTEXT `public/`, Vigil `public/`, Listening Post `web/public/`. House rule: store UTC; show the viewer's own
+- `site/shared/tic-time.js` + `tic-time.css` (v1.3): time display. House rule: store UTC; show the viewer's own
   zone by default, always naming it; a settings menu for zone (automatic, Zulu/UTC, major zones, any IANA zone) and
   12/24-hour clock. On `*.theintelligence.company` the choice is kept in a domain-wide cookie so it follows the
-  visitor across sites. Copy the files into each site and keep the version line; the hub also serves them at
-  `/shared/` (CORS open) once the domain is live.
-  Tom, 1 Nov 2026: roll v1.3 out to every program site (with tic-nav below), which a separate rollout session does
-  site by site. COP, Elements and Cordon also carry copies.
-- `site/shared/tic-nav.js` + `tic-nav.css` (v1.1, 1 Nov 2026; v1.1 raises the bar's z-index to 10000 so its menu
-  covers headers with their own stacking, such as Noisefloor's z-index 1100, and resets `display`, margins, padding and
-  borders on the bar so a site's generic `nav` rules can't reshape it, such as Watchfloor's flex `nav`). **v1.2** (5 Nov
-  2026, hub `0d92a8b`; `tic-nav.css` stays v1.1) changes only Elements' `long` text: worldwide, regional and "US only
-  for now" sources, and "Global weather is planned". It went to all ten sites the same day (commits in `HANDOFF.md`).
-  **v1.3** (5 Nov 2026, hub `3afcdf9`; Tom approved the wording) moves weather warnings to "Regional: … for the US and
-  Europe" now that MeteoAlarm is live on Elements, and says "Weather for more of the world is planned"; `oe.js` names
-  NOAA and MeteoAlarm (38 European countries and Israel). Rolled out to all ten sites that evening; PropertyCast
-  builds the bar into its page at its daily publish, so check its home page's HTML, not `/tic-nav.js`.
-  **Rolled out
-  (1 Nov 2026 UTC):** Title 10 (e7286a4, v1.0; v1.1 since 5 Nov 2026, 49a49c5, deployed from a clean worktree because
-  its main folder holds an untracked `deploy/public/data/benefits-pack.json` that must not ship),
-  Watchfloor (478fc95), Noisefloor (319242c; its pre-commit hook needs the private term list, so commit from a
-  worktree with `FORBIDDEN_TERMS="$(cat <main>/private/forbidden_terms.txt)"`; after copying, run
-  `python tools/build_site.py` so the `site/` pages carry the new file's `?v=` hash, or CI fails and the deploy is skipped), PropertyCast (57b22f1, goes live with
-  the next daily publish), Context (b86602f; deploys only with `npx vercel --prod`, so copy `.vercel/project.json` into
-  the worktree; new `/sources` page), Vigil (6afc178; Vercel deploys on push to main), Listening Post (which
-  has **no git**: back up files before editing; new public `/sources.html`; `firebase deploy --only hosting`).
-  COP (d447aaf; COP is a fixed full-screen layout, so `cop.css` pins the bar and moves `.bar` and `.app` down 34px,
-  under `body:has(> .tic-house)`), Elements (22a67c1) and Cordon (33cd380; both copy `site_src/` to `site/` at build
-  and deploy to GitHub Pages on push). **All ten program sites done, 1 Nov 2026.** When a program is added or
-  renamed, update `PROGRAMS` in `tic-nav.js` and copy it to every site. Method: a git worktree per repo, test locally, Tom's yes, push to main, deploy the
-  repo's own way. **Stop local preview servers with Stop-Process on their node or esbuild PIDs:** stopping the task
-  only kills the shell, and the leftover processes lock the worktree folder. **The house bar** on every program site
-  (Tom: "I need a
+  visitor across sites. The `year` option gives a full date in the house style, "31 Oct 2026", in every zone and
+  clock, Zulu included, and `renderAll` reads `data-tic-year`. Copy the files into each site and keep the version
+  line; the hub also serves them at `/shared/` (CORS open; live, checked 6 Nov 2026). Every copy is v1.3 on its
+  repo's main branch (checked 5 Nov 2026; some local trees lag): Watchfloor `web/`, Title 10 `deploy/public/`,
+  Noisefloor `site_src/`, PropertyCast `src/wx/static/`, CONTEXT `public/`, Vigil `public/`, Listening Post
+  `web/public/`, and COP, Elements and Cordon.
+- `site/shared/tic-nav.js` (v1.3) + `tic-nav.css` (v1.1): **the house bar** on every program site (Tom: "I need a
   link back to the home page on each subsite… a dropdown menu of all programs with their primary layer area or topic
   labeled (and a more in-depth description upon mouse-over)"). It is a slim navy bar with "← The Intelligence Company"
   and a **Programs ▾** disclosure menu. That menu lists every live program grouped "Across the layers" and "Other
@@ -84,6 +63,29 @@ Intelligence Company site. Started 27 Oct 2026 at Tom's request after a review o
   program links in the same tab, since it is site navigation. **Keep its `PROGRAMS` in step with `oe/oe.js` and the
   product list** when a program is added, renamed or goes live. Test page: `tools/tic-nav-demo.html` (serve the
   project root). The hub itself doesn't use the bar; it has its own masthead.
+  - Its z-index is 10000 so its menu covers headers with their own stacking, such as Noisefloor's z-index 1100, and it
+    resets `display`, margins, padding and borders so a site's generic `nav` rules can't reshape it, such as
+    Watchfloor's flex `nav`.
+  - Elements' `long` text is the v1.3 wording Tom approved on 5 Nov 2026: weather warnings "Regional: … for the US and
+    Europe" and "Weather for more of the world is planned"; `oe.js` names NOAA and MeteoAlarm (38 European countries
+    and Israel).
+  - PropertyCast builds the bar into its page at its daily publish, so check its home page's HTML, not `/tic-nav.js`.
+- **Rolling out a shared file** (all ten program sites carry both). When a program is added or renamed, update
+  `PROGRAMS` in `tic-nav.js` and copy it to every site. Method: a git worktree per repo, test locally, Tom's yes, push
+  to main, deploy the repo's own way. **Stop local preview servers with Stop-Process on their node or esbuild PIDs:**
+  stopping the task only kills the shell, and the leftover processes lock the worktree folder. Per site (each
+  rollout's commits are in `HISTORY.md` and `HANDOFF.md`):
+  - Title 10: deploy from a clean worktree, because its main folder holds an untracked
+    `deploy/public/data/benefits-pack.json` that must not ship.
+  - Noisefloor: its pre-commit hook needs the private term list, so commit from a worktree with
+    `FORBIDDEN_TERMS="$(cat <main>/private/forbidden_terms.txt)"`; after copying, run `python tools/build_site.py` so
+    the `site/` pages carry the new file's `?v=` hash, or CI fails and the deploy is skipped.
+  - PropertyCast goes live with the next daily publish. Vigil: Vercel deploys on push to main.
+  - Context deploys only with `npx vercel --prod`, so copy `.vercel/project.json` into the worktree.
+  - Listening Post has **no git**: back up files before editing; `firebase deploy --only hosting`.
+  - COP is a fixed full-screen layout, so `cop.css` pins the bar and moves `.bar` and `.app` down 34px, under
+    `body:has(> .tic-house)`.
+  - Elements and Cordon copy `site_src/` to `site/` at build and deploy to GitHub Pages on push.
 
 ## Dispatch Worker (`dispatch/`, Cloudflare Worker `tic-dispatch`)
 - Built 5 Nov 2026 at Tom's request ("Yes, build it"). GitHub starts scheduled runs on this account only every 4 to 9
@@ -102,9 +104,6 @@ Intelligence Company site. Started 27 Oct 2026 at Tom's request after a review o
 - **To do: merge Vigil's four crons into one** (Tom, 5 Nov 2026). One trigger such as `0,15 * * * *`, with
   `scheduled()` choosing the job from the time, frees three. Do it in a Vigil session, as a PR; the ingestion Worker
   is deployed by hand.
-- Checked 5 Nov: GitHub Pages' soft limit of 10 builds an hour doesn't apply to sites published by a custom Actions
-  workflow (both are); a run takes under 75 seconds; both repos are public, so their minutes are free; Elements' repo
-  was 1.3 MB after a week of data commits.
 - Deploy: `.github/workflows/dispatch-deploy.yml` runs on a push to `master` that touches `dispatch/**` (or by hand),
   tests first (`node --test` in `dispatch/`, no network), then `wrangler deploy` and the secret upload, in
   PropertyCast's order. Deploy `tic-dispatch` before any PropertyCast trigger deploy that adds the binding: a binding
@@ -114,21 +113,10 @@ Intelligence Company site. Started 27 Oct 2026 at Tom's request after a review o
 - **`DISPATCH_TOKEN` expires 5 Nov 2027** (Tom, 5 Nov 2026). Before then Tom makes a new one the same way, runs
   `gh secret set DISPATCH_TOKEN --repo metacog-osint/theintelligence-company`, and runs `dispatch-deploy` by hand to
   upload it. The Cloudflare token doesn't expire.
-- No public URL (`workers_dev = false`, `preview_urls = false`); only the binding reaches it. A start that fails
-  (expired token, a workflow without `workflow_dispatch`) shows as an error in tic-dispatch's metrics and as a
-  `tic-dispatch: …` line in propertycast-trigger's logs; on the hub it shows up as "running late" on Elements or
-  Cordon. The error carries GitHub's message, never the token.
+- No public URL (`workers_dev = false`, `preview_urls = false`); only the binding reaches it. How a failed start
+  shows up, the 5 Nov checks on GitHub's limits, and a local test without deploying: [`RUNBOOKS.md`](./RUNBOOKS.md).
 - To add a workflow: give it `workflow_dispatch:`, add a `JOBS` line (minutes are multiples of 5, in a slot of its
   own), add its repo to the token's repository access, push.
-- Local test without deploying: Wrangler is installed in `[local path]`. Put
-  `DISPATCH_TOKEN=fake` in `dispatch/.dev.vars` (git ignores it) and run `wrangler dev -c <PropertyCast>/trigger/wrangler.toml
-  -c wrangler.toml --test-scheduled` in `dispatch/`, then POST
-  `/cdn-cgi/local/explorer/api/local/scheduled?worker=propertycast-trigger` with
-  `{"cron":"*/5 * * * *","scheduled_time":<ms>}` (the older `/cdn-cgi/handler/scheduled?time=` ignores the time). The
-  fake token reaches GitHub and gets "401 Bad credentials", which proves the path. Wrangler 4.147's local runtime
-  refuses PropertyCast's worker.js because it exports constants ("Incorrect type for map entry 'COLLECT_MINUTE'"),
-  although Cloudflare runs it; test with a scratch copy that drops `export` from the `export const` lines. Afterwards
-  stop the node, esbuild and workerd processes by PID and delete `dispatch/.wrangler/` and `.dev.vars`.
 
 ## Site
 - Static files in `site/`, no build step. Firebase Hosting site `theintelligencecompany` in project
@@ -141,8 +129,6 @@ Intelligence Company site. Started 27 Oct 2026 at Tom's request after a review o
 - **Google Search Console** (set up 29 Oct 2026 UTC, account metacog@): Domain property `theintelligence.company`, so it
   covers every subdomain. Google auto-verified it ("Domain name provider") through the existing Google verification
   CNAMEs in Squarespace DNS (`l6g3iae2wlli` and `pgso2rwhxeyj` → `gv-….dv.googlehosted.com`); don't delete them.
-  Indexing of `https://theintelligence.company/` was requested the same day (Google's first crawl had seen the old
-  noindex tag).
 - Contact shown on the hub: support@theintelligence.company (Tom, 27 Oct). The About names Tom only (his choice).
 - Apex domain: `theintelligence.company` and `www.` (redirects to the apex) are Firebase custom domains on the
   theintelligencecompany site since 28 Oct 2026. Squarespace DNS holds `A @ 199.36.158.100`,
@@ -175,22 +161,13 @@ Intelligence Company site. Started 27 Oct 2026 at Tom's request after a review o
   grouping, always on, with JP citations only in the sources line under the figure, and only publicly released
   documents cited; actors are described by role as sources describe them, never as hostile; PropertyCast stays off the
   drawing (it's in the product list). On phones, planned programs show as rings only.
-- Local preview with the live headers: `python tools/serve.py 5055` serves `site/` with every `firebase.json` header,
-  CSP included (`firebase serve` skips them).
 - Product screenshots in `site/img/` (WebP, 2x, captions dated): retake with headless Edge when a product changes.
   **They must show the real site with real data, as a signed-in user sees it, header included** (Tom, 31 Oct 2026),
   never a signed-out landing page, demo mode (Vigil's demo is mock data) or a bare map. Current:
-  `noisefloor-today.webp` and `watchfloor-zones.webp` (whole 1280×800 view at 2x, scaled to 1600×1000; Noisefloor's
-  map needs WebGL, so run Edge with `--enable-unsafe-swiftshader --use-angle=swiftshader`, not `--disable-gpu`).
-  Signed-in captures: Tom signs in once in a visible Edge window using a separate profile
-  (`--user-data-dir=%TEMP%\edge-vigil`); after he closes it (stop any Edge processes still on that profile), a
-  Playwright script using Vigil's own `node_modules/playwright-core` with `channel: "msedge"`,
-  `launchPersistentContext` on that profile, 1280×800 at `deviceScaleFactor: 2` captures the pages. Then the profile
-  folder is deleted so no session is left on disk. Claude never sees the password or the session. Vigil's welcome
-  tour covers the page on a fresh profile; it is remembered only in local storage (`vigil_tour_completed`), so the
-  script sets that key with `addInitScript`, with no clicks and nothing changed on Tom's account.
-  `vigil-actors.webp` (31 Oct 2026) is the signed-in Threat Actors view: real data, group names only. The signed-in
-  dashboard's AI summary names victims, so it isn't used.
+  `noisefloor-today.webp`, `watchfloor-zones.webp` and `vigil-actors.webp` (31 Oct 2026; the signed-in Threat Actors
+  view: real data, group names only. The signed-in dashboard's AI summary names victims, so it isn't used). For
+  signed-in captures Tom signs in himself in a separate Edge profile, which is deleted afterwards; Claude never sees
+  the password or the session. Edge flags, the Playwright script and Vigil's tour key: [`RUNBOOKS.md`](./RUNBOOKS.md).
 - Local preview: `python tools/serve.py 5055` (applies the `firebase.json` headers). `firebase serve --only hosting:hub
   --port 5055 --project context-484804` also works but skips the headers, so a CSP problem only shows up live.
 - About bio, reworded 31 Oct 2026 because "In 25 years of service he began…" read clunkily (Tom): "…and run by Thomas
@@ -219,14 +196,10 @@ Intelligence Company site. Started 27 Oct 2026 at Tom's request after a review o
 - **Seven improvements, 31 Oct 2026 (Tom asked for all seven):**
   - **Link preview:** Open Graph and Twitter card tags in `<head>`, image `site/img/og-card.png` (1200×630). Its source
     is `tools/og-card.html` (site fonts and colours); `site/img/logo-512.png` comes from `tools/logo.html`. Neither
-    source is deployed. To regenerate: from the project root run `python -m http.server 5056 --bind 127.0.0.1` (the
-    fonts need http), then `msedge --headless=new --disable-gpu --hide-scrollbars --user-data-dir=%TEMP%\edge-og
-    --window-size=1200,630 --virtual-time-budget=5000 --screenshot=<project>\site\img\og-card.png
-    http://127.0.0.1:5056/tools/og-card.html` (512,512 and `logo.html` for the logo). Edge is at
-    `C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe`. LinkedIn caches previews; its Post Inspector
+    source is deployed; how to regenerate both is in `RUNBOOKS.md`. LinkedIn caches previews; its Post Inspector
     refreshes one.
-  - **Hero top line:** "Conflict · GPS interference · Cyber threats · Forecasting" since 31 Oct 2026 (first
-    "Warning · Spectrum · Cyber · Forecasting"; it used to repeat the headline). Keep it to one line at 1280 px.
+  - **Hero top line:** "Conflict · GPS interference · Cyber threats · Forecasting" since 31 Oct 2026. Keep it to one
+    line at 1280 px.
   - **Say what each line measures** (Tom, 31 Oct 2026: readers must know Noisefloor is about GPS interference, and
     the same goes for every summary). Each "Latest" item starts with a bold topic (`.latest-topic`: "GPS
     interference:", "Conflict warning:", "Cyber threats:"), and `setItem` fills only `.latest-body`, so the topic
@@ -243,9 +216,6 @@ Intelligence Company site. Started 27 Oct 2026 at Tom's request after a review o
     the LLC's registered city; plus WebSite). A JSON-LD block isn't executed, so the `script-src 'self'` CSP allows it
     (checked: no console violation).
   - **Contact note:** "Corrections, data questions and collaboration." under the email.
-- Phone layout fix (31 Oct 2026): the `max-width: 560px` rule set `.wrap { padding: 0 16px }`, which also zeroed the
-  top and bottom padding of every block that is also `.wrap` (top bar, masthead, contact, footer). It now sets the
-  sides only.
 - **Second batch, 31 Oct 2026 (Tom approved items 1–9):**
   - **Search title** "The Intelligence Company · OSINT from Fargo-Moorhead, ND/MN"; the description and
     `og:description` name Fargo-Moorhead, ND/MN.
@@ -269,20 +239,16 @@ Intelligence Company site. Started 27 Oct 2026 at Tom's request after a review o
     time falls back to COP's `data_as_of`. The
     tooltip gives the full time in the viewer's zone. `connect-src` lists the cop., elements. and cordon. origins.
     Add a program by giving its row `data-product` and calling `setFresh` with its most direct publish time.
-  - **Vigil feature block** (first shot `img/vigil.webp`, the signed-out landing page, replaced on 31 Oct 2026 by the signed-in `vigil-actors.webp`; see Product screenshots). The first was captured with headless Edge at
-    1280×800 and `--force-device-scale-factor=2`, then cropped to box (0, 115, 1500, 1485) with Pillow. The crop
-    deliberately leaves out "Recent Incidents": **don't put leak-site victim names on the hub.** The three points are
-    from Vigil's README. Vigil's other pages need an account.
-  - **Vigil "Latest" line** from `https://vigil.theintelligence.company/api/summary` (live since Vigil PR #83, merged
-    31 Oct 2026 as `c4c55d3`). It returns
-    `brief`, `day`, `data_as_of` and `built_at` with open CORS and an hour of CDN cache, or a 503 whenever Vigil can't
-    stand behind a number, including a zero day. Then the hub keeps the static line. Rules from that session: insert
-    `brief` as text only (group names come from criminal leak sites); `day` is RansomLook's calendar day, one to two
-    hours ahead of UTC, so never label it UTC; credit RansomLook (CC BY 4.0) in the footer, which the hub does. Vigil's
-    origin is in `connect-src`, and `setFresh("vigil", data_as_of || built_at)` drives "Updated … ago" in the product
-    list. **Vigil PR #86** (merged 5 Nov 2026 UTC as `224b358`, `method: "vigil-summary-2"`) added `data_as_of` and lets a gap over 12 h between
-    RansomLook runs count as complete when the run closing it skipped stored claims (`sync_log.metadata.result.skipped
-    > 0`), which is how the 3–4 Nov outage closed.
+  - **Vigil feature block:** the signed-in `img/vigil-actors.webp` (see Product screenshots); its three points are
+    from Vigil's README, and Vigil's other pages need an account. The rule: **don't put leak-site victim names on the
+    hub.**
+  - **Vigil "Latest" line** from `https://vigil.theintelligence.company/api/summary` (`method: "vigil-summary-2"`).
+    It returns `brief`, `day`, `data_as_of` and `built_at` with open CORS and an hour of CDN cache, or a 503 whenever
+    Vigil can't stand behind a number, including a zero day. Then the hub keeps the static line. Rules from that
+    session: insert `brief` as text only (group names come from criminal leak sites); `day` is RansomLook's calendar
+    day, one to two hours ahead of UTC, so never label it UTC; credit RansomLook (CC BY 4.0) in the footer, which the
+    hub does. Vigil's origin is in `connect-src`, and `setFresh("vigil", data_as_of || built_at)` drives "Updated …
+    ago" in the product list.
   - **"Work with us"** (`#services`, between Products and How we work; in the menu, and the hero's second button):
     custom monitoring, briefings, analyst training, tools and consulting (Tom confirmed all four, 31 Oct 2026). The
     button opens a mail to support@ with a subject line. Career details stay off the page, as with the About.
@@ -296,8 +262,5 @@ Intelligence Company site. Started 27 Oct 2026 at Tom's request after a review o
     `Downloads\headshot.jfif` is not Tom (it carries a Gemini watermark); never use it.
   - **Copyright notice** (Tom, 31 Oct 2026: "use the copyright symbol, and my name"): "Drawing © 2026 Thomas Brummer,
     adapted from JP 2-01.3…" under the drawing, and "© 2026 Thomas Brummer" first in the footer of `index.html` and
-    `404.html`. Registration was discussed and not done: $45 single or $65 standard at copyright.gov (a rise to $55
-    and $85 was proposed for about Nov 2026, unconfirmed). Only the human-authored parts are protectable, since the
-    JP figure is public domain and AI-generated material must be disclaimed. Trademark fits names and logos, not the
-    drawing.
+    `404.html`. Registration was discussed and not done (fees and what is protectable: `HISTORY.md`).
 - Times: store UTC; display per the shared module. Messages to Tom use Central time.
