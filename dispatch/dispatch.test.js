@@ -1,7 +1,7 @@
 // Run with `node --test` in dispatch/. No network: fetch is replaced by a recorder.
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { JOBS, due, run, dispatch } from "./worker.js";
+import { JOBS, due, run, dispatch } from "./dispatch.js";
 
 const at = (min) => new Date(Date.UTC(2026, 10, 6, 3, min));
 
