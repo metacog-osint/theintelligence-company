@@ -4,7 +4,7 @@ The company's home page (to serve `theintelligence.company`) and the canonical h
 Intelligence Company site. Started 27 Oct 2026 at Tom's request after a review of all his projects.
 
 > **Current state: read [`HANDOFF.md`](./HANDOFF.md) first.** It is the 5 Nov 2026 handoff: what is live, what
-> shipped last (house bar v1.2), next steps (v1.3 for Elements' MeteoAlarm lane), and the Vigil summary-feed work.
+> shipped last (house bar v1.3 for Elements' MeteoAlarm lane), next steps, and the Vigil summary-feed work.
 
 ## Family (decided with Tom, 27 Oct 2026)
 - Two houses. **The Intelligence Company** (`theintelligence.company`): analysis, warning and professional tools.
@@ -54,6 +54,10 @@ Intelligence Company site. Started 27 Oct 2026 at Tom's request after a review o
   borders on the bar so a site's generic `nav` rules can't reshape it, such as Watchfloor's flex `nav`). **v1.2** (5 Nov
   2026, hub `0d92a8b`; `tic-nav.css` stays v1.1) changes only Elements' `long` text: worldwide, regional and "US only
   for now" sources, and "Global weather is planned". It went to all ten sites the same day (commits in `HANDOFF.md`).
+  **v1.3** (5 Nov 2026, hub `3afcdf9`; Tom approved the wording) moves weather warnings to "Regional: … for the US and
+  Europe" now that MeteoAlarm is live on Elements, and says "Weather for more of the world is planned"; `oe.js` names
+  NOAA and MeteoAlarm (38 European countries and Israel). Rolled out to all ten sites that evening; PropertyCast
+  builds the bar into its page at its daily publish, so check its home page's HTML, not `/tic-nav.js`.
   **Rolled out
   (1 Nov 2026 UTC):** Title 10 (e7286a4, v1.0; v1.1 since 5 Nov 2026, 49a49c5, deployed from a clean worktree because
   its main folder holds an untracked `deploy/public/data/benefits-pack.json` that must not ship),

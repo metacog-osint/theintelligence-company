@@ -1,9 +1,34 @@
-# Hub handoff: where things stand (5 Nov 2026, 8:55 PM CST: house bar v1.2 rolled out; v1.3 next for MeteoAlarm)
+# Hub handoff: where things stand (5 Nov 2026, 9:45 PM CST: house bar v1.3 rolled out for MeteoAlarm)
 
 Read with `CLAUDE.md` (the project's notes). Times are Central (CST since 1 Nov). Each commit, push and deploy needs
 Tom's yes.
 
 ## Live and finished
+- **House bar v1.3, 5 Nov 2026** (Tom approved the wording, then said "Yes, roll it out"). MeteoAlarm went live on
+  Elements (`66bf4e4`), so Elements' text moves weather warnings from "US only for now" to **Regional**:
+  - `tic-nav.js` (`long`): "Regional: weather warnings for the US and Europe, hurricane-center storms, and tsunami
+    messages … US only for now: severe-storm outlooks, drought and volcano alert levels. Weather for more of the
+    world is planned."
+  - `oe.js` (`line`): "Regional: weather warnings for the US (NOAA) and for 38 European countries and Israel
+    (MeteoAlarm), …", the same US-only list with its agencies, and "Weather for more of the world and a radiation lane
+    are planned."
+  - Measured first: the live feed (generated 8:46 PM CST) held 315 items: MeteoAlarm 28 (19 countries; 9 orange
+    items in Madeira and Corsica, the rest yellow counted per country), NWS 43, no EMSC or NIFC. MeteoAlarm's lane
+    reads 39 feeds (`FEEDS` in `elements/meteoalarm.py`): 38 European countries and Israel, CC BY 4.0.
+  - Tested locally at 1440 px: the menu's Elements panel is 270 × 302 px, shorter than the program list, and the
+    menu doesn't scroll; the drawing's Elements panel fits beside the figure; no console errors.
+  - Hub `3afcdf9` (made on branch `tic-nav-v1.3`, fast-forwarded into `master`, pushed), deployed about 9:30 PM CST.
+  - Sites, each from a worktree off its main branch, all checked live with `version: "1.3"` by 9:42 PM CST unless
+    noted: COP `da940a8`, Cordon `110e10d`, Elements `19c0013`, Vigil `6e5c514` (straight to `main`: no Vigil
+    session was working), Watchfloor `e629282` (`scripts/build_web.py`, then `firebase deploy --only
+    hosting:watchfloor`), Context `026bbcb` (`npx vercel --prod`; the first try errored, the retry went through),
+    Title 10 `12c3f1c` (`sw.js` `t10-2026-11-05c`, deploy README line, clean worktree, `firebase deploy --only
+    hosting`), Noisefloor `ef399c5` (file and rebuilt `site/` in one commit; CI and deploy-site passed; pages load
+    `tic-nav.js?v=aa1c542e04`), Listening Post (no git; v1.2 backed up to `_backups/tic-nav-v1.2-2026-11-05/`;
+    `firebase deploy --only hosting`), PropertyCast `935565f` (rebased over one daily-publish commit).
+  - **PropertyCast builds the bar into its page** at the daily publish, so its `/tic-nav.js` returns the page, not
+    the file. Check `TicNav = { version` in the home page's HTML. It showed v1.1 at 9:40 PM CST (expected); the
+    publish at about 4:23 AM CST, 6 Nov should take it straight to v1.3. See Next steps 1.
 - **House bar v1.2, 5 Nov 2026** (Tom asked for it). Tom: "US-based weather content is just a small slice of what I
   need Elements to be; I need global weather data." So Elements' text in `tic-nav.js` (`long`) and in `oe.js` (`line`)
   now splits its sources, measured from the live feed and the code that day:
@@ -37,7 +62,7 @@ Tom's yes.
   assessment, `~\AppData\Local\Claude-Data\claude_pzs8sxrjxfjjc\side-session-notes\local_8abbc62d-0c25-4eec-8a42-7af7062ba56a\elements-global-weather-sources.md`,
   and put the first lane live: **MeteoAlarm** European weather warnings (EUMETNET, 39 countries; Elements commit
   `66bf4e4`). The live feed at 8:46 PM CST, 5 Nov held 28 MeteoAlarm items, some credited to national services
-  (Météo-France, IPMA). This makes the v1.2 Elements text out of date: see Next steps 1.
+  (Météo-France, IPMA). House bar v1.3 (above) brought the Elements text up to date.
 - Hub `master` is on GitHub and live at https://theintelligence.company (deployed 4 Nov, about 10:35 PM CST). Site
   commit `bd02c67`; the notes commit follows it. Checked live at 1440 px and 375 px: no console errors, no sideways
   scroll on phones.
@@ -60,7 +85,8 @@ Tom's yes.
   run), not when its summary was assembled (`built_at`, which always read "just now"). Hub commit `4b26bf5`, deployed
   4 Nov about 10:59 PM CST; checked live: "Updated 44 min ago", tooltip "4 Nov 2026, 10:15 PM CST", no console errors.
   Vigil side: PR #86, below.
-- A local preview config is at `.claude/launch.json` (untracked; runs `tools/serve.py 5055`). An older `serve.py`
+- A local preview config is at `.claude/launch.json` (untracked; `hub` runs `tools/serve.py 5055`; `root`, added
+  5 Nov, serves the project root on 5057 for `tools/tic-nav-demo.html`). An older `serve.py`
   from 2:53 PM CST on 4 Nov (PIDs 30668/31228) was still listening on 5055 at 11 PM. The app's preview then
   opens its tab on 5056, but `serve.py` takes its port from the command line, so nothing answers there. On 5 Nov
   nothing held 5055 and the app still chose 5056, so open http://127.0.0.1:5055 by hand after starting it.
@@ -68,19 +94,18 @@ Tom's yes.
   `firebase login --reauth` and the deploy went through. Expect it before most deploys.
 
 ## Next steps
-1. **House bar v1.3: Elements' weather text.** Since MeteoAlarm went live (`66bf4e4`), both Elements lines are wrong
-   where they say weather warnings are "US only for now" and "Global weather is planned". Today's lines are
-   `site/shared/tic-nav.js` (`long`) and `site/oe/oe.js` (`line`).
-   - **Before writing:** re-measure the live feed (publishers in `data/feed.geojson`) and read the assessment for
-     MeteoAlarm's coverage and licence and for which global lanes come next.
-   - **Wording:** move weather warnings out of "US only" (US: NWS; Europe: MeteoAlarm), and keep "planned" only for
-     what is still planned. Get Tom's OK on the wording.
-   - **Roll out** to all ten sites the way v1.2 went (commits above). Noisefloor needs `tools/build_site.py`; Title 10
-     needs a `sw.js` bump and a clean worktree; Vigil goes as a PR if a Vigil session is working there.
-   - **Fold in Elements' EMSC earthquake and NIFC wildfire lanes** if they are live by then (built 4 Nov, uncommitted
-     on 5 Nov; not in the feed at 8:46 PM CST). EMSC is worldwide; NIFC wildfires are US only.
-2. **Confirm v1.2 is live on PropertyCast** after its daily publish (about 4:23 AM CST, 6 Nov). It still served v1.1
-   at 8:50 PM CST, 5 Nov, as expected.
+1. **Confirm v1.3 is live on PropertyCast** after its daily publish (about 4:23 AM CST, 6 Nov): the home page's
+   HTML should hold `TicNav = { version: "1.3"`. It held v1.1 at 9:40 PM CST, 5 Nov, as expected.
+2. **Next Elements text update (v1.4)** when more lanes go live. Count publishers in the live `data/feed.geojson`
+   first, then get Tom's OK on the wording.
+   - EMSC earthquakes (worldwide) and NIFC wildfires (US only): built 4 Nov, still uncommitted in
+     `[local path]` at 9:20 PM CST, 5 Nov, and not in the feed.
+   - More weather: the assessment's next CAP countries are Canada (ECCC Datamart), then Japan (JMA).
+   - Roll out the way v1.2 and v1.3 went. Noisefloor needs `tools/build_site.py` and the private term list at commit;
+     Title 10 needs a `sw.js` bump and a clean worktree; Context needs `.vercel/project.json` copied into its
+     worktree; Listening Post has no git, so back up first; Vigil goes as a PR if a Vigil session is working there.
+   - `[local path]` is still v1.1. Vis is in development and not one of the ten; bring it up to
+     date when it launches.
 3. Retake product screenshots when products change; keep the Elements and Cordon lines current as their planned
    pieces arrive (count `properties.sources[].publisher`).
 4. **Before the hub links Blackout, Wake, Orbit or Headwind:** they need live collectors, or their seed data labelled
