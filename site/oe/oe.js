@@ -135,7 +135,7 @@
 
     { id: "elements", name: "Elements", status: "beta", home: "land", reach: ["air", "systems", "human"], at: [530, 1125],
       href: "https://elements.theintelligence.company", ask: "Where are natural hazards hitting?",
-      line: "Natural hazards as the authorities report them, on one map. Worldwide: USGS earthquakes with impact alerts, NASA satellite fire detections, GDACS alerts and Copernicus disaster mapping. Regional: NOAA hurricane-center storms, and tsunami messages for North America, the Pacific and the Caribbean. US only for now: NOAA weather warnings and severe-storm outlooks, the US Drought Monitor and USGS volcano alert levels. Global weather and a radiation lane are planned." },
+      line: "Natural hazards as the authorities report them, on one map. Worldwide: USGS earthquakes with impact alerts, NASA satellite fire detections, GDACS alerts and Copernicus disaster mapping. Regional: weather warnings for the US (NOAA) and for 38 European countries and Israel (MeteoAlarm), NOAA hurricane-center storms, and tsunami messages for North America, the Pacific and the Caribbean. US only for now: NOAA severe-storm outlooks, the US Drought Monitor and USGS volcano alert levels. Weather for more of the world and a radiation lane are planned." },
     { id: "wake", name: "Wake", status: "dev", home: "land", reach: ["ems", "systems"], at: [900, 1152],
       ask: "What is moving through maritime chokepoints?",
       line: "Maritime: chokepoint and port throughput (IMF PortWatch), Baltic open AIS gaps, undersea cable corridors and navigational hazards." }
