@@ -1,9 +1,13 @@
 name = "tic-dispatch"
 main = "worker.js"
 compatibility_date = "2026-09-01"
-workers_dev = false   # cron only; no public URL
+workers_dev = false    # no public URL
+preview_urls = false
 
+# No cron of its own: the free plan's 5 are in use (PropertyCast 1, Vigil 4). PropertyCast's trigger Worker calls
+# tick() every 5 minutes through its service binding DISPATCH. An empty list also clears any cron left from a
+# refused deploy.
 [triggers]
-crons = ["*/5 * * * *"]   # UTC; worker.js JOBS says which workflows start in which slot
+crons = []
 
 # Secret (uploaded by .github/workflows/dispatch-deploy.yml from the hub repo's GitHub secrets): DISPATCH_TOKEN

@@ -1,72 +1,22 @@
-// The Intelligence Company dispatch clock (Cloudflare Worker, one cron: every 5 minutes).
+// tic-dispatch: The Intelligence Company's dispatch clock (Cloudflare Worker). The logic and the JOBS list are in
+// dispatch.js.
 //
-// GitHub starts scheduled runs on this account only every 4 to 9 hours, whatever the cron says (measured on eight
-// repos, 4-5 Nov 2026). So this Worker starts each workflow in JOBS itself, through GitHub's workflow_dispatch API,
-// on Cloudflare's clock. PropertyCast's own trigger (PropertyCast/trigger/) has kept that clock without a miss since
-// October 2026.
+// No cron and no public URL. PropertyCast's trigger Worker calls tick() every 5 minutes through its service binding
+// DISPATCH (PropertyCast/trigger/wrangler.toml); nothing else can reach it. scheduled() is here so a cron can be
+// added later without code changes, if a cron slot frees up.
 //
 // Deployed by .github/workflows/dispatch-deploy.yml. One secret, DISPATCH_TOKEN: a fine-grained GitHub token with
 // Actions: read and write on the JOBS repos only.
-//
-// To add a workflow: give it a `workflow_dispatch:` trigger, add a line to JOBS, add its repo to the token's
-// repository access, and push. Minutes are UTC and must be multiples of 5, the cron's step.
+import { WorkerEntrypoint } from "cloudflare:workers";
+import { run } from "./dispatch.js";
 
-export const JOBS = [
-  // Every 30 minutes, five minutes apart so the two don't start together.
-  { repo: "metacog-osint/elements", workflow: "update.yml", ref: "main", minutes: [5, 35] },
-  { repo: "metacog-osint/cordon", workflow: "update.yml", ref: "main", minutes: [10, 40] },
-];
-
-export default {
-  async scheduled(event, env, ctx) {
-    ctx.waitUntil(run(env, new Date(event.scheduledTime)));
-  },
-};
-
-// The jobs due at this minute. scheduledTime is the cron's slot, not when the Worker woke, so a late start still
-// matches.
-export function due(jobs, when) {
-  const m = when.getUTCMinutes();
-  return jobs.filter((j) => j.minutes.includes(m));
-}
-
-// Start every due job. One failure doesn't stop the others; any failure is thrown at the end so Cloudflare marks
-// the cron event as failed (Workers & Pages > tic-dispatch > Settings > Trigger events).
-export async function run(env, when, jobs = JOBS, fetcher = (...a) => fetch(...a)) {
-  const list = due(jobs, when);
-  if (!list.length) return [];
-  if (!env.DISPATCH_TOKEN) throw new Error("DISPATCH_TOKEN is not set");
-  const results = await Promise.allSettled(list.map((j) => dispatch(env.DISPATCH_TOKEN, j, fetcher)));
-  const failed = [];
-  results.forEach((r, i) => {
-    const name = `${list[i].repo} ${list[i].workflow}`;
-    if (r.status === "fulfilled") console.log(`started ${name}`);
-    else failed.push(`${name}: ${r.reason && r.reason.message}`);
-  });
-  if (failed.length) throw new Error(failed.join("; "));
-  return list.map((j) => j.repo);
-}
-
-export async function dispatch(token, job, fetcher) {
-  const r = await fetcher(`https://api.github.com/repos/${job.repo}/actions/workflows/${job.workflow}/dispatches`, {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${token}`,
-      Accept: "application/vnd.github+json",
-      "X-GitHub-Api-Version": "2022-11-28",
-      "User-Agent": "tic-dispatch",
-    },
-    body: JSON.stringify({ ref: job.ref }),
-  });
-  // 204 is the usual answer; 200 if GitHub returns the run's details.
-  if (r.status === 204 || r.status === 200) return;
-  // GitHub's error message says what's wrong ("Bad credentials", no workflow_dispatch trigger) and never echoes the
-  // token.
-  let why = "";
-  try {
-    why = String((await r.json()).message || "").slice(0, 160);
-  } catch {
-    // no JSON body
+export default class TicDispatch extends WorkerEntrypoint {
+  // when: the caller's cron slot, in epoch milliseconds. Returns the repos started; throws if any start failed.
+  async tick(when) {
+    return run(this.env, new Date(when));
   }
-  throw new Error(`HTTP ${r.status}${why ? ` (${why})` : ""}`);
+
+  async scheduled(controller) {
+    await run(this.env, new Date(controller.scheduledTime));
+  }
 }
