@@ -1,0 +1,50 @@
+name: site-checks
+# Tests the hub site (site/), the house bar it shares with every program site, and tools/serve.py (tests/README.md):
+#   checks  the house rules from CLAUDE.md, the page in Chromium with sample feeds, and accessibility (axe).
+#   feeds   the six live feeds the hub reads, against the same field list. A product being down fails this job but not
+#           the run, so it never blocks a change to the hub; read its log when it's red.
+# Nothing here deploys; the hub still deploys by hand (firebase deploy --only hosting:hub).
+on:
+  push:
+    paths: ["site/**", "tests/**", "tools/serve.py", "firebase.json", ".github/workflows/site-checks.yml"]
+  pull_request:
+    paths: ["site/**", "tests/**", "tools/serve.py", "firebase.json", ".github/workflows/site-checks.yml"]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: site-checks-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: tests
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: tests/package-lock.json
+      - run: npm ci
+      - name: Install Chromium for Playwright
+        run: npx playwright install --with-deps chromium
+      - name: Test
+        run: node --test --test-reporter=spec
+  feeds:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    continue-on-error: true
+    defaults:
+      run:
+        working-directory: tests
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      - name: Check the live feeds
+        run: node check-live.js

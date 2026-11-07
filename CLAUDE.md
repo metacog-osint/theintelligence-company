@@ -53,7 +53,7 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   repo's main branch (checked 5 Nov 2026; some local trees lag): Watchfloor `web/`, Title 10 `deploy/public/`,
   Noisefloor `site_src/`, PropertyCast `src/wx/static/`, CONTEXT `public/`, Vigil `public/`, Listening Post
   `web/public/`, and COP, Elements and Cordon.
-- `site/shared/tic-nav.js` (v1.4) + `tic-nav.css` (v1.1): **the house bar** on every program site (Tom: "I need a
+- `site/shared/tic-nav.js` (v1.4) + `tic-nav.css` (v1.2 on the hub; the ten sites carry v1.1 until it is rolled out): **the house bar** on every program site (Tom: "I need a
   link back to the home page on each subsite… a dropdown menu of all programs with their primary layer area or topic
   labeled (and a more in-depth description upon mouse-over)"). It is a slim navy bar with "← The Intelligence Company"
   and a **Programs ▾** disclosure menu. That menu lists every live program grouped "Across the layers" and "Other
@@ -67,6 +67,9 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   - Its z-index is 10000 so its menu covers headers with their own stacking, such as Noisefloor's z-index 1100, and it
     resets `display`, margins, padding and borders so a site's generic `nav` rules can't reshape it, such as
     Watchfloor's flex `nav`.
+  - `tic-nav.css` v1.2 (7 Nov 2026): "You are here" uses the text accent `#8F5509` on the light panel (`--tn-here`);
+    the amber it used read 1.9:1, under WCAG's 4.5:1. Dark mode keeps the amber.
+  - `tests/nav.test.js` and `tests/a11y.test.js` test the bar on a stand-in product page (menu, keyboard, phone, axe).
   - Elements' `long` text is the v1.4 wording Tom approved on 6 Nov 2026: "Worldwide: earthquakes from USGS (with
     impact alerts) and EMSC, …", weather warnings "Regional: … for the US and Europe", "US only for now: wildfire
     incidents, …" and "Weather for more of the world is planned". `oe.js` names EMSC ("EMSC's independent
@@ -181,8 +184,22 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   view: real data, group names only. The signed-in dashboard's AI summary names victims, so it isn't used). For
   signed-in captures Tom signs in himself in a separate Edge profile, which is deleted afterwards; Claude never sees
   the password or the session. Edge flags, the Playwright script and Vigil's tour key: [`RUNBOOKS.md`](./RUNBOOKS.md).
-- Local preview: `python tools/serve.py 5055` (applies the `firebase.json` headers). `firebase serve --only hosting:hub
-  --port 5055 --project context-484804` also works but skips the headers, so a CSP problem only shows up live.
+- Local preview: `python tools/serve.py 5055` (applies the `firebase.json` headers; since 7 Nov 2026 a missing page or a
+  folder gets `404.html` with status 404, as live). `firebase serve --only hosting:hub --port 5055 --project
+  context-484804` also works but skips the headers, so a CSP problem only shows up live.
+- **Tests** (`tests/`, since 7 Nov 2026; how to run them: `tests/README.md`). `npm test` in `tests/` runs everything in
+  about 40 s; GitHub runs it on every push that touches `site/`, `tests/`, `serve.py` or `firebase.json`
+  (`.github/workflows/site-checks.yml`). They encode the rules in this file: the four program lists agree, no inline
+  code or styles, new-tab links, absolute URLs on the 404 page, `connect-src`, ruled-out wording, footer date vs
+  sitemap; the page with sample feeds (`tests/fixtures`), its fallbacks, guide, keyboard and phone layout; and axe
+  (WCAG 2.2 AA) in light and dark. When a rule here changes, change its test too. The workflow's `feeds` job checks
+  the six live feeds (`tests/check-live.js`) and doesn't block: a product being down turns only that job red.
+- The shared time dialog (`tic-time.css`) reads `--panel`, `--bg`, `--line` and `--muted`, which the hub calls
+  `--card`, `--paper`, `--rule` and `--mut`; `style.css` maps them on `.tic-time-dialog` (7 Nov 2026), because in dark
+  mode the dialog drew light text on its white fallback. Other sites may have the same mismatch: check each one's
+  dialog in dark mode.
+- The header landmark holds the top bar too (`<header>` wraps `.util` and `.mast`, 7 Nov 2026), so the location line
+  and the Time button aren't outside every landmark. Nothing styles `header` itself; screenshots were unchanged.
 - About bio, reworded 31 Oct 2026 because "In 25 years of service he began…" read clunkily (Tom): "…and run by Thomas
   Brummer. He has served in the Air National Guard for 25 years. He started as an F-16 crew chief and an Air Force
   weather forecaster, and has spent more than half his career as a signals intelligence (SIGINT) analyst." Under the

@@ -40,6 +40,10 @@
   }
 }
 
+/* The shared time dialog (tic-time.css) reads --panel, --bg, --line and --muted; give it the hub's own colours, or in
+   dark mode it drew light text on its white fallback. */
+.tic-time-dialog { --panel: var(--card); --bg: var(--paper); --line: var(--rule); --muted: var(--mut); }
+
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
