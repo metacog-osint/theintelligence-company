@@ -210,7 +210,9 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   visible stretch of the belt line (it was under the spectrum plate); near space in the strip of its band below the
   space plate (it was cut off); SUBSURFACE · SEABED further left; SHARED SEAM 3 units in from the edge; Temper's tag
   8 units right (its ring touched Context's tag on phones); on phones the column headings are 20.5 px and BY KIND
-  shifts right (`.colh-l`). The test loads every font before measuring (the monospace face isn't preloaded). `tests/browser.test.js` ("the drawing's labels", `tests/lib/drawing.js`) fails if
+  shifts right (`.colh-l`). The test loads every font before measuring (the monospace face isn't preloaded),
+  then checks again with every label half a screen pixel wider per letter: GitHub's runner rounds letter widths to
+  whole pixels, which drew phone labels up to 14% wider and failed layouts that only just fit. `tests/browser.test.js` ("the drawing's labels", `tests/lib/drawing.js`) fails if
   any label or tag overlaps another, leaves its plate, sits under a later plate or runs off the drawing at ten screen
   sizes, or drops under 9 px at 1440×900. Run it after moving a tag (`at` in `oe.js`) or a label.
 - The header landmark holds the top bar too (`<header>` wraps `.util` and `.mast`, 7 Nov 2026), so the location line

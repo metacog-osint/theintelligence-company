@@ -285,12 +285,23 @@ describe("the drawing's labels", () => {
     await t.page.waitForTimeout(50);
     return { t, d: await t.page.evaluate(readDrawing) };
   }
+  // The same, with every drawing label half a screen pixel wider per letter: some browsers round letter widths to
+  // whole pixels, which on a small phone draws text up to 14% wider. A layout that passes this has room to spare.
+  async function widened(t) {
+    await t.page.evaluate(() => document.querySelectorAll("#oe-svg text").forEach((el) => {
+      const m = el.getScreenCTM(), ls = parseFloat(getComputedStyle(el).letterSpacing) || 0;
+      el.style.letterSpacing = ls + 0.5 / Math.hypot(m.a, m.b) + "px";
+    }));
+    await t.page.waitForTimeout(50);
+    return t.page.evaluate(readDrawing);
+  }
   for (const [w, h] of SCREENS) {
     test(`at ${w}×${h} no label or tag overlaps another, leaves its plate, hides under a plate or runs off the edge`, async () => {
       const { t, d } = await drawing(w, h);
       try {
         assert.ok(d.labels.length > 10 && d.tags.length > 15, "found the labels and tags");
         assert.deepEqual(drawingProblems(d), []);
+        assert.deepEqual(drawingProblems(await widened(t)), [], "with letters rounded half a pixel wider");
       } finally { await t.close(); }
     });
   }
