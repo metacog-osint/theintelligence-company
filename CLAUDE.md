@@ -3,8 +3,9 @@
 The company's home page (to serve `theintelligence.company`) and the canonical home of code shared by every
 Intelligence Company site. Started 27 Oct 2026 at Tom's request after a review of all his projects.
 
-> **Current state: read [`HANDOFF.md`](./HANDOFF.md) first.** It is the 6 Nov 2026 handoff: what is live, what
-> shipped last (house bar v1.4 for Elements' EMSC and NIFC lanes), next steps, and the Vigil summary-feed work.
+> **Current state: read [`HANDOFF.md`](./HANDOFF.md) first.** It is the 7 Nov 2026 handoff: what is live, what
+> shipped last (tests, the house bar's v1.2 stylesheet, Time dialog fixes, the drawing's labels), next steps, and the
+> Vigil summary-feed work.
 
 Dated history (version-by-version changes to the shared files, rollout commits, one-off fixes, superseded details)
 is in [`HISTORY.md`](./HISTORY.md). Procedures needed now and then (the Dispatch Worker's checks and local test,
@@ -53,7 +54,7 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   repo's main branch (checked 5 Nov 2026; some local trees lag): Watchfloor `web/`, Title 10 `deploy/public/`,
   Noisefloor `site_src/`, PropertyCast `src/wx/static/`, CONTEXT `public/`, Vigil `public/`, Listening Post
   `web/public/`, and COP, Elements and Cordon.
-- `site/shared/tic-nav.js` (v1.4) + `tic-nav.css` (v1.2 on the hub; the ten sites carry v1.1 until it is rolled out): **the house bar** on every program site (Tom: "I need a
+- `site/shared/tic-nav.js` (v1.4) + `tic-nav.css` (v1.2, 7 Nov 2026; rollout status in `HANDOFF.md`): **the house bar** on every program site (Tom: "I need a
   link back to the home page on each subsite… a dropdown menu of all programs with their primary layer area or topic
   labeled (and a more in-depth description upon mouse-over)"). It is a slim navy bar with "← The Intelligence Company"
   and a **Programs ▾** disclosure menu. That menu lists every live program grouped "Across the layers" and "Other
@@ -194,10 +195,23 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   sitemap; the page with sample feeds (`tests/fixtures`), its fallbacks, guide, keyboard and phone layout; and axe
   (WCAG 2.2 AA) in light and dark. When a rule here changes, change its test too. The workflow's `feeds` job checks
   the six live feeds (`tests/check-live.js`) and doesn't block: a product being down turns only that job red.
-- The shared time dialog (`tic-time.css`) reads `--panel`, `--bg`, `--line` and `--muted`, which the hub calls
-  `--card`, `--paper`, `--rule` and `--mut`; `style.css` maps them on `.tic-time-dialog` (7 Nov 2026), because in dark
-  mode the dialog drew light text on its white fallback. Other sites may have the same mismatch: check each one's
-  dialog in dark mode.
+- The shared time dialog (`tic-time.css`) reads `--panel`, `--bg`, `--line`, `--muted` and `--accent` (white text on
+  it), and falls back to white and grey. A site whose own variables have other names must map them on
+  `.tic-time-dialog`, or dark mode breaks. The hub maps `--card`, `--paper`, `--rule` and `--mut` in `style.css`
+  (7 Nov 2026). Every site's dialog was checked live in light and dark on 7 Nov 2026 (axe): Title 10, Watchfloor and
+  COP were fixed in their own CSS the same way; Listening Post's Done button still fails in dark mode (`HANDOFF.md`).
+  When a site changes its colours, open its Time dialog in dark mode.
+- **The drawing's labels** (7 Nov 2026, Tom: "make sure everything is clean, nothing overlaps"): every label is at
+  least 9 px tall on a 1440×900 screen (the drawing's size follows the window's height, so about 7.8 px at 1366×768).
+  Flat labels are 12.5 drawing units, labels lying on a plate 20 (the plate's tilt shrinks them), plate titles 24.
+  Labels inside the plates carry `class="ann"` and are hidden on phones, where they would render 3 to 5 px. Moved that
+  day so nothing collides: Economic, Social and Infrastructure sit left of their node clusters; Third party a step
+  up-left; SPECTRUM at its plate's left corner like CYBERSPACE (it was under the cyberspace plate); GEO BELT beside the
+  visible stretch of the belt line (it was under the spectrum plate); near space in the strip of its band below the
+  space plate (it was cut off); SUBSURFACE · SEABED further left; SHARED SEAM 3 units in from the edge; on phones
+  BY KIND shifts right (`.colh-l`). `tests/browser.test.js` ("the drawing's labels", `tests/lib/drawing.js`) fails if
+  any label or tag overlaps another, leaves its plate, sits under a later plate or runs off the drawing at ten screen
+  sizes, or drops under 9 px at 1440×900. Run it after moving a tag (`at` in `oe.js`) or a label.
 - The header landmark holds the top bar too (`<header>` wraps `.util` and `.mast`, 7 Nov 2026), so the location line
   and the Time button aren't outside every landmark. Nothing styles `header` itself; screenshots were unchanged.
 - About bio, reworded 31 Oct 2026 because "In 25 years of service he began…" read clunkily (Tom): "…and run by Thomas

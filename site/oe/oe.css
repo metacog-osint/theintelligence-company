@@ -115,12 +115,12 @@
 .oe-svg .thit:hover, .oe-svg .thit:focus-visible { stroke: rgba(95, 208, 232, .22); }
 .oe-svg .flow { stroke-dasharray: 10 150; opacity: .75; animation: oeflow 5.5s linear infinite; }
 @keyframes oeflow { to { stroke-dashoffset: -160; } }
-.oe-svg .pt { font: 500 20px "IBM Plex Mono", monospace; letter-spacing: 2.5px; }
-.oe-svg .pt-i { font: italic 500 14.5px "IBM Plex Sans", sans-serif; }
+.oe-svg .pt { font: 500 24px "IBM Plex Mono", monospace; letter-spacing: 2.5px; }
+.oe-svg .pt-i { font: italic 500 20px "IBM Plex Sans", sans-serif; }
 .oe-svg .nm-d { font: 600 22px "IBM Plex Sans", sans-serif; }
 .oe-svg .nm-m { display: none; font: 600 36px "IBM Plex Sans", sans-serif; }
 .oe-svg .zl { font: 500 13px "IBM Plex Mono", monospace; letter-spacing: 1.6px; }
-.oe-svg .colh { font: 500 11px "IBM Plex Mono", monospace; letter-spacing: 1.6px; fill: #8A96A8; }
+.oe-svg .colh { font: 500 12.5px "IBM Plex Mono", monospace; letter-spacing: 1.6px; fill: #8A96A8; }
 .oe-svg rect.zhit, .oe-svg rect.dhit { fill: transparent; cursor: pointer; outline: none; pointer-events: auto; }
 .oe-svg rect.zhit:hover, .oe-svg rect.dhit:hover { fill: rgba(255, 255, 255, .04); }
 .oe-svg rect.zhit:focus-visible, .oe-svg rect.dhit:focus-visible { stroke: var(--cyan); stroke-width: 1.5; }
@@ -179,7 +179,10 @@
   .oe-svg .nm-d { display: none; }
   .oe-svg .nm-m { display: inline; }
   .oe-svg .zl { font-size: 21px; letter-spacing: 1px; }
-  .oe-svg .colh { font-size: 17px; }
+  .oe-svg .colh { font-size: 21px; }
+  .oe-svg .colh-l { transform: translateX(12px); } /* at this size "BY KIND" would cross the drawing's left edge */
+  /* The labels inside the plates (class ann) would render 3 to 5px tall; the layer names and tags carry the phone view. */
+  .oe-svg .ann { display: none; }
   .oe-svg .chip .ctx { font-size: 22px; }
   /* Planned programs show as rings only; their names would render about 7px tall. Tapping one names it. */
   .oe-svg .chip-plan .ctx { display: none; }

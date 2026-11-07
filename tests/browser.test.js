@@ -7,6 +7,7 @@ import { chromium } from "playwright";
 import { startSite } from "./lib/server.js";
 import { sample, problems, SHAPES } from "./lib/feeds.js";
 import { openHub } from "./lib/hub.js";
+import { readDrawing, problems as drawingProblems } from "./lib/drawing.js";
 import { read, oe } from "./lib/source.js";
 
 const OE = oe();
@@ -269,6 +270,44 @@ describe("How the programs fit (the drawing and its guide)", () => {
       await t.page.locator("#oe-panel [data-close]").tap();
       assert.equal(await t.page.locator("#layers.sheet").count(), 0);
       clean(t);
+    } finally { await t.close(); }
+  });
+});
+
+describe("the drawing's labels", () => {
+  // Screens the drawing is sized for (its height follows the window's), from a large desktop to a small phone.
+  const SCREENS = [[1920, 1080], [1440, 900], [1366, 768], [1280, 800], [1024, 768], [821, 1000], [820, 1000], [600, 900], [375, 812], [320, 640]];
+  async function drawing(width, height) {
+    const t = await open("/", { viewport: { width, height }, phone: width <= 820 });
+    await t.page.evaluate(() => document.fonts.ready);
+    return { t, d: await t.page.evaluate(readDrawing) };
+  }
+  for (const [w, h] of SCREENS) {
+    test(`at ${w}×${h} no label or tag overlaps another, leaves its plate, hides under a plate or runs off the edge`, async () => {
+      const { t, d } = await drawing(w, h);
+      try {
+        assert.ok(d.labels.length > 10 && d.tags.length > 15, "found the labels and tags");
+        assert.deepEqual(drawingProblems(d), []);
+      } finally { await t.close(); }
+    });
+  }
+  test("on a 1440×900 screen or larger every label is at least 9 px tall", async () => {
+    for (const [w, h] of [[1440, 900], [1920, 1080]]) {
+      const { t, d } = await drawing(w, h);
+      try {
+        const small = [...d.labels, ...d.tags].filter((l) => l.px && l.px < 9).map((l) => `${l.name} ${l.px.toFixed(1)} px`);
+        assert.deepEqual(small, [], `${w}×${h}`);
+      } finally { await t.close(); }
+    }
+  });
+  test("on a phone the small labels inside the plates are hidden; layer names, tags and side labels stay", async () => {
+    const { t, d } = await drawing(375, 812);
+    try {
+      assert.equal(await t.page.locator("#oe-svg .ann").evaluateAll((els) => els.filter((e) => getComputedStyle(e).display !== "none").length), 0);
+      const names = d.labels.map((l) => l.name);
+      for (const n of ["Systems", "Spectrum", "Land andmaritime", "BY KIND", "BY DOCTRINE", "SHARED SEAM"]) assert.ok(names.includes(n), n);
+      const small = d.labels.filter((l) => l.px < 7).map((l) => `${l.name} ${l.px.toFixed(1)} px`);
+      assert.deepEqual(small, [], "nothing left on the phone drawing is under 7 px");
     } finally { await t.close(); }
   });
 });

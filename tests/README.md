@@ -7,7 +7,7 @@ Checks for the hub site (`../site`), the house bar every program site carries, a
 | --- | --- | --- |
 | `site.test.js` | House rules from `CLAUDE.md`, read from the files: the four program lists agree (house bar, drawing, product list, 404 page), no inline code or styles (CSP), new-tab links, absolute URLs on the 404 page, `connect-src`, ruled-out wording, footer date vs sitemap, version lines | Node only |
 | `serve.test.js` | `serve.py` sends `firebase.json`'s headers and serves `404.html` for missing pages | Node, Python |
-| `browser.test.js` | The home page in Chromium with sample feeds: Latest lines, "Updated … ago", "running late", fallbacks when feeds fail, the guide, keyboard, phone layout, the 404 page | Playwright |
+| `browser.test.js` | The home page in Chromium with sample feeds: Latest lines, "Updated … ago", "running late", fallbacks when feeds fail, the guide, keyboard, phone layout, the drawing's labels (no overlaps, inside their plates, 9 px at 1440×900), the 404 page | Playwright |
 | `nav.test.js` | The house bar on a stand-in product page: menu, "You are here", keyboard, phone | Playwright |
 | `a11y.test.js` | axe (WCAG 2.2 AA and best practices) in light and dark, desktop and phone; contrast of the drawing's labels | Playwright, axe |
 | `feeds.test.js` | `check-live.js` itself, against a stand-in server | Node |
