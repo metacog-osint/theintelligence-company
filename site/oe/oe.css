@@ -178,9 +178,12 @@
   .oe-svg { max-height: none; }
   .oe-svg .nm-d { display: none; }
   .oe-svg .nm-m { display: inline; }
-  .oe-svg .zl { font-size: 21px; letter-spacing: 1px; }
+  .oe-svg .zl { font-size: 21px; letter-spacing: .5px; }
+  /* The column headings sit higher and further in than on desktop: centred at this size they would cross the
+     drawing's edges, and phones that round letters to whole pixels draw them up to 14% wider. */
   .oe-svg .colh { font-size: 20.5px; letter-spacing: .6px; }
-  .oe-svg .colh-l { transform: translateX(12px); } /* centred, "BY KIND" would cross the drawing's left edge */
+  .oe-svg .colh-l { transform: translate(16px, -20px); }
+  .oe-svg .colh-r { transform: translate(-10px, -20px); }
   /* The labels inside the plates (class ann) would render 3 to 5px tall; the layer names and tags carry the phone view. */
   .oe-svg .ann { display: none; }
   .oe-svg .chip .ctx { font-size: 22px; }
