@@ -1,11 +1,49 @@
-# Hub handoff: where things stand (7 Nov 2026, 2:45 PM CST: tests and accessibility fixes)
+# Hub handoff: where things stand (7 Nov 2026, 5:00 PM CST: hub merged; house bar fix rolled out; drawing labels)
 
 Read with `CLAUDE.md` (the project's notes). Times are Central (CST since 1 Nov). Each commit, push and deploy needs
 Tom's yes.
 
+## Merge, rollout, Time dialogs and drawing labels, 7 Nov 2026 evening (cloud session; Tom: "1. yes 2. yes 3. yes,
+## just make sure everything is clean, nothing overlaps 4. yes")
+The session ran in a cloud sandbox with the nine program repos attached and a new personal environment, "The
+Intelligence Company", whose network reaches the hub and every program site (Tom approved it). It has no Firebase,
+Vercel or Google Cloud sign-in, so those deploys are Tom's (commands below).
+- **Hub:** branch `ccr-c24c283b-rb52w0` fast-forwarded into `master` after `site-checks` passed. **Not deployed:**
+  run `firebase deploy --only hosting:hub --project context-484804`. Footer Updated date and `<lastmod>`: 7 Nov 2026.
+- **House bar `tic-nav.css` v1.2** ("You are here" readable on the light menu), pushed to each repo's main branch:
+  - Live by 4:55 PM CST (checked: `/tic-nav.css` reads v1.2): COP `196b327`, Elements `dbbee3d`, Cordon `f8a6e65`,
+    Vigil `e6cf216`, Noisefloor `5203f6f` (with `site/` rebuilt by `tools/build_site.py`, new `?v=` hash).
+  - PropertyCast `09d8757`: inlined at the next daily publish (about 4:23 AM CST, 8 Nov); check its home page HTML
+    for `--tn-here`.
+  - **Tom's machine:** Watchfloor `2162548` (`python -I scripts/build_web.py`, then `firebase deploy --only
+    hosting:watchfloor --project context-484804`); Title 10 `64af250` (from `deploy/` in a clean worktree, `firebase
+    deploy --only hosting`; `sw.js` is `t10-2026-11-07a`); Context `bfeb389` (`npx vercel --prod`); Listening Post (no
+    git: back up, copy the hub's `site/shared/tic-nav.css` into `web/public/`, `firebase deploy --only hosting`).
+- **Time dialogs, checked live in light and dark with axe** (each site's own CSS; the shared file is unchanged):
+  - Fixed and pushed in the same commits: Title 10 (light text on white in dark mode, 1.2:1: maps `--sheet`,
+    `--ground`, `--rule`; Done takes `--accent-ink`), Watchfloor (Done: white on amber, 4.0:1 light and 1.9:1 dark; now
+    dark text `#1a1206`, 4.7:1 and 10:1), COP (legend and note `#666`, 3.1:1 in dark: maps `--rule` and `--mut`). Each
+    passed axe in both modes from the repo's own files. Title 10 and Watchfloor go live with their deploys above.
+  - **Listening Post, not fixed (no git here):** in dark mode the Done button is white on `#7DB2E6`, 2.2:1. In its own
+    stylesheet: `@media (prefers-color-scheme: dark) { .tic-time-dialog .tic-time-actions .tic-time-done { color:
+    #1F1F1D; } }` (7.4:1).
+  - Fine as they are: Vigil (sets its own dialog colours), Context, Elements, Cordon; Noisefloor and PropertyCast keep
+    a white dialog in dark mode, which reads fine.
+- **Drawing labels** (details and the rules in `CLAUDE.md`): every label at least 9 px on a 1440×900 screen (was 5.9 px);
+  in-plate labels hidden on phones (were 3 to 5 px); no overlaps, nothing sticking out of its plate, under another plate
+  or off the edge at ten screen sizes (before: Headwind sat on "Economic", Blackout and Noisefloor on "SPECTRUM",
+  "GEO BELT" and part of "near space" were hidden under plates, "BY KIND" was clipped on phones). New tests in
+  `tests/browser.test.js` fail on the old drawing at all ten sizes. 108 hub tests pass.
+- **Seen along the way, not changed:**
+  - PropertyCast's `tools/smoke_garden.py` fails 3 of 237 checks (`payload: tomcast`, `pests`, `water`) with or without
+    this change: probably the November off-season.
+  - Watchfloor's own `button.primary` puts white on amber in light mode (4.0:1), as its Time dialog did.
+  - Between 821 and about 1100 px wide the two-column layout keeps the drawing small (labels 5 to 7 px at 821 to
+    1024 px). The phone layout starts at 820 px; moving that breakpoint would be a layout change for Tom to decide.
+
 ## Tests, preview server and accessibility fixes, 7 Nov 2026 (cloud session; Tom: "please run all four")
-- **Where:** branch `ccr-c24c283b-rb52w0`, not merged into `master` and not deployed. The session ran in a
-  cloud sandbox with only this repo; it could not reach the product sites or Firebase.
+- **Where:** branch `ccr-c24c283b-rb52w0`, merged into `master` the same evening (section above). The session ran in a
+  cloud sandbox; at this stage it could not reach the product sites or Firebase.
 - **Tests** (`tests/`, 95 in all, about 40 s; `tests/README.md`): the house rules from `CLAUDE.md` read from the files;
   `serve.py`; the home page in Chromium with sample feeds (Latest lines, "Updated … ago", "running late", every
   fallback, the guide, keyboard, phone, 10 widths from 320 to 1440 px, the 404 page); the house bar on a stand-in
@@ -242,11 +280,10 @@ Tom's yes.
   `firebase login --reauth` and the deploy went through. Expect it before most deploys.
 
 ## Next steps
-- **From 7 Nov (tests and fixes, above):** Tom reviews the branch; merge into `master` once `site-checks` is green, then
-  deploy the hub (Tom's yes), bumping the footer's Updated date and `sitemap.xml`'s `<lastmod>` together (a test checks
-  they match). Roll `tic-nav.css` v1.2 out to the ten sites the usual way (only the CSS changes;
-  PropertyCast builds the bar into its page, so check its HTML for `--tn-here`). Decide finding 5 (label sizes). Check the
-  other sites' Time dialogs in dark mode: they may have the hub's variable mismatch.
+- **From 7 Nov (top section):** deploy the hub, Watchfloor, Title 10 and Context, and update Listening Post (commands
+  above; each needs this machine's Firebase or Vercel sign-in). Apply Listening Post's Done-button fix. Check
+  PropertyCast after its 8 Nov publish. Next time the hub's footer date changes, change `sitemap.xml` with it (a test
+  checks they match).
 0. **Done 6 Nov 2026:** Vigil's crons are one trigger (section above). Optional, Tom's call: give `tic-dispatch` a
    cron of its own so it no longer depends on PropertyCast's trigger (a free slot now exists).
 1. **PropertyCast to v1.4:** check its home page's HTML for `TicNav = { version: "1.4"` after the daily publish at
