@@ -103,7 +103,7 @@
       line: "Official statements, Security Council votes and African Union communiqués, with a check of what was said against what was done." },
     { id: "influence", name: "Influence operations", status: "planned", working: true, home: "human", reach: ["cyber", "systems"], at: [780, 426],
       line: "Attributed influence operations and platform takedowns, at the level of the operation." },
-    { id: "temper", name: "Temper", status: "planned", home: "human", reach: ["systems", "land", "cyber"], at: [872, 506],
+    { id: "temper", name: "Temper", status: "planned", home: "human", reach: ["systems", "land", "cyber"], at: [880, 506],
       line: "Unrest, displacement, public attention, press freedom and pressure on civil society." },
     { id: "humanitarian", name: "Humanitarian response", status: "planned", working: true, home: "human", reach: ["systems", "land"], at: [618, 534], end: true,
       line: "Needs, funding, appeals, food security and outbreaks. It may become part of Temper." },

@@ -173,7 +173,7 @@ describe('"Updated … ago" in the product list', () => {
       assert.equal(await textOf(t.page, ".tic-time-btn"), "Time · Z");
       const rows = Object.fromEntries((await fresh(t.page)).map((r) => [r.name, r]));
       assert.equal(squash(rows.Noisefloor.title), "7 Nov 2026 16:00Z");
-      assert.equal(await textOf(t.page, ".foot time[data-tic]"), "5 Nov 2026");
+      assert.equal(await textOf(t.page, ".foot time[data-tic]"), /data-tic-year>([^<]+)<\/time>/.exec(read("site/index.html"))[1], "in Zulu the footer shows the UTC date written in the page");
       clean(t);
     } finally { await t.close(); }
   });
@@ -279,7 +279,10 @@ describe("the drawing's labels", () => {
   const SCREENS = [[1920, 1080], [1440, 900], [1366, 768], [1280, 800], [1024, 768], [821, 1000], [820, 1000], [600, 900], [375, 812], [320, 640]];
   async function drawing(width, height) {
     const t = await open("/", { viewport: { width, height }, phone: width <= 820 });
-    await t.page.evaluate(() => document.fonts.ready);
+    // Load every font the page declares before measuring: the drawing's monospace face isn't preloaded, and a label
+    // measured in a fallback font has a different box.
+    await t.page.evaluate(() => Promise.all([...document.fonts].map((f) => f.load().catch(() => {}))).then(() => document.fonts.ready));
+    await t.page.waitForTimeout(50);
     return { t, d: await t.page.evaluate(readDrawing) };
   }
   for (const [w, h] of SCREENS) {

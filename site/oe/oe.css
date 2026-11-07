@@ -179,8 +179,8 @@
   .oe-svg .nm-d { display: none; }
   .oe-svg .nm-m { display: inline; }
   .oe-svg .zl { font-size: 21px; letter-spacing: 1px; }
-  .oe-svg .colh { font-size: 21px; }
-  .oe-svg .colh-l { transform: translateX(12px); } /* at this size "BY KIND" would cross the drawing's left edge */
+  .oe-svg .colh { font-size: 20.5px; letter-spacing: .6px; }
+  .oe-svg .colh-l { transform: translateX(12px); } /* centred, "BY KIND" would cross the drawing's left edge */
   /* The labels inside the plates (class ann) would render 3 to 5px tall; the layer names and tags carry the phone view. */
   .oe-svg .ann { display: none; }
   .oe-svg .chip .ctx { font-size: 22px; }

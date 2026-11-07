@@ -208,8 +208,9 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   day so nothing collides: Economic, Social and Infrastructure sit left of their node clusters; Third party a step
   up-left; SPECTRUM at its plate's left corner like CYBERSPACE (it was under the cyberspace plate); GEO BELT beside the
   visible stretch of the belt line (it was under the spectrum plate); near space in the strip of its band below the
-  space plate (it was cut off); SUBSURFACE · SEABED further left; SHARED SEAM 3 units in from the edge; on phones
-  BY KIND shifts right (`.colh-l`). `tests/browser.test.js` ("the drawing's labels", `tests/lib/drawing.js`) fails if
+  space plate (it was cut off); SUBSURFACE · SEABED further left; SHARED SEAM 3 units in from the edge; Temper's tag
+  8 units right (its ring touched Context's tag on phones); on phones the column headings are 20.5 px and BY KIND
+  shifts right (`.colh-l`). The test loads every font before measuring (the monospace face isn't preloaded). `tests/browser.test.js` ("the drawing's labels", `tests/lib/drawing.js`) fails if
   any label or tag overlaps another, leaves its plate, sits under a later plate or runs off the drawing at ten screen
   sizes, or drops under 9 px at 1440×900. Run it after moving a tag (`at` in `oe.js`) or a label.
 - The header landmark holds the top bar too (`<header>` wraps `.util` and `.mast`, 7 Nov 2026), so the location line
