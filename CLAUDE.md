@@ -238,7 +238,10 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   - **Footer date** uses `data-tic-year`: "Updated 31 Oct 2026" in the viewer's zone.
   - **Footer Sources links:** Noisefloor `/sources`, Watchfloor `/#/sources`, Vigil `/sources`, PropertyCast
     `/#sources`, Title 10 `/#contacts` ("Contacts & sources"), Context `/sources` and Listening Post `/sources.html`
-    (both linked since `4d05cf2`).
+    (both linked since `4d05cf2`); since 7 Nov 2026 also Elements and Cordon `/#health-h` (each page's Sources card)
+    and COP's home page (its Sources sit in its side panel, and its address after `#` holds the map view, so a
+    `#sources` link wouldn't hold). Each ends in ↗ joined by `&nbsp;`, so the arrow never starts a line. A test checks
+    there is one link per program in the house bar.
   - **Privacy line:** "No analytics or tracking. Time settings, if you change them, stay in your browser." True as
     of 31 Oct 2026: no analytics or third-party scripts, and `tic-time.js` writes its cookie and local storage only
     when the visitor changes a setting. Change the line before adding anything that tracks.

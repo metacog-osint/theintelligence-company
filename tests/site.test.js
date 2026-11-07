@@ -176,15 +176,24 @@ test("every link to another site opens in a new tab", () => {
   }
 });
 
-test("new-tab links end in ↗, and in-page links never do (the footer's inline credits are exempt)", () => {
+test("new-tab links end in ↗, and in-page links never do", () => {
   for (const [file, src] of Object.entries(NEW_TAB_SOURCES)) {
-    const body = src.replace(footerOf(src), "").replace(/\\"/g, '"');
-    for (const l of links(body)) {
+    for (const l of links(src.replace(/\\"/g, '"'))) {
       const text = l.inner.replace(/<span class="oe-sr">[\s\S]*?<\/span>/g, "").replace(/<[^>]+>/g, "").trim();
       if (l.attrs.target === "_blank") assert.ok(text.endsWith("↗"), `${file}: "${text}" opens a new tab, so it ends in ↗`);
       else assert.ok(!text.includes("↗"), `${file}: "${text}" stays on the page, so it has no ↗`);
     }
   }
+});
+
+test("the footer credits every program's sources, and says which programs feed the Latest lines", () => {
+  const foot = footerOf(INDEX);
+  const credited = links(foot).map((l) => new URL(l.attrs.href)).filter((u) => u.hostname.endsWith(".theintelligence.company"));
+  const hosts = credited.map((u) => u.hostname).sort();
+  assert.deepEqual(hosts, NAV.programs.map((p) => new URL(p.href).hostname).sort(), "one Sources link per program in the house bar");
+  const latest = [...INDEX.matchAll(/<article class="latest-item" id="latest-[a-z]+">\s*<p class="latest-meta">([^<]+)<\/p>/g)].map((m) => m[1]);
+  const named = /The latest lines come from ([^;]+);/.exec(foot)[1].replace(" and ", ", ").split(", ");
+  assert.deepEqual(named, latest, "the footer names the programs behind the Latest lines, in their order");
 });
 
 test("404.html uses only absolute URLs (Firebase serves it at any depth)", () => {
@@ -280,15 +289,9 @@ test("the home page is public and canonical on the apex domain; the 404 page is 
 
 // ---------------------------------------------------------------- wording
 
-// Feed names on the drawing that say GNSS. They name the stations themselves, which receive every constellation;
-// listed here so any new "GNSS" fails. Ask Tom before adding to this list.
-const GNSS_ALLOWED = ["GNSS reference stations", "Ionospheric disturbance from GNSS base stations"];
-
 test("wording the notes rule out stays out (GNSS, Moorhead, Minnesota, 25-year)", () => {
   const files = { ...HTML_PAGES, ...SCRIPTS, "site.webmanifest": read("site/site.webmanifest") };
-  for (const [file, raw] of Object.entries(files)) {
-    let src = raw;
-    for (const ok of GNSS_ALLOWED) src = src.split(ok).join("");
+  for (const [file, src] of Object.entries(files)) {
     assert.ok(!/\bGNSS\b/.test(src), `${file}: say GPS, not GNSS`);
     assert.ok(!/contested radio spectrum/i.test(src), `${file}: "the contested radio spectrum"`);
     assert.ok(!/Moorhead,\s+Minnesota/i.test(src), `${file}: the label is "Fargo-Moorhead, ND/MN"`);

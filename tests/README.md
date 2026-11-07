@@ -36,5 +36,4 @@ feeds against the same `SHAPES`.
 ## When a check fails
 
 The message names the rule and the file. Adding or renaming a program fails the list checks until `tic-nav.js`,
-`oe/oe.js`, `index.html` and `404.html` agree. `GNSS_ALLOWED` in `site.test.js` holds the two drawing feed names that
-say GNSS; ask Tom before adding to it.
+`oe/oe.js`, `index.html` and `404.html` agree, and until the footer credits the new program's Sources page.
