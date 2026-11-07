@@ -11,7 +11,8 @@ Tom's yes.
   fallback, the guide, keyboard, phone, 10 widths from 320 to 1440 px, the 404 page); the house bar on a stand-in
   product page; axe (WCAG 2.2 AA and best practices) in light and dark. Each list and wording check was proved by
   planting the mistake it guards against. `.github/workflows/site-checks.yml` runs them on push; its `feeds` job runs
-  `tests/check-live.js` on the six real feeds and doesn't block.
+  `tests/check-live.js` on the six real feeds and doesn't block. First run (commit `8bf2bab`, 2:44 PM CST): 95 of 95
+  passed, and all six live feeds had every field the hub reads.
 - **`tools/serve.py`:** a missing page, or a folder without `index.html`, now gets `404.html` with status 404 (it gave
   Python's bare error page and folder listings). Port 0 picks a free port.
 - **Fixed, found by axe:**
