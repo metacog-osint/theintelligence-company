@@ -1,9 +1,10 @@
 """Serve site/ locally with the response headers from firebase.json (CSP included).
 
 `firebase serve` skips the headers, so a page can work locally and break live under the CSP. This server applies
-every matching header rule the way Firebase Hosting does, so CSP problems show up before a deploy.
+every matching header rule the way Firebase Hosting does, so CSP problems show up before a deploy. A missing path
+gets site/404.html with status 404, as it does live.
 
-Usage: python tools/serve.py [port]   (default 5055)
+Usage: python tools/serve.py [port]   (default 5055; 0 picks a free port and prints it)
 """
 import http.server
 import json
@@ -39,9 +40,33 @@ def glob_to_regex(glob):
 RULES = [(glob_to_regex(r["source"]), r["headers"]) for r in HOSTING.get("headers", [])]
 
 
+NOT_FOUND = SITE / "404.html"
+
+
 class Handler(http.server.SimpleHTTPRequestHandler):
     def __init__(self, *a, **kw):
         super().__init__(*a, directory=str(SITE), **kw)
+
+    def send_head(self):
+        # A folder without index.html is a missing page live (Firebase never lists a folder), so not a listing here.
+        p = pathlib.Path(self.translate_path(self.path))
+        if p.is_dir() and not (p / "index.html").is_file():
+            self.send_error(404)
+            return None
+        return super().send_head()
+
+    def send_error(self, code, message=None, explain=None):
+        """A missing path gets site/404.html with status 404, as Firebase Hosting serves it, at any depth."""
+        if code != 404 or not NOT_FOUND.is_file():
+            return super().send_error(code, message, explain)
+        body = NOT_FOUND.read_bytes()
+        self.log_error("code 404, serving 404.html for %s", self.path)
+        self.send_response(404)
+        self.send_header("Content-Type", "text/html; charset=utf-8")
+        self.send_header("Content-Length", str(len(body)))
+        self.end_headers()
+        if self.command != "HEAD":
+            self.wfile.write(body)
 
     def end_headers(self):
         path = self.path.split("?", 1)[0].lstrip("/")
@@ -54,5 +79,6 @@ class Handler(http.server.SimpleHTTPRequestHandler):
 
 if __name__ == "__main__":
     port = int(sys.argv[1]) if len(sys.argv) > 1 else 5055
-    print(f"Serving {SITE} on http://127.0.0.1:{port} with firebase.json headers", flush=True)
-    http.server.ThreadingHTTPServer(("127.0.0.1", port), Handler).serve_forever()
+    server = http.server.ThreadingHTTPServer(("127.0.0.1", port), Handler)  # port 0 picks a free one (the tests do)
+    print(f"Serving {SITE} on http://127.0.0.1:{server.server_address[1]} with firebase.json headers", flush=True)
+    server.serve_forever()

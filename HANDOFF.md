@@ -1,7 +1,41 @@
-# Hub handoff: where things stand (6 Nov 2026, 3:30 PM CST: Vigil on one cron trigger)
+# Hub handoff: where things stand (7 Nov 2026, 2:45 PM CST: tests and accessibility fixes)
 
 Read with `CLAUDE.md` (the project's notes). Times are Central (CST since 1 Nov). Each commit, push and deploy needs
 Tom's yes.
+
+## Tests, preview server and accessibility fixes, 7 Nov 2026 (cloud session; Tom: "please run all four")
+- **Where:** branch `ccr-c24c283b-rb52w0`, not merged into `master` and not deployed. The session ran in a
+  cloud sandbox with only this repo; it could not reach the product sites or Firebase.
+- **Tests** (`tests/`, 95 in all, about 40 s; `tests/README.md`): the house rules from `CLAUDE.md` read from the files;
+  `serve.py`; the home page in Chromium with sample feeds (Latest lines, "Updated … ago", "running late", every
+  fallback, the guide, keyboard, phone, 10 widths from 320 to 1440 px, the 404 page); the house bar on a stand-in
+  product page; axe (WCAG 2.2 AA and best practices) in light and dark. Each list and wording check was proved by
+  planting the mistake it guards against. `.github/workflows/site-checks.yml` runs them on push; its `feeds` job runs
+  `tests/check-live.js` on the six real feeds and doesn't block.
+- **`tools/serve.py`:** a missing page, or a folder without `index.html`, now gets `404.html` with status 404 (it gave
+  Python's bare error page and folder listings). Port 0 picks a free port.
+- **Fixed, found by axe:**
+  - House bar "You are here" on the light panel: amber `#E3A83B` read 1.87:1 (WCAG needs 4.5:1). `tic-nav.css` v1.2
+    uses `#8F5509` there (5.4:1); dark mode keeps the amber (6.9:1). **Not rolled out**: the ten sites carry v1.1.
+  - The hub's Time dialog in dark mode drew light text on white (1.18:1): `tic-time.css` reads `--panel` and others,
+    which the hub names differently. `style.css` now maps them on the dialog; the shared file is unchanged.
+  - The top bar (location line and Time button) was outside every landmark; `<header>` now wraps it with the
+    masthead. Full-page screenshots at 1440 and 375 px, light and dark, matched pixel for pixel outside the drawing's
+    animation.
+- **Measured, fine:** no sideways scroll at any tested width; every drawing label has at least 4.5:1 against the
+  artwork behind it (measured from a screenshot, since axe can't see through the artwork).
+- **Found, not changed (Tom's call):**
+  1. COP's static Latest line (shown when COP's health feed fails) still says "with cross-program convergence by
+     country". That is the claim removed from the drawing on 5 Nov, since convergence is only on COP's unpushed
+     branch. A fix: "Every program’s latest findings on one map, with today’s top five and each feed’s health."
+  2. The footer says "The latest lines come from Noisefloor, Watchfloor and Vigil"; COP's line has been there since
+     5 Nov. Its "Data sources and licences" list has no COP, Elements or Cordon.
+  3. The footer's credit links open a new tab without ↗, against the ↗ rule. The tests exempt the footer for now.
+  4. Two drawing feed names say GNSS ("GNSS reference stations", "Ionospheric disturbance from GNSS base stations"),
+     against "GPS for Noisefloor and FieldCast". `GNSS_ALLOWED` in `tests/site.test.js` lets them through for now.
+  5. The drawing's labels are small: at 1440 px, 19 of 58 render under 9 px (smallest "GEO BELT", 5.9 px; plate
+     captions such as "Political" and "Party A" 8 to 8.5 px). On a 375 px phone, 43 of 50 are under 9 px (smallest
+     2.7 px). Contrast is fine and pinch-zoom works, so it isn't a WCAG failure.
 
 ## Vigil's four cron triggers merged into one, 6 Nov 2026 (Tom: "pick one or more of the recommended tasks")
 - **Done:** Vigil PR #92 (https://github.com/metacog-osint/vigil/pull/92), commit `c4d3aa9`, merged as `a2383f5` at
@@ -206,6 +240,10 @@ Tom's yes.
   `firebase login --reauth` and the deploy went through. Expect it before most deploys.
 
 ## Next steps
+- **From 7 Nov (tests and fixes, above):** Tom reviews the branch; merge into `master` once `site-checks` is green, then
+  deploy the hub (Tom's yes). Roll `tic-nav.css` v1.2 out to the ten sites the usual way (only the CSS changes;
+  PropertyCast builds the bar into its page, so check its HTML for `--tn-here`). Decide findings 1 to 5. Check the
+  other sites' Time dialogs in dark mode: they may have the hub's variable mismatch.
 0. **Done 6 Nov 2026:** Vigil's crons are one trigger (section above). Optional, Tom's call: give `tic-dispatch` a
    cron of its own so it no longer depends on PropertyCast's trigger (a free slot now exists).
 1. **PropertyCast to v1.4:** check its home page's HTML for `TicNav = { version: "1.4"` after the daily publish at
