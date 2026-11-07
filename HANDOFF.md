@@ -25,15 +25,16 @@ Tom's yes.
     animation.
 - **Measured, fine:** no sideways scroll at any tested width; every drawing label has at least 4.5:1 against the
   artwork behind it (measured from a screenshot, since axe can't see through the artwork).
+- **Text fixes, Tom's yes ("make the text changes in 3 to 6"), same branch:**
+  1. COP's static Latest line (shown when COP's health feed fails) no longer claims "cross-program convergence by
+     country" (only on COP's unpushed branch; the drawing dropped it on 5 Nov). It reads "Every program’s latest
+     findings on one map, with today’s top five and each feed’s health."
+  2. The footer says the latest lines come from "Noisefloor, Watchfloor, Vigil and COP", and credits COP (its home
+     page), Elements and Cordon (`/#health-h`, each page's Sources card; checked in their repos' `site_src`).
+  3. Every new-tab link in the footer ends in ↗ (joined with `&nbsp;`); the tests no longer exempt the footer.
+  4. The drawing says "GPS reference stations" and "Ionospheric disturbance from GPS base stations"; the GNSS
+     allow list in the tests is gone.
 - **Found, not changed (Tom's call):**
-  1. COP's static Latest line (shown when COP's health feed fails) still says "with cross-program convergence by
-     country". That is the claim removed from the drawing on 5 Nov, since convergence is only on COP's unpushed
-     branch. A fix: "Every program’s latest findings on one map, with today’s top five and each feed’s health."
-  2. The footer says "The latest lines come from Noisefloor, Watchfloor and Vigil"; COP's line has been there since
-     5 Nov. Its "Data sources and licences" list has no COP, Elements or Cordon.
-  3. The footer's credit links open a new tab without ↗, against the ↗ rule. The tests exempt the footer for now.
-  4. Two drawing feed names say GNSS ("GNSS reference stations", "Ionospheric disturbance from GNSS base stations"),
-     against "GPS for Noisefloor and FieldCast". `GNSS_ALLOWED` in `tests/site.test.js` lets them through for now.
   5. The drawing's labels are small: at 1440 px, 19 of 58 render under 9 px (smallest "GEO BELT", 5.9 px; plate
      captions such as "Political" and "Party A" 8 to 8.5 px). On a 375 px phone, 43 of 50 are under 9 px (smallest
      2.7 px). Contrast is fine and pinch-zoom works, so it isn't a WCAG failure.
@@ -242,8 +243,9 @@ Tom's yes.
 
 ## Next steps
 - **From 7 Nov (tests and fixes, above):** Tom reviews the branch; merge into `master` once `site-checks` is green, then
-  deploy the hub (Tom's yes). Roll `tic-nav.css` v1.2 out to the ten sites the usual way (only the CSS changes;
-  PropertyCast builds the bar into its page, so check its HTML for `--tn-here`). Decide findings 1 to 5. Check the
+  deploy the hub (Tom's yes), bumping the footer's Updated date and `sitemap.xml`'s `<lastmod>` together (a test checks
+  they match). Roll `tic-nav.css` v1.2 out to the ten sites the usual way (only the CSS changes;
+  PropertyCast builds the bar into its page, so check its HTML for `--tn-here`). Decide finding 5 (label sizes). Check the
   other sites' Time dialogs in dark mode: they may have the hub's variable mismatch.
 0. **Done 6 Nov 2026:** Vigil's crons are one trigger (section above). Optional, Tom's call: give `tic-dispatch` a
    cron of its own so it no longer depends on PropertyCast's trigger (a free slot now exists).
