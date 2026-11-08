@@ -32,6 +32,10 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   text separates worldwide, regional and US-only sources;
   Cordon: NOTAMs, launch hazard areas); update the lines as those arrive (Tom asked for this
   upkeep, 1 Nov 2026). Check by counting `properties.sources[].publisher` in each `data/feed.geojson`.
+- **Vis** (operational weather and illumination for Watchfloor's conflict zones; `[local path]`, public repo
+  `metacog-osint/vis`, Cloudflare Pages) went live at `vis.theintelligence.company` on 8 Nov 2026 and is **beta** on
+  the hub, in the house bar (v1.5) and in COP since the same day (Tom's yes, including the wording). Its drawing line
+  ends "A thunderstorm hazard and scoring against station reports are planned"; update it as those arrive.
 - **Context vs Watchfloor is parked** (Tom, 1 Nov 2026: "stop it, i'm not deciding on this yet"). Both may stay with
   different scopes. Leave Context's "Watchfloor's predecessor" line alone, and don't raise the question again until
   Tom does. Watchfloor's noindex and copyright registration or ™ are also left as they are for now.
@@ -54,7 +58,7 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   repo's main branch (checked 5 Nov 2026; some local trees lag): Watchfloor `web/`, Title 10 `deploy/public/`,
   Noisefloor `site_src/`, PropertyCast `src/wx/static/`, CONTEXT `public/`, Vigil `public/`, Listening Post
   `web/public/`, and COP, Elements and Cordon.
-- `site/shared/tic-nav.js` (v1.4) + `tic-nav.css` (v1.2, 7 Nov 2026; rollout status in `HANDOFF.md`): **the house bar** on every program site (Tom: "I need a
+- `site/shared/tic-nav.js` (v1.5, 8 Nov 2026: Vis added) + `tic-nav.css` (v1.2, 7 Nov 2026; rollout status in `HANDOFF.md`): **the house bar** on every program site (Tom: "I need a
   link back to the home page on each subsite… a dropdown menu of all programs with their primary layer area or topic
   labeled (and a more in-depth description upon mouse-over)"). It is a slim navy bar with "← The Intelligence Company"
   and a **Programs ▾** disclosure menu. That menu lists every live program grouped "Across the layers" and "Other
@@ -194,7 +198,10 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   code or styles, new-tab links, absolute URLs on the 404 page, `connect-src`, ruled-out wording, footer date vs
   sitemap; the page with sample feeds (`tests/fixtures`), its fallbacks, guide, keyboard and phone layout; and axe
   (WCAG 2.2 AA) in light and dark. When a rule here changes, change its test too. The workflow's `feeds` job checks
-  the six live feeds (`tests/check-live.js`) and doesn't block: a product being down turns only that job red.
+  the seven live feeds (`tests/check-live.js`) and doesn't block: a product being down turns only that job red.
+  This machine has no Playwright Chromium; run the browser tests on the installed Edge with a preload that wraps
+  `chromium.launch` in `{ channel: "msedge" }` (`NODE_OPTIONS="--import=file:///<helper>.mjs" node --test`), or
+  run `npx playwright install chromium` once (a download of about 150 MB).
 - The shared time dialog (`tic-time.css`) reads `--panel`, `--bg`, `--line`, `--muted` and `--accent` (white text on
   it), and falls back to white and grey. A site whose own variables have other names must map them on
   `.tic-time-dialog`, or dark mode breaks. The hub maps `--card`, `--paper`, `--rule` and `--mut` in `style.css`
@@ -256,7 +263,7 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   - **Footer date** uses `data-tic-year`: "Updated 31 Oct 2026" in the viewer's zone.
   - **Footer Sources links:** Noisefloor `/sources`, Watchfloor `/#/sources`, Vigil `/sources`, PropertyCast
     `/#sources`, Title 10 `/#contacts` ("Contacts & sources"), Context `/sources` and Listening Post `/sources.html`
-    (both linked since `4d05cf2`); since 7 Nov 2026 also Elements and Cordon `/#health-h` (each page's Sources card)
+    (both linked since `4d05cf2`); since 7 Nov 2026 also Elements and Cordon `/#health-h` (each page's Sources card), since 8 Nov Vis `/#sources`,
     and COP's home page (its Sources sit in its side panel, and its address after `#` holds the map view, so a
     `#sources` link wouldn't hold). Each ends in ↗ joined by `&nbsp;`, so the arrow never starts a line. A test checks
     there is one link per program in the house bar.
@@ -284,11 +291,13 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
     only when the summary was assembled and always read "just now"), COP `data/health.json` `generated_at`, Context
     from COP's health entry (`data_as_of`; Context has no
     small file of its own), and Elements and Cordon from a HEAD request's `Last-Modified` on their `data/feed.geojson`
-    (400–500 KB, so it is never downloaded). Since 5 Nov 2026 the line adds "· running late" in amber when its own
+    (400–500 KB, so it is never downloaded). Vis (8 Nov 2026) is on Cloudflare Pages, which sends an ETag but no
+    `Last-Modified`, so the hub reads its whole `data/feed.geojson` (168 KB, about 8 KB as served, brotli) for
+    `generated_at`. Since 5 Nov 2026 the line adds "· running late" in amber when its own
     "Updated … ago" is older than that program's `fresh_hours` in COP's health (COP's own `state` judges the newest
     data, not publication, so it isn't used); the reason is in the tooltip. If Vigil's `/api/summary` 503s, Vigil's
     time falls back to COP's `data_as_of`. The
-    tooltip gives the full time in the viewer's zone. `connect-src` lists the cop., elements. and cordon. origins.
+    tooltip gives the full time in the viewer's zone. `connect-src` lists the cop., elements., cordon. and vis. origins.
     Add a program by giving its row `data-product` and calling `setFresh` with its most direct publish time.
   - **Vigil feature block:** the signed-in `img/vigil-actors.webp` (see Product screenshots); its three points are
     from Vigil's README, and Vigil's other pages need an account. The rule: **don't put leak-site victim names on the

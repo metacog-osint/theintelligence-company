@@ -11,7 +11,7 @@ Checks for the hub site (`../site`), the house bar every program site carries, a
 | `nav.test.js` | The house bar on a stand-in product page: menu, "You are here", keyboard, phone | Playwright |
 | `a11y.test.js` | axe (WCAG 2.2 AA and best practices) in light and dark, desktop and phone; contrast of the drawing's labels | Playwright, axe |
 | `feeds.test.js` | `check-live.js` itself, against a stand-in server | Node |
-| `check-live.js` | The six live feeds have every field the hub reads (not a test; needs the internet) | Node |
+| `check-live.js` | The seven live feeds have every field the hub reads (not a test; needs the internet) | Node |
 
 ## Run
 
