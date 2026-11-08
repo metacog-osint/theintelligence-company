@@ -10,6 +10,7 @@
   var COP_HEALTH = "https://cop.theintelligence.company/data/health.json"; // COP's check of every program's feed
   var ELEMENTS_FEED = "https://elements.theintelligence.company/data/feed.geojson"; // read by HEAD only (Last-Modified)
   var CORDON_FEED = "https://cordon.theintelligence.company/data/feed.geojson";
+  var VIS_FEED = "https://vis.theintelligence.company/data/feed.geojson"; // about 8 KB compressed; read for generated_at
 
   // Time: the Time button (it names the viewer's zone) and every <time data-tic>.
   var holder = document.getElementById("time-settings");
@@ -117,6 +118,9 @@
   // Elements and Cordon: when their feed was last published.
   getModified(ELEMENTS_FEED).then(function (m) { setFresh("elements", m); }).catch(function () {});
   getModified(CORDON_FEED).then(function (m) { setFresh("cordon", m); }).catch(function () {});
+  // Vis: its feed's generated_at. Cloudflare Pages sends no Last-Modified, so the feed itself is read (168 KB,
+  // about 8 KB as served compressed).
+  getJSON(VIS_FEED).then(function (f) { setFresh("vis", f.generated_at); }).catch(function () {});
 
   // Noisefloor: the briefing's bottom line for the newest aircraft day. Shared with oe/oe.js.
   window.ticNoisefloor = getJSON(NOISEFLOOR);
