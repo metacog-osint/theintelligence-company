@@ -54,7 +54,10 @@ wiped from reports after two days. `GET /v1/state` serves one stored summary row
 rebuilt on every write and at most every five minutes otherwise. Tests: `cd worker && npm test` (Node's built-in
 SQLite stands in for D1).
 
-**Deploy (needs the account owner).** The `CLOUDFLARE_API_TOKEN` on this machine can't deploy Workers, so the account owner signs in once:
+**Live** since 8 Nov 2026 at https://vetday.metacog.workers.dev (D1 `vetday`, id in `wrangler.jsonc`). To redeploy
+after a change: `env -u CLOUDFLARE_API_TOKEN npx wrangler@4 deploy` from `veterans-day/worker`.
+
+**First deploy (done 8 Nov; kept for reference).** The `CLOUDFLARE_API_TOKEN` on this machine can't deploy Workers, so the account owner signs in once:
 
 ```
 Remove-Item Env:CLOUDFLARE_API_TOKEN; npx wrangler login

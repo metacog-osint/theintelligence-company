@@ -144,7 +144,12 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   own; optional `hours` for less than hourly; a test checks no two jobs share an hour and minute), add its repo to
   the token's repository access, push.
 
-## Veterans Day planner (`site/veterans/veterans-day/`, built 8 Nov 2026, branch `veterans-day`)
+## Veterans Day planner (`site/veterans/veterans-day/`, live since 8 Nov 2026)
+- **Live** at https://theintelligence.company/veterans/veterans-day/ (deployed about 4:45 PM CST 8 Nov 2026 from
+  `2104157`, approved). Field reports: Worker `vetday` at https://vetday.metacog.workers.dev with D1 `vetday`
+  (`aa3c8206-bcaf-4c90-b108-a6d29d0cd46d`), deployed with the publisher's `wrangler login` (OAuth); run wrangler with
+  `env -u CLOUDFLARE_API_TOKEN` so it uses that sign-in. Smashburger is out (its Fargo store closed, October 2026;
+  the publisher). Still to do: re-check local offers and VFW/Legion posts on Tue 10 Nov and rebuild.
 - 8 Nov 2026: a usable Veterans Day giveaway program his Guard colleagues can use on Wed 11 Nov 2026, with
   live location, timing against each deal's window, preferences, vetoes and strikes, and got-it / turned-away
   marks; the first piece of a planned "For veterans" section here (Title 10 and future military programs to follow).
