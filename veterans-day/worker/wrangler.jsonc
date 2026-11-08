@@ -5,7 +5,7 @@
   "compatibility_date": "2026-09-01",
   "workers_dev": true,
   "preview_urls": false,
-  // database_id is filled in after `wrangler d1 create vetday`.
-  "d1_databases": [{ "binding": "DB", "database_name": "vetday", "database_id": "FILL-IN-AFTER-CREATE", "migrations_dir": "migrations" }],
+  // D1 database vetday, created 8 Nov 2026 (region ENAM).
+  "d1_databases": [{ "binding": "DB", "database_name": "vetday", "database_id": "aa3c8206-bcaf-4c90-b108-a6d29d0cd46d", "migrations_dir": "migrations" }],
   "observability": { "enabled": true }
 }

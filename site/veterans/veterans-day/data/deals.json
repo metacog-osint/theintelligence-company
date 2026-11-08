@@ -1,6 +1,6 @@
 {
  "meta": {
-  "built_at": "2026-11-08T22:10:57Z",
+  "built_at": "2026-11-08T22:19:06Z",
   "day": "2026-11-11",
   "day_start": "2026-11-11T06:00:00Z",
   "tz": "America/Chicago",
@@ -802,59 +802,6 @@
     }
    ],
    "notes": "Veteran.com lists as 2025; Military.com (updated 8 Nov 2026) lists it without a year. Stripes also lists. Moderately confident.",
-   "caution": "",
-   "group": null
-  },
-  {
-   "id": "smashburger",
-   "brand": "Smashburger",
-   "status": "offering",
-   "category": "quick",
-   "offer": "Free All-American Smash (or Americana Big Dog) in-store, during business hours",
-   "value": 11,
-   "grade": "B",
-   "start": null,
-   "end": null,
-   "window_text": "",
-   "mode": "dine_in",
-   "minutes": 20,
-   "busy": 10,
-   "line": 3,
-   "meal": false,
-   "dineIn": true,
-   "snack": true,
-   "eligible": [
-    "veteran",
-    "active"
-   ],
-   "guard_reserve": "unclear",
-   "spouse": "unclear",
-   "kids": null,
-   "proof": [
-    "military_id"
-   ],
-   "advance": null,
-   "participating": true,
-   "voucher_use_by": null,
-   "limits": "",
-   "sources": [
-    {
-     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
-     "publisher": "Military.com",
-     "published": "2026-11-08 (updated)"
-    },
-    {
-     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
-     "publisher": "Stars and Stripes",
-     "published": "2026-11-06"
-    },
-    {
-     "url": "https://veteran.com/veterans-day-discounts-sales-deals-free-meals/",
-     "publisher": "Veteran.com",
-     "published": "2026-11-06 (updated)"
-    }
-   ],
-   "notes": "Sources conflict on the offer: free burger (Military.com, Stripes) vs 25% off through 31 Dec 2026 (Veteran.com). Confirm with store.",
    "caution": "",
    "group": null
   },
@@ -2485,20 +2432,6 @@
    "close": "2026-11-12T03:30:00Z",
    "hoursAssumed": true,
    "verified": "unverified",
-   "pin": "osm"
-  },
-  {
-   "id": "smashburger-1801-45th-st-sw",
-   "offer": "smashburger",
-   "name": "",
-   "address": "1801 45th St SW, Fargo, ND 58103",
-   "lat": 46.852882,
-   "lng": -96.863641,
-   "phone": "(701) 478-2111",
-   "open": "2026-11-11T17:00:00Z",
-   "close": "2026-11-12T03:00:00Z",
-   "hoursAssumed": false,
-   "verified": "confirmed",
    "pin": "osm"
   },
   {

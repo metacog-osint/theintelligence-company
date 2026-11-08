@@ -5,7 +5,7 @@
 (function () {
   "use strict";
   const E = window.VDEngine, T = window.TicTime;
-  const API = ""; // field-report Worker origin, set at deploy (empty: reports stay on this phone)
+  const API = "https://vetday.metacog.workers.dev"; // field-report Worker (veterans-day/worker); "" keeps reports on the phone
   const KEY = "vd2026-v1", MIN = 60000, HOUR = 3600000;
   const CATS = [["breakfast", "Breakfast"], ["meal", "Sit-down meals"], ["quick", "Quick bites"], ["coffee", "Coffee"],
     ["treat", "Treats"], ["service", "Haircuts and car care"], ["shopping", "Shopping discounts"],
