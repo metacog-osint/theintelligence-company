@@ -144,6 +144,21 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   own; optional `hours` for less than hourly; a test checks no two jobs share an hour and minute), add its repo to
   the token's repository access, push.
 
+## Veterans Day planner (`site/veterans/veterans-day/`, built 8 Nov 2026, branch `veterans-day`)
+- 8 Nov 2026: a usable Veterans Day giveaway program his Guard colleagues can use on Wed 11 Nov 2026, with
+  live location, timing against each deal's window, preferences, vetoes and strikes, and got-it / turned-away
+  marks; the first piece of a planned "For veterans" section here (Title 10 and future military programs to follow).
+  Not in the product lists, the house bar or the drawing (no program-list change); shared by direct link.
+- Everything is in `veterans-day/README.md`: data build, engine rules, the field-report Worker `vetday` (needs the publisher's
+  `wrangler login` to deploy; then set `API` in `app.js` and add its origin to `connect-src`), and on-the-day
+  operations (overrides, tips).
+- Same house rules as the hub page, tested in `tests/veterans.test.js` and `tests/veterans-engine.test.js`: no inline
+  code or styles, the location label, footer, About structure (what it is, method, limits, sources) and Time
+  button. `firebase.json`'s CSP gained `https://api.weather.gov` (connect) and `https://tile.openstreetmap.org` (img)
+  for it; `site.test.js` counts the planner's fetch origins (`veteransOrigins()` in `tests/lib/source.js`).
+- Privacy promise on the page: location, settings and history stay on the phone; reports carry no ID. Change the
+  page's Privacy text before changing that.
+
 ## Site
 - Static files in `site/`, no build step. Firebase Hosting site `theintelligencecompany` in project
   context-484804: https://theintelligencecompany.web.app. Deploy (needs Tom's yes):

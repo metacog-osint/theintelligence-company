@@ -4,7 +4,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import path from "node:path";
-import { ROOT, SITE, read, ticNav, oe, feedUrls, productList, links, houseDate } from "./lib/source.js";
+import { ROOT, SITE, read, ticNav, oe, feedUrls, veteransOrigins, productList, links, houseDate } from "./lib/source.js";
 
 const INDEX = read("site/index.html");
 const NOT_FOUND = read("site/404.html");
@@ -146,6 +146,7 @@ test("firebase.json's CSP stays strict, and connect-src lists exactly the origin
   const listed = /connect-src ([^;]+)/.exec(csp)[1].split(/\s+/).filter((s) => s !== "'self'").sort();
   const fetched = new Set(Object.values(feedUrls()).map((u) => new URL(u).origin));
   for (const m of OE_JS.matchAll(/fetch\("(https:\/\/[^"]+)"/g)) fetched.add(new URL(m[1]).origin);
+  for (const o of veteransOrigins()) fetched.add(o);
   assert.deepEqual(listed, [...fetched].sort());
 });
 

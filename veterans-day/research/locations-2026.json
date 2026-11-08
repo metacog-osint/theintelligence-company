@@ -1,0 +1,1723 @@
+{
+ "Texas Roadhouse": {
+  "fm_presence": "yes",
+  "basis_url": "https://www.texasroadhouse.com/locations/248-fargond",
+  "stores": [
+   {
+    "address": "4971 13th Ave S, Fargo, ND 58103",
+    "status": "confirmed",
+    "wed_hours": "15:00-22:00 (Mon-Thu per official page snippet via search; page itself returned 403)",
+    "phone": "(701) 282-8590",
+    "osm": "way/244283750",
+    "url": "https://www.texasroadhouse.com/locations/248-fargond"
+   }
+  ],
+  "notes": "Only FM location found (Grand Forks has another). Official page not fetchable by tool (403); address matches OSM within ~100 m and several directories. Birdeye listing hours differ; trust official. Verify Wed hours by phone."
+ },
+ "Applebee's": {
+  "fm_presence": "yes",
+  "basis_url": "https://restaurants.applebees.com/en-us/nd/fargo",
+  "stores": [
+   {
+    "address": "2001 16th St N, Fargo, ND 58102",
+    "status": "confirmed",
+    "wed_hours": "10:30-24:00",
+    "phone": "(701) 293-0249",
+    "osm": "way/84963384",
+    "url": "https://restaurants.applebees.com/en-us/nd/fargo/2001-16th-street-n.-75064"
+   },
+   {
+    "address": "2350 45th St S, Fargo, ND 58104",
+    "status": "confirmed",
+    "wed_hours": "10:30-24:00",
+    "phone": "(701) 356-9495",
+    "osm": "way/185027306",
+    "url": "https://restaurants.applebees.com/en-us/nd/fargo/2350-45th-street-south-76042"
+   },
+   {
+    "address": "2800 13th Ave SW, Fargo, ND 58103",
+    "status": "unverified",
+    "wed_hours": "10:30-24:00 (as listed)",
+    "phone": "(701) 232-4100",
+    "osm": null,
+    "url": "https://restaurants.applebees.com/en-us/nd/fargo/2800-13th-avenue-s-w-89034",
+    "note": "On Applebee's own locator but no OSM feature nearby; not independently confirmed. Call before sending anyone.",
+    "geo": "46.86140,-96.82475"
+   }
+  ],
+  "notes": "Applebee's locator lists no West Fargo, Moorhead, Dilworth or Horace stores. Last year's '3033 S 25th St' not found anywhere (invented/wrong)."
+ },
+ "Olive Garden": {
+  "fm_presence": "yes",
+  "basis_url": "https://maps.roadtrippers.com/us/fargo-nd/food-drink/olive-garden-fargo-nd",
+  "stores": [
+   {
+    "address": "4339 13th Ave SW, Fargo, ND 58103",
+    "status": "unverified",
+    "wed_hours": null,
+    "phone": "(701) 277-1241 per YellowPages (another directory says 701-282-3888; unresolved)",
+    "osm": "way/244148287",
+    "url": "https://www.yellowpages.com/fargo-nd/mip/olive-garden-italian-restaurant-480096254"
+   }
+  ],
+  "notes": "Official locator is JS-only; address confirmed by YellowPages + OSM. No Moorhead Olive Garden found: last year's '3102 Highway 10 E, Moorhead' (9.7 km from any OSM Olive Garden) appears invented. Hours not found."
+ },
+ "Red Lobster": {
+  "fm_presence": "yes",
+  "basis_url": "https://postmates.com/store/red-lobster-4215-13th-ave-s/x4wpFKxVTvmIMPT8VVxxNg",
+  "stores": [
+   {
+    "address": "4215 13th Ave S, Fargo, ND 58103",
+    "status": "unverified",
+    "wed_hours": "11:00-21:00 (OpenTable, Mon-Thu)",
+    "phone": "(701) 282-8983",
+    "osm": "way/244148284",
+    "url": "https://www.opentable.com/r/red-lobster-fargo",
+    "note": "Diner activity on OpenTable 20 Jun 2026; job postings active. Red Lobster locator not fetchable. Not confirmed since."
+   }
+  ],
+  "notes": "Last year's '4420 13th Ave SW' is wrong (actual 4215 13th Ave S)."
+ },
+ "Red Robin": {
+  "fm_presence": "no",
+  "basis_url": "https://redrobin.com/locations/sd/siouxfalls/sioux-falls-729",
+  "stores": [],
+  "notes": "Search for North Dakota Red Robin found only Sioux Falls SD as nearest. Official locator not fetchable by tool; absence not proven by a locator list."
+ },
+ "Outback Steakhouse": {
+  "fm_presence": "no",
+  "basis_url": "https://www.chowhound.com/1565393/us-states-without-outback-steakhouse/",
+  "stores": [],
+  "notes": "ScrapeHero 2026 report/Chowhound: North Dakota has no Outback. One stale AllMenus page lists 401 38th St S Fargo; treated as outdated. Minnesota closures also reported."
+ },
+ "Golden Corral": {
+  "fm_presence": "no",
+  "basis_url": "https://krocnews.com/how-many-golden-corrals-are-left-in-minnesota-the-answer-might-surprise-you/",
+  "stores": [],
+  "notes": "Minnesota has only Maplewood/Maple Grove per article; no ND store found in searches. Official all-locations page not checked in detail."
+ },
+ "Hy-Vee": {
+  "fm_presence": "no",
+  "basis_url": "https://www.hy-vee.com/stores/",
+  "stores": [],
+  "notes": "Hy-Vee corporate page: stores in IL, IA, KS, MN, MO, NE, SD, WI (not ND). No Moorhead/Dilworth store found in news search."
+ },
+ "Denny's": {
+  "fm_presence": "yes",
+  "basis_url": "https://locations.dennys.com/ND/FARGO",
+  "stores": [
+   {
+    "address": "4437 13th Ave SW, Fargo, ND 58103",
+    "status": "confirmed",
+    "wed_hours": "open 24 hours",
+    "phone": "(701) 282-8544",
+    "osm": "way/244111375",
+    "url": "https://locations.dennys.com/nd/fargo/246533"
+   }
+  ],
+  "notes": "Official Denny's locator lists one Fargo store; Minnesota list has no Moorhead."
+ },
+ "IHOP": {
+  "fm_presence": "yes",
+  "basis_url": "https://restaurants.ihop.com/en-us/nd/fargo",
+  "stores": [
+   {
+    "address": "1701 45th St SW, Fargo, ND 58103",
+    "status": "confirmed",
+    "wed_hours": "open 24 hours",
+    "phone": "(701) 282-6538",
+    "osm": "way/244344592",
+    "url": "https://restaurants.ihop.com/en-us/nd/fargo/breakfast-1701-45th-st-sw-1841"
+   }
+  ],
+  "notes": "Official IHOP locator; no Moorhead/West Fargo. Last year's '1505 42nd St SW' wrong. Page also shows (701) 775-7001, likely a catering/other number."
+ },
+ "Chili's": {
+  "fm_presence": "yes",
+  "basis_url": "https://www.chilis.com/locations/us/north-dakota/fargo",
+  "stores": [
+   {
+    "address": "3902 13th Ave S Suite 4402, Fargo, ND 58103",
+    "status": "confirmed",
+    "wed_hours": "opens 11:00 (daily hours not extracted)",
+    "phone": "(701) 282-2669",
+    "osm": "node/6374758506",
+    "url": "https://www.chilis.com/locations/us/north-dakota/fargo"
+   }
+  ],
+  "notes": "Chili's lists exactly 1 Fargo location; Moorhead and West Fargo pages 404 (none)."
+ },
+ "Chipotle": {
+  "fm_presence": "yes",
+  "basis_url": "https://locations.chipotle.com/nd/fargo",
+  "stores": [
+   {
+    "address": "1204 19th Ave N, Fargo, ND 58102",
+    "status": "confirmed",
+    "wed_hours": "10:45-22:00",
+    "phone": "(701) 566-7467",
+    "osm": "way/85033392",
+    "url": "https://locations.chipotle.com/nd/fargo/1204-19th-ave-n"
+   },
+   {
+    "address": "1680 45th St S, Fargo, ND 58103",
+    "status": "confirmed",
+    "wed_hours": "10:45-22:00",
+    "phone": "(701) 566-5299",
+    "osm": "way/599918986",
+    "url": "https://locations.chipotle.com/nd/fargo/1680-45th-st-s"
+   },
+   {
+    "address": "3061 25th St S, Fargo, ND 58103",
+    "status": "confirmed",
+    "wed_hours": "10:45-22:00",
+    "phone": "(701) 540-6672",
+    "osm": "node/9368728511",
+    "url": "https://locations.chipotle.com/nd/fargo/3061-25th-st-s"
+   },
+   {
+    "address": "3971 53rd Ave S, Fargo, ND 58104",
+    "status": "confirmed",
+    "wed_hours": "10:45-22:00",
+    "phone": "(701) 929-5858",
+    "osm": null,
+    "url": "https://locations.chipotle.com/nd/fargo/3971-53rd-avenue-s",
+    "geo": "46.80202,-96.84792"
+   },
+   {
+    "address": "3262 US-10 E, Moorhead, MN 56560",
+    "status": "confirmed",
+    "wed_hours": "10:45-22:00",
+    "phone": "(218) 593-3449",
+    "osm": null,
+    "url": "https://locations.chipotle.com/mn/moorhead/3262-us-10-e",
+    "geo": "46.87664,-96.73007"
+   }
+  ],
+  "notes": "Official locator: 4 Fargo + 1 Moorhead. Normal hours; Veterans Day hours not stated."
+ },
+ "Wendy's": {
+  "fm_presence": "yes",
+  "basis_url": "https://locations.wendys.com/united-states/nd/fargo",
+  "stores": [
+   {
+    "address": "3111 13th Ave SW, Fargo, ND 58103",
+    "status": "confirmed",
+    "wed_hours": "06:30-00:30",
+    "phone": "(701) 239-0356",
+    "osm": "way/133113017",
+    "url": "https://locations.wendys.com/united-states/nd/fargo/3111-13th-ave-sw"
+   },
+   {
+    "address": "4430 18th Ave SW, Fargo, ND 58103",
+    "status": "confirmed",
+    "wed_hours": "09:00-01:00",
+    "phone": "(701) 433-0651",
+    "osm": "way/244299546",
+    "url": "https://locations.wendys.com/united-states/nd/fargo/4430-18th-avenue-sw"
+   }
+  ],
+  "notes": "Official Wendy's locator: 2 Fargo stores only; ND and MN state pages list no West Fargo, Moorhead or Dilworth. Last year's Moorhead (804 8th St S), Fargo (1020 19th Ave N) and West Fargo (1420 Main Ave W) Wendy's not found = invented/closed."
+ },
+ "Qdoba": {
+  "fm_presence": "yes",
+  "basis_url": "https://locations.qdoba.com/us/nd/fargo",
+  "stores": [
+   {
+    "address": "1801 45th St SW, Unit M, Fargo, ND 58104",
+    "status": "confirmed",
+    "wed_hours": "10:30-22:00 (Birdeye Wed; OSM Mo-Sa 10:30-22:00)",
+    "phone": "(701) 478-4545",
+    "osm": "node/5705989696",
+    "url": "https://locations.qdoba.com/us/nd/fargo/1801-45th-st-sw"
+   },
+   {
+    "address": "910 Holiday Dr, Unit 3, Moorhead, MN 56560",
+    "status": "confirmed",
+    "wed_hours": "10:30-22:00 (OSM Mo-Sa)",
+    "phone": "(218) 233-3606 (OSM)",
+    "osm": "way/599481292",
+    "url": "https://locations.qdoba.com/us/mn/moorhead/910-holiday-dr"
+   }
+  ],
+  "notes": "Official Qdoba locator pages. Last year's '2511 S University Dr' is not a Qdoba (wrong)."
+ },
+ "Smashburger": {
+  "fm_presence": "yes",
+  "basis_url": "https://smashburger.com/locations/us/nd/fargo/1801-45th-st-sw",
+  "stores": [
+   {
+    "address": "1801 45th St SW, Fargo, ND 58103",
+    "status": "confirmed",
+    "wed_hours": "11:00-21:00 (weekday, per store page/guide; may show holiday hours)",
+    "phone": "(701) 478-2111",
+    "osm": "node/9286971171",
+    "url": "https://smashburger.com/locations/us/nd/fargo/1801-45th-st-sw"
+   }
+  ],
+  "notes": "Search results show Smashburger lists 1 Fargo location. Last year's '3902 13th Ave SW' is wrong (that is Chili's). Same strip as Qdoba/Jimmy John's."
+ },
+ "Firehouse Subs": {
+  "fm_presence": "yes",
+  "basis_url": "https://www.superpages.com/fargo-nd/sandwich-shops",
+  "stores": [
+   {
+    "address": "5675 26th Ave S, Fargo, ND 58104",
+    "status": "unverified",
+    "wed_hours": null,
+    "phone": null,
+    "osm": "node/6376829807",
+    "url": "https://Superpages.Com/fargo-nd/sandwich-shops"
+   }
+  ],
+  "notes": "Address from Superpages, Uber Eats, 2017 foundation doc and OSM (within 100 m). Official locator is JS-only. No West Fargo store found: last year's '1500 13th Ave E, West Fargo' unconfirmed/likely invented."
+ },
+ "Target": {
+  "fm_presence": "yes",
+  "basis_url": "https://www.target.com/store-locator/store-directory/north-dakota",
+  "stores": [
+   {
+    "address": "4202 13th Ave SW, Fargo, ND 58103",
+    "status": "confirmed",
+    "wed_hours": "07:00-22:00 (Wed 11 Nov per Target page)",
+    "phone": "(701) 282-7400",
+    "osm": "way/244156995",
+    "url": "https://www.target.com/sl/fargo/61"
+   },
+   {
+    "address": "3301 Highway 10 E, Moorhead, MN 56560",
+    "status": "confirmed",
+    "wed_hours": "08:00-22:00 (Wed 11 Nov per Target page)",
+    "phone": "(218) 233-2326",
+    "osm": "way/125173145",
+    "url": "https://www.target.com/sl/moorhead/658"
+   }
+  ],
+  "notes": "Target's own directory lists only Fargo (#61) and Moorhead (#658) in the metro. Both have in-store Starbucks."
+ },
+ "Casey's": {
+  "fm_presence": "yes",
+  "basis_url": "https://www.lottery.nd.gov/_elements/pdf/faqs/Locations_20251231.pdf",
+  "stores": [
+   {
+    "address": "707 37th Avenue South, Moorhead, MN",
+    "status": "unverified",
+    "wed_hours": null,
+    "phone": null,
+    "osm": "node/11182303439",
+    "url": "OSM only",
+    "note": "Only in OpenStreetMap (MN stores not covered by ND lottery list)."
+   },
+   {
+    "address": "5151 Prosperity Way South, Fargo, ND",
+    "status": "confirmed",
+    "wed_hours": null,
+    "phone": null,
+    "osm": "node/11182333068",
+    "url": "https://www.lottery.nd.gov/_elements/pdf/faqs/Locations_20251231.pdf",
+    "note": "Listed as ND Lottery retailer at 12/31/2025 (Casey's General Store #3477 5151 Prosperity Way S); no hours or closure check; verify hours."
+   },
+   {
+    "address": "3545 25th Street South, Fargo, ND",
+    "status": "confirmed",
+    "wed_hours": "05:00-22:00",
+    "phone": null,
+    "osm": "node/11184758147",
+    "url": "https://www.lottery.nd.gov/_elements/pdf/faqs/Locations_20251231.pdf",
+    "note": "Listed as ND Lottery retailer at 12/31/2025 (Casey's General Store #3365 3545 25th Street S); no hours or closure check; verify hours."
+   },
+   {
+    "address": "2902 13th Avenue South, Fargo, ND",
+    "status": "confirmed",
+    "wed_hours": null,
+    "phone": null,
+    "osm": "node/11187007932",
+    "url": "https://www.lottery.nd.gov/_elements/pdf/faqs/Locations_20251231.pdf",
+    "note": "Listed as ND Lottery retailer at 12/31/2025 (Casey's General Store #3893 2902 13th Ave S); no hours or closure check; verify hours."
+   },
+   {
+    "address": "1901 University Drive North, Fargo, ND",
+    "status": "confirmed",
+    "wed_hours": null,
+    "phone": null,
+    "osm": "way/85033469",
+    "url": "https://www.lottery.nd.gov/_elements/pdf/faqs/Locations_20251231.pdf",
+    "note": "Listed as ND Lottery retailer at 12/31/2025 (Casey's General Store #3350 1901 N. University Dr.); no hours or closure check; verify hours."
+   },
+   {
+    "address": "301 10th Street North, Fargo, ND",
+    "status": "confirmed",
+    "wed_hours": null,
+    "phone": null,
+    "osm": "way/98262121",
+    "url": "https://www.lottery.nd.gov/_elements/pdf/faqs/Locations_20251231.pdf",
+    "note": "Listed as ND Lottery retailer at 12/31/2025 (Casey's General Store #3354 301 N. 10th Street); no hours or closure check; verify hours."
+   },
+   {
+    "address": "1401 South University Drive, Fargo, ND",
+    "status": "confirmed",
+    "wed_hours": null,
+    "phone": null,
+    "osm": "way/133287152",
+    "url": "https://www.lottery.nd.gov/_elements/pdf/faqs/Locations_20251231.pdf",
+    "note": "Listed as ND Lottery retailer at 12/31/2025 (Casey's General Store #3351 1401 S. University Dr.); no hours or closure check; verify hours."
+   },
+   {
+    "address": "2002 25th Street South, Fargo, ND",
+    "status": "confirmed",
+    "wed_hours": null,
+    "phone": null,
+    "osm": "way/133627035",
+    "url": "https://www.lottery.nd.gov/_elements/pdf/faqs/Locations_20251231.pdf",
+    "note": "Listed as ND Lottery retailer at 12/31/2025 (Casey's General Store #3349 2002 S. 25th Street); no hours or closure check; verify hours."
+   },
+   {
+    "address": "2501 23rd Avenue South, Fargo, ND",
+    "status": "confirmed",
+    "wed_hours": null,
+    "phone": null,
+    "osm": "way/134084813",
+    "url": "https://www.lottery.nd.gov/_elements/pdf/faqs/Locations_20251231.pdf",
+    "note": "Listed as ND Lottery retailer at 12/31/2025 (Casey's General Store #3857 2501 23rd Ave. S.); no hours or closure check; verify hours."
+   },
+   {
+    "address": "203 21st Street South, Moorhead, MN",
+    "status": "unverified",
+    "wed_hours": null,
+    "phone": null,
+    "osm": "way/215823162",
+    "url": "OSM only",
+    "note": "Only in OpenStreetMap (MN stores not covered by ND lottery list)."
+   },
+   {
+    "address": "1702 30th Avenue South, Moorhead, MN",
+    "status": "unverified",
+    "wed_hours": null,
+    "phone": null,
+    "osm": "way/241524363",
+    "url": "OSM only",
+    "note": "Only in OpenStreetMap (MN stores not covered by ND lottery list)."
+   },
+   {
+    "address": "311 Center Avenue West, Dilworth, MN",
+    "status": "unverified",
+    "wed_hours": null,
+    "phone": null,
+    "osm": "way/242543887",
+    "url": "OSM only",
+    "note": "Only in OpenStreetMap (MN stores not covered by ND lottery list)."
+   },
+   {
+    "address": "1 Center Avenue East, Dilworth, MN",
+    "status": "unverified",
+    "wed_hours": null,
+    "phone": null,
+    "osm": "way/243657883",
+    "url": "OSM only",
+    "note": "Only in OpenStreetMap (MN stores not covered by ND lottery list)."
+   },
+   {
+    "address": "204 42nd Street South, Fargo, ND",
+    "status": "confirmed",
+    "wed_hours": null,
+    "phone": null,
+    "osm": "way/244092733",
+    "url": "https://www.lottery.nd.gov/_elements/pdf/faqs/Locations_20251231.pdf",
+    "note": "Listed as ND Lottery retailer at 12/31/2025 (Casey's General Store #3360 204 42nd Street S.); no hours or closure check; verify hours."
+   },
+   {
+    "address": "4301 13th Avenue South, Fargo, ND",
+    "status": "confirmed",
+    "wed_hours": null,
+    "phone": null,
+    "osm": "way/244148316",
+    "url": "https://www.lottery.nd.gov/_elements/pdf/faqs/Locations_20251231.pdf",
+    "note": "Listed as ND Lottery retailer at 12/31/2025 (Casey's General Store #3366 4301 13th Ave. SW); no hours or closure check; verify hours."
+   },
+   {
+    "address": "901 Main Avenue East, West Fargo, ND",
+    "status": "unverified",
+    "wed_hours": null,
+    "phone": null,
+    "osm": "way/244230420",
+    "url": "OSM only",
+    "note": "Only in OpenStreetMap (MN stores not covered by ND lottery list)."
+   },
+   {
+    "address": "2401 45th Street South, Fargo, ND",
+    "status": "confirmed",
+    "wed_hours": null,
+    "phone": null,
+    "osm": "way/276656042",
+    "url": "https://www.lottery.nd.gov/_elements/pdf/faqs/Locations_20251231.pdf",
+    "note": "Listed as ND Lottery retailer at 12/31/2025 (Casey's General Store #3369 2401 45th St. S.); no hours or closure check; verify hours."
+   },
+   {
+    "address": "4405 45th Street South, Fargo, ND",
+    "status": "confirmed",
+    "wed_hours": null,
+    "phone": null,
+    "osm": "way/376747442",
+    "url": "https://www.lottery.nd.gov/_elements/pdf/faqs/Locations_20251231.pdf",
+    "note": "Listed as ND Lottery retailer at 12/31/2025 (Caseys General store #3296 4405 45th Street S); no hours or closure check; verify hours."
+   },
+   {
+    "address": "5680 23rd Avenue South, Fargo, ND",
+    "status": "confirmed",
+    "wed_hours": null,
+    "phone": null,
+    "osm": "way/557788028",
+    "url": "https://www.lottery.nd.gov/_elements/pdf/faqs/Locations_20251231.pdf",
+    "note": "Listed as ND Lottery retailer at 12/31/2025 (Casey's General Store #3370 5680 23rd Ave S.); no hours or closure check; verify hours."
+   },
+   {
+    "address": "3400 12th Avenue South, Moorhead, MN",
+    "status": "unverified",
+    "wed_hours": null,
+    "phone": null,
+    "osm": "way/599974784",
+    "url": "OSM only",
+    "note": "Only in OpenStreetMap (MN stores not covered by ND lottery list)."
+   },
+   {
+    "address": "2701 University Drive South, Fargo, ND",
+    "status": "confirmed",
+    "wed_hours": null,
+    "phone": null,
+    "osm": "way/685151264",
+    "url": "https://www.lottery.nd.gov/_elements/pdf/faqs/Locations_20251231.pdf",
+    "note": "Listed as ND Lottery retailer at 12/31/2025 (Casey's General Store #3353 2701 S. University Dr.); no hours or closure check; verify hours."
+   },
+   {
+    "address": "3202 43rd Street South, Fargo, ND",
+    "status": "confirmed",
+    "wed_hours": null,
+    "phone": null,
+    "osm": "way/957237934",
+    "url": "https://www.lottery.nd.gov/_elements/pdf/faqs/Locations_20251231.pdf",
+    "note": "Listed as ND Lottery retailer at 12/31/2025 (Casey's General Store #3541 3202 43rd St. S.); no hours or closure check; verify hours."
+   },
+   {
+    "address": "112 N Main St, Horace, ND 58047",
+    "status": "confirmed",
+    "wed_hours": null,
+    "phone": null,
+    "osm": null,
+    "url": "https://www.lottery.nd.gov/_elements/pdf/faqs/Locations_20251231.pdf",
+    "note": "Casey's General Store #3231 on ND Lottery retailer list 12/31/2025; not in OSM.",
+    "geo": "46.75990,-96.90373"
+   }
+  ],
+  "notes": "ND Lottery retailer list (31 Dec 2025) corroborates 13 ND stores (12 Fargo, West Fargo 901 E Main Ave, Horace). Moorhead and Dilworth stores come from OSM only (search also mentions 707 37th Ave S and 3400 12th Ave S, the latter 24h). Casey's own site blocked (403). OSM has duplicate ways for most stores; deduped by address. Hours not available."
+ },
+ "Circle K / Holiday": {
+  "fm_presence": "yes",
+  "basis_url": "https://www.lottery.nd.gov/_elements/pdf/faqs/Locations_20251231.pdf",
+  "stores": [
+   {
+    "address": "5651 36th Avenue South, Fargo, ND",
+    "status": "confirmed",
+    "wed_hours": null,
+    "phone": null,
+    "osm": "node/11184756891",
+    "url": "https://www.lottery.nd.gov/_elements/pdf/faqs/Locations_20251231.pdf",
+    "note": "Listed as ND Lottery retailer at 12/31/2025 (Circle K #2746505 5651 36th Ave S); no hours or closure check; verify hours."
+   },
+   {
+    "address": "1210 13th Avenue East, West Fargo, ND",
+    "status": "unverified",
+    "wed_hours": null,
+    "phone": null,
+    "osm": "node/11186795992",
+    "url": "OSM only",
+    "note": "Only in OpenStreetMap (MN stores not covered by ND lottery list)."
+   },
+   {
+    "address": "1020 19th Avenue North, Fargo, ND",
+    "status": "confirmed",
+    "wed_hours": null,
+    "phone": null,
+    "osm": "way/85033384",
+    "url": "https://www.lottery.nd.gov/_elements/pdf/faqs/Locations_20251231.pdf",
+    "note": "Listed as ND Lottery retailer at 12/31/2025 (Circle K #2746454 1020 19th Avenue N.); no hours or closure check; verify hours."
+   },
+   {
+    "address": "3040 25th Street South, Fargo, ND",
+    "status": "confirmed",
+    "wed_hours": "Mo-Fr 05:00-23:00; Sa,Su 06:00-23:00",
+    "phone": null,
+    "osm": "way/102924157",
+    "url": "https://www.lottery.nd.gov/_elements/pdf/faqs/Locations_20251231.pdf",
+    "note": "Listed as ND Lottery retailer at 12/31/2025 (Circle K #2746096 3040 25th St. S.); no hours or closure check; verify hours."
+   },
+   {
+    "address": "1501 11th Street North, Moorhead, MN",
+    "status": "unverified",
+    "wed_hours": null,
+    "phone": null,
+    "osm": "way/215617955",
+    "url": "OSM only",
+    "note": "Only in OpenStreetMap (MN stores not covered by ND lottery list)."
+   },
+   {
+    "address": "1902 45th Street South, Fargo, ND",
+    "status": "confirmed",
+    "wed_hours": null,
+    "phone": null,
+    "osm": "way/244299581",
+    "url": "https://www.lottery.nd.gov/_elements/pdf/faqs/Locations_20251231.pdf",
+    "note": "Listed as ND Lottery retailer at 12/31/2025 (Circle K #2746399 1902 45th St. S.); no hours or closure check; verify hours."
+   },
+   {
+    "address": "2755 Brandt Drive South, Fargo, ND",
+    "status": "confirmed",
+    "wed_hours": null,
+    "phone": null,
+    "osm": "way/276656048",
+    "url": "https://www.lottery.nd.gov/_elements/pdf/faqs/Locations_20251231.pdf",
+    "note": "Listed as ND Lottery retailer at 12/31/2025 (Circle K #2746418 2755 Brandt Drive); no hours or closure check; verify hours."
+   },
+   {
+    "address": "3475 28th Avenue South, Moorhead, MN",
+    "status": "unverified",
+    "wed_hours": null,
+    "phone": null,
+    "osm": "way/599979284",
+    "url": "OSM only",
+    "note": "Only in OpenStreetMap (MN stores not covered by ND lottery list)."
+   },
+   {
+    "address": "725 30th Avenue South, Moorhead, MN",
+    "status": "unverified",
+    "wed_hours": null,
+    "phone": null,
+    "osm": "way/654047550",
+    "url": "OSM only",
+    "note": "Only in OpenStreetMap (MN stores not covered by ND lottery list)."
+   },
+   {
+    "address": "2020 Sheyenne Street, West Fargo, ND",
+    "status": "confirmed",
+    "wed_hours": null,
+    "phone": null,
+    "osm": "way/759867553",
+    "url": "https://www.lottery.nd.gov/_elements/pdf/faqs/Locations_20251231.pdf",
+    "note": "Listed as ND Lottery retailer at 12/31/2025 (Circle K #2746469 2020 Sheyenne Street); no hours or closure check; verify hours."
+   },
+   {
+    "address": "5168 38th Street South, Fargo, ND",
+    "status": "confirmed",
+    "wed_hours": null,
+    "phone": null,
+    "osm": "way/1192172070",
+    "url": "https://www.lottery.nd.gov/_elements/pdf/faqs/Locations_20251231.pdf",
+    "note": "Listed as ND Lottery retailer at 12/31/2025 (Holiday Stationstore #2653818 5168 38th St. S.); no hours or closure check; verify hours."
+   },
+   {
+    "address": "101 North University Drive, Fargo, ND",
+    "status": "confirmed",
+    "wed_hours": null,
+    "phone": null,
+    "osm": "relation/20244288",
+    "url": "https://www.lottery.nd.gov/_elements/pdf/faqs/Locations_20251231.pdf",
+    "note": "Listed as ND Lottery retailer at 12/31/2025 (Circle K #2746124 101 N. University Drive); no hours or closure check; verify hours."
+   },
+   {
+    "address": "3190 36th St S, Fargo, ND 58103",
+    "status": "confirmed",
+    "wed_hours": null,
+    "phone": null,
+    "osm": null,
+    "url": "https://www.lottery.nd.gov/_elements/pdf/faqs/Locations_20251231.pdf",
+    "note": "Holiday Stationstore #2653863 on lottery list; not in OSM.",
+    "geo": "46.83280,-96.83587"
+   },
+   {
+    "address": "1510 32nd Ave S, Fargo, ND 58103",
+    "status": "confirmed",
+    "wed_hours": null,
+    "phone": null,
+    "osm": "way/182955186",
+    "url": "https://www.lottery.nd.gov/_elements/pdf/faqs/Locations_20251231.pdf",
+    "note": "Holiday Fuel Express #2746720 on lottery list; not in OSM.",
+    "geo": "46.83255,-96.80231"
+   },
+   {
+    "address": "5213 Veterans Blvd, Fargo, ND 58104",
+    "status": "confirmed",
+    "wed_hours": null,
+    "phone": null,
+    "osm": null,
+    "url": "https://www.lottery.nd.gov/_elements/pdf/faqs/Locations_20251231.pdf",
+    "note": "Circle K 2746555 on lottery list; not in OSM.",
+    "geo": "46.80154,-96.88186"
+   },
+   {
+    "address": "2445 65th Ave S, Fargo, ND 58104",
+    "status": "confirmed",
+    "wed_hours": null,
+    "phone": null,
+    "osm": null,
+    "url": "https://www.lottery.nd.gov/_elements/pdf/faqs/Locations_20251231.pdf",
+    "note": "Circle K 2746570 on lottery list; not in OSM.",
+    "geo": "46.78781,-96.81834"
+   },
+   {
+    "address": "7675 Jacks Way, Horace, ND 58047",
+    "status": "confirmed",
+    "wed_hours": null,
+    "phone": null,
+    "osm": null,
+    "url": "https://www.lottery.nd.gov/_elements/pdf/faqs/Locations_20251231.pdf",
+    "note": "Circle K Store #2653865 on lottery list; not in OSM.",
+    "geo": "no_census_match"
+   }
+  ],
+  "notes": "Many stores; ND ones corroborated by the ND Lottery retailer list (31 Dec 2025). Brand on signs may be Circle K or Holiday (Holiday is converting to Circle K; OSM names vary). Moorhead stores (OSM only): 1501 11th St N, 3475 28th Ave S (Holiday), 725 30th Ave S. Hours unverified."
+ },
+ "Pilot / Flying J": {
+  "fm_presence": "yes",
+  "basis_url": "https://www.lottery.nd.gov/_elements/pdf/faqs/Locations_20251231.pdf",
+  "stores": [
+   {
+    "address": "3150 39th St SW, Fargo, ND 58104",
+    "status": "confirmed",
+    "wed_hours": "likely 24 hours (travel center; not verified)",
+    "phone": null,
+    "osm": "way/225056624",
+    "url": "https://www.lottery.nd.gov/_elements/pdf/faqs/Locations_20251231.pdf",
+    "note": "Flying J #685 on ND Lottery list 12/31/2025; OSM matches."
+   }
+  ],
+  "notes": "Single Flying J in Fargo. Lottery lists address as 39th St SE."
+ },
+ "Cash Wise Foods": {
+  "fm_presence": "yes",
+  "basis_url": "https://www.lottery.nd.gov/_elements/pdf/faqs/Locations_20251231.pdf",
+  "stores": [
+   {
+    "address": "3300 Highway 10 E, Moorhead, MN 56560",
+    "status": "unverified",
+    "wed_hours": "06:00-22:00 (OSM)",
+    "phone": "(218) 236-4910",
+    "osm": "way/125173147",
+    "url": "OSM"
+   },
+   {
+    "address": "1401 33rd St S, Fargo, ND 58103",
+    "status": "confirmed",
+    "wed_hours": null,
+    "phone": null,
+    "osm": "way/133382246",
+    "url": "https://www.lottery.nd.gov/_elements/pdf/faqs/Locations_20251231.pdf",
+    "note": "Cash Wise Foods #3012."
+   },
+   {
+    "address": "4907 Timber Pkwy S, Fargo, ND 58104",
+    "status": "confirmed",
+    "wed_hours": null,
+    "phone": null,
+    "osm": "way/850997042",
+    "url": "https://www.lottery.nd.gov/_elements/pdf/faqs/Locations_20251231.pdf",
+    "note": "Cash Wise Foods #3050."
+   },
+   {
+    "address": "755 33rd Ave E, West Fargo, ND 58078",
+    "status": "confirmed",
+    "wed_hours": "06:00-22:00 (OSM)",
+    "phone": "(701) 281-6002",
+    "osm": "way/529883779",
+    "url": "https://www.lottery.nd.gov/_elements/pdf/faqs/Locations_20251231.pdf",
+    "note": "Cash Wise Foods #3045."
+   }
+  ],
+  "notes": "Last year's '1401 13th Ave S' (wrong; actual 1401 33rd St S), '5200 52nd Ave S' (no such Cash Wise; actual 4907 Timber Pkwy S) and '755 33rd Ave W' (actual 33rd Ave E) were wrong."
+ },
+ "Caribou Coffee": {
+  "fm_presence": "yes",
+  "basis_url": "https://locations.cariboucoffee.com/us/nd/fargo",
+  "stores": [
+   {
+    "address": "1207 19th Ave N, Fargo, ND 58102",
+    "status": "confirmed",
+    "wed_hours": "05:30-19:00",
+    "phone": "(701) 960-1549",
+    "osm": "way/1492242734",
+    "url": "https://locations.cariboucoffee.com/us/nd/fargo/1207-19th-ave-n",
+    "note": "Official Caribou locator page",
+    "geo": "46.90484,-96.79595"
+   },
+   {
+    "address": "1401 Administration Ave, Fargo, ND 58105",
+    "status": "confirmed",
+    "wed_hours": "07:00-19:00",
+    "phone": "(701) 231-8791",
+    "osm": null,
+    "url": "https://locations.cariboucoffee.com/us/nd/fargo/1401-administration-ave",
+    "note": "Official Caribou locator page",
+    "geo": "46.89245,-96.80165"
+   },
+   {
+    "address": "1450 25th Street SW, Fargo, ND 58103",
+    "status": "confirmed",
+    "wed_hours": "05:30-19:00",
+    "phone": "(701) 298-7745",
+    "osm": "node/13305497720",
+    "url": "https://locations.cariboucoffee.com/us/nd/fargo/1450-25th-street-sw",
+    "note": "Official Caribou locator page",
+    "geo": "46.85990,-96.81950"
+   },
+   {
+    "address": "1532 S 32nd Ave S, Fargo, ND 58103",
+    "status": "confirmed",
+    "wed_hours": "07:00-17:00",
+    "phone": "(701) 280-1999",
+    "osm": null,
+    "url": "https://locations.cariboucoffee.com/us/nd/fargo/1532-s-32nd-ave-s",
+    "note": "Official Caribou locator page",
+    "geo": "46.83256,-96.80307"
+   },
+   {
+    "address": "2510 N Broadway Avenue, Fargo, ND 58102",
+    "status": "confirmed",
+    "wed_hours": "07:00-17:00",
+    "phone": "(701) 293-5444",
+    "osm": null,
+    "url": "https://locations.cariboucoffee.com/us/nd/fargo/2510-n-broadway-avenue",
+    "note": "Official Caribou locator page",
+    "geo": "46.91038,-96.78747"
+   },
+   {
+    "address": "3071 25th Street S, Fargo, ND 58103",
+    "status": "confirmed",
+    "wed_hours": "05:30-19:00",
+    "phone": "(701) 960-1885",
+    "osm": "node/9368728510",
+    "url": "https://locations.cariboucoffee.com/us/nd/fargo/3071-25th-street-s",
+    "note": "Official Caribou locator page",
+    "geo": "46.83423,-96.82001"
+   },
+   {
+    "address": "3175 25th Street South, Fargo, ND 58103",
+    "status": "confirmed",
+    "wed_hours": "06:00-18:00",
+    "phone": "(701) 237-3007",
+    "osm": "node/9368728510",
+    "url": "https://locations.cariboucoffee.com/us/nd/fargo/3175-25th-street-south",
+    "note": "Official Caribou locator page",
+    "geo": "46.83325,-96.82004"
+   },
+   {
+    "address": "4101 S 13th Ave S, Fargo, ND 58103",
+    "status": "confirmed",
+    "wed_hours": "07:00-17:00",
+    "phone": "(701) 282-6363",
+    "osm": null,
+    "url": "https://locations.cariboucoffee.com/us/nd/fargo/4101-s-13th-ave-s",
+    "note": "Official Caribou locator page",
+    "geo": "46.86187,-96.84973"
+   },
+   {
+    "address": "4151 45th St South, Fargo, ND 58104",
+    "status": "confirmed",
+    "wed_hours": "06:00-19:00",
+    "phone": "(701) 281-8111",
+    "osm": "node/4278331490",
+    "url": "https://locations.cariboucoffee.com/us/nd/fargo/4151-45th-st-south",
+    "note": "Official Caribou locator page"
+   },
+   {
+    "address": "4475 31st Ave S, Fargo, ND 58104",
+    "status": "confirmed",
+    "wed_hours": "05:30-19:00",
+    "phone": "(701) 960-1012",
+    "osm": null,
+    "url": "https://locations.cariboucoffee.com/us/nd/fargo/4475-31st-ave-s",
+    "note": "Official Caribou locator page",
+    "geo": "46.83458,-96.86177"
+   },
+   {
+    "address": "4484 15th Ave, Fargo, ND 58103",
+    "status": "confirmed",
+    "wed_hours": "05:30-19:00",
+    "phone": "(701) 540-6430",
+    "osm": null,
+    "url": "https://locations.cariboucoffee.com/us/nd/fargo/4484-15th-ave",
+    "note": "Official Caribou locator page",
+    "geo": "46.85826,-96.86141"
+   },
+   {
+    "address": "5616 26th Ave S, Fargo, ND 58103",
+    "status": "confirmed",
+    "wed_hours": "05:30-18:00",
+    "phone": "(701) 404-2933",
+    "osm": "way/1047006440",
+    "url": "https://locations.cariboucoffee.com/us/nd/fargo/5616-26th-ave-s",
+    "note": "Official Caribou locator page"
+   },
+   {
+    "address": "1100 13th Avenue East, West Fargo, ND 58078",
+    "status": "confirmed",
+    "wed_hours": "06:00-18:00",
+    "phone": "(701) 277-5566",
+    "osm": null,
+    "url": "https://locations.cariboucoffee.com/us/nd/west-fargo/1100-13th-avenue-east",
+    "note": "Official Caribou locator page",
+    "geo": "46.86222,-96.88125"
+   },
+   {
+    "address": "1625 13th Avenue East, West Fargo, ND 58078",
+    "status": "confirmed",
+    "wed_hours": "05:30-19:00",
+    "phone": "(701) 277-0783",
+    "osm": null,
+    "url": "https://locations.cariboucoffee.com/us/nd/west-fargo/1625-13th-avenue-east",
+    "note": "Official Caribou locator page",
+    "geo": "46.86186,-96.87436"
+   },
+   {
+    "address": "2050 Sheyenne Street, West Fargo, ND 58078",
+    "status": "confirmed",
+    "wed_hours": "06:00-19:00",
+    "phone": "(701) 282-5555",
+    "osm": null,
+    "url": "https://locations.cariboucoffee.com/us/nd/west-fargo/2050-sheyenne-street",
+    "note": "Official Caribou locator page",
+    "geo": "46.85135,-96.90603"
+   },
+   {
+    "address": "755 33rd Ave W, West Fargo, ND 58078",
+    "status": "confirmed",
+    "wed_hours": "07:00-17:00",
+    "phone": "(701) 281-6002",
+    "osm": null,
+    "url": "https://locations.cariboucoffee.com/us/nd/west-fargo/755-33rd-ave-w",
+    "note": "Official Caribou locator page",
+    "geo": "46.92067,-96.78852"
+   },
+   {
+    "address": "101 11th St. S, Moorhead, MN 56560",
+    "status": "confirmed",
+    "wed_hours": "06:00-19:00",
+    "phone": "(218) 236-6333",
+    "osm": null,
+    "url": "https://locations.cariboucoffee.com/us/mn/moorhead/101-11th-st.-s",
+    "note": "Official Caribou locator page",
+    "geo": "46.87371,-96.76283"
+   },
+   {
+    "address": "950 40th Ave. S, Moorhead, MN 56560",
+    "status": "confirmed",
+    "wed_hours": "06:00-18:00",
+    "phone": "(218) 359-4000",
+    "osm": null,
+    "url": "https://locations.cariboucoffee.com/us/mn/moorhead/950-40th-ave.-s",
+    "note": "Official Caribou locator page",
+    "geo": "46.83312,-96.76498"
+   }
+  ],
+  "notes": "Official Caribou locator (Yext): 12 Fargo, 4 West Fargo, 2 Moorhead; none in Dilworth/Horace. Several are inside Hornbacher's, Family Fare or Cash Wise stores. Last year's 1433 S University Dr (Hornbacher's Express) now returns 404 on the locator and is not listed, so treat as closed/removed. Wed hours come from each page; holiday hours may differ."
+ },
+ "Pizza Ranch": {
+  "fm_presence": "yes",
+  "basis_url": "https://pizzaranch.com/locations/nd/fargo/4480-23rd-avenue-south",
+  "stores": [
+   {
+    "address": "4480 23rd Ave S, Suite A, Fargo, ND 58104",
+    "status": "confirmed",
+    "wed_hours": "11:00-21:00 (weekday/weekend buffet per page)",
+    "phone": "(701) 356-4141",
+    "osm": "node/1944319163",
+    "url": "https://pizzaranch.com/locations/nd/fargo/4480-23rd-avenue-south"
+   },
+   {
+    "address": "1504 Center Ave W, Dilworth, MN 56529",
+    "status": "closed",
+    "wed_hours": null,
+    "phone": "(218) 287-6001",
+    "osm": "way/191991660",
+    "url": "https://www.valleynewslive.com/2026/09/08/dilworth-pizza-ranch-permanently-closes-its-doors/",
+    "note": "Valley News Live 8 Sep 2026: Dilworth Pizza Ranch permanently closed (earlier temporary closure Jul 2026). Do NOT list."
+   }
+  ],
+  "notes": "Last year's '1250 40th St S, Fargo' is wrong (actual 4480 23rd Ave S). Dilworth closed."
+ },
+ "Village Inn": {
+  "fm_presence": "yes",
+  "basis_url": "https://www.villageinn.com/moorhead-mn",
+  "stores": [
+   {
+    "address": "940 Holiday Dr, Moorhead, MN 56560",
+    "status": "unverified",
+    "wed_hours": "06:00-20:00",
+    "phone": "(218) 303-1761",
+    "osm": "way/194297877",
+    "url": "https://www.villageinn.com/moorhead-mn",
+    "note": "Official Village Inn page still lists it with hours; online ordering 'currently unavailable'; a MapQuest snapshot showed 'Closed'. Call before sending anyone."
+   }
+  ],
+  "notes": "Last year's '3050 S 25th St, Fargo' not found (no Fargo Village Inn on locator search)."
+ },
+ "Great Clips": {
+  "fm_presence": "yes",
+  "basis_url": "https://mapdoor.com/us/nd/fargo/great-clips",
+  "stores": [
+   {
+    "address": "1100 19th Ave N, Fargo, ND 58102",
+    "status": "unverified",
+    "wed_hours": "09:00-19:00 (directory Mon-Fri)",
+    "phone": "(701) 297-0858",
+    "osm": "node/2864934729",
+    "url": "https://mapdoor.com/us/nd/fargo/great-clips",
+    "note": "Directory + OSM unaddressed node nearby.",
+    "geo": "46.90473,-96.79447"
+   },
+   {
+    "address": "1650 45th St S, Fargo, ND 58103",
+    "status": "unverified",
+    "wed_hours": "09:00-19:00 (directory)",
+    "phone": "(701) 532-2244",
+    "osm": "node/5706022824",
+    "url": "https://mapdoor.com/us/nd/fargo/great-clips",
+    "geo": "46.85550,-96.86176"
+   },
+   {
+    "address": "3051 25th St SW, Fargo, ND 58103",
+    "status": "unverified",
+    "wed_hours": "09:00-19:00 (directory)",
+    "phone": "(701) 298-3288",
+    "osm": null,
+    "url": "https://mapdoor.com/us/nd/fargo/great-clips",
+    "note": "No OSM Great Clips within 300 m.",
+    "geo": "46.84303,-96.82782"
+   },
+   {
+    "address": "2515 8th St S, Moorhead, MN 56560",
+    "status": "unverified",
+    "wed_hours": "09:00-19:00 (directory)",
+    "phone": "(218) 287-6222",
+    "osm": "node/7847766702",
+    "url": "https://mapdoor.com/us/mn/moorhead/great-clips"
+   },
+   {
+    "address": "1970 Sheyenne St, West Fargo, ND 58078",
+    "status": "unverified",
+    "wed_hours": "09:00-19:00 (directory)",
+    "phone": "(701) 492-7456",
+    "osm": "way/801367931",
+    "url": "https://mapdoor.com/us/nd/west-fargo/great-clips",
+    "geo": "46.85190,-96.90550"
+   }
+  ],
+  "notes": "Great Clips locator not fetchable; Mapdoor directory plus web search agree on these 5. A 6th, 1617 32nd Ave S Ste M (Fresha only), is unconfirmed. Salons are independently owned; hours shown are typical Mon-Fri. Valley News Live reported a Fargo Great Clips free Veterans Day haircut promo in Nov 2025, so call about 2026."
+ },
+ "Sport Clips": {
+  "fm_presence": "yes",
+  "basis_url": "https://jobs.sportclips.com/our-locations/nd/fargo/6723",
+  "stores": [
+   {
+    "address": "745 13th Ave E, West Fargo, ND 58078",
+    "status": "unverified",
+    "wed_hours": null,
+    "phone": "(701) 532-2400 (Fresha/BBB)",
+    "osm": null,
+    "url": "https://jobs.sportclips.com/our-locations/nd/fargo/6723",
+    "note": "Sport Clips careers page lists 745 13th Ave E; BBB/Fresha list 675 13th Ave E Ste 105 (West Plains Mall). Address conflict, call first.",
+    "geo": "46.86203,-96.88567"
+   },
+   {
+    "address": "5050 Timber Pkwy S, Fargo, ND 58104",
+    "status": "unverified",
+    "wed_hours": null,
+    "phone": null,
+    "osm": null,
+    "url": "https://jobs.sportclips.com/our-locations/nd/fargo/6016",
+    "note": "Sport Clips Timber Creek; a MapQuest snapshot showed 'Closed' (probably just hours).",
+    "geo": "no_census_match"
+   }
+  ],
+  "notes": "No Moorhead or Dilworth store found. Last year's '4340 13th Ave S' not found."
+ },
+ "Starbucks": {
+  "fm_presence": "yes",
+  "basis_url": "https://www.starbucks.com/store-locator/store/17517/moorhead-i-94-8th-906-holiday-drive-moorhead-mn-565604445-us",
+  "stores": [
+   {
+    "address": "906 Holiday Dr, Moorhead, MN 56560",
+    "status": "unverified",
+    "wed_hours": null,
+    "phone": "(218) 233-0392",
+    "osm": "way/599481294",
+    "url": "https://www.starbucks.com/store-locator/store/17517/moorhead-i-94-8th-906-holiday-drive-moorhead-mn-565604445-us",
+    "note": "Store page exists on starbucks.com (JS-rendered; no hours extracted)."
+   },
+   {
+    "address": "3301 Highway 10 E, Moorhead, MN 56560 (inside Target)",
+    "status": "unverified",
+    "wed_hours": "Target store 08:00-22:00; Starbucks hours may be shorter",
+    "phone": null,
+    "osm": "way/1308337372",
+    "url": "https://mapdoor.com/us/nd/fargo/starbucks",
+    "note": "Target Moorhead #658 in-store Starbucks."
+   },
+   {
+    "address": "4202 13th Ave S, Fargo, ND 58103 (inside Target)",
+    "status": "unverified",
+    "wed_hours": "Target store 07:00-22:00; Starbucks hours may be shorter",
+    "phone": null,
+    "osm": null,
+    "url": "https://mapdoor.com/us/nd/fargo/starbucks",
+    "note": "Target Fargo #61 in-store Starbucks.",
+    "geo": "46.86159,-96.85118"
+   },
+   {
+    "address": "2511 Kirsten Ln S, Fargo, ND 58103",
+    "status": "unverified",
+    "wed_hours": "04:30-21:00 (OSM)",
+    "phone": "(701) 235-3235",
+    "osm": "node/9592784444",
+    "url": "OSM"
+   },
+   {
+    "address": "1343 S University Dr, Fargo, ND 58103",
+    "status": "unverified",
+    "wed_hours": null,
+    "phone": "(701) 238-8941",
+    "osm": "way/133284957",
+    "url": "OSM"
+   },
+   {
+    "address": "4480 26th Ave S, Fargo, ND 58103",
+    "status": "unverified",
+    "wed_hours": null,
+    "phone": "(701) 318-5863",
+    "osm": "way/599973510",
+    "url": "OSM"
+   },
+   {
+    "address": "3771 53rd Ave S, Fargo, ND 58104",
+    "status": "unverified",
+    "wed_hours": null,
+    "phone": "(701) 318-8628",
+    "osm": "way/742253489",
+    "url": "OSM",
+    "note": "Delivery apps mention a '52nd and I-29' Starbucks."
+   },
+   {
+    "address": "805 37th Ave S, Moorhead, MN 56560",
+    "status": "unverified",
+    "wed_hours": null,
+    "phone": null,
+    "osm": "way/1311864972",
+    "url": "OSM + Uber Eats title '805 37th S Ave'"
+   }
+  ],
+  "notes": "Starbucks locator is JS-only, so no store is 'confirmed'. List is OSM + Target + directories. Foursquare lists 115 4th St S Moorhead (probably old). A West Fargo 13th Ave Starbucks appears in a delivery app with no address. Last year's '1450 25th St S' and '2377 S University Dr' not found. The Starbucks near '3250 Hwy 10 E' is probably the Target one (3301 Hwy 10 E)."
+ },
+ "Little Caesars": {
+  "fm_presence": "yes",
+  "basis_url": "https://www.bbb.org/us/nd/fargo/category/carry-out-food",
+  "stores": [
+   {
+    "address": "1705 45th St S, Fargo, ND 58103",
+    "status": "unverified",
+    "wed_hours": null,
+    "phone": null,
+    "osm": "node/5705989699",
+    "url": "Uber Eats + OSM"
+   },
+   {
+    "address": "Address not found (OSM node at 46.9041,-96.7939, north Fargo near 19th Ave N)",
+    "status": "unverified",
+    "wed_hours": null,
+    "phone": null,
+    "osm": "node/8831007221",
+    "url": "OSM only",
+    "note": "Do not use as a destination without a verified address."
+   },
+   {
+    "address": "800 Holiday Dr, Suite 176, Moorhead, MN 56560",
+    "status": "unverified",
+    "wed_hours": null,
+    "phone": "(218) 331-0094",
+    "osm": null,
+    "url": "YellowPages via search",
+    "note": "Yellow Pages only.",
+    "geo": "46.85100,-96.76654"
+   },
+   {
+    "address": "2412 8th St S, Moorhead, MN 56560",
+    "status": "unverified",
+    "wed_hours": null,
+    "phone": null,
+    "osm": null,
+    "url": "BBB via search",
+    "note": "BBB only; may be an older address.",
+    "geo": "46.85095,-96.76792"
+   }
+  ],
+  "notes": "Little Caesars locator not scrapeable. Addresses come from directories only. Last year's '1775 45th St S' not found."
+ },
+ "Dairy Queen": {
+  "fm_presence": "yes",
+  "basis_url": "https://mapdoor.com/us/nd/fargo/dairy-queen",
+  "stores": [
+   {
+    "address": "24 8th St S, Moorhead, MN 56560",
+    "status": "unverified",
+    "wed_hours": null,
+    "phone": "(218) 233-3221",
+    "osm": "way/186248539",
+    "url": "https://mapdoor.com/us/mn/moorhead/dairy-queen",
+    "note": "OSM + directory agree."
+   },
+   {
+    "address": "802 30th Ave S, Moorhead, MN 56560",
+    "status": "unverified",
+    "wed_hours": null,
+    "phone": "(701) 997-9383",
+    "osm": "way/183682452",
+    "url": "https://mapdoor.com/us/mn/moorhead/dairy-queen",
+    "note": "OSM + directory agree."
+   },
+   {
+    "address": "1702 W Center Ave, Dilworth, MN 56529",
+    "status": "unverified",
+    "wed_hours": null,
+    "phone": "(218) 512-1003",
+    "osm": "node/9786489647",
+    "url": "https://mapdoor.com/us/nd/fargo/dairy-queen",
+    "note": "OSM + directory agree."
+   },
+   {
+    "address": "402 N University Dr, Fargo, ND 58102",
+    "status": "unverified",
+    "wed_hours": null,
+    "phone": "(701) 232-4653",
+    "osm": "way/98322581",
+    "url": "https://dairyqueen.com/en-us/locations/nd/fargo/402-n-university-dr/5112",
+    "note": "Official DQ page URL surfaced in search; fetch blocked."
+   },
+   {
+    "address": "3201 13th Ave S, Fargo, ND 58103",
+    "status": "unverified",
+    "wed_hours": null,
+    "phone": "(701) 293-5918",
+    "osm": "way/133113162",
+    "url": "OSM"
+   },
+   {
+    "address": "1110 13th Ave E, West Fargo, ND 58078",
+    "status": "unverified",
+    "wed_hours": null,
+    "phone": "(701) 356-9337",
+    "osm": "way/244286512",
+    "url": "https://mapdoor.com/us/nd/fargo/dairy-queen"
+   },
+   {
+    "address": "3234 Sheyenne St, West Fargo, ND 58078",
+    "status": "unverified",
+    "wed_hours": null,
+    "phone": "(701) 281-3443",
+    "osm": "way/557693559",
+    "url": "https://mapdoor.com/us/nd/fargo/dairy-queen"
+   },
+   {
+    "address": "2401 45th St S, Fargo, ND 58104",
+    "status": "unverified",
+    "wed_hours": "10:00-21:30 (OSM Su-Th)",
+    "phone": "(701) 356-3991",
+    "osm": "way/599480728",
+    "url": "https://mapdoor.com/us/nd/fargo/dairy-queen"
+   },
+   {
+    "address": "5131 Prosperity Way S, Fargo, ND 58104",
+    "status": "unverified",
+    "wed_hours": null,
+    "phone": "(701) 532-2055",
+    "osm": "way/850997044",
+    "url": "https://mapdoor.com/us/nd/fargo/dairy-queen"
+   },
+   {
+    "address": "West Acres Mall (no street address given), Fargo, ND 58103",
+    "status": "unverified",
+    "wed_hours": null,
+    "phone": null,
+    "osm": null,
+    "url": "https://dairyqueen.com/en-us/locations/nd/fargo/west-acres-mall/10824",
+    "note": "Mall location; DQ page URL surfaced in search."
+   },
+   {
+    "address": "4015 45th St S, Fargo, ND 58104",
+    "status": "unverified",
+    "wed_hours": null,
+    "phone": null,
+    "osm": null,
+    "url": "https://mapdoor.com/us/nd/fargo/dairy-queen",
+    "note": "Directory only.",
+    "geo": "46.81779,-96.86148"
+   },
+   {
+    "address": "3200 20th St S, Fargo, ND 58104",
+    "status": "unverified",
+    "wed_hours": null,
+    "phone": null,
+    "osm": null,
+    "url": "https://mapdoor.com/us/nd/fargo/dairy-queen",
+    "note": "Directory only.",
+    "geo": "46.83201,-96.81270"
+   }
+  ],
+  "notes": "DQ locator blocked (403). First 9 are in OSM with phones; last 3 are directory-only. Many DQs are independent franchises, so hours vary. Last year's '101 8th St S Moorhead' is actually 24 8th St S; '1431 S University Dr' (Fargo) and '1515 13th Ave E' (West Fargo) not found; the West Fargo store is 1110 13th Ave E."
+ },
+ "Twin Peaks": {
+  "fm_presence": "yes",
+  "basis_url": "https://www.mapquest.com/us/north-dakota/twin-peaks-431471562",
+  "stores": [
+   {
+    "address": "1515 42nd St S, Fargo, ND 58103",
+    "status": "unverified",
+    "wed_hours": null,
+    "phone": "(701) 515-4685 (Yellow Pages, older)",
+    "osm": "way/244156990",
+    "url": "https://www.franchising.com/news/20211005_twin_peaks_brings_the_lodge_mantality_to_bison_country.html",
+    "note": "Opened about 2021 in the former Shotgun Sally's; address from press release, MapQuest, Birdeye; OSM matches. Current status not checked on twinpeaks.com (unreachable)."
+   }
+  ],
+  "notes": "Single Fargo store."
+ },
+ "Buffalo Wild Wings": {
+  "fm_presence": "yes",
+  "basis_url": "https://www.ezcater.com/catering/buffalo-wild-wings-moorhead",
+  "stores": [
+   {
+    "address": "1515 19th Ave N, Fargo, ND 58102",
+    "status": "unverified",
+    "wed_hours": "10:30-23:30 (ezcater catering hours)",
+    "phone": null,
+    "osm": "way/84963409",
+    "url": "https://www.ezcater.com/catering/buffalo-wild-wings-fargo"
+   },
+   {
+    "address": "1501 42nd St S, Fargo, ND 58103",
+    "status": "unverified",
+    "wed_hours": "10:30-23:30 (ezcater catering hours)",
+    "phone": null,
+    "osm": "way/244156993",
+    "url": "https://www.ezcater.com/catering/buffalo-wild-wings-fargo-nd-st-south",
+    "note": "Last year said '4340 13th Ave S', which is wrong; ezcater says 1501 42nd St S (OSM point matches)."
+   },
+   {
+    "address": "2201 1st Ave N, Moorhead, MN 56560",
+    "status": "unverified",
+    "wed_hours": "10:30-23:30 (ezcater catering hours)",
+    "phone": "(218) 512-0400",
+    "osm": "way/74268716",
+    "url": "https://www.ezcater.com/catering/buffalo-wild-wings-moorhead"
+   }
+  ],
+  "notes": "BWW official locator not scrapeable. Three stores agree across ezcater, Uber Eats and OSM; status not confirmed on an official page."
+ },
+ "Kohl's": {
+  "fm_presence": "yes",
+  "basis_url": "https://www.kohls.com/stores/nd/fargo-202.shtml",
+  "stores": [
+   {
+    "address": "4444 13th Ave S, Fargo, ND 58103",
+    "status": "unverified",
+    "wed_hours": "09:00-22:00 (store page snippet and OSM Mo-Sa)",
+    "phone": "(701) 277-8277",
+    "osm": "node/1944361409",
+    "url": "https://www.kohls.com/stores/nd/fargo-202.shtml",
+    "note": "Kohl's FAQ lists Veterans Day as open; official page not fetchable here (403)."
+   }
+  ],
+  "notes": "Single Fargo Kohl's; no Moorhead store found."
+ },
+ "Perkins": {
+  "fm_presence": "yes",
+  "basis_url": "https://perkinsrestaurants.com/locations/us/nd/fargo/1220-36th-st-s",
+  "stores": [
+   {
+    "address": "1220 36th St S, Fargo, ND 58103",
+    "status": "unverified",
+    "wed_hours": "official page (via search snippet) says open late; third-party says 06:00-24:00",
+    "phone": "(701) 404-1639",
+    "osm": "way/133113051",
+    "url": "https://perkinsrestaurants.com/locations/us/nd/fargo/1220-36th-st-s",
+    "note": "Official Perkins page surfaced in search; my direct fetch returned 404. Delivery apps list 'Perkins American Food Co (Fargo - 36th St)'. Call to confirm hours."
+   }
+  ],
+  "notes": "Last year's '3502 S 13th Ave' is wrong/outdated (actual 1220 36th St S, at 13th Ave S)."
+ },
+ "Granite City Food & Brewery": {
+  "fm_presence": "yes",
+  "basis_url": "https://www.opentable.com/r/granite-city-food-and-brewery-fargo",
+  "stores": [
+   {
+    "address": "1636 42nd St SW, Fargo, ND 58103",
+    "status": "unverified",
+    "wed_hours": null,
+    "phone": "(701) 293-3000",
+    "osm": "way/219117388",
+    "url": "https://www.opentable.com/r/granite-city-food-and-brewery-fargo",
+    "note": "OSM + OpenTable; latest dated review Apr 2025; chain has closed other sites. No closure report found for Fargo. Call first."
+   }
+  ],
+  "notes": "Last year's '1600 45th St S' is wrong. gcfb.com locations page is JS-only."
+ },
+ "MacKenzie River Pizza": {
+  "fm_presence": "yes",
+  "basis_url": "https://www.franchising.com/news/20180412_mackenzie_river_pizza_breaks_ground_in_fargo_nd.html",
+  "stores": [
+   {
+    "address": "819 24th Ave E, West Fargo, ND 58078",
+    "status": "unverified",
+    "wed_hours": "11:00-21:00 (OSM Mo-Su)",
+    "phone": "(701) 532-2221",
+    "osm": "way/1047006433",
+    "url": "https://www.franchising.com/news/20180412_mackenzie_river_pizza_breaks_ground_in_fargo_nd.html",
+    "note": "Opened 10 Dec 2018; hours from OSM; not verified on chain site."
+   }
+  ],
+  "notes": ""
+ },
+ "Freddy's Frozen Custard & Steakburgers": {
+  "fm_presence": "yes",
+  "basis_url": "https://www.freddys.com/blog/freddys-first-north-dakota-location-opens-tuesday",
+  "stores": [
+   {
+    "address": "2653 45th St S, Fargo, ND 58104",
+    "status": "unverified",
+    "wed_hours": null,
+    "phone": null,
+    "osm": null,
+    "url": "https://www.commercialcafe.com/commercial-property/us/nd/fargo/freddy-s-fargo/",
+    "note": "Opened April 2022; address from press and a 2026 CRE listing. Last year had 2635 45th St S (digit wrong).",
+    "geo": "46.83909,-96.86218"
+   }
+  ],
+  "notes": "freddys.com locator page returned a JS shell. Only one Fargo store found."
+ },
+ "Scooter's Coffee": {
+  "fm_presence": "yes",
+  "basis_url": "https://ground.news/article/scooters-coffee-shop-to-open-this-fall-in-north-fargo",
+  "stores": [
+   {
+    "address": "3610 Veterans Blvd, Fargo, ND 58104",
+    "status": "unverified",
+    "wed_hours": null,
+    "phone": null,
+    "osm": null,
+    "url": "https://ground.news/article/scooters-coffee-shop-to-open-this-fall-in-north-fargo",
+    "note": "Opened Feb 2022 per article.",
+    "geo": "46.82504,-96.88279"
+   },
+   {
+    "address": "1350 21st Ave N, Fargo, ND 58102",
+    "status": "unverified",
+    "wed_hours": null,
+    "phone": null,
+    "osm": null,
+    "url": "https://ground.news/article/scooters-coffee-shop-to-open-this-fall-in-north-fargo",
+    "note": "Planned second store (article undated, 'open this fall'); opening NOT confirmed.",
+    "geo": "46.90647,-96.79775"
+   }
+  ],
+  "notes": "Last year gave 'Multiple Locations' (not an address). No Moorhead/West Fargo store found."
+ },
+ "Insomnia Cookies": {
+  "fm_presence": "yes",
+  "basis_url": "https://www.onlyinyourstate.com/north-dakota/insomnia-cookies-nd/",
+  "stores": [
+   {
+    "address": "412 Broadway N, Suite 412A, Fargo, ND 58102",
+    "status": "unverified",
+    "wed_hours": "11:00-01:00 (Birdeye weekdays, may differ)",
+    "phone": null,
+    "osm": null,
+    "url": "https://reviews.birdeye.com/insomnia-cookies-173504826815690",
+    "note": "Downtown Fargo. Last year's '14 8th St S' is wrong.",
+    "geo": "46.88021,-96.78778"
+   }
+  ],
+  "notes": ""
+ },
+ "Charleys Cheesesteaks": {
+  "fm_presence": "yes",
+  "basis_url": "https://www.ubereats.com/",
+  "stores": [
+   {
+    "address": "Inside the Petro Stopping Center, Fargo, ND (street address not confirmed)",
+    "status": "unverified",
+    "wed_hours": null,
+    "phone": null,
+    "osm": null,
+    "url": "Uber Eats 'Charleys Cheesesteaks & Wings - Fargo Petro Stopping Center'",
+    "note": "The ND Lottery list shows Petro Shopping Center #61 at 4510 19th Ave SW; that is an inference, not Charleys' own address."
+   }
+  ],
+  "notes": "Last year's '3902 13th Ave SW' (the Chili's/Smashburger mall address) is not Charleys."
+ },
+ "Tommy's Express Car Wash": {
+  "fm_presence": "yes",
+  "basis_url": "https://tommys-express.com/locations/",
+  "stores": [
+   {
+    "address": "4682 32nd Ave S, Fargo, ND 58104",
+    "status": "confirmed",
+    "wed_hours": null,
+    "phone": null,
+    "osm": null,
+    "url": "https://tommys-express.com/locations/",
+    "geo": "46.81059,-96.82875"
+   },
+   {
+    "address": "1702 40th St S, Fargo, ND 58103",
+    "status": "confirmed",
+    "wed_hours": null,
+    "phone": null,
+    "osm": null,
+    "url": "https://tommys-express.com/locations/",
+    "geo": "46.85492,-96.84695"
+   },
+   {
+    "address": "3115 8th St S, Moorhead, MN 56560",
+    "status": "confirmed",
+    "wed_hours": null,
+    "phone": null,
+    "osm": "way/1335588344",
+    "url": "https://tommys-express.com/locations/"
+   },
+   {
+    "address": "3102 US-10, Moorhead, MN 56560",
+    "status": "confirmed",
+    "wed_hours": null,
+    "phone": null,
+    "osm": null,
+    "url": "https://tommys-express.com/locations/",
+    "geo": "46.87662,-96.73118"
+   }
+  ],
+  "notes": "Official locations page lists 4 FM sites. Hours not extracted; verify."
+ },
+ "Jiffy Lube": {
+  "fm_presence": "yes",
+  "basis_url": "https://www.jiffylube.com/locations/nd",
+  "stores": [
+   {
+    "address": "2835 13th Ave S, Fargo, ND 58103",
+    "status": "confirmed",
+    "wed_hours": null,
+    "phone": "(701) 235-8117",
+    "osm": null,
+    "url": "https://www.jiffylube.com/locations/nd",
+    "geo": "46.86167,-96.82634"
+   },
+   {
+    "address": "2740 32nd Ave S, Fargo, ND 58103",
+    "status": "confirmed",
+    "wed_hours": null,
+    "phone": "(701) 298-8798",
+    "osm": null,
+    "url": "https://www.jiffylube.com/locations/nd",
+    "geo": "46.83243,-96.82374"
+   },
+   {
+    "address": "11 10th St N, Fargo, ND 58102",
+    "status": "confirmed",
+    "wed_hours": null,
+    "phone": "(701) 293-3967",
+    "osm": null,
+    "url": "https://www.jiffylube.com/locations/nd",
+    "geo": "46.87612,-96.79396"
+   }
+  ],
+  "notes": "Official Jiffy Lube ND list shows 3 Fargo stores, none in West Fargo/Horace. The MN page showed no Moorhead/Dilworth entry (list may be partial)."
+ },
+ "Famous Dave's": {
+  "fm_presence": "no",
+  "basis_url": "https://www.kvrr.com/?p=336358",
+  "stores": [
+   {
+    "address": "2581 45th St S, Fargo, ND 58104",
+    "status": "closed",
+    "wed_hours": null,
+    "phone": null,
+    "osm": null,
+    "url": "https://www.kvrr.com/?p=336358",
+    "note": "KVRR/KFGO: the temporary closure of Famous Dave's Fargo is permanent; OpenTable lists it permanently closed."
+   }
+  ],
+  "notes": "Fargo store closed. No Moorhead store found."
+ },
+ "Ruby Tuesday": {
+  "fm_presence": "yes",
+  "basis_url": "https://www.mapquest.com/us/north-dakota/ruby-tuesday-22982702",
+  "stores": [
+   {
+    "address": "2535 23rd Ave S, Fargo, ND 58103",
+    "status": "unverified",
+    "wed_hours": "11:00-21:00 (Restaurant Guru)",
+    "phone": "(701) 232-2012",
+    "osm": "way/134084791",
+    "url": "https://restaurantguru.com/Ruby-Tuesday-Fargo",
+    "note": "A TripAdvisor review from Aug 2026 describes a visit; no closure report found. Chain is closing many stores; call before sending anyone."
+   }
+  ],
+  "notes": ""
+ },
+ "Blaze Pizza": {
+  "fm_presence": "yes",
+  "basis_url": "OSM way/802748319",
+  "stores": [
+   {
+    "address": "Address not found (OSM point 46.8585,-96.8516, 13th Ave S area, Fargo)",
+    "status": "unverified",
+    "wed_hours": null,
+    "phone": null,
+    "osm": "way/802748319",
+    "url": "OSM only",
+    "note": "No address or independent source found. Do NOT use as a destination without verification."
+   }
+  ],
+  "notes": "locations.blazepizza.com is a JS shell. Searches turned up nothing."
+ },
+ "Dunkin'": {
+  "fm_presence": "yes",
+  "basis_url": "https://www.valleynewslive.com/2026/07/16/dunkin-opens-friday-fargo-walmart-55th-avenue-south/",
+  "stores": [
+   {
+    "address": "3757 55th Ave S, Fargo, ND 58104 (inside Walmart)",
+    "status": "unverified",
+    "wed_hours": "opens 07:00",
+    "phone": null,
+    "osm": null,
+    "url": "https://www.valleynewslive.com/2026/07/16/dunkin-opens-friday-fargo-walmart-55th-avenue-south/",
+    "note": "Opened Fri 17 Jul 2026 inside Walmart per Valley News Live; likely tied to Walmart hours."
+   }
+  ],
+  "notes": "Surprising: a Dunkin' now exists in the metro. Dunkin' ND locator page shows no city list."
+ },
+ "Cracker Barrel": {
+  "fm_presence": "no",
+  "basis_url": "https://allstays.com/c/cracker-barrel-north-dakota-locations.htm",
+  "stores": [],
+  "notes": "Only ND Cracker Barrel found is Bismarck (2023 survey); none in FM."
+ },
+ "Dave & Buster's": {
+  "fm_presence": "no",
+  "basis_url": "https://espnsiouxfalls.com/sneak-peek-see-inside-the-new-dave-busters-in-sioux-falls/",
+  "stores": [],
+  "notes": "No Fargo/Moorhead store or announcement found; nearest are Sioux Falls and the Twin Cities."
+ },
+ "Hooters": {
+  "fm_presence": "no",
+  "basis_url": "https://cool987fm.com/new-breastaurant-coming-to-north-dakota/",
+  "stores": [],
+  "notes": "No Hooters in Fargo/Moorhead found in search (not proven; locator not usable)."
+ },
+ "Fazoli's": {
+  "fm_presence": "no",
+  "basis_url": "https://www.dakotanewsnow.com/2026/08/26/siouxfallsbiz-east-arrowhead-parkway-fazolis-closed-permanently/",
+  "stores": [],
+  "notes": "No Fargo/Moorhead store found in search; locator blocked (403). Absence not proven."
+ },
+ "Bob Evans": {
+  "fm_presence": "no",
+  "basis_url": "https://www.scrapehero.com/location-reports/Bob%2520Evans%2520Restaurants-USA/",
+  "stores": [],
+  "notes": "ScrapeHero 2026: no Bob Evans in Minnesota or North Dakota."
+ },
+ "Buca di Beppo": {
+  "fm_presence": "no",
+  "basis_url": "https://www.minneapolis.org/directory/buca-di-beppo/",
+  "stores": [],
+  "notes": "No Fargo/Moorhead store found; MN stores seen are Twin Cities only. Absence not proven by the chain locator."
+ },
+ "Mission BBQ": {
+  "fm_presence": "no",
+  "basis_url": "",
+  "stores": [],
+  "notes": "Nothing found in one search; locator unreachable. Treat as no FM store, unverified."
+ },
+ "Shake Shack": {
+  "fm_presence": "no",
+  "basis_url": "",
+  "stores": [],
+  "notes": "Nothing found in one search; locator blocked. Treat as no FM store, unverified."
+ },
+ "Krispy Kreme": {
+  "fm_presence": "no",
+  "basis_url": "",
+  "stores": [],
+  "notes": "Nothing found in one search; locator not usable. Treat as no FM store, unverified."
+ },
+ "Menchie's": {
+  "fm_presence": "not_checked",
+  "basis_url": "",
+  "stores": [],
+  "notes": "One combined search found nothing; locator page returned no FM hits. Not conclusive."
+ },
+ "Biggby Coffee": {
+  "fm_presence": "no",
+  "basis_url": "",
+  "stores": [],
+  "notes": "One combined search found nothing for FM; locator blocked (403). Treat as none, unverified."
+ },
+ "Kwik Trip": {
+  "fm_presence": "yes",
+  "basis_url": "https://www.kwiktrip.com/northdakota",
+  "stores": [
+   {
+    "address": "1100 30th Ave S, Moorhead, MN 56560",
+    "status": "confirmed",
+    "wed_hours": "24 hours (OSM 24/7)",
+    "phone": "(218) 227-7009",
+    "osm": "way/1572292819",
+    "url": "https://www.kwiktrip.com/northdakota",
+    "note": "Kwik Trip store #1729; Moorhead stores opened from 9 Oct 2025 per company page."
+   },
+   {
+    "address": "1409 Main Ave SE, Moorhead, MN 56560",
+    "status": "unverified",
+    "wed_hours": null,
+    "phone": null,
+    "osm": null,
+    "url": "https://www.thefmextra.com/?p=20198",
+    "note": "Announced second Moorhead store; no OSM match within 300 m; opening not independently confirmed.",
+    "geo": "46.86002,-96.73701"
+   },
+   {
+    "address": "1200 Center Ave W, Dilworth, MN 56529",
+    "status": "unverified",
+    "wed_hours": null,
+    "phone": null,
+    "osm": "way/1531944213",
+    "url": "https://www.thefmextra.com/?p=20198",
+    "note": "Announced Dilworth store; OSM Kwik Trip at 46.8755,-96.7195 is nearby; grand opening reported by local news."
+   },
+   {
+    "address": "2530 12th Ave S, Fargo, ND 58103",
+    "status": "confirmed",
+    "wed_hours": null,
+    "phone": null,
+    "osm": null,
+    "url": "https://www.lottery.nd.gov/_elements/pdf/faqs/Locations_20251231.pdf",
+    "note": "Kwik Star #1749 on ND Lottery list. Branded Kwik Star in ND.",
+    "geo": "46.86343,-96.82035"
+   },
+   {
+    "address": "4480 Calico Dr S, Fargo, ND 58104",
+    "status": "confirmed",
+    "wed_hours": null,
+    "phone": null,
+    "osm": null,
+    "url": "https://www.lottery.nd.gov/_elements/pdf/faqs/Locations_20251231.pdf",
+    "note": "Kwik Star #1272 on ND Lottery list. Branded Kwik Star in ND.",
+    "geo": "46.83829,-96.86194"
+   }
+  ],
+  "notes": "Company page: first ND store (Fargo) opened 20 Nov 2025; Moorhead from 9 Oct 2025. Locator page is JS-only so no hours/phone beyond OSM. Last year's '1409 Main Ave SE Moorhead' and '1200 Center Ave W Dilworth' were then pre-opening; still unverified as open."
+ }
+}

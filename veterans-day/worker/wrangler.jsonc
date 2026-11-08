@@ -1,0 +1,11 @@
+{
+  // Veterans Day 2026 field reports. Deploy: see ../README.md.
+  "name": "vetday",
+  "main": "src/index.js",
+  "compatibility_date": "2026-09-01",
+  "workers_dev": true,
+  "preview_urls": false,
+  // database_id is filled in after `wrangler d1 create vetday`.
+  "d1_databases": [{ "binding": "DB", "database_name": "vetday", "database_id": "FILL-IN-AFTER-CREATE", "migrations_dir": "migrations" }],
+  "observability": { "enabled": true }
+}

@@ -61,6 +61,17 @@ export function oe() {
 }
 
 // The feed addresses site.js reads, by constant name (NOISEFLOOR, WATCHFLOOR, VIGIL, COP_HEALTH, ELEMENTS_FEED, …).
+// Origins the Veterans Day planner fetches from: its report service (API in app.js, empty until deployed) and the
+// NWS forecast link its data file carries.
+export function veteransOrigins() {
+  const out = new Set();
+  const api = /const API = "([^"]*)"/.exec(read("site/veterans/veterans-day/app.js"));
+  if (api && api[1]) out.add(new URL(api[1]).origin);
+  const meta = JSON.parse(read("site/veterans/veterans-day/data/deals.json")).meta;
+  if (meta.forecast_url) out.add(new URL(meta.forecast_url).origin);
+  return [...out];
+}
+
 export function feedUrls() {
   const out = {};
   for (const m of read("site/site.js").matchAll(/var ([A-Z_]+) = "(https:\/\/[^"]+)"/g)) out[m[1]] = m[2];
