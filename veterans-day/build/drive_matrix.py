@@ -1,0 +1,91 @@
+"""Build site/veterans/veterans-day/data/drive.json: driving times on the road network (OSRM demo server, from
+OpenStreetMap) between every pair of stores, and from a grid of points about every 800 m across the metro to every
+store. The app joins a phone's position to its nearest grid points, so a position never has to be sent anywhere.
+
+Usage (from the repo root, after build_data.py):  python -I veterans-day/build/drive_matrix.py
+Polite to the free server: one request a second, 50 x 50 per request.
+"""
+import json, os, sys, time, urllib.request
+from datetime import datetime, timezone
+
+ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+DATA = os.path.join(ROOT, "site", "veterans", "veterans-day", "data")
+UA = "tic-veterans-day-build/1.0 (support@theintelligence.company)"
+OSRM = "https://router.project-osrm.org/table/v1/driving/"
+STEP_LAT, STEP_LNG = 0.0072, 0.0105  # about 800 m each way at 46.9 N
+SNAP_MAX_M = 400  # grid points further than this from any road are dropped
+CHUNK = 50
+_last = [0.0]
+
+
+def table(src, dst):
+    """src, dst: [(lat, lng)] -> (durations[src][dst] seconds or None, source snap distances in metres)."""
+    wait = 1.05 - (time.time() - _last[0])
+    if wait > 0:
+        time.sleep(wait)
+    coords = ";".join(f"{lng:.5f},{lat:.5f}" for lat, lng in src + dst)
+    q = "?sources=" + ";".join(str(i) for i in range(len(src))) + "&destinations=" + ";".join(str(len(src) + j) for j in range(len(dst))) + "&annotations=duration"
+    for attempt in range(4):
+        try:
+            _last[0] = time.time()
+            r = json.loads(urllib.request.urlopen(urllib.request.Request(OSRM + coords + q, headers={"User-Agent": UA}), timeout=90).read())
+            if r.get("code") != "Ok":
+                raise RuntimeError(r.get("code"))
+            return r["durations"], [s.get("distance", 0) for s in r["sources"]]
+        except Exception as e:
+            print("  retry", attempt + 1, e, flush=True)
+            time.sleep(3 * (attempt + 1))
+    raise SystemExit("OSRM kept failing; try again later")
+
+
+def full(src, dst):
+    rows, snaps = [], []
+    for i in range(0, len(src), CHUNK):
+        part_rows = [[] for _ in src[i:i + CHUNK]]
+        part_snap = None
+        for j in range(0, len(dst), CHUNK):
+            d, s = table(src[i:i + CHUNK], dst[j:j + CHUNK])
+            for k, row in enumerate(d):
+                part_rows[k].extend(None if v is None else int(round(v)) for v in row)
+            part_snap = part_snap or s
+        rows.extend(part_rows)
+        snaps.extend(part_snap)
+        print(f"  {min(i + CHUNK, len(src))}/{len(src)} rows", flush=True)
+    return rows, snaps
+
+
+def main():
+    deals = json.load(open(os.path.join(DATA, "deals.json"), encoding="utf-8"))
+    places = [(p["lat"], p["lng"]) for p in deals["places"]]
+    lats = [p[0] for p in places]; lngs = [p[1] for p in places]
+    s, n = min(lats) - 0.012, max(lats) + 0.012
+    w, e = min(lngs) - 0.016, max(lngs) + 0.016
+    grid = []
+    lat = s
+    while lat <= n:
+        lng = w
+        while lng <= e:
+            grid.append((round(lat, 5), round(lng, 5)))
+            lng += STEP_LNG
+        lat += STEP_LAT
+    print(f"{len(places)} places, {len(grid)} grid points", flush=True)
+    print("store to store", flush=True)
+    pp, _ = full(places, places)
+    print("grid to store", flush=True)
+    gp, snaps = full(grid, places)
+    keep = [i for i, d in enumerate(snaps) if d <= SNAP_MAX_M and any(v is not None for v in gp[i])]
+    out = {
+        "built_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "source": "OSRM demo server (router.project-osrm.org), OpenStreetMap road data",
+        "place_ids": [p["id"] for p in deals["places"]],
+        "places": pp,
+        "anchors": [list(grid[i]) for i in keep],
+        "fromAnchor": [gp[i] for i in keep],
+    }
+    json.dump(out, open(os.path.join(DATA, "drive.json"), "w", encoding="utf-8"), separators=(",", ":"))
+    size = os.path.getsize(os.path.join(DATA, "drive.json"))
+    print(f"kept {len(keep)} of {len(grid)} grid points; drive.json {size // 1024} KB")
+
+
+if __name__ == "__main__":
+    main()

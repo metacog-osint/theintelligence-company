@@ -1,0 +1,2698 @@
+{
+ "hornbachers": [
+  {
+   "osm": "node/845141435",
+   "name": "Hornbacher's",
+   "brand": "",
+   "kind": "supermarket",
+   "lat": 46.817465,
+   "lng": -96.863876,
+   "addr": "4151 45th Street South, Fargo",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "node/845177949",
+   "name": "Hornbacher's at Osgood Fuel Express",
+   "brand": "",
+   "kind": "convenience",
+   "lat": 46.815196,
+   "lng": -96.862051,
+   "addr": "",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "node/1424099588",
+   "name": "Hornbacher's",
+   "brand": "",
+   "kind": "atm",
+   "lat": 46.910393,
+   "lng": -96.789183,
+   "addr": "2510 Broadway North, Fargo",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "node/1932604683",
+   "name": "Hornbacher's Express",
+   "brand": "",
+   "kind": "supermarket",
+   "lat": 46.858512,
+   "lng": -96.799474,
+   "addr": "1433 University Drive South, Fargo",
+   "hours": "",
+   "phone": "",
+   "website": "https://www.hornbachers.com/"
+  },
+  {
+   "osm": "way/182952845",
+   "name": "Hornbacher's",
+   "brand": "",
+   "kind": "supermarket",
+   "lat": 46.831479,
+   "lng": -96.803057,
+   "addr": "1532 32nd Avenue South, Fargo",
+   "hours": "06:00-22:00",
+   "phone": "+1 701 280 1999",
+   "website": "https://www.hornbachers.com/NEW/store-2687"
+  },
+  {
+   "osm": "way/186332724",
+   "name": "Hornbacher's",
+   "brand": "",
+   "kind": "supermarket",
+   "lat": 46.873252,
+   "lng": -96.764271,
+   "addr": "101 11th Street South, Moorhead",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/244092681",
+   "name": "Hornbacher's",
+   "brand": "",
+   "kind": "supermarket",
+   "lat": 46.863292,
+   "lng": -96.850107,
+   "addr": "4101 13th Avenue South, Fargo",
+   "hours": "06:00-22:00",
+   "phone": "+1 701 282 6363",
+   "website": "https://www.hornbachers.com/NEW/store-2693"
+  },
+  {
+   "osm": "way/476985790",
+   "name": "Hornbacher's",
+   "brand": "",
+   "kind": "supermarket",
+   "lat": 46.833884,
+   "lng": -96.76536,
+   "addr": "950 40th Avenue South, Moorhead",
+   "hours": "",
+   "phone": "+1 218 359 4000",
+   "website": ""
+  },
+  {
+   "osm": "way/759864256",
+   "name": "Hornbacher's",
+   "brand": "Hornbacher's",
+   "kind": "convenience",
+   "lat": 46.85237,
+   "lng": -96.908321,
+   "addr": "2050 Sheyenne Street, West Fargo",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  }
+ ],
+ "jimmyjohns": [
+  {
+   "osm": "node/1366052347",
+   "name": "Jimmy John's",
+   "brand": "Jimmy John's",
+   "kind": "fast_food",
+   "lat": 46.890124,
+   "lng": -96.802311,
+   "addr": "1414 12th Avenue North, Fargo",
+   "hours": "",
+   "phone": "+1 701-365-0050",
+   "website": "https://locations.jimmyjohns.com/nd/fargo/sandwiches-1106.html"
+  },
+  {
+   "osm": "node/4278331494",
+   "name": "Jimmy John's",
+   "brand": "Jimmy John's",
+   "kind": "fast_food",
+   "lat": 46.81512,
+   "lng": -96.86337,
+   "addr": "4323 45th Street South, Fargo",
+   "hours": "",
+   "phone": "+1 701-282-8328",
+   "website": "https://locations.jimmyjohns.com/nd/fargo/sandwiches-2980.html"
+  },
+  {
+   "osm": "node/6378802992",
+   "name": "Jimmy John's",
+   "brand": "Jimmy John's",
+   "kind": "fast_food",
+   "lat": 46.843434,
+   "lng": -96.886235,
+   "addr": "749 23rd Avenue South, West Fargo",
+   "hours": "",
+   "phone": "+1 701-532-1491",
+   "website": "https://locations.jimmyjohns.com/nd/westfargo/sandwiches-3292.html"
+  },
+  {
+   "osm": "node/9286971167",
+   "name": "Jimmy John's",
+   "brand": "Jimmy John's",
+   "kind": "fast_food",
+   "lat": 46.852882,
+   "lng": -96.864454,
+   "addr": "1801 45 Street, Fargo",
+   "hours": "",
+   "phone": "+1 701-365-0777",
+   "website": "https://locations.jimmyjohns.com/nd/fargo/sandwiches-674.html"
+  },
+  {
+   "osm": "way/599481296",
+   "name": "Jimmy John's",
+   "brand": "Jimmy John's",
+   "kind": "fast_food",
+   "lat": 46.849553,
+   "lng": -96.766465,
+   "addr": "920 Holiday Drive, Moorhead",
+   "hours": "",
+   "phone": "+1 218-512-4444",
+   "website": "https://locations.jimmyjohns.com/mn/moorhead/sandwiches-2309.html"
+  }
+ ],
+ "pizzaranch": [
+  {
+   "osm": "node/1944319163",
+   "name": "Pizza Ranch",
+   "brand": "Pizza Ranch",
+   "kind": "restaurant",
+   "lat": 46.84276,
+   "lng": -96.861028,
+   "addr": "",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/191991660",
+   "name": "Pizza Ranch",
+   "brand": "Pizza Ranch",
+   "kind": "restaurant",
+   "lat": 46.875857,
+   "lng": -96.722201,
+   "addr": "",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  }
+ ],
+ "kohls": [
+  {
+   "osm": "node/1944361409",
+   "name": "Kohl's",
+   "brand": "Kohl's",
+   "kind": "department_store",
+   "lat": 46.859767,
+   "lng": -96.861385,
+   "addr": "4444 13th Avenue South, Fargo",
+   "hours": "Mo-Sa 09:00-22:00; Su 09:00-21:00",
+   "phone": "+1 701-277-8277",
+   "website": "https://www.kohls.com/stores/nd/fargo-202.shtml"
+  }
+ ],
+ "greatclips": [
+  {
+   "osm": "node/2864934729",
+   "name": "Great Clips",
+   "brand": "Great Clips",
+   "kind": "hairdresser",
+   "lat": 46.904176,
+   "lng": -96.79519,
+   "addr": "",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "node/5706022824",
+   "name": "Great Clips",
+   "brand": "Great Clips",
+   "kind": "hairdresser",
+   "lat": 46.855743,
+   "lng": -96.860872,
+   "addr": "",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "node/7847766702",
+   "name": "Great Clips",
+   "brand": "Great Clips",
+   "kind": "hairdresser",
+   "lat": 46.85079,
+   "lng": -96.769877,
+   "addr": "2515 8th Street South, Moorhead",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/801367931",
+   "name": "Great Clips",
+   "brand": "Great Clips",
+   "kind": "hairdresser",
+   "lat": 46.853284,
+   "lng": -96.907048,
+   "addr": "",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  }
+ ],
+ "caribou": [
+  {
+   "osm": "node/4278331490",
+   "name": "Caribou Coffee",
+   "brand": "Caribou Coffee",
+   "kind": "cafe",
+   "lat": 46.817408,
+   "lng": -96.863545,
+   "addr": "",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "node/9368728510",
+   "name": "Caribou Coffee",
+   "brand": "Caribou Coffee",
+   "kind": "cafe",
+   "lat": 46.834058,
+   "lng": -96.820558,
+   "addr": "",
+   "hours": "Mo-Fr 05:30-19:00; Sa,Su 06:30-19:00",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "node/13305497720",
+   "name": "Caribou Coffee",
+   "brand": "Caribou Coffee",
+   "kind": "cafe",
+   "lat": 46.859911,
+   "lng": -96.818905,
+   "addr": "",
+   "hours": "Mo-Fr 05:30-19:00; Sa,Su 06:00-19:00",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/1047006440",
+   "name": "Caribou Coffee",
+   "brand": "Caribou Coffee",
+   "kind": "cafe",
+   "lat": 46.840049,
+   "lng": -96.881915,
+   "addr": "5616 26th Avenue South",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/1492242734",
+   "name": "Caribou Coffee",
+   "brand": "Caribou Coffee",
+   "kind": "cafe",
+   "lat": 46.905153,
+   "lng": -96.796628,
+   "addr": "",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  }
+ ],
+ "herdhorns": [
+  {
+   "osm": "node/5263155674",
+   "name": "Herd and Horns",
+   "brand": "",
+   "kind": "restaurant",
+   "lat": 46.89015,
+   "lng": -96.802626,
+   "addr": "",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  }
+ ],
+ "mcdonalds": [
+  {
+   "osm": "node/5705917197",
+   "name": "McDonald's",
+   "brand": "McDonald's",
+   "kind": "fast_food",
+   "lat": 46.831703,
+   "lng": -96.844665,
+   "addr": "3220 39th Street South, Fargo",
+   "hours": "06:00-22:00",
+   "phone": "+1 701-281-0481",
+   "website": "https://www.mcdonalds.com/us/en-us/location/34700.html"
+  },
+  {
+   "osm": "node/12288574297",
+   "name": "McDonald's",
+   "brand": "McDonald's",
+   "kind": "fast_food",
+   "lat": 46.805236,
+   "lng": -96.828972,
+   "addr": "5160",
+   "hours": "Mo-Su 06:00-22:00",
+   "phone": "+1 701-532-0336",
+   "website": "https://www.mcdonalds.com/us/en-us/location/nd/fargo/5160-charles-way-s/39749.html"
+  },
+  {
+   "osm": "way/85033421",
+   "name": "McDonald's",
+   "brand": "McDonald's",
+   "kind": "fast_food",
+   "lat": 46.904298,
+   "lng": -96.797282,
+   "addr": "1220 19th Avenue North, Fargo",
+   "hours": "06:00-23:00",
+   "phone": "+1 701-232-8480",
+   "website": "https://www.mcdonalds.com/us/en-us/location/20918.html"
+  },
+  {
+   "osm": "way/125173142",
+   "name": "McDonald's",
+   "brand": "McDonald's",
+   "kind": "fast_food",
+   "lat": 46.875736,
+   "lng": -96.730608,
+   "addr": "3009 Highway 10 East, Moorhead",
+   "hours": "06:00-22:00",
+   "phone": "+1 218-236-7070",
+   "website": "https://www.mcdonalds.com/us/en-us/location/12042.html"
+  },
+  {
+   "osm": "way/133745846",
+   "name": "McDonald's",
+   "brand": "McDonald's",
+   "kind": "fast_food",
+   "lat": 46.843035,
+   "lng": -96.797881,
+   "addr": "2424 South University Drive, Fargo",
+   "hours": "24/7",
+   "phone": "+1 701-232-8636",
+   "website": "https://www.mcdonalds.com/us/en-us/location/1100.html"
+  },
+  {
+   "osm": "way/173832086",
+   "name": "McDonald's",
+   "brand": "McDonald's",
+   "kind": "fast_food",
+   "lat": 46.85156,
+   "lng": -96.86273,
+   "addr": "4501 19th Avenue Southwest, Fargo",
+   "hours": "06:00-22:00",
+   "phone": "+1 701-281-2348",
+   "website": "https://www.mcdonalds.com/us/en-us/location/21693.html"
+  },
+  {
+   "osm": "way/244092663",
+   "name": "McDonald's",
+   "brand": "McDonald's",
+   "kind": "fast_food",
+   "lat": 46.865442,
+   "lng": -96.845135,
+   "addr": "1001 38th Street South, Fargo",
+   "hours": "06:00-23:00",
+   "phone": "+1 701-282-5796",
+   "website": "https://www.mcdonalds.com/us/en-us/location/3120.html"
+  },
+  {
+   "osm": "way/244706147",
+   "name": "McDonald's",
+   "brand": "McDonald's",
+   "kind": "fast_food",
+   "lat": 46.876168,
+   "lng": -96.890238,
+   "addr": "501 Main Avenue East, West Fargo",
+   "hours": "06:00-22:00",
+   "phone": "+1 701-281-9092",
+   "website": "https://www.mcdonalds.com/us/en-us/location/10209.html"
+  },
+  {
+   "osm": "way/466923431",
+   "name": "McDonald's",
+   "brand": "McDonald's",
+   "kind": "fast_food",
+   "lat": 46.84243,
+   "lng": -96.882542,
+   "addr": "5640 23rd Avenue South, Fargo",
+   "hours": "06:00-22:00",
+   "phone": "+1 701-364-9667",
+   "website": "https://www.mcdonalds.com/us/en-us/location/37224.html"
+  },
+  {
+   "osm": "way/599980604",
+   "name": "McDonald's",
+   "brand": "McDonald's",
+   "kind": "fast_food",
+   "lat": 46.872076,
+   "lng": -96.767351,
+   "addr": "220 8th Street South, Moorhead",
+   "hours": "07:00-22:00",
+   "phone": "+1 218-236-5011",
+   "website": "https://www.mcdonalds.com/us/en-us/location/1885.html"
+  }
+ ],
+ "qdoba": [
+  {
+   "osm": "node/5705989696",
+   "name": "Qdoba",
+   "brand": "Qdoba",
+   "kind": "fast_food",
+   "lat": 46.852736,
+   "lng": -96.863034,
+   "addr": "1801 45th Street Southwest, Fargo",
+   "hours": "Mo-Sa 10:30-22:00; Su 10:30-21:00",
+   "phone": "+1 701-478-4545",
+   "website": "https://locations.qdoba.com/us/nd/fargo/1801-45th-st-sw.html"
+  },
+  {
+   "osm": "way/599481292",
+   "name": "Qdoba",
+   "brand": "Qdoba",
+   "kind": "fast_food",
+   "lat": 46.84974,
+   "lng": -96.766816,
+   "addr": "910 Holiday Drive, Moorhead",
+   "hours": "Mo-Sa 10:30-22:00; Su 11:00-21:00",
+   "phone": "+1 218-233-3606",
+   "website": "https://locations.qdoba.com/us/mn/moorhead/910-holiday-dr.html"
+  }
+ ],
+ "littlecaesars": [
+  {
+   "osm": "node/5705989699",
+   "name": "Little Caesars",
+   "brand": "Little Caesars",
+   "kind": "fast_food",
+   "lat": 46.853538,
+   "lng": -96.862468,
+   "addr": "",
+   "hours": "",
+   "phone": "",
+   "website": "https://littlecaesars.com/en-us/store/8020/"
+  },
+  {
+   "osm": "node/8831007221",
+   "name": "Little Caesars",
+   "brand": "Little Caesars",
+   "kind": "fast_food",
+   "lat": 46.904051,
+   "lng": -96.79385,
+   "addr": "",
+   "hours": "",
+   "phone": "",
+   "website": "https://littlecaesars.com/en-us/store/11043/"
+  }
+ ],
+ "chilis": [
+  {
+   "osm": "node/6374758506",
+   "name": "Chili's",
+   "brand": "Chili's",
+   "kind": "restaurant",
+   "lat": 46.859802,
+   "lng": -96.847823,
+   "addr": "",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  }
+ ],
+ "firehouse": [
+  {
+   "osm": "node/6376829807",
+   "name": "Firehouse Subs",
+   "brand": "Firehouse Subs",
+   "kind": "fast_food",
+   "lat": 46.841216,
+   "lng": -96.88236,
+   "addr": "",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  }
+ ],
+ "superbuffet": [
+  {
+   "osm": "node/6880001886",
+   "name": "Super Buffet",
+   "brand": "",
+   "kind": "restaurant",
+   "lat": 46.864662,
+   "lng": -96.860854,
+   "addr": "1000 45th Street Southwest",
+   "hours": "Mo-Su 09:00-21:00",
+   "phone": "",
+   "website": ""
+  }
+ ],
+ "henhouse": [
+  {
+   "osm": "node/7070426443",
+   "name": "Hen House Bar & Restaurant",
+   "brand": "",
+   "kind": "restaurant",
+   "lat": 46.835242,
+   "lng": -96.765626,
+   "addr": "937 37th Avenue South, Moorhead",
+   "hours": "Su-Th 10:00-24:00; Fr-Sa 10:00-02:00",
+   "phone": "+1-218-359-0744",
+   "website": "https://henhousemoorhead.com/"
+  }
+ ],
+ "swingbarrel": [
+  {
+   "osm": "node/8018551329",
+   "name": "Swing Barrel Brewing Company",
+   "brand": "",
+   "kind": "pub",
+   "lat": 46.875208,
+   "lng": -96.766954,
+   "addr": "814 Center Avenue, Moorhead",
+   "hours": "Mo-Th 10:00-19:00; Fr-Sa 10:00-20:00",
+   "phone": "",
+   "website": "https://www.swingbarrelbrew.com/"
+  }
+ ],
+ "smashburger": [
+  {
+   "osm": "node/9286971171",
+   "name": "Smashburger",
+   "brand": "Smashburger",
+   "kind": "fast_food",
+   "lat": 46.852882,
+   "lng": -96.863641,
+   "addr": "",
+   "hours": "",
+   "phone": "",
+   "website": "https://smashburger.com/locations/us/nd/fargo/1801-45th-st-sw"
+  }
+ ],
+ "chipotle": [
+  {
+   "osm": "node/9368728511",
+   "name": "Chipotle",
+   "brand": "Chipotle",
+   "kind": "fast_food",
+   "lat": 46.834367,
+   "lng": -96.820556,
+   "addr": "3061 25th Street South, Fargo",
+   "hours": "Mo-Su 10:45-22:00",
+   "phone": "+1 701-540-6672",
+   "website": "https://locations.chipotle.com/nd/fargo/3061-25th-st-s"
+  },
+  {
+   "osm": "way/85033392",
+   "name": "Chipotle",
+   "brand": "Chipotle",
+   "kind": "fast_food",
+   "lat": 46.904322,
+   "lng": -96.796652,
+   "addr": "1204 19th Avenue North, Fargo",
+   "hours": "",
+   "phone": "+1 701-566-7467",
+   "website": "https://locations.chipotle.com/nd/fargo/1204-19th-ave-n"
+  },
+  {
+   "osm": "way/599918986",
+   "name": "Chipotle",
+   "brand": "Chipotle",
+   "kind": "fast_food",
+   "lat": 46.85533,
+   "lng": -96.86145,
+   "addr": "1680 45th Street South, Fargo",
+   "hours": "",
+   "phone": "+1-701-566-5299",
+   "website": "https://locations.chipotle.com/nd/fargo/1680-45th-st-s"
+  }
+ ],
+ "bottlebarn": [
+  {
+   "osm": "node/9503757817",
+   "name": "Bottle Barn Liquors",
+   "brand": "",
+   "kind": "alcohol",
+   "lat": 46.841824,
+   "lng": -96.799546,
+   "addr": "2515 South University Drive",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/1018596174",
+   "name": "Bottle Barn",
+   "brand": "",
+   "kind": "alcohol",
+   "lat": 46.833701,
+   "lng": -96.884195,
+   "addr": "",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  }
+ ],
+ "starbucks": [
+  {
+   "osm": "node/9592784444",
+   "name": "Starbucks",
+   "brand": "Starbucks",
+   "kind": "cafe",
+   "lat": 46.831916,
+   "lng": -96.82051,
+   "addr": "2511 Kirsten Lane South, Fargo",
+   "hours": "Mo-Su 04:30-21:00",
+   "phone": "+1 701-235-3235",
+   "website": "https://www.starbucks.com/store-locator/store/9549/fargo-32nd-25th-2511-kirsten-lane-south-fargo-nd-581044900-us"
+  },
+  {
+   "osm": "way/133284957",
+   "name": "Starbucks",
+   "brand": "Starbucks",
+   "kind": "cafe",
+   "lat": 46.860019,
+   "lng": -96.798786,
+   "addr": "1343 South University Drive, Fargo",
+   "hours": "",
+   "phone": "+1 701-238-8941",
+   "website": "https://www.starbucks.com/store-locator/store/1018206/fargo-14th-and-university-1343-south-university-drive-fargo-nd-581034144-us"
+  },
+  {
+   "osm": "way/599481294",
+   "name": "Starbucks",
+   "brand": "Starbucks",
+   "kind": "cafe",
+   "lat": 46.849864,
+   "lng": -96.766911,
+   "addr": "906 Holiday Drive, Moorhead",
+   "hours": "",
+   "phone": "+1 218-233-0392",
+   "website": "https://www.starbucks.com/store-locator/store/17517/moorhead-i-94-8th-906-holiday-drive-moorhead-mn-565604445-us"
+  },
+  {
+   "osm": "way/599973510",
+   "name": "Starbucks",
+   "brand": "Starbucks",
+   "kind": "cafe",
+   "lat": 46.839476,
+   "lng": -96.860964,
+   "addr": "4480 26th Avenue South, Fargo",
+   "hours": "",
+   "phone": "+1 701-318-5863",
+   "website": "https://www.starbucks.com/store-locator/store/1020382/45th-and-calico-4480-26th-ave-s-fargo-nd-581048590-us"
+  },
+  {
+   "osm": "way/742253489",
+   "name": "Starbucks",
+   "brand": "Starbucks",
+   "kind": "cafe",
+   "lat": 46.803242,
+   "lng": -96.844544,
+   "addr": "3771 53rd Avenue South, Fargo",
+   "hours": "",
+   "phone": "+1 701-318-8628",
+   "website": "https://www.starbucks.com/store-locator/store/1023869/52nd-and-i-29-fargo-3771-53rd-ave-s-fargo-nd-581045790-us"
+  },
+  {
+   "osm": "way/1308337372",
+   "name": "Starbucks",
+   "brand": "Starbucks",
+   "kind": "cafe",
+   "lat": 46.877238,
+   "lng": -96.728873,
+   "addr": "",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/1311864972",
+   "name": "Starbucks",
+   "brand": "Starbucks",
+   "kind": "cafe",
+   "lat": 46.836179,
+   "lng": -96.767476,
+   "addr": "",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  }
+ ],
+ "sushiburrito": [
+  {
+   "osm": "node/9785873784",
+   "name": "Sushi Burrito Cafe",
+   "brand": "",
+   "kind": "restaurant",
+   "lat": 46.876092,
+   "lng": -96.789049,
+   "addr": "",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  }
+ ],
+ "izumi": [
+  {
+   "osm": "node/9785873785",
+   "name": "Izumi",
+   "brand": "",
+   "kind": "restaurant",
+   "lat": 46.841525,
+   "lng": -96.882366,
+   "addr": "",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "node/9785873786",
+   "name": "Izumi Sushi and Hibachi",
+   "brand": "",
+   "kind": "restaurant",
+   "lat": 46.86151,
+   "lng": -96.871157,
+   "addr": "",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  }
+ ],
+ "dq": [
+  {
+   "osm": "node/9786489647",
+   "name": "DQ Grill & Chill",
+   "brand": "DQ Grill & Chill",
+   "kind": "fast_food",
+   "lat": 46.875882,
+   "lng": -96.722919,
+   "addr": "1702 West Center Avenue, Dilworth",
+   "hours": "",
+   "phone": "+1 218-512-1003",
+   "website": "https://www.dairyqueen.com/locations/mn/dilworth/1702-center-ave-w/15966"
+  },
+  {
+   "osm": "way/98322581",
+   "name": "DQ Grill & Chill",
+   "brand": "DQ Grill & Chill",
+   "kind": "fast_food",
+   "lat": 46.880976,
+   "lng": -96.79858,
+   "addr": "402 North University Drive, Fargo",
+   "hours": "",
+   "phone": "+1 701-232-4653",
+   "website": "https://www.dairyqueen.com/locations/nd/fargo/402-n-university-dr/5112"
+  },
+  {
+   "osm": "way/133113162",
+   "name": "DQ Grill & Chill",
+   "brand": "DQ Grill & Chill",
+   "kind": "fast_food",
+   "lat": 46.861995,
+   "lng": -96.830646,
+   "addr": "3201 13th Avenue South, Fargo",
+   "hours": "",
+   "phone": "+1 701-293-5918",
+   "website": "https://www.dairyqueen.com/locations/nd/fargo/3201-13th-ave-s/5964"
+  },
+  {
+   "osm": "way/183682452",
+   "name": "DQ Grill & Chill",
+   "brand": "DQ Grill & Chill",
+   "kind": "fast_food",
+   "lat": 46.845148,
+   "lng": -96.767384,
+   "addr": "802 30th Avenue South, Moorhead",
+   "hours": "",
+   "phone": "+1 701-997-9383",
+   "website": "https://www.dairyqueen.com/locations/mn/moorhead/802-30th-ave-s/11851"
+  },
+  {
+   "osm": "way/186248539",
+   "name": "Dairy Queen",
+   "brand": "Dairy Queen",
+   "kind": "fast_food",
+   "lat": 46.873944,
+   "lng": -96.767604,
+   "addr": "24 8th Street South, Moorhead",
+   "hours": "",
+   "phone": "+1 218-233-3221",
+   "website": "https://www.moorheaddairyqueen.com/"
+  },
+  {
+   "osm": "way/244286512",
+   "name": "DQ Grill & Chill",
+   "brand": "DQ Grill & Chill",
+   "kind": "fast_food",
+   "lat": 46.862428,
+   "lng": -96.880895,
+   "addr": "1110 13th Avenue East, West Fargo",
+   "hours": "",
+   "phone": "+1 701-356-9337",
+   "website": "https://www.dairyqueen.com/locations/nd/west-fargo/1110-13th-ave-e/7433"
+  },
+  {
+   "osm": "way/557693559",
+   "name": "DQ Grill & Chill",
+   "brand": "DQ Grill & Chill",
+   "kind": "fast_food",
+   "lat": 46.832126,
+   "lng": -96.906301,
+   "addr": "3234 Sheyenne Street, West Fargo",
+   "hours": "",
+   "phone": "+1 701-281-3443",
+   "website": "https://www.dairyqueen.com/locations/nd/west-fargo/3234-sheyenne-st/14476"
+  },
+  {
+   "osm": "way/599480728",
+   "name": "DQ Grill & Chill",
+   "brand": "DQ Grill & Chill",
+   "kind": "fast_food",
+   "lat": 46.842554,
+   "lng": -96.862668,
+   "addr": "2401 45th Street South, Fargo",
+   "hours": "Su-Th 10:00-21:30; Fr,Sa 10:00-22:00",
+   "phone": "+1 701-356-3991",
+   "website": "https://www.dairyqueen.com/en-us/locations/nd/fargo/2401-45th-st-s/7447/"
+  },
+  {
+   "osm": "way/850997044",
+   "name": "DQ Grill & Chill",
+   "brand": "DQ Grill & Chill",
+   "kind": "fast_food",
+   "lat": 46.804348,
+   "lng": -96.827602,
+   "addr": "5131 Prosperity Way South, Fargo",
+   "hours": "",
+   "phone": "+1 701-532-2055",
+   "website": "https://www.dairyqueen.com/locations/nd/fargo/5131-prosperity-way-s/14780"
+  }
+ ],
+ "frynpan": [
+  {
+   "osm": "node/9814956557",
+   "name": "Fryn' Pan Family Restaurant",
+   "brand": "",
+   "kind": "restaurant",
+   "lat": 46.873815,
+   "lng": -96.783485,
+   "addr": "Main Ave",
+   "hours": "24/7",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/125173141",
+   "name": "Fryn' Pan",
+   "brand": "",
+   "kind": "restaurant",
+   "lat": 46.877186,
+   "lng": -96.733692,
+   "addr": "2920 Hwy 10 East, Moorhead",
+   "hours": "24/7",
+   "phone": "+1-218-236-0292",
+   "website": "https://frynpan.net/"
+  }
+ ],
+ "caseys": [
+  {
+   "osm": "node/11182303439",
+   "name": "Casey's General Store",
+   "brand": "Casey's General Store",
+   "kind": "fuel",
+   "lat": 46.836506,
+   "lng": -96.768784,
+   "addr": "707 37th Avenue South, Moorhead",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "node/11182303440",
+   "name": "Casey's General Store",
+   "brand": "Casey's General Store",
+   "kind": "convenience",
+   "lat": 46.836239,
+   "lng": -96.768784,
+   "addr": "707 37th Avenue South, Moorhead",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "node/11182333068",
+   "name": "Casey's General Store",
+   "brand": "Casey's General Store",
+   "kind": "convenience",
+   "lat": 46.804415,
+   "lng": -96.826655,
+   "addr": "5151 Prosperity Way South, Fargo",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "node/11184758147",
+   "name": "Casey's General Store",
+   "brand": "Casey's General Store",
+   "kind": "fuel",
+   "lat": 46.825027,
+   "lng": -96.820072,
+   "addr": "3545 25th Street South, Fargo",
+   "hours": "05:00-22:00",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "node/11184758148",
+   "name": "Casey's General Store",
+   "brand": "Casey's General Store",
+   "kind": "convenience",
+   "lat": 46.824959,
+   "lng": -96.820395,
+   "addr": "3545 25th Street South, Fargo",
+   "hours": "05:00-22:00",
+   "phone": "+1 701 314 5860",
+   "website": "https://www.caseys.com/general-store/nd-fargo/3545-25th-st-s/3365"
+  },
+  {
+   "osm": "node/11187007932",
+   "name": "Casey's General Store",
+   "brand": "Casey's General Store",
+   "kind": "fuel",
+   "lat": 46.861233,
+   "lng": -96.826723,
+   "addr": "2902 13th Avenue South, Fargo",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "node/11187007933",
+   "name": "Casey's General Store",
+   "brand": "Casey's General Store",
+   "kind": "convenience",
+   "lat": 46.86098,
+   "lng": -96.826681,
+   "addr": "2902 13th Avenue South, Fargo",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/85033469",
+   "name": "Casey's General Store",
+   "brand": "Casey's General Store",
+   "kind": "fuel",
+   "lat": 46.905122,
+   "lng": -96.797556,
+   "addr": "1901 University Drive North, Fargo",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/96727219",
+   "name": "Casey's General Store",
+   "brand": "Casey's General Store",
+   "kind": "convenience",
+   "lat": 46.905123,
+   "lng": -96.79713,
+   "addr": "1901 University Drive North, Fargo",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/98262121",
+   "name": "Casey's General Store",
+   "brand": "Casey's General Store",
+   "kind": "fuel",
+   "lat": 46.879717,
+   "lng": -96.793753,
+   "addr": "301 10th Street North, Fargo",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/98262132",
+   "name": "Casey's General Store",
+   "brand": "Casey's General Store",
+   "kind": "convenience",
+   "lat": 46.879745,
+   "lng": -96.793431,
+   "addr": "301 10th Street North, Fargo",
+   "hours": "24/7",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/133287152",
+   "name": "Casey's General Store",
+   "brand": "Casey's General Store",
+   "kind": "convenience",
+   "lat": 46.859439,
+   "lng": -96.7992,
+   "addr": "1401 South University Drive, Fargo",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/133287167",
+   "name": "Casey's General Store",
+   "brand": "Casey's General Store",
+   "kind": "fuel",
+   "lat": 46.859413,
+   "lng": -96.798805,
+   "addr": "1401 South University Drive, Fargo",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/133627035",
+   "name": "Casey's General Store",
+   "brand": "Casey's General Store",
+   "kind": "convenience",
+   "lat": 46.85067,
+   "lng": -96.819042,
+   "addr": "2002 25th Street South, Fargo",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/133627065",
+   "name": "Casey's General Store",
+   "brand": "Casey's General Store",
+   "kind": "fuel",
+   "lat": 46.850843,
+   "lng": -96.819263,
+   "addr": "2002 25th Street South, Fargo",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/134084809",
+   "name": "",
+   "brand": "Casey's General Store",
+   "kind": "fuel",
+   "lat": 46.844456,
+   "lng": -96.820425,
+   "addr": "",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/134084813",
+   "name": "Casey's General Store",
+   "brand": "Casey's General Store",
+   "kind": "convenience",
+   "lat": 46.844711,
+   "lng": -96.820299,
+   "addr": "2501 23rd Avenue South, Fargo",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/215823162",
+   "name": "Casey's General Store",
+   "brand": "Casey's General Store",
+   "kind": "convenience",
+   "lat": 46.872236,
+   "lng": -96.747551,
+   "addr": "203 21st Street South, Moorhead",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/215823175",
+   "name": "Casey's General Store",
+   "brand": "Casey's General Store",
+   "kind": "fuel",
+   "lat": 46.872351,
+   "lng": -96.747226,
+   "addr": "203 21st Street South, Moorhead",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/241524363",
+   "name": "Casey's General Store",
+   "brand": "Casey's General Store",
+   "kind": "convenience",
+   "lat": 46.844498,
+   "lng": -96.75108,
+   "addr": "1702 30th Avenue South, Moorhead",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/241524368",
+   "name": "Casey's General Store",
+   "brand": "Casey's General Store",
+   "kind": "fuel",
+   "lat": 46.844263,
+   "lng": -96.751121,
+   "addr": "1702 30th Avenue South, Moorhead",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/242543887",
+   "name": "Casey's General Store",
+   "brand": "Casey's General Store",
+   "kind": "fuel",
+   "lat": 46.876755,
+   "lng": -96.708411,
+   "addr": "311 Center Avenue West, Dilworth",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/242543939",
+   "name": "Casey's General Store",
+   "brand": "Casey's General Store",
+   "kind": "convenience",
+   "lat": 46.87691,
+   "lng": -96.708409,
+   "addr": "311 Center Avenue West, Dilworth",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/243657883",
+   "name": "Casey's General Store",
+   "brand": "Casey's General Store",
+   "kind": "convenience",
+   "lat": 46.876117,
+   "lng": -96.702728,
+   "addr": "1 Center Avenue East, Dilworth",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/243658034",
+   "name": "Casey's General Store",
+   "brand": "Casey's General Store",
+   "kind": "fuel",
+   "lat": 46.876329,
+   "lng": -96.702776,
+   "addr": "1 Center Avenue East, Dilworth",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/244092733",
+   "name": "Casey's General Store",
+   "brand": "Casey's General Store",
+   "kind": "convenience",
+   "lat": 46.873723,
+   "lng": -96.850061,
+   "addr": "204 42nd Street South, Fargo",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/244092763",
+   "name": "Casey's General Store",
+   "brand": "Casey's General Store",
+   "kind": "fuel",
+   "lat": 46.873921,
+   "lng": -96.850367,
+   "addr": "204 42nd Street South, Fargo",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/244148316",
+   "name": "Casey's General Store",
+   "brand": "Casey's General Store",
+   "kind": "fuel",
+   "lat": 46.862035,
+   "lng": -96.853878,
+   "addr": "4301 13th Avenue South, Fargo",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/244148337",
+   "name": "Casey's General Store",
+   "brand": "Casey's General Store",
+   "kind": "convenience",
+   "lat": 46.86228,
+   "lng": -96.853984,
+   "addr": "4301 13th Avenue South, Fargo",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/244230420",
+   "name": "Casey's General Store",
+   "brand": "Casey's General Store",
+   "kind": "fuel",
+   "lat": 46.876293,
+   "lng": -96.882217,
+   "addr": "901 Main Avenue East, West Fargo",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/244230649",
+   "name": "Casey's General Store",
+   "brand": "Casey's General Store",
+   "kind": "convenience",
+   "lat": 46.876113,
+   "lng": -96.882268,
+   "addr": "901 Main Avenue East, West Fargo",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/276656042",
+   "name": "Casey's General Store",
+   "brand": "Casey's General Store",
+   "kind": "convenience",
+   "lat": 46.842531,
+   "lng": -96.863008,
+   "addr": "2401 45th Street South, Fargo",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/276656125",
+   "name": "Casey's General Store",
+   "brand": "Casey's General Store",
+   "kind": "fuel",
+   "lat": 46.842272,
+   "lng": -96.862893,
+   "addr": "2401 45th Street South, Fargo",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/286102206",
+   "name": "Casey's General Store",
+   "brand": "Casey's General Store",
+   "kind": "convenience",
+   "lat": 46.763797,
+   "lng": -96.902928,
+   "addr": "",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/286102322",
+   "name": "Casey's General Store",
+   "brand": "Casey's General Store",
+   "kind": "fuel",
+   "lat": 46.763839,
+   "lng": -96.903262,
+   "addr": "",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/376747442",
+   "name": "Casey's General Store",
+   "brand": "Casey's General Store",
+   "kind": "convenience",
+   "lat": 46.814132,
+   "lng": -96.862345,
+   "addr": "4405 45th Street South, Fargo",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/376747449",
+   "name": "Casey's General Store",
+   "brand": "Casey's General Store",
+   "kind": "fuel",
+   "lat": 46.814384,
+   "lng": -96.862338,
+   "addr": "4405 45th Street South, Fargo",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/557788028",
+   "name": "Casey's General Store",
+   "brand": "Casey's General Store",
+   "kind": "fuel",
+   "lat": 46.843217,
+   "lng": -96.882482,
+   "addr": "5680 23rd Avenue South, Fargo",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/557788029",
+   "name": "Casey's General Store",
+   "brand": "Casey's General Store",
+   "kind": "convenience",
+   "lat": 46.843227,
+   "lng": -96.882013,
+   "addr": "5680 23rd Avenue South, Fargo",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/566015148",
+   "name": "Casey's General Store",
+   "brand": "Casey's General Store",
+   "kind": "fuel",
+   "lat": 46.804196,
+   "lng": -96.826363,
+   "addr": "5151 Prosperity Way South, Fargo",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/599974784",
+   "name": "Casey's General Store",
+   "brand": "Casey's General Store",
+   "kind": "fuel",
+   "lat": 46.862612,
+   "lng": -96.72481,
+   "addr": "3400 12th Avenue South, Moorhead",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/599974785",
+   "name": "Casey's General Store",
+   "brand": "Casey's General Store",
+   "kind": "convenience",
+   "lat": 46.862615,
+   "lng": -96.72438,
+   "addr": "3400 12th Avenue South, Moorhead",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/685151264",
+   "name": "Casey's General Store",
+   "brand": "Casey's General Store",
+   "kind": "fuel",
+   "lat": 46.838944,
+   "lng": -96.799728,
+   "addr": "2701 University Drive South, Fargo",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/685151266",
+   "name": "Casey's General Store",
+   "brand": "Casey's General Store",
+   "kind": "convenience",
+   "lat": 46.838698,
+   "lng": -96.799718,
+   "addr": "2701 University Drive South, Fargo",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/957237934",
+   "name": "Casey's General Store",
+   "brand": "Casey's General Store",
+   "kind": "convenience",
+   "lat": 46.831891,
+   "lng": -96.856068,
+   "addr": "3202 43rd Street South, Fargo",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/957237935",
+   "name": "Casey's General Store",
+   "brand": "Casey's General Store",
+   "kind": "fuel",
+   "lat": 46.832196,
+   "lng": -96.856087,
+   "addr": "3202 43rd Street South, Fargo",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  }
+ ],
+ "holiday": [
+  {
+   "osm": "node/11184756891",
+   "name": "Holiday",
+   "brand": "Holiday",
+   "kind": "fuel",
+   "lat": 46.826245,
+   "lng": -96.881942,
+   "addr": "5651 36th Avenue South, Fargo",
+   "hours": "",
+   "phone": "",
+   "website": "https://www.circlek.com/store-locator/US/fargo/5651-36th-ave-s/2746505"
+  },
+  {
+   "osm": "node/11184756892",
+   "name": "Holiday",
+   "brand": "Holiday",
+   "kind": "convenience",
+   "lat": 46.826561,
+   "lng": -96.881934,
+   "addr": "5651 36th Avenue South, Fargo",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "node/11186795992",
+   "name": "Holiday",
+   "brand": "Holiday",
+   "kind": "fuel",
+   "lat": 46.862686,
+   "lng": -96.87977,
+   "addr": "1210 13th Avenue East, West Fargo",
+   "hours": "",
+   "phone": "",
+   "website": "https://www.circlek.com/store-locator/US/west-fargo/1210-13th-ave-e/2746414"
+  },
+  {
+   "osm": "node/11186795993",
+   "name": "Holiday",
+   "brand": "Holiday",
+   "kind": "convenience",
+   "lat": 46.862462,
+   "lng": -96.879818,
+   "addr": "1210 13th Avenue East, West Fargo",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/85033384",
+   "name": "Circle K",
+   "brand": "Circle K",
+   "kind": "fuel",
+   "lat": 46.904394,
+   "lng": -96.794,
+   "addr": "1020 19th Avenue North, Fargo",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/85033451",
+   "name": "Circle K",
+   "brand": "Circle K",
+   "kind": "convenience",
+   "lat": 46.90412,
+   "lng": -96.794072,
+   "addr": "1020 19th Avenue North, Fargo",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/102924157",
+   "name": "Circle K",
+   "brand": "Circle K",
+   "kind": "convenience",
+   "lat": 46.834106,
+   "lng": -96.819244,
+   "addr": "3040 25th Street South, Fargo",
+   "hours": "Mo-Fr 05:00-23:00; Sa,Su 06:00-23:00",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/134074763",
+   "name": "Circle K",
+   "brand": "Circle K",
+   "kind": "fuel",
+   "lat": 46.834041,
+   "lng": -96.819596,
+   "addr": "3040 25th Street South, Fargo",
+   "hours": "Mo-Fr 05:00-23:00; Sa,Su 06:00-23:00",
+   "phone": "",
+   "website": "https://www.circlek.com/store-locator/US/fargo/3040-25th-st-s/2746096"
+  },
+  {
+   "osm": "way/182955186",
+   "name": "Circle K",
+   "brand": "Circle K",
+   "kind": "fuel",
+   "lat": 46.832372,
+   "lng": -96.802539,
+   "addr": "",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/215617955",
+   "name": "",
+   "brand": "Circle K",
+   "kind": "fuel",
+   "lat": 46.890671,
+   "lng": -96.762798,
+   "addr": "1501 11th Street North, Moorhead",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/215617964",
+   "name": "Circle K",
+   "brand": "Circle K",
+   "kind": "convenience",
+   "lat": 46.890829,
+   "lng": -96.763032,
+   "addr": "1501 11th Street North, Moorhead",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/244299581",
+   "name": "Circle K",
+   "brand": "Circle K",
+   "kind": "fuel",
+   "lat": 46.850664,
+   "lng": -96.861254,
+   "addr": "1902 45th Street South, Fargo",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/244299596",
+   "name": "Circle K",
+   "brand": "Circle K",
+   "kind": "convenience",
+   "lat": 46.850295,
+   "lng": -96.861265,
+   "addr": "1902 45th Street South, Fargo",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/276656048",
+   "name": "Circle K",
+   "brand": "Circle K",
+   "kind": "convenience",
+   "lat": 46.83711,
+   "lng": -96.862809,
+   "addr": "2755 Brandt Drive South, Fargo",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/276656063",
+   "name": "Circle K",
+   "brand": "Circle K",
+   "kind": "car_wash",
+   "lat": 46.837073,
+   "lng": -96.863303,
+   "addr": "",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/276656092",
+   "name": "Circle K",
+   "brand": "Circle K",
+   "kind": "fuel",
+   "lat": 46.836817,
+   "lng": -96.862953,
+   "addr": "2755 Brandt Drive South, Fargo",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/599979284",
+   "name": "Holiday",
+   "brand": "Holiday",
+   "kind": "fuel",
+   "lat": 46.85003,
+   "lng": -96.72111,
+   "addr": "3475 28th Avenue South, Moorhead",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/599979285",
+   "name": "Holiday",
+   "brand": "Holiday",
+   "kind": "convenience",
+   "lat": 46.849758,
+   "lng": -96.720959,
+   "addr": "3475 28th Avenue South, Moorhead",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/654047550",
+   "name": "Circle K",
+   "brand": "Circle K",
+   "kind": "convenience",
+   "lat": 46.843622,
+   "lng": -96.7691,
+   "addr": "725 30th Avenue South, Moorhead",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/654047552",
+   "name": "Circle K",
+   "brand": "Circle K",
+   "kind": "fuel",
+   "lat": 46.843707,
+   "lng": -96.768714,
+   "addr": "725 30th Avenue South, Moorhead",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/759867553",
+   "name": "Circle K",
+   "brand": "Circle K",
+   "kind": "convenience",
+   "lat": 46.852063,
+   "lng": -96.906244,
+   "addr": "2020 Sheyenne Street, West Fargo",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/759867554",
+   "name": "Circle K",
+   "brand": "Circle K",
+   "kind": "fuel",
+   "lat": 46.852355,
+   "lng": -96.905918,
+   "addr": "2020 Sheyenne Street, West Fargo",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/1192172070",
+   "name": "Circle K",
+   "brand": "Circle K",
+   "kind": "convenience",
+   "lat": 46.804809,
+   "lng": -96.844733,
+   "addr": "5168 38th Street South, Fargo",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/1192459966",
+   "name": "Circle K",
+   "brand": "Circle K",
+   "kind": "fuel",
+   "lat": 46.804794,
+   "lng": -96.845268,
+   "addr": "5168 38th Street South, Fargo",
+   "hours": "",
+   "phone": "",
+   "website": "https://www.circlek.com/store-locator/US/fargo/5168-38th-st-s/2653818"
+  },
+  {
+   "osm": "relation/20244288",
+   "name": "Circle K",
+   "brand": "Circle K",
+   "kind": "fuel",
+   "lat": 46.87768,
+   "lng": -96.797712,
+   "addr": "101 North University Drive, Fargo",
+   "hours": "",
+   "phone": "",
+   "website": "https://www.circlek.com/store-locator/US/fargo/101-n-university-dr/2746124"
+  }
+ ],
+ "pilot": [
+  {
+   "osm": "node/11186671030",
+   "name": "Flying J",
+   "brand": "Flying J",
+   "kind": "convenience",
+   "lat": 46.833563,
+   "lng": -96.844775,
+   "addr": "3150 39th Street Southwest, Fargo",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/225056623",
+   "name": "Flying J",
+   "brand": "Flying J",
+   "kind": "fuel",
+   "lat": 46.833549,
+   "lng": -96.844111,
+   "addr": "",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/225056624",
+   "name": "Flying J",
+   "brand": "Flying J",
+   "kind": "fuel",
+   "lat": 46.833241,
+   "lng": -96.844695,
+   "addr": "3150 39th Street Southwest, Fargo",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  }
+ ],
+ "portercreek": [
+  {
+   "osm": "node/11277839459",
+   "name": "Porter Creek",
+   "brand": "",
+   "kind": "restaurant",
+   "lat": 46.857389,
+   "lng": -96.860772,
+   "addr": "",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  }
+ ],
+ "redhen": [
+  {
+   "osm": "node/12351245398",
+   "name": "Red Hen Taphouse",
+   "brand": "",
+   "kind": "pub",
+   "lat": 46.875071,
+   "lng": -96.724314,
+   "addr": "1710 West Center Avenue, Dilworth",
+   "hours": "",
+   "phone": "",
+   "website": "https://redhentaphouse.com"
+  }
+ ],
+ "teestacos": [
+  {
+   "osm": "node/14352920601",
+   "name": "Tee's tacos",
+   "brand": "",
+   "kind": "restaurant",
+   "lat": 46.877652,
+   "lng": -96.797505,
+   "addr": "101 North University Drive",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  }
+ ],
+ "zoo": [
+  {
+   "osm": "way/62263726",
+   "name": "Red River Zoo",
+   "brand": "",
+   "kind": "zoo",
+   "lat": 46.845519,
+   "lng": -96.853772,
+   "addr": "4255 23rd Avenue South, Fargo",
+   "hours": "Mo-Su 10:00-19:00",
+   "phone": "",
+   "website": "https://redriverzoo.org"
+  }
+ ],
+ "hjemkomst": [
+  {
+   "osm": "way/68668662",
+   "name": "Hjemkomst Center",
+   "brand": "",
+   "kind": "museum",
+   "lat": 46.877869,
+   "lng": -96.778281,
+   "addr": "Moorhead",
+   "hours": "Mo,We-Sa 09:00-17:00; Tu 09:00-20:00; Su 12:00-17:00",
+   "phone": "",
+   "website": ""
+  }
+ ],
+ "bww": [
+  {
+   "osm": "way/74268716",
+   "name": "Buffalo Wild Wings",
+   "brand": "Buffalo Wild Wings",
+   "kind": "restaurant",
+   "lat": 46.876638,
+   "lng": -96.74463,
+   "addr": "2201 1st Avenue North",
+   "hours": "",
+   "phone": "",
+   "website": "https://www.buffalowildwings.com/locations/us/mn/moorhead/2201-1st-avenue-north/sports-bar-1270/"
+  },
+  {
+   "osm": "way/84963409",
+   "name": "Buffalo Wild Wings",
+   "brand": "Buffalo Wild Wings",
+   "kind": "restaurant",
+   "lat": 46.905311,
+   "lng": -96.801872,
+   "addr": "1515",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/244156993",
+   "name": "Buffalo Wild Wings",
+   "brand": "Buffalo Wild Wings",
+   "kind": "restaurant",
+   "lat": 46.857734,
+   "lng": -96.851773,
+   "addr": "",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  }
+ ],
+ "applebees": [
+  {
+   "osm": "way/84963384",
+   "name": "Applebee's",
+   "brand": "Applebee's Neighborhood Grill & Bar",
+   "kind": "restaurant",
+   "lat": 46.905976,
+   "lng": -96.802514,
+   "addr": "",
+   "hours": "Su-Th 11:00-24:00; Fr-Sa 11:00-01:00",
+   "phone": "+1 701-293-0249",
+   "website": "https://restaurants.applebees.com/en-us/nd/fargo/2001-16th-street-n.-75064"
+  },
+  {
+   "osm": "way/185027306",
+   "name": "Applebee's",
+   "brand": "Applebee's Neighborhood Grill & Bar",
+   "kind": "restaurant",
+   "lat": 46.843772,
+   "lng": -96.860901,
+   "addr": "23rd Avenue South, Fargo",
+   "hours": "",
+   "phone": "+1 701-356-9495",
+   "website": "https://restaurants.applebees.com/en-us/nd/fargo/2350-45th-street-south-76042"
+  }
+ ],
+ "burgerking": [
+  {
+   "osm": "way/84963430",
+   "name": "Burger King",
+   "brand": "Burger King",
+   "kind": "fast_food",
+   "lat": 46.905089,
+   "lng": -96.800556,
+   "addr": "",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/194297831",
+   "name": "Burger King",
+   "brand": "Burger King",
+   "kind": "fast_food",
+   "lat": 46.850715,
+   "lng": -96.767387,
+   "addr": "2412 Eighth Street South, Moorhead",
+   "hours": "Mo-Sa 06:00-23:00; Su 07:00-21:00",
+   "phone": "+1 218-236-7815",
+   "website": "https://www.bk.com/store-locator/store/restaurant_2759"
+  },
+  {
+   "osm": "way/566015172",
+   "name": "Burger King",
+   "brand": "Burger King",
+   "kind": "fast_food",
+   "lat": 46.803125,
+   "lng": -96.827853,
+   "addr": "",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/680986970",
+   "name": "Burger King",
+   "brand": "Burger King",
+   "kind": "fast_food",
+   "lat": 46.840762,
+   "lng": -96.884025,
+   "addr": "840 26th Avenue East, West Fargo",
+   "hours": "Mo-Sa 06:00-23:00; Su 07:00-23:00",
+   "phone": "+1 701-491-7340",
+   "website": "https://www.bk.com/store-locator/store/restaurant_63165"
+  }
+ ],
+ "eateries701": [
+  {
+   "osm": "way/85282757",
+   "name": "701 Eateries",
+   "brand": "",
+   "kind": "restaurant",
+   "lat": 46.883352,
+   "lng": -96.797854,
+   "addr": "701",
+   "hours": "",
+   "phone": "",
+   "website": "https://701eateries.com/"
+  }
+ ],
+ "scheels": [
+  {
+   "osm": "way/98192671",
+   "name": "Scheels Center for the Performing Arts",
+   "brand": "",
+   "kind": "theatre",
+   "lat": 46.883036,
+   "lng": -96.772453,
+   "addr": "",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/118423605",
+   "name": "Scheels",
+   "brand": "",
+   "kind": "sports",
+   "lat": 46.874776,
+   "lng": -96.771412,
+   "addr": "",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  }
+ ],
+ "plainsart": [
+  {
+   "osm": "way/98249907",
+   "name": "Plains Art Museum",
+   "brand": "",
+   "kind": "museum",
+   "lat": 46.876897,
+   "lng": -96.791847,
+   "addr": "704 1st Avenue North, Fargo",
+   "hours": "Mo,We,Fr 11:00-17:00; Tu,Th 11:00-21:00; Sa 10:00-17:00; Su off",
+   "phone": "",
+   "website": "https://plainsart.org/"
+  }
+ ],
+ "culvers": [
+  {
+   "osm": "way/102923781",
+   "name": "Culver's",
+   "brand": "Culver's",
+   "kind": "fast_food",
+   "lat": 46.862196,
+   "lng": -96.863876,
+   "addr": "4615 13th Avenue Southwest, Fargo",
+   "hours": "Mo-Su 10:00-22:00",
+   "phone": "+1 701-277-8833",
+   "website": "https://www.culvers.com/restaurants/fargo-13th"
+  },
+  {
+   "osm": "way/102924216",
+   "name": "Culver's",
+   "brand": "Culver's",
+   "kind": "fast_food",
+   "lat": 46.832848,
+   "lng": -96.820608,
+   "addr": "3197 25th Street South, Fargo",
+   "hours": "Mo-Su 10:00-22:00",
+   "phone": "+1 701-232-9450",
+   "website": "https://www.culvers.com/restaurants/fargo-25th"
+  }
+ ],
+ "arbys": [
+  {
+   "osm": "way/102923964",
+   "name": "Arby's",
+   "brand": "Arby's",
+   "kind": "fast_food",
+   "lat": 46.833684,
+   "lng": -96.820457,
+   "addr": "3185 25th Street South, Fargo",
+   "hours": "10:00-24:00",
+   "phone": "+1 701-271-8711",
+   "website": "https://www.arbys.com/locations/us/nd/fargo/3185-25th-st-s/store-7389/"
+  },
+  {
+   "osm": "way/125173137",
+   "name": "Arby's",
+   "brand": "Arby's",
+   "kind": "fast_food",
+   "lat": 46.877259,
+   "lng": -96.72941,
+   "addr": "3108 Highway 10 East, Moorhead",
+   "hours": "10:00-24:00",
+   "phone": "+1 218-287-8711",
+   "website": "https://www.arbys.com/locations/us/mn/moorhead/3108-highway-10-e/store-7388/"
+  },
+  {
+   "osm": "way/244156989",
+   "name": "Arby's",
+   "brand": "Arby's",
+   "kind": "fast_food",
+   "lat": 46.859234,
+   "lng": -96.851582,
+   "addr": "1415 42nd Street, Fargo",
+   "hours": "10:00-24:00",
+   "phone": "+1 701-281-0610",
+   "website": "https://www.arbys.com/locations/us/nd/fargo/1415-42nd-st/store-6336/"
+  }
+ ],
+ "menards": [
+  {
+   "osm": "way/118143517",
+   "name": "Menards",
+   "brand": "Menards",
+   "kind": "doityourself",
+   "lat": 46.850181,
+   "lng": -96.73015,
+   "addr": "3000 27th Avenue South, Moorhead",
+   "hours": "",
+   "phone": "",
+   "website": "https://www.menards.com/store-details/store.html?store=3229"
+  },
+  {
+   "osm": "way/244286546",
+   "name": "Menards",
+   "brand": "Menards",
+   "kind": "doityourself",
+   "lat": 46.864183,
+   "lng": -96.878866,
+   "addr": "1300 13th Avenue East, West Fargo",
+   "hours": "",
+   "phone": "",
+   "website": "https://www.menards.com/store-details/store.html?store=3036"
+  }
+ ],
+ "target": [
+  {
+   "osm": "way/125173145",
+   "name": "Target",
+   "brand": "Target",
+   "kind": "department_store",
+   "lat": 46.875388,
+   "lng": -96.727662,
+   "addr": "3301 Highway 10 East, Moorhead",
+   "hours": "08:00-22:00",
+   "phone": "+1 218-233-2326",
+   "website": "https://www.target.com/sl/moorhead/658"
+  },
+  {
+   "osm": "way/244156995",
+   "name": "Target",
+   "brand": "Target",
+   "kind": "department_store",
+   "lat": 46.860069,
+   "lng": -96.852404,
+   "addr": "4202 13th Avenue South, Fargo",
+   "hours": "07:00-22:00",
+   "phone": "+1 701-282-7400",
+   "website": "https://www.target.com/sl/fargo/61"
+  }
+ ],
+ "cashwise": [
+  {
+   "osm": "way/125173147",
+   "name": "Cash Wise Foods",
+   "brand": "",
+   "kind": "supermarket",
+   "lat": 46.878183,
+   "lng": -96.727952,
+   "addr": "3300 Highway 10 East, Moorhead",
+   "hours": "06:00-22:00",
+   "phone": "+1 218 236 4910",
+   "website": "https://www.cashwise.com/CWstore3015"
+  },
+  {
+   "osm": "way/133382246",
+   "name": "Cash Wise Foods",
+   "brand": "",
+   "kind": "supermarket",
+   "lat": 46.859,
+   "lng": -96.833642,
+   "addr": "1401 33rd Street South, Fargo",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/529883779",
+   "name": "Cash Wise Foods",
+   "brand": "",
+   "kind": "supermarket",
+   "lat": 46.831515,
+   "lng": -96.885559,
+   "addr": "755 33rd Avenue East, West Fargo",
+   "hours": "06:00-22:00",
+   "phone": "+1 701 281 6002",
+   "website": "https://www.cashwise.com/CWstore3045"
+  },
+  {
+   "osm": "way/599487370",
+   "name": "Cash Wise Liquors",
+   "brand": "",
+   "kind": "alcohol",
+   "lat": 46.87819,
+   "lng": -96.726844,
+   "addr": "",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/850997042",
+   "name": "Cash Wise Foods",
+   "brand": "",
+   "kind": "supermarket",
+   "lat": 46.806648,
+   "lng": -96.831265,
+   "addr": "4907 Timber Parkway South, Fargo",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  }
+ ],
+ "sickies": [
+  {
+   "osm": "way/133112992",
+   "name": "Sickies Garage",
+   "brand": "",
+   "kind": "restaurant",
+   "lat": 46.862804,
+   "lng": -96.836043,
+   "addr": "3431 Fiechtner Drive South, Fargo",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  }
+ ],
+ "wendys": [
+  {
+   "osm": "way/133113017",
+   "name": "Wendy's",
+   "brand": "Wendy's",
+   "kind": "fast_food",
+   "lat": 46.862039,
+   "lng": -96.8297,
+   "addr": "3111 13th Avenue Southwest, Fargo",
+   "hours": "07:00-22:00",
+   "phone": "+1 701-239-0356",
+   "website": "https://locations.wendys.com/united-states/nd/fargo/3111-13th-ave-sw"
+  },
+  {
+   "osm": "way/244299546",
+   "name": "Wendy's",
+   "brand": "Wendy's",
+   "kind": "fast_food",
+   "lat": 46.852387,
+   "lng": -96.861275,
+   "addr": "4430 18th Avenue Southwest, Fargo",
+   "hours": "07:30-22:00",
+   "phone": "+1 701-433-0651",
+   "website": "https://locations.wendys.com/united-states/nd/fargo/4430-18th-avenue-sw"
+  }
+ ],
+ "perkins": [
+  {
+   "osm": "way/133113051",
+   "name": "Perkins",
+   "brand": "Perkins",
+   "kind": "restaurant",
+   "lat": 46.862265,
+   "lng": -96.838606,
+   "addr": "",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  }
+ ],
+ "doolittles": [
+  {
+   "osm": "way/133871211",
+   "name": "Doolittle's",
+   "brand": "",
+   "kind": "restaurant",
+   "lat": 46.846331,
+   "lng": -96.819152,
+   "addr": "",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  }
+ ],
+ "villageinn": [
+  {
+   "osm": "way/194297877",
+   "name": "Village Inn",
+   "brand": "Village Inn",
+   "kind": "restaurant",
+   "lat": 46.849455,
+   "lng": -96.765534,
+   "addr": "",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  }
+ ],
+ "panera": [
+  {
+   "osm": "way/219117387",
+   "name": "Panera Bread",
+   "brand": "Panera Bread",
+   "kind": "fast_food",
+   "lat": 46.861234,
+   "lng": -96.84874,
+   "addr": "4000 West 13th Avenue Southwest, Fargo",
+   "hours": "Mo-Fr 07:00-20:00; Sa-Su 08:00-15:00",
+   "phone": "+1 701-492-4598",
+   "website": "https://locations.panerabread.com/nd/fargo/4000-west-13th-ave-sw.html"
+  }
+ ],
+ "granitecity": [
+  {
+   "osm": "way/219117388",
+   "name": "Granite City",
+   "brand": "",
+   "kind": "restaurant",
+   "lat": 46.855974,
+   "lng": -96.850132,
+   "addr": "1636 42nd Street Southwest, Fargo",
+   "hours": "",
+   "phone": "+1-701-293-3000",
+   "website": "https://www.gcfb.com/location/fargo-north-dakota/"
+  }
+ ],
+ "loves": [
+  {
+   "osm": "way/225056490",
+   "name": "Love's",
+   "brand": "Love's",
+   "kind": "fuel",
+   "lat": 46.831245,
+   "lng": -96.844574,
+   "addr": "",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/225056492",
+   "name": "Love's",
+   "brand": "Love's",
+   "kind": "fuel",
+   "lat": 46.832077,
+   "lng": -96.844879,
+   "addr": "3220 39th Street South, Fargo",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/225056493",
+   "name": "Love's",
+   "brand": "Love's",
+   "kind": "convenience",
+   "lat": 46.831694,
+   "lng": -96.844867,
+   "addr": "3220 39th Street South, Fargo",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  }
+ ],
+ "mills": [
+  {
+   "osm": "way/229927828",
+   "name": "Mills Lounge",
+   "brand": "",
+   "kind": "bar",
+   "lat": 46.87674,
+   "lng": -96.702439,
+   "addr": "",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  }
+ ],
+ "dennys": [
+  {
+   "osm": "way/244111375",
+   "name": "Denny's",
+   "brand": "Denny's",
+   "kind": "restaurant",
+   "lat": 46.862306,
+   "lng": -96.861215,
+   "addr": "",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  }
+ ],
+ "redlobster": [
+  {
+   "osm": "way/244148284",
+   "name": "Red Lobster",
+   "brand": "Red Lobster",
+   "kind": "restaurant",
+   "lat": 46.862316,
+   "lng": -96.852864,
+   "addr": "4215 13th Avenue South, Fargo",
+   "hours": "",
+   "phone": "+1 701-282-8983",
+   "website": ""
+  }
+ ],
+ "olivegarden": [
+  {
+   "osm": "way/244148287",
+   "name": "Olive Garden",
+   "brand": "Olive Garden",
+   "kind": "restaurant",
+   "lat": 46.862302,
+   "lng": -96.857469,
+   "addr": "",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  }
+ ],
+ "twinpeaks": [
+  {
+   "osm": "way/244156990",
+   "name": "Twin Peaks",
+   "brand": "Twin Peaks",
+   "kind": "restaurant",
+   "lat": 46.857233,
+   "lng": -96.851806,
+   "addr": "",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  }
+ ],
+ "lowes": [
+  {
+   "osm": "way/244283741",
+   "name": "Lowe's",
+   "brand": "Lowe's",
+   "kind": "doityourself",
+   "lat": 46.864641,
+   "lng": -96.870653,
+   "addr": "5001 13th Avenue South, Fargo",
+   "hours": "Mo-Sa 06:00-22:00; Su 08:00-20:00",
+   "phone": "+1 701-433-2160",
+   "website": "https://www.lowes.com/store/nd-fargo/1650"
+  }
+ ],
+ "texasroadhouse": [
+  {
+   "osm": "way/244283750",
+   "name": "Texas Roadhouse",
+   "brand": "Texas Roadhouse",
+   "kind": "restaurant",
+   "lat": 46.8625,
+   "lng": -96.870687,
+   "addr": "",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  }
+ ],
+ "spitfire": [
+  {
+   "osm": "way/244286529",
+   "name": "Spitfire Bar & Grill",
+   "brand": "",
+   "kind": "restaurant",
+   "lat": 46.862539,
+   "lng": -96.873029,
+   "addr": "",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  }
+ ],
+ "homedepot": [
+  {
+   "osm": "way/244344591",
+   "name": "The Home Depot",
+   "brand": "The Home Depot",
+   "kind": "doityourself",
+   "lat": 46.853308,
+   "lng": -96.866588,
+   "addr": "4700 17th Avenue Southwest, Fargo",
+   "hours": "Mo-Sa 06:00-21:00; Su 08:00-20:00",
+   "phone": "+1 701-282-2078",
+   "website": "https://www.homedepot.com/l/fargo/nd/fargo/58103/3701"
+  }
+ ],
+ "ihop": [
+  {
+   "osm": "way/244344592",
+   "name": "IHOP",
+   "brand": "IHOP",
+   "kind": "restaurant",
+   "lat": 46.853801,
+   "lng": -96.86245,
+   "addr": "",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  }
+ ],
+ "sandys": [
+  {
+   "osm": "way/244837650",
+   "name": "Sandy's Donuts",
+   "brand": "",
+   "kind": "fast_food",
+   "lat": 46.876469,
+   "lng": -96.905051,
+   "addr": "301 Main Avenue West, West Fargo",
+   "hours": "",
+   "phone": "",
+   "website": "https://www.sandysdonuts.com/"
+  },
+  {
+   "osm": "way/1050200254",
+   "name": "Sandy's Donuts",
+   "brand": "",
+   "kind": "fast_food",
+   "lat": 46.816291,
+   "lng": -96.862087,
+   "addr": "4215 45th Street Southwest, Fargo",
+   "hours": "",
+   "phone": "",
+   "website": "https://www.sandysdonuts.com/"
+  }
+ ],
+ "bonanzaville": [
+  {
+   "osm": "way/473737082",
+   "name": "Bonanzaville USA",
+   "brand": "",
+   "kind": "museum",
+   "lat": 46.875974,
+   "lng": -96.928129,
+   "addr": "1351 Main Avenue West, Fargo",
+   "hours": "",
+   "phone": "",
+   "website": "https://www.bonanzaville.org/"
+  }
+ ],
+ "hooligans": [
+  {
+   "osm": "way/556120990",
+   "name": "Hooligan's",
+   "brand": "",
+   "kind": "bar",
+   "lat": 46.833037,
+   "lng": -96.909402,
+   "addr": "",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  }
+ ],
+ "chickfila": [
+  {
+   "osm": "way/556820023",
+   "name": "Chick-fil-A",
+   "brand": "Chick-fil-A",
+   "kind": "fast_food",
+   "lat": 46.861242,
+   "lng": -96.850373,
+   "addr": "4100 13th Avenue South, Fargo",
+   "hours": "Mo-Sa 06:30-21:00; Su off",
+   "phone": "+1 701-281-5976",
+   "website": "https://www.chick-fil-a.com/locations/nd/west-acres"
+  }
+ ],
+ "blarney": [
+  {
+   "osm": "way/662795326",
+   "name": "Blarney Stone Pub",
+   "brand": "",
+   "kind": "pub",
+   "lat": 46.850677,
+   "lng": -96.884179,
+   "addr": "1910 9th Street East, West Fargo",
+   "hours": "",
+   "phone": "",
+   "website": "https://blarneyirishpub.com"
+  }
+ ],
+ "mackenzie": [
+  {
+   "osm": "way/1047006433",
+   "name": "MacKenzie River",
+   "brand": "",
+   "kind": "restaurant",
+   "lat": 46.841678,
+   "lng": -96.885184,
+   "addr": "819 24th Ave E, West Fargo",
+   "hours": "Mo-Su 11:00-21:00",
+   "phone": "+1-701-532-2221",
+   "website": "https://www.mackenzieriverpizza.com/"
+  }
+ ],
+ "airmuseum": [
+  {
+   "osm": "way/1287929252",
+   "name": "Fargo Air Museum",
+   "brand": "",
+   "kind": "museum",
+   "lat": 46.905546,
+   "lng": -96.803946,
+   "addr": "1609 19th Avenue North",
+   "hours": "Tu-Sa 10:00-17:00",
+   "phone": "",
+   "website": "https://fargoairmuseum.org"
+  }
+ ],
+ "tommys": [
+  {
+   "osm": "way/1335588344",
+   "name": "Tommy's Express",
+   "brand": "Tommy's Express",
+   "kind": "car_wash",
+   "lat": 46.842652,
+   "lng": -96.768793,
+   "addr": "",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  }
+ ],
+ "kwiktrip": [
+  {
+   "osm": "way/1531944213",
+   "name": "Kwik Trip",
+   "brand": "Kwik Trip",
+   "kind": "convenience",
+   "lat": 46.875496,
+   "lng": -96.719531,
+   "addr": "",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  },
+  {
+   "osm": "way/1572292819",
+   "name": "Kwik Trip",
+   "brand": "Kwik Trip",
+   "kind": "convenience",
+   "lat": 46.844608,
+   "lng": -96.761832,
+   "addr": "1100 30th Avenue South, Moorhead",
+   "hours": "24/7",
+   "phone": "+1 218 227 7009",
+   "website": ""
+  },
+  {
+   "osm": "way/1572292820",
+   "name": "Kwik Trip",
+   "brand": "Kwik Trip",
+   "kind": "fuel",
+   "lat": 46.844548,
+   "lng": -96.762337,
+   "addr": "",
+   "hours": "",
+   "phone": "",
+   "website": ""
+  }
+ ],
+ "drekker": [
+  {
+   "osm": "relation/12554851",
+   "name": "Drekker Brewing",
+   "brand": "",
+   "kind": "brewery",
+   "lat": 46.876335,
+   "lng": -96.807896,
+   "addr": "1666 1st Avenue North, Fargo",
+   "hours": "Mo-Th 16:00-20:00",
+   "phone": "+1-701-532-0506",
+   "website": "https://drekkerbrewing.com/"
+  }
+ ]
+}
