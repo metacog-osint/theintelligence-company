@@ -1,7 +1,61 @@
-# Hub handoff: where things stand (7 Nov 2026, 5:00 PM CST: hub merged; house bar fix rolled out; drawing labels)
+# Hub handoff: where things stand (8 Nov 2026, 1:30 PM CST: Vis live across the suite; house bar v1.5)
 
 Read with `CLAUDE.md` (the project's notes). Times are Central (CST since 1 Nov). Each commit, push and deploy needs
 Tom's yes.
+
+## Vis live across the suite, 8 Nov 2026 (side session "Vis live across the suite"; Tom: "yes to all deploys, yes to
+## beta, yes to wording, yes to option A for cop display question, yes to hub commit, push; yes to kit commit, push;
+## yes to cop commit, push; yes to house bar v1.5 commit, push. make the changes needed to the noticed items", then
+## "yes to the dispatch clock, too")
+Vis (https://vis.theintelligence.company, launched 8 Nov 11:57 AM CST from Vis `9ad677c`) is listed as **beta** on the
+hub, in every site's Programs menu and in COP. Times below are CST.
+- **Hub** `a5be9dc`, pushed and deployed about 1:15 PM (Tom ran `firebase login --reauth` first); `site-checks` passed
+  on GitHub. Vis is linked on the drawing, with the new line "…how likely wind, poor visibility, heavy rain or snow,
+  icing, extreme heat or cold, or low cloud are to reach indicative limits at named airfields and ports over the next
+  7 days, from the NOAA and ECMWF ensembles, with each night's moonlight and darkness. A thunderstorm hazard and scoring
+  against station reports are planned." The air layer's feed is "now". Vis is in Every product and `404.html` between
+  Cordon and Elements; the footer credits `https://vis.theintelligence.company/#sources`; footer date and `<lastmod>`
+  8 Nov 2026. **"Updated … ago"** for Vis reads its feed's `generated_at` with a GET: Cloudflare Pages sends an ETag but
+  no `Last-Modified`, and the feed is 168 KB, about 8 KB as served (brotli). `connect-src` allows the vis. origin.
+  Tests: a Vis sample feed and shape check, Vis's expected Updated line, the 404 test counts the home page's list
+  instead of a fixed 10, and `check-live.js` covers seven feeds. 108 tests passed locally on the installed Edge (this
+  machine has no Playwright Chromium; see `CLAUDE.md`, Tests).
+- **House bar `tic-nav.js` v1.5** (wording Tom approved): Vis between Cordon and Elements, label "Air · operational
+  weather", phones "Operational weather and night light for each watched conflict zone.", hover "Operational weather and
+  illumination for Watchfloor's conflict zones: … Updated twice a day; not an official forecast." Live with
+  `version: "1.5"` (checked by 1:25 PM): COP `4558cdb`, Elements `7261718`, Cordon `81fcdc0`, Vigil `1e8d5f9` (straight
+  to `main`: no Vigil session was running), Noisefloor `1657cb0` (file and rebuilt `site/`, pages load
+  `tic-nav.js?v=163586d7d9`), Context `175892d` (`npx vercel --prod`; the first try errored, the retry deployed),
+  Watchfloor `57b8e6a` (`build_web.py`, `firebase deploy --only hosting:watchfloor`), Title 10 `1626271` (`sw.js`
+  `t10-2026-11-08a`, deploy README line, clean worktree), Listening Post (no git; v1.4 backed up to
+  `_backups/tic-nav-v1.4-2026-11-08/`; hosting only, since another session's work today is in `functions/`), Vis
+  `f6f0b5b`. **PropertyCast `ea2cca9` goes live at its next daily publish** (about 4:23 AM, 9 Nov).
+  These deploys also shipped the 7 Nov work that was waiting on this machine: every site now serves `tic-nav.css` v1.2.
+- **Doctrine kit 0.4.2** (`tic-doctrine` `63882c0`): Vis live in the registry, in the live block after Cordon; fresh
+  20 h, stale 48 h; terms say AGPL-3.0 (the entry said MIT); `owns` names the Open-Meteo ensembles at named airfields
+  and ports and the computed sun and moon. **Loose end:** the main folder `D:\Projects\tic-doctrine` holds a local,
+  unpushed commit `24fcc56` with the same title, made at 12:59 PM by another session (fresh 18 h, Vis left among the
+  planned entries). It diverges from `origin/main`; it was left alone. Whoever made it should drop it (`git reset
+  --hard origin/main` in that folder) once they agree `63882c0` covers it. Syncs here used a worktree at `63882c0`.
+- **COP** `d4a0d2c` (deploys on push; the build at 1:05 PM had Vis fresh, 32 items, no lint errors): kit 0.4.2 (the old
+  "Weather impact (working label)" is gone), Vis drawn in Okabe-Ito yellow under its own "Weather" preset, its three
+  sources registered (Open-Meteo `commercial_ok` false). **Option A** (Tom): Vis's Amber and Red forecasts (tier
+  `warning`) show in every view next to measured anomalies; the rest show with routine items or under "Weather",
+  where the panel says "The map shows Vis's forecast for every point". Forecasts are never picks. A forecast's card
+  says "Forecast: a probability, not a measurement" (and "Warning: Vis's judgment" at tier warning) with the kit's
+  likelihood and confidence chips. The MCP instructions name Vis and say its items are forecasts; unfiltered
+  `search_items` lists Vis's warnings first. Details in COP's `CLAUDE.md`.
+- **Vis fixes** (Vis `d783c84`; the build and deploy at 1:10 PM passed): titles quote the published probability ("almost
+  certain (99%)", was "(100%)" against a 99% probability and a 95–99% term); the page says each zone has a named
+  point and most an alternate, each its own row (it said "one point per zone"); kit 0.4.2.
+- **Dispatch clock** (hub `d1a8eb3`, `dispatch-deploy` passed at 1:10 PM): `tic-dispatch` starts Vis `build.yml` at 08:25
+  and 20:25 UTC (2:25 AM and 2:25 PM CST). Vis's own cron moved to :53 as the fallback, and its new gate job skips a
+  scheduled run within 6 hours of a successful build. **Tom: add `vis` to the `DISPATCH_TOKEN` token's repository
+  access** (GitHub, Settings › Developer settings › fine-grained tokens); until then Vis's start fails with a 404 twice
+  a day and the other jobs carry on.
+- **Seen, not changed:** the kit test `test_kitcheck_survives_crlf_and_catches_edits` fails in a fresh Windows
+  worktree (CRLF checkout: its CRLF step makes `\r\r\n`); it passes on LF files. Two preview entries
+  (`hub-vis-worktree`, `cop-vis-worktree`) were added to `D:\Projects\.claude\launch.json` and removed again.
 
 ## Merge, rollout, Time dialogs and drawing labels, 7 Nov 2026 evening (cloud session; Tom: "1. yes 2. yes 3. yes,
 ## just make sure everything is clean, nothing overlaps 4. yes")
@@ -280,10 +334,11 @@ Vercel or Google Cloud sign-in, so those deploys are Tom's (commands below).
   `firebase login --reauth` and the deploy went through. Expect it before most deploys.
 
 ## Next steps
-- **From 7 Nov (top section):** deploy the hub, Watchfloor, Title 10 and Context, and update Listening Post (commands
-  above; each needs this machine's Firebase or Vercel sign-in). Apply Listening Post's Done-button fix. Check
-  PropertyCast after its 8 Nov publish. Next time the hub's footer date changes, change `sitemap.xml` with it (a test
-  checks they match).
+- **From 8 Nov (top section):** add `vis` to the `DISPATCH_TOKEN` token, then confirm Vis's first dispatched run at
+  08:25 or 20:25 UTC (`gh run list -R metacog-osint/vis --event workflow_dispatch`). Check PropertyCast's home page
+  for `TicNav = { version: "1.5"` after its 9 Nov publish. Drop the stray kit commit `24fcc56` (top section).
+- **From 7 Nov:** the deploys are done (8 Nov rollout). Still open: Listening Post's Done-button fix in dark mode.
+  Next time the hub's footer date changes, change `sitemap.xml` with it (a test checks they match).
 0. **Done 6 Nov 2026:** Vigil's crons are one trigger (section above). Optional, Tom's call: give `tic-dispatch` a
    cron of its own so it no longer depends on PropertyCast's trigger (a free slot now exists).
 1. **PropertyCast to v1.4:** check its home page's HTML for `TicNav = { version: "1.4"` after the daily publish at
@@ -295,8 +350,6 @@ Vercel or Google Cloud sign-in, so those deploys are Tom's (commands below).
    - Roll out the way v1.4 went (commits above). Noisefloor needs `tools/build_site.py` and the private term list at commit;
      Title 10 needs a `sw.js` bump and a clean worktree; Context needs `.vercel/project.json` copied into its
      worktree; Listening Post has no git, so back up first; Vigil goes as a PR if a Vigil session is working there.
-   - `D:\Projects\vis\site\tic-nav.js` is still v1.1. Vis is in development and not one of the ten; bring it up to
-     date when it launches.
 3. Retake product screenshots when products change; keep the Elements and Cordon lines current as their planned
    pieces arrive (count `properties.sources[].publisher`).
 4. **Before the hub links Blackout, Wake, Orbit or Headwind:** they need live collectors, or their seed data labelled

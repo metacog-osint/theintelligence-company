@@ -80,7 +80,7 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
     incidents, …" and "Weather for more of the world is planned". `oe.js` names EMSC ("EMSC's independent
     catalogue"), NOAA, MeteoAlarm (38 European countries and Israel) and NIFC.
   - PropertyCast builds the bar into its page at its daily publish, so check its home page's HTML, not `/tic-nav.js`.
-- **Rolling out a shared file** (all ten program sites carry both). When a program is added or renamed, update
+- **Rolling out a shared file** (all ten program sites carry both, and Vis since 8 Nov 2026). When a program is added or renamed, update
   `PROGRAMS` in `tic-nav.js` and copy it to every site. Method: a git worktree per repo, test locally, Tom's yes, push
   to main, deploy the repo's own way. **Stop local preview servers with Stop-Process on their node or esbuild PIDs:**
   stopping the task only kills the shell, and the leftover processes lock the worktree folder. Per site (each
