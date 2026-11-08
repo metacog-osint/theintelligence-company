@@ -1,7 +1,44 @@
-# Hub handoff: where things stand (8 Nov 2026, 1:30 PM CST: Vis live across the suite; house bar v1.5)
+# Hub handoff: where things stand (8 Nov 2026, 2:50 PM CST: Vis follow-ups; Vis live across the suite; house bar v1.5)
 
 Read with `CLAUDE.md` (the project's notes). Times are Central (CST since 1 Nov). Each commit, push and deploy needs
 Tom's yes.
+
+## Vis launch follow-ups, 8 Nov 2026 afternoon (Tom's list of five, from the section below)
+- **Dispatch clock for Vis: not working yet; the token still lacks `vis`.** No dispatched Vis run appeared for
+  2:25 PM (20:25 UTC): `gh run list -R metacog-osint/vis --event workflow_dispatch` was still empty at 2:45 PM. In the
+  same hour the clock started Elements (2:05 PM), Cordon (2:10 PM) and COP (2:20 PM), all successful. The hub side is
+  right: `JOBS` has `metacog-osint/vis` `build.yml` on `main` at minute 25, hours 8 and 20 UTC; `dispatch-deploy` for
+  `d1a8eb3` passed at 1:10 PM; Vis's `build.yml` is active with `workflow_dispatch` on `main`. That leaves GitHub
+  refusing the token, which for a fine-grained token without the repository is the 404. (This machine's Cloudflare
+  token can't read Workers logs, so the error text itself wasn't seen.) **Tom:** add `vis` under the token's
+  Repository access and save; the next start is 2:25 AM, 9 Nov (08:25 UTC). The 20:53 UTC fallback cron should skip,
+  since the 1:10 PM push build is under 6 hours old; GitHub starts it late, and after 7:10 PM it would build instead.
+- **Vis's gate, seen and not changed:** it asks for the newest `build.yml` run with `status=success`. A scheduled run
+  whose build the gate skipped also ends as "success", so a skip restarts the 6-hour window. Elements' gate reads real
+  deployments instead. With 12 hours between Vis's runs this rarely matters; the fix is to look for the newest run
+  whose `build` job succeeded.
+- **PropertyCast v1.5: not checkable yet.** At 1:38 PM its home page still read `TicNav = { version: "1.4"`, and
+  `ea2cca9` is on its `main`. Its publish ran by `workflow_dispatch` at 4:16 AM on 7 and 8 Nov (the 09:23 UTC cron
+  comes hours later and skips). Check the home page's HTML after about 4:30 AM, 9 Nov; that finishes v1.5 everywhere.
+- **Stray kit commit `24fcc56`: already gone.** Another session reset `D:\Projects\tic-doctrine` at 1:37 PM (reflog:
+  "reset: moving to origin/main"); the folder is at `63882c0`, clean and even with `origin/main`. `24fcc56` had nothing
+  `63882c0` lacks: Vis sat at the end among the planned entries (status live), fresh 18 h, shorter terms ("Vis code
+  AGPL-3.0; CC BY 4.0 (Open-Meteo, ECMWF IFS ensemble); NOAA GEFS public domain"), `owns` "theatre weather and
+  illumination effects by zone", and no README line. The reflog keeps it until git prunes it.
+- **Listening Post's dark-mode Done button: already fixed and live, nothing changed.** `web/src/app.css` (7 Nov,
+  5:31 PM) has `.tic-time-dialog .tic-time-actions .tic-time-done { color: var(--acc-ink); }`, which outranks the
+  shared file's `.tic-time-actions .tic-time-done`. `--acc-ink` is `#0D1A26` in dark (7.9:1 on `#7DB2E6`) and white in
+  light (6.7:1 on `#1F5F99`), and it follows the app's own Settings theme. It went live with the 8 Nov house bar
+  deploy (live CSS `index-ClxoDwjI.css`). axe 4.13 on the live dialog, mounted on the sign-in page in headless Edge:
+  0 violations in light, dark, Settings dark on a light system, and Settings light on a dark system. The proposed bare
+  `@media (prefers-color-scheme: dark)` rule was not added: with a dark system and Settings on light it would put
+  `#1F1F1D` on `#1F5F99` (2.5:1). No backup or deploy was needed.
+- **Kit CRLF test fixed** (`tic-doctrine` `04da0a7`, pushed with Tom's yes; its `ci` passed): in `tests/test_kit.py` the CRLF step becomes
+  `doc.read_bytes().replace(b"\r\n", b"\n").replace(b"\n", b"\r\n")` (LF first, so a file that is already CRLF stays
+  CRLF instead of becoming `\r\r\n`). Tested on scratch clones of `63882c0`: before, a CRLF clone
+  (`core.autocrlf=true`) failed that one test; after, all 39 kit tests pass on CRLF and LF clones. `tests/` is not in
+  the vendored kit (`PARTS` in `tools/sync.py`), so no program's `kitcheck` changes and the kit stays 0.4.2. (The main
+  folder's files are LF, which is why it passed there before.)
 
 ## Vis live across the suite, 8 Nov 2026 (side session "Vis live across the suite"; Tom: "yes to all deploys, yes to
 ## beta, yes to wording, yes to option A for cop display question, yes to hub commit, push; yes to kit commit, push;
@@ -334,11 +371,13 @@ Vercel or Google Cloud sign-in, so those deploys are Tom's (commands below).
   `firebase login --reauth` and the deploy went through. Expect it before most deploys.
 
 ## Next steps
-- **From 8 Nov (top section):** add `vis` to the `DISPATCH_TOKEN` token, then confirm Vis's first dispatched run at
-  08:25 or 20:25 UTC (`gh run list -R metacog-osint/vis --event workflow_dispatch`). Check PropertyCast's home page
-  for `TicNav = { version: "1.5"` after its 9 Nov publish. Drop the stray kit commit `24fcc56` (top section).
-- **From 7 Nov:** the deploys are done (8 Nov rollout). Still open: Listening Post's Done-button fix in dark mode.
-  Next time the hub's footer date changes, change `sitemap.xml` with it (a test checks they match).
+- **From 8 Nov (top two sections):** Tom adds `vis` to the `DISPATCH_TOKEN` token's repository access (Vis's 20:25
+  UTC start on 8 Nov didn't happen while Elements, Cordon and COP did); then confirm a dispatched Vis run at 08:25 or
+  20:25 UTC (`gh run list -R metacog-osint/vis --event workflow_dispatch`). Check PropertyCast's home page for
+  `TicNav = { version: "1.5"` after its 9 Nov publish (about 4:30 AM). Done: the stray kit commit, Listening Post's
+  Done button, the kit CRLF test.
+- **From 7 Nov:** the deploys are done (8 Nov rollout). Next time the hub's footer date changes, change `sitemap.xml`
+  with it (a test checks they match).
 0. **Done 6 Nov 2026:** Vigil's crons are one trigger (section above). Optional, Tom's call: give `tic-dispatch` a
    cron of its own so it no longer depends on PropertyCast's trigger (a free slot now exists).
 1. **PropertyCast to v1.4:** check its home page's HTML for `TicNav = { version: "1.4"` after the daily publish at

@@ -211,7 +211,8 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   it), and falls back to white and grey. A site whose own variables have other names must map them on
   `.tic-time-dialog`, or dark mode breaks. The hub maps `--card`, `--paper`, `--rule` and `--mut` in `style.css`
   (7 Nov 2026). Every site's dialog was checked live in light and dark on 7 Nov 2026 (axe): Title 10, Watchfloor and
-  COP were fixed in their own CSS the same way; Listening Post's Done button still fails in dark mode (`HANDOFF.md`).
+  COP were fixed in their own CSS the same way, and Listening Post's Done button by `--acc-ink` in its `app.css`
+  (7 Nov; live 8 Nov, axe clean in light and dark).
   When a site changes its colours, open its Time dialog in dark mode.
 - **The drawing's labels** (7 Nov 2026, Tom: "make sure everything is clean, nothing overlaps"): every label is at
   least 9 px tall on a 1440×900 screen (the drawing's size follows the window's height, so about 7.8 px at 1366×768).
