@@ -21,6 +21,9 @@ export const JOBS = [
   // COP every two hours. Its own "every two hours" cron fired only every 7 to 14 hours (5-6 Nov 2026). COP's repo is
   // private, so each run spends Actions minutes: 12 runs a day is about 600 of the free 2,000 a month.
   { repo: "metacog-osint/cop", workflow: "build.yml", ref: "main", minutes: [20], hours: EVEN_HOURS },
+  // Vis twice a day, after the 00Z and 12Z ensembles reach Open-Meteo (8 Nov 2026). Its own cron (08:53 and 20:53)
+  // is the fallback; its gate skips a scheduled run within 6 hours of a successful build.
+  { repo: "metacog-osint/vis", workflow: "build.yml", ref: "main", minutes: [25], hours: [8, 20] },
 ];
 
 // The jobs due at this minute. The caller passes the cron's slot time, not when it woke, so a late start still

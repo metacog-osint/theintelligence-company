@@ -110,6 +110,11 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   COP's gate skips a scheduled run when a build succeeded in the last 45 minutes, so the fallback cron doesn't double
   that. Tom added `cop` to the `DISPATCH_TOKEN` token's repository access the same day (no new token). If that
   access is ever lost, COP's start fails with GitHub's 404 every two hours and Elements and Cordon carry on.
+- **Vis joins (8 Nov 2026, Tom's yes):** Vis `build.yml` at 08:25 and 20:25 UTC, after the 00Z and 12Z ensembles
+  reach Open-Meteo. Vis's own cron moved to 08:53 and 20:53 as the fallback, and its gate skips a scheduled run within
+  6 hours of a successful build (the models only change twice a day). Vis's repo is public, so its minutes are free.
+  Tom adds `vis` to the `DISPATCH_TOKEN` token's repository access; until then Vis's start fails with GitHub's 404
+  twice a day and the others carry on.
 - **Its clock is PropertyCast's.** The free plan allows 5 cron triggers per account, and on 5 Nov all 5 were in use:
   PropertyCast's trigger 1 (`*/5`), Vigil's ingestion Worker 4. The first deploy, with a cron of its own, was refused
   (code 10072). So `tic-dispatch` has `crons = []`, and
@@ -127,7 +132,7 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
 - Deploy: `.github/workflows/dispatch-deploy.yml` runs on a push to `master` that touches `dispatch/**` (or by hand),
   tests first (`node --test` in `dispatch/`, no network), then `wrangler deploy` and the secret upload, in
   PropertyCast's order. Deploy `tic-dispatch` before any PropertyCast trigger deploy that adds the binding: a binding
-  to a missing Worker fails. Hub repo secrets, set by Tom: `DISPATCH_TOKEN` (fine-grained; elements, cordon and cop only;
+  to a missing Worker fails. Hub repo secrets, set by Tom: `DISPATCH_TOKEN` (fine-grained; elements, cordon, cop and, once Tom adds it, vis;
   Actions: read and write), `CLOUDFLARE_API_TOKEN` ("Edit Cloudflare Workers" template), `CLOUDFLARE_ACCOUNT_ID`. The
   `CLOUDFLARE_API_TOKEN` in this machine's environment sees Pages projects but not Workers, so it can't deploy this.
 - **`DISPATCH_TOKEN` expires 5 Nov 2027** (Tom, 5 Nov 2026). Before then Tom makes a new one the same way, runs
