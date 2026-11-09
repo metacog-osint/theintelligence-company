@@ -163,6 +163,14 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   for it; `site.test.js` counts the planner's fetch origins (`veteransOrigins()` in `tests/lib/source.js`).
 - Privacy promise on the page: location, settings and history stay on the phone; reports carry no ID. Change the
   page's Privacy text before changing that.
+- **Route builder (8 Nov 2026; live since about 6:55 PM CST that day from `87ccead`, approved; not pushed):** the Route tab
+  replaced Next and Plan as the main page: start, leave and done-by times, Best for me or Maximize (most stops, most
+  savings, both), What I'm after chips (Love/Fine/Off, plus "Deals that need a purchase", Off by default), take food
+  home; one route with each stop's arrival against its deal's end. Engine v1.1: tickets for later (Great Clips, Texas
+  Roadhouse, Freddy's: quick, nothing eaten), appetite, Maximize goals, filling waits. Chain hours for Kwik Trip,
+  Casey's and Circle K; planner JSON `no-cache`. Details in `veterans-day/README.md`. The first build lived in the
+  worktree `D:/Projects/tic-vetday` (branch `veterans-day`, same commit as master); preview the main checkout with the
+  `hub-main` config in `D:/Projects/.claude/launch.json` (port 5055), not `vetday` (5056, the worktree).
 
 ## Site
 - Static files in `site/`, no build step. Firebase Hosting site `theintelligencecompany` in project
