@@ -17,8 +17,11 @@ Privacy, Sources, the Me note and the map note; legend keys now wrap with their 
 `veterans-roads.test.js` (12) and `veterans-map.test.js` (4, browser: only store coordinates sent, never a start point
 or GPS fix); the unit tests caught `isFinite(null)` letting a bad point through, fixed. Checked live in the `hub-main`
 preview at phone size, light and dark: one real OSRM request for 7 stores, road line drawn. Details and what wasn't
-verified (FOSSGIS's log retention) in `veterans-day/README.md` ("Route line on the Map"). Offered as a follow-up: fit
-the map's view to the route when the Map opens, since a long route can run off the default view.
+verified (FOSSGIS's log retention) in `veterans-day/README.md` ("Route line on the Map").
+**Follow-up the same day (Tom: "Yes, fit it"):** opening the Map tab zooms to the route's stores (a long route ran off
+the default view); the view then stays where the user puts it until they leave the Map and come back. A fifth browser
+test covers it, and the GPS privacy check now waits for the settled route (a late GPS fix re-plans it). Not yet
+committed or deployed.
 
 ## Veterans Day planner: Tuesday checklist run early, 8 Nov 2026, about 9:45 PM CST ("Push to GitHub, commit and deploy")
 asked for the Tuesday re-checks with his file `Documents\2026 Veterans Day discounts.txt`. **Live** since about
