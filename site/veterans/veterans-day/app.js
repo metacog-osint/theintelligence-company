@@ -41,6 +41,7 @@
   const shared = { events: [], overrides: {}, community: null, at: 0, ok: null };
   let focus = null, picking = false, map = null, mapLayer = null, mapReady = null, lastAnnounce = "";
   let roadLines = null, routeLayer = null, shownRoute = null; // the Map's route line (roads.js)
+  let fitRoute = false, lastTab = null; // opening the Map zooms to the route once
 
   // ---------------------------------------------------------------- small helpers
   const $ = (s, r) => (r || document).querySelector(s);
@@ -693,6 +694,13 @@
     shownRoute = { stops: plan.steps.map((x) => x.c.place), where };
     drawRoute();
     roadLines.want(shownRoute.stops); // stores only: never where you are
+    // Opening the Map zooms to the route's stores (not to your position). After that the view is yours: the
+    // 30-second refresh and re-plans don't move it.
+    if (fitRoute) {
+      fitRoute = false;
+      if (shownRoute.stops.length) map.fitBounds(L.latLngBounds(shownRoute.stops.map((s) => [s.lat, s.lng])),
+        { paddingTopLeft: [52, 28], paddingBottomRight: [28, 28], maxZoom: 15, animate: false });
+    }
   }
   // The route line: along the roads between stores once OSRM's shapes are in, straight until then. The leg from you
   // to the first stop is always straight and drawn here, on the phone, so your position and start point are never sent.
@@ -769,6 +777,8 @@
   function renderAll() {
     renderClock();
     const tab = currentTab();
+    if (tab === "map" && lastTab !== "map") fitRoute = true;
+    lastTab = tab;
     document.querySelectorAll(".tab").forEach((a) => { if (a.dataset.tab === tab) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
     document.querySelectorAll(".panel").forEach((p) => { p.hidden = p.id !== "tab-" + tab; });
     if (tab === "route") renderRoute();

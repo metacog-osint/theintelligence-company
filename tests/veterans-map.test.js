@@ -75,8 +75,12 @@ test("the route line follows the roads between stores, and only stores are sent:
   for (const kind of ["start", "gps"]) {
     const t = await openMap(kind === "gps" ? { gps: true } : { state: { start: HOME } });
     try {
-      await t.page.waitForSelector("path.vd-line.vd-road");
-      assert.equal(t.sent.length, 1, `${kind}: one request for the whole route`);
+      // Settled: the leg from you is drawn and every store-to-store leg follows the roads. A GPS fix can land after
+      // the first draw (planned from the middle of Fargo), which re-plans the route and may cost a second request.
+      await t.page.waitForFunction(() => document.querySelectorAll("path.vd-line.vd-straight").length === 1 &&
+        document.querySelectorAll("path.vd-line.vd-road").length >= 1);
+      assert.ok(t.sent.length >= 1 && t.sent.length <= (kind === "gps" ? 2 : 1), `${kind}: ${t.sent.length} requests`);
+      const asked = t.sent.length;
       const pts = pointsOf(t.sent);
       assert.ok(pts.length >= 2, `${kind}: a route of at least two stops`);
       for (const p of pts) assert.ok(STORES.has(p), `${kind}: ${p} is not a store`);
@@ -93,7 +97,7 @@ test("the route line follows the roads between stores, and only stores are sent:
       await t.page.evaluate(() => { location.hash = "#map"; });
       await t.page.waitForSelector("#tab-map:not([hidden]) path.vd-line.vd-road");
       await t.page.waitForTimeout(1500);
-      assert.equal(t.sent.length, 1, `${kind}: the road shapes are kept for the visit`);
+      assert.equal(t.sent.length, asked, `${kind}: the road shapes are kept for the visit`);
       assert.deepEqual(t.errors, [], "no console errors or CSP violations");
       assert.deepEqual(t.strays, [], "no requests to other sites");
     } finally { await t.close(); }
@@ -150,4 +154,38 @@ test("the line is ink on a paper halo in light and dark mode, dashed where strai
       assert.deepEqual(t.errors, []);
     } finally { await t.close(); }
   }
+});
+
+test("opening the Map zooms to the route; after that the view stays where you put it", async () => {
+  const t = await openMap({ state: { start: HOME } });
+  try {
+    await t.page.waitForSelector(".vd-num");
+    const inView = () => t.page.evaluate(() => {
+      const box = document.querySelector("#map").getBoundingClientRect();
+      const stops = [...document.querySelectorAll(".vd-num")].map((m) => m.getBoundingClientRect());
+      return stops.length > 1 && stops.every((r) => r.left >= box.left && r.right <= box.right && r.top >= box.top && r.bottom <= box.bottom);
+    });
+    const firstStop = () => t.page.evaluate(() => { const r = document.querySelector(".vd-num").getBoundingClientRect(); return [Math.round(r.left), Math.round(r.top)]; });
+    assert.ok(await inView(), "every numbered stop is in view");
+    // Drag the map, then refresh the way the page does when it comes back into view: the view stays put.
+    const box = await t.page.locator("#map").boundingBox();
+    const before = await firstStop();
+    await t.page.mouse.move(box.x + box.width / 2, box.y + box.height / 2);
+    await t.page.mouse.down();
+    await t.page.mouse.move(box.x + box.width / 2 + 80, box.y + box.height / 2 + 60, { steps: 8 });
+    await t.page.mouse.up();
+    const moved = await firstStop();
+    assert.ok(Math.abs(moved[0] - before[0]) > 40, "the drag moved the map");
+    await t.page.evaluate(() => document.dispatchEvent(new Event("visibilitychange")));
+    await t.page.waitForTimeout(800);
+    assert.deepEqual(await firstStop(), moved, "the refresh kept your view");
+    // Leaving the Map and coming back fits the route again.
+    await t.page.evaluate(() => { location.hash = "#route"; });
+    await t.page.waitForSelector("#tab-route:not([hidden])");
+    await t.page.evaluate(() => { location.hash = "#map"; });
+    await t.page.waitForSelector("#tab-map:not([hidden]) .vd-num");
+    await t.page.waitForTimeout(300);
+    assert.ok(await inView(), "back on the Map, the route fits again");
+    assert.deepEqual(t.errors, []);
+  } finally { await t.close(); }
 });
