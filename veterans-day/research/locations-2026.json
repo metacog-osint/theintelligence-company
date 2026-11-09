@@ -1448,16 +1448,17 @@
   "basis_url": "https://www.ubereats.com/",
   "stores": [
    {
-    "address": "Inside the Petro Stopping Center, Fargo, ND (street address not confirmed)",
-    "status": "unverified",
+    "address": "4510 19th Ave S, Fargo, ND 58103",
+    "status": "confirmed",
     "wed_hours": null,
     "phone": null,
     "osm": null,
-    "url": "Uber Eats 'Charleys Cheesesteaks & Wings - Fargo Petro Stopping Center'",
-    "note": "The ND Lottery list shows Petro Shopping Center #61 at 4510 19th Ave SW; that is an inference, not Charleys' own address."
+    "url": "",
+    "geo": "46.84953,-96.86493",
+    "note": "Inside the Petro Stopping Center (OSM way/220149953), next to Popeyes, at 45th St S and 19th Ave S (8 Nov 2026)."
    }
   ],
-  "notes": "Last year's '3902 13th Ave SW' (the Chili's/Smashburger mall address) is not Charleys."
+  "notes": "Last year's '3902 13th Ave SW' (the Chili's/Smashburger mall address) is not Charleys. Store located 8 Nov 2026."
  },
  "Tommy's Express Car Wash": {
   "fm_presence": "yes",

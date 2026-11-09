@@ -84,7 +84,7 @@ seven local offers that only one compiled 2026 report carries, graded C with "On
 call first": Village Inn, Sickies, Brewtus' West Fargo, Pub West, Cash Wise Moorhead deli, Sandy's, Blarney Stone),
 stores added (Kwik Star 4501 37th Ave S, Fryn' Pan downtown Fargo), the Air Museum program up to A (the museum's own
 events list), and Target, Kohl's and West Fargo VFW details. Left out on purpose: Smashburger (closed), Famous
-Dave's (closed), Hy-Vee, Red Robin, Golden Corral, Hooters (no metro store), Charleys (no address), Dickey's (closed).
+Dave's (closed), Hy-Vee, Red Robin, Golden Corral, Hooters (no metro store), Charleys (no address; added later that night), Dickey's (closed).
 - A store's `geo` ("lat,lng", from OSM or a checked geocode) is used before the Census geocoder, so an address it
   reads two ways lands right. Local entries can list several `stores`.
 - `BLOCKED_HOSTS` in `build_data.py`: fargobites.com redirects every page to an unrelated "verify" site (seen 8 Nov
@@ -98,6 +98,32 @@ Dave's (closed), Hy-Vee, Red Robin, Golden Corral, Hooters (no metro store), Cha
   so the cards show last year's free meal); Hardee's added from a recollection of a 2025 free breakfast sandwich (grade C,
   breakfast hours, the two stores on Hardee's locator; nothing published); Caribou's wording fixed to last years'
   small coffee with spouses (all 18 locator stores were already on the map).
+
+**Re-check, 8 Nov 2026 night (the Tuesday checklist, run early; with his file of the VA, Military Wallet, American
+Legion and Fargo Legion Post 2 lists):** now 68 deals at 166 stores (A 18, B 23, C 27).
+- **No Fargo-Moorhead media roundup for 2026 existed yet** (KFGO, InForum, Valley News Live, WDAY, KVRR, Froggy, Fargo
+  Underground and the radio sites all checked). In 2023 they came out 9–11 Nov, so look again on Tue 10 Nov.
+- **Up to A** (the business's own 2026 page or release, read 8 Nov): Applebee's (its release as carried by FSR,
+  2 Nov), Chili's, Ruby Tuesday, Wendy's, Firehouse Subs, Chipotle (not spouses), Freddy's, Pilot, Blaze (its
+  GlobeNewswire release), Scooter's, Great Clips, Tommy's Express; the Air Museum's Veterans Coffee Hour (its own
+  calendar lists Wed 11 Nov 2026, 10:00–12:00); Cash Wise's free chicken dinner (its own page, which gives no year
+  but says "Wednesday, November 11", a Tuesday in 2025), now at all four metro stores with "call yours first".
+- **Stay B, no word from the company:** Denny's (only 2025's release found), IHOP, Texas Roadhouse, Qdoba and
+  Applebee's sites refuse automated reads; Olive Garden and Red Lobster carry "Not announced by the company for 2026:
+  call first" (`NO_COMPANY_WORD`). IHOP now runs 7 AM–7 PM (the Legion's 2026 list).
+- **Changed:** Perkins C to B (Fox 4's 2026 list, 4 Nov); Casey's loses "free car wash" (not on its own page);
+  Target reads "one qualifying storewide purchase" (VA News); Twin Peaks names its menu; Pizza Ranch and Village Inn
+  cite Post 2's 30 Oct list (still C: that list repeats older national offers).
+- **Added:** Charleys, inside the Petro Stopping Center at 4510 19th Ave S next to Popeyes (location confirmed; B,
+  "participating stores"); Royal Buffet, 1620 32nd Ave S (C, call first: free buffet 9–11 Nov on Post 2's list, the
+  same offer as 2023; moved from the leads); Tractor Supply's 10% for Hometown Heroes under other days and perks (B,
+  VA News; join and verify through ID.me first).
+- **Checked and left out:** no metro Old Chicago, Green Mill or Crooked Pint (the Fargo Crooked Pint closed May
+  2025), Bruegger's or Dave & Buster's; no Fargo-area Grace for Vets wash found; Lowe's has only its year-round 10%;
+  Super Buffet's free meal was Sun 8 Nov only; the Air Museum isn't free on 11 Nov (its free days are branch
+  birthdays). No 2026 word found for the posts, bars or other C entries, and the publisher had confirmed none by phone yet.
+- No tips had come in through the page (the `tips` table was empty).
+- Seen, not changed: a deal's `caution` shows on Route cards only, not on the Deals list.
 
 ## Field-report service (`worker/`, Cloudflare Worker `vetday` + D1 `vetday`, free tier)
 Anonymous: a report is a place, an offer, an outcome (worked, away, out, line + minutes) and a time. Abuse limits

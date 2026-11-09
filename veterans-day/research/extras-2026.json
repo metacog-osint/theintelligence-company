@@ -1,5 +1,5 @@
 {
- "about": "Things the route can't hold, shown under Deals: 'other' is other days, region-wide perks and places outside the metro; 'leads' is places with a Veterans Day deal in an earlier year and nothing for 2026 (call first; not routed or mapped). From the consolidated report of 8 Nov 2026, checked that day. Any source without a URL is cited as text only.",
+ "about": "Things the route can't hold, shown under Deals: 'other' is other days, region-wide perks and places outside the metro; 'leads' is places with a Veterans Day deal in an earlier year and nothing for 2026 (call first; not routed or mapped). From the consolidated report of 8 Nov 2026, checked that day. Any source without a URL is cited as text only. Re-checked the night of 8 Nov 2026 against the VA, Military Wallet, American Legion and Fargo Legion Post 2 lists.",
  "other": [
   {
    "id": "patriotcafe",
@@ -75,6 +75,22 @@
      "published": "2026-09-02"
     }
    ]
+  },
+  {
+   "id": "tractor-supply",
+   "day": "Wed 11 Nov",
+   "name": "Tractor Supply: 10% off for Hometown Heroes",
+   "where": "Tractor Supply on Highway 10 at the Moorhead\u2013Dilworth line (1411 Center Ave W, Dilworth, on OpenStreetMap)",
+   "offer": "10% off for verified Neighbor's Club Hometown Heroes on Veterans Day",
+   "grade": "B",
+   "note": "Join Neighbor's Club and verify through ID.me before you go. On VA News' 2026 list; Tractor Supply's own release couldn't be read.",
+   "sources": [
+    {
+     "url": "https://news.va.gov/150505/2026-veterans-day-discounts-free-meals-offers/",
+     "publisher": "VA News (VA Office of Digital Media)",
+     "published": "2026-10-26 (verified 22 Oct, updated through 11 Nov)"
+    }
+   ]
   }
  ],
  "leads": [
@@ -139,14 +155,6 @@
    "area": "Fargo",
    "q": "Sushi Burrito Cafe Fargo ND",
    "offer": "10% off",
-   "last_seen": "2023",
-   "src": "wday"
-  },
-  {
-   "name": "Royal Buffet",
-   "area": "",
-   "q": "Royal Buffet Fargo ND",
-   "offer": "Free buffet and soda, 9-11 Nov",
    "last_seen": "2023",
    "src": "wday"
   },
