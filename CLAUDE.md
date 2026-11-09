@@ -168,7 +168,8 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   the planner's fetch origins (`veteransOrigins()` in `tests/lib/source.js`, which reads `API` in `app.js` and
   `ROUTER` in `roads.js`).
 - Privacy promise on the page: location, settings and history stay on the phone; reports carry no ID. Change the
-  page's Privacy text before changing that. **Route line (9 Nov 2026, "Build it as written"):** the Map sends the
+  page's Privacy text before changing that. **Route line (9 Nov 2026, "Build it as written"; live from `8db32a6`
+  about 12:30 PM CST that day):** the Map sends the
   stores on the route, in order, to OSRM's public server (FOSSGIS) for road shapes, never the position or start point;
   the leg from you to stop 1 is drawn straight on the phone. The Privacy text says so, including that stop 1 hints at
   the user's part of town; the Me tab reads "Everything here stays on this phone. None of it is sent anywhere."
