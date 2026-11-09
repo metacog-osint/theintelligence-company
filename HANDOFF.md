@@ -3,10 +3,10 @@
 Read with `CLAUDE.md` (the project's notes). Times are Central (CST since 1 Nov). Each commit, push and deploy needs
 Tom's yes.
 
-## Veterans Day planner: Tuesday checklist run early, 8 Nov 2026, about 9:45 PM CST (not committed or deployed)
-asked for the Tuesday re-checks with his file `Documents\2026 Veterans Day discounts.txt`. Live is still `8a8fb40`
-(66 deals, 161 stores). Local build: 68 deals at 166 stores, A 18 / B 23 / C 27; `drive.json` rebuilt; 67 tests pass;
-phone-size check clean. Details in `veterans-day/README.md` ("Re-check, 8 Nov 2026 night"). In short: 12 chains up to
+## Veterans Day planner: Tuesday checklist run early, 8 Nov 2026, about 9:45 PM CST ("Push to GitHub, commit and deploy")
+asked for the Tuesday re-checks with his file `Documents\2026 Veterans Day discounts.txt`. **Live** since about
+10:05 PM CST from `6ba53fe` (pushed; checked: live `deals.json` and `drive.json` match the build): 68 deals at 166
+stores, A 18 / B 23 / C 27; `drive.json` rebuilt; 67 tests pass; phone-size check clean. Details in `veterans-day/README.md` ("Re-check, 8 Nov 2026 night"). In short: 12 chains up to
 A from their own 2026 pages; Air Museum coffee hour and Cash Wise's chicken dinner (four stores) to A; Perkins to B;
 Charleys (at the Petro, the location given) and Royal Buffet (C) added; Olive Garden and Red Lobster marked "not announced
 by the company". No local media roundup existed yet, no tips had come in, and the publisher had confirmed nothing by phone and
