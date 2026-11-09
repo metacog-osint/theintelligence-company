@@ -90,7 +90,7 @@ wording the same day ("Build it as written"). **Live** since about 12:30 PM CST 
   anywhere", broader than the reports and route line allow).
 - Not verified: how long FOSSGIS keeps its logs. Its usage and privacy pages (fossgis.de) sit behind a bot check; its
   about page (routing.openstreetmap.de/about.html) says requests are saved in the server log.
-- **Fit to the route** (9 Nov 2026: "Yes, fit it"): opening the Map tab zooms to the route's stores, up to zoom
+- **Fit to the route** (9 Nov 2026: "Yes, fit it"; live from `6e104cb`): opening the Map tab zooms to the route's stores, up to zoom
   15. Your position isn't part of the fit, so a far-off start can sit outside the view. After that the view is yours:
   the 30-second refresh, reports and re-plans don't move it; leaving the Map and coming back fits it again. Tested in
   `veterans-map.test.js`.
