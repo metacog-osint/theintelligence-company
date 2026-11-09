@@ -14,7 +14,7 @@ Built 8 Nov 2026 at request for Guard colleagues and other veterans in Fargo-Moo
 - Before 4 AM CST on 11 Nov it runs in **preview**, planning as if it were Wednesday at a time you pick; marks made
   in preview stay on the phone and are never sent.
 
-## How it decides (engine.js v1.1, tested in `tests/veterans-engine.test.js`)
+## How it decides (engine.js v1.2, tested in `tests/veterans-engine.test.js`)
 - **The Route tab** (the main page since 9 Nov 2026, replacing Next and Plan): settings at the top (start point,
   leave time, done-by time, goal, what you're after, take food home), then one route that rebuilds on every change,
   every stop you mark, every report and every 150 m you move. Stop 1 is the big card; each later stop shows when
@@ -33,6 +33,12 @@ Built 8 Nov 2026 at request for Guard colleagues and other veterans in Fargo-Moo
   $0.50, balanced $0.25, max haul $0.10 a minute), plus a third of the rate for time at the stop.
 - **Tickets for later** (8 Nov 2026): Great Clips, Texas Roadhouse and Freddy's hand out a card or voucher. They
   are quick stops (`ticket` in CURATE) that fill nothing, and Great Clips' card doesn't use up the day's haircut.
+- **Tickets don't open a route** (8 Nov 2026: "I don't want routes to open with great clips unless it makes
+  sense"; v1.2, `deferTickets`). The beam liked a ticket first because it is quick. When a plan starts with tickets,
+  each moves to its best later place, counting the drive back to the start (the plan otherwise ignores the trip home,
+  which made stops near home look cheap only at the start). It stays first only if it fits nowhere later (a closing
+  window) or moving it costs more than 10 minutes of your time; "Go here first" always wins. Over 480 sample days
+  (four goals, six leave times, 20 starts) routes opening with Great Clips fell from 13% to 4% and Freddy's from 8% to 2%.
 - **Appetite:** food eaten there fills you (a sit-down meal 1, a to-go meal 0.8, a quick bite 0.4, chips or a cookie
   0.2) and wears off at 0.3 an hour. A stop is worth less the fuller you are, a sit-down meal outside mealtimes
   (6:00–10:30, 10:30–14:30, 16:30–20:30) a quarter less in Best for me, and no stop asks you to eat when you're
@@ -65,10 +71,33 @@ decision (which offers, category, minutes at the stop, peak lines, call-first no
 top of `build_data.py`. Place ids come from the offer and street address, so they stay stable across rebuilds:
 field reports refer to them.
 
-Research (8 Nov 2026): `national-2026.json` (73 chains, sources dated 5–8 Nov), `local-2026.json` (44 local
+Research (8 Nov 2026): `national-2026.json` (76 chains, sources dated 5–8 Nov), `local-2026.json` (47 local
 entries; almost none confirmed for 2026 yet: re-check local businesses, VFW and Legion posts on 9–10 Nov),
-`locations-2026.json` (57 chains, 148 store records: 80 confirmed on official locators, 66 unverified, 2 closed),
-`osm-matches.json` (OpenStreetMap places matched by brand).
+`locations-2026.json` (60 chains), `osm-matches.json` (OpenStreetMap places matched by brand), and
+`extras-2026.json`: what the route can't hold, shown at the end of Deals: `other` (other days, region-wide perks,
+places outside the metro, each with a grade and sources) and `leads` (places with a Veterans Day deal in an earlier
+year only; not routed or mapped, "call first").
+
+**Review against the consolidated report (8 Nov 2026 evening):** 13 deals added (Blaze Pizza now that its address
+is known; Walgreens 8–11 Nov; Sonic and 7 Brew from 2026 lists; Air Museum coffee hour; Harwood Legion stew; and
+seven local offers that only one compiled 2026 report carries, graded C with "Only one unconfirmed 2026 listing:
+call first": Village Inn, Sickies, Brewtus' West Fargo, Pub West, Cash Wise Moorhead deli, Sandy's, Blarney Stone),
+stores added (Kwik Star 4501 37th Ave S, Fryn' Pan downtown Fargo), the Air Museum program up to A (the museum's own
+events list), and Target, Kohl's and West Fargo VFW details. Left out on purpose: Smashburger (closed), Famous
+Dave's (closed), Hy-Vee, Red Robin, Golden Corral, Hooters (no metro store), Charleys (no address), Dickey's (closed).
+- A store's `geo` ("lat,lng", from OSM or a checked geocode) is used before the Census geocoder, so an address it
+  reads two ways lands right. Local entries can list several `stores`.
+- `BLOCKED_HOSTS` in `build_data.py`: fargobites.com redirects every page to an unrelated "verify" site (seen 8 Nov
+  2026), so its citations stay as text with no link; a test fails if any source links it.
+- Bars are their own category, `bar`, **on** by default since the follow-up the same night ("Add the bars"), with a
+  drive-safe line (`DRIVE_SAFE` in `app.js`) on every bar card and under any route with a bar. Ten bars moved from the
+  earlier-years list onto the route as grade C (Drekker, Swing Barrel, Mills Lounge, O'Kelly's, Frank's Lounge, Mick's
+  Office, J.C. Chumley's, BorderTown, and Hen House and Spitfire, which need a purchase). No cap on bars per route:
+  a Maximize day can include three or four; the publisher chose to leave it so (8 Nov 2026).
+- Same follow-up: the publisher confirmed Fryn' Pan, Doolittle's and Porter Creek have 2026 deals (grade A; details not given,
+  so the cards show last year's free meal); Hardee's added from a recollection of a 2025 free breakfast sandwich (grade C,
+  breakfast hours, the two stores on Hardee's locator; nothing published); Caribou's wording fixed to last years'
+  small coffee with spouses (all 18 locator stores were already on the map).
 
 ## Field-report service (`worker/`, Cloudflare Worker `vetday` + D1 `vetday`, free tier)
 Anonymous: a report is a place, an offer, an outcome (worked, away, out, line + minutes) and a time. Abuse limits

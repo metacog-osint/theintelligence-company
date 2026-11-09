@@ -3,6 +3,22 @@
 Read with `CLAUDE.md` (the project's notes). Times are Central (CST since 1 Nov). Each commit, push and deploy needs
 Tom's yes.
 
+## Veterans Day planner: review against the consolidated report, 8 Nov 2026 night (not committed or deployed)
+"previous sessions have missed many free opportunities", with his report
+`Downloads\2026 Fargo-Moorhead Veterans Day Deals & Events — Consolidated Report.md`. Details in
+`veterans-day/README.md` ("Review against the consolidated report"). In short: 55 deals at 149 stores (was 42 at
+129), a new `extras-2026.json` (4 other-day items: VA PatriotCafe Tue, MATBUS, national parks, Fargo Force Sat; and
+22 earlier-year places listed at the end of Deals, off the route), a `bar` category Off by default, the Air Museum
+program graded A from the museum's own events list, and fargobites.com links removed (the site redirects to an
+unrelated "verify" page). Kept out against the report: Smashburger (closed), Famous Dave's (closed). The new
+grade-C entries go on Tuesday's call list below. 65 tests pass; a phone-size headless-Edge check showed the new lists
+and no errors.
+**Follow-up the same night (Tom):** bars on by default with a drive-safe line, ten bars moved onto the route; Fryn'
+Pan, Doolittle's and Porter Creek confirmed by Tom (grade A); Hardee's added (C, Tom's memory of 2025); engine v1.2
+keeps a Great Clips or Freddy's card from opening a route unless it has to. Now 66 deals at 161 stores, 12 leads.
+No cap on bars per route (Tom: "Leave it as is"). 67 tests pass; not committed or deployed. Preview: `hub-main-alt` in `D:\Projects\.claude\launch.json` serves the main checkout on port 5063
+when another session holds 5055 (not 5061: browsers block that port).
+
 ## Veterans Day planner: route builder live, 8 Nov 2026 evening ("Commit and deploy", then "push to github and update the handoff")
 **The day is Wednesday 11 Nov 2026.** Page: https://theintelligence.company/veterans/veterans-day/ (shared by direct
 link only). Everything about the planner is in `veterans-day/README.md`; the summary is in `CLAUDE.md`'s Veterans Day
@@ -38,13 +54,17 @@ section.
 - Not on the hub's product lists, house bar or drawing (decided 8 Nov); don't add it without Tom.
 
 **Tuesday 10 Nov (before the last deploy):**
-1. **Grades:** no deal is "Confirmed 2026" yet (29 announced, 13 not confirmed). For each announced chain, look for
+1. **Grades:** one deal is "Confirmed 2026" (the Air Museum program; 33 announced, 21 not confirmed). For each announced chain, look for
    the business's own 2026 post (site, newsroom, social) and upgrade to A with the source, in
    `research/national-2026.json`.
 2. **Local and not-confirmed entries** (grade C, last year's information): Granite City, Pizza Ranch, Perkins, Caribou,
-   Insomnia, Fryn' Pan, Doolittle's, Porter Creek, the United Patriotic Bodies program, Fargo VFW/Legion Post 2 stew
-   lunch, AMVETS Post 7 lunch, Moorhead Legion program, West Fargo VFW 7564 program. Check their Facebook pages or
-   call; update `research/local-2026.json` and `CURATE`.
+   Insomnia, Fargo VFW/Legion Post 2 stew lunch, AMVETS Post 7 lunch, Moorhead Legion program, West Fargo VFW 7564
+   program; added 8 Nov: Village Inn, Sickies (2), Brewtus' West Fargo, Pub West (offer and address disputed), Cash
+   Wise Moorhead deli, Sandy's (2), Blarney Stone, Harwood Legion stew, Air Museum coffee hour, Hardee's, the ten bars,
+   and whether the Air Museum is free on 11 Nov. Fryn' Pan, Doolittle's and Porter Creek are confirmed; what
+   each offers this year would improve their cards. Also the 12 earlier-year places in `research/extras-2026.json`
+   `leads`: one with a 2026 confirmation becomes a deal. Check their Facebook pages or call; update
+   `research/local-2026.json` and `CURATE`.
 3. **Tips** sent through the page: `npx wrangler d1 execute vetday --remote --command "SELECT id, ts, name, address,
    offer, when_, source FROM tips WHERE status = 'new'"` (run wrangler with `env -u CLOUDFLARE_API_TOKEN`).
 4. Rebuild, diff, test, deploy (approved): `python -I veterans-day/build/build_data.py`, then
