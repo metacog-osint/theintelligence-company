@@ -1,7 +1,63 @@
-# Hub handoff: where things stand (8 Nov 2026, 2:50 PM CST: Vis follow-ups; Vis live across the suite; house bar v1.5)
+# Hub handoff: where things stand (8 Nov 2026, 7:05 PM CST: Veterans Day route builder live; Vis follow-ups; Vis live across the suite)
 
 Read with `CLAUDE.md` (the project's notes). Times are Central (CST since 1 Nov). Each commit, push and deploy needs
 Tom's yes.
+
+## Veterans Day planner: route builder live, 8 Nov 2026 evening ("Commit and deploy", then "push to github and update the handoff")
+**The day is Wednesday 11 Nov 2026.** Page: https://theintelligence.company/veterans/veterans-day/ (shared by direct
+link only). Everything about the planner is in `veterans-day/README.md`; the summary is in `CLAUDE.md`'s Veterans Day
+section.
+
+**Live now** (deployed about 6:55 PM CST from `87ccead`; notes `7787812`; both pushed):
+- The **Route tab** is the main page and replaced Next and Plan. Tom asked for an auto-route builder there that takes
+  in location, interests and time (now, travel time, and when each deal's window ends). At the top: start point,
+  leave time, done-by time, "Plan for" (Best for me or **Maximize**: Most stops, Most savings, Stops + savings; Tom's
+  request), What I'm after chips (Love/Fine/Off, plus "Deals that need a purchase", Off by default) and "Take food
+  home". Then one route: stop 1 as the action card; each later stop with arrival against its deal's end, a window
+  bar, red under 25 minutes to spare; "Ending soon, not on your route" with Add; other next choices; Google Maps links.
+- **Tickets for later** (Tom: Great Clips, Texas Roadhouse, Freddy's give a ticket for later use; quick stops, nothing
+  eaten): `ticket=True` in `CURATE`. Great Clips is a 5-minute card pickup and no longer blocks a Sport Clips haircut.
+- **Engine v1.1:** appetite (eaten food fills, wears off at 0.3 an hour; tickets and take-home food fill nothing; no
+  eating when nearly full), the three Maximize goals, and a pass that fills waits (from Moorhead at 7 AM it now fits
+  IHOP and a coffee before Great Clips opens at 9, instead of waiting 1 h 43 min).
+- **Data:** `purchase` and `eat` tags; Kwik Trip (24 h), Casey's (5–10 PM) and Circle K (5–11 PM) use their chain's
+  usual hours where a store's own are unknown (41 stores). Same 129 stores in the same order, so `drive.json` didn't
+  change. The planner's JSON is `no-cache` in `firebase.json`.
+- Sample day (middle of Fargo, 8 AM, done by 9 PM): Best for me 7 stops, $113, done 11:42 AM; Most stops 18, done
+  3:09 PM; Most savings 18, $171, done 3:56 PM; with food taken home 19, $185.
+- Tests: 32 planner tests (`tests/veterans.test.js`, `tests/veterans-engine.test.js`) and `site.test.js` pass.
+
+**Watch out:**
+- **Don't deploy from `D:\Projects\tic-vetday`.** That worktree (branch `veterans-day`) is still at `32ffe9f`, the
+  old Next/Plan page; a deploy from there would roll the route builder back. Work in the main checkout on `master`.
+  The `vetday` preview config (port 5056) serves that worktree; `hub-main` (port 5055, added 8 Nov in
+  `D:\Projects\.claude\launch.json`) serves the main checkout. Removing the worktree is the publisher's call.
+- `build_data.py` calls the Census geocoder live. After a rebuild, diff `deals.json` against the old one: place ids
+  and their order must not change unless stores changed (then run `drive_matrix.py`, about 2 minutes, and
+  `veterans.test.js` checks the two match).
+- Not on the hub's product lists, house bar or drawing (decided 8 Nov); don't add it without Tom.
+
+**Tuesday 10 Nov (before the last deploy):**
+1. **Grades:** no deal is "Confirmed 2026" yet (29 announced, 13 not confirmed). For each announced chain, look for
+   the business's own 2026 post (site, newsroom, social) and upgrade to A with the source, in
+   `research/national-2026.json`.
+2. **Local and not-confirmed entries** (grade C, last year's information): Granite City, Pizza Ranch, Perkins, Caribou,
+   Insomnia, Fryn' Pan, Doolittle's, Porter Creek, the United Patriotic Bodies program, Fargo VFW/Legion Post 2 stew
+   lunch, AMVETS Post 7 lunch, Moorhead Legion program, West Fargo VFW 7564 program. Check their Facebook pages or
+   call; update `research/local-2026.json` and `CURATE`.
+3. **Tips** sent through the page: `npx wrangler d1 execute vetday --remote --command "SELECT id, ts, name, address,
+   offer, when_, source FROM tips WHERE status = 'new'"` (run wrangler with `env -u CLOUDFLARE_API_TOKEN`).
+4. Rebuild, diff, test, deploy (approved): `python -I veterans-day/build/build_data.py`, then
+   `cd tests && node --test --no-warnings veterans.test.js veterans-engine.test.js site.test.js`, then
+   `firebase deploy --only hosting:hub --project context-484804`.
+5. Known gaps, each the publisher's call: 70 stores have no store-specific hours (41 now use chain hours) and 55 of 129 addresses
+   come from directories; a short link (`/vetday` redirect), a Veterans Day link-preview card and a QR code; an
+   offline copy (a small service worker for the page and data, about 500 KB) for weak signal in restaurants; a
+   phone-size browser smoke test of the planner; whether to plan more than 5 minutes before a deal ends (tight stops
+   show in red now).
+
+**Wednesday 11 Nov:** decide who watches reports. Pulling a dead deal needs a laptop with wrangler (`overrides`
+table; commands in the README's "On the day"); it shows on phones within five minutes.
 
 ## Vis launch follow-ups, 8 Nov 2026 afternoon (Tom's list of five, from the section below)
 - **Dispatch clock for Vis: not working yet; the token still lacks `vis`.** No dispatched Vis run appeared for
@@ -371,7 +427,8 @@ Vercel or Google Cloud sign-in, so those deploys are Tom's (commands below).
   `firebase login --reauth` and the deploy went through. Expect it before most deploys.
 
 ## Next steps
-- **From 8 Nov (top two sections):** Tom adds `vis` to the `DISPATCH_TOKEN` token's repository access (Vis's 20:25
+- **Veterans Day (first section):** Tuesday 10 Nov re-checks, rebuild and deploy; Wednesday 11 Nov report watch.
+- **From 8 Nov (Vis sections):** Tom adds `vis` to the `DISPATCH_TOKEN` token's repository access (Vis's 20:25
   UTC start on 8 Nov didn't happen while Elements, Cordon and COP did); then confirm a dispatched Vis run at 08:25 or
   20:25 UTC (`gh run list -R metacog-osint/vis --event workflow_dispatch`). Check PropertyCast's home page for
   `TicNav = { version: "1.5"` after its 9 Nov publish (about 4:30 AM). Done: the stray kit commit, Listening Post's
