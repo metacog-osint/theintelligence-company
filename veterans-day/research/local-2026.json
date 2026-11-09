@@ -835,28 +835,6 @@
   "notes": "Searched 8 Nov 2026; nothing found. Do not show to users as an offer. Fargo Bites summary mentions Sandy's Donuts and Royal Buffet (multi-day, military ID) for a prior year, unverified."
  },
  {
-  "name": "Royal Buffet",
-  "kind": "business",
-  "address": "unknown",
-  "phone": "unknown",
-  "wednesday_hours": "unknown",
-  "status_2026": "no_2026_info",
-  "offer": "On last year's list; no 2026 post or report found",
-  "est_value_usd": 0,
-  "dates": "unknown",
-  "hours_local": "unknown",
-  "mode": "dine_in_or_to_go",
-  "eligible": [],
-  "eligibility_quote": "",
-  "guard_reserve": "unclear",
-  "spouse_or_guest": "unclear",
-  "proof": [],
-  "limits": "",
-  "grade": "C",
-  "sources": [],
-  "notes": "Searched 8 Nov 2026; nothing found. Do not show to users as an offer. Fargo Bites summary mentions Sandy's Donuts and Royal Buffet (multi-day, military ID) for a prior year, unverified."
- },
- {
   "name": "CJ's Tavern",
   "kind": "business",
   "address": "unknown",
@@ -1400,29 +1378,36 @@
   "notes": "Searched 8 Nov 2026; nothing found. Do not show to users as an offer. Fargo Bites summary mentions Sandy's Donuts and Royal Buffet (multi-day, military ID) for a prior year, unverified."
  },
  {
-  "name": "Cash Wise Foods deli (Moorhead)",
+  "name": "Cash Wise Foods deli",
   "kind": "grocery deli",
-  "address": "3300 Highway 10 E, Moorhead, MN 56560",
+  "address": null,
   "phone": "",
   "wednesday_hours": "06:00-22:00",
-  "status_2026": "no_2026_info",
-  "offer": "Reported for 2026 (unconfirmed): 2-piece chicken dinner with sides from the deli",
-  "est_value_usd": 8,
-  "dates": "2026-11-11 (unconfirmed)",
+  "status_2026": "offering",
+  "offer": "Free chicken dinner: 2 pieces of fried or grilled chicken or tenders, 2 sides, a roll and a drink, dine-in or Grab & Go; a guest's meal is half price",
+  "est_value_usd": 10,
+  "dates": "2026-11-11",
   "hours_local": "11:00-19:00",
-  "mode": "to_go",
+  "mode": "dine_in_or_to_go",
   "eligible": [
    "veteran",
-   "active"
+   "active",
+   "guard_reserve",
+   "retired"
   ],
   "proof": [
    "military_id",
    "va_card",
    "dd214"
   ],
-  "grade": "C",
-  "geo": "46.87818,-96.72795",
+  "grade": "A",
   "sources": [
+   {
+    "url": "https://cashwise.com/veterans-day",
+    "publisher": "Cash Wise Foods (own Veterans Day page)",
+    "published": "undated; live 8 Nov 2026, says Wednesday, November 11 (a Tuesday in 2025)",
+    "accessed": "2026-11-08"
+   },
    {
     "url": "https://www.openstreetmap.org/",
     "publisher": "OpenStreetMap (store and hours)",
@@ -1430,7 +1415,35 @@
     "accessed": "2026-11-08"
    }
   ],
-  "notes": "Only one 2026 listing has this (a compiled report we couldn't trace to the business). Not announced by the business: call first. No Cash Wise offer is on any 2026 national list."
+  "notes": "Cash Wise's own page (live 8 Nov 2026) gives no year and no store list; its 'Wednesday, November 11' fits 2026, not 2025. Active duty, National Guard, Reserve, former and retired military. Same offer in 2021. Call your store.",
+  "guard_reserve": "yes",
+  "limits": "One guest at half price",
+  "stores": [
+   {
+    "address": "3300 Highway 10 E, Moorhead, MN 56560",
+    "phone": "(218) 236-4910",
+    "wed_hours": "06:00-22:00",
+    "geo": "46.87818,-96.72795"
+   },
+   {
+    "address": "1401 33rd St S, Fargo, ND 58103",
+    "phone": "",
+    "wed_hours": "",
+    "geo": "46.85900,-96.83364"
+   },
+   {
+    "address": "4907 Timber Pkwy S, Fargo, ND 58104",
+    "phone": "",
+    "wed_hours": "",
+    "geo": "46.80665,-96.83127"
+   },
+   {
+    "address": "755 33rd Ave E, West Fargo, ND 58078",
+    "phone": "(701) 281-6002",
+    "wed_hours": "06:00-22:00",
+    "geo": "46.83151,-96.88556"
+   }
+  ]
  },
  {
   "name": "Harwood American Legion Post 297 Veterans Day stew",
@@ -1468,10 +1481,10 @@
   "address": "1609 19th Ave N, Fargo, ND 58102",
   "phone": "(701) 293-8043",
   "wednesday_hours": "10:00-17:00",
-  "status_2026": "no_2026_info",
-  "offer": "Every second Wednesday, the museum's Veterans Coffee Hour: free coffee and donuts",
+  "status_2026": "offering",
+  "offer": "Veterans Coffee Hour: free coffee and donuts for all veterans",
   "est_value_usd": 4,
-  "dates": "2026-11-11 (second Wednesday; not on the museum's November list)",
+  "dates": "2026-11-11",
   "hours_local": "10:00-12:00",
   "mode": "event",
   "eligible": [
@@ -1479,17 +1492,17 @@
    "active"
   ],
   "proof": [],
-  "grade": "C",
+  "grade": "A",
   "geo": "46.90555,-96.80395",
   "sources": [
    {
-    "url": "https://fargoairmuseum.org/calendar/veterans-coffee-hour/9-1",
-    "publisher": "Fargo Air Museum (Veterans Coffee Hour page)",
-    "published": "2026",
+    "url": "https://fargoairmuseum.org/calendar/veterans-coffee-hour/nov-11",
+    "publisher": "Fargo Air Museum (own calendar)",
+    "published": "2026 (entry for Wed 11 Nov 2026, 10:00\u201312:00)",
     "accessed": "2026-11-08"
    }
   ],
-  "notes": "A monthly second-Wednesday event. It isn't on the museum's events list for 11 Nov, so it may give way to the 11:00 program: call 701-293-8043."
+  "notes": "On the museum's own calendar for Wed 11 Nov 2026, 10:00\u201312:00, the hour before its 11:00 Veterans Day Program."
  },
  {
   "name": "BorderTown Bar & Grill",
@@ -1644,5 +1657,46 @@
    }
   ],
   "notes": "PRIOR-YEAR PATTERN ONLY (2023); nothing for 2026 yet. Call before going."
+ },
+ {
+  "name": "Royal Buffet (Fargo)",
+  "kind": "business",
+  "address": "1620 32nd Ave S, Fargo, ND 58103",
+  "phone": "",
+  "wednesday_hours": "11:00-21:00 (directory listing, not confirmed)",
+  "status_2026": "no_2026_info",
+  "offer": "Reported for 2026 (unconfirmed): free buffet for veterans and active military, 9\u201311 Nov; show military or veteran ID to the host",
+  "est_value_usd": 13,
+  "dates": "9-11 Nov 2026 (one unconfirmed listing)",
+  "hours_local": "unknown",
+  "mode": "dine_in",
+  "eligible": [
+   "veteran",
+   "active"
+  ],
+  "eligibility_quote": "veterans and active military members",
+  "guard_reserve": "unclear",
+  "spouse_or_guest": "unclear",
+  "proof": [
+   "military_id",
+   "va_card"
+  ],
+  "limits": "Dine-in buffet",
+  "grade": "C",
+  "sources": [
+   {
+    "url": "https://www.facebook.com/61566436502652/posts/below-is-a-list-of-local-discounts-and-freebies-in-our-area-for-veterans-day-roy/122235733094547883/",
+    "publisher": "Fargo American Legion Post 2 (Facebook list of local deals)",
+    "published": "2026-10-30",
+    "accessed": "2026-11-08"
+   },
+   {
+    "url": "https://www.wdayradionow.com/news/local-news/69955-2023-veterans-day-deals-discounts-and-freebies-in-the-fm-metro/",
+    "publisher": "WDAY Radio (2023 list: the same offer)",
+    "published": "2023",
+    "accessed": "2026-11-08"
+   }
+  ],
+  "notes": "Fargo American Legion Post 2's 30 Oct 2026 list quotes Royal Buffet's offer and address; the same 9\u201311 Nov offer ran in 2023, so the list may be repeating it. Nothing from Royal Buffet itself found: call first."
  }
 ]

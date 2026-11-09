@@ -3,7 +3,17 @@
 Read with `CLAUDE.md` (the project's notes). Times are Central (CST since 1 Nov). Each commit, push and deploy needs
 Tom's yes.
 
-## Veterans Day planner: review against the consolidated report, 8 Nov 2026 night (not committed or deployed)
+## Veterans Day planner: Tuesday checklist run early, 8 Nov 2026, about 9:45 PM CST (not committed or deployed)
+asked for the Tuesday re-checks with his file `Documents\2026 Veterans Day discounts.txt`. Live is still `8a8fb40`
+(66 deals, 161 stores). Local build: 68 deals at 166 stores, A 18 / B 23 / C 27; `drive.json` rebuilt; 67 tests pass;
+phone-size check clean. Details in `veterans-day/README.md` ("Re-check, 8 Nov 2026 night"). In short: 12 chains up to
+A from their own 2026 pages; Air Museum coffee hour and Cash Wise's chicken dinner (four stores) to A; Perkins to B;
+Charleys (at the Petro, the location given) and Royal Buffet (C) added; Olive Garden and Red Lobster marked "not announced
+by the company". No local media roundup existed yet, no tips had come in, and the publisher had confirmed nothing by phone and
+had no details for Fryn' Pan, Doolittle's or Porter Creek. **Still for Tue 10 Nov:** re-run the local roundup search
+and the posts' and bars' own pages, take the publisher's phone results, rebuild, deploy with approved.
+
+## Veterans Day planner: review against the consolidated report, 8 Nov 2026 night (committed `8a8fb40`, deployed)
 "previous sessions have missed many free opportunities", with his report
 `Downloads\2026 Fargo-Moorhead Veterans Day Deals & Events — Consolidated Report.md`. Details in
 `veterans-day/README.md` ("Review against the consolidated report"). In short: 55 deals at 149 stores (was 42 at

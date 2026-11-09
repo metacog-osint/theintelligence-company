@@ -1,6 +1,6 @@
 {
  "meta": {
-  "built_at": "2026-11-09T01:59:05Z",
+  "built_at": "2026-11-09T03:28:14Z",
   "day": "2026-11-11",
   "day_start": "2026-11-11T06:00:00Z",
   "tz": "America/Chicago",
@@ -17,7 +17,7 @@
    "category": "meal",
    "offer": "Free full-size entree from a special Veterans Day menu (7 items); some locations add a $5 Bounce Back card",
    "value": 14,
-   "grade": "B",
+   "grade": "A",
    "start": null,
    "end": null,
    "window_text": "",
@@ -45,6 +45,11 @@
    "limits": "Dine-in only; participating locations",
    "sources": [
     {
+     "url": "https://www.fsrmagazine.com/industry-news/applebees-to-thank-service-members-with-free-entrees-on-veterans-day/",
+     "publisher": "Applebee's 2026 release, as carried by FSR magazine",
+     "published": "2026-11-02"
+    },
+    {
      "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
      "publisher": "Stars and Stripes",
      "published": "2026-11-06"
@@ -60,7 +65,7 @@
      "published": "2026-11-06 (updated)"
     }
    ],
-   "notes": "Guard/Reserve wording from Stripes; Veteran.com lists veterans only. Hours not specified.",
+   "notes": "Guard/Reserve wording from Stripes; Veteran.com lists veterans only. Hours not specified. Applebee's own 2026 release (19th year, seven entrees, dine-in at participating restaurants); applebees.com refuses automated reads.",
    "caution": "",
    "group": null,
    "ticket": false,
@@ -73,7 +78,7 @@
    "category": "meal",
    "offer": "Free entree from a limited Veterans Day menu",
    "value": 13,
-   "grade": "B",
+   "grade": "A",
    "start": null,
    "end": null,
    "window_text": "",
@@ -100,6 +105,11 @@
    "limits": "",
    "sources": [
     {
+     "url": "https://www.chilis.com/restaurant-events/veterans-day",
+     "publisher": "Chili's (own page)",
+     "published": "2026 (fine print: valid only on 11/11/2026)"
+    },
+    {
      "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
      "publisher": "Military.com",
      "published": "2026-11-08 (updated)"
@@ -115,7 +125,7 @@
      "published": "2026-11-06 (updated)"
     }
    ],
-   "notes": "Select items only; participating locations.",
+   "notes": "Select items only; participating locations. Chili's own page: free meal on 11 Nov 2026 at participating restaurants, dine-in, limited menu, no drinks or gratuity.",
    "caution": "",
    "group": null,
    "ticket": false,
@@ -165,8 +175,8 @@
      "published": "2026-11-06"
     }
    ],
-   "notes": "Veteran.com files Olive Garden under 2025; Military.com and Stripes list it for 2026. Brand's own page not checked.",
-   "caution": "",
+   "notes": "Veteran.com files Olive Garden under 2025; Military.com and Stripes list it for 2026. Brand's own page not checked. No statement from the company itself for 2026 found (8 Nov 2026): compilers only.",
+   "caution": "Not announced by the company for 2026: call first",
    "group": null,
    "ticket": false,
    "purchase": false
@@ -215,8 +225,8 @@
      "published": "2026-11-06"
     }
    ],
-   "notes": "Veteran.com lists a prior-year entry; Military.com/Stripes show 2026 item named 'Veteran's Shrimp & Chips'. Confirm.",
-   "caution": "",
+   "notes": "Veteran.com lists a prior-year entry; Military.com/Stripes show 2026 item named 'Veteran's Shrimp & Chips'. Confirm. No statement from the company itself for 2026 found (8 Nov 2026): compilers only.",
+   "caution": "Not announced by the company for 2026: call first",
    "group": null,
    "ticket": false,
    "purchase": false
@@ -226,7 +236,7 @@
    "brand": "Twin Peaks",
    "status": "offering",
    "category": "meal",
-   "offer": "Free select-menu entree on Nov 11 (all day); 20% off all November with ID or uniform",
+   "offer": "Free entree from a select menu (cheeseburger and fries, chicken tenders and fries, chicken Caesar salad, OG pepperoni flatbread or boneless wings and fries), all day; 20% off all November with ID or uniform",
    "value": 15,
    "grade": "B",
    "start": null,
@@ -256,6 +266,11 @@
    "limits": "",
    "sources": [
     {
+     "url": "https://news.va.gov/150505/2026-veterans-day-discounts-free-meals-offers/",
+     "publisher": "VA News (VA Office of Digital Media)",
+     "published": "2026-10-26 (verified 22 Oct, updated through 11 Nov)"
+    },
+    {
      "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
      "publisher": "Military.com",
      "published": "2026-11-08 (updated)"
@@ -264,6 +279,11 @@
      "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
      "publisher": "Stars and Stripes",
      "published": "2026-11-06"
+    },
+    {
+     "url": "https://www.restaurantmagazine.com/twin-peaks-honors-veterans-day-free-meals-veterans-active-duty-military/",
+     "publisher": "Restaurant Magazine",
+     "published": "2026-10-30"
     }
    ],
    "notes": "20% off runs the whole month of November.",
@@ -333,9 +353,9 @@
    "brand": "Ruby Tuesday",
    "status": "offering",
    "category": "meal",
-   "offer": "Free Everyday Fresh meal, dine-in",
+   "offer": "Free Everyday Fresh Meal (entree, Garden Bar and bottomless drink, up to $17.99), dine-in, all day",
    "value": 14,
-   "grade": "B",
+   "grade": "A",
    "start": null,
    "end": null,
    "window_text": "",
@@ -361,12 +381,17 @@
    "limits": "",
    "sources": [
     {
+     "url": "https://www.rubytuesday.com/veterans-day/",
+     "publisher": "Ruby Tuesday (own page)",
+     "published": "2026-10-27 (updated)"
+    },
+    {
      "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
      "publisher": "Military.com",
      "published": "2026-11-08 (updated)"
     }
    ],
-   "notes": "",
+   "notes": "Ruby Tuesday's own page: veterans, retired, active duty and Reserve; all day, dine-in, participating locations; proof of service.",
    "caution": "Store not confirmed open: call first",
    "group": null,
    "ticket": false,
@@ -420,7 +445,7 @@
    "brand": "Pizza Ranch",
    "status": "offering",
    "category": "meal",
-   "offer": "Prior year (2025): free buffet for veterans/active duty at participating franchise locations, each owner opts in",
+   "offer": "Reported for 2026 (unconfirmed): free buffet for veterans; a commenter says a sign outside the Fargo restaurant announces it. Each Pizza Ranch chooses a free Veterans Day buffet or a Veterans Week discount",
    "value": 14,
    "grade": "C",
    "start": null,
@@ -447,12 +472,17 @@
    "limits": "",
    "sources": [
     {
+     "url": "https://www.facebook.com/61566436502652/posts/below-is-a-list-of-local-discounts-and-freebies-in-our-area-for-veterans-day-roy/122235733094547883/",
+     "publisher": "Fargo American Legion Post 2 (Facebook list of local deals)",
+     "published": "2026-10-30"
+    },
+    {
      "url": "https://pizzaranch.com/veterans-day-free-buffet",
      "publisher": "Pizza Ranch (2025 page)",
      "published": "2025"
     }
    ],
-   "notes": "2026 not found in any roundup. Pizza Ranch is common in FM and historically does this; call ahead.",
+   "notes": "2026 not found in any roundup. Pizza Ranch is common in FM and historically does this; call ahead. A comment under Fargo American Legion Post 2's 30 Oct 2026 list says a sign outside the Fargo restaurant announces a free buffet for veterans; nothing from the store itself. Pizza Ranch's blog says each restaurant picks a Veterans Day buffet or a Veterans Week discount.",
    "caution": "",
    "group": null,
    "ticket": false,
@@ -527,9 +557,9 @@
    "offer": "Free Red, White & Blueberry Pancake Combo",
    "value": 11,
    "grade": "B",
-   "start": null,
-   "end": null,
-   "window_text": "",
+   "start": "2026-11-11T13:00:00Z",
+   "end": "2026-11-12T01:00:00Z",
+   "window_text": "07:00–19:00 CST",
    "mode": "dine_in",
    "minutes": 45,
    "busy": 15,
@@ -561,9 +591,14 @@
      "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
      "publisher": "Stars and Stripes",
      "published": "2026-11-06"
+    },
+    {
+     "url": "https://www.legion.org/information-center/news/veterans-day/2026/november/veterans-day-deals-and-discounts",
+     "publisher": "The American Legion",
+     "published": "2026-11-05"
     }
    ],
-   "notes": "Veteran.com page still shows a 'Tuesday' weekday (stale 2025 text) but Military.com and Stripes confirm 11 Nov. Combo = pancakes, eggs, hash browns, bacon/sausage.",
+   "notes": "Veteran.com page still shows a 'Tuesday' weekday (stale 2025 text) but Military.com and Stripes confirm 11 Nov. Combo = pancakes, eggs, hash browns, bacon/sausage. The American Legion's 2026 list (5 Nov) gives 7 AM–7 PM at participating restaurants; ihop.com refuses automated reads.",
    "caution": "",
    "group": null,
    "ticket": false,
@@ -574,9 +609,9 @@
    "brand": "Perkins",
    "status": "offering",
    "category": "breakfast",
-   "offer": "Prior pattern: free Magnificent Seven breakfast; Living On The Cheap lists it as 2026 but KCL marks 'predicted'",
+   "offer": "Free Magnificent Seven breakfast at participating locations",
    "value": 12,
-   "grade": "C",
+   "grade": "B",
    "start": null,
    "end": null,
    "window_text": "",
@@ -594,12 +629,19 @@
    "guard_reserve": "unclear",
    "spouse": "unclear",
    "kids": null,
-   "proof": [],
+   "proof": [
+    "military_id"
+   ],
    "advance": null,
    "participating": true,
    "voucher_use_by": null,
    "limits": "",
    "sources": [
+    {
+     "url": "https://www.fox4news.com/news/veterans-day-2026-deals",
+     "publisher": "FOX 4 Dallas-Fort Worth (FOX Local)",
+     "published": "2026-11-04 (updated 2026-11-05)"
+    },
     {
      "url": "https://livingonthecheap.com/veterans-day-freebies-deals/",
      "publisher": "Living On The Cheap",
@@ -609,9 +651,14 @@
      "url": "https://thekrazycouponlady.com/tips/money/35-veterans-day-freebies-free-oil-change-flu-shot-dinner-dessert",
      "publisher": "The Krazy Coupon Lady",
      "published": "2026-11-07 (updated)"
+    },
+    {
+     "url": "https://www.facebook.com/61566436502652/posts/below-is-a-list-of-local-discounts-and-freebies-in-our-area-for-veterans-day-roy/122235733094547883/",
+     "publisher": "Fargo American Legion Post 2 (Facebook list of local deals)",
+     "published": "2026-10-30"
     }
    ],
-   "notes": "Conflicting: LOC lists it as 2026 offer; Military.com/Stripes/Veteran.com do not. Perkins has 2025 press release history. Treat as unconfirmed.",
+   "notes": "Fox 4's 2026 list (4 Nov, updated 5 Nov): participating Perkins, active duty and veterans, valid military ID, Wed 11 Nov 2026. Fargo Legion Post 2's 30 Oct list has it too. No Perkins release for 2026 found.",
    "caution": "",
    "group": null,
    "ticket": false,
@@ -656,9 +703,14 @@
      "url": "https://www.villageinn.com/moorhead-mn",
      "publisher": "Village Inn (Moorhead store page: open 6 AM–8 PM)",
      "published": "seen 8 Nov 2026"
+    },
+    {
+     "url": "https://www.facebook.com/61566436502652/posts/below-is-a-list-of-local-discounts-and-freebies-in-our-area-for-veterans-day-roy/122235733094547883/",
+     "publisher": "Fargo American Legion Post 2 (Facebook list of local deals)",
+     "published": "2026-10-30"
     }
    ],
-   "notes": "Only one 2026 listing has this (a compiled report we couldn't trace to the business). Not announced by the business: call first. The Krazy Coupon Lady listed it as predicted. The Moorhead store's page lists 6 AM–8 PM daily but online ordering is off; call to check it's open.",
+   "notes": "Only one 2026 listing has this (a compiled report we couldn't trace to the business). Not announced by the business: call first. The Krazy Coupon Lady listed it as predicted. The Moorhead store's page lists 6 AM–8 PM daily but online ordering is off; call to check it's open. Fargo Legion Post 2's 30 Oct 2026 list also has it (free meal from a limited menu, drink extra); that list repeats older national offers, so it stays unconfirmed.",
    "caution": "Only one unconfirmed 2026 listing: call first",
    "group": null,
    "ticket": false,
@@ -728,7 +780,7 @@
    "category": "quick",
    "offer": "Free Dave's Single cheeseburger",
    "value": 6,
-   "grade": "B",
+   "grade": "A",
    "start": null,
    "end": null,
    "window_text": "",
@@ -753,6 +805,11 @@
    "limits": "One per person, no purchase needed, no substitutions; identify in-store or at the drive-thru; app/kiosk/mobile/delivery excluded",
    "sources": [
     {
+     "url": "https://www.wendys.com/blog/wendysr-square-deal-blog/wendys-honors-veterans-and-active-duty-military-free-daves-single",
+     "publisher": "Wendy's (own blog)",
+     "published": "2026-11-02"
+    },
+    {
      "url": "https://hip2save.com/deals/veterans-day-free-meals/",
      "publisher": "Hip2Save",
      "published": "2026-11-05"
@@ -773,7 +830,7 @@
      "published": "2026-11-05"
     }
    ],
-   "notes": "One 2026 'Military Wallet' page claims a free breakfast combo instead - that is the 2025 offer; four 2026 sources say Dave's Single. Wendy's own newsroom not found. Wendy's sometimes offers varying items; confirm.",
+   "notes": "One 2026 'Military Wallet' page claims a free breakfast combo instead - that is the 2025 offer; four 2026 sources say Dave's Single. Wendy's own newsroom not found. Wendy's sometimes offers varying items; confirm. Wendy's own post: just say you're a veteran or active duty; participating US restaurants; not in a combo; not for digital, delivery or kiosk orders.",
    "caution": "",
    "group": null,
    "ticket": false,
@@ -841,7 +898,7 @@
    "category": "quick",
    "offer": "Buy any size sub, get a second free",
    "value": 9,
-   "grade": "B",
+   "grade": "A",
    "start": null,
    "end": null,
    "window_text": "",
@@ -868,6 +925,11 @@
    "limits": "In-store only; second sub is equal or lesser value presumably",
    "sources": [
     {
+     "url": "https://news.firehousesubs.com/posts/firehouse-subs-honors-veterans-and-active-duty-military-with-a-veterans-day-bogo-offer",
+     "publisher": "Firehouse Subs newsroom",
+     "published": "2026-11-06"
+    },
+    {
      "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
      "publisher": "Military.com",
      "published": "2026-11-08 (updated)"
@@ -878,7 +940,7 @@
      "published": "2026-11-06"
     }
    ],
-   "notes": "Veteran.com lists as 2025; Military.com (updated 8 Nov 2026) lists it without a year. Stripes also lists. Moderately confident.",
+   "notes": "Veteran.com lists as 2025; Military.com (updated 8 Nov 2026) lists it without a year. Stripes also lists. Moderately confident. Firehouse's own post for Wed 11 Nov 2026: buy any sub, get one free, veterans and active duty with military ID, in store, participating restaurants.",
    "caution": "",
    "group": null,
    "ticket": false,
@@ -892,7 +954,7 @@
    "category": "quick",
    "offer": "Free chips with guac, queso blanco or salsa with $5+ in-restaurant purchase",
    "value": 5,
-   "grade": "B",
+   "grade": "A",
    "start": null,
    "end": null,
    "window_text": "",
@@ -908,7 +970,7 @@
     "active"
    ],
    "guard_reserve": "unclear",
-   "spouse": "unclear",
+   "spouse": "no",
    "kids": null,
    "proof": [
     "military_id"
@@ -918,6 +980,11 @@
    "voucher_use_by": null,
    "limits": "In-restaurant only; not catering, mobile, online or delivery",
    "sources": [
+    {
+     "url": "https://newsroom.chipotle.com/veterans-day-2026-offer",
+     "publisher": "Chipotle newsroom (release)",
+     "published": "2026-11-05"
+    },
     {
      "url": "https://veteran.com/veterans-day-discounts-sales-deals-free-meals/",
      "publisher": "Veteran.com",
@@ -934,7 +1001,7 @@
      "published": "2026-11-08 (updated)"
     }
    ],
-   "notes": "Requires a $5 purchase.",
+   "notes": "Requires a $5 purchase. Chipotle's 2026 release: active duty and veterans only (not spouses), all day, in-restaurant, $5 minimum before tax.",
    "caution": "",
    "group": null,
    "ticket": false,
@@ -987,6 +1054,50 @@
    ],
    "notes": "Living On The Cheap lists it as 2026; Krazy Coupon Lady marks it 'predicted'. Not on Military.com/Stripes lists. Treat as likely but not firm.",
    "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "eat": 0.2
+  },
+  {
+   "id": "charleys",
+   "brand": "Charleys Cheesesteaks",
+   "status": "offering",
+   "category": "quick",
+   "offer": "Free regular Gourmet Fry, no purchase needed",
+   "value": 4,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "in_store",
+   "minutes": 8,
+   "busy": 5,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": true,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    }
+   ],
+   "notes": "Single source (Military.com). Location is inside a truck stop. Store: inside the Petro Stopping Center, 4510 19th Ave S, Fargo, next to Popeyes (checked locally, 8 Nov 2026). Charleys' own page found is 2025's (free regular Gourmet Fry, in store, participating US stores).",
+   "caution": "Inside the Petro truck stop, next to Popeyes; participating stores only",
    "group": null,
    "ticket": false,
    "purchase": false,
@@ -1104,7 +1215,7 @@
    "category": "quick",
    "offer": "Free sandwich + coffee or fountain drink via Pilot app",
    "value": 8,
-   "grade": "B",
+   "grade": "A",
    "start": null,
    "end": null,
    "window_text": "",
@@ -1129,6 +1240,11 @@
    "limits": "",
    "sources": [
     {
+     "url": "https://newsroom.pilotcompany.com/pilot-salutes-veterans-with-free-meals-and-funds-for-career-development",
+     "publisher": "Pilot Company newsroom (release)",
+     "published": "2026-10-23"
+    },
+    {
      "url": "https://veteran.com/veterans-day-discounts-sales-deals-free-meals/",
      "publisher": "Veteran.com",
      "published": "2026-11-06 (updated)"
@@ -1144,7 +1260,7 @@
      "published": "2026-11-08 (updated)"
     }
    ],
-   "notes": "Date not stated by Stripes; Veteran.com/Military.com say Nov 11 2026. ID.me required in advance.",
+   "notes": "Date not stated by Stripes; Veteran.com/Military.com say Nov 11 2026. ID.me required in advance. Pilot's 2026 release: veterans and active duty verified through ID.me, claimed in the Pilot app, participating locations.",
    "caution": "",
    "group": null,
    "ticket": false,
@@ -1157,7 +1273,7 @@
    "category": "quick",
    "offer": "Free one-topping pizza",
    "value": 8,
-   "grade": "B",
+   "grade": "A",
    "start": null,
    "end": null,
    "window_text": "",
@@ -1181,12 +1297,17 @@
    "limits": "",
    "sources": [
     {
+     "url": "https://www.manilatimes.net/2026/11/02/tmt-newswire/globenewswire/blaze-pizza-to-offer-free-one-topping-pizza-to-veterans-and-active-duty-military-on-veterans-day/2459600",
+     "publisher": "Blaze Pizza release (GlobeNewswire, carried by The Manila Times)",
+     "published": "2026-11-02"
+    },
+    {
      "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
      "publisher": "Military.com",
      "published": "2026-11-08 (updated)"
     }
    ],
-   "notes": "",
+   "notes": "Blaze's 2026 release: veterans and active duty, participating locations; no hours or ID rule stated.",
    "caution": "",
    "group": null,
    "ticket": false,
@@ -1258,7 +1379,7 @@
    "category": "coffee",
    "offer": "Free medium drink, in-store only",
    "value": 5,
-   "grade": "B",
+   "grade": "A",
    "start": null,
    "end": null,
    "window_text": "",
@@ -1285,6 +1406,11 @@
    "limits": "",
    "sources": [
     {
+     "url": "https://www.scooterscoffee.com/blog/post/veterans-day-2026",
+     "publisher": "Scooter's Coffee (own blog)",
+     "published": "2026-11-04"
+    },
+    {
      "url": "https://veteran.com/veterans-day-discounts-sales-deals-free-meals/",
      "publisher": "Veteran.com",
      "published": "2026-11-06 (updated)"
@@ -1295,7 +1421,7 @@
      "published": "2026-11-08 (updated)"
     }
    ],
-   "notes": "",
+   "notes": "Scooter's own post: valid military ID, all day, in-store only (no delivery or mobile order-ahead), one per guest.",
    "caution": "New store; opening not confirmed: call first",
    "group": null,
    "ticket": false,
@@ -1360,7 +1486,7 @@
    "brand": "Casey's",
    "status": "offering",
    "category": "coffee",
-   "offer": "Free coffee or fountain drink (and free car wash where available)",
+   "offer": "Free coffee or fountain drink",
    "value": 3,
    "grade": "B",
    "start": null,
@@ -1409,7 +1535,7 @@
      "published": "unknown"
     }
    ],
-   "notes": "Active-duty also get the drink year-round. Casey's has FM-area stores (believed West Fargo/Moorhead area).",
+   "notes": "Active-duty also get the drink year-round. Casey's has FM-area stores (believed West Fargo/Moorhead area). Casey's own Veterans Day page (checked 8 Nov 2026) mentions no car wash.",
    "caution": "",
    "group": null,
    "ticket": false,
@@ -1626,7 +1752,7 @@
    "category": "treat",
    "offer": "Free combo meal card for visiting on Nov 11 (no purchase); redeem later",
    "value": 11,
-   "grade": "B",
+   "grade": "A",
    "start": null,
    "end": null,
    "window_text": "",
@@ -1653,6 +1779,11 @@
    "limits": "",
    "sources": [
     {
+     "url": "https://freddys.com/veterans-day",
+     "publisher": "Freddy's (own page)",
+     "published": "2026 (cards redeem through 25 Nov 2026)"
+    },
+    {
      "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
      "publisher": "Military.com",
      "published": "2026-11-08 (updated)"
@@ -1668,7 +1799,7 @@
      "published": "2026-11-06 (updated)"
     }
    ],
-   "notes": "Card redeemable through 25 Nov 2026.",
+   "notes": "Card redeemable through 25 Nov 2026. Freddy's own 2026 page: no purchase; card from your local Freddy's on 11 Nov, redeem through 25 Nov 2026.",
    "caution": "",
    "group": null,
    "ticket": true,
@@ -1729,7 +1860,7 @@
    "category": "service",
    "offer": "Free haircut or a free-haircut card for a later visit; non-veteran customers that day get a card to give to a veteran",
    "value": 22,
-   "grade": "B",
+   "grade": "A",
    "start": null,
    "end": null,
    "window_text": "",
@@ -1753,6 +1884,11 @@
    "voucher_use_by": "2026-12-04",
    "limits": "Card redeemable through 4 Dec 2026",
    "sources": [
+    {
+     "url": "https://www.greatclips.com/about-us/news-room/vets-day-free-haircuts-2026",
+     "publisher": "Great Clips newsroom (release)",
+     "published": "2026-10-20"
+    },
     {
      "url": "https://hip2save.com/deals/veterans-day-free-meals/",
      "publisher": "Hip2Save",
@@ -1779,7 +1915,7 @@
      "published": "2026-11-05"
     }
    ],
-   "notes": "Great Clips program page describes the annual Nov 11 program; 2026 card deadline of 4 Dec comes from roundups (2025 was 5 Dec). Hours/proof not specified. Salons are franchised; wait times likely long.",
+   "notes": "Great Clips program page describes the annual Nov 11 program; 2026 card deadline of 4 Dec comes from roundups (2025 was 5 Dec). Hours/proof not specified. Salons are franchised; wait times likely long. Great Clips' 2026 release: any US salon; cards redeemable through 4 Dec 2026.",
    "caution": "",
    "group": null,
    "ticket": true,
@@ -1852,7 +1988,7 @@
    "category": "service",
    "offer": "Free car wash at participating locations (some also a free detail kit)",
    "value": 12,
-   "grade": "B",
+   "grade": "A",
    "start": null,
    "end": null,
    "window_text": "",
@@ -1877,6 +2013,11 @@
    "limits": "",
    "sources": [
     {
+     "url": "https://tommys-express.com/veterans-day/",
+     "publisher": "Tommy's Express (own page, 'Veterans Day 2026')",
+     "published": "2026"
+    },
+    {
      "url": "https://themilitarywallet.com/veterans-day-retail-discounts/",
      "publisher": "The Military Wallet",
      "published": "2026"
@@ -1885,9 +2026,14 @@
      "url": "https://www.military.com/veterans-day/retailers-veterans-day-military-discounts.html",
      "publisher": "Military.com retail list",
      "published": "2026-11-07 (updated)"
+    },
+    {
+     "url": "https://www.franchising.com/news/20261027_tommys_express_locations_honoring_veterans.html",
+     "publisher": "Tommy's Express release (Franchising.com)",
+     "published": "2026-10-27"
     }
    ],
-   "notes": "Military.com retail list (7 Nov) did not list Tommy's; one aggregator did. Lower confidence; FM presence unverified.",
+   "notes": "Military.com retail list (7 Nov) did not list Tommy's; one aggregator did. Lower confidence; FM presence unverified. Tommy's Express's 2026 page and release (franchising.com, 27 Oct 2026): veterans and active duty, participating locations.",
    "caution": "",
    "group": null,
    "ticket": false,
@@ -1944,7 +2090,7 @@
    "brand": "Target",
    "status": "offering",
    "category": "shopping",
-   "offer": "20% off one qualifying purchase, 5–11 Nov, in store and online (Target Circle)",
+   "offer": "20% off one qualifying storewide purchase, 5–11 Nov, in store and online (Target Circle Military Appreciation)",
    "value": 0,
    "grade": "B",
    "start": null,
@@ -1972,6 +2118,11 @@
    "limits": "One qualified purchase",
    "sources": [
     {
+     "url": "https://news.va.gov/150505/2026-veterans-day-discounts-free-meals-offers/",
+     "publisher": "VA News (VA Office of Digital Media)",
+     "published": "2026-10-26 (verified 22 Oct, updated through 11 Nov)"
+    },
+    {
      "url": "https://hip2save.com/deals/veterans-day-free-meals/",
      "publisher": "Hip2Save",
      "published": "2026-11-05"
@@ -1990,9 +2141,14 @@
      "url": "https://themilitarywallet.com/veterans-day-free-meals-and-discounts/",
      "publisher": "The Military Wallet",
      "published": "2026-11-06 (updated)"
+    },
+    {
+     "url": "https://www.fox4news.com/news/veterans-day-2026-deals",
+     "publisher": "FOX 4 Dallas-Fort Worth (FOX Local)",
+     "published": "2026-11-04 (updated 2026-11-05)"
     }
    ],
-   "notes": "Families included. Verify online first; the discount loads into Target Circle.",
+   "notes": "Families included. Verify online first; the discount loads into Target Circle. VA News says one qualifying storewide purchase; Fox 4 says 20% off storewide. Target's own 2026 page not found.",
    "caution": "",
    "group": null,
    "ticket": false,
@@ -2033,6 +2189,11 @@
    "limits": "",
    "sources": [
     {
+     "url": "https://news.va.gov/150505/2026-veterans-day-discounts-free-meals-offers/",
+     "publisher": "VA News (VA Office of Digital Media)",
+     "published": "2026-10-26 (verified 22 Oct, updated through 11 Nov)"
+    },
+    {
      "url": "https://www.military.com/veterans-day/retailers-veterans-day-military-discounts.html",
      "publisher": "Military.com retail list",
      "published": "2026-11-07 (updated)"
@@ -2048,7 +2209,7 @@
      "published": "2026-11-05"
     }
    ],
-   "notes": "Military Wallet separately says 15% every Monday (ongoing).",
+   "notes": "Military Wallet separately says 15% every Monday (ongoing). VA News (26 Oct 2026) lists 30% off in store 10–11 Nov 2026 for military, veterans and families; Kohl's own 2026 page not found.",
    "caution": "",
    "group": null,
    "ticket": false,
@@ -2517,9 +2678,9 @@
    "brand": "Fargo Air Museum Veterans Coffee Hour",
    "status": "offering",
    "category": "event",
-   "offer": "Every second Wednesday, the museum's Veterans Coffee Hour: free coffee and donuts",
+   "offer": "Veterans Coffee Hour: free coffee and donuts for all veterans",
    "value": 4,
-   "grade": "C",
+   "grade": "A",
    "start": "2026-11-11T16:00:00Z",
    "end": "2026-11-11T18:00:00Z",
    "window_text": "10:00–12:00 CST",
@@ -2544,13 +2705,13 @@
    "limits": "",
    "sources": [
     {
-     "url": "https://fargoairmuseum.org/calendar/veterans-coffee-hour/9-1",
-     "publisher": "Fargo Air Museum (Veterans Coffee Hour page)",
-     "published": "2026"
+     "url": "https://fargoairmuseum.org/calendar/veterans-coffee-hour/nov-11",
+     "publisher": "Fargo Air Museum (own calendar)",
+     "published": "2026 (entry for Wed 11 Nov 2026, 10:00–12:00)"
     }
    ],
-   "notes": "A monthly second-Wednesday event. It isn't on the museum's events list for 11 Nov, so it may give way to the 11:00 program: call 701-293-8043.",
-   "caution": "Not on the museum's 11 Nov events list: call first",
+   "notes": "On the museum's own calendar for Wed 11 Nov 2026, 10:00–12:00, the hour before its 11:00 Veterans Day Program.",
+   "caution": "",
    "group": null,
    "ticket": false,
    "purchase": false,
@@ -2751,13 +2912,13 @@
    "brand": "Cash Wise Foods deli",
    "status": "offering",
    "category": "quick",
-   "offer": "Reported for 2026 (unconfirmed): 2-piece chicken dinner with sides from the deli",
-   "value": 8,
-   "grade": "C",
+   "offer": "Free chicken dinner: 2 pieces of fried or grilled chicken or tenders, 2 sides, a roll and a drink, dine-in or Grab & Go; a guest's meal is half price",
+   "value": 10,
+   "grade": "A",
    "start": "2026-11-11T17:00:00Z",
    "end": "2026-11-12T01:00:00Z",
    "window_text": "11:00–19:00 CST",
-   "mode": "to_go",
+   "mode": "dine_in_or_to_go",
    "minutes": 12,
    "busy": 5,
    "line": 3,
@@ -2766,9 +2927,11 @@
    "snack": true,
    "eligible": [
     "veteran",
-    "active"
+    "active",
+    "guard_reserve",
+    "retired"
    ],
-   "guard_reserve": "unclear",
+   "guard_reserve": "yes",
    "spouse": "unclear",
    "kids": null,
    "proof": [
@@ -2779,20 +2942,76 @@
    "advance": null,
    "participating": false,
    "voucher_use_by": null,
-   "limits": "",
+   "limits": "One guest at half price",
    "sources": [
+    {
+     "url": "https://cashwise.com/veterans-day",
+     "publisher": "Cash Wise Foods (own Veterans Day page)",
+     "published": "undated; live 8 Nov 2026, says Wednesday, November 11 (a Tuesday in 2025)"
+    },
     {
      "url": "https://www.openstreetmap.org/",
      "publisher": "OpenStreetMap (store and hours)",
      "published": "seen 8 Nov 2026"
     }
    ],
-   "notes": "Only one 2026 listing has this (a compiled report we couldn't trace to the business). Not announced by the business: call first. No Cash Wise offer is on any 2026 national list.",
-   "caution": "Only one unconfirmed 2026 listing: call first",
+   "notes": "Cash Wise's own page (live 8 Nov 2026) gives no year and no store list; its 'Wednesday, November 11' fits 2026, not 2025. Active duty, National Guard, Reserve, former and retired military. Same offer in 2021. Call your store.",
+   "caution": "Cash Wise's page lists no stores: call yours first",
    "group": null,
    "ticket": false,
    "purchase": false,
    "eat": 0.6
+  },
+  {
+   "id": "royal-buffet",
+   "brand": "Royal Buffet",
+   "status": "offering",
+   "category": "meal",
+   "offer": "Reported for 2026 (unconfirmed): free buffet for veterans and active military, 9–11 Nov; show military or veteran ID to the host",
+   "value": 13,
+   "grade": "C",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 50,
+   "busy": 15,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id",
+    "va_card"
+   ],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "Dine-in buffet",
+   "sources": [
+    {
+     "url": "https://www.facebook.com/61566436502652/posts/below-is-a-list-of-local-discounts-and-freebies-in-our-area-for-veterans-day-roy/122235733094547883/",
+     "publisher": "Fargo American Legion Post 2 (Facebook list of local deals)",
+     "published": "2026-10-30"
+    },
+    {
+     "url": "https://www.wdayradionow.com/news/local-news/69955-2023-veterans-day-deals-discounts-and-freebies-in-the-fm-metro/",
+     "publisher": "WDAY Radio (2023 list: the same offer)",
+     "published": "2023"
+    }
+   ],
+   "notes": "Fargo American Legion Post 2's 30 Oct 2026 list quotes Royal Buffet's offer and address; the same 9–11 Nov offer ran in 2023, so the list may be repeating it. Nothing from Royal Buffet itself found: call first.",
+   "caution": "Only one unconfirmed 2026 listing: call first",
+   "group": null,
+   "ticket": false,
+   "purchase": false
   },
   {
    "id": "sandys-donuts",
@@ -3863,6 +4082,20 @@
    "hoursAssumed": false,
    "verified": "confirmed",
    "pin": "osm"
+  },
+  {
+   "id": "charleys-4510-19th-ave-s",
+   "offer": "charleys",
+   "name": "",
+   "address": "4510 19th Ave S, Fargo, ND 58103",
+   "lat": 46.84953,
+   "lng": -96.86493,
+   "phone": "",
+   "open": "2026-11-11T16:30:00Z",
+   "close": "2026-11-12T03:30:00Z",
+   "hoursAssumed": true,
+   "verified": "confirmed",
+   "pin": "geo"
   },
   {
    "id": "hardees-3819-main-ave",
@@ -5481,12 +5714,68 @@
    "address": "3300 Highway 10 E, Moorhead, MN 56560",
    "lat": 46.87818,
    "lng": -96.72795,
-   "phone": "",
+   "phone": "(218) 236-4910",
    "open": "2026-11-11T12:00:00Z",
    "close": "2026-11-12T04:00:00Z",
    "hoursAssumed": false,
    "verified": "unverified",
    "pin": "geo"
+  },
+  {
+   "id": "cash-wise-deli-1401-33rd-st-s",
+   "offer": "cash-wise-deli",
+   "name": "",
+   "address": "1401 33rd St S, Fargo, ND 58103",
+   "lat": 46.859,
+   "lng": -96.83364,
+   "phone": "",
+   "open": "2026-11-11T16:30:00Z",
+   "close": "2026-11-12T03:30:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "cash-wise-deli-4907-timber-pkwy-s",
+   "offer": "cash-wise-deli",
+   "name": "",
+   "address": "4907 Timber Pkwy S, Fargo, ND 58104",
+   "lat": 46.80665,
+   "lng": -96.83127,
+   "phone": "",
+   "open": "2026-11-11T16:30:00Z",
+   "close": "2026-11-12T03:30:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "cash-wise-deli-755-33rd-ave-e",
+   "offer": "cash-wise-deli",
+   "name": "",
+   "address": "755 33rd Ave E, West Fargo, ND 58078",
+   "lat": 46.83151,
+   "lng": -96.88556,
+   "phone": "(701) 281-6002",
+   "open": "2026-11-11T12:00:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "royal-buffet-1620-32nd-ave-s",
+   "offer": "royal-buffet",
+   "name": "",
+   "address": "1620 32nd Ave S, Fargo, ND 58103",
+   "lat": 46.832551,
+   "lng": -96.805887,
+   "phone": "",
+   "open": "2026-11-11T17:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "unverified",
+   "pin": "census"
   },
   {
    "id": "sandys-donuts-301-main-ave-w",
@@ -5749,6 +6038,23 @@
      "published": "2026-09-02"
     }
    ]
+  },
+  {
+   "id": "tractor-supply",
+   "day": "Wed 11 Nov",
+   "at": null,
+   "name": "Tractor Supply: 10% off for Hometown Heroes",
+   "where": "Tractor Supply on Highway 10 at the Moorhead–Dilworth line (1411 Center Ave W, Dilworth, on OpenStreetMap)",
+   "offer": "10% off for verified Neighbor's Club Hometown Heroes on Veterans Day",
+   "grade": "B",
+   "note": "Join Neighbor's Club and verify through ID.me before you go. On VA News' 2026 list; Tractor Supply's own release couldn't be read.",
+   "sources": [
+    {
+     "url": "https://news.va.gov/150505/2026-veterans-day-discounts-free-meals-offers/",
+     "publisher": "VA News (VA Office of Digital Media)",
+     "published": "2026-10-26 (verified 22 Oct, updated through 11 Nov)"
+    }
+   ]
   }
  ],
  "leads": [
@@ -5841,18 +6147,6 @@
    "area": "Fargo",
    "q": "Sushi Burrito Cafe Fargo ND",
    "offer": "10% off",
-   "last_seen": "2023",
-   "source": {
-    "url": "https://www.wdayradionow.com/news/local-news/69955-2023-veterans-day-deals-discounts-and-freebies-in-the-fm-metro/",
-    "publisher": "WDAY Radio (2023 list)",
-    "published": null
-   }
-  },
-  {
-   "name": "Royal Buffet",
-   "area": "",
-   "q": "Royal Buffet Fargo ND",
-   "offer": "Free buffet and soda, 9-11 Nov",
    "last_seen": "2023",
    "source": {
     "url": "https://www.wdayradionow.com/news/local-news/69955-2023-veterans-day-deals-discounts-and-freebies-in-the-fm-metro/",

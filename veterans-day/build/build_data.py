@@ -30,6 +30,8 @@ DEFAULT_HOURS = {"breakfast": ("06:00", "14:00"), "meal": ("11:00", "21:00"), "q
 BLOCKED_HOSTS = ("fargobites.com",)
 # A deal that only one compiled 2026 report lists, which we couldn't trace to the business (8 Nov 2026 review).
 ONE_REPORT = "Only one unconfirmed 2026 listing: call first"
+# On 2026 compilers' lists, but the company itself hadn't announced it (checked 8 Nov 2026).
+NO_COMPANY_WORD = "Not announced by the company for 2026: call first"
 
 # One entry per offer that may appear. src: which research file; name: its brand/name there; loc: its key in
 # locations-2026.json; osm: fallback key in osm-matches.json. minutes: time at the stop; busy: typical line at
@@ -38,8 +40,8 @@ CURATE = [
     # Sit-down meals (dine-in, count toward the meal limit)
     dict(id="applebees", src="national", name="Applebee's", loc="Applebee's", osm="applebees", category="meal", minutes=55, busy=25, meal=True, dineIn=True),
     dict(id="chilis", src="national", name="Chili's", loc="Chili's", osm="chilis", category="meal", minutes=50, busy=20, meal=True, dineIn=True),
-    dict(id="olive-garden", src="national", name="Olive Garden", loc="Olive Garden", osm="olivegarden", category="meal", minutes=55, busy=25, meal=True, dineIn=True),
-    dict(id="red-lobster", src="national", name="Red Lobster", loc="Red Lobster", osm="redlobster", category="meal", minutes=55, busy=20, meal=True, dineIn=True),
+    dict(id="olive-garden", src="national", name="Olive Garden", loc="Olive Garden", osm="olivegarden", category="meal", minutes=55, busy=25, meal=True, dineIn=True, caution=NO_COMPANY_WORD),
+    dict(id="red-lobster", src="national", name="Red Lobster", loc="Red Lobster", osm="redlobster", category="meal", minutes=55, busy=20, meal=True, dineIn=True, caution=NO_COMPANY_WORD),
     dict(id="twin-peaks", src="national", name="Twin Peaks", loc="Twin Peaks", osm="twinpeaks", category="meal", minutes=50, busy=15, meal=True, dineIn=True),
     dict(id="buffalo-wild-wings", src="national", name="Buffalo Wild Wings", loc="Buffalo Wild Wings", osm="bww", category="meal", minutes=35, busy=15, meal=True, dineIn=False),
     dict(id="cracker-barrel", src="national", name="Cracker Barrel", loc="Cracker Barrel", osm="crackerbarrel", category="breakfast", minutes=45, busy=15, meal=True, dineIn=True),
@@ -53,7 +55,8 @@ CURATE = [
     dict(id="pizza-ranch", src="national", name="Pizza Ranch", loc="Pizza Ranch", osm="pizzaranch", category="meal", minutes=45, busy=15, meal=True, dineIn=True),
     # Breakfast
     dict(id="dennys", src="national", name="Denny's", loc="Denny's", osm="dennys", category="breakfast", minutes=45, busy=15, meal=True, dineIn=True),
-    dict(id="ihop", src="national", name="IHOP", loc="IHOP", osm="ihop", category="breakfast", minutes=45, busy=15, meal=True, dineIn=True),
+    # IHOP: 7 AM-7 PM per the American Legion's 2026 list (5 Nov); ihop.com wasn't readable.
+    dict(id="ihop", src="national", name="IHOP", loc="IHOP", osm="ihop", category="breakfast", minutes=45, busy=15, meal=True, dineIn=True, window=("07:00", "19:00")),
     dict(id="perkins", src="national", name="Perkins", loc="Perkins", osm="perkins", category="breakfast", minutes=45, busy=10, meal=True, dineIn=True),
     dict(id="village-inn", src="national", name="Village Inn", loc="Village Inn", osm=None, category="breakfast", minutes=45, busy=10, meal=True, dineIn=True, caution=ONE_REPORT),
     # Quick bites and pickups
@@ -65,7 +68,8 @@ CURATE = [
     # Smashburger: the Fargo store (1801 45th St SW) closed in October 2026 (8 Nov 2026); no other FM store.
     dict(id="chipotle", src="national", name="Chipotle", loc="Chipotle", osm="chipotle", category="quick", minutes=15, busy=10, meal=False, dineIn=True, purchase=True, eat=0.2),
     dict(id="qdoba", src="national", name="Qdoba", loc="Qdoba", osm="qdoba", category="quick", minutes=12, busy=5, meal=False, dineIn=True, eat=0.2),
-    dict(id="charleys", src="national", name="Charleys Cheesesteaks", loc="Charleys Cheesesteaks", osm="charleys", category="quick", minutes=8, busy=5, meal=False, dineIn=False),
+    # Charleys: inside the Petro truck stop at 45th St S and 19th Ave S, next to Popeyes (8 Nov 2026).
+    dict(id="charleys", src="national", name="Charleys Cheesesteaks", loc="Charleys Cheesesteaks", osm="charleys", category="quick", minutes=8, busy=5, meal=False, dineIn=False, eat=0.2, caution="Inside the Petro truck stop, next to Popeyes; participating stores only"),
     # Hardee's: remembered: a free breakfast sandwich in 2025 (8 Nov 2026); nothing published. Breakfast hours.
     dict(id="hardees", src="national", name="Hardee's", loc="Hardee's", osm=None, category="quick", minutes=8, busy=5, meal=False, dineIn=False, window=("06:00", "10:30"), hours=("06:00", "22:00")),
     dict(id="kwik-trip", src="national", name="Kwik Trip", loc="Kwik Trip", caution="Fargo stores are called Kwik Star", osm="kwiktrip", category="quick", minutes=7, busy=5, meal=False, dineIn=False, hours=("00:00", "24:00")),
@@ -98,7 +102,8 @@ CURATE = [
     dict(id="target", src="national", name="Target", loc="Target", osm="target", category="shopping", minutes=25, busy=5, meal=False, dineIn=False, value=0, purchase=True),
     dict(id="kohls", src="national", name="Kohl's", loc="Kohl's", osm="kohls", category="shopping", minutes=25, busy=5, meal=False, dineIn=False, value=0, purchase=True),
     dict(id="walgreens", src="national", name="Walgreens", loc="Walgreens", osm=None, category="shopping", minutes=15, busy=5, meal=False, dineIn=False, value=0, purchase=True),
-    # Local (all grade C today: prior years only, so "call first")
+    # Local: grade C (earlier years, "call first") unless the research grades them up from the business's own 2026
+    # word (Fryn' Pan, Doolittle's and Porter Creek from a phone check; the Air Museum's calendar; Cash Wise's page).
     dict(id="fryn-pan", src="local", name="Fryn' Pan Family Restaurant (M", osm="frynpan", category="meal", minutes=45, busy=15, meal=True, dineIn=True, window=("08:00", "20:00")),
     dict(id="doolittles", src="local", name="Doolittle's Woodfire Grill (Fa", osm="doolittles", category="meal", minutes=55, busy=15, meal=True, dineIn=True),
     dict(id="porter-creek", src="local", name="Porter Creek Hardwood Grill (F", osm="portercreek", category="meal", minutes=55, busy=15, meal=True, dineIn=True),
@@ -109,12 +114,15 @@ CURATE = [
     dict(id="west-fargo-vfw", src="local", name="West Fargo VFW Post 7564 Veter", osm=None, category="event", minutes=45, busy=5, meal=True, dineIn=True, window=("10:30", "14:00"), arriveEarly=True, worth=12),
     # Added 8 Nov 2026 from the consolidated report: local offers that only one 2026 listing carries (grade C, call
     # first), the Air Museum's coffee hour and the Harwood Legion's stew.
-    dict(id="air-museum-coffee", src="local", name="Fargo Air Museum Veterans Coffee", osm=None, category="event", minutes=30, busy=5, meal=False, dineIn=True, window=("10:00", "12:00"), eat=0.2, caution="Not on the museum's 11 Nov events list: call first"),
+    dict(id="air-museum-coffee", src="local", name="Fargo Air Museum Veterans Coffee", osm=None, category="event", minutes=30, busy=5, meal=False, dineIn=True, window=("10:00", "12:00"), eat=0.2),
     dict(id="harwood-legion", src="local", name="Harwood American Legion Post 297", osm=None, category="event", minutes=40, busy=5, meal=True, dineIn=True, window=("17:00", "19:00")),
     dict(id="sickies", src="local", name="Sickies Garage Burgers & Brews (Fa", osm=None, category="meal", minutes=50, busy=15, meal=True, dineIn=True, caution=ONE_REPORT),
     dict(id="brewtus", src="local", name="Brewtus' Brickhouse", osm=None, category="meal", minutes=45, busy=10, meal=True, dineIn=True, window=("11:00", "14:00"), caution=ONE_REPORT),
     dict(id="pub-west", src="local", name="Pub West", osm=None, category="meal", minutes=50, busy=10, meal=True, dineIn=True, purchase=True, caution="Offer and address not confirmed: call first"),
-    dict(id="cash-wise-deli", src="local", name="Cash Wise Foods deli", osm=None, category="quick", minutes=12, busy=5, meal=False, dineIn=False, eat=0.6, window=("11:00", "19:00"), caution=ONE_REPORT),
+    # Cash Wise: its own page (8 Nov 2026) gives the dinner but no store list, so all four metro stores, "call yours".
+    dict(id="cash-wise-deli", src="local", name="Cash Wise Foods deli", osm=None, category="quick", minutes=12, busy=5, meal=False, dineIn=False, eat=0.6, window=("11:00", "19:00"), caution="Cash Wise's page lists no stores: call yours first"),
+    # Royal Buffet: free buffet 9-11 Nov on Fargo Legion Post 2's 30 Oct 2026 list (the same offer as 2023).
+    dict(id="royal-buffet", src="local", name="Royal Buffet", osm=None, category="meal", minutes=50, busy=15, meal=True, dineIn=True, caution=ONE_REPORT),
     dict(id="sandys-donuts", src="local", name="Sandy's Donuts", osm=None, category="treat", minutes=6, busy=5, meal=False, dineIn=False, window=("06:00", "13:30"), caution=ONE_REPORT),
     # Bars: their own category, on the route since asked (8 Nov 2026: "Add the bars"); the app shows a drive-safe
     # line on their cards and on any route with one. All but Blarney Stone are earlier years only (grade C).
