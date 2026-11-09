@@ -20,8 +20,9 @@ preview at phone size, light and dark: one real OSRM request for 7 stores, road 
 verified (FOSSGIS's log retention) in `veterans-day/README.md` ("Route line on the Map").
 **Follow-up the same day (Tom: "Yes, fit it"):** opening the Map tab zooms to the route's stores (a long route ran off
 the default view); the view then stays where the user puts it until they leave the Map and come back. A fifth browser
-test covers it, and the GPS privacy check now waits for the settled route (a late GPS fix re-plans it). Not yet
-committed or deployed.
+test covers it, and the GPS privacy check now waits for the settled route (a late GPS fix re-plans it). **Live** since
+about 3:35 PM CST from `6e104cb` (Tom: "Commit, push, deploy"; pushed). Checked live: `app.js` matches the commit, and
+headless Edge at phone size opened the Map with all 7 stops in view, one OSRM request, no start point sent, no errors.
 
 ## Veterans Day planner: Tuesday checklist run early, 8 Nov 2026, about 9:45 PM CST ("Push to GitHub, commit and deploy")
 asked for the Tuesday re-checks with his file `Documents\2026 Veterans Day discounts.txt`. **Live** since about
