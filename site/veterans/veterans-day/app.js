@@ -11,6 +11,17 @@
     ["treat", "Treats"], ["service", "Haircuts and car care"], ["shopping", "Shopping discounts"],
     ["event", "Ceremonies and veterans' posts"]];
   const CAT = Object.fromEntries(CATS);
+  // Likes: every category, plus deals that need a purchase (a buy-one-get-one, a percentage off), off unless turned on.
+  const LIKES = CATS.concat([["purchase", "Deals that need a purchase"]]);
+  const likeOf = (c) => (S.prefs[c] === undefined ? (c === "purchase" ? 0 : 1) : S.prefs[c]);
+  const likeWord = (w) => (w > 1 ? "Love" : w > 0 ? "Fine" : "Off");
+  const GOAL_NAME = { best: "Best for me", stops: "Most stops", savings: "Most savings", both: "Stops + savings" };
+  const GOAL_NOTE = {
+    best: "Weighs each deal against your time, at your pace, with more of what you love.",
+    stops: "Fits in the most places before you're done. Ignores pace and Love; leaves out anything Off.",
+    savings: "Collects the most dollars before you're done. Ignores pace and Love; leaves out anything Off.",
+    both: "Balances the most places with the most dollars. Ignores pace and Love; leaves out anything Off."
+  };
   const GRADE = { A: "Confirmed 2026", B: "Announced 2026", C: "Not confirmed: call first" };
   const GRADE_LONG = {
     A: "The business itself announced this for 2026.",
@@ -60,9 +71,10 @@
   function defaults() {
     return {
       profile: { status: "veteran", spouse: false, kids: 0, proof: { military_id: true }, ready: {}, pace: "balanced",
-        dayEndMin: 21 * 60, mealsMax: 2, roads: "auto", blocks: [] },
+        dayEndMin: 21 * 60, mealsMax: 2, roads: "auto", blocks: [], togo: false },
       done: {}, away: {}, strikes: {}, vetoed: {}, pinned: {}, prefs: {}, learned: {},
-      start: null, gps: false, sent: [], previewMin: 8 * 60, cats: {}
+      start: null, gps: false, sent: [], previewMin: 8 * 60, cats: {},
+      goal: "best", maxGoal: "both", leaveMin: null // leaveMin: minutes after midnight, or null for "now"
     };
   }
   function load() {
@@ -85,6 +97,8 @@
     return "live";
   }
   function now() { return mode() === "preview" ? localMs(S.previewMin) : realNow(); }
+  // When the route starts: now, or a later time you picked to leave.
+  function leaveAt() { const t = now(); return S.leaveMin === null || S.leaveMin === undefined ? t : Math.max(t, localMs(S.leaveMin)); }
 
   // ---------------------------------------------------------------- inputs for the engine
   function roads() { return S.profile.roads === "auto" ? (wxSlick ? "slick" : "normal") : S.profile.roads; }
@@ -92,11 +106,12 @@
     const p = S.profile;
     return { status: p.status, spouse: p.spouse, kids: Number(p.kids) || 0, proof: p.proof, ready: p.ready, pace: p.pace,
       dayEnd: localMs(p.dayEndMin), mealsMax: Number(p.mealsMax), roads: roads(),
-      blocks: p.blocks.map((b) => ({ start: localMs(b.from), end: localMs(b.to) })) };
+      blocks: p.blocks.map((b) => ({ start: localMs(b.from), end: localMs(b.to) })), goal: S.goal, togo: !!p.togo };
   }
   function engineState() {
     const prefs = {};
-    CATS.forEach(([c]) => { prefs[c] = (S.prefs[c] === undefined ? 1 : S.prefs[c]) * (S.learned[c] || 1); });
+    CATS.forEach(([c]) => { prefs[c] = likeOf(c) * (S.learned[c] || 1); });
+    prefs.purchase = likeOf("purchase");
     return { done: S.done, away: S.away, strikes: S.strikes, vetoed: S.vetoed, pinned: S.pinned, prefs };
   }
   function engineReports() {
@@ -154,7 +169,9 @@
       pl.phone ? h("a", { class: "btn btn-quiet", href: "tel:" + pl.phone.replace(/[^\d+]/g, "") }, "Call") : null);
   }
   function chips(o) {
-    return [h("span", { class: "cat" }, CAT[o.category] || o.category), h("span", { class: "grade grade-" + o.grade, title: GRADE_LONG[o.grade] }, GRADE[o.grade])];
+    return [h("span", { class: "cat" }, CAT[o.category] || o.category), h("span", { class: "grade grade-" + o.grade, title: GRADE_LONG[o.grade] }, GRADE[o.grade]),
+      o.ticket ? h("span", { class: "cat cat-ticket", title: "A card or voucher to use later: a quick stop, nothing to eat there." }, "Ticket for later") : null,
+      o.purchase ? h("span", { class: "cat", title: "You have to buy something to get this." }, "Needs a purchase") : null];
   }
 
   // ---------------------------------------------------------------- Next
@@ -163,36 +180,53 @@
     lastAnnounce = text;
     $("#announce").textContent = text;
   }
-  function renderNext() {
-    const card = clear($("#next-card")), where = position(), t = now();
-    const ctx = context(t, where.pos);
-    const opts = E.nextOptions(ctx, { limit: 8 });
-    let best = null;
-    if (focus) {
-      const c = ctx.cands.find((x) => x.place.id === focus);
-      const step = c && E.evalStop(ctx, E._internal.startState(ctx, t), c);
-      if (step) best = { step, then: [] }; else focus = null;
-    }
-    best = best || opts[0];
+  // The route: one plan from where you are (or your start), at your leave time, for the goal you picked. The first
+  // stop is the big card; the rest follow with each deal's window against when you'd get there.
+  function buildRoute() {
+    const where = position(), t = leaveAt(), ctx = context(t, where.pos);
+    let first = null;
+    if (focus) first = ctx.cands.find((x) => x.place.id === focus) || null;
+    let plan = E.planDay(ctx, { t, first });
+    if (first && (!plan.steps.length || plan.steps[0].c !== first)) { focus = null; first = null; plan = E.planDay(ctx, { t }); }
+    if (!first) focus = null;
+    return { where, t, ctx, plan };
+  }
+  function routeValue(steps) {
+    return steps.reduce((s, x) => s + x.c.offer.value * (S.profile.spouse && x.c.offer.spouse === "yes" ? 2 : 1), 0);
+  }
+  function renderRoute() {
+    const r = buildRoute(), { ctx, plan, t, where } = r, steps = plan.steps;
     renderLoc(where);
-    if (mode() === "over") { card.append(h("p", { class: "empty" }, "That's a wrap for 2026. Your day is under Me.")); hideLists(); return; }
-    if (!best) {
+    renderControls();
+    const card = clear($("#next-card")), sum = $("#route-sum");
+    if (mode() === "over") { sum.textContent = ""; card.append(h("p", { class: "empty" }, "That's a wrap for 2026. Your day is under Me.")); hideLists(); return; }
+    if (!steps.length) {
       const soon = ctx.cands.filter((c) => c.open > t).sort((a, b) => a.open - b.open)[0];
-      card.append(h("p", { class: "next-name" }, "Nothing worth the drive right now"),
+      sum.textContent = "";
+      card.append(h("p", { class: "next-name" }, "Nothing fits right now"),
         h("p", { class: "empty" }, soon ? "Next to open: " + soon.offer.brand + " at " + fmt(soon.open) + "." :
-          "Everything you can still use today is done, skipped or closed. Check your settings under Me if that looks wrong."));
-      hideLists(); announce("Nothing worth the drive right now"); return;
+          "Everything you can still use today is done, off, closed or past your done-by time. Check What I'm after and Me if that looks wrong."));
+      hideLists(); announce("Nothing fits right now"); return;
     }
-    const s = best.step, c = s.c, o = c.offer, pl = c.place;
+    const last = steps[steps.length - 1], drive = steps.reduce((s, x) => s + x.driveMin, 0);
+    sum.textContent = GOAL_NAME[ctx.goal] + ": " + steps.length + (steps.length === 1 ? " stop" : " stops") + " · about " +
+      money(routeValue(steps)) + " in deals · " + mins(drive) + " driving · done about " + fmt(last.depart);
+    nextCard(card, steps[0], t);
+    renderStops(ctx, plan, t);
+    renderSoon(ctx, plan, t);
+    renderAlts(ctx, steps[0], t);
+  }
+
+  function nextCard(card, s, t) {
+    const c = s.c, o = c.offer, pl = c.place;
     card.append(
-      h("p", { class: "next-kicker" }, focus ? "Your pick" : "Next stop", ...chips(o)),
+      h("p", { class: "next-kicker" }, focus ? "Your pick" : t > now() + 5 * MIN ? "First stop" : "Next stop", ...chips(o)),
       h("h3", { class: "next-name" }, o.brand),
       h("p", { class: "next-offer" }, o.offer),
       h("p", { class: "next-addr" }, pl.address + (pl.verified === "unverified" ? " · address from directories, not the chain's own site" : "")),
       h("p", { class: "why" }, whyBits(s).map((b) => h("span", null, b))));
-    if (s.waitMin > 10) {
-      card.append(h("p", { class: "leave" }, "Opens " + fmt(s.start) + ". Leave by " + fmt(s.start - s.driveMin * MIN) + "."));
-    }
+    if (s.waitMin > 10) card.append(h("p", { class: "leave" }, "Opens " + fmt(s.start) + ". Leave by " + fmt(s.start - s.driveMin * MIN) + "."));
+    else if (t > now() + 5 * MIN) card.append(h("p", { class: "leave" }, "Leave at " + fmt(s.start - s.driveMin * MIN) + "."));
     const fl = fieldLine(c);
     if (fl) card.append(fl);
     const flags = c.flags.concat(o.limits ? [o.limits] : []);
@@ -211,21 +245,122 @@
       h("button", { type: "button", class: "btn btn-quiet btn-small", onclick: () => record(c, "out") }, "They ran out"),
       focus ? h("button", { type: "button", class: "btn btn-quiet btn-small", onclick: () => { focus = null; renderAll(); } }, "Back to the suggestion") : null));
     if (mode() === "preview") card.append(h("p", { class: "note" }, "Preview: what you mark now stays on this phone and isn't shared."));
-    announce("Next stop: " + o.brand + ", " + whyBits(s)[0]);
+    announce((focus ? "Your pick: " : "Next stop: ") + o.brand + ", " + whyBits(s)[0]);
+  }
 
-    const then = clear($("#then"));
-    best.then.forEach((x) => then.append(h("li", null,
-      h("span", { class: "t-time" }, fmt(x.start) + " · " + mins(x.driveMin - 2.5) + " drive"),
-      h("span", null, h("b", null, x.c.offer.brand), " · " + x.c.offer.offer))));
-    $("#then-wrap").hidden = !best.then.length;
+  // How a stop sits in its deal's window: when you'd arrive, when the deal ends, and the time to spare.
+  function windowLine(x) {
+    const c = x.c, o = c.offer, spare = (c.close - x.arrive) / MIN;
+    const ends = o.end || c.close - dayStart < 23.5 * HOUR ? (o.end ? "deal ends " : "closes ") + fmt(c.close) : "open late";
+    const bits = ["Arrive " + fmtNZ(x.arrive), ends];
+    if (ends !== "open late") bits.push(spare < 60 ? "only " + mins(spare) + " to spare" : mins(spare) + " to spare");
+    return h("p", { class: "stop-win" + (spare < 25 ? " tight" : "") }, bits.join(" · "));
+  }
+  const SVGNS = "http://www.w3.org/2000/svg";
+  function svg(tag, attrs) {
+    const el = document.createElementNS(SVGNS, tag);
+    for (const [k, v] of Object.entries(attrs)) el.setAttribute(k, String(v));
+    return el;
+  }
+  // A bar from the start of your route to your done-by time: the deal's hours in blue, your visit in amber.
+  function windowBar(x, from, to) {
+    const span = Math.max(MIN, to - from), X = (ms) => Math.max(0, Math.min(100, ((ms - from) / span) * 100));
+    const c = x.c, a = X(Math.max(c.open, from)), b = X(Math.min(c.close, to));
+    const bar = svg("svg", { class: "wbar", viewBox: "0 0 100 10", preserveAspectRatio: "none", focusable: "false", "aria-hidden": "true" });
+    bar.append(svg("rect", { class: "wb-day", x: 0, y: 4, width: 100, height: 2 }),
+      svg("rect", { class: "wb-open", x: a, y: 2, width: Math.max(0.6, b - a), height: 6 }),
+      svg("rect", { class: "wb-you", x: X(x.start), y: 0, width: Math.max(1, X(x.depart) - X(x.start)), height: 10 }));
+    return bar;
+  }
+  function renderStops(ctx, plan, t) {
+    const list = clear($("#route-list")), steps = plan.steps, from = t, to = ctx.dayEnd;
+    let prev = steps[0].depart;
+    steps.slice(1).forEach((x, k) => {
+      const c = x.c, o = c.offer, go = Math.max(x.leave, x.start - x.driveMin * MIN);
+      if (go - prev > 20 * MIN) list.append(h("li", { class: "gap" }, "Free time " + fmtNZ(prev) + "–" + fmt(go)));
+      list.append(h("li", { class: "stop" },
+        h("p", { class: "stop-when" }, (k + 2) + ". Leave " + fmtNZ(go) + " · " + mins(x.driveMin - 2.5) + " drive · about " +
+          Math.round(o.minutes + x.queueMin) + " min there"),
+        h("p", { class: "stop-name" }, h("b", null, o.brand), " · " + o.offer),
+        o.ticket ? h("p", { class: "stop-tag" }, h("span", { class: "cat cat-ticket" }, "Ticket for later"), " a quick stop, nothing to eat there") : null,
+        windowLine(x),
+        windowBar(x, from, to),
+        h("p", { class: "note" }, c.place.address + (c.flags.length ? " · " + c.flags.join("; ") : "")),
+        h("p", { class: "links" },
+          h("button", { type: "button", class: "btn btn-quiet btn-small", onclick: () => { focus = c.place.id; renderAll(); window.scrollTo(0, 0); } }, "Go here first"),
+          h("button", { type: "button", class: "btn btn-quiet btn-small", onclick: () => never(o) }, "Not today"),
+          ext("https://www.google.com/maps/dir/?api=1&travelmode=driving&destination=" + c.place.lat + "," + c.place.lng, "Directions", "btn btn-quiet btn-small"))));
+      prev = x.depart;
+    });
+    $("#route-wrap").hidden = false;
+    $("#route-list").hidden = steps.length < 2;
+    const last = steps[steps.length - 1], left = (ctx.dayEnd - last.depart) / MIN, end = $("#route-end");
+    if (left < 90) end.textContent = "That fills your day to your done-by time, " + fmt(ctx.dayEnd) + ".";
+    else if (ctx.goal === "best") end.textContent = "The route stops at " + fmt(last.depart) + " because nothing else is worth the drive at your pace. Maximize fits in more; so does a faster pace under Me.";
+    else end.textContent = "Nothing else fits after " + fmt(last.depart) + ": what's left is closed, done, turned off, past your sit-down meal limit or more food than you'd want.";
+    end.append(" On the day it re-plans after every stop you mark.");
+    // Google Maps takes at most 9 stops between the start and the end: one link per 10 stops.
+    const links = clear($("#route-links")), origin0 = position().pos;
+    for (let i = 0; i < steps.length; i += 10) {
+      const chunk = steps.slice(i, i + 10), dest = chunk[chunk.length - 1].c.place;
+      const origin = i === 0 ? origin0 : steps[i - 1].c.place;
+      let url = "https://www.google.com/maps/dir/?api=1&travelmode=driving&origin=" + origin.lat + "," + origin.lng +
+        "&destination=" + dest.lat + "," + dest.lng;
+      const mid = chunk.slice(0, -1).map((x) => x.c.place.lat + "," + x.c.place.lng);
+      if (mid.length) url += "&waypoints=" + encodeURIComponent(mid.join("|"));
+      links.append(ext(url, steps.length > 10 ? "Stops " + (i + 1) + "–" + (i + chunk.length) + " in Google Maps" : "Whole route in Google Maps", "btn btn-quiet"));
+    }
+    links.append(h("button", { type: "button", class: "btn btn-quiet", onclick: () => window.print() }, "Print"));
+  }
+  // Deals that end within two hours and aren't on the route, so they don't slip by unnoticed.
+  function renderSoon(ctx, plan, t) {
+    const box = clear($("#soon")), inRoute = new Set(plan.steps.map((x) => x.c.offer.id)), seen = new Set();
+    const st0 = E._internal.startState(ctx, t);
+    ctx.cands.filter((c) => !inRoute.has(c.offer.id) && c.close - t < 2 * HOUR)
+      .map((c) => ({ c, step: E.evalStop(ctx, st0, c) })).filter((x) => x.step)
+      .sort((a, b) => a.c.close - b.c.close || a.step.driveMin - b.step.driveMin)
+      .forEach((x) => {
+        const o = x.c.offer;
+        if (seen.has(o.id) || seen.size >= 4) return;
+        seen.add(o.id);
+        box.append(h("li", null,
+          h("span", { class: "a-name" }, o.brand + " · " + o.offer),
+          h("span", { class: "a-why" }, (o.end ? "Deal ends " : "Closes ") + fmt(x.c.close) + " · " + mins(x.step.driveMin - 2.5) + " drive · " + worthText(o)),
+          h("button", { type: "button", class: "btn btn-quiet btn-small", onclick: () => { S.pinned[o.id] = true; save(); renderAll(); toast(o.brand + " is on your route. Unpin it under Deals."); } }, "Add to my route")));
+      });
+    $("#soon-wrap").hidden = !box.children.length;
+  }
+  function renderAlts(ctx, first, t) {
     const alts = clear($("#alts"));
-    opts.filter((x) => x.step.c.place.id !== pl.id).slice(0, 6).forEach((x) => alts.append(h("li", null,
-      h("span", { class: "a-name" }, x.step.c.offer.brand + " · " + x.step.c.offer.offer),
-      h("span", { class: "a-why" }, whyBits(x.step).slice(0, 3).join(" · ")),
-      h("button", { type: "button", class: "btn btn-quiet btn-small", onclick: () => { focus = x.step.c.place.id; renderAll(); window.scrollTo(0, 0); } }, "Go here"))));
+    E.nextOptions(ctx, { limit: 10, t }).filter((x) => x.step.c.place.id !== first.c.place.id && x.step.waitMin <= 20).slice(0, 5)
+      .forEach((x) => alts.append(h("li", null,
+        h("span", { class: "a-name" }, x.step.c.offer.brand + " · " + x.step.c.offer.offer),
+        h("span", { class: "a-why" }, whyBits(x.step).slice(0, 3).join(" · ")),
+        h("button", { type: "button", class: "btn btn-quiet btn-small", onclick: () => { focus = x.step.c.place.id; renderAll(); window.scrollTo(0, 0); } }, "Go here"))));
     $("#alts-wrap").hidden = !alts.children.length;
   }
-  function hideLists() { $("#then-wrap").hidden = true; $("#alts-wrap").hidden = true; }
+  function hideLists() { ["#route-wrap", "#alts-wrap", "#soon-wrap"].forEach((s) => { $(s).hidden = true; }); }
+
+  // The route's settings at the top of the page: leave and done-by times, the goal, what you're after, food to go.
+  function renderControls() {
+    const kind = S.goal === "best" ? "best" : "max";
+    $("#goal-kind").querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", b.dataset.kind === kind ? "true" : "false"));
+    $("#goal-max").hidden = kind !== "max";
+    $("#goal-max").querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", b.dataset.goal === S.goal ? "true" : "false"));
+    $("#goal-note").textContent = GOAL_NOTE[S.goal] || GOAL_NOTE.best;
+    $("#rb-leave").value = S.leaveMin === null || S.leaveMin === undefined ? "now" : String(S.leaveMin);
+    $("#rb-end").value = String(S.profile.dayEndMin);
+    $("#rb-togo").checked = !!S.profile.togo;
+    const box = clear($("#likes"));
+    LIKES.forEach(([c, label]) => {
+      const w = likeOf(c), word = likeWord(w);
+      box.append(h("button", { type: "button", class: "like like-" + word.toLowerCase(), "aria-label": label + ": " + word + ". Tap to change.",
+        onclick: () => { S.prefs[c] = w > 1 ? 0 : w > 0 ? 1.5 : 1; save(); renderAll(); } },
+        h("span", { class: "like-name" }, label), h("span", { class: "like-state" }, word)));
+    });
+    const love = LIKES.filter(([c]) => likeOf(c) > 1).length, off = LIKES.filter(([c]) => likeOf(c) <= 0).length;
+    $("#likes-sum").textContent = "What I'm after" + (love || off ? ": " + [love ? love + " loved" : "", off ? off + " off" : ""].filter(Boolean).join(", ") : "");
+  }
 
   function renderLoc(where) {
     const st = $("#loc-status");
@@ -303,49 +438,6 @@
     renderAll();
   }
 
-  // ---------------------------------------------------------------- Plan
-  function renderPlan(ev) {
-    if (ev) ev.preventDefault();
-    const out = clear($("#plan-out"));
-    const startVal = $("#plan-start").value, from = $("#plan-from").value;
-    const t = startVal === "now" ? now() : localMs(Number(startVal));
-    const where = from === "start" && S.start ? { pos: S.start } : position();
-    const ctx = context(t, where.pos);
-    const plan = E.planDay(ctx, { t });
-    if (!plan.steps.length) { out.append(h("p", { class: "empty" }, "No deals are reachable from that start. Try an earlier start time, or check Me.")); return; }
-    const drive = plan.steps.reduce((s, x) => s + x.driveMin, 0);
-    const value = plan.steps.reduce((s, x) => s + x.c.offer.value * (S.profile.spouse && x.c.offer.spouse === "yes" ? 2 : 1), 0);
-    const last = plan.steps[plan.steps.length - 1];
-    out.append(h("p", { class: "plan-sum" }, plan.steps.length + " stops · about " + money(value) + " in deals · " +
-      mins(drive) + " on the road · done about " + fmt(last.depart)));
-    const list = h("ol", { class: "plan-list" });
-    let prev = t;
-    plan.steps.forEach((x, i) => {
-      const leave = x.start - x.driveMin * MIN;
-      if (leave - prev > 20 * MIN) list.append(h("li", { class: "gap" }, "Free time " + fmtNZ(prev) + "–" + fmt(leave)));
-      list.append(h("li", null,
-        h("span", { class: "p-time" }, (i + 1) + ". Leave " + fmtNZ(leave) + " · there " + fmt(x.start) + " · about " + Math.round(x.c.offer.minutes + x.queueMin) + " min"),
-        h("span", { class: "p-name" }, x.c.offer.brand + " · " + x.c.offer.offer),
-        h("span", { class: "note" }, x.c.place.address + " · " + windowText(x.c) + (x.c.flags.length ? " · " + x.c.flags.join("; ") : ""))));
-      prev = x.depart;
-    });
-    out.append(list);
-    // Google Maps takes at most 9 stops between the start and the end: one link per 10 stops.
-    const links = h("p", { class: "links" });
-    for (let i = 0; i < plan.steps.length; i += 10) {
-      const chunk = plan.steps.slice(i, i + 10), dest = chunk[chunk.length - 1].c.place;
-      const origin = i === 0 ? where.pos : plan.steps[i - 1].c.place;
-      let url = "https://www.google.com/maps/dir/?api=1&travelmode=driving&origin=" + origin.lat + "," + origin.lng +
-        "&destination=" + dest.lat + "," + dest.lng;
-      const mid = chunk.slice(0, -1).map((x) => x.c.place.lat + "," + x.c.place.lng);
-      if (mid.length) url += "&waypoints=" + encodeURIComponent(mid.join("|"));
-      links.append(ext(url, "Stops " + (i + 1) + "–" + (i + chunk.length) + " in Google Maps", "btn btn-quiet"));
-    }
-    links.append(h("button", { type: "button", class: "btn btn-quiet", onclick: () => window.print() }, "Print"));
-    out.append(links);
-    out.append(h("p", { class: "note" }, "The Next tab re-plans after every stop and every report, so on the day follow it rather than this list."));
-  }
-
   // ---------------------------------------------------------------- Deals
   function dealState(ctx) {
     const byOffer = {};
@@ -391,7 +483,7 @@
       const c = cands && cands.find((x) => x.place.id === p.id);
       return h("li", null, h("span", null, p.address + (p.verified === "unverified" ? " (location not verified)" : "")),
         h("span", { class: "links" },
-          c ? h("button", { type: "button", class: "btn btn-quiet btn-small", onclick: () => { focus = p.id; location.hash = "#next"; renderAll(); } }, "Go here next") : null,
+          c ? h("button", { type: "button", class: "btn btn-quiet btn-small", onclick: () => { focus = p.id; location.hash = "#route"; renderAll(); } }, "Go here next") : null,
           ext("https://www.google.com/maps/dir/?api=1&travelmode=driving&destination=" + p.lat + "," + p.lng, "Directions", "btn btn-quiet btn-small")));
     }));
     card.append(h("details", null, h("summary", null, places.length === 1 ? "1 location" : places.length + " locations"), locs));
@@ -447,10 +539,10 @@
       h("span", null, fmtNZ(localMs(b.from)) + "–" + fmt(localMs(b.to))),
       h("button", { type: "button", class: "btn btn-quiet btn-small", onclick: () => { p.blocks.splice(i, 1); save(); renderAll(); } }, "Remove"))));
     const prefs = clear($("#prefs"));
-    CATS.forEach(([c, label]) => {
-      const cur = S.prefs[c] === undefined ? 1 : S.prefs[c], learned = S.learned[c] || 1;
+    LIKES.forEach(([c, label]) => {
+      const cur = likeOf(c), learned = S.learned[c] || 1;
       const seg = h("span", { class: "seg", role: "group", "aria-label": label });
-      [[1.5, "Love"], [1, "Fine"], [0, "Skip"]].forEach(([w, t]) => seg.append(h("button", { type: "button", "aria-pressed": cur === w ? "true" : "false",
+      [[1.5, "Love"], [1, "Fine"], [0, "Off"]].forEach(([w, t]) => seg.append(h("button", { type: "button", "aria-pressed": cur === w ? "true" : "false",
         onclick: () => { S.prefs[c] = w; save(); renderAll(); } }, t)));
       prefs.append(h("div", { class: "pref" }, h("span", { class: "pref-name" }, label), seg,
         Math.abs(learned - 1) > 0.01 ? h("span", { class: "pref-learn" }, "Learned from you: ×" + learned.toFixed(2)) : null));
@@ -540,14 +632,13 @@
         if (!picking) return;
         picking = false;
         S.start = { lat: Math.round(ev.latlng.lat * 1e5) / 1e5, lng: Math.round(ev.latlng.lng * 1e5) / 1e5 };
-        save(); toast("Start point set. It stays on this phone."); location.hash = "#next"; renderAll();
+        save(); toast("Start point set. It stays on this phone."); location.hash = "#route"; renderAll();
       });
     }
     map.invalidateSize();
     mapLayer.clearLayers();
-    const t = now(), where = position(), ctx = context(t, where.pos);
-    const best = E.nextOptions(ctx, { limit: 1 })[0];
-    const plan = E.planDay(ctx, { t });
+    const r = buildRoute(), t = r.t, where = r.where, ctx = r.ctx, plan = r.plan;
+    const best = plan.steps[0];
     const now_ = css("--now"), later = css("--later"), ring = css("--ring");
     ctx.cands.forEach((c) => {
       const isNow = c.open <= t, col = isNow ? now_ : later, hollow = c.offer.grade === "C";
@@ -560,15 +651,15 @@
       L.marker([x.c.place.lat, x.c.place.lng], { icon: L.divIcon({ className: "vd-num", html: h("span", null, String(i + 1)), iconSize: [24, 24] }),
         title: (i + 1) + ". " + x.c.offer.brand, keyboard: false }).bindPopup(popup(x.c)).addTo(mapLayer);
     });
-    if (best) L.circleMarker([best.step.c.place.lat, best.step.c.place.lng], { radius: 12, color: css("--ink"), weight: 3,
-      fillColor: css("--mark"), fillOpacity: 1 }).bindPopup(popup(best.step.c)).addTo(mapLayer);
+    if (best) L.circleMarker([best.c.place.lat, best.c.place.lng], { radius: 12, color: css("--ink"), weight: 3,
+      fillColor: css("--mark"), fillOpacity: 1 }).bindPopup(popup(best.c)).addTo(mapLayer);
     if (where.kind !== "center") L.circleMarker([where.pos.lat, where.pos.lng], { radius: 6, color: ring, weight: 2,
       fillColor: css("--focus"), fillOpacity: 1 }).bindTooltip(where.kind === "gps" ? "You" : "Your start").addTo(mapLayer);
   }
   function popup(c) {
     return h("div", { class: "vd-pop" }, h("b", null, c.offer.brand), h("span", null, c.offer.offer),
       h("span", { class: "note" }, windowText(c) + " · " + GRADE[c.offer.grade]),
-      h("button", { type: "button", class: "btn btn-small", onclick: () => { focus = c.place.id; location.hash = "#next"; renderAll(); } }, "Go here next"));
+      h("button", { type: "button", class: "btn btn-small", onclick: () => { focus = c.place.id; location.hash = "#route"; renderAll(); } }, "Go here next"));
   }
 
   // ---------------------------------------------------------------- weather (NWS) and the get-ready list
@@ -619,17 +710,19 @@
     } else if (m === "live") el.textContent = "Now " + fmt(now()) + (shared.ok === false ? " · shared reports offline" : "");
     else el.textContent = "Veterans Day 2026 is over. Thank you.";
   }
-  function currentTab() { const t = (location.hash || "#next").slice(1); return ["next", "plan", "map", "deals", "me"].includes(t) ? t : "next"; }
+  function currentTab() {
+    const t = (location.hash || "#route").slice(1);
+    return ["route", "map", "deals", "me"].includes(t) ? t : "route"; // old links to #next and #plan land on the route
+  }
   function renderAll() {
     renderClock();
     const tab = currentTab();
     document.querySelectorAll(".tab").forEach((a) => { if (a.dataset.tab === tab) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
     document.querySelectorAll(".panel").forEach((p) => { p.hidden = p.id !== "tab-" + tab; });
-    if (tab === "next") renderNext();
+    if (tab === "route") renderRoute();
     else if (tab === "deals") renderDeals();
     else if (tab === "me") renderMe();
     else if (tab === "map") renderMap();
-    else if (tab === "plan" && $("#plan-out").children.length) renderPlan();
   }
 
   function startGps() {
@@ -653,14 +746,34 @@
     live.watch = null; live.pos = null; S.gps = false; save(); renderAll();
   }
 
+  function bindRoute() {
+    $("#rb").addEventListener("submit", (ev) => ev.preventDefault());
+    $("#goal-kind").addEventListener("click", (ev) => {
+      const b = ev.target.closest("button");
+      if (!b) return;
+      S.goal = b.dataset.kind === "best" ? "best" : S.maxGoal || "both";
+      save(); renderAll();
+    });
+    $("#goal-max").addEventListener("click", (ev) => {
+      const b = ev.target.closest("button");
+      if (!b) return;
+      S.goal = S.maxGoal = b.dataset.goal;
+      save(); renderAll();
+    });
+    timeOptions($("#rb-leave"), 5 * 60, 21 * 60, 30, S.leaveMin === null ? "now" : S.leaveMin, ["now", "Now"]);
+    $("#rb-leave").addEventListener("change", (ev) => { S.leaveMin = ev.target.value === "now" ? null : Number(ev.target.value); save(); renderAll(); });
+    timeOptions($("#rb-end"), 12 * 60, 23 * 60 + 30, 30, S.profile.dayEndMin);
+    $("#rb-end").addEventListener("change", (ev) => { S.profile.dayEndMin = Number(ev.target.value); save(); renderAll(); });
+    $("#rb-togo").addEventListener("change", (ev) => { S.profile.togo = ev.target.checked; save(); renderAll(); });
+  }
+
   function wire() {
     window.addEventListener("hashchange", renderAll);
     $("#loc-gps").addEventListener("click", () => (live.watch !== null ? stopGps() : startGps()));
     $("#loc-map").addEventListener("click", () => { picking = true; location.hash = "#map"; toast("Tap the map where you'll start."); });
     timeOptions($("#preview-time"), 5 * 60, 22 * 60, 30, S.previewMin);
     $("#preview-time").addEventListener("change", (ev) => { S.previewMin = Number(ev.target.value); save(); renderAll(); });
-    timeOptions($("#plan-start"), 5 * 60, 21 * 60, 30, "now", ["now", "Now"]);
-    $("#plan-form").addEventListener("submit", renderPlan);
+    bindRoute();
     $("#q").addEventListener("input", renderDeals);
     $("#sort").addEventListener("change", renderDeals);
     $("#tip-form").addEventListener("submit", async (ev) => {

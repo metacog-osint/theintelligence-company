@@ -168,3 +168,87 @@ test("preferences: done nudges a category up, a skip nudges it down, within boun
   for (let i = 0; i < 60; i++) p = E.learn(p, "coffee", "skip");
   assert.equal(p.coffee, 0.3);
 });
+
+// ---------------------------------------------------------------- engine v1.1: tickets, appetite, goals
+// A row of five places, 10 minutes apart: a breakfast that ends at 9, a haircut card that opens at 9, a sit-down
+// lunch, a quick bite that can be taken home, and a buy-one-get-one that needs a purchase.
+function row() {
+  const P = (id, offer, k, open, close) => ({ id, offer, lat: 46.80 + k * 0.01, lng: -96.80, open, close });
+  const places = [P("q0", "early", 0, at(6), at(14)), P("q1", "card", 1, at(9), at(19)), P("q2", "sitdown", 2, at(11), at(21)),
+    P("q3", "burger", 3, at(6), at(23)), P("q4", "bogo", 4, at(10), at(21))];
+  const base = { status: "offering", grade: "B", eligible: ["veteran", "active"], guard_reserve: "unclear", spouse: "no", proof: [] };
+  const offers = [
+    { ...base, id: "early", category: "breakfast", value: 8, start: at(6), end: at(9), minutes: 12, meal: false, dineIn: false, snack: true, mode: "to_go" },
+    { ...base, id: "card", category: "service", value: 22, minutes: 5, meal: false, dineIn: false, ticket: true, mode: "in_store" },
+    { ...base, id: "sitdown", category: "meal", value: 15, minutes: 50, meal: true, dineIn: true, mode: "dine_in" },
+    { ...base, id: "burger", category: "quick", value: 6, minutes: 10, meal: false, dineIn: false, snack: true, mode: "dine_in_or_to_go" },
+    { ...base, id: "bogo", category: "quick", value: 9, minutes: 12, meal: false, dineIn: false, snack: true, purchase: true, mode: "in_store" },
+  ];
+  const s = 600, n = places.length;
+  const table = places.map((_, i) => places.map((__, j) => Math.abs(i - j) * s));
+  return { offers, places, drive: { places: table, anchors: places.map((p) => [p.lat, p.lng]), fromAnchor: table }, tzOffsetMin: -360 };
+}
+const ids = (plan) => plan.steps.map((s) => s.c.offer.id);
+
+test("a ticket for later is a quick stop that fills nothing; food eaten there does", () => {
+  const data = row();
+  assert.equal(E.eatWeight(data.offers[1]), 0);
+  const ctx = E.prepare(data, profile(), state({ done: { sitdown: { r: "worked", t: at(12) } } }), NO_REPORTS, at(12, 50), home);
+  const st = E._internal.startState(ctx, at(12, 50));
+  const card = E.evalStop(ctx, st, ctx.cands.find((c) => c.offer.id === "card"));
+  assert.equal(card.full, 1, "a card after lunch is worth all of it");
+  assert.equal(card.eats, false);
+  const burger = E.evalStop(ctx, st, ctx.cands.find((c) => c.offer.id === "burger"));
+  assert.ok(burger === null || burger.full < 0.6, "a burger eaten right after lunch is worth much less");
+});
+
+test("taking food home: it fills nothing, so a sit-down meal right after is worth all of it", () => {
+  const data = row();
+  for (const togo of [false, true]) {
+    const ctx = E.prepare(data, profile({ togo }), state({ done: { burger: { r: "worked", t: at(11) } } }), NO_REPORTS, at(11, 10), home);
+    const step = E.evalStop(ctx, E._internal.startState(ctx, at(11, 10)), ctx.cands.find((c) => c.offer.id === "sitdown"));
+    if (togo) assert.equal(step.full, 1);
+    else assert.ok(step.full < 1);
+  }
+});
+
+test("too full to eat: a stop that means eating right after a sit-down meal is left out", () => {
+  const data = row();
+  data.offers[3].dineIn = true; // the burger has to be eaten there
+  const nextDoor = { lat: data.places[3].lat, lng: data.places[3].lng };
+  const ctx = E.prepare(data, profile(), state({ done: { sitdown: { r: "worked", t: at(12, 45) } } }), NO_REPORTS, at(12, 50), nextDoor);
+  const step = E.evalStop(ctx, E._internal.startState(ctx, at(12, 50)), ctx.cands.find((c) => c.offer.id === "burger"));
+  assert.equal(step, null);
+});
+
+test("deals that need a purchase stay out when that's turned off, and come back when it's on", () => {
+  const off = E.prepare(row(), profile(), state({ prefs: { purchase: 0 } }), NO_REPORTS, at(10), home);
+  assert.match(off.excluded.q4, /needs a purchase/);
+  const on = E.prepare(row(), profile(), state({ prefs: { purchase: 1 } }), NO_REPORTS, at(10), home);
+  assert.ok(on.cands.some((c) => c.offer.id === "bogo"));
+});
+
+test("a wait for an opening gets filled: breakfast before the 9:00 haircut card, even when the search is greedy", () => {
+  const ctx = E.prepare(row(), profile(), state(), NO_REPORTS, at(7), home);
+  const plan = E.planDay(ctx, { width: 1 }); // a beam of one goes straight for the card and waits
+  const order = ids(plan);
+  assert.ok(order.includes("early") && order.indexOf("early") < order.indexOf("card"), order.join(" > "));
+});
+
+test("Maximize: most stops visits at least as many places, most savings collects at least as many dollars", () => {
+  const plans = {};
+  for (const goal of ["best", "stops", "savings", "both"]) {
+    const ctx = E.prepare(row(), profile({ goal, dayEnd: at(13) }), state({ prefs: { purchase: 1 } }), NO_REPORTS, at(7), home);
+    assert.equal(ctx.goal, goal);
+    plans[goal] = E.planDay(ctx);
+    for (const s of plans[goal].steps) assert.ok(s.arrive <= s.c.close - 5 * MIN && s.depart <= at(13), `${goal}: ${s.c.offer.id} fits`);
+  }
+  assert.ok(plans.stops.steps.length >= plans.best.steps.length);
+  assert.ok(plans.stops.count >= plans.savings.count - 1e-9 && plans.stops.count >= plans.both.count - 1e-9);
+  assert.ok(plans.savings.dollars >= plans.stops.dollars - 1e-9 && plans.savings.dollars >= plans.both.dollars - 1e-9);
+  assert.ok(plans.both.ref && plans.both.ref.n >= 1 && plans.both.ref.d >= 1);
+});
+
+test("an unknown goal falls back to the usual plan", () => {
+  assert.equal(E.prepare(row(), profile({ goal: "everything" }), state(), NO_REPORTS, at(7), home).goal, "best");
+});
