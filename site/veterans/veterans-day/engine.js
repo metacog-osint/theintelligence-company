@@ -1,4 +1,4 @@
-/*! Veterans Day route engine v1.1 · The Intelligence Company · pure functions: no DOM, no network, no storage.
+/*! Veterans Day route engine v1.2 · The Intelligence Company · pure functions: no DOM, no network, no storage.
  *  Browser: window.VDEngine. Node (tests): require("./engine.js").
  *
  *  Goals (profile.goal): "best" weighs each deal's value against your time at your pace; "stops" fits in the most
@@ -7,6 +7,8 @@
  *  time, the meal limit, your appetite and anything you've turned off.
  *  Appetite: food eaten there fills you up (a sit-down meal 1, a quick bite 0.4) and wears off at 0.3 an hour. A
  *  ticket for later (a voucher or card) and food you take home (profile.togo) fill nothing.
+ *  v1.2 (8 Nov 2026): a route doesn't open with a ticket for later unless it fits nowhere later or moving it costs
+ *  more than 10 minutes, counting the drive back to where you started (deferTickets).
  *
  *  Inputs are plain objects (see prepare()). Times are epoch milliseconds; the data file already holds every window
  *  in UTC, so nothing here depends on a time zone. Drive times come from the data file's tables:
@@ -384,7 +386,45 @@
     }
     var best = beam(ctx, start, opts.width || 10, opts.depth || (ctx.goal === "best" ? 24 : 40));
     best = fillGaps(ctx, start, best);
+    if (!opts.first) {
+      var moved = deferTickets(ctx, start, best);
+      if (moved !== best) best = fillGaps(ctx, start, moved);
+    }
     return summarize(best.steps, best.score, ctx.ref);
+  }
+  // A ticket for later (a Great Clips or Freddy's card) is good all day, and the beam likes it first only because it
+  // is quick. 8 Nov 2026: don't open a route with Great Clips unless it makes sense there. So when the route
+  // starts with a ticket, try it at each later place and take the best of those orders, unless that costs more than
+  // 10 minutes of your time or misses a window (the Texas Roadhouse voucher's 11:00-14:00). The plan never counts the
+  // drive home, which makes a stop near your start look cheap only at the start; here the drive back to where you
+  // started is counted, so a card near home can wait for the way home. In the Maximize goals minutes are nearly free,
+  // so only a lost stop or dollar keeps a ticket first.
+  function deferTickets(ctx, start, best) {
+    var n0 = start.steps.length, give = ctx.goal === "best" ? 10 * ctx.lambda : ctx.goal === "stops" ? 0.05 : 0.5;
+    var worth = function (st) { return st.score - (ctx.goal === "best" ? homeMin(ctx, start, st) * ctx.lambda : 0); };
+    var cs = best.steps.slice(n0).map(function (s) { return s.c; }), m = 0;
+    while (m < cs.length && cs[m].offer.ticket) m++;
+    if (m === 0 || m === cs.length) return best; // no ticket in front, or nothing but tickets
+    // Every ticket at the front goes to its best later place, one at a time; one that fits nowhere later (its
+    // window is closing) stays in front.
+    var seq = cs.slice(m), cur = null;
+    for (var i = 0; i < m; i++) {
+      var top = null, topSeq = null;
+      for (var k = 1; k <= seq.length; k++) {
+        var s2 = seq.slice(0, k).concat([cs[i]], seq.slice(k)), trial = replay(ctx, start, s2);
+        if (trial && (!top || worth(trial) > worth(top))) { top = trial; topSeq = s2; }
+      }
+      if (!top) { topSeq = [cs[i]].concat(seq); top = replay(ctx, start, topSeq); }
+      if (!top) return best;
+      seq = topSeq; cur = top;
+    }
+    return worth(cur) >= worth(best) - give ? cur : best;
+  }
+  // Minutes from a plan's last stop back to where it started (drive times are close enough to symmetric).
+  function homeMin(ctx, start, st) {
+    if (!st.steps.length || st.at < 0) return 0;
+    var sec = start.at < 0 ? (ctx.fromPos ? ctx.fromPos[st.at] : 0) : ctx.data.drive.places[start.at][st.at];
+    return sec ? sec * ctx.roads / 60 : 0;
   }
   // Re-run a list of stops from a state; null if one of them no longer fits.
   function replay(ctx, st, cs) {
@@ -446,7 +486,7 @@
   }
 
   return {
-    version: "1.1", km: km, fromPosition: fromPosition, stats: stats, confidence: confidence, eligibility: eligibility,
+    version: "1.2", km: km, fromPosition: fromPosition, stats: stats, confidence: confidence, eligibility: eligibility,
     proofLabel: proofLabel, prepare: prepare, evalStop: evalStop, nextOptions: nextOptions, planDay: planDay,
     learn: learn, strike: strike, localMinutes: localMinutes, eatWeight: eatWeight, takeaway: takeaway,
     PACE: PACE, GRADE_P: GRADE_P, GOALS: GOALS,

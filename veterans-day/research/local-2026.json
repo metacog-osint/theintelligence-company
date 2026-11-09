@@ -5,11 +5,11 @@
   "address": "1609 19th Ave N, Fargo, ND 58102",
   "phone": "(701) 293-8043",
   "wednesday_hours": "10:00-17:00 (museum normally Tue-Sat; Sun-Mon closed)",
-  "status_2026": "no_2026_info",
-  "offer": "Veterans Day ceremony with colors, speaker, Missing Man service, Taps; Red River Valley Veterans Concert Band",
+  "status_2026": "confirmed",
+  "offer": "Veterans Day Program presented by the United Patriotic Bodies: in past years colors, a speaker, the Missing Man ceremony, Taps and the Red River Valley Veterans Concert Band",
   "est_value_usd": 0,
-  "dates": "2026-11-11 (unconfirmed)",
-  "hours_local": "11:00-12:00 (2024 and 2025 time)",
+  "dates": "2026-11-11",
+  "hours_local": "11:00-12:00",
   "mode": "event",
   "eligible": [
    "public"
@@ -19,8 +19,14 @@
   "spouse_or_guest": "yes",
   "proof": [],
   "limits": "",
-  "grade": "C",
+  "grade": "A",
   "sources": [
+   {
+    "url": "https://fargoairmuseum.org/",
+    "publisher": "Fargo Air Museum (events list: Veterans Day Program, Wed 11 Nov, 11:00\u201312:00)",
+    "published": "seen 8 Nov 2026",
+    "accessed": "2026-11-08"
+   },
    {
     "url": "https://fargoairmuseum.org/calendar/veterans-day-program/2025",
     "publisher": "Fargo Air Museum",
@@ -40,7 +46,7 @@
     "accessed": "2026-11-08"
    }
   ],
-  "notes": "PRIOR-YEAR PATTERN ONLY; no 2026 confirmation found. Call before relying. Held 11:00 every year 2021-2025 by United Patriotic Bodies. Museum 2026 page (/2026) returned 404. Museum general admission $12 military/veteran; free for military on branch-birthday dates, not confirmed for Nov 11."
+  "notes": "The museum's own events list shows the 2026 program. The program has been free to attend. The museum lists $12 admission for military and veterans and says nothing about free entry on 11 Nov (one 2026 report says admission is free that day): call 701-293-8043. Held at MSUM in 2023."
  },
  {
   "name": "Fargo VFW and American Legion Post 2 Veterans Day stew lunch",
@@ -78,7 +84,7 @@
     "accessed": "2026-11-08"
    }
   ],
-  "notes": "PRIOR-YEAR PATTERN ONLY; no 2026 confirmation found. Call before relying. 2025 KFGO says beef meal at noon, 'downtown Fargo'; address from 2024 InForum. Whether free and open to non-veterans unconfirmed."
+  "notes": "PRIOR-YEAR PATTERN ONLY; no 2026 confirmation found. Call before relying. 2025 KFGO says beef meal at noon, 'downtown Fargo'; address from 2024 InForum. Whether free and open to non-veterans unconfirmed. A 2026 research note says the 2025 meal was free and open to the public; KFGO's 2025 listing doesn't say either way."
  },
  {
   "name": "Fargo AMVETS Post 7 Veterans Day lunch (SOS)",
@@ -163,7 +169,7 @@
   "phone": "(701) 282-4728",
   "wednesday_hours": "unknown",
   "status_2026": "no_2026_info",
-  "offer": "Annual Nov 11 program: flag raising, West Fargo High School Band, speaker, free stew feed, Red River Valley Veterans Band evening program",
+  "offer": "Every 11 Nov, per the post: flag raising at 10:45, then a program with the West Fargo High School Band and a speaker, a free stew feed, and the Red River Valley Veterans Concert Band in the evening",
   "est_value_usd": 8,
   "dates": "every Nov 11 per post's own page (year not stated)",
   "hours_local": "10:45 flag raising; stew lunch ~12:00-12:30; band 19:00",
@@ -191,7 +197,7 @@
     "accessed": "2026-11-08"
    }
   ],
-  "notes": "Post's own page describes an annual Nov 11 program but names no year, so graded C (borderline A for the date). 2025 KFGO: 11:00 program, noon lunch, 19:00 band. 2026 times not confirmed."
+  "notes": "The post's own page describes the annual program (no year given). 2025 (KFGO): program 11:00, lunch at noon, band at 19:00. 2026 times not confirmed."
  },
  {
   "name": "MATBUS free fixed-route rides for veterans",
@@ -263,8 +269,8 @@
   "address": "2920 US-10 E, Moorhead, MN 56560",
   "phone": "(218) 236-0292 (partly verified)",
   "wednesday_hours": "likely 24 hours (unverified)",
-  "status_2026": "no_2026_info",
-  "offer": "Prior year: free meal with military ID, 08:00-20:00 on the day",
+  "status_2026": "confirmed",
+  "offer": "Veterans Day deal confirmed for 2026; last year it was a free meal with military ID",
   "est_value_usd": 12,
   "dates": "2026-11-11 (unconfirmed)",
   "hours_local": "08:00-20:00 (prior year)",
@@ -280,16 +286,36 @@
    "military_id"
   ],
   "limits": "",
-  "grade": "C",
+  "grade": "A",
   "sources": [
    {
-    "url": "https://fargobites.com/veterans-day-specials-in-fargo/",
-    "publisher": "Fargo Bites (seen only as search-result summary; page redirected to an unrelated domain, not opened)",
+    "url": null,
+    "publisher": "The Intelligence Company (confirmed locally for 2026)",
+    "published": "2026-11-08",
+    "accessed": "2026-11-08"
+   },
+   {
+    "url": null,
+    "publisher": "Fargo Bites (2025, seen only in search summaries; the site now redirects to an unrelated domain, so it isn't linked)",
     "published": "unknown (~2025)",
     "accessed": "2026-11-08"
    }
   ],
-  "notes": "PRIOR-YEAR PATTERN ONLY; no 2026 confirmation found. Call before relying. Offer wording from a search summary of the Fargo Bites page, year unknown."
+  "notes": "Confirmed for 2026 by The Intelligence Company on 8 Nov 2026. The details weren't given, so this shows last year's deal; ask when you get there. Assumed to cover the downtown Fargo store too.",
+  "stores": [
+   {
+    "address": "2920 US-10 E, Moorhead, MN 56560",
+    "phone": "(218) 236-0292 (partly verified)",
+    "wed_hours": "likely 24 hours (unverified)"
+   },
+   {
+    "address": "300 Main Ave, Fargo, ND 58103",
+    "phone": "",
+    "wed_hours": "",
+    "geo": "46.87381,-96.78349",
+    "note": "Downtown Fargo store (MapQuest; OSM). Its own Veterans Day offer isn't confirmed."
+   }
+  ]
  },
  {
   "name": "Doolittle's Woodfire Grill (Fargo)",
@@ -297,8 +323,8 @@
   "address": "2112 25th St S, Fargo, ND 58103",
   "phone": "(701) 478-2200",
   "wednesday_hours": "11:00-22:00",
-  "status_2026": "no_2026_info",
-  "offer": "Prior year: free meal on the day",
+  "status_2026": "confirmed",
+  "offer": "Veterans Day deal confirmed for 2026; last year it was a free meal",
   "est_value_usd": 15,
   "dates": "2026-11-11 (unconfirmed)",
   "hours_local": "unknown",
@@ -312,11 +338,17 @@
   "spouse_or_guest": "unclear",
   "proof": [],
   "limits": "",
-  "grade": "C",
+  "grade": "A",
   "sources": [
    {
-    "url": "https://fargobites.com/veterans-day-specials-in-fargo/",
-    "publisher": "Fargo Bites (seen only as search-result summary; page redirected to an unrelated domain, not opened)",
+    "url": null,
+    "publisher": "The Intelligence Company (confirmed locally for 2026)",
+    "published": "2026-11-08",
+    "accessed": "2026-11-08"
+   },
+   {
+    "url": null,
+    "publisher": "Fargo Bites (2025, seen only in search summaries; the site now redirects to an unrelated domain, so it isn't linked)",
     "published": "unknown (~2025)",
     "accessed": "2026-11-08"
    },
@@ -327,7 +359,7 @@
     "accessed": "2026-11-08"
    }
   ],
-  "notes": "PRIOR-YEAR PATTERN ONLY; no 2026 confirmation found. Call before relying. Menu, proof, hours of offer not found."
+  "notes": "Confirmed for 2026 by The Intelligence Company on 8 Nov 2026. The details weren't given, so this shows last year's deal; ask when you get there."
  },
  {
   "name": "Porter Creek Hardwood Grill (Fargo)",
@@ -335,8 +367,8 @@
   "address": "1555 44th St S, Fargo, ND 58103",
   "phone": "(701) 369-3669",
   "wednesday_hours": "11:00-22:00",
-  "status_2026": "no_2026_info",
-  "offer": "Prior year: free meal on the day",
+  "status_2026": "confirmed",
+  "offer": "Veterans Day deal confirmed for 2026; last year it was a free meal",
   "est_value_usd": 15,
   "dates": "2026-11-11 (unconfirmed)",
   "hours_local": "unknown",
@@ -350,29 +382,35 @@
   "spouse_or_guest": "unclear",
   "proof": [],
   "limits": "",
-  "grade": "C",
+  "grade": "A",
   "sources": [
    {
-    "url": "https://fargobites.com/veterans-day-specials-in-fargo/",
-    "publisher": "Fargo Bites (seen only as search-result summary; page redirected to an unrelated domain, not opened)",
+    "url": null,
+    "publisher": "The Intelligence Company (confirmed locally for 2026)",
+    "published": "2026-11-08",
+    "accessed": "2026-11-08"
+   },
+   {
+    "url": null,
+    "publisher": "Fargo Bites (2025, seen only in search summaries; the site now redirects to an unrelated domain, so it isn't linked)",
     "published": "unknown (~2025)",
     "accessed": "2026-11-08"
    }
   ],
-  "notes": "PRIOR-YEAR PATTERN ONLY; no 2026 confirmation found. Call before relying. Hours from OpenTable; ZIP conflicts across listings (58103 most likely)."
+  "notes": "Confirmed for 2026 by The Intelligence Company on 8 Nov 2026. The details weren't given, so this shows last year's deal; ask when you get there."
  },
  {
   "name": "Sickies Garage Burgers & Brews (Fargo)",
   "kind": "business",
-  "address": "45th St location, Fargo; exact address not verified",
+  "address": null,
   "phone": "(701) 532-3202",
   "wednesday_hours": "unknown",
   "status_2026": "no_2026_info",
-  "offer": "2021: free Garage Burger, or 20% off call-in to-go with military ID. Sickies site has a Military and First Responders special of unknown terms",
+  "offer": "Reported for 2026 (unconfirmed): free cheeseburger basket or 20% off, and a 'Buy a Vet a Bud' wall for a free pint (21+). 2021: free Garage Burger or 20% off",
   "est_value_usd": 14,
-  "dates": "unknown",
-  "hours_local": "unknown",
-  "mode": "dine_in_or_to_go",
+  "dates": "2026-11-11 (unconfirmed)",
+  "hours_local": null,
+  "mode": "dine_in",
   "eligible": [
    "veteran",
    "active"
@@ -381,25 +419,43 @@
   "guard_reserve": "unclear",
   "spouse_or_guest": "unclear",
   "proof": [
-   "military_id"
+   "military_id",
+   "va_card",
+   "dd214"
   ],
   "limits": "",
   "grade": "C",
   "sources": [
    {
-    "url": "https://www.inforum.com/business/from-free-food-to-haircuts-heres-where-military-veterans-can-find-deals-on-veterans-day",
-    "publisher": "InForum",
-    "published": "2021-11-03",
+    "url": "https://www.valleynewslive.com/2021/11/11/local-businesses-offer-deals-veterans/",
+    "publisher": "Valley News Live (2021 list)",
+    "published": "2021-11-11",
     "accessed": "2026-11-08"
    },
    {
-    "url": "https://www.valleynewslive.com/2021/11/11/local-businesses-offer-deals-veterans/",
-    "publisher": "Valley News Live",
-    "published": "2021-11-11",
+    "url": "https://sickiesburgers.com/",
+    "publisher": "Sickies Garage (store directory)",
+    "published": "seen 8 Nov 2026",
     "accessed": "2026-11-08"
    }
   ],
-  "notes": "Only 2021 evidence; terms vary by year and market."
+  "notes": "Only one 2026 listing has this (a compiled report we couldn't trace to the business). Not announced by the business: call first.",
+  "stores": [
+   {
+    "address": "3431 Fiechtner Dr S, Fargo, ND 58103",
+    "phone": "",
+    "wed_hours": "",
+    "geo": "46.86280,-96.83604",
+    "note": "Sickies' '13th Ave' store (company directory); the former Hooters."
+   },
+   {
+    "address": "2551 45th St S, Fargo, ND 58104",
+    "phone": "(701) 532-3202",
+    "wed_hours": "",
+    "geo": "46.84196,-96.86218",
+    "note": "Company directory."
+   }
+  ]
  },
  {
   "name": "Bully Brew Coffee",
@@ -554,24 +610,39 @@
  {
   "name": "Pub West",
   "kind": "business",
-  "address": "unknown",
-  "phone": "unknown",
+  "address": "3140 Bluestem Dr, West Fargo, ND 58078",
+  "phone": "(701) 356-9378",
   "wednesday_hours": "unknown",
   "status_2026": "no_2026_info",
-  "offer": "On last year's list; no 2026 post or report found",
-  "est_value_usd": 0,
+  "offer": "Reported for 2026 (unconfirmed): free 18 oz domestic draft. In past years: a free meal up to $15 (with a drink purchase in 2025)",
+  "est_value_usd": 15,
   "dates": "unknown",
   "hours_local": "unknown",
-  "mode": "dine_in_or_to_go",
-  "eligible": [],
+  "mode": "dine_in",
+  "eligible": [
+   "veteran",
+   "active"
+  ],
   "eligibility_quote": "",
   "guard_reserve": "unclear",
   "spouse_or_guest": "unclear",
-  "proof": [],
+  "proof": [
+   "military_id",
+   "va_card",
+   "dd214"
+  ],
   "limits": "",
   "grade": "C",
-  "sources": [],
-  "notes": "Searched 8 Nov 2026; nothing found. Do not show to users as an offer. Fargo Bites summary mentions Sandy's Donuts and Royal Buffet (multi-day, military ID) for a prior year, unverified."
+  "sources": [
+   {
+    "url": "https://www.inforum.com/business/pub-west-offers-free-meal-for-veterans-on-veterans-day",
+    "publisher": "InForum (an earlier year)",
+    "published": "unknown",
+    "accessed": "2026-11-08"
+   }
+  ],
+  "notes": "Only one 2026 listing has this (a compiled report we couldn't trace to the business). Not announced by the business: call first. Directories also list 3330 Sheyenne St #116, and the phone number is from one directory.",
+  "geo": "46.83547,-96.88493"
  },
  {
   "name": "SouthTown PourHouse",
@@ -598,46 +669,82 @@
  {
   "name": "Brewtus' Brickhouse",
   "kind": "business",
-  "address": "unknown",
-  "phone": "unknown",
+  "address": "635 32nd Ave E, West Fargo, ND 58078",
+  "phone": "(701) 532-1397",
   "wednesday_hours": "unknown",
   "status_2026": "no_2026_info",
-  "offer": "On last year's list; no 2026 post or report found",
-  "est_value_usd": 0,
+  "offer": "Reported for 2026 (unconfirmed): free lunch pizza buffet",
+  "est_value_usd": 12,
   "dates": "unknown",
-  "hours_local": "unknown",
-  "mode": "dine_in_or_to_go",
-  "eligible": [],
+  "hours_local": "11:00-14:00",
+  "mode": "dine_in",
+  "eligible": [
+   "veteran",
+   "active"
+  ],
   "eligibility_quote": "",
   "guard_reserve": "unclear",
   "spouse_or_guest": "unclear",
-  "proof": [],
+  "proof": [
+   "military_id",
+   "va_card",
+   "dd214"
+  ],
   "limits": "",
   "grade": "C",
-  "sources": [],
-  "notes": "Searched 8 Nov 2026; nothing found. Do not show to users as an offer. Fargo Bites summary mentions Sandy's Donuts and Royal Buffet (multi-day, military ID) for a prior year, unverified."
+  "sources": [
+   {
+    "url": "https://www.mapquest.com/us/north-dakota/brewtus-brickhouse-371357549",
+    "publisher": "MapQuest (address)",
+    "published": "seen 8 Nov 2026",
+    "accessed": "2026-11-08"
+   }
+  ],
+  "notes": "Only one 2026 listing has this (a compiled report we couldn't trace to the business). Not announced by the business: call first. The Moorhead Brewtus' has closed; this is the West Fargo one.",
+  "geo": "46.83311,-96.88755"
  },
  {
   "name": "Spitfire Bar & Grill",
-  "kind": "business",
-  "address": "unknown",
-  "phone": "unknown",
-  "wednesday_hours": "unknown",
+  "kind": "bar",
+  "address": "1660 13th Ave E, West Fargo, ND 58078",
+  "phone": "(701) 478-8667",
+  "wednesday_hours": "",
   "status_2026": "no_2026_info",
-  "offer": "On last year's list; no 2026 post or report found",
-  "est_value_usd": 0,
-  "dates": "unknown",
+  "offer": "$10 off",
+  "est_value_usd": 10,
+  "dates": "2026-11-11 (unconfirmed)",
   "hours_local": "unknown",
-  "mode": "dine_in_or_to_go",
-  "eligible": [],
+  "mode": "dine_in",
+  "eligible": [
+   "veteran",
+   "active"
+  ],
   "eligibility_quote": "",
   "guard_reserve": "unclear",
   "spouse_or_guest": "unclear",
-  "proof": [],
+  "proof": [
+   "military_id",
+   "va_card",
+   "dd214"
+  ],
   "limits": "",
   "grade": "C",
-  "sources": [],
-  "notes": "Searched 8 Nov 2026; nothing found. Do not show to users as an offer. Fargo Bites summary mentions Sandy's Donuts and Royal Buffet (multi-day, military ID) for a prior year, unverified."
+  "sources": [
+   {
+    "url": null,
+    "publisher": "Fargo Bites, 2025 (not linked: the site now redirects elsewhere)",
+    "published": "2025",
+    "accessed": "2026-11-08"
+   },
+   {
+    "url": "https://www.openstreetmap.org/",
+    "publisher": "Address: OpenStreetMap and directory listings",
+    "published": "seen 8 Nov 2026",
+    "accessed": "2026-11-08"
+   }
+  ],
+  "notes": "PRIOR-YEAR PATTERN ONLY (2025); nothing for 2026 yet. Call before going.",
+  "geo": "46.86254,-96.87303"
  },
  {
   "name": "Red Hen Taphouse",
@@ -818,68 +925,125 @@
  {
   "name": "Blarney Stone",
   "kind": "business",
-  "address": "unknown",
+  "address": "1910 9th St E, West Fargo, ND 58078",
   "phone": "unknown",
   "wednesday_hours": "unknown",
   "status_2026": "no_2026_info",
-  "offer": "On last year's list; no 2026 post or report found",
-  "est_value_usd": 0,
+  "offer": "Reported for 2026 (unconfirmed): free pint of draft beer (21+)",
+  "est_value_usd": 6,
   "dates": "unknown",
   "hours_local": "unknown",
-  "mode": "dine_in_or_to_go",
-  "eligible": [],
+  "mode": "dine_in",
+  "eligible": [
+   "veteran",
+   "active"
+  ],
   "eligibility_quote": "",
   "guard_reserve": "unclear",
   "spouse_or_guest": "unclear",
-  "proof": [],
+  "proof": [
+   "military_id",
+   "va_card",
+   "dd214"
+  ],
   "limits": "",
   "grade": "C",
-  "sources": [],
-  "notes": "Searched 8 Nov 2026; nothing found. Do not show to users as an offer. Fargo Bites summary mentions Sandy's Donuts and Royal Buffet (multi-day, military ID) for a prior year, unverified."
+  "sources": [
+   {
+    "url": "https://www.openstreetmap.org/",
+    "publisher": "OpenStreetMap (address)",
+    "published": "seen 8 Nov 2026",
+    "accessed": "2026-11-08"
+   }
+  ],
+  "notes": "Only one 2026 listing has this (a compiled report we couldn't trace to the business). Not announced by the business: call first.",
+  "geo": "46.85068,-96.88418"
  },
  {
   "name": "Mills Lounge",
-  "kind": "business",
-  "address": "unknown",
-  "phone": "unknown",
-  "wednesday_hours": "unknown",
+  "kind": "bar",
+  "address": "6 Center Ave E, Dilworth, MN 56529",
+  "phone": "",
+  "wednesday_hours": "",
   "status_2026": "no_2026_info",
-  "offer": "On last year's list; no 2026 post or report found",
-  "est_value_usd": 0,
-  "dates": "unknown",
+  "offer": "free drink",
+  "est_value_usd": 5,
+  "dates": "2026-11-11 (unconfirmed)",
   "hours_local": "unknown",
-  "mode": "dine_in_or_to_go",
-  "eligible": [],
+  "mode": "dine_in",
+  "eligible": [
+   "veteran",
+   "active"
+  ],
   "eligibility_quote": "",
   "guard_reserve": "unclear",
   "spouse_or_guest": "unclear",
-  "proof": [],
+  "proof": [
+   "military_id",
+   "va_card",
+   "dd214"
+  ],
   "limits": "",
   "grade": "C",
-  "sources": [],
-  "notes": "Searched 8 Nov 2026; nothing found. Do not show to users as an offer. Fargo Bites summary mentions Sandy's Donuts and Royal Buffet (multi-day, military ID) for a prior year, unverified."
+  "sources": [
+   {
+    "url": null,
+    "publisher": "Fargo Bites, 2025 (not linked: the site now redirects elsewhere)",
+    "published": "2025",
+    "accessed": "2026-11-08"
+   },
+   {
+    "url": "https://www.openstreetmap.org/",
+    "publisher": "Address: OpenStreetMap and directory listings",
+    "published": "seen 8 Nov 2026",
+    "accessed": "2026-11-08"
+   }
+  ],
+  "notes": "PRIOR-YEAR PATTERN ONLY (2025); nothing for 2026 yet. Call before going.",
+  "geo": "46.87674,-96.70244"
  },
  {
   "name": "Drekker Brewing",
-  "kind": "business",
-  "address": "unknown",
-  "phone": "unknown",
-  "wednesday_hours": "unknown",
+  "kind": "bar",
+  "address": "1666 1st Ave N, Fargo, ND 58102",
+  "phone": "(701) 532-0506",
+  "wednesday_hours": "16:00-20:00",
   "status_2026": "no_2026_info",
-  "offer": "On last year's list; no 2026 post or report found",
-  "est_value_usd": 0,
-  "dates": "unknown",
+  "offer": "1 free pint on 10 and 11 Nov",
+  "est_value_usd": 7,
+  "dates": "2026-11-11 (unconfirmed)",
   "hours_local": "unknown",
-  "mode": "dine_in_or_to_go",
-  "eligible": [],
+  "mode": "dine_in",
+  "eligible": [
+   "veteran",
+   "active"
+  ],
   "eligibility_quote": "",
   "guard_reserve": "unclear",
   "spouse_or_guest": "unclear",
-  "proof": [],
+  "proof": [
+   "military_id",
+   "va_card",
+   "dd214"
+  ],
   "limits": "",
   "grade": "C",
-  "sources": [],
-  "notes": "Searched 8 Nov 2026; nothing found. Do not show to users as an offer. Fargo Bites summary mentions Sandy's Donuts and Royal Buffet (multi-day, military ID) for a prior year, unverified."
+  "sources": [
+   {
+    "url": null,
+    "publisher": "Fargo Bites, 2025 (not linked: the site now redirects elsewhere)",
+    "published": "2025",
+    "accessed": "2026-11-08"
+   },
+   {
+    "url": "https://www.openstreetmap.org/",
+    "publisher": "Address: OpenStreetMap and directory listings",
+    "published": "seen 8 Nov 2026",
+    "accessed": "2026-11-08"
+   }
+  ],
+  "notes": "PRIOR-YEAR PATTERN ONLY (2025); nothing for 2026 yet. Call before going.",
+  "geo": "46.87633,-96.80790"
  },
  {
   "name": "Hooligan's Bar & Grill",
@@ -905,91 +1069,181 @@
  },
  {
   "name": "Swing Barrel Brewing",
-  "kind": "business",
-  "address": "unknown",
-  "phone": "unknown",
-  "wednesday_hours": "unknown",
+  "kind": "bar",
+  "address": "814 Center Ave, Moorhead, MN 56560",
+  "phone": "",
+  "wednesday_hours": "10:00-19:00",
   "status_2026": "no_2026_info",
-  "offer": "On last year's list; no 2026 post or report found",
-  "est_value_usd": 0,
-  "dates": "unknown",
+  "offer": "first pint free, 9-11 Nov",
+  "est_value_usd": 6,
+  "dates": "2026-11-11 (unconfirmed)",
   "hours_local": "unknown",
-  "mode": "dine_in_or_to_go",
-  "eligible": [],
+  "mode": "dine_in",
+  "eligible": [
+   "veteran",
+   "active"
+  ],
   "eligibility_quote": "",
   "guard_reserve": "unclear",
   "spouse_or_guest": "unclear",
-  "proof": [],
+  "proof": [
+   "military_id",
+   "va_card",
+   "dd214"
+  ],
   "limits": "",
   "grade": "C",
-  "sources": [],
-  "notes": "Searched 8 Nov 2026; nothing found. Do not show to users as an offer. Fargo Bites summary mentions Sandy's Donuts and Royal Buffet (multi-day, military ID) for a prior year, unverified."
+  "sources": [
+   {
+    "url": null,
+    "publisher": "Fargo Bites, 2025 (not linked: the site now redirects elsewhere)",
+    "published": "2025",
+    "accessed": "2026-11-08"
+   },
+   {
+    "url": "https://www.openstreetmap.org/",
+    "publisher": "Address: OpenStreetMap and directory listings",
+    "published": "seen 8 Nov 2026",
+    "accessed": "2026-11-08"
+   }
+  ],
+  "notes": "PRIOR-YEAR PATTERN ONLY (2025); nothing for 2026 yet. Call before going.",
+  "geo": "46.87521,-96.76695"
  },
  {
-  "name": "Hen House",
-  "kind": "business",
-  "address": "unknown",
-  "phone": "unknown",
-  "wednesday_hours": "unknown",
+  "name": "Hen House Bar & Restaurant",
+  "kind": "bar",
+  "address": "937 37th Ave S, Moorhead, MN 56560",
+  "phone": "(218) 359-0744",
+  "wednesday_hours": "10:00-24:00",
   "status_2026": "no_2026_info",
-  "offer": "On last year's list; no 2026 post or report found",
-  "est_value_usd": 0,
-  "dates": "unknown",
+  "offer": "50% off food and drink all day",
+  "est_value_usd": 8,
+  "dates": "2026-11-11 (unconfirmed)",
   "hours_local": "unknown",
-  "mode": "dine_in_or_to_go",
-  "eligible": [],
+  "mode": "dine_in",
+  "eligible": [
+   "veteran",
+   "active"
+  ],
   "eligibility_quote": "",
   "guard_reserve": "unclear",
   "spouse_or_guest": "unclear",
-  "proof": [],
+  "proof": [
+   "military_id",
+   "va_card",
+   "dd214"
+  ],
   "limits": "",
   "grade": "C",
-  "sources": [],
-  "notes": "Searched 8 Nov 2026; nothing found. Do not show to users as an offer. Fargo Bites summary mentions Sandy's Donuts and Royal Buffet (multi-day, military ID) for a prior year, unverified."
+  "sources": [
+   {
+    "url": null,
+    "publisher": "Fargo Bites, 2025 (not linked: the site now redirects elsewhere)",
+    "published": "2025",
+    "accessed": "2026-11-08"
+   },
+   {
+    "url": "https://www.openstreetmap.org/",
+    "publisher": "Address: OpenStreetMap and directory listings",
+    "published": "seen 8 Nov 2026",
+    "accessed": "2026-11-08"
+   }
+  ],
+  "notes": "PRIOR-YEAR PATTERN ONLY (2025); nothing for 2026 yet. Call before going.",
+  "geo": "46.83524,-96.76563"
  },
  {
   "name": "Frank's Lounge",
-  "kind": "business",
-  "address": "unknown",
-  "phone": "unknown",
-  "wednesday_hours": "unknown",
+  "kind": "bar",
+  "address": "2640 52nd Ave S, Fargo, ND 58104",
+  "phone": "(701) 356-9356",
+  "wednesday_hours": "",
   "status_2026": "no_2026_info",
-  "offer": "On last year's list; no 2026 post or report found",
-  "est_value_usd": 0,
-  "dates": "unknown",
+  "offer": "In 2023: free appetizer or a buy-one-get-one sandwich",
+  "est_value_usd": 8,
+  "dates": "2026-11-11 (unconfirmed)",
   "hours_local": "unknown",
-  "mode": "dine_in_or_to_go",
-  "eligible": [],
+  "mode": "dine_in",
+  "eligible": [
+   "veteran",
+   "active"
+  ],
   "eligibility_quote": "",
   "guard_reserve": "unclear",
   "spouse_or_guest": "unclear",
-  "proof": [],
+  "proof": [
+   "military_id",
+   "va_card",
+   "dd214"
+  ],
   "limits": "",
   "grade": "C",
-  "sources": [],
-  "notes": "Searched 8 Nov 2026; nothing found. Do not show to users as an offer. Fargo Bites summary mentions Sandy's Donuts and Royal Buffet (multi-day, military ID) for a prior year, unverified."
+  "sources": [
+   {
+    "url": "https://www.wdayradionow.com/news/local-news/69955-2023-veterans-day-deals-discounts-and-freebies-in-the-fm-metro/",
+    "publisher": "WDAY Radio (2023 list)",
+    "published": "2023-11",
+    "accessed": "2026-11-08"
+   },
+   {
+    "url": "https://www.openstreetmap.org/",
+    "publisher": "Address: OpenStreetMap and directory listings",
+    "published": "seen 8 Nov 2026",
+    "accessed": "2026-11-08"
+   }
+  ],
+  "notes": "PRIOR-YEAR PATTERN ONLY (2023); nothing for 2026 yet. Call before going."
  },
  {
   "name": "Sandy's Donuts",
   "kind": "business",
-  "address": "unknown",
+  "address": null,
   "phone": "unknown",
   "wednesday_hours": "unknown",
   "status_2026": "no_2026_info",
-  "offer": "On last year's list; no 2026 post or report found",
-  "est_value_usd": 0,
+  "offer": "Reported for 2026 (unconfirmed): free donut",
+  "est_value_usd": 2,
   "dates": "unknown",
-  "hours_local": "unknown",
-  "mode": "dine_in_or_to_go",
-  "eligible": [],
+  "hours_local": "06:00-13:30",
+  "mode": "in_store",
+  "eligible": [
+   "veteran",
+   "active"
+  ],
   "eligibility_quote": "",
   "guard_reserve": "unclear",
   "spouse_or_guest": "unclear",
-  "proof": [],
+  "proof": [
+   "military_id",
+   "va_card",
+   "dd214"
+  ],
   "limits": "",
   "grade": "C",
-  "sources": [],
-  "notes": "Searched 8 Nov 2026; nothing found. Do not show to users as an offer. Fargo Bites summary mentions Sandy's Donuts and Royal Buffet (multi-day, military ID) for a prior year, unverified."
+  "sources": [
+   {
+    "url": "https://www.openstreetmap.org/",
+    "publisher": "OpenStreetMap (store addresses)",
+    "published": "seen 8 Nov 2026",
+    "accessed": "2026-11-08"
+   }
+  ],
+  "notes": "Only one 2026 listing has this (a compiled report we couldn't trace to the business). Not announced by the business: call first. The report also mentions a downtown Fargo store; not found.",
+  "stores": [
+   {
+    "address": "301 Main Ave W, West Fargo, ND 58078",
+    "phone": "",
+    "wed_hours": "",
+    "geo": "46.87647,-96.90505"
+   },
+   {
+    "address": "4215 45th St S, Fargo, ND 58104",
+    "phone": "",
+    "wed_hours": "",
+    "geo": "46.81629,-96.86209"
+   }
+  ]
  },
  {
   "name": "Koda Koffee",
@@ -1144,5 +1398,251 @@
   "grade": "C",
   "sources": [],
   "notes": "Searched 8 Nov 2026; nothing found. Do not show to users as an offer. Fargo Bites summary mentions Sandy's Donuts and Royal Buffet (multi-day, military ID) for a prior year, unverified."
+ },
+ {
+  "name": "Cash Wise Foods deli (Moorhead)",
+  "kind": "grocery deli",
+  "address": "3300 Highway 10 E, Moorhead, MN 56560",
+  "phone": "",
+  "wednesday_hours": "06:00-22:00",
+  "status_2026": "no_2026_info",
+  "offer": "Reported for 2026 (unconfirmed): 2-piece chicken dinner with sides from the deli",
+  "est_value_usd": 8,
+  "dates": "2026-11-11 (unconfirmed)",
+  "hours_local": "11:00-19:00",
+  "mode": "to_go",
+  "eligible": [
+   "veteran",
+   "active"
+  ],
+  "proof": [
+   "military_id",
+   "va_card",
+   "dd214"
+  ],
+  "grade": "C",
+  "geo": "46.87818,-96.72795",
+  "sources": [
+   {
+    "url": "https://www.openstreetmap.org/",
+    "publisher": "OpenStreetMap (store and hours)",
+    "published": "seen 8 Nov 2026",
+    "accessed": "2026-11-08"
+   }
+  ],
+  "notes": "Only one 2026 listing has this (a compiled report we couldn't trace to the business). Not announced by the business: call first. No Cash Wise offer is on any 2026 national list."
+ },
+ {
+  "name": "Harwood American Legion Post 297 Veterans Day stew",
+  "kind": "event",
+  "address": "101 Benefit Ln, Harwood, ND 58042",
+  "phone": "(701) 282-9400",
+  "wednesday_hours": "11:00-01:00",
+  "status_2026": "no_2026_info",
+  "offer": "In 2023: free stew until it ran out, and one free drink for Legion members",
+  "est_value_usd": 8,
+  "dates": "2026-11-11 (unconfirmed)",
+  "hours_local": "17:00-19:00",
+  "mode": "event",
+  "eligible": [
+   "veteran",
+   "active",
+   "public"
+  ],
+  "proof": [],
+  "grade": "C",
+  "geo": "46.98042,-96.88031",
+  "sources": [
+   {
+    "url": "https://www.cityofharwood.com/american-legion-post-297",
+    "publisher": "City of Harwood (post address and hours)",
+    "published": "seen 8 Nov 2026",
+    "accessed": "2026-11-08"
+   }
+  ],
+  "notes": "PRIOR-YEAR PATTERN ONLY (2023). Harwood is about 10 miles north of Fargo. Call the post before going."
+ },
+ {
+  "name": "Fargo Air Museum Veterans Coffee Hour",
+  "kind": "event",
+  "address": "1609 19th Ave N, Fargo, ND 58102",
+  "phone": "(701) 293-8043",
+  "wednesday_hours": "10:00-17:00",
+  "status_2026": "no_2026_info",
+  "offer": "Every second Wednesday, the museum's Veterans Coffee Hour: free coffee and donuts",
+  "est_value_usd": 4,
+  "dates": "2026-11-11 (second Wednesday; not on the museum's November list)",
+  "hours_local": "10:00-12:00",
+  "mode": "event",
+  "eligible": [
+   "veteran",
+   "active"
+  ],
+  "proof": [],
+  "grade": "C",
+  "geo": "46.90555,-96.80395",
+  "sources": [
+   {
+    "url": "https://fargoairmuseum.org/calendar/veterans-coffee-hour/9-1",
+    "publisher": "Fargo Air Museum (Veterans Coffee Hour page)",
+    "published": "2026",
+    "accessed": "2026-11-08"
+   }
+  ],
+  "notes": "A monthly second-Wednesday event. It isn't on the museum's events list for 11 Nov, so it may give way to the 11:00 program: call 701-293-8043."
+ },
+ {
+  "name": "BorderTown Bar & Grill",
+  "kind": "bar",
+  "address": "807 Main Ave E, West Fargo, ND 58078",
+  "phone": "",
+  "wednesday_hours": "",
+  "status_2026": "no_2026_info",
+  "offer": "free meal",
+  "est_value_usd": 12,
+  "dates": "2026-11-11 (unconfirmed)",
+  "hours_local": "unknown",
+  "mode": "dine_in",
+  "eligible": [
+   "veteran",
+   "active"
+  ],
+  "proof": [
+   "military_id",
+   "va_card",
+   "dd214"
+  ],
+  "grade": "C",
+  "sources": [
+   {
+    "url": null,
+    "publisher": "Fargo Bites, 2025 (not linked: the site now redirects elsewhere)",
+    "published": "2025",
+    "accessed": "2026-11-08"
+   },
+   {
+    "url": "https://www.openstreetmap.org/",
+    "publisher": "Address: OpenStreetMap and directory listings",
+    "published": "seen 8 Nov 2026",
+    "accessed": "2026-11-08"
+   }
+  ],
+  "notes": "PRIOR-YEAR PATTERN ONLY (2025); nothing for 2026 yet. Call before going."
+ },
+ {
+  "name": "Mick's Office",
+  "kind": "bar",
+  "address": "10 8th St S, Moorhead, MN 56560",
+  "phone": "(218) 233-2295",
+  "wednesday_hours": "",
+  "status_2026": "no_2026_info",
+  "offer": "In 2023: free meal",
+  "est_value_usd": 12,
+  "dates": "2026-11-11 (unconfirmed)",
+  "hours_local": "unknown",
+  "mode": "dine_in",
+  "eligible": [
+   "veteran",
+   "active"
+  ],
+  "proof": [
+   "military_id",
+   "va_card",
+   "dd214"
+  ],
+  "grade": "C",
+  "sources": [
+   {
+    "url": "https://www.wdayradionow.com/news/local-news/69955-2023-veterans-day-deals-discounts-and-freebies-in-the-fm-metro/",
+    "publisher": "WDAY Radio (2023 list)",
+    "published": "2023-11",
+    "accessed": "2026-11-08"
+   },
+   {
+    "url": "https://www.openstreetmap.org/",
+    "publisher": "Address: OpenStreetMap and directory listings",
+    "published": "seen 8 Nov 2026",
+    "accessed": "2026-11-08"
+   }
+  ],
+  "notes": "PRIOR-YEAR PATTERN ONLY (2023); nothing for 2026 yet. Call before going.",
+  "geo": "46.87464,-96.76705"
+ },
+ {
+  "name": "J.C. Chumley's",
+  "kind": "bar",
+  "address": "1608 Main Ave, Moorhead, MN 56560",
+  "phone": "",
+  "wednesday_hours": "",
+  "status_2026": "no_2026_info",
+  "offer": "In 2023: free meal",
+  "est_value_usd": 12,
+  "dates": "2026-11-11 (unconfirmed)",
+  "hours_local": "unknown",
+  "mode": "dine_in",
+  "eligible": [
+   "veteran",
+   "active"
+  ],
+  "proof": [
+   "military_id",
+   "va_card",
+   "dd214"
+  ],
+  "grade": "C",
+  "sources": [
+   {
+    "url": "https://www.wdayradionow.com/news/local-news/69955-2023-veterans-day-deals-discounts-and-freebies-in-the-fm-metro/",
+    "publisher": "WDAY Radio (2023 list)",
+    "published": "2023-11",
+    "accessed": "2026-11-08"
+   },
+   {
+    "url": "https://www.openstreetmap.org/",
+    "publisher": "Address: OpenStreetMap and directory listings",
+    "published": "seen 8 Nov 2026",
+    "accessed": "2026-11-08"
+   }
+  ],
+  "notes": "PRIOR-YEAR PATTERN ONLY (2023); nothing for 2026 yet. Call before going.",
+  "geo": "46.87403,-96.75404"
+ },
+ {
+  "name": "O'Kelly's Bar & Grill",
+  "kind": "bar",
+  "address": "3800 Main Ave, Fargo, ND 58103",
+  "phone": "(701) 277-1880",
+  "wednesday_hours": "",
+  "status_2026": "no_2026_info",
+  "offer": "In 2023: free drink",
+  "est_value_usd": 5,
+  "dates": "2026-11-11 (unconfirmed)",
+  "hours_local": "unknown",
+  "mode": "dine_in",
+  "eligible": [
+   "veteran",
+   "active"
+  ],
+  "proof": [
+   "military_id",
+   "va_card",
+   "dd214"
+  ],
+  "grade": "C",
+  "sources": [
+   {
+    "url": "https://www.wdayradionow.com/news/local-news/69955-2023-veterans-day-deals-discounts-and-freebies-in-the-fm-metro/",
+    "publisher": "WDAY Radio (2023 list)",
+    "published": "2023-11",
+    "accessed": "2026-11-08"
+   },
+   {
+    "url": "https://www.openstreetmap.org/",
+    "publisher": "Address: OpenStreetMap and directory listings",
+    "published": "seen 8 Nov 2026",
+    "accessed": "2026-11-08"
+   }
+  ],
+  "notes": "PRIOR-YEAR PATTERN ONLY (2023); nothing for 2026 yet. Call before going."
  }
 ]

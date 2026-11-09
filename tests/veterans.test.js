@@ -112,3 +112,41 @@ test("the drive tables match the stores, in the same order", () => {
   for (const row of DRIVE.fromAnchor) assert.equal(row.length, n);
   assert.ok(DRIVE.anchors.length > 200, "a grid across the metro");
 });
+
+test("every category in the data has a label in the app; deals that need a purchase start Off, bars On with a drive-safe line", () => {
+  const app = SCRIPTS["app.js"];
+  for (const c of new Set(DEALS.offers.map((o) => o.category))) assert.ok(app.includes(`["${c}", "`), `category ${c} has no label`);
+  assert.match(app, /OFF_BY_DEFAULT = \{ purchase: true \}/, "only purchase deals are Off until turned on");
+  assert.ok(DEALS.offers.filter((o) => o.category === "bar").length >= 10, "the bars are on the route");
+  assert.match(HTML, /id="drive-safe"[^>]*hidden/, "a drive-safe line, shown when a route has a bar");
+  assert.match(app, /DRIVE_SAFE = "21 and over\. If you drink, don't drive/);
+});
+
+test("no source links to fargobites.com, which redirects every page to an unrelated 'verify' site (Nov 2026)", () => {
+  const urls = [...DEALS.offers.flatMap((o) => o.sources), ...(DEALS.other || []).flatMap((x) => x.sources),
+    ...(DEALS.leads || []).map((l) => l.source).filter(Boolean)].map((s) => s.url || "");
+  assert.ok(urls.length > 50);
+  for (const u of urls) assert.ok(!/fargobites\.com/i.test(u), u);
+  for (const s of DEALS.offers.flatMap((o) => o.sources)) assert.ok(s.url || s.publisher, "a source needs a link or a name");
+});
+
+test("other days and earlier-year leads are listed under Deals, off the route", () => {
+  assert.ok(DEALS.other.length >= 4 && DEALS.leads.length >= 10);
+  for (const x of DEALS.other) {
+    for (const k of ["id", "day", "name", "where", "offer"]) assert.ok(x[k], `${x.id}: ${k}`);
+    assert.ok(["A", "B", "C"].includes(x.grade), `${x.id}: grade`);
+    if (x.grade !== "C") assert.ok(x.sources.some((s) => s.url), `${x.id}: an A or B grade needs a linked source`);
+    if (x.at) assert.ok(!Number.isNaN(Date.parse(x.at)), `${x.id}: at`);
+  }
+  const offerIds = new Set(DEALS.offers.map((o) => o.id));
+  for (const l of DEALS.leads) {
+    for (const k of ["name", "offer", "last_seen", "q"]) assert.ok(l[k], `${l.name}: ${k}`);
+    assert.ok(!offerIds.has(l.name.toLowerCase()), `${l.name} is both a lead and a deal`);
+  }
+  for (const id of ["other-wrap", "other", "leads-wrap", "leads", "leads-n"]) assert.match(HTML, new RegExp(`id="${id}"`), id);
+});
+
+test("closed or absent stores stay out (Smashburger closed Oct 2026, per the publisher; no metro Hy-Vee, Red Robin, Golden Corral, Hooters, Famous Dave's)", () => {
+  const ids = new Set(DEALS.offers.map((o) => o.id));
+  for (const id of ["smashburger", "hy-vee", "red-robin", "golden-corral", "hooters", "famous-daves"]) assert.ok(!ids.has(id), id);
+});

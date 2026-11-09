@@ -892,8 +892,8 @@
     "phone": "(701) 281-6002",
     "osm": null,
     "url": "https://locations.cariboucoffee.com/us/nd/west-fargo/755-33rd-ave-w",
-    "note": "Official Caribou locator page",
-    "geo": "46.92067,-96.78852"
+    "note": "Official Caribou locator page. Inside Cash Wise West Fargo (755 33rd Ave E on Cash Wise's own listing); pinned to that store, since the geocoder put '33rd Ave W' in north Fargo (8 Nov 2026).",
+    "geo": "46.83151,-96.88556"
    },
    {
     "address": "101 11th St. S, Moorhead, MN 56560",
@@ -953,7 +953,7 @@
     "phone": "(218) 303-1761",
     "osm": "way/194297877",
     "url": "https://www.villageinn.com/moorhead-mn",
-    "note": "Official Village Inn page still lists it with hours; online ordering 'currently unavailable'; a MapQuest snapshot showed 'Closed'. Call before sending anyone."
+    "note": "Village Inn's own Moorhead page (seen 8 Nov 2026) lists it with 6 AM-8 PM hours every day but says online ordering is unavailable, and a MapQuest snapshot showed 'Closed'. Call before going."
    }
   ],
   "notes": "Last year's '3050 S 25th St, Fargo' not found (no Fargo Village Inn on locator search)."
@@ -1572,13 +1572,14 @@
   "basis_url": "OSM way/802748319",
   "stores": [
    {
-    "address": "Address not found (OSM point 46.8585,-96.8516, 13th Ave S area, Fargo)",
+    "address": "1443 42nd St S, Fargo, ND 58103",
     "status": "unverified",
-    "wed_hours": null,
-    "phone": null,
+    "wed_hours": "10:30-22:00",
+    "phone": "(701) 552-7226",
     "osm": "way/802748319",
     "url": "OSM only",
-    "note": "No address or independent source found. Do NOT use as a destination without verification."
+    "note": "Address from directory listings (MapQuest and others), matching the OSM point; opened Oct 2017.",
+    "geo": "46.85848,-96.85160"
    }
   ],
   "notes": "locations.blazepizza.com is a JS shell. Searches turned up nothing."
@@ -1716,8 +1717,111 @@
     "url": "https://www.lottery.nd.gov/_elements/pdf/faqs/Locations_20251231.pdf",
     "note": "Kwik Star #1272 on ND Lottery list. Branded Kwik Star in ND.",
     "geo": "46.83829,-96.86194"
+   },
+   {
+    "address": "4501 37th Ave S, Fargo, ND 58104",
+    "status": "unverified",
+    "wed_hours": null,
+    "phone": null,
+    "osm": null,
+    "url": "https://www.cstoredive.com/news/kwik-trip-north-dakota/806239/",
+    "note": "One of the two Fargo sites approved for building (with 4177 Crossroads Dr S); a Kwik Star job post names it. Opening not confirmed. Not the same store as 4480 Calico Dr S (1.7 km apart).",
+    "geo": "46.82342,-96.86175"
    }
   ],
   "notes": "Company page: first ND store (Fargo) opened 20 Nov 2025; Moorhead from 9 Oct 2025. Locator page is JS-only so no hours/phone beyond OSM. Last year's '1409 Main Ave SE Moorhead' and '1200 Center Ave W Dilworth' were then pre-opening; still unverified as open."
+ },
+ "Walgreens": {
+  "fm_presence": "yes",
+  "basis_url": "https://www.openstreetmap.org/",
+  "stores": [
+   {
+    "address": "4201 13th Ave S, Fargo, ND 58103",
+    "status": "unverified",
+    "wed_hours": null,
+    "phone": null,
+    "osm": null,
+    "url": "",
+    "note": "OpenStreetMap, 8 Nov 2026; FedEx and BMO listings also place a Walgreens here. The only Fargo store found.",
+    "geo": "46.86244,-96.85174"
+   },
+   {
+    "address": "700 30th Ave S, Moorhead, MN 56560",
+    "status": "unverified",
+    "wed_hours": null,
+    "phone": null,
+    "osm": null,
+    "url": "",
+    "note": "OpenStreetMap, 8 Nov 2026",
+    "geo": "46.84467,-96.76908"
+   },
+   {
+    "address": "900 Main Ave, Moorhead, MN 56560",
+    "status": "unverified",
+    "wed_hours": null,
+    "phone": null,
+    "osm": null,
+    "url": "",
+    "note": "OpenStreetMap, 8 Nov 2026",
+    "geo": "46.87411,-96.76574"
+   }
+  ]
+ },
+ "Sonic": {
+  "fm_presence": "yes",
+  "basis_url": "https://www.openstreetmap.org/",
+  "stores": [
+   {
+    "address": "4470 26th Ave S, Fargo, ND 58104",
+    "status": "unverified",
+    "wed_hours": "09:00-23:00",
+    "phone": null,
+    "osm": null,
+    "url": "",
+    "note": "OpenStreetMap, 8 Nov 2026",
+    "geo": "46.83982,-96.86096"
+   }
+  ]
+ },
+ "7 Brew": {
+  "fm_presence": "yes",
+  "basis_url": "https://www.openstreetmap.org/",
+  "stores": [
+   {
+    "address": "2401 8th St S, Moorhead, MN 56560",
+    "status": "unverified",
+    "wed_hours": "05:30-22:00",
+    "phone": null,
+    "osm": null,
+    "url": "",
+    "note": "OpenStreetMap, 8 Nov 2026",
+    "geo": "46.85106,-96.76883"
+   }
+  ]
+ },
+ "Hardee's": {
+  "fm_presence": "yes",
+  "basis_url": "https://locations.hardees.com/nd/fargo",
+  "stores": [
+   {
+    "address": "3819 Main Ave, Fargo, ND 58103",
+    "status": "confirmed",
+    "wed_hours": null,
+    "phone": "(701) 532-0738",
+    "osm": null,
+    "url": "https://locations.hardees.com/nd/fargo",
+    "note": "Hardee's locator. The 3072 45th St S building is not on it (listed for sale)."
+   },
+   {
+    "address": "3402 28th Ave S, Moorhead, MN 56560",
+    "status": "confirmed",
+    "wed_hours": null,
+    "phone": "(218) 284-0419",
+    "osm": null,
+    "url": "https://locations.hardees.com/mn/moorhead",
+    "note": "Hardee's locator; OSM way/675547380.",
+    "geo": "46.85061,-96.72178"
+   }
+  ]
  }
 }

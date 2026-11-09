@@ -8,12 +8,15 @@
   const API = "https://vetday.metacog.workers.dev"; // field-report Worker (veterans-day/worker); "" keeps reports on the phone
   const KEY = "vd2026-v1", MIN = 60000, HOUR = 3600000;
   const CATS = [["breakfast", "Breakfast"], ["meal", "Sit-down meals"], ["quick", "Quick bites"], ["coffee", "Coffee"],
-    ["treat", "Treats"], ["service", "Haircuts and car care"], ["shopping", "Shopping discounts"],
-    ["event", "Ceremonies and veterans' posts"]];
+    ["treat", "Treats"], ["bar", "Bars and breweries (21+)"], ["service", "Haircuts and car care"],
+    ["shopping", "Shopping discounts"], ["event", "Ceremonies and veterans' posts"]];
   const CAT = Object.fromEntries(CATS);
   // Likes: every category, plus deals that need a purchase (a buy-one-get-one, a percentage off), off unless turned on.
+  // Bars are on (8 Nov 2026), with a drive-safe line wherever one shows up.
   const LIKES = CATS.concat([["purchase", "Deals that need a purchase"]]);
-  const likeOf = (c) => (S.prefs[c] === undefined ? (c === "purchase" ? 0 : 1) : S.prefs[c]);
+  const OFF_BY_DEFAULT = { purchase: true };
+  const DRIVE_SAFE = "21 and over. If you drink, don't drive: bring a sober driver, take a cab or rideshare, or ride MATBUS, free with a veteran ID.";
+  const likeOf = (c) => (S.prefs[c] === undefined ? (OFF_BY_DEFAULT[c] ? 0 : 1) : S.prefs[c]);
   const likeWord = (w) => (w > 1 ? "Love" : w > 0 ? "Fine" : "Off");
   const GOAL_NAME = { best: "Best for me", stops: "Most stops", savings: "Most savings", both: "Stops + savings" };
   const GOAL_NOTE = {
@@ -26,7 +29,7 @@
   const GRADE_LONG = {
     A: "The business itself announced this for 2026.",
     B: "2026 deal lists or news reports carry it. Single stores can opt out.",
-    C: "We found only earlier years. Call before you go."
+    C: "We found only earlier years, or a single 2026 listing we couldn't confirm. Call before you go."
   };
   const MODE = { dine_in: "dine-in", to_go: "to go", drive_thru: "drive-thru", dine_in_or_to_go: "dine-in or to go",
     in_store: "in store", online: "online", voucher: "card or voucher for later", event: "event" };
@@ -199,6 +202,7 @@
     renderLoc(where);
     renderControls();
     const card = clear($("#next-card")), sum = $("#route-sum");
+    $("#drive-safe").hidden = true;
     if (mode() === "over") { sum.textContent = ""; card.append(h("p", { class: "empty" }, "That's a wrap for 2026. Your day is under Me.")); hideLists(); return; }
     if (!steps.length) {
       const soon = ctx.cands.filter((c) => c.open > t).sort((a, b) => a.open - b.open)[0];
@@ -211,6 +215,7 @@
     const last = steps[steps.length - 1], drive = steps.reduce((s, x) => s + x.driveMin, 0);
     sum.textContent = GOAL_NAME[ctx.goal] + ": " + steps.length + (steps.length === 1 ? " stop" : " stops") + " · about " +
       money(routeValue(steps)) + " in deals · " + mins(drive) + " driving · done about " + fmt(last.depart);
+    $("#drive-safe").hidden = !steps.some((x) => x.c.offer.category === "bar");
     nextCard(card, steps[0], t);
     renderStops(ctx, plan, t);
     renderSoon(ctx, plan, t);
@@ -231,6 +236,7 @@
     if (fl) card.append(fl);
     const flags = c.flags.concat(o.limits ? [o.limits] : []);
     if (flags.length) card.append(h("ul", { class: "flags" }, flags.map((f) => h("li", null, f))));
+    if (o.category === "bar") card.append(h("p", { class: "note drive-safe" }, DRIVE_SAFE));
     card.append(dirLinks(pl));
     card.append(h("div", { class: "actions" },
       h("button", { type: "button", class: "btn btn-good", onclick: () => record(c, "worked") }, "✓ Got it"),
@@ -474,6 +480,7 @@
       h("div", { class: "deal-head" }, h("h3", { class: "deal-name" }, o.brand), h("span", null, ...chips(o))),
       h("p", { class: "deal-offer" }, o.offer),
       h("p", { class: "deal-meta" }, meta.join(" · ")),
+      o.category === "bar" ? h("p", { class: "note drive-safe" }, DRIVE_SAFE) : null,
       reason ? h("p", { class: "note" }, "Not suggested: " + reason + ".") : null,
       o.proof && o.proof.length ? h("p", { class: "note" }, "Bring: " + o.proof.map(E.proofLabel).join(" or ")) : null,
       o.advance ? h("p", { class: "note" }, "Sign up first: " + o.advance) : null,
@@ -489,7 +496,7 @@
     card.append(h("details", null, h("summary", null, places.length === 1 ? "1 location" : places.length + " locations"), locs));
     card.append(h("details", null, h("summary", null, "Sources (" + (o.sources || []).length + ")"),
       h("p", { class: "note" }, GRADE_LONG[o.grade]),
-      h("ul", { class: "srcs" }, (o.sources || []).map((s) => h("li", null, ext(s.url, s.publisher || s.url),
+      h("ul", { class: "srcs" }, (o.sources || []).map((s) => h("li", null, srcItem(s),
         s.published ? " · " + s.published : "")))));
     card.append(h("p", { class: "deal-actions" },
       h("button", { type: "button", class: "btn btn-quiet btn-small", "aria-pressed": S.pinned[o.id] ? "true" : "false",
@@ -499,6 +506,29 @@
         ? h("button", { type: "button", class: "btn btn-quiet btn-small", onclick: () => { delete S.vetoed[o.id]; delete S.strikes[o.id]; save(); renderAll(); } }, "Allow again")
         : h("button", { type: "button", class: "btn btn-quiet btn-small", onclick: () => never(o) }, "Never this one")));
     return card;
+  }
+  // A source with no link (the site is gone or unsafe) is cited as text.
+  const srcItem = (s) => (s.url ? ext(s.url, s.publisher || s.url) : h("span", null, s.publisher || "Unnamed source"));
+  // Under Deals, off the route: other days and region-wide perks, then places with a deal in earlier years only.
+  function renderExtras() {
+    const other = data.other || [], leads = data.leads || [];
+    clear($("#other"));
+    other.forEach((x) => $("#other").append(h("li", null,
+      h("p", null, h("b", null, x.name), " ", h("span", { class: "grade grade-" + x.grade, title: GRADE_LONG[x.grade] }, GRADE[x.grade])),
+      h("p", { class: "deal-meta" }, x.day + (x.at ? ", " + fmt(Date.parse(x.at)) : "") + " · " + x.where),
+      h("p", null, x.offer),
+      x.note ? h("p", { class: "note" }, x.note) : null,
+      x.sources && x.sources.length ? h("p", { class: "note" }, "Sources: ", x.sources.map((s, i) => [i ? " · " : "", srcItem(s)])) : null)));
+    $("#other-wrap").hidden = !other.length;
+    $("#leads-n").textContent = String(leads.length);
+    clear($("#leads"));
+    leads.forEach((l) => $("#leads").append(h("li", null,
+      h("p", null, h("b", null, l.name), l.area ? " · " + l.area : ""),
+      h("p", null, l.offer + " (" + (/^\d{4}$/.test(l.last_seen) ? "last seen " + l.last_seen : l.last_seen) + ")"),
+      h("p", { class: "links" },
+        ext("https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(l.q), "Find it to call", "btn btn-quiet btn-small"),
+        l.source ? h("span", { class: "note" }, "Source: ", srcItem(l.source)) : null))));
+    $("#leads-wrap").hidden = !leads.length;
   }
   function renderChips() {
     const box = clear($("#chips"));
@@ -816,6 +846,7 @@
     wire();
     renderChips();
     renderReady();
+    renderExtras();
     if (S.gps) startGps();
     renderAll();
     weather();
