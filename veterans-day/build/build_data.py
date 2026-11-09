@@ -24,7 +24,12 @@ UA = "tic-veterans-day-build/1.0 (support@theintelligence.company)"
 # Default local hours by category when a store's Wednesday hours are unknown (flagged "usual hours").
 DEFAULT_HOURS = {"breakfast": ("06:00", "14:00"), "meal": ("11:00", "21:00"), "quick": ("10:30", "21:30"),
                  "coffee": ("06:00", "19:00"), "treat": ("10:00", "21:00"), "service": ("09:00", "19:00"),
-                 "shopping": ("09:00", "21:00"), "event": ("10:00", "20:00")}
+                 "shopping": ("09:00", "21:00"), "event": ("10:00", "20:00"), "bar": ("11:00", "24:00")}
+
+# Never link these: fargobites.com has redirected every page to an unrelated "verify" site since November 2026.
+BLOCKED_HOSTS = ("fargobites.com",)
+# A deal that only one compiled 2026 report lists, which we couldn't trace to the business (8 Nov 2026 review).
+ONE_REPORT = "Only one unconfirmed 2026 listing: call first"
 
 # One entry per offer that may appear. src: which research file; name: its brand/name there; loc: its key in
 # locations-2026.json; osm: fallback key in osm-matches.json. minutes: time at the stop; busy: typical line at
@@ -50,6 +55,7 @@ CURATE = [
     dict(id="dennys", src="national", name="Denny's", loc="Denny's", osm="dennys", category="breakfast", minutes=45, busy=15, meal=True, dineIn=True),
     dict(id="ihop", src="national", name="IHOP", loc="IHOP", osm="ihop", category="breakfast", minutes=45, busy=15, meal=True, dineIn=True),
     dict(id="perkins", src="national", name="Perkins", loc="Perkins", osm="perkins", category="breakfast", minutes=45, busy=10, meal=True, dineIn=True),
+    dict(id="village-inn", src="national", name="Village Inn", loc="Village Inn", osm=None, category="breakfast", minutes=45, busy=10, meal=True, dineIn=True, caution=ONE_REPORT),
     # Quick bites and pickups
     # ticket=True: a card or voucher for a later visit. A quick stop with nothing eaten there (8 Nov 2026).
     dict(id="texas-roadhouse", src="national", name="Texas Roadhouse", loc="Texas Roadhouse", osm="texasroadhouse", category="quick", minutes=8, busy=25, line=15, meal=False, dineIn=False, ticket=True),
@@ -60,6 +66,8 @@ CURATE = [
     dict(id="chipotle", src="national", name="Chipotle", loc="Chipotle", osm="chipotle", category="quick", minutes=15, busy=10, meal=False, dineIn=True, purchase=True, eat=0.2),
     dict(id="qdoba", src="national", name="Qdoba", loc="Qdoba", osm="qdoba", category="quick", minutes=12, busy=5, meal=False, dineIn=True, eat=0.2),
     dict(id="charleys", src="national", name="Charleys Cheesesteaks", loc="Charleys Cheesesteaks", osm="charleys", category="quick", minutes=8, busy=5, meal=False, dineIn=False),
+    # Hardee's: remembered: a free breakfast sandwich in 2025 (8 Nov 2026); nothing published. Breakfast hours.
+    dict(id="hardees", src="national", name="Hardee's", loc="Hardee's", osm=None, category="quick", minutes=8, busy=5, meal=False, dineIn=False, window=("06:00", "10:30"), hours=("06:00", "22:00")),
     dict(id="kwik-trip", src="national", name="Kwik Trip", loc="Kwik Trip", caution="Fargo stores are called Kwik Star", osm="kwiktrip", category="quick", minutes=7, busy=5, meal=False, dineIn=False, hours=("00:00", "24:00")),
     dict(id="pilot", src="national", name="Pilot / Flying J", loc="Pilot / Flying J", osm="pilot", category="quick", minutes=8, busy=5, meal=False, dineIn=False),
     dict(id="mission-bbq", src="national", name="Mission BBQ", loc="Mission BBQ", osm=None, category="quick", minutes=20, busy=10, meal=False, dineIn=True),
@@ -74,11 +82,13 @@ CURATE = [
     dict(id="circle-k", src="national", name="Circle K", loc="Circle K / Holiday", osm="holiday", category="coffee", minutes=6, busy=3, meal=False, dineIn=False, hours=("05:00", "23:00")),
     dict(id="dunkin", src="national", name="Dunkin'", loc="Dunkin'", osm="dunkin", category="coffee", minutes=6, busy=5, meal=False, dineIn=False),
     dict(id="biggby", src="national", name="Biggby Coffee", loc="Biggby Coffee", osm=None, category="coffee", minutes=6, busy=5, meal=False, dineIn=False),
+    dict(id="seven-brew", src="national", name="7 Brew", loc="7 Brew", osm=None, category="coffee", minutes=6, busy=5, meal=False, dineIn=False, purchase=True),
     # Treats
     dict(id="krispy-kreme", src="national", name="Krispy Kreme", loc="Krispy Kreme", osm="krispykreme", category="treat", minutes=8, busy=5, meal=False, dineIn=False),
     dict(id="menchies", src="national", name="Menchie's", loc="Menchie's", osm="menchies", category="treat", minutes=10, busy=3, meal=False, dineIn=False),
     dict(id="insomnia", src="national", name="Insomnia Cookies", loc="Insomnia Cookies", osm="insomnia", category="treat", minutes=8, busy=3, meal=False, dineIn=False, purchase=True, eat=0.2),
     dict(id="freddys", src="national", name="Freddy's Frozen Custard & Steakburgers", loc="Freddy's Frozen Custard & Steakburgers", osm="freddys", category="treat", minutes=6, busy=5, meal=False, dineIn=False, ticket=True),
+    dict(id="sonic", src="national", name="Sonic", loc="Sonic", osm=None, category="treat", minutes=8, busy=5, meal=False, dineIn=False, purchase=True, eat=0.3),
     # Services. Great Clips is planned as picking up the free-haircut card (no group: it doesn't use up the day's haircut).
     dict(id="great-clips", src="national", name="Great Clips", loc="Great Clips", osm="greatclips", category="service", minutes=5, busy=5, line=3, meal=False, dineIn=False, ticket=True),
     dict(id="sport-clips", group="haircut", src="national", name="Sport Clips", loc="Sport Clips", osm="sportclips", category="service", minutes=30, busy=20, meal=False, dineIn=False, caution="Participating shops only, and this address isn't confirmed: call first"),
@@ -87,6 +97,7 @@ CURATE = [
     # Shopping (no dollar value: what you save depends on what you buy, so they're listed, not routed, unless pinned)
     dict(id="target", src="national", name="Target", loc="Target", osm="target", category="shopping", minutes=25, busy=5, meal=False, dineIn=False, value=0, purchase=True),
     dict(id="kohls", src="national", name="Kohl's", loc="Kohl's", osm="kohls", category="shopping", minutes=25, busy=5, meal=False, dineIn=False, value=0, purchase=True),
+    dict(id="walgreens", src="national", name="Walgreens", loc="Walgreens", osm=None, category="shopping", minutes=15, busy=5, meal=False, dineIn=False, value=0, purchase=True),
     # Local (all grade C today: prior years only, so "call first")
     dict(id="fryn-pan", src="local", name="Fryn' Pan Family Restaurant (M", osm="frynpan", category="meal", minutes=45, busy=15, meal=True, dineIn=True, window=("08:00", "20:00")),
     dict(id="doolittles", src="local", name="Doolittle's Woodfire Grill (Fa", osm="doolittles", category="meal", minutes=55, busy=15, meal=True, dineIn=True),
@@ -96,6 +107,28 @@ CURATE = [
     dict(id="amvets-post-7", src="local", name="Fargo AMVETS Post 7 Veterans D", osm=None, category="event", minutes=40, busy=10, meal=True, dineIn=True, window=("12:00", "14:00")),
     dict(id="moorhead-legion", src="local", name="Moorhead American Legion Veter", osm=None, category="event", minutes=45, busy=10, meal=True, dineIn=True, window=("12:00", "18:30")),
     dict(id="west-fargo-vfw", src="local", name="West Fargo VFW Post 7564 Veter", osm=None, category="event", minutes=45, busy=5, meal=True, dineIn=True, window=("10:30", "14:00"), arriveEarly=True, worth=12),
+    # Added 8 Nov 2026 from the consolidated report: local offers that only one 2026 listing carries (grade C, call
+    # first), the Air Museum's coffee hour and the Harwood Legion's stew.
+    dict(id="air-museum-coffee", src="local", name="Fargo Air Museum Veterans Coffee", osm=None, category="event", minutes=30, busy=5, meal=False, dineIn=True, window=("10:00", "12:00"), eat=0.2, caution="Not on the museum's 11 Nov events list: call first"),
+    dict(id="harwood-legion", src="local", name="Harwood American Legion Post 297", osm=None, category="event", minutes=40, busy=5, meal=True, dineIn=True, window=("17:00", "19:00")),
+    dict(id="sickies", src="local", name="Sickies Garage Burgers & Brews (Fa", osm=None, category="meal", minutes=50, busy=15, meal=True, dineIn=True, caution=ONE_REPORT),
+    dict(id="brewtus", src="local", name="Brewtus' Brickhouse", osm=None, category="meal", minutes=45, busy=10, meal=True, dineIn=True, window=("11:00", "14:00"), caution=ONE_REPORT),
+    dict(id="pub-west", src="local", name="Pub West", osm=None, category="meal", minutes=50, busy=10, meal=True, dineIn=True, purchase=True, caution="Offer and address not confirmed: call first"),
+    dict(id="cash-wise-deli", src="local", name="Cash Wise Foods deli", osm=None, category="quick", minutes=12, busy=5, meal=False, dineIn=False, eat=0.6, window=("11:00", "19:00"), caution=ONE_REPORT),
+    dict(id="sandys-donuts", src="local", name="Sandy's Donuts", osm=None, category="treat", minutes=6, busy=5, meal=False, dineIn=False, window=("06:00", "13:30"), caution=ONE_REPORT),
+    # Bars: their own category, on the route since asked (8 Nov 2026: "Add the bars"); the app shows a drive-safe
+    # line on their cards and on any route with one. All but Blarney Stone are earlier years only (grade C).
+    dict(id="blarney-stone", src="local", name="Blarney Stone", osm=None, category="bar", minutes=30, busy=5, meal=False, dineIn=True, eat=0, caution=ONE_REPORT),
+    dict(id="drekker", src="local", name="Drekker Brewing", osm=None, category="bar", minutes=30, busy=5, meal=False, dineIn=True, eat=0),
+    dict(id="swing-barrel", src="local", name="Swing Barrel Brewing", osm=None, category="bar", minutes=30, busy=5, meal=False, dineIn=True, eat=0),
+    dict(id="mills-lounge", src="local", name="Mills Lounge", osm=None, category="bar", minutes=30, busy=5, meal=False, dineIn=True, eat=0),
+    dict(id="okellys", src="local", name="O'Kelly's", osm=None, category="bar", minutes=30, busy=5, meal=False, dineIn=True, eat=0),
+    dict(id="franks-lounge", src="local", name="Frank's Lounge", osm=None, category="bar", minutes=30, busy=5, meal=False, dineIn=True, eat=0.3),
+    dict(id="micks-office", src="local", name="Mick's Office", osm=None, category="bar", minutes=45, busy=10, meal=True, dineIn=True),
+    dict(id="chumleys", src="local", name="J.C. Chumley's", osm=None, category="bar", minutes=45, busy=10, meal=True, dineIn=True),
+    dict(id="bordertown", src="local", name="BorderTown", osm=None, category="bar", minutes=45, busy=10, meal=True, dineIn=True),
+    dict(id="hen-house", src="local", name="Hen House Bar", osm=None, category="bar", minutes=45, busy=10, meal=True, dineIn=True, purchase=True),
+    dict(id="spitfire", src="local", name="Spitfire Bar", osm=None, category="bar", minutes=45, busy=10, meal=True, dineIn=True, purchase=True),
 ]
 
 
@@ -158,6 +191,16 @@ def find_loc(locs, key):
         if norm(k.split()[0]) == first:
             return v
     return None
+
+
+def clean_source(s):
+    """A source as the page shows it, or None. A blocked or missing URL keeps the citation as text only."""
+    if not s or not (s.get("url") or s.get("publisher")):
+        return None
+    url = s.get("url")
+    if url and any(h in url for h in BLOCKED_HOSTS):
+        url = None
+    return {"url": url, "publisher": s.get("publisher"), "published": s.get("published")}
 
 
 def in_bbox(lat, lng):
@@ -259,15 +302,20 @@ def main():
                     continue
                 stores.append({"address": s.get("address", ""), "osm": s.get("osm"), "phone": s.get("phone") or "",
                                "wed_hours": s.get("wed_hours") or "", "verified": "confirmed" if s.get("status") == "confirmed" else "unverified",
-                               "url": s.get("url") or ""})
+                               "url": s.get("url") or "", "geo": s.get("geo")})
+        elif cur["src"] == "local" and r.get("stores"):
+            # A local business with more than one store (Sickies, Sandy's, Fryn' Pan).
+            for s in r["stores"]:
+                stores.append({"address": s["address"], "osm": None, "phone": s.get("phone") or "", "wed_hours": s.get("wed_hours") or "",
+                               "verified": "unverified", "url": "", "geo": s.get("geo")})
         elif cur["src"] == "local" and r.get("address") and r["address"] != "unknown":
             stores.append({"address": r["address"], "osm": None, "phone": r.get("phone") or "", "wed_hours": r.get("wednesday_hours") or "",
-                           "verified": "unverified", "url": ""})
+                           "verified": "unverified", "url": "", "geo": r.get("geo")})
         elif cur.get("osm") and osm.get(cur["osm"]):
             for m in osm[cur["osm"]]:
                 if m.get("addr"):
                     stores.append({"address": m["addr"], "osm": m["osm"], "phone": m.get("phone", ""), "wed_hours": "",
-                                   "verified": "unverified", "url": ""})
+                                   "verified": "unverified", "url": "", "geo": None})
         if not stores:
             report.append(f"skip {cur['id']}: no store found")
             continue
@@ -286,7 +334,9 @@ def main():
         o = {
             "id": cur["id"], "brand": re.sub(r"\s*\(.*$", "", r.get("brand") or r.get("name")), "status": "offering",
             "category": cur["category"], "offer": (r.get("offer") or "").replace("Prior year: ", "Last year: ").strip(),
-            "value": round(value), "grade": grade if cur["src"] == "national" else "C",
+            # Local entries are C (earlier years only) unless the research grades them up, as the Air Museum's own
+            # 2026 events list does for its program.
+            "value": round(value), "grade": grade if cur["src"] == "national" else (grade if grade in ("A", "B") else "C"),
             "start": local_iso(win[0]) if win else None, "end": local_iso(win[1]) if win and win[1] else None,
             "window_text": "", "mode": r.get("mode") or ("event" if cur["category"] == "event" else None),
             "minutes": cur["minutes"], "busy": cur.get("busy", 0), "line": cur.get("line", 3),
@@ -297,7 +347,7 @@ def main():
             "proof": [p for p in (r.get("proof") or []) if p != "idme_online"],
             "advance": r.get("advance_signup"), "participating": bool(r.get("participating_locations_only")),
             "voucher_use_by": r.get("voucher_use_by"), "limits": r.get("limits") or "",
-            "sources": [{"url": s.get("url"), "publisher": s.get("publisher"), "published": s.get("published")} for s in (r.get("sources") or []) if s.get("url")],
+            "sources": [clean_source(s) for s in (r.get("sources") or []) if clean_source(s)],
             "notes": r.get("notes") or "", "caution": cur.get("caution") or "", "group": cur.get("group"),
         }
         if cur.get("worth") is not None:
@@ -312,7 +362,7 @@ def main():
             o["eat"] = cur["eat"]
         if win:
             o["window_text"] = f"{win[0]}–{win[1] or 'close'} CST" if win[1] else f"from {win[0]} CST"
-        if o["grade"] == "C" and not o["offer"].lower().startswith(("last year", "prior", "predicted")):
+        if o["grade"] == "C" and not o["offer"].lower().startswith(("last year", "prior", "predicted", "reported", "every", "in 20")):
             o["offer"] = "Last year: " + o["offer"] if cur["src"] == "local" else o["offer"]
         offers.append(o)
         for s in stores:
@@ -323,6 +373,12 @@ def main():
             pin = None
             if s["osm"] and s["osm"] in osm_by_id:
                 lat, lng, pin = osm_by_id[s["osm"]]["lat"], osm_by_id[s["osm"]]["lng"], "osm"
+            elif re.fullmatch(r"-?\d+\.\d+,-?\d+\.\d+", s.get("geo") or ""):
+                # Coordinates checked in the research (OSM or the Census geocoder), so an address the batch geocoder
+                # could read two ways (635 32nd Ave E, West Fargo) lands in the right place. Older entries may hold a
+                # note such as "no_census_match" here instead.
+                lat, lng = (float(x) for x in s["geo"].split(","))
+                pin = "geo"
             hrs = parse_hours(s["wed_hours"])
             assumed = hrs is None or hrs[1] is None
             if assumed:
@@ -370,9 +426,22 @@ def main():
     meta = {"built_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), "day": DAY,
             "day_start": DAY_START.strftime("%Y-%m-%dT%H:%M:%SZ"), "tz": "America/Chicago", "tz_offset_min": TZ_OFFSET_MIN,
             "forecast_url": forecast, "sunrise": rise.strftime("%Y-%m-%dT%H:%M:%SZ"), "sunset": sett.strftime("%Y-%m-%dT%H:%M:%SZ")}
+    # Under Deals, off the route: other days and region-wide perks, and places with a deal in earlier years only.
+    ex = load("extras-2026.json", {})
+    other = []
+    for e in ex.get("other", []):
+        x = {k: e.get(k) for k in ("id", "day", "at", "name", "where", "offer", "grade", "note")}
+        x["sources"] = [clean_source(s) for s in e.get("sources", []) if clean_source(s)]
+        other.append(x)
+    lead_src = {k: clean_source(v) for k, v in ex.get("lead_sources", {}).items()}
+    leads = [{"name": l["name"], "area": l.get("area") or "", "q": l["q"], "offer": l["offer"], "last_seen": l["last_seen"],
+              "source": lead_src.get(l["src"])} for l in ex.get("leads", [])]
+
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
-    json.dump({"meta": meta, "offers": offers, "places": places}, open(OUT, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-    print(f"offers {len(offers)}  places {len(places)}  (pins: osm {sum(p['pin']=='osm' for p in places)}, census {sum(p['pin']=='census' for p in places)})")
+    json.dump({"meta": meta, "offers": offers, "places": places, "other": other, "leads": leads},
+              open(OUT, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    print(f"offers {len(offers)}  places {len(places)}  (pins: osm {sum(p['pin']=='osm' for p in places)}, census {sum(p['pin']=='census' for p in places)}, geo {sum(p['pin']=='geo' for p in places)})")
+    print(f"other days and perks {len(other)}  earlier-year leads {len(leads)}")
     print(f"grades: " + ", ".join(f"{g} {sum(o['grade']==g for o in offers)}" for g in "ABC"))
     print("\n".join(report))
 

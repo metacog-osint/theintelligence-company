@@ -1,0 +1,196 @@
+{
+ "about": "Things the route can't hold, shown under Deals: 'other' is other days, region-wide perks and places outside the metro; 'leads' is places with a Veterans Day deal in an earlier year and nothing for 2026 (call first; not routed or mapped). From the consolidated report of 8 Nov 2026, checked that day. Any source without a URL is cited as text only.",
+ "other": [
+  {
+   "id": "patriotcafe",
+   "day": "Tue 10 Nov, morning",
+   "name": "Fargo VA PatriotCafe and PatriotBrew",
+   "where": "Fargo VA Medical Center, 2101 Elm St N, Fargo",
+   "offer": "Free breakfast combo and free brewed coffee for veterans, no purchase (Veterans Canteen Service, at VA medical centers nationwide)",
+   "grade": "B",
+   "note": "On a 2026 national list. The Fargo VA canteen's hours weren't checked.",
+   "sources": [
+    {
+     "url": "https://themilitarywallet.com/veterans-day-free-meals-and-discounts/",
+     "publisher": "The Military Wallet",
+     "published": "2026-11-06 (updated)"
+    }
+   ]
+  },
+  {
+   "id": "matbus",
+   "day": "Every day",
+   "name": "MATBUS: free bus rides for veterans",
+   "where": "Every Fargo and Moorhead fixed route",
+   "offer": "Veterans ride fixed-route buses free, all year, since 11 Nov 2025. Show a veteran ID when you board.",
+   "grade": "A",
+   "note": "MATBUS's fares page; its FAQ page still has the older service-connected rule.",
+   "sources": [
+    {
+     "url": "https://matbus.com/riding-matbus/fares-passes",
+     "publisher": "MATBUS (fares and passes)",
+     "published": "seen 8 Nov 2026"
+    },
+    {
+     "url": "https://kfgo.com/2025/11/11/f-m-area-veterans-day-events/",
+     "publisher": "KFGO",
+     "published": "2025-11-11"
+    }
+   ]
+  },
+  {
+   "id": "national-parks",
+   "day": "Wed 11 Nov",
+   "name": "National parks: free entry for US residents",
+   "where": "Outside the metro: Theodore Roosevelt National Park is about 4.5 hours west",
+   "offer": "Fee-free day at National Park Service sites for US citizens and residents. Veterans and Gold Star families can also get a free lifetime pass any day.",
+   "grade": "B",
+   "note": "From 2026 news reports of the Park Service's list; check nps.gov. Camping and reservation fees still apply.",
+   "sources": [
+    {
+     "url": "https://www.afar.com/magazine/2026-national-park-free-days-wont-include-mlk-juneteenth",
+     "publisher": "Afar",
+     "published": "2026"
+    },
+    {
+     "url": "https://www.nbcchicago.com/news/national-international/trump-administration-alters-national-parks-free-entry-days",
+     "publisher": "NBC Chicago",
+     "published": "2025"
+    }
+   ]
+  },
+  {
+   "id": "fargo-force",
+   "day": "Sat 14 Nov",
+   "at": "2026-11-15T00:05:00Z",
+   "name": "Fargo Force Honor Flight Night",
+   "where": "Scheels Arena, 5225 31st Ave S, Fargo",
+   "offer": "Hockey against the Sioux City Musketeers, raising money for Honor Flight of ND/MN: specialty jerseys, a band in the concourse, a giveaway and auctions. No military ticket deal announced.",
+   "grade": "A",
+   "note": "",
+   "sources": [
+    {
+     "url": "https://fargoforce.com/news/2026/9/2/general-fargo-force-unveil-2026-27-promotional-schedule.aspx",
+     "publisher": "Fargo Force (2026-27 promotions)",
+     "published": "2026-09-02"
+    }
+   ]
+  }
+ ],
+ "leads": [
+  {
+   "name": "The Local 701",
+   "area": "",
+   "q": "The Local 701 Fargo ND",
+   "offer": "Free meal",
+   "last_seen": "2025",
+   "src": "fargobites"
+  },
+  {
+   "name": "701 Eateries",
+   "area": "Fargo",
+   "q": "701 Eateries Fargo ND",
+   "offer": "50% off burgers (2025); $10 off (2023)",
+   "last_seen": "2025",
+   "src": "fargobites"
+  },
+  {
+   "name": "Dairy Queen",
+   "area": "12 metro stores",
+   "q": "Dairy Queen Fargo ND",
+   "offer": "Free medium Blizzard at some franchise stores",
+   "last_seen": "2025",
+   "src": "fargobites"
+  },
+  {
+   "name": "Super Buffet Sushi & Grill",
+   "area": "Fargo",
+   "q": "Super Buffet Sushi & Grill Fargo ND",
+   "offer": "Veterans eat free",
+   "last_seen": "2025",
+   "src": "fargobites"
+  },
+  {
+   "name": "SouthTown PourHouse",
+   "area": "Fargo",
+   "q": "SouthTown PourHouse Fargo ND",
+   "offer": "Free entree for veterans every Monday, so Mon 9 Nov (not a Veterans Day deal)",
+   "last_seen": "standing weekly",
+   "src": "visitfm"
+  },
+  {
+   "name": "Fargo Fillies & Mac Daddy's",
+   "area": "Fargo",
+   "q": "Fargo Fillies Fargo ND",
+   "offer": "20% off",
+   "last_seen": "2023",
+   "src": "wday"
+  },
+  {
+   "name": "Say Cheese Mac & Melt",
+   "area": "",
+   "q": "Say Cheese Mac & Melt Fargo ND",
+   "offer": "50% off one item",
+   "last_seen": "2023",
+   "src": "wday"
+  },
+  {
+   "name": "Sushi Burrito Cafe",
+   "area": "Fargo",
+   "q": "Sushi Burrito Cafe Fargo ND",
+   "offer": "10% off",
+   "last_seen": "2023",
+   "src": "wday"
+  },
+  {
+   "name": "Royal Buffet",
+   "area": "",
+   "q": "Royal Buffet Fargo ND",
+   "offer": "Free buffet and soda, 9-11 Nov",
+   "last_seen": "2023",
+   "src": "wday"
+  },
+  {
+   "name": "Izumi",
+   "area": "Fargo and West Fargo",
+   "q": "Izumi Sushi Fargo ND",
+   "offer": "15% off on Military Mondays",
+   "last_seen": "2023",
+   "src": "wday"
+  },
+  {
+   "name": "Papa Murphy's",
+   "area": "5 metro stores",
+   "q": "Papa Murphy's Fargo ND",
+   "offer": "Free cheese or pepperoni pizza",
+   "last_seen": "2021",
+   "src": "vnl"
+  },
+  {
+   "name": "Skate City",
+   "area": "",
+   "q": "Skate City Fargo ND",
+   "offer": "Free admission plus a hot dog and drink, noon-6 PM",
+   "last_seen": "2021",
+   "src": "vnl"
+  }
+ ],
+ "lead_sources": {
+  "fargobites": {
+   "url": null,
+   "publisher": "Fargo Bites, 2025 (not linked: the site now redirects elsewhere)"
+  },
+  "wday": {
+   "url": "https://www.wdayradionow.com/news/local-news/69955-2023-veterans-day-deals-discounts-and-freebies-in-the-fm-metro/",
+   "publisher": "WDAY Radio (2023 list)"
+  },
+  "vnl": {
+   "url": "https://www.valleynewslive.com/2021/11/11/local-businesses-offer-deals-veterans/",
+   "publisher": "Valley News Live (2021 list)"
+  },
+  "visitfm": {
+   "url": "https://www.fargomoorhead.org/blog/post/fargo-moorheads-happy-hour-guide/",
+   "publisher": "Visit Fargo-Moorhead (happy-hour guide)"
+  }
+ }
+}

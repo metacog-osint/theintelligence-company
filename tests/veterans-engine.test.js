@@ -252,3 +252,37 @@ test("Maximize: most stops visits at least as many places, most savings collects
 test("an unknown goal falls back to the usual plan", () => {
   assert.equal(E.prepare(row(), profile({ goal: "everything" }), state(), NO_REPORTS, at(7), home).goal, "best");
 });
+
+// ---------------------------------------------------------------- tickets don't open a route (8 Nov 2026)
+// Home, then a haircut card, pancakes and coffee in a row, 5 minutes apart. Grabbing the card first is quickest on
+// paper, but it is good all day, so the route opens with breakfast and picks the card up later.
+function strip(cardEnd) {
+  const P = (id, offer, k, open, close) => ({ id, offer, lat: 46.80 + k * 0.005, lng: -96.80, open, close });
+  const places = [P("s1", "card", 1, at(9), at(19)), P("s2", "pancakes", 2, at(6), at(14)), P("s3", "coffee", 3, at(6), at(20))];
+  const base = { status: "offering", grade: "B", eligible: ["veteran", "active"], guard_reserve: "unclear", spouse: "no", proof: [] };
+  const offers = [
+    { ...base, id: "card", category: "service", value: 22, minutes: 5, meal: false, dineIn: false, ticket: true, mode: "in_store", start: at(9), end: cardEnd },
+    { ...base, id: "pancakes", category: "breakfast", value: 12, minutes: 30, meal: true, dineIn: true, start: at(6), end: at(11), mode: "dine_in" },
+    { ...base, id: "coffee", category: "coffee", value: 4, minutes: 5, meal: false, dineIn: false, mode: "in_store" },
+  ];
+  const s = 300, ks = [1, 2, 3];
+  return { offers, places, tzOffsetMin: -360, drive: { places: ks.map((a) => ks.map((b) => Math.abs(a - b) * s)),
+    anchors: [[46.80, -96.80], ...places.map((p) => [p.lat, p.lng])], fromAnchor: [0, 1, 2, 3].map((a) => ks.map((b) => Math.abs(a - b) * s)) } };
+}
+
+test("a route doesn't open with a ticket for later that fits further on, in every goal", () => {
+  for (const goal of ["best", "stops", "savings", "both"]) {
+    const ctx = E.prepare(strip(), profile({ goal }), state(), NO_REPORTS, at(9), { lat: 46.80, lng: -96.80 });
+    const plan = ids(E.planDay(ctx, { t: at(9) }));
+    assert.notEqual(plan[0], "card", `${goal}: ${plan.join(" > ")}`);
+    assert.ok(plan.includes("card"), `${goal}: the card is still collected`);
+  }
+});
+
+test("a ticket still goes first when its window is closing, or when you chose it", () => {
+  const ctx = E.prepare(strip(at(9, 20)), profile(), state(), NO_REPORTS, at(9), { lat: 46.80, lng: -96.80 });
+  assert.equal(ids(E.planDay(ctx, { t: at(9) }))[0], "card", "the card ends at 9:20");
+  const all = E.prepare(strip(), profile(), state(), NO_REPORTS, at(9), { lat: 46.80, lng: -96.80 });
+  const first = all.cands.find((c) => c.offer.id === "card");
+  assert.equal(ids(E.planDay(all, { t: at(9), first }))[0], "card", "Go here first wins");
+});

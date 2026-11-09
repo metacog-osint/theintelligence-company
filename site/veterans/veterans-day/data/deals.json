@@ -1,6 +1,6 @@
 {
  "meta": {
-  "built_at": "2026-11-09T00:34:50Z",
+  "built_at": "2026-11-09T01:59:05Z",
   "day": "2026-11-11",
   "day_start": "2026-11-11T06:00:00Z",
   "tz": "America/Chicago",
@@ -618,6 +618,53 @@
    "purchase": false
   },
   {
+   "id": "village-inn",
+   "brand": "Village Inn",
+   "status": "offering",
+   "category": "breakfast",
+   "offer": "Reported for 2026 (unconfirmed): free 2-2-2 breakfast",
+   "value": 11,
+   "grade": "C",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": null,
+   "minutes": 45,
+   "busy": 10,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id",
+    "va_card",
+    "dd214"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.villageinn.com/moorhead-mn",
+     "publisher": "Village Inn (Moorhead store page: open 6 AM–8 PM)",
+     "published": "seen 8 Nov 2026"
+    }
+   ],
+   "notes": "Only one 2026 listing has this (a compiled report we couldn't trace to the business). Not announced by the business: call first. The Krazy Coupon Lady listed it as predicted. The Moorhead store's page lists 6 AM–8 PM daily but online ordering is off; call to check it's open.",
+   "caution": "Only one unconfirmed 2026 listing: call first",
+   "group": null,
+   "ticket": false,
+   "purchase": false
+  },
+  {
    "id": "texas-roadhouse",
    "brand": "Texas Roadhouse",
    "status": "offering",
@@ -946,6 +993,63 @@
    "eat": 0.2
   },
   {
+   "id": "hardees",
+   "brand": "Hardee's",
+   "status": "offering",
+   "category": "quick",
+   "offer": "Last year (a local veteran's report): free breakfast sandwich",
+   "value": 5,
+   "grade": "C",
+   "start": "2026-11-11T12:00:00Z",
+   "end": "2026-11-11T16:30:00Z",
+   "window_text": "06:00–10:30 CST",
+   "mode": "in_store",
+   "minutes": 8,
+   "busy": 5,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": true,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id",
+    "va_card",
+    "dd214"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "Breakfast hours (usually until 10:30)",
+   "sources": [
+    {
+     "url": "https://locations.hardees.com/nd/fargo",
+     "publisher": "Hardee's (Fargo store)",
+     "published": "seen 8 Nov 2026"
+    },
+    {
+     "url": "https://locations.hardees.com/mn/moorhead",
+     "publisher": "Hardee's (Moorhead store)",
+     "published": "seen 8 Nov 2026"
+    },
+    {
+     "url": null,
+     "publisher": "A local veteran's report of 2025, 8 Nov 2026",
+     "published": "2026-11-08"
+    }
+   ],
+   "notes": "No published 2025 or 2026 Hardee's Veterans Day offer was found; a local veteran remembers a free breakfast sandwich last year. Hardee's franchises set their own offers: call first.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false
+  },
+  {
    "id": "kwik-trip",
    "brand": "Kwik Trip",
    "status": "offering",
@@ -1041,6 +1145,48 @@
     }
    ],
    "notes": "Date not stated by Stripes; Veteran.com/Military.com say Nov 11 2026. ID.me required in advance.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false
+  },
+  {
+   "id": "blaze-pizza",
+   "brand": "Blaze Pizza",
+   "status": "offering",
+   "category": "quick",
+   "offer": "Free one-topping pizza",
+   "value": 8,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": null,
+   "minutes": 20,
+   "busy": 10,
+   "line": 3,
+   "meal": false,
+   "dineIn": true,
+   "snack": true,
+   "eligible": [
+    "veteran"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    }
+   ],
+   "notes": "",
    "caution": "",
    "group": null,
    "ticket": false,
@@ -1160,7 +1306,7 @@
    "brand": "Caribou Coffee",
    "status": "offering",
    "category": "coffee",
-   "offer": "Last year: free large Coffee of the Day or cold press for veterans, active military, spouses (2023/2024 era)",
+   "offer": "Prior years: a free small coffee of the day or cold press for veterans, service members and spouses",
    "value": 5,
    "grade": "C",
    "start": null,
@@ -1179,7 +1325,7 @@
     "spouse"
    ],
    "guard_reserve": "unclear",
-   "spouse": "unclear",
+   "spouse": "yes",
    "kids": null,
    "proof": [],
    "advance": null,
@@ -1196,9 +1342,14 @@
      "url": "https://www.military.com/discounts/caribou-coffee-veterans-day-military-discount",
      "publisher": "Military.com (prior year)",
      "published": "prior year"
+    },
+    {
+     "url": "https://militarybridge.com/veterans-day-deals/",
+     "publisher": "MilitaryBridge (2026 list: awaiting verification)",
+     "published": "2026"
     }
    ],
-   "notes": "Krazy Coupon Lady marks it 'predicted' for 2026. Not confirmed. Do not present as confirmed.",
+   "notes": "Caribou's own 2023 release and 2024 reports: a small coffee of the day or cold press, spouses included, military ID. For 2026 it is only predicted (The Krazy Coupon Lady) or awaiting verification (MilitaryBridge). Every metro store on Caribou's locator is listed; the NDSU Memorial Union store is on campus and may not take part.",
    "caution": "",
    "group": null,
    "ticket": false,
@@ -1373,6 +1524,58 @@
    "purchase": false
   },
   {
+   "id": "seven-brew",
+   "brand": "7 Brew",
+   "status": "offering",
+   "category": "coffee",
+   "offer": "Half off a drink",
+   "value": 3,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "drive_thru",
+   "minutes": 6,
+   "busy": 5,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id",
+    "va_card",
+    "dd214"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "Needs a purchase; participating stands",
+   "sources": [
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com (restaurants)",
+     "published": "2026-11-08 (updated)"
+    },
+    {
+     "url": "https://themilitarywallet.com/veterans-day-free-meals-and-discounts/",
+     "publisher": "The Military Wallet",
+     "published": "2026-11-06 (updated)"
+    }
+   ],
+   "notes": "Two 2026 lists name it.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": true
+  },
+  {
    "id": "insomnia",
    "brand": "Insomnia Cookies",
    "status": "offering",
@@ -1470,6 +1673,54 @@
    "group": null,
    "ticket": true,
    "purchase": false
+  },
+  {
+   "id": "sonic",
+   "brand": "Sonic",
+   "status": "offering",
+   "category": "treat",
+   "offer": "Half-price shakes, any size and flavor",
+   "value": 3,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "drive_thru",
+   "minutes": 8,
+   "busy": 5,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": true,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id",
+    "va_card",
+    "dd214"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "Needs a purchase; locations not named",
+   "sources": [
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com (restaurants)",
+     "published": "2026-11-08 (updated)"
+    }
+   ],
+   "notes": "One 2026 list (Military.com, 8 Nov).",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": true,
+   "eat": 0.3
   },
   {
    "id": "great-clips",
@@ -1693,7 +1944,7 @@
    "brand": "Target",
    "status": "offering",
    "category": "shopping",
-   "offer": "20% off one qualified storewide purchase, in-store and online (Target Circle)",
+   "offer": "20% off one qualifying purchase, 5–11 Nov, in store and online (Target Circle)",
    "value": 0,
    "grade": "B",
    "start": null,
@@ -1712,10 +1963,10 @@
     "military_community"
    ],
    "guard_reserve": "unclear",
-   "spouse": "unclear",
+   "spouse": "yes",
    "kids": null,
    "proof": [],
-   "advance": "Create/sign into Target Circle and verify military status before purchase (previously verified members get it auto-loaded)",
+   "advance": "Verify your military status in Target Circle before you shop (members verified before get it automatically)",
    "participating": false,
    "voucher_use_by": null,
    "limits": "One qualified purchase",
@@ -1741,7 +1992,7 @@
      "published": "2026-11-06 (updated)"
     }
    ],
-   "notes": "Verification vendor not named in sources (typically ID.me/SheerID); do it before Nov 11.",
+   "notes": "Families included. Verify online first; the discount loads into Target Circle.",
    "caution": "",
    "group": null,
    "ticket": false,
@@ -1752,7 +2003,7 @@
    "brand": "Kohl's",
    "status": "offering",
    "category": "shopping",
-   "offer": "30% off in-store",
+   "offer": "30% off in store, 10–11 Nov",
    "value": 0,
    "grade": "B",
    "start": null,
@@ -1804,13 +2055,70 @@
    "purchase": true
   },
   {
+   "id": "walgreens",
+   "brand": "Walgreens",
+   "status": "offering",
+   "category": "shopping",
+   "offer": "20% off eligible regular-priced items in store, 8–11 Nov",
+   "value": 0,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "in_store",
+   "minutes": 15,
+   "busy": 5,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "yes",
+   "kids": null,
+   "proof": [
+    "military_id",
+    "va_card",
+    "dd214"
+   ],
+   "advance": "a free myWalgreens account",
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "In store only; not with other coupons; excludes alcohol, tobacco, gift cards, stamps and more",
+   "sources": [
+    {
+     "url": "https://news.va.gov/150505/2026-veterans-day-discounts-free-meals-offers/",
+     "publisher": "VA News",
+     "published": "2026"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/retailers-veterans-day-military-discounts.html",
+     "publisher": "Military.com (retailers)",
+     "published": "2026"
+    },
+    {
+     "url": "https://themilitarywallet.com/walgreens-military-discount/",
+     "publisher": "The Military Wallet (Walgreens)",
+     "published": "2026"
+    }
+   ],
+   "notes": "Most 2026 lists give 8–11 Nov (one gives a later start). Immediate family included.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": true
+  },
+  {
    "id": "fryn-pan",
    "brand": "Fryn' Pan Family Restaurant",
    "status": "offering",
    "category": "meal",
-   "offer": "Last year: free meal with military ID, 08:00-20:00 on the day",
+   "offer": "Veterans Day deal confirmed for 2026; last year it was a free meal with military ID",
    "value": 12,
-   "grade": "C",
+   "grade": "A",
    "start": "2026-11-11T14:00:00Z",
    "end": "2026-11-12T02:00:00Z",
    "window_text": "08:00–20:00 CST",
@@ -1837,12 +2145,17 @@
    "limits": "",
    "sources": [
     {
-     "url": "https://fargobites.com/veterans-day-specials-in-fargo/",
-     "publisher": "Fargo Bites (seen only as search-result summary; page redirected to an unrelated domain, not opened)",
+     "url": null,
+     "publisher": "The Intelligence Company (confirmed locally for 2026)",
+     "published": "2026-11-08"
+    },
+    {
+     "url": null,
+     "publisher": "Fargo Bites (2025, seen only in search summaries; the site now redirects to an unrelated domain, so it isn't linked)",
      "published": "unknown (~2025)"
     }
    ],
-   "notes": "PRIOR-YEAR PATTERN ONLY; no 2026 confirmation found. Call before relying. Offer wording from a search summary of the Fargo Bites page, year unknown.",
+   "notes": "Confirmed for 2026 by The Intelligence Company on 8 Nov 2026. The details weren't given, so this shows last year's deal; ask when you get there. Assumed to cover the downtown Fargo store too.",
    "caution": "",
    "group": null,
    "ticket": false,
@@ -1853,9 +2166,9 @@
    "brand": "Doolittle's Woodfire Grill",
    "status": "offering",
    "category": "meal",
-   "offer": "Last year: free meal on the day",
+   "offer": "Veterans Day deal confirmed for 2026; last year it was a free meal",
    "value": 15,
-   "grade": "C",
+   "grade": "A",
    "start": null,
    "end": null,
    "window_text": "",
@@ -1880,8 +2193,13 @@
    "limits": "",
    "sources": [
     {
-     "url": "https://fargobites.com/veterans-day-specials-in-fargo/",
-     "publisher": "Fargo Bites (seen only as search-result summary; page redirected to an unrelated domain, not opened)",
+     "url": null,
+     "publisher": "The Intelligence Company (confirmed locally for 2026)",
+     "published": "2026-11-08"
+    },
+    {
+     "url": null,
+     "publisher": "Fargo Bites (2025, seen only in search summaries; the site now redirects to an unrelated domain, so it isn't linked)",
      "published": "unknown (~2025)"
     },
     {
@@ -1890,7 +2208,7 @@
      "published": "n/a"
     }
    ],
-   "notes": "PRIOR-YEAR PATTERN ONLY; no 2026 confirmation found. Call before relying. Menu, proof, hours of offer not found.",
+   "notes": "Confirmed for 2026 by The Intelligence Company on 8 Nov 2026. The details weren't given, so this shows last year's deal; ask when you get there.",
    "caution": "",
    "group": null,
    "ticket": false,
@@ -1901,9 +2219,9 @@
    "brand": "Porter Creek Hardwood Grill",
    "status": "offering",
    "category": "meal",
-   "offer": "Last year: free meal on the day",
+   "offer": "Veterans Day deal confirmed for 2026; last year it was a free meal",
    "value": 15,
-   "grade": "C",
+   "grade": "A",
    "start": null,
    "end": null,
    "window_text": "",
@@ -1928,12 +2246,17 @@
    "limits": "",
    "sources": [
     {
-     "url": "https://fargobites.com/veterans-day-specials-in-fargo/",
-     "publisher": "Fargo Bites (seen only as search-result summary; page redirected to an unrelated domain, not opened)",
+     "url": null,
+     "publisher": "The Intelligence Company (confirmed locally for 2026)",
+     "published": "2026-11-08"
+    },
+    {
+     "url": null,
+     "publisher": "Fargo Bites (2025, seen only in search summaries; the site now redirects to an unrelated domain, so it isn't linked)",
      "published": "unknown (~2025)"
     }
    ],
-   "notes": "PRIOR-YEAR PATTERN ONLY; no 2026 confirmation found. Call before relying. Hours from OpenTable; ZIP conflicts across listings (58103 most likely).",
+   "notes": "Confirmed for 2026 by The Intelligence Company on 8 Nov 2026. The details weren't given, so this shows last year's deal; ask when you get there.",
    "caution": "",
    "group": null,
    "ticket": false,
@@ -1944,9 +2267,9 @@
    "brand": "Veterans Day Program, United Patriotic Bodies",
    "status": "offering",
    "category": "event",
-   "offer": "Last year: Veterans Day ceremony with colors, speaker, Missing Man service, Taps; Red River Valley Veterans Concert Band",
+   "offer": "Veterans Day Program presented by the United Patriotic Bodies: in past years colors, a speaker, the Missing Man ceremony, Taps and the Red River Valley Veterans Concert Band",
    "value": 0,
-   "grade": "C",
+   "grade": "A",
    "start": "2026-11-11T17:00:00Z",
    "end": "2026-11-11T18:00:00Z",
    "window_text": "11:00–12:00 CST",
@@ -1970,6 +2293,11 @@
    "limits": "",
    "sources": [
     {
+     "url": "https://fargoairmuseum.org/",
+     "publisher": "Fargo Air Museum (events list: Veterans Day Program, Wed 11 Nov, 11:00–12:00)",
+     "published": "seen 8 Nov 2026"
+    },
+    {
      "url": "https://fargoairmuseum.org/calendar/veterans-day-program/2025",
      "publisher": "Fargo Air Museum",
      "published": "2025-11-11 event page"
@@ -1985,7 +2313,7 @@
      "published": "2024-11-08"
     }
    ],
-   "notes": "PRIOR-YEAR PATTERN ONLY; no 2026 confirmation found. Call before relying. Held 11:00 every year 2021-2025 by United Patriotic Bodies. Museum 2026 page (/2026) returned 404. Museum general admission $12 military/veteran; free for military on branch-birthday dates, not confirmed for Nov 11.",
+   "notes": "The museum's own events list shows the 2026 program. The program has been free to attend. The museum lists $12 admission for military and veterans and says nothing about free entry on 11 Nov (one 2026 report says admission is free that day): call 701-293-8043. Held at MSUM in 2023.",
    "caution": "",
    "group": null,
    "worth": 12,
@@ -2034,7 +2362,7 @@
      "published": "2024-11-08"
     }
    ],
-   "notes": "PRIOR-YEAR PATTERN ONLY; no 2026 confirmation found. Call before relying. 2025 KFGO says beef meal at noon, 'downtown Fargo'; address from 2024 InForum. Whether free and open to non-veterans unconfirmed.",
+   "notes": "PRIOR-YEAR PATTERN ONLY; no 2026 confirmation found. Call before relying. 2025 KFGO says beef meal at noon, 'downtown Fargo'; address from 2024 InForum. Whether free and open to non-veterans unconfirmed. A 2026 research note says the 2025 meal was free and open to the public; KFGO's 2025 listing doesn't say either way.",
    "caution": "",
    "group": null,
    "ticket": false,
@@ -2141,7 +2469,7 @@
    "brand": "West Fargo VFW Post 7564 Veterans Day program",
    "status": "offering",
    "category": "event",
-   "offer": "Last year: Annual Nov 11 program: flag raising, West Fargo High School Band, speaker, free stew feed, Red River Valley Veterans Band evening program",
+   "offer": "Every 11 Nov, per the post: flag raising at 10:45, then a program with the West Fargo High School Band and a speaker, a free stew feed, and the Red River Valley Veterans Concert Band in the evening",
    "value": 8,
    "grade": "C",
    "start": "2026-11-11T16:30:00Z",
@@ -2177,12 +2505,914 @@
      "published": "2025-11-11"
     }
    ],
-   "notes": "Post's own page describes an annual Nov 11 program but names no year, so graded C (borderline A for the date). 2025 KFGO: 11:00 program, noon lunch, 19:00 band. 2026 times not confirmed.",
+   "notes": "The post's own page describes the annual program (no year given). 2025 (KFGO): program 11:00, lunch at noon, band at 19:00. 2026 times not confirmed.",
    "caution": "",
    "group": null,
    "worth": 12,
    "ticket": false,
    "purchase": false
+  },
+  {
+   "id": "air-museum-coffee",
+   "brand": "Fargo Air Museum Veterans Coffee Hour",
+   "status": "offering",
+   "category": "event",
+   "offer": "Every second Wednesday, the museum's Veterans Coffee Hour: free coffee and donuts",
+   "value": 4,
+   "grade": "C",
+   "start": "2026-11-11T16:00:00Z",
+   "end": "2026-11-11T18:00:00Z",
+   "window_text": "10:00–12:00 CST",
+   "mode": "event",
+   "minutes": 30,
+   "busy": 5,
+   "line": 3,
+   "meal": false,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://fargoairmuseum.org/calendar/veterans-coffee-hour/9-1",
+     "publisher": "Fargo Air Museum (Veterans Coffee Hour page)",
+     "published": "2026"
+    }
+   ],
+   "notes": "A monthly second-Wednesday event. It isn't on the museum's events list for 11 Nov, so it may give way to the 11:00 program: call 701-293-8043.",
+   "caution": "Not on the museum's 11 Nov events list: call first",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "eat": 0.2
+  },
+  {
+   "id": "harwood-legion",
+   "brand": "Harwood American Legion Post 297 Veterans Day stew",
+   "status": "offering",
+   "category": "event",
+   "offer": "In 2023: free stew until it ran out, and one free drink for Legion members",
+   "value": 8,
+   "grade": "C",
+   "start": "2026-11-11T23:00:00Z",
+   "end": "2026-11-12T01:00:00Z",
+   "window_text": "17:00–19:00 CST",
+   "mode": "event",
+   "minutes": 40,
+   "busy": 5,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active",
+    "public"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.cityofharwood.com/american-legion-post-297",
+     "publisher": "City of Harwood (post address and hours)",
+     "published": "seen 8 Nov 2026"
+    }
+   ],
+   "notes": "PRIOR-YEAR PATTERN ONLY (2023). Harwood is about 10 miles north of Fargo. Call the post before going.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false
+  },
+  {
+   "id": "sickies",
+   "brand": "Sickies Garage Burgers & Brews",
+   "status": "offering",
+   "category": "meal",
+   "offer": "Reported for 2026 (unconfirmed): free cheeseburger basket or 20% off, and a 'Buy a Vet a Bud' wall for a free pint (21+). 2021: free Garage Burger or 20% off",
+   "value": 14,
+   "grade": "C",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 50,
+   "busy": 15,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id",
+    "va_card",
+    "dd214"
+   ],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.valleynewslive.com/2021/11/11/local-businesses-offer-deals-veterans/",
+     "publisher": "Valley News Live (2021 list)",
+     "published": "2021-11-11"
+    },
+    {
+     "url": "https://sickiesburgers.com/",
+     "publisher": "Sickies Garage (store directory)",
+     "published": "seen 8 Nov 2026"
+    }
+   ],
+   "notes": "Only one 2026 listing has this (a compiled report we couldn't trace to the business). Not announced by the business: call first.",
+   "caution": "Only one unconfirmed 2026 listing: call first",
+   "group": null,
+   "ticket": false,
+   "purchase": false
+  },
+  {
+   "id": "brewtus",
+   "brand": "Brewtus' Brickhouse",
+   "status": "offering",
+   "category": "meal",
+   "offer": "Reported for 2026 (unconfirmed): free lunch pizza buffet",
+   "value": 12,
+   "grade": "C",
+   "start": "2026-11-11T17:00:00Z",
+   "end": "2026-11-11T20:00:00Z",
+   "window_text": "11:00–14:00 CST",
+   "mode": "dine_in",
+   "minutes": 45,
+   "busy": 10,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id",
+    "va_card",
+    "dd214"
+   ],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.mapquest.com/us/north-dakota/brewtus-brickhouse-371357549",
+     "publisher": "MapQuest (address)",
+     "published": "seen 8 Nov 2026"
+    }
+   ],
+   "notes": "Only one 2026 listing has this (a compiled report we couldn't trace to the business). Not announced by the business: call first. The Moorhead Brewtus' has closed; this is the West Fargo one.",
+   "caution": "Only one unconfirmed 2026 listing: call first",
+   "group": null,
+   "ticket": false,
+   "purchase": false
+  },
+  {
+   "id": "pub-west",
+   "brand": "Pub West",
+   "status": "offering",
+   "category": "meal",
+   "offer": "Reported for 2026 (unconfirmed): free 18 oz domestic draft. In past years: a free meal up to $15 (with a drink purchase in 2025)",
+   "value": 15,
+   "grade": "C",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 50,
+   "busy": 10,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id",
+    "va_card",
+    "dd214"
+   ],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.inforum.com/business/pub-west-offers-free-meal-for-veterans-on-veterans-day",
+     "publisher": "InForum (an earlier year)",
+     "published": "unknown"
+    }
+   ],
+   "notes": "Only one 2026 listing has this (a compiled report we couldn't trace to the business). Not announced by the business: call first. Directories also list 3330 Sheyenne St #116, and the phone number is from one directory.",
+   "caution": "Offer and address not confirmed: call first",
+   "group": null,
+   "ticket": false,
+   "purchase": true
+  },
+  {
+   "id": "cash-wise-deli",
+   "brand": "Cash Wise Foods deli",
+   "status": "offering",
+   "category": "quick",
+   "offer": "Reported for 2026 (unconfirmed): 2-piece chicken dinner with sides from the deli",
+   "value": 8,
+   "grade": "C",
+   "start": "2026-11-11T17:00:00Z",
+   "end": "2026-11-12T01:00:00Z",
+   "window_text": "11:00–19:00 CST",
+   "mode": "to_go",
+   "minutes": 12,
+   "busy": 5,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": true,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id",
+    "va_card",
+    "dd214"
+   ],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.openstreetmap.org/",
+     "publisher": "OpenStreetMap (store and hours)",
+     "published": "seen 8 Nov 2026"
+    }
+   ],
+   "notes": "Only one 2026 listing has this (a compiled report we couldn't trace to the business). Not announced by the business: call first. No Cash Wise offer is on any 2026 national list.",
+   "caution": "Only one unconfirmed 2026 listing: call first",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "eat": 0.6
+  },
+  {
+   "id": "sandys-donuts",
+   "brand": "Sandy's Donuts",
+   "status": "offering",
+   "category": "treat",
+   "offer": "Reported for 2026 (unconfirmed): free donut",
+   "value": 2,
+   "grade": "C",
+   "start": "2026-11-11T12:00:00Z",
+   "end": "2026-11-11T19:30:00Z",
+   "window_text": "06:00–13:30 CST",
+   "mode": "in_store",
+   "minutes": 6,
+   "busy": 5,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": true,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id",
+    "va_card",
+    "dd214"
+   ],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.openstreetmap.org/",
+     "publisher": "OpenStreetMap (store addresses)",
+     "published": "seen 8 Nov 2026"
+    }
+   ],
+   "notes": "Only one 2026 listing has this (a compiled report we couldn't trace to the business). Not announced by the business: call first. The report also mentions a downtown Fargo store; not found.",
+   "caution": "Only one unconfirmed 2026 listing: call first",
+   "group": null,
+   "ticket": false,
+   "purchase": false
+  },
+  {
+   "id": "blarney-stone",
+   "brand": "Blarney Stone",
+   "status": "offering",
+   "category": "bar",
+   "offer": "Reported for 2026 (unconfirmed): free pint of draft beer (21+)",
+   "value": 6,
+   "grade": "C",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 30,
+   "busy": 5,
+   "line": 3,
+   "meal": false,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id",
+    "va_card",
+    "dd214"
+   ],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.openstreetmap.org/",
+     "publisher": "OpenStreetMap (address)",
+     "published": "seen 8 Nov 2026"
+    }
+   ],
+   "notes": "Only one 2026 listing has this (a compiled report we couldn't trace to the business). Not announced by the business: call first.",
+   "caution": "Only one unconfirmed 2026 listing: call first",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "eat": 0
+  },
+  {
+   "id": "drekker",
+   "brand": "Drekker Brewing",
+   "status": "offering",
+   "category": "bar",
+   "offer": "Last year: 1 free pint on 10 and 11 Nov",
+   "value": 7,
+   "grade": "C",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 30,
+   "busy": 5,
+   "line": 3,
+   "meal": false,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id",
+    "va_card",
+    "dd214"
+   ],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": null,
+     "publisher": "Fargo Bites, 2025 (not linked: the site now redirects elsewhere)",
+     "published": "2025"
+    },
+    {
+     "url": "https://www.openstreetmap.org/",
+     "publisher": "Address: OpenStreetMap and directory listings",
+     "published": "seen 8 Nov 2026"
+    }
+   ],
+   "notes": "PRIOR-YEAR PATTERN ONLY (2025); nothing for 2026 yet. Call before going.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "eat": 0
+  },
+  {
+   "id": "swing-barrel",
+   "brand": "Swing Barrel Brewing",
+   "status": "offering",
+   "category": "bar",
+   "offer": "Last year: first pint free, 9-11 Nov",
+   "value": 6,
+   "grade": "C",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 30,
+   "busy": 5,
+   "line": 3,
+   "meal": false,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id",
+    "va_card",
+    "dd214"
+   ],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": null,
+     "publisher": "Fargo Bites, 2025 (not linked: the site now redirects elsewhere)",
+     "published": "2025"
+    },
+    {
+     "url": "https://www.openstreetmap.org/",
+     "publisher": "Address: OpenStreetMap and directory listings",
+     "published": "seen 8 Nov 2026"
+    }
+   ],
+   "notes": "PRIOR-YEAR PATTERN ONLY (2025); nothing for 2026 yet. Call before going.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "eat": 0
+  },
+  {
+   "id": "mills-lounge",
+   "brand": "Mills Lounge",
+   "status": "offering",
+   "category": "bar",
+   "offer": "Last year: free drink",
+   "value": 5,
+   "grade": "C",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 30,
+   "busy": 5,
+   "line": 3,
+   "meal": false,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id",
+    "va_card",
+    "dd214"
+   ],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": null,
+     "publisher": "Fargo Bites, 2025 (not linked: the site now redirects elsewhere)",
+     "published": "2025"
+    },
+    {
+     "url": "https://www.openstreetmap.org/",
+     "publisher": "Address: OpenStreetMap and directory listings",
+     "published": "seen 8 Nov 2026"
+    }
+   ],
+   "notes": "PRIOR-YEAR PATTERN ONLY (2025); nothing for 2026 yet. Call before going.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "eat": 0
+  },
+  {
+   "id": "okellys",
+   "brand": "O'Kelly's Bar & Grill",
+   "status": "offering",
+   "category": "bar",
+   "offer": "In 2023: free drink",
+   "value": 5,
+   "grade": "C",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 30,
+   "busy": 5,
+   "line": 3,
+   "meal": false,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id",
+    "va_card",
+    "dd214"
+   ],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.wdayradionow.com/news/local-news/69955-2023-veterans-day-deals-discounts-and-freebies-in-the-fm-metro/",
+     "publisher": "WDAY Radio (2023 list)",
+     "published": "2023-11"
+    },
+    {
+     "url": "https://www.openstreetmap.org/",
+     "publisher": "Address: OpenStreetMap and directory listings",
+     "published": "seen 8 Nov 2026"
+    }
+   ],
+   "notes": "PRIOR-YEAR PATTERN ONLY (2023); nothing for 2026 yet. Call before going.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "eat": 0
+  },
+  {
+   "id": "franks-lounge",
+   "brand": "Frank's Lounge",
+   "status": "offering",
+   "category": "bar",
+   "offer": "In 2023: free appetizer or a buy-one-get-one sandwich",
+   "value": 8,
+   "grade": "C",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 30,
+   "busy": 5,
+   "line": 3,
+   "meal": false,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id",
+    "va_card",
+    "dd214"
+   ],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.wdayradionow.com/news/local-news/69955-2023-veterans-day-deals-discounts-and-freebies-in-the-fm-metro/",
+     "publisher": "WDAY Radio (2023 list)",
+     "published": "2023-11"
+    },
+    {
+     "url": "https://www.openstreetmap.org/",
+     "publisher": "Address: OpenStreetMap and directory listings",
+     "published": "seen 8 Nov 2026"
+    }
+   ],
+   "notes": "PRIOR-YEAR PATTERN ONLY (2023); nothing for 2026 yet. Call before going.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "eat": 0.3
+  },
+  {
+   "id": "micks-office",
+   "brand": "Mick's Office",
+   "status": "offering",
+   "category": "bar",
+   "offer": "In 2023: free meal",
+   "value": 12,
+   "grade": "C",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 45,
+   "busy": 10,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id",
+    "va_card",
+    "dd214"
+   ],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.wdayradionow.com/news/local-news/69955-2023-veterans-day-deals-discounts-and-freebies-in-the-fm-metro/",
+     "publisher": "WDAY Radio (2023 list)",
+     "published": "2023-11"
+    },
+    {
+     "url": "https://www.openstreetmap.org/",
+     "publisher": "Address: OpenStreetMap and directory listings",
+     "published": "seen 8 Nov 2026"
+    }
+   ],
+   "notes": "PRIOR-YEAR PATTERN ONLY (2023); nothing for 2026 yet. Call before going.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false
+  },
+  {
+   "id": "chumleys",
+   "brand": "J.C. Chumley's",
+   "status": "offering",
+   "category": "bar",
+   "offer": "In 2023: free meal",
+   "value": 12,
+   "grade": "C",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 45,
+   "busy": 10,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id",
+    "va_card",
+    "dd214"
+   ],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.wdayradionow.com/news/local-news/69955-2023-veterans-day-deals-discounts-and-freebies-in-the-fm-metro/",
+     "publisher": "WDAY Radio (2023 list)",
+     "published": "2023-11"
+    },
+    {
+     "url": "https://www.openstreetmap.org/",
+     "publisher": "Address: OpenStreetMap and directory listings",
+     "published": "seen 8 Nov 2026"
+    }
+   ],
+   "notes": "PRIOR-YEAR PATTERN ONLY (2023); nothing for 2026 yet. Call before going.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false
+  },
+  {
+   "id": "bordertown",
+   "brand": "BorderTown Bar & Grill",
+   "status": "offering",
+   "category": "bar",
+   "offer": "Last year: free meal",
+   "value": 12,
+   "grade": "C",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 45,
+   "busy": 10,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id",
+    "va_card",
+    "dd214"
+   ],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": null,
+     "publisher": "Fargo Bites, 2025 (not linked: the site now redirects elsewhere)",
+     "published": "2025"
+    },
+    {
+     "url": "https://www.openstreetmap.org/",
+     "publisher": "Address: OpenStreetMap and directory listings",
+     "published": "seen 8 Nov 2026"
+    }
+   ],
+   "notes": "PRIOR-YEAR PATTERN ONLY (2025); nothing for 2026 yet. Call before going.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false
+  },
+  {
+   "id": "hen-house",
+   "brand": "Hen House Bar & Restaurant",
+   "status": "offering",
+   "category": "bar",
+   "offer": "Last year: 50% off food and drink all day",
+   "value": 8,
+   "grade": "C",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 45,
+   "busy": 10,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id",
+    "va_card",
+    "dd214"
+   ],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": null,
+     "publisher": "Fargo Bites, 2025 (not linked: the site now redirects elsewhere)",
+     "published": "2025"
+    },
+    {
+     "url": "https://www.openstreetmap.org/",
+     "publisher": "Address: OpenStreetMap and directory listings",
+     "published": "seen 8 Nov 2026"
+    }
+   ],
+   "notes": "PRIOR-YEAR PATTERN ONLY (2025); nothing for 2026 yet. Call before going.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": true
+  },
+  {
+   "id": "spitfire",
+   "brand": "Spitfire Bar & Grill",
+   "status": "offering",
+   "category": "bar",
+   "offer": "Last year: $10 off",
+   "value": 10,
+   "grade": "C",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 45,
+   "busy": 10,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id",
+    "va_card",
+    "dd214"
+   ],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": null,
+     "publisher": "Fargo Bites, 2025 (not linked: the site now redirects elsewhere)",
+     "published": "2025"
+    },
+    {
+     "url": "https://www.openstreetmap.org/",
+     "publisher": "Address: OpenStreetMap and directory listings",
+     "published": "seen 8 Nov 2026"
+    }
+   ],
+   "notes": "PRIOR-YEAR PATTERN ONLY (2025); nothing for 2026 yet. Call before going.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": true
   }
  ],
  "places": [
@@ -2219,14 +3449,14 @@
    "offer": "applebees",
    "name": "",
    "address": "2800 13th Ave SW, Fargo, ND 58103",
-   "lat": 46.861403,
+   "lat": 46.8614,
    "lng": -96.82475,
    "phone": "(701) 232-4100",
    "open": "2026-11-11T16:30:00Z",
    "close": "2026-11-12T06:00:00Z",
    "hoursAssumed": false,
    "verified": "unverified",
-   "pin": "census"
+   "pin": "geo"
   },
   {
    "id": "chilis-3902-13th-ave-s-suite-4402",
@@ -2411,6 +3641,20 @@
    "pin": "osm"
   },
   {
+   "id": "village-inn-940-holiday-dr",
+   "offer": "village-inn",
+   "name": "",
+   "address": "940 Holiday Dr, Moorhead, MN 56560",
+   "lat": 46.849455,
+   "lng": -96.765534,
+   "phone": "(218) 303-1761",
+   "open": "2026-11-11T12:00:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": false,
+   "verified": "unverified",
+   "pin": "osm"
+  },
+  {
    "id": "texas-roadhouse-4971-13th-ave-s",
    "offer": "texas-roadhouse",
    "name": "",
@@ -2485,28 +3729,28 @@
    "offer": "little-caesars",
    "name": "",
    "address": "800 Holiday Dr, Suite 176, Moorhead, MN 56560",
-   "lat": 46.850996,
-   "lng": -96.766539,
+   "lat": 46.851,
+   "lng": -96.76654,
    "phone": "(218) 331-0094",
    "open": "2026-11-11T16:30:00Z",
    "close": "2026-11-12T03:30:00Z",
    "hoursAssumed": true,
    "verified": "unverified",
-   "pin": "census"
+   "pin": "geo"
   },
   {
    "id": "little-caesars-2412-8th-st-s",
    "offer": "little-caesars",
    "name": "",
    "address": "2412 8th St S, Moorhead, MN 56560",
-   "lat": 46.850953,
+   "lat": 46.85095,
    "lng": -96.76792,
    "phone": "",
    "open": "2026-11-11T16:30:00Z",
    "close": "2026-11-12T03:30:00Z",
    "hoursAssumed": true,
    "verified": "unverified",
-   "pin": "census"
+   "pin": "geo"
   },
   {
    "id": "firehouse-subs-5675-26th-ave-s",
@@ -2570,27 +3814,27 @@
    "name": "",
    "address": "3971 53rd Ave S, Fargo, ND 58104",
    "lat": 46.80202,
-   "lng": -96.847917,
+   "lng": -96.84792,
    "phone": "(701) 929-5858",
    "open": "2026-11-11T16:45:00Z",
    "close": "2026-11-12T04:00:00Z",
    "hoursAssumed": false,
    "verified": "confirmed",
-   "pin": "census"
+   "pin": "geo"
   },
   {
    "id": "chipotle-3262-us-10-e",
    "offer": "chipotle",
    "name": "",
    "address": "3262 US-10 E, Moorhead, MN 56560",
-   "lat": 46.876642,
-   "lng": -96.730072,
+   "lat": 46.87664,
+   "lng": -96.73007,
    "phone": "(218) 593-3449",
    "open": "2026-11-11T16:45:00Z",
    "close": "2026-11-12T04:00:00Z",
    "hoursAssumed": false,
    "verified": "confirmed",
-   "pin": "census"
+   "pin": "geo"
   },
   {
    "id": "qdoba-1801-45th-st-sw",
@@ -2621,6 +3865,34 @@
    "pin": "osm"
   },
   {
+   "id": "hardees-3819-main-ave",
+   "offer": "hardees",
+   "name": "",
+   "address": "3819 Main Ave, Fargo, ND 58103",
+   "lat": 46.876263,
+   "lng": -96.844381,
+   "phone": "(701) 532-0738",
+   "open": "2026-11-11T12:00:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": true,
+   "verified": "confirmed",
+   "pin": "census"
+  },
+  {
+   "id": "hardees-3402-28th-ave-s",
+   "offer": "hardees",
+   "name": "",
+   "address": "3402 28th Ave S, Moorhead, MN 56560",
+   "lat": 46.85061,
+   "lng": -96.72178,
+   "phone": "(218) 284-0419",
+   "open": "2026-11-11T12:00:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": true,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
    "id": "kwik-trip-1100-30th-ave-s",
    "offer": "kwik-trip",
    "name": "",
@@ -2639,14 +3911,14 @@
    "offer": "kwik-trip",
    "name": "",
    "address": "1409 Main Ave SE, Moorhead, MN 56560",
-   "lat": 46.860023,
-   "lng": -96.737013,
+   "lat": 46.86002,
+   "lng": -96.73701,
    "phone": "",
    "open": "2026-11-11T06:00:00Z",
    "close": "2026-11-12T06:00:00Z",
    "hoursAssumed": true,
    "verified": "unverified",
-   "pin": "census"
+   "pin": "geo"
   },
   {
    "id": "kwik-trip-1200-center-ave-w",
@@ -2667,28 +3939,42 @@
    "offer": "kwik-trip",
    "name": "",
    "address": "2530 12th Ave S, Fargo, ND 58103",
-   "lat": 46.863428,
-   "lng": -96.820351,
+   "lat": 46.86343,
+   "lng": -96.82035,
    "phone": "",
    "open": "2026-11-11T06:00:00Z",
    "close": "2026-11-12T06:00:00Z",
    "hoursAssumed": true,
    "verified": "confirmed",
-   "pin": "census"
+   "pin": "geo"
   },
   {
    "id": "kwik-trip-4480-calico-dr-s",
    "offer": "kwik-trip",
    "name": "",
    "address": "4480 Calico Dr S, Fargo, ND 58104",
-   "lat": 46.838291,
-   "lng": -96.861935,
+   "lat": 46.83829,
+   "lng": -96.86194,
    "phone": "",
    "open": "2026-11-11T06:00:00Z",
    "close": "2026-11-12T06:00:00Z",
    "hoursAssumed": true,
    "verified": "confirmed",
-   "pin": "census"
+   "pin": "geo"
+  },
+  {
+   "id": "kwik-trip-4501-37th-ave-s",
+   "offer": "kwik-trip",
+   "name": "",
+   "address": "4501 37th Ave S, Fargo, ND 58104",
+   "lat": 46.82342,
+   "lng": -96.86175,
+   "phone": "",
+   "open": "2026-11-11T06:00:00Z",
+   "close": "2026-11-12T06:00:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "geo"
   },
   {
    "id": "pilot-3150-39th-st-sw",
@@ -2703,6 +3989,20 @@
    "hoursAssumed": false,
    "verified": "confirmed",
    "pin": "osm"
+  },
+  {
+   "id": "blaze-pizza-1443-42nd-st-s",
+   "offer": "blaze-pizza",
+   "name": "",
+   "address": "1443 42nd St S, Fargo, ND 58103",
+   "lat": 46.85848,
+   "lng": -96.8516,
+   "phone": "(701) 552-7226",
+   "open": "2026-11-11T16:30:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "unverified",
+   "pin": "geo"
   },
   {
    "id": "starbucks-906-holiday-dr",
@@ -2737,14 +4037,14 @@
    "offer": "starbucks",
    "name": "",
    "address": "4202 13th Ave S, Fargo, ND 58103 (inside Target)",
-   "lat": 46.861591,
-   "lng": -96.851178,
+   "lat": 46.86159,
+   "lng": -96.85118,
    "phone": "",
    "open": "2026-11-11T13:00:00Z",
    "close": "2026-11-12T04:00:00Z",
    "hoursAssumed": false,
    "verified": "unverified",
-   "pin": "census"
+   "pin": "geo"
   },
   {
    "id": "starbucks-2511-kirsten-ln-s",
@@ -2821,14 +4121,14 @@
    "offer": "scooters",
    "name": "",
    "address": "3610 Veterans Blvd, Fargo, ND 58104",
-   "lat": 46.825043,
+   "lat": 46.82504,
    "lng": -96.88279,
    "phone": "",
    "open": "2026-11-11T12:00:00Z",
    "close": "2026-11-12T01:00:00Z",
    "hoursAssumed": true,
    "verified": "unverified",
-   "pin": "census"
+   "pin": "geo"
   },
   {
    "id": "caribou-1207-19th-ave-n",
@@ -2849,14 +4149,14 @@
    "offer": "caribou",
    "name": "",
    "address": "1401 Administration Ave, Fargo, ND 58105",
-   "lat": 46.892453,
-   "lng": -96.801647,
+   "lat": 46.89245,
+   "lng": -96.80165,
    "phone": "(701) 231-8791",
    "open": "2026-11-11T13:00:00Z",
    "close": "2026-11-12T01:00:00Z",
    "hoursAssumed": false,
    "verified": "confirmed",
-   "pin": "census"
+   "pin": "geo"
   },
   {
    "id": "caribou-1450-25th-street-sw",
@@ -2877,28 +4177,28 @@
    "offer": "caribou",
    "name": "",
    "address": "1532 S 32nd Ave S, Fargo, ND 58103",
-   "lat": 46.832558,
-   "lng": -96.803066,
+   "lat": 46.83256,
+   "lng": -96.80307,
    "phone": "(701) 280-1999",
    "open": "2026-11-11T13:00:00Z",
    "close": "2026-11-11T23:00:00Z",
    "hoursAssumed": false,
    "verified": "confirmed",
-   "pin": "census"
+   "pin": "geo"
   },
   {
    "id": "caribou-2510-n-broadway-avenue",
    "offer": "caribou",
    "name": "",
    "address": "2510 N Broadway Avenue, Fargo, ND 58102",
-   "lat": 46.910381,
-   "lng": -96.787475,
+   "lat": 46.91038,
+   "lng": -96.78747,
    "phone": "(701) 293-5444",
    "open": "2026-11-11T13:00:00Z",
    "close": "2026-11-11T23:00:00Z",
    "hoursAssumed": false,
    "verified": "confirmed",
-   "pin": "census"
+   "pin": "geo"
   },
   {
    "id": "caribou-3071-25th-street-s",
@@ -2933,14 +4233,14 @@
    "offer": "caribou",
    "name": "",
    "address": "4101 S 13th Ave S, Fargo, ND 58103",
-   "lat": 46.861875,
-   "lng": -96.849731,
+   "lat": 46.86187,
+   "lng": -96.84973,
    "phone": "(701) 282-6363",
    "open": "2026-11-11T13:00:00Z",
    "close": "2026-11-11T23:00:00Z",
    "hoursAssumed": false,
    "verified": "confirmed",
-   "pin": "census"
+   "pin": "geo"
   },
   {
    "id": "caribou-4151-45th-st-south",
@@ -2961,28 +4261,28 @@
    "offer": "caribou",
    "name": "",
    "address": "4475 31st Ave S, Fargo, ND 58104",
-   "lat": 46.834581,
-   "lng": -96.861774,
+   "lat": 46.83458,
+   "lng": -96.86177,
    "phone": "(701) 960-1012",
    "open": "2026-11-11T11:30:00Z",
    "close": "2026-11-12T01:00:00Z",
    "hoursAssumed": false,
    "verified": "confirmed",
-   "pin": "census"
+   "pin": "geo"
   },
   {
    "id": "caribou-4484-15th-ave",
    "offer": "caribou",
    "name": "",
    "address": "4484 15th Ave, Fargo, ND 58103",
-   "lat": 46.858264,
+   "lat": 46.85826,
    "lng": -96.86141,
    "phone": "(701) 540-6430",
    "open": "2026-11-11T11:30:00Z",
    "close": "2026-11-12T01:00:00Z",
    "hoursAssumed": false,
    "verified": "confirmed",
-   "pin": "census"
+   "pin": "geo"
   },
   {
    "id": "caribou-5616-26th-ave-s",
@@ -3003,14 +4303,14 @@
    "offer": "caribou",
    "name": "",
    "address": "1100 13th Avenue East, West Fargo, ND 58078",
-   "lat": 46.862217,
-   "lng": -96.881245,
+   "lat": 46.86222,
+   "lng": -96.88125,
    "phone": "(701) 277-5566",
    "open": "2026-11-11T12:00:00Z",
    "close": "2026-11-12T00:00:00Z",
    "hoursAssumed": false,
    "verified": "confirmed",
-   "pin": "census"
+   "pin": "geo"
   },
   {
    "id": "caribou-1625-13th-avenue-east",
@@ -3018,55 +4318,69 @@
    "name": "",
    "address": "1625 13th Avenue East, West Fargo, ND 58078",
    "lat": 46.86186,
-   "lng": -96.874364,
+   "lng": -96.87436,
    "phone": "(701) 277-0783",
    "open": "2026-11-11T11:30:00Z",
    "close": "2026-11-12T01:00:00Z",
    "hoursAssumed": false,
    "verified": "confirmed",
-   "pin": "census"
+   "pin": "geo"
   },
   {
    "id": "caribou-2050-sheyenne-street",
    "offer": "caribou",
    "name": "",
    "address": "2050 Sheyenne Street, West Fargo, ND 58078",
-   "lat": 46.851355,
-   "lng": -96.906032,
+   "lat": 46.85135,
+   "lng": -96.90603,
    "phone": "(701) 282-5555",
    "open": "2026-11-11T12:00:00Z",
    "close": "2026-11-12T01:00:00Z",
    "hoursAssumed": false,
    "verified": "confirmed",
-   "pin": "census"
+   "pin": "geo"
+  },
+  {
+   "id": "caribou-755-33rd-ave-w",
+   "offer": "caribou",
+   "name": "",
+   "address": "755 33rd Ave W, West Fargo, ND 58078",
+   "lat": 46.83151,
+   "lng": -96.88556,
+   "phone": "(701) 281-6002",
+   "open": "2026-11-11T13:00:00Z",
+   "close": "2026-11-11T23:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
   },
   {
    "id": "caribou-101-11th-st-s",
    "offer": "caribou",
    "name": "",
    "address": "101 11th St. S, Moorhead, MN 56560",
-   "lat": 46.873709,
-   "lng": -96.762826,
+   "lat": 46.87371,
+   "lng": -96.76283,
    "phone": "(218) 236-6333",
    "open": "2026-11-11T12:00:00Z",
    "close": "2026-11-12T01:00:00Z",
    "hoursAssumed": false,
    "verified": "confirmed",
-   "pin": "census"
+   "pin": "geo"
   },
   {
    "id": "caribou-950-40th-ave-s",
    "offer": "caribou",
    "name": "",
    "address": "950 40th Ave. S, Moorhead, MN 56560",
-   "lat": 46.833118,
-   "lng": -96.764975,
+   "lat": 46.83312,
+   "lng": -96.76498,
    "phone": "(218) 359-4000",
    "open": "2026-11-11T12:00:00Z",
    "close": "2026-11-12T00:00:00Z",
    "hoursAssumed": false,
    "verified": "confirmed",
-   "pin": "census"
+   "pin": "geo"
   },
   {
    "id": "caseys-707-37th-avenue-south",
@@ -3381,14 +4695,14 @@
    "offer": "caseys",
    "name": "",
    "address": "112 N Main St, Horace, ND 58047",
-   "lat": 46.759903,
-   "lng": -96.903732,
+   "lat": 46.7599,
+   "lng": -96.90373,
    "phone": "",
    "open": "2026-11-11T11:00:00Z",
    "close": "2026-11-12T04:00:00Z",
    "hoursAssumed": true,
    "verified": "confirmed",
-   "pin": "census"
+   "pin": "geo"
   },
   {
    "id": "circle-k-5651-36th-avenue-south",
@@ -3563,14 +4877,14 @@
    "offer": "circle-k",
    "name": "",
    "address": "3190 36th St S, Fargo, ND 58103",
-   "lat": 46.832795,
+   "lat": 46.8328,
    "lng": -96.83587,
    "phone": "",
    "open": "2026-11-11T11:00:00Z",
    "close": "2026-11-12T05:00:00Z",
    "hoursAssumed": true,
    "verified": "confirmed",
-   "pin": "census"
+   "pin": "geo"
   },
   {
    "id": "circle-k-1510-32nd-ave-s",
@@ -3591,28 +4905,28 @@
    "offer": "circle-k",
    "name": "",
    "address": "5213 Veterans Blvd, Fargo, ND 58104",
-   "lat": 46.801541,
-   "lng": -96.881858,
+   "lat": 46.80154,
+   "lng": -96.88186,
    "phone": "",
    "open": "2026-11-11T11:00:00Z",
    "close": "2026-11-12T05:00:00Z",
    "hoursAssumed": true,
    "verified": "confirmed",
-   "pin": "census"
+   "pin": "geo"
   },
   {
    "id": "circle-k-2445-65th-ave-s",
    "offer": "circle-k",
    "name": "",
    "address": "2445 65th Ave S, Fargo, ND 58104",
-   "lat": 46.787805,
-   "lng": -96.818338,
+   "lat": 46.78781,
+   "lng": -96.81834,
    "phone": "",
    "open": "2026-11-11T11:00:00Z",
    "close": "2026-11-12T05:00:00Z",
    "hoursAssumed": true,
    "verified": "confirmed",
-   "pin": "census"
+   "pin": "geo"
   },
   {
    "id": "dunkin-3757-55th-ave-s",
@@ -3629,32 +4943,60 @@
    "pin": "census"
   },
   {
+   "id": "seven-brew-2401-8th-st-s",
+   "offer": "seven-brew",
+   "name": "",
+   "address": "2401 8th St S, Moorhead, MN 56560",
+   "lat": 46.85106,
+   "lng": -96.76883,
+   "phone": "",
+   "open": "2026-11-11T11:30:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
    "id": "insomnia-412-broadway-n",
    "offer": "insomnia",
    "name": "",
    "address": "412 Broadway N, Suite 412A, Fargo, ND 58102",
-   "lat": 46.880209,
-   "lng": -96.787778,
+   "lat": 46.88021,
+   "lng": -96.78778,
    "phone": "",
    "open": "2026-11-11T17:00:00Z",
    "close": "2026-11-12T07:00:00Z",
    "hoursAssumed": false,
    "verified": "unverified",
-   "pin": "census"
+   "pin": "geo"
   },
   {
    "id": "freddys-2653-45th-st-s",
    "offer": "freddys",
    "name": "",
    "address": "2653 45th St S, Fargo, ND 58104",
-   "lat": 46.839092,
-   "lng": -96.862176,
+   "lat": 46.83909,
+   "lng": -96.86218,
    "phone": "",
    "open": "2026-11-11T16:00:00Z",
    "close": "2026-11-12T03:00:00Z",
    "hoursAssumed": true,
    "verified": "unverified",
-   "pin": "census"
+   "pin": "geo"
+  },
+  {
+   "id": "sonic-4470-26th-ave-s",
+   "offer": "sonic",
+   "name": "",
+   "address": "4470 26th Ave S, Fargo, ND 58104",
+   "lat": 46.83982,
+   "lng": -96.86096,
+   "phone": "",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": false,
+   "verified": "unverified",
+   "pin": "geo"
   },
   {
    "id": "great-clips-1100-19th-ave-n",
@@ -3689,14 +5031,14 @@
    "offer": "great-clips",
    "name": "",
    "address": "3051 25th St SW, Fargo, ND 58103",
-   "lat": 46.843026,
+   "lat": 46.84303,
    "lng": -96.82782,
    "phone": "(701) 298-3288",
    "open": "2026-11-11T15:00:00Z",
    "close": "2026-11-12T01:00:00Z",
    "hoursAssumed": false,
    "verified": "unverified",
-   "pin": "census"
+   "pin": "geo"
   },
   {
    "id": "great-clips-2515-8th-st-s",
@@ -3731,28 +5073,28 @@
    "offer": "sport-clips",
    "name": "",
    "address": "745 13th Ave E, West Fargo, ND 58078",
-   "lat": 46.862027,
-   "lng": -96.885674,
+   "lat": 46.86203,
+   "lng": -96.88567,
    "phone": "(701) 532-2400 (Fresha/BBB)",
    "open": "2026-11-11T15:00:00Z",
    "close": "2026-11-12T01:00:00Z",
    "hoursAssumed": true,
    "verified": "unverified",
-   "pin": "census"
+   "pin": "geo"
   },
   {
    "id": "tommys-express-4682-32nd-ave-s",
    "offer": "tommys-express",
    "name": "",
    "address": "4682 32nd Ave S, Fargo, ND 58104",
-   "lat": 46.810593,
-   "lng": -96.828753,
+   "lat": 46.81059,
+   "lng": -96.82875,
    "phone": "",
    "open": "2026-11-11T15:00:00Z",
    "close": "2026-11-12T01:00:00Z",
    "hoursAssumed": true,
    "verified": "confirmed",
-   "pin": "census"
+   "pin": "geo"
   },
   {
    "id": "tommys-express-1702-40th-st-s",
@@ -3760,13 +5102,13 @@
    "name": "",
    "address": "1702 40th St S, Fargo, ND 58103",
    "lat": 46.85492,
-   "lng": -96.846953,
+   "lng": -96.84695,
    "phone": "",
    "open": "2026-11-11T15:00:00Z",
    "close": "2026-11-12T01:00:00Z",
    "hoursAssumed": true,
    "verified": "confirmed",
-   "pin": "census"
+   "pin": "geo"
   },
   {
    "id": "tommys-express-3115-8th-st-s",
@@ -3787,56 +5129,56 @@
    "offer": "tommys-express",
    "name": "",
    "address": "3102 US-10, Moorhead, MN 56560",
-   "lat": 46.876615,
-   "lng": -96.731182,
+   "lat": 46.87662,
+   "lng": -96.73118,
    "phone": "",
    "open": "2026-11-11T15:00:00Z",
    "close": "2026-11-12T01:00:00Z",
    "hoursAssumed": true,
    "verified": "confirmed",
-   "pin": "census"
+   "pin": "geo"
   },
   {
    "id": "jiffy-lube-2835-13th-ave-s",
    "offer": "jiffy-lube",
    "name": "",
    "address": "2835 13th Ave S, Fargo, ND 58103",
-   "lat": 46.861674,
-   "lng": -96.826344,
+   "lat": 46.86167,
+   "lng": -96.82634,
    "phone": "(701) 235-8117",
    "open": "2026-11-11T15:00:00Z",
    "close": "2026-11-12T01:00:00Z",
    "hoursAssumed": true,
    "verified": "confirmed",
-   "pin": "census"
+   "pin": "geo"
   },
   {
    "id": "jiffy-lube-2740-32nd-ave-s",
    "offer": "jiffy-lube",
    "name": "",
    "address": "2740 32nd Ave S, Fargo, ND 58103",
-   "lat": 46.832434,
-   "lng": -96.823735,
+   "lat": 46.83243,
+   "lng": -96.82374,
    "phone": "(701) 298-8798",
    "open": "2026-11-11T15:00:00Z",
    "close": "2026-11-12T01:00:00Z",
    "hoursAssumed": true,
    "verified": "confirmed",
-   "pin": "census"
+   "pin": "geo"
   },
   {
    "id": "jiffy-lube-11-10th-st-n",
    "offer": "jiffy-lube",
    "name": "",
    "address": "11 10th St N, Fargo, ND 58102",
-   "lat": 46.876124,
-   "lng": -96.793958,
+   "lat": 46.87612,
+   "lng": -96.79396,
    "phone": "(701) 293-3967",
    "open": "2026-11-11T15:00:00Z",
    "close": "2026-11-12T01:00:00Z",
    "hoursAssumed": true,
    "verified": "confirmed",
-   "pin": "census"
+   "pin": "geo"
   },
   {
    "id": "target-4202-13th-ave-sw",
@@ -3881,6 +5223,48 @@
    "pin": "osm"
   },
   {
+   "id": "walgreens-4201-13th-ave-s",
+   "offer": "walgreens",
+   "name": "",
+   "address": "4201 13th Ave S, Fargo, ND 58103",
+   "lat": 46.86244,
+   "lng": -96.85174,
+   "phone": "",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "walgreens-700-30th-ave-s",
+   "offer": "walgreens",
+   "name": "",
+   "address": "700 30th Ave S, Moorhead, MN 56560",
+   "lat": 46.84467,
+   "lng": -96.76908,
+   "phone": "",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "walgreens-900-main-ave",
+   "offer": "walgreens",
+   "name": "",
+   "address": "900 Main Ave, Moorhead, MN 56560",
+   "lat": 46.87411,
+   "lng": -96.76574,
+   "phone": "",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
    "id": "fryn-pan-2920-us-10-e",
    "offer": "fryn-pan",
    "name": "",
@@ -3893,6 +5277,20 @@
    "hoursAssumed": false,
    "verified": "unverified",
    "pin": "census"
+  },
+  {
+   "id": "fryn-pan-300-main-ave",
+   "offer": "fryn-pan",
+   "name": "",
+   "address": "300 Main Ave, Fargo, ND 58103",
+   "lat": 46.87381,
+   "lng": -96.78349,
+   "phone": "",
+   "open": "2026-11-11T17:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "geo"
   },
   {
    "id": "doolittles-2112-25th-st-s",
@@ -3991,6 +5389,512 @@
    "hoursAssumed": true,
    "verified": "unverified",
    "pin": "census"
+  },
+  {
+   "id": "air-museum-coffee-1609-19th-ave-n",
+   "offer": "air-museum-coffee",
+   "name": "",
+   "address": "1609 19th Ave N, Fargo, ND 58102",
+   "lat": 46.90555,
+   "lng": -96.80395,
+   "phone": "(701) 293-8043",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-11T23:00:00Z",
+   "hoursAssumed": false,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "harwood-legion-101-benefit-ln",
+   "offer": "harwood-legion",
+   "name": "",
+   "address": "101 Benefit Ln, Harwood, ND 58042",
+   "lat": 46.98042,
+   "lng": -96.88031,
+   "phone": "(701) 282-9400",
+   "open": "2026-11-11T17:00:00Z",
+   "close": "2026-11-12T07:00:00Z",
+   "hoursAssumed": false,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "sickies-3431-fiechtner-dr-s",
+   "offer": "sickies",
+   "name": "",
+   "address": "3431 Fiechtner Dr S, Fargo, ND 58103",
+   "lat": 46.8628,
+   "lng": -96.83604,
+   "phone": "",
+   "open": "2026-11-11T17:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "sickies-2551-45th-st-s",
+   "offer": "sickies",
+   "name": "",
+   "address": "2551 45th St S, Fargo, ND 58104",
+   "lat": 46.84196,
+   "lng": -96.86218,
+   "phone": "(701) 532-3202",
+   "open": "2026-11-11T17:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "brewtus-635-32nd-ave-e",
+   "offer": "brewtus",
+   "name": "",
+   "address": "635 32nd Ave E, West Fargo, ND 58078",
+   "lat": 46.83311,
+   "lng": -96.88755,
+   "phone": "(701) 532-1397",
+   "open": "2026-11-11T17:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "pub-west-3140-bluestem-dr",
+   "offer": "pub-west",
+   "name": "",
+   "address": "3140 Bluestem Dr, West Fargo, ND 58078",
+   "lat": 46.83547,
+   "lng": -96.88493,
+   "phone": "(701) 356-9378",
+   "open": "2026-11-11T17:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "cash-wise-deli-3300-highway-10-e",
+   "offer": "cash-wise-deli",
+   "name": "",
+   "address": "3300 Highway 10 E, Moorhead, MN 56560",
+   "lat": 46.87818,
+   "lng": -96.72795,
+   "phone": "",
+   "open": "2026-11-11T12:00:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "sandys-donuts-301-main-ave-w",
+   "offer": "sandys-donuts",
+   "name": "",
+   "address": "301 Main Ave W, West Fargo, ND 58078",
+   "lat": 46.87647,
+   "lng": -96.90505,
+   "phone": "",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "sandys-donuts-4215-45th-st-s",
+   "offer": "sandys-donuts",
+   "name": "",
+   "address": "4215 45th St S, Fargo, ND 58104",
+   "lat": 46.81629,
+   "lng": -96.86209,
+   "phone": "",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "blarney-stone-1910-9th-st-e",
+   "offer": "blarney-stone",
+   "name": "",
+   "address": "1910 9th St E, West Fargo, ND 58078",
+   "lat": 46.85068,
+   "lng": -96.88418,
+   "phone": "unknown",
+   "open": "2026-11-11T17:00:00Z",
+   "close": "2026-11-12T06:00:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "drekker-1666-1st-ave-n",
+   "offer": "drekker",
+   "name": "",
+   "address": "1666 1st Ave N, Fargo, ND 58102",
+   "lat": 46.87633,
+   "lng": -96.8079,
+   "phone": "(701) 532-0506",
+   "open": "2026-11-11T22:00:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": false,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "swing-barrel-814-center-ave",
+   "offer": "swing-barrel",
+   "name": "",
+   "address": "814 Center Ave, Moorhead, MN 56560",
+   "lat": 46.87521,
+   "lng": -96.76695,
+   "phone": "",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T01:00:00Z",
+   "hoursAssumed": false,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "mills-lounge-6-center-ave-e",
+   "offer": "mills-lounge",
+   "name": "",
+   "address": "6 Center Ave E, Dilworth, MN 56529",
+   "lat": 46.87674,
+   "lng": -96.70244,
+   "phone": "",
+   "open": "2026-11-11T17:00:00Z",
+   "close": "2026-11-12T06:00:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "okellys-3800-main-ave",
+   "offer": "okellys",
+   "name": "",
+   "address": "3800 Main Ave, Fargo, ND 58103",
+   "lat": 46.876024,
+   "lng": -96.844018,
+   "phone": "(701) 277-1880",
+   "open": "2026-11-11T17:00:00Z",
+   "close": "2026-11-12T06:00:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "census"
+  },
+  {
+   "id": "franks-lounge-2640-52nd-ave-s",
+   "offer": "franks-lounge",
+   "name": "",
+   "address": "2640 52nd Ave S, Fargo, ND 58104",
+   "lat": 46.803343,
+   "lng": -96.821334,
+   "phone": "(701) 356-9356",
+   "open": "2026-11-11T17:00:00Z",
+   "close": "2026-11-12T06:00:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "census"
+  },
+  {
+   "id": "micks-office-10-8th-st-s",
+   "offer": "micks-office",
+   "name": "",
+   "address": "10 8th St S, Moorhead, MN 56560",
+   "lat": 46.87464,
+   "lng": -96.76705,
+   "phone": "(218) 233-2295",
+   "open": "2026-11-11T17:00:00Z",
+   "close": "2026-11-12T06:00:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "chumleys-1608-main-ave",
+   "offer": "chumleys",
+   "name": "",
+   "address": "1608 Main Ave, Moorhead, MN 56560",
+   "lat": 46.87403,
+   "lng": -96.75404,
+   "phone": "",
+   "open": "2026-11-11T17:00:00Z",
+   "close": "2026-11-12T06:00:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "bordertown-807-main-ave-e",
+   "offer": "bordertown",
+   "name": "",
+   "address": "807 Main Ave E, West Fargo, ND 58078",
+   "lat": 46.876574,
+   "lng": -96.884812,
+   "phone": "",
+   "open": "2026-11-11T17:00:00Z",
+   "close": "2026-11-12T06:00:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "census"
+  },
+  {
+   "id": "hen-house-937-37th-ave-s",
+   "offer": "hen-house",
+   "name": "",
+   "address": "937 37th Ave S, Moorhead, MN 56560",
+   "lat": 46.83524,
+   "lng": -96.76563,
+   "phone": "(218) 359-0744",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T06:00:00Z",
+   "hoursAssumed": false,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "spitfire-1660-13th-ave-e",
+   "offer": "spitfire",
+   "name": "",
+   "address": "1660 13th Ave E, West Fargo, ND 58078",
+   "lat": 46.86254,
+   "lng": -96.87303,
+   "phone": "(701) 478-8667",
+   "open": "2026-11-11T17:00:00Z",
+   "close": "2026-11-12T06:00:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "geo"
+  }
+ ],
+ "other": [
+  {
+   "id": "patriotcafe",
+   "day": "Tue 10 Nov, morning",
+   "at": null,
+   "name": "Fargo VA PatriotCafe and PatriotBrew",
+   "where": "Fargo VA Medical Center, 2101 Elm St N, Fargo",
+   "offer": "Free breakfast combo and free brewed coffee for veterans, no purchase (Veterans Canteen Service, at VA medical centers nationwide)",
+   "grade": "B",
+   "note": "On a 2026 national list. The Fargo VA canteen's hours weren't checked.",
+   "sources": [
+    {
+     "url": "https://themilitarywallet.com/veterans-day-free-meals-and-discounts/",
+     "publisher": "The Military Wallet",
+     "published": "2026-11-06 (updated)"
+    }
+   ]
+  },
+  {
+   "id": "matbus",
+   "day": "Every day",
+   "at": null,
+   "name": "MATBUS: free bus rides for veterans",
+   "where": "Every Fargo and Moorhead fixed route",
+   "offer": "Veterans ride fixed-route buses free, all year, since 11 Nov 2025. Show a veteran ID when you board.",
+   "grade": "A",
+   "note": "MATBUS's fares page; its FAQ page still has the older service-connected rule.",
+   "sources": [
+    {
+     "url": "https://matbus.com/riding-matbus/fares-passes",
+     "publisher": "MATBUS (fares and passes)",
+     "published": "seen 8 Nov 2026"
+    },
+    {
+     "url": "https://kfgo.com/2025/11/11/f-m-area-veterans-day-events/",
+     "publisher": "KFGO",
+     "published": "2025-11-11"
+    }
+   ]
+  },
+  {
+   "id": "national-parks",
+   "day": "Wed 11 Nov",
+   "at": null,
+   "name": "National parks: free entry for US residents",
+   "where": "Outside the metro: Theodore Roosevelt National Park is about 4.5 hours west",
+   "offer": "Fee-free day at National Park Service sites for US citizens and residents. Veterans and Gold Star families can also get a free lifetime pass any day.",
+   "grade": "B",
+   "note": "From 2026 news reports of the Park Service's list; check nps.gov. Camping and reservation fees still apply.",
+   "sources": [
+    {
+     "url": "https://www.afar.com/magazine/2026-national-park-free-days-wont-include-mlk-juneteenth",
+     "publisher": "Afar",
+     "published": "2026"
+    },
+    {
+     "url": "https://www.nbcchicago.com/news/national-international/trump-administration-alters-national-parks-free-entry-days",
+     "publisher": "NBC Chicago",
+     "published": "2025"
+    }
+   ]
+  },
+  {
+   "id": "fargo-force",
+   "day": "Sat 14 Nov",
+   "at": "2026-11-15T00:05:00Z",
+   "name": "Fargo Force Honor Flight Night",
+   "where": "Scheels Arena, 5225 31st Ave S, Fargo",
+   "offer": "Hockey against the Sioux City Musketeers, raising money for Honor Flight of ND/MN: specialty jerseys, a band in the concourse, a giveaway and auctions. No military ticket deal announced.",
+   "grade": "A",
+   "note": "",
+   "sources": [
+    {
+     "url": "https://fargoforce.com/news/2026/9/2/general-fargo-force-unveil-2026-27-promotional-schedule.aspx",
+     "publisher": "Fargo Force (2026-27 promotions)",
+     "published": "2026-09-02"
+    }
+   ]
+  }
+ ],
+ "leads": [
+  {
+   "name": "The Local 701",
+   "area": "",
+   "q": "The Local 701 Fargo ND",
+   "offer": "Free meal",
+   "last_seen": "2025",
+   "source": {
+    "url": null,
+    "publisher": "Fargo Bites, 2025 (not linked: the site now redirects elsewhere)",
+    "published": null
+   }
+  },
+  {
+   "name": "701 Eateries",
+   "area": "Fargo",
+   "q": "701 Eateries Fargo ND",
+   "offer": "50% off burgers (2025); $10 off (2023)",
+   "last_seen": "2025",
+   "source": {
+    "url": null,
+    "publisher": "Fargo Bites, 2025 (not linked: the site now redirects elsewhere)",
+    "published": null
+   }
+  },
+  {
+   "name": "Dairy Queen",
+   "area": "12 metro stores",
+   "q": "Dairy Queen Fargo ND",
+   "offer": "Free medium Blizzard at some franchise stores",
+   "last_seen": "2025",
+   "source": {
+    "url": null,
+    "publisher": "Fargo Bites, 2025 (not linked: the site now redirects elsewhere)",
+    "published": null
+   }
+  },
+  {
+   "name": "Super Buffet Sushi & Grill",
+   "area": "Fargo",
+   "q": "Super Buffet Sushi & Grill Fargo ND",
+   "offer": "Veterans eat free",
+   "last_seen": "2025",
+   "source": {
+    "url": null,
+    "publisher": "Fargo Bites, 2025 (not linked: the site now redirects elsewhere)",
+    "published": null
+   }
+  },
+  {
+   "name": "SouthTown PourHouse",
+   "area": "Fargo",
+   "q": "SouthTown PourHouse Fargo ND",
+   "offer": "Free entree for veterans every Monday, so Mon 9 Nov (not a Veterans Day deal)",
+   "last_seen": "standing weekly",
+   "source": {
+    "url": "https://www.fargomoorhead.org/blog/post/fargo-moorheads-happy-hour-guide/",
+    "publisher": "Visit Fargo-Moorhead (happy-hour guide)",
+    "published": null
+   }
+  },
+  {
+   "name": "Fargo Fillies & Mac Daddy's",
+   "area": "Fargo",
+   "q": "Fargo Fillies Fargo ND",
+   "offer": "20% off",
+   "last_seen": "2023",
+   "source": {
+    "url": "https://www.wdayradionow.com/news/local-news/69955-2023-veterans-day-deals-discounts-and-freebies-in-the-fm-metro/",
+    "publisher": "WDAY Radio (2023 list)",
+    "published": null
+   }
+  },
+  {
+   "name": "Say Cheese Mac & Melt",
+   "area": "",
+   "q": "Say Cheese Mac & Melt Fargo ND",
+   "offer": "50% off one item",
+   "last_seen": "2023",
+   "source": {
+    "url": "https://www.wdayradionow.com/news/local-news/69955-2023-veterans-day-deals-discounts-and-freebies-in-the-fm-metro/",
+    "publisher": "WDAY Radio (2023 list)",
+    "published": null
+   }
+  },
+  {
+   "name": "Sushi Burrito Cafe",
+   "area": "Fargo",
+   "q": "Sushi Burrito Cafe Fargo ND",
+   "offer": "10% off",
+   "last_seen": "2023",
+   "source": {
+    "url": "https://www.wdayradionow.com/news/local-news/69955-2023-veterans-day-deals-discounts-and-freebies-in-the-fm-metro/",
+    "publisher": "WDAY Radio (2023 list)",
+    "published": null
+   }
+  },
+  {
+   "name": "Royal Buffet",
+   "area": "",
+   "q": "Royal Buffet Fargo ND",
+   "offer": "Free buffet and soda, 9-11 Nov",
+   "last_seen": "2023",
+   "source": {
+    "url": "https://www.wdayradionow.com/news/local-news/69955-2023-veterans-day-deals-discounts-and-freebies-in-the-fm-metro/",
+    "publisher": "WDAY Radio (2023 list)",
+    "published": null
+   }
+  },
+  {
+   "name": "Izumi",
+   "area": "Fargo and West Fargo",
+   "q": "Izumi Sushi Fargo ND",
+   "offer": "15% off on Military Mondays",
+   "last_seen": "2023",
+   "source": {
+    "url": "https://www.wdayradionow.com/news/local-news/69955-2023-veterans-day-deals-discounts-and-freebies-in-the-fm-metro/",
+    "publisher": "WDAY Radio (2023 list)",
+    "published": null
+   }
+  },
+  {
+   "name": "Papa Murphy's",
+   "area": "5 metro stores",
+   "q": "Papa Murphy's Fargo ND",
+   "offer": "Free cheese or pepperoni pizza",
+   "last_seen": "2021",
+   "source": {
+    "url": "https://www.valleynewslive.com/2021/11/11/local-businesses-offer-deals-veterans/",
+    "publisher": "Valley News Live (2021 list)",
+    "published": null
+   }
+  },
+  {
+   "name": "Skate City",
+   "area": "",
+   "q": "Skate City Fargo ND",
+   "offer": "Free admission plus a hot dog and drink, noon-6 PM",
+   "last_seen": "2021",
+   "source": {
+    "url": "https://www.valleynewslive.com/2021/11/11/local-businesses-offer-deals-veterans/",
+    "publisher": "Valley News Live (2021 list)",
+    "published": null
+   }
   }
  ]
 }

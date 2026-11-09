@@ -1541,7 +1541,7 @@
     "fm_presence_basis": "FM presence from background knowledge; store locator NOT checked this run",
     "fm_addresses_seen": [],
     "status_2026": "offering",
-    "offer": "20% off one qualified storewide purchase, in-store and online (Target Circle)",
+    "offer": "20% off one qualifying purchase, 5\u201311 Nov, in store and online (Target Circle)",
     "est_value_usd": null,
     "dates": "2026-11-05/2026-11-11",
     "hours_local": "unknown",
@@ -1554,12 +1554,12 @@
     ],
     "eligibility_quote": "Verified military community; free Target Circle account; verify military status",
     "guard_reserve": "unclear",
-    "spouse_or_guest": "unclear",
+    "spouse_or_guest": "yes",
     "kids": null,
     "proof": [
       "idme_online"
     ],
-    "advance_signup": "Create/sign into Target Circle and verify military status before purchase (previously verified members get it auto-loaded)",
+    "advance_signup": "Verify your military status in Target Circle before you shop (members verified before get it automatically)",
     "participating_locations_only": false,
     "limits": "One qualified purchase",
     "grade": "B",
@@ -1589,7 +1589,7 @@
         "accessed": "2026-11-08"
       }
     ],
-    "notes": "Verification vendor not named in sources (typically ID.me/SheerID); do it before Nov 11."
+    "notes": "Families included. Verify online first; the discount loads into Target Circle."
   },
   {
     "brand": "Kohl's",
@@ -1598,7 +1598,7 @@
     "fm_presence_basis": "FM presence from background knowledge; store locator NOT checked this run",
     "fm_addresses_seen": [],
     "status_2026": "offering",
-    "offer": "30% off in-store",
+    "offer": "30% off in store, 10\u201311 Nov",
     "est_value_usd": null,
     "dates": "2026-11-10/2026-11-11",
     "hours_local": "unknown",
@@ -1910,7 +1910,7 @@
     "fm_presence_basis": "FM presence from background knowledge; store locator NOT checked this run",
     "fm_addresses_seen": [],
     "status_2026": "no_2026_info",
-    "offer": "Prior year: free large Coffee of the Day or cold press for veterans, active military, spouses (2023/2024 era)",
+    "offer": "Prior years: a free small coffee of the day or cold press for veterans, service members and spouses",
     "est_value_usd": 5,
     "dates": "2025 or earlier (not confirmed 2026)",
     "hours_local": "unknown",
@@ -1923,7 +1923,7 @@
     ],
     "eligibility_quote": null,
     "guard_reserve": "unclear",
-    "spouse_or_guest": "unclear",
+    "spouse_or_guest": "yes",
     "kids": null,
     "proof": [],
     "advance_signup": null,
@@ -1942,19 +1942,25 @@
         "publisher": "Military.com (prior year)",
         "published": "prior year",
         "accessed": "2026-11-08"
+      },
+      {
+        "url": "https://militarybridge.com/veterans-day-deals/",
+        "publisher": "MilitaryBridge (2026 list: awaiting verification)",
+        "published": "2026",
+        "accessed": "2026-11-08"
       }
     ],
-    "notes": "Krazy Coupon Lady marks it 'predicted' for 2026. Not confirmed. Do not present as confirmed."
+    "notes": "Caribou's own 2023 release and 2024 reports: a small coffee of the day or cold press, spouses included, military ID. For 2026 it is only predicted (The Krazy Coupon Lady) or awaiting verification (MilitaryBridge). Every metro store on Caribou's locator is listed; the NDSU Memorial Union store is on campus and may not take part."
   },
   {
     "brand": "Village Inn",
     "scope": "national",
-    "fm_presence": "unknown",
+    "fm_presence": "yes",
     "fm_presence_basis": "not checked",
     "fm_addresses_seen": [],
     "status_2026": "no_2026_info",
-    "offer": "Predicted: free 2-2-2 Breakfast",
-    "est_value_usd": null,
+    "offer": "Reported for 2026 (unconfirmed): free 2-2-2 breakfast",
+    "est_value_usd": 11,
     "dates": "not confirmed",
     "hours_local": "unknown",
     "mode": null,
@@ -1967,20 +1973,24 @@
     "guard_reserve": "unclear",
     "spouse_or_guest": "unclear",
     "kids": null,
-    "proof": [],
+    "proof": [
+      "military_id",
+      "va_card",
+      "dd214"
+    ],
     "advance_signup": null,
     "participating_locations_only": true,
     "limits": null,
     "grade": "C",
     "sources": [
       {
-        "url": "https://thekrazycouponlady.com/tips/money/35-veterans-day-freebies-free-oil-change-flu-shot-dinner-dessert",
-        "publisher": "The Krazy Coupon Lady",
-        "published": "2026-11-07 (updated)",
+        "url": "https://www.villageinn.com/moorhead-mn",
+        "publisher": "Village Inn (Moorhead store page: open 6 AM\u20138 PM)",
+        "published": "seen 8 Nov 2026",
         "accessed": "2026-11-08"
       }
     ],
-    "notes": "KCL marks 'predicted'. Not in Military.com 2026."
+    "notes": "Only one 2026 listing has this (a compiled report we couldn't trace to the business). Not announced by the business: call first. The Krazy Coupon Lady listed it as predicted. The Moorhead store's page lists 6 AM\u20138 PM daily but online ordering is off; call to check it's open."
   },
   {
     "brand": "Perkins",
@@ -3021,5 +3031,195 @@
       }
     ],
     "notes": ""
+  },
+  {
+    "scope": "national",
+    "fm_presence": "yes",
+    "fm_addresses_seen": [],
+    "kids": null,
+    "voucher_use_by": null,
+    "eligible": [
+      "veteran",
+      "active"
+    ],
+    "guard_reserve": "unclear",
+    "proof": [
+      "military_id",
+      "va_card",
+      "dd214"
+    ],
+    "advance_signup": "a free myWalgreens account",
+    "hours_local": "unknown",
+    "dates": "2026-11-08/2026-11-11",
+    "status_2026": "offering",
+    "grade": "B",
+    "brand": "Walgreens",
+    "fm_presence_basis": "OpenStreetMap, 8 Nov 2026: one Fargo store, two in Moorhead",
+    "offer": "20% off eligible regular-priced items in store, 8\u201311 Nov",
+    "est_value_usd": 0,
+    "mode": "in_store",
+    "eligibility_quote": "Veterans, active-duty members and their families, with a myWalgreens account and proof of service",
+    "spouse_or_guest": "yes",
+    "participating_locations_only": false,
+    "limits": "In store only; not with other coupons; excludes alcohol, tobacco, gift cards, stamps and more",
+    "sources": [
+      {
+        "url": "https://news.va.gov/150505/2026-veterans-day-discounts-free-meals-offers/",
+        "publisher": "VA News",
+        "published": "2026",
+        "accessed": "2026-11-08"
+      },
+      {
+        "url": "https://www.military.com/veterans-day/retailers-veterans-day-military-discounts.html",
+        "publisher": "Military.com (retailers)",
+        "published": "2026",
+        "accessed": "2026-11-08"
+      },
+      {
+        "url": "https://themilitarywallet.com/walgreens-military-discount/",
+        "publisher": "The Military Wallet (Walgreens)",
+        "published": "2026",
+        "accessed": "2026-11-08"
+      }
+    ],
+    "notes": "Most 2026 lists give 8\u201311 Nov (one gives a later start). Immediate family included."
+  },
+  {
+    "scope": "national",
+    "fm_presence": "yes",
+    "fm_addresses_seen": [],
+    "kids": null,
+    "voucher_use_by": null,
+    "eligible": [
+      "veteran",
+      "active"
+    ],
+    "guard_reserve": "unclear",
+    "proof": [
+      "military_id",
+      "va_card",
+      "dd214"
+    ],
+    "advance_signup": null,
+    "hours_local": "unknown",
+    "dates": "2026-11-11",
+    "status_2026": "offering",
+    "grade": "B",
+    "brand": "Sonic",
+    "fm_presence_basis": "OpenStreetMap, 8 Nov 2026",
+    "offer": "Half-price shakes, any size and flavor",
+    "est_value_usd": 3,
+    "mode": "drive_thru",
+    "eligibility_quote": "Veterans and service members",
+    "spouse_or_guest": "unclear",
+    "participating_locations_only": true,
+    "limits": "Needs a purchase; locations not named",
+    "sources": [
+      {
+        "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+        "publisher": "Military.com (restaurants)",
+        "published": "2026-11-08 (updated)",
+        "accessed": "2026-11-08"
+      }
+    ],
+    "notes": "One 2026 list (Military.com, 8 Nov)."
+  },
+  {
+    "scope": "national",
+    "fm_presence": "yes",
+    "fm_addresses_seen": [],
+    "kids": null,
+    "voucher_use_by": null,
+    "eligible": [
+      "veteran",
+      "active"
+    ],
+    "guard_reserve": "unclear",
+    "proof": [
+      "military_id",
+      "va_card",
+      "dd214"
+    ],
+    "advance_signup": null,
+    "hours_local": "unknown",
+    "dates": "2026-11-11",
+    "status_2026": "offering",
+    "grade": "B",
+    "brand": "7 Brew",
+    "fm_presence_basis": "OpenStreetMap, 8 Nov 2026",
+    "offer": "Half off a drink",
+    "est_value_usd": 3,
+    "mode": "drive_thru",
+    "eligibility_quote": "Veterans and service members",
+    "spouse_or_guest": "unclear",
+    "participating_locations_only": true,
+    "limits": "Needs a purchase; participating stands",
+    "sources": [
+      {
+        "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+        "publisher": "Military.com (restaurants)",
+        "published": "2026-11-08 (updated)",
+        "accessed": "2026-11-08"
+      },
+      {
+        "url": "https://themilitarywallet.com/veterans-day-free-meals-and-discounts/",
+        "publisher": "The Military Wallet",
+        "published": "2026-11-06 (updated)",
+        "accessed": "2026-11-08"
+      }
+    ],
+    "notes": "Two 2026 lists name it."
+  },
+  {
+    "brand": "Hardee's",
+    "scope": "national",
+    "fm_presence": "yes",
+    "fm_presence_basis": "Hardee's store locator, 8 Nov 2026: 3819 Main Ave, Fargo and 3402 28th Ave S, Moorhead",
+    "fm_addresses_seen": [],
+    "status_2026": "no_2026_info",
+    "offer": "Last year (a local veteran's report): free breakfast sandwich",
+    "est_value_usd": 5,
+    "dates": "2026-11-11 (unconfirmed)",
+    "hours_local": "06:00-10:30",
+    "mode": "in_store",
+    "voucher_use_by": null,
+    "eligible": [
+      "veteran",
+      "active"
+    ],
+    "eligibility_quote": "",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "unclear",
+    "kids": null,
+    "proof": [
+      "military_id",
+      "va_card",
+      "dd214"
+    ],
+    "advance_signup": null,
+    "participating_locations_only": true,
+    "limits": "Breakfast hours (usually until 10:30)",
+    "grade": "C",
+    "sources": [
+      {
+        "url": "https://locations.hardees.com/nd/fargo",
+        "publisher": "Hardee's (Fargo store)",
+        "published": "seen 8 Nov 2026",
+        "accessed": "2026-11-08"
+      },
+      {
+        "url": "https://locations.hardees.com/mn/moorhead",
+        "publisher": "Hardee's (Moorhead store)",
+        "published": "seen 8 Nov 2026",
+        "accessed": "2026-11-08"
+      },
+      {
+        "url": null,
+        "publisher": "A local veteran's report of 2025, 8 Nov 2026",
+        "published": "2026-11-08",
+        "accessed": "2026-11-08"
+      }
+    ],
+    "notes": "No published 2025 or 2026 Hardee's Veterans Day offer was found; a local veteran remembers a free breakfast sandwich last year. Hardee's franchises set their own offers: call first."
   }
 ]

@@ -86,6 +86,8 @@
     </form>
     <div id="wx" class="wx" hidden></div>
     <p id="route-sum" class="route-sum" aria-live="polite"></p>
+    <p id="drive-safe" class="note drive-safe" hidden>Your route has a bar on it. Drive safe: if you drink, bring a sober
+      driver, take a cab or rideshare, or ride MATBUS, which is free with a veteran ID.</p>
     <article id="next-card" class="card next"></article>
     <div id="route-wrap" hidden>
       <h3 class="h3">Then</h3>
@@ -135,6 +137,17 @@
     </div>
     <p class="note" id="deals-count"></p>
     <div id="deal-list" class="deal-list"></div>
+
+    <div id="other-wrap" hidden>
+      <h3 class="h3">Other days and beyond the route</h3>
+      <ul id="other" class="plain xlist"></ul>
+    </div>
+    <details id="leads-wrap" class="ready" hidden>
+      <summary>Earlier years only: worth a call (<span id="leads-n">0</span>)</summary>
+      <p class="note">These places had a Veterans Day deal in an earlier year and haven't said anything for 2026, so
+        they aren't on the route or the map. Call before you go.</p>
+      <ul id="leads" class="plain xlist"></ul>
+    </details>
 
     <h3 class="h3" id="tip-h">Spotted a deal we don't have?</h3>
     <form id="tip-form" class="tip-form" aria-labelledby="tip-h">
@@ -221,8 +234,11 @@
     <p>Offers come from each business's own 2026 announcements where we found them, and otherwise from 2026 deal
       lists (Military.com, Stars and Stripes and others) and local news. Every deal shows its sources and a grade:
       <b>confirmed</b> (the business said so for 2026), <b>announced</b> (2026 deal lists, often "participating
-      locations") or <b>not confirmed</b> (only earlier years; call first). Store locations are checked against the
-      chains' store pages and OpenStreetMap. Drive times are worked out ahead of time on the road network (OSRM,
+      locations") or <b>not confirmed</b> (only earlier years, or a single 2026 listing we couldn't confirm; call
+      first). A few places with a deal in earlier years only are listed at the end of Deals, off the route. Deals that
+      need a purchase stay off your route until you turn them on under What I'm after; bars are on, and turn off
+      there too. A ticket for later (a Great Clips or Freddy's card) doesn't open your route unless it has to. Store
+      locations are checked against the chains' store pages and OpenStreetMap. Drive times are worked out ahead of time on the road network (OSRM,
       from OpenStreetMap) from a grid of points across the metro to every store, so your phone can time your trip
       without sending your location anywhere.</p>
     <h3 class="h3">Limits</h3>
