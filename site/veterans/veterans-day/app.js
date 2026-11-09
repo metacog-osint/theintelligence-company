@@ -1,10 +1,11 @@
-/*! Veterans Day 2026 planner · app v1.0 · The Intelligence Company. Load tic-time.js and engine.js first.
+/*! Veterans Day 2026 planner · app v1.1 · The Intelligence Company. Load tic-time.js, engine.js and roads.js first.
  *  Everything about the user (settings, history, position) stays in this browser. The only network calls: the
- *  page's own data files, the NWS forecast, the shared field-report service (API below) and, on the Map tab, map tiles.
+ *  page's own data files, the NWS forecast, the shared field-report service (API below) and, on the Map tab, map tiles
+ *  and the road shapes between the stores on your route (roads.js, from OSRM; never your position).
  */
 (function () {
   "use strict";
-  const E = window.VDEngine, T = window.TicTime;
+  const E = window.VDEngine, T = window.TicTime, R = window.VDRoads;
   const API = "https://vetday.metacog.workers.dev"; // field-report Worker (veterans-day/worker); "" keeps reports on the phone
   const KEY = "vd2026-v1", MIN = 60000, HOUR = 3600000;
   const CATS = [["breakfast", "Breakfast"], ["meal", "Sit-down meals"], ["quick", "Quick bites"], ["coffee", "Coffee"],
@@ -39,6 +40,7 @@
   const live = { pos: null, acc: null, at: 0, watch: null, last: null };
   const shared = { events: [], overrides: {}, community: null, at: 0, ok: null };
   let focus = null, picking = false, map = null, mapLayer = null, mapReady = null, lastAnnounce = "";
+  let roadLines = null, routeLayer = null, shownRoute = null; // the Map's route line (roads.js)
 
   // ---------------------------------------------------------------- small helpers
   const $ = (s, r) => (r || document).querySelector(s);
@@ -657,6 +659,9 @@
       L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
         maxZoom: 19, attribution: "© <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors"
       }).addTo(map);
+      map.createPane("vdroute"); // the route line: over the store dots, under the numbered stops (app.css)
+      routeLayer = L.layerGroup([], { attribution: "Routes: OSRM" }).addTo(map);
+      roadLines = R.create({ fetch: (u, o) => fetch(u, o), onUpdate: () => { if (currentTab() === "map") drawRoute(); } });
       mapLayer = L.layerGroup().addTo(map);
       map.on("click", (ev) => {
         if (!picking) return;
@@ -685,6 +690,23 @@
       fillColor: css("--mark"), fillOpacity: 1 }).bindPopup(popup(best.c)).addTo(mapLayer);
     if (where.kind !== "center") L.circleMarker([where.pos.lat, where.pos.lng], { radius: 6, color: ring, weight: 2,
       fillColor: css("--focus"), fillOpacity: 1 }).bindTooltip(where.kind === "gps" ? "You" : "Your start").addTo(mapLayer);
+    shownRoute = { stops: plan.steps.map((x) => x.c.place), where };
+    drawRoute();
+    roadLines.want(shownRoute.stops); // stores only: never where you are
+  }
+  // The route line: along the roads between stores once OSRM's shapes are in, straight until then. The leg from you
+  // to the first stop is always straight and drawn here, on the phone, so your position and start point are never sent.
+  function drawRoute() {
+    if (!routeLayer || !shownRoute) return;
+    const L = window.L, { stops, where } = shownRoute;
+    routeLayer.clearLayers();
+    const draw = (pts, road) => {
+      const kind = road ? " vd-road" : " vd-straight";
+      L.polyline(pts, { pane: "vdroute", interactive: false, className: "vd-halo" + kind }).addTo(routeLayer);
+      L.polyline(pts, { pane: "vdroute", interactive: false, className: "vd-line" + kind }).addTo(routeLayer);
+    };
+    if (stops.length && where.kind !== "center") draw([[where.pos.lat, where.pos.lng], [stops[0].lat, stops[0].lng]], false);
+    roadLines.lines(stops).forEach((ln) => draw(ln.pts, ln.road));
   }
   function popup(c) {
     return h("div", { class: "vd-pop" }, h("b", null, c.offer.brand), h("span", null, c.offer.offer),
@@ -753,6 +775,7 @@
     else if (tab === "deals") renderDeals();
     else if (tab === "me") renderMe();
     else if (tab === "map") renderMap();
+    if (tab !== "map" && roadLines) roadLines.want([]); // ask OSRM for nothing while the Map is hidden
   }
 
   function startGps() {

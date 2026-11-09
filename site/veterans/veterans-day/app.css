@@ -182,11 +182,25 @@ select, input[type=search], input[type=url], input:not([type]), input[type=text]
 .panel-map { gap: 8px; }
 .map { height: min(70vh, 560px); border-radius: 10px; border: 1px solid var(--rule); background: var(--chip); }
 .legend { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: center; font-size: 14px; }
-.key { display: inline-block; width: 14px; height: 14px; border-radius: 50%; vertical-align: -2px; margin-right: -8px; }
+.legend .leg { display: inline-flex; align-items: center; gap: 6px; } /* each key wraps with its label */
+.key { display: inline-block; flex: none; width: 14px; height: 14px; border-radius: 50%; }
 .key-now { background: var(--now); border: 2px solid var(--ring); outline: 1px solid var(--now); }
 .key-later { background: var(--later); border: 2px solid var(--ring); outline: 1px solid var(--later); }
 .key-hollow { background: transparent; border: 3px solid var(--now); }
 .key-next { background: var(--mark); border: 3px solid var(--ink); width: 18px; height: 18px; }
+.key-road, .key-straight { width: 24px; border-radius: 0; }
+.key-road { height: 5px; border-radius: 3px; background: var(--ink); }
+.key-straight { height: 0; border-top: 3px dashed var(--ink); }
+/* The route line (roads.js): ink on a halo of paper, so it reads on the tiles in light and dark mode. Solid where it
+   follows the roads, dashed where it is straight (from you to stop 1, or until the road shape arrives). Its own pane
+   puts it over the store dots (taps go through it to them) and under the numbered stops; these rules override the
+   colours Leaflet writes on each line. */
+.leaflet-pane.leaflet-vdroute-pane { z-index: 450; }
+.leaflet-pane path.vd-halo { stroke: var(--paper); stroke-opacity: .85; stroke-width: 9px; fill: none; }
+.leaflet-pane path.vd-line { stroke: var(--ink); stroke-opacity: 1; stroke-width: 4.5px; fill: none; }
+.leaflet-pane path.vd-straight { stroke-dasharray: 9 7; stroke-linecap: butt; }
+.leaflet-pane path.vd-halo.vd-straight { stroke-width: 7px; }
+.leaflet-pane path.vd-line.vd-straight { stroke-width: 3px; }
 .vd-num { background: var(--ink); color: var(--paper); border: 2px solid var(--mark); border-radius: 50%;
   font: 600 12px/20px var(--sans); text-align: center; width: 24px; height: 24px; }
 .vd-pop { display: grid; gap: 4px; font: 400 14px/1.4 var(--sans); min-width: 180px; }

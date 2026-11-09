@@ -164,9 +164,16 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
 - Same house rules as the hub page, tested in `tests/veterans.test.js` and `tests/veterans-engine.test.js`: no inline
   code or styles, the location label, footer, About structure (what it is, method, limits, sources) and Time
   button. `firebase.json`'s CSP gained `https://api.weather.gov` (connect) and `https://tile.openstreetmap.org` (img)
-  for it; `site.test.js` counts the planner's fetch origins (`veteransOrigins()` in `tests/lib/source.js`).
+  for it, and `https://router.project-osrm.org` (connect) for the Map's route line (9 Nov 2026); `site.test.js` counts
+  the planner's fetch origins (`veteransOrigins()` in `tests/lib/source.js`, which reads `API` in `app.js` and
+  `ROUTER` in `roads.js`).
 - Privacy promise on the page: location, settings and history stay on the phone; reports carry no ID. Change the
-  page's Privacy text before changing that.
+  page's Privacy text before changing that. **Route line (9 Nov 2026, "Build it as written"):** the Map sends the
+  stores on the route, in order, to OSRM's public server (FOSSGIS) for road shapes, never the position or start point;
+  the leg from you to stop 1 is drawn straight on the phone. The Privacy text says so, including that stop 1 hints at
+  the user's part of town; the Me tab reads "Everything here stays on this phone. None of it is sent anywhere."
+  `roads.js`, `tests/veterans-roads.test.js` and `tests/veterans-map.test.js` (a browser check that only store
+  coordinates are ever sent); details in `veterans-day/README.md`.
 - **Route builder (8 Nov 2026; live since about 6:55 PM CST that day from `87ccead`, approved; not pushed):** the Route tab
   replaced Next and Plan as the main page: start, leave and done-by times, Best for me or Maximize (most stops, most
   savings, both), What I'm after chips (Love/Fine/Off, plus "Deals that need a purchase", Off by default), take food

@@ -11,6 +11,10 @@ Checks for the hub site (`../site`), the house bar every program site carries, a
 | `nav.test.js` | The house bar on a stand-in product page: menu, "You are here", keyboard, phone | Playwright |
 | `a11y.test.js` | axe (WCAG 2.2 AA and best practices) in light and dark, desktop and phone; contrast of the drawing's labels | Playwright, axe |
 | `feeds.test.js` | `check-live.js` itself, against a stand-in server | Node |
+| `veterans.test.js` | The Veterans Day planner's house rules and data: no inline code, CSP, page text (privacy, sources), deals vs stores vs drive tables | Node only |
+| `veterans-engine.test.js` | The planner's route engine (`engine.js`) | Node only |
+| `veterans-roads.test.js` | The Map's route line (`roads.js`): splitting OSRM's answer into legs, one request a second, legs kept, failures and timeouts stay straight | Node only |
+| `veterans-map.test.js` | The planner's Map in Chromium with a stand-in OSRM: only store coordinates are sent (never a start point or GPS position), the road line replaces the straight one, offline fallback, colours in light and dark | Playwright |
 | `check-live.js` | The seven live feeds have every field the hub reads (not a test; needs the internet) | Node |
 
 ## Run
