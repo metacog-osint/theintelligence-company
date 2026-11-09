@@ -150,6 +150,10 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   (`aa3c8206-bcaf-4c90-b108-a6d29d0cd46d`), deployed with the publisher's `wrangler login` (OAuth); run wrangler with
   `env -u CLOUDFLARE_API_TOKEN` so it uses that sign-in. Smashburger is out (its Fargo store closed, October 2026;
   the publisher). Still to do: re-check local offers and VFW/Legion posts on Tue 10 Nov and rebuild.
+- **Review against the consolidated report (8 Nov 2026 night):** 66 deals at 161 stores, `research/extras-2026.json`
+  (other days; earlier-years-only leads), bars on with a drive-safe line and no per-route cap, engine v1.2 keeps
+  a ticket for later from opening a route, fargobites.com never linked (it redirects to a "verify" lure). Details in
+  `veterans-day/README.md`.
 - 8 Nov 2026: a usable Veterans Day giveaway program his Guard colleagues can use on Wed 11 Nov 2026, with
   live location, timing against each deal's window, preferences, vetoes and strikes, and got-it / turned-away
   marks; the first piece of a planned "For veterans" section here (Title 10 and future military programs to follow).
