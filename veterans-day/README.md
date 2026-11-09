@@ -9,8 +9,9 @@ Built 8 Nov 2026 at request for Guard colleagues and other veterans in Fargo-Moo
 - **Route:** the whole day from where you are, timed against each deal's window, with Best for me or Maximize
   (most stops, most savings, both), Google Maps links (10 stops per link, Google's limit) and other choices. Got it /
   Turned away / Skip (a strike; three is a veto) / Never on the first stop; Go here first / Not today on the rest.
-- **Map**, **Deals** (search, filter, sources, pins), **Me** (status, spouse and kids, proof carried, sign-ups,
-  sit-down meals, pace, done-by time, roads, busy times, likes, history, vetoes).
+- **Map** (every deal, with the route drawn along the roads), **Deals** (search, filter, sources, pins), **Me**
+  (status, spouse and kids, proof carried, sign-ups, sit-down meals, pace, done-by time, roads, busy times, likes,
+  history, vetoes).
 - Before 4 AM CST on 11 Nov it runs in **preview**, planning as if it were Wednesday at a time you pick; marks made
   in preview stay on the phone and are never sent.
 
@@ -57,14 +58,51 @@ Built 8 Nov 2026 at request for Guard colleagues and other veterans in Fargo-Moo
 - `firebase.json` serves the planner's JSON with `no-cache` (9 Nov 2026), so a rebuild reaches phones at once and
   `deals.json` and `drive.json` can't come from different builds.
 
+## Route line on the Map (roads.js v1.0, 9 Nov 2026)
+9 Nov 2026: "I would like to see an actual route line depicted on the map." He approved the plan and the privacy
+wording the same day ("Build it as written").
+- The Map draws the current route at once as a straight dashed line through the stops (offline, nothing sent). Then
+  `roads.js` asks OSRM's public server (`https://router.project-osrm.org`, the demo server `drive_matrix.py` also
+  uses, run by FOSSGIS e.V.) for the road shapes of the store-to-store legs, and each solid road leg replaces its
+  dashed one as it arrives.
+- **Never the position.** Only store coordinates, which are public places, are sent. The leg from you (GPS, start
+  point or last marked stop) to stop 1 is always a straight dashed line drawn in `app.js` (`drawRoute`), and
+  `roads.js` only ever receives each stop's id, latitude and longitude. With no location or start, there is no first
+  leg. `tests/veterans-map.test.js` loads the page in a browser with a made-up start point and a made-up GPS fix and
+  checks every coordinate sent is a store's.
+- **Load on OSRM's demo server** (its terms: at most one request a second, reasonable non-commercial use, no uptime
+  promise): one request covers the stretch of the route that has no road shape yet, and each leg is kept for the visit,
+  so marking a stop, the 30-second refresh and re-plans that reuse legs send nothing. At most one request a second,
+  8-second timeout, and a leg that failed waits a minute. Requests happen only while the Map tab is open.
+- OSRM's answer (`overview=full&geometries=geojson&annotations=distance`) is one line for the whole run; leg i has as
+  many segments as `legs[i].annotation.distance` has entries and neighbouring legs share their joining point (checked
+  against the live server, 9 Nov 2026; a real answer is in `tests/fixtures/osrm-route.json`). An answer that doesn't
+  fit is refused and the legs stay straight.
+- Look: ink on a paper halo (`app.css`), solid by road, dashed where straight, in its own Leaflet pane (`vdroute`,
+  z-index 450) over the store dots and under the numbered stops; the line ignores taps, so the dots under it still open.
+  Legend keys "Your route by road" and "Straight line: from you to stop 1, or until roads load"; each legend key now
+  wraps with its label. The attribution reads "Routes: OSRM"; the note under the map adds "Road lines: OSRM. A road
+  wrong? Fix the map ↗" (FOSSGIS asks for credit and a fix-the-map link).
+- Page text (approved wording): a second paragraph under Your privacy (what OSRM sees, that FOSSGIS keeps
+  requests in its server log, never your location or start point, stop 1 hints at your part of town), the Sources line
+  ("Drive times and route lines: OSRM, on OpenStreetMap data (route lines from the public server run by FOSSGIS)"),
+  and the Me tab's "Everything here stays on this phone. None of it is sent anywhere." (was "Nothing about you is sent
+  anywhere", broader than the reports and route line allow).
+- Not verified: how long FOSSGIS keeps its logs. Its usage and privacy pages (fossgis.de) sit behind a bot check; its
+  about page (routing.openstreetmap.de/about.html) says requests are saved in the server log.
+- The map's view isn't fitted to the route, so a long route can run off the default view (offered to the publisher as a
+  follow-up, 9 Nov 2026).
+
 ## Rebuilding the data
 From the repo root (Windows: `python`, not `python3`):
 
 ```
 python -I veterans-day/build/build_data.py      # research -> data/deals.json (Census geocoder, NWS link)
 python -I veterans-day/build/drive_matrix.py    # only when stores change: OSRM tables -> data/drive.json (~2 min)
-cd tests && node --test --no-warnings veterans.test.js veterans-engine.test.js site.test.js
+cd tests && node --test --no-warnings veterans.test.js veterans-engine.test.js veterans-roads.test.js site.test.js
 ```
+
+`tests/veterans-map.test.js` (the Map in a browser) needs Playwright: see `tests/README.md`.
 
 `tests/veterans.test.js` fails if `drive.json` no longer matches the stores in `deals.json`. Every editorial
 decision (which offers, category, minutes at the stop, peak lines, call-first notes, windows) is in `CURATE` at the

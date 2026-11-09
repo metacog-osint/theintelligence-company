@@ -114,12 +114,15 @@
     <h2 id="map-h" class="sr">Map of the deals</h2>
     <div id="map" class="map" role="region" aria-label="Map of deal locations"></div>
     <p class="legend" id="legend">
-      <span class="key key-now"></span> Open now and reachable
-      <span class="key key-later"></span> Later today
-      <span class="key key-hollow"></span> Not confirmed for 2026 (hollow)
-      <span class="key key-next"></span> Next stop
+      <span class="leg"><span class="key key-now"></span> Open now and reachable</span>
+      <span class="leg"><span class="key key-later"></span> Later today</span>
+      <span class="leg"><span class="key key-hollow"></span> Not confirmed for 2026 (hollow)</span>
+      <span class="leg"><span class="key key-next"></span> Next stop</span>
+      <span class="leg"><span class="key key-road"></span> Your route by road</span>
+      <span class="leg"><span class="key key-straight"></span> Straight line: from you to stop 1, or until roads load</span>
     </p>
-    <p class="note">Every pin is also in the list under Deals. Map: © OpenStreetMap contributors.</p>
+    <p class="note">Every pin is also in the list under Deals. Map: © OpenStreetMap contributors. Road lines: OSRM.
+      A road wrong? <a href="https://www.openstreetmap.org/fixthemap" target="_blank" rel="noopener" aria-describedby="newtab">Fix the map ↗</a></p>
   </section>
 
   <!-- Deals: everything, searchable -->
@@ -165,7 +168,7 @@
   <!-- Me: who you are, what you like, how your day is going -->
   <section id="tab-me" class="panel" aria-labelledby="me-h" hidden>
     <h2 id="me-h" class="h2">About you and your day</h2>
-    <p class="note">Everything here stays on this phone. Nothing about you is sent anywhere.</p>
+    <p class="note">Everything here stays on this phone. None of it is sent anywhere.</p>
     <form id="me-form" class="me-form">
       <fieldset><legend>I am</legend>
         <label><input type="radio" name="status" value="veteran"> A veteran</label>
@@ -251,9 +254,15 @@
       To stop the same phone sending floods of reports, the server keeps a scrambled form of your network address for
       a day, and then deletes it. The map's background tiles come from the OpenStreetMap Foundation, which, like any online
       map, sees which area you are looking at.</p>
+    <p id="privacy-roads">The route line on the map follows the roads between your stops. To draw it, the Map sends the
+      stores on your route, in order, to OSRM's public routing server (run by FOSSGIS, a German OpenStreetMap
+      association), which keeps requests in its server log. It never sends your location or your start point: the line
+      from you to your first stop is drawn straight, on this phone. Your first stop is usually near you, so like the
+      map tiles, the store list hints at your part of town.</p>
     <h3 class="h3">Sources</h3>
     <p id="sources-line">Each deal lists its own sources under Deals. Places: © OpenStreetMap contributors (ODbL) and
-      the US Census Bureau geocoder. Routing: OSRM. Weather: National Weather Service. Map tiles: OpenStreetMap Foundation.</p>
+      the US Census Bureau geocoder. Drive times and route lines: OSRM, on OpenStreetMap data (route lines from the
+      public server run by FOSSGIS). Weather: National Weather Service. Map tiles: OpenStreetMap Foundation.</p>
   </section>
 </main>
 
@@ -266,6 +275,7 @@
 
 <script src="/shared/tic-time.js"></script>
 <script src="engine.js"></script>
+<script src="roads.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

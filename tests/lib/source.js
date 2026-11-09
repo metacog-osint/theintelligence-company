@@ -67,6 +67,8 @@ export function veteransOrigins() {
   const out = new Set();
   const api = /const API = "([^"]*)"/.exec(read("site/veterans/veterans-day/app.js"));
   if (api && api[1]) out.add(new URL(api[1]).origin);
+  const router = /var ROUTER = "([^"]*)"/.exec(read("site/veterans/veterans-day/roads.js"));
+  if (router && router[1]) out.add(new URL(router[1]).origin);
   const meta = JSON.parse(read("site/veterans/veterans-day/data/deals.json")).meta;
   if (meta.forecast_url) out.add(new URL(meta.forecast_url).origin);
   return [...out];

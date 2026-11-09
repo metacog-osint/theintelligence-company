@@ -7,7 +7,7 @@ import { SITE, read } from "./lib/source.js";
 
 const DIR = "site/veterans/veterans-day/";
 const HTML = read(DIR + "index.html");
-const SCRIPTS = { "app.js": read(DIR + "app.js"), "engine.js": read(DIR + "engine.js") };
+const SCRIPTS = { "app.js": read(DIR + "app.js"), "engine.js": read(DIR + "engine.js"), "roads.js": read(DIR + "roads.js") };
 const DEALS = JSON.parse(read(DIR + "data/deals.json"));
 const DRIVE = JSON.parse(read(DIR + "data/drive.json"));
 const DAY_START = Date.parse(DEALS.meta.day_start);
@@ -52,6 +52,26 @@ test("the CSP lets the map tiles in", () => {
   const fb = JSON.parse(read("firebase.json"));
   const csp = fb.hosting[0].headers.flatMap((r) => r.headers).find((h) => h.key === "Content-Security-Policy").value;
   assert.match(csp, /img-src [^;]*https:\/\/tile\.openstreetmap\.org/);
+});
+
+test("the route line: OSRM is let in, and the page says what it sees and that your location never leaves the phone", () => {
+  const fb = JSON.parse(read("firebase.json"));
+  const csp = fb.hosting[0].headers.flatMap((r) => r.headers).find((h) => h.key === "Content-Security-Policy").value;
+  assert.match(csp, /connect-src [^;]*https:\/\/router\.project-osrm\.org/);
+  assert.match(SCRIPTS["roads.js"], /var ROUTER = "https:\/\/router\.project-osrm\.org"/);
+  assert.ok(HTML.indexOf('<script src="roads.js">') > HTML.indexOf('<script src="engine.js">') &&
+    HTML.indexOf('<script src="roads.js">') < HTML.indexOf('<script src="app.js">'), "roads.js loads before app.js");
+  const squash = (s) => s.replace(/\s+/g, " ");
+  const privacy = squash(/<h3 class="h3">Your privacy<\/h3>([\s\S]*?)<h3/.exec(HTML)[1]);
+  assert.match(privacy, /Your location, settings and history stay on your phone\./);
+  assert.match(privacy, /the Map sends the stores on your route, in order, to OSRM's public routing server \(run by FOSSGIS/);
+  assert.match(privacy, /It never sends your location or your start point: the line from you to your first stop is drawn straight, on this phone\./);
+  assert.match(privacy, /the store list hints at your part of town/);
+  assert.match(squash(HTML), /Drive times and route lines: OSRM, on OpenStreetMap data \(route lines from the public server run by FOSSGIS\)/);
+  assert.match(HTML, /Everything here stays on this phone\. None of it is sent anywhere\./);
+  assert.ok(!/Nothing about you is sent anywhere/.test(HTML), "the old, broader promise is gone");
+  for (const k of ["key-road", "key-straight"]) assert.match(HTML, new RegExp(`class="key ${k}"`), k);
+  assert.match(HTML, /<a href="https:\/\/www\.openstreetmap\.org\/fixthemap" target="_blank" rel="noopener" aria-describedby="newtab">Fix the map ↗<\/a>/);
 });
 
 test("the data files are revalidated on every load, so a rebuild reaches phones at once and the two never mismatch", () => {

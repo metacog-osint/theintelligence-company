@@ -1,7 +1,22 @@
-# Hub handoff: where things stand (8 Nov 2026, 7:05 PM CST: Veterans Day route builder live; Vis follow-ups; Vis live across the suite)
+# Hub handoff: where things stand (9 Nov 2026, 12:30 PM CST: Veterans Day route line built, not committed; 8 Nov: route builder live, Vis live across the suite)
 
 Read with `CLAUDE.md` (the project's notes). Times are Central (CST since 1 Nov). Each commit, push and deploy needs
 Tom's yes.
+
+## Veterans Day planner: route line on the Map, 9 Nov 2026, about 12:30 PM CST ("I would like to see an actual route line depicted on the map", then "Build it as written")
+Built in the main checkout; **not committed, pushed or deployed** (each needs approved; deploy with
+`firebase deploy --only hosting:hub --project context-484804`). The Map now draws the current route: a straight dashed
+line through the stops at once, then the store-to-store legs along the roads from OSRM's public server
+(`router.project-osrm.org`, run by FOSSGIS; the one `drive_matrix.py` uses). The leg from you to stop 1 is always
+straight and drawn on the phone, so the position and start point never leave it. New `roads.js` v1.0 (one request
+per missing stretch, legs kept for the visit, at most one request a second, 8 s timeout, a failed leg waits a minute,
+only while the Map is open); `connect-src` gained `https://router.project-osrm.org`; approved wording for
+Privacy, Sources, the Me note and the map note; legend keys now wrap with their labels. Tests: new
+`veterans-roads.test.js` (12) and `veterans-map.test.js` (4, browser: only store coordinates sent, never a start point
+or GPS fix); the unit tests caught `isFinite(null)` letting a bad point through, fixed. Checked live in the `hub-main`
+preview at phone size, light and dark: one real OSRM request for 7 stores, road line drawn. Details and what wasn't
+verified (FOSSGIS's log retention) in `veterans-day/README.md` ("Route line on the Map"). Offered as a follow-up: fit
+the map's view to the route when the Map opens, since a long route can run off the default view.
 
 ## Veterans Day planner: Tuesday checklist run early, 8 Nov 2026, about 9:45 PM CST ("Push to GitHub, commit and deploy")
 asked for the Tuesday re-checks with his file `Documents\2026 Veterans Day discounts.txt`. **Live** since about
