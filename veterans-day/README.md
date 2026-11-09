@@ -60,7 +60,7 @@ Built 8 Nov 2026 at request for Guard colleagues and other veterans in Fargo-Moo
 
 ## Route line on the Map (roads.js v1.0, 9 Nov 2026)
 9 Nov 2026: "I would like to see an actual route line depicted on the map." He approved the plan and the privacy
-wording the same day ("Build it as written").
+wording the same day ("Build it as written"). **Live** since about 12:30 PM CST 9 Nov 2026 from `8db32a6`.
 - The Map draws the current route at once as a straight dashed line through the stops (offline, nothing sent). Then
   `roads.js` asks OSRM's public server (`https://router.project-osrm.org`, the demo server `drive_matrix.py` also
   uses, run by FOSSGIS e.V.) for the road shapes of the store-to-store legs, and each solid road leg replaces its

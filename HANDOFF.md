@@ -1,11 +1,13 @@
-# Hub handoff: where things stand (9 Nov 2026, 12:30 PM CST: Veterans Day route line built, not committed; 8 Nov: route builder live, Vis live across the suite)
+# Hub handoff: where things stand (9 Nov 2026, 12:30 PM CST: Veterans Day route line live from 8db32a6; 8 Nov: route builder live, Vis live across the suite)
 
 Read with `CLAUDE.md` (the project's notes). Times are Central (CST since 1 Nov). Each commit, push and deploy needs
 Tom's yes.
 
 ## Veterans Day planner: route line on the Map, 9 Nov 2026, about 12:30 PM CST ("I would like to see an actual route line depicted on the map", then "Build it as written")
-Built in the main checkout; **not committed, pushed or deployed** (each needs approved; deploy with
-`firebase deploy --only hosting:hub --project context-484804`). The Map now draws the current route: a straight dashed
+**Live** since about 12:30 PM CST from `8db32a6` ("Commit, push, deploy"; pushed; GitHub's site-checks green).
+Checked live: the files match the commit, the CSP's `connect-src` lists OSRM, and headless Edge at phone size drew the
+road line from one OSRM request, with the start point not sent and no console errors. The first deploy attempt failed
+because the Firebase CLI sign-in for metacog@ had expired; the publisher ran `firebase login --reauth`. The Map now draws the current route: a straight dashed
 line through the stops at once, then the store-to-store legs along the roads from OSRM's public server
 (`router.project-osrm.org`, run by FOSSGIS; the one `drive_matrix.py` uses). The leg from you to stop 1 is always
 straight and drawn on the phone, so the position and start point never leave it. New `roads.js` v1.0 (one request
