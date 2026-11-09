@@ -20,7 +20,7 @@
 <link rel="stylesheet" href="app.css">
 </head>
 <body>
-<a class="skip" href="#main">Skip to the next stop</a>
+<a class="skip" href="#main">Skip to your route</a>
 <header class="top">
   <div class="util">
     <a class="home" href="/">← The Intelligence Company</a>
@@ -32,8 +32,7 @@
     <p class="clock" id="clock" aria-live="off">Loading the deals…</p>
   </div>
   <nav class="tabs" aria-label="Sections">
-    <a href="#next" class="tab" data-tab="next" aria-current="page">Next</a>
-    <a href="#plan" class="tab" data-tab="plan">Plan</a>
+    <a href="#route" class="tab" data-tab="route" aria-current="page">Route</a>
     <a href="#map" class="tab" data-tab="map">Map</a>
     <a href="#deals" class="tab" data-tab="deals">Deals</a>
     <a href="#me" class="tab" data-tab="me">Me</a>
@@ -41,9 +40,9 @@
 </header>
 
 <main id="main">
-  <!-- Next: where to go now -->
-  <section id="tab-next" class="panel" aria-labelledby="next-h">
-    <h2 id="next-h" class="sr">Where to go next</h2>
+  <!-- Route: the day, built from where you are, what you're after and the time left; rebuilt on every change -->
+  <section id="tab-route" class="panel" aria-labelledby="route-h">
+    <h2 id="route-h" class="sr">Your route</h2>
     <div id="preview" class="preview" hidden>
       <p class="preview-text"><b>Preview.</b> It isn't Veterans Day yet, so the app plans as if it were
         <span id="preview-when">Wednesday at 8:00 AM</span>.</p>
@@ -52,43 +51,60 @@
     <div id="over" class="preview" hidden>
       <p><b>Veterans Day 2026 is over.</b> Thank you for your service. Your totals are under Me.</p>
     </div>
-    <div class="locbar" id="locbar">
-      <p id="loc-status" class="loc-status">Drive times need a starting point.</p>
-      <div class="loc-actions">
-        <button type="button" id="loc-gps" class="btn">Use my location</button>
-        <button type="button" id="loc-map" class="btn btn-quiet">Pick a start on the map</button>
+    <form id="rb" class="rb" aria-label="Build your route">
+      <div class="locbar" id="locbar">
+        <p id="loc-status" class="loc-status">Drive times need a starting point.</p>
+        <div class="loc-actions">
+          <button type="button" id="loc-gps" class="btn">Use my location</button>
+          <button type="button" id="loc-map" class="btn btn-quiet">Pick a start on the map</button>
+        </div>
       </div>
-    </div>
+      <div class="rb-times">
+        <label>Leave <select id="rb-leave"></select></label>
+        <label>Done by <select id="rb-end"></select></label>
+      </div>
+      <fieldset class="rb-goal">
+        <legend>Plan for</legend>
+        <div class="seg seg-wide" id="goal-kind" role="group" aria-label="Plan for">
+          <button type="button" data-kind="best">Best for me</button>
+          <button type="button" data-kind="max">Maximize</button>
+        </div>
+        <div class="seg seg-wide" id="goal-max" role="group" aria-label="Maximize" hidden>
+          <button type="button" data-goal="stops">Most stops</button>
+          <button type="button" data-goal="savings">Most savings</button>
+          <button type="button" data-goal="both">Stops + savings</button>
+        </div>
+        <p class="note" id="goal-note"></p>
+      </fieldset>
+      <details class="rb-likes" id="rb-likes">
+        <summary id="likes-sum">What I'm after</summary>
+        <p class="note">Tap to switch between Fine, Love and Off.</p>
+        <div id="likes" class="likes"></div>
+        <label class="check"><input type="checkbox" id="rb-togo"> Take food home when I can, so it doesn't fill me up</label>
+        <p class="note">Pace, sit-down meals, busy times and who's with you are under Me.</p>
+      </details>
+    </form>
     <div id="wx" class="wx" hidden></div>
-    <article id="next-card" class="card next" aria-live="polite"></article>
-    <div id="then-wrap" hidden>
+    <p id="route-sum" class="route-sum" aria-live="polite"></p>
+    <article id="next-card" class="card next"></article>
+    <div id="route-wrap" hidden>
       <h3 class="h3">Then</h3>
-      <ol id="then" class="then"></ol>
+      <ol id="route-list" class="route-list"></ol>
+      <p id="route-end" class="note"></p>
+      <p id="route-links" class="links"></p>
+    </div>
+    <div id="soon-wrap" hidden>
+      <h3 class="h3">Ending soon, not on your route</h3>
+      <ul id="soon" class="alts"></ul>
     </div>
     <div id="alts-wrap" hidden>
-      <h3 class="h3">Other good choices from here</h3>
+      <h3 class="h3">Other places you could go next</h3>
       <ul id="alts" class="alts"></ul>
     </div>
     <details id="ready" class="ready">
       <summary>Get ready before Wednesday</summary>
       <ul id="ready-list" class="ready-list"></ul>
     </details>
-  </section>
-
-  <!-- Plan: the whole day -->
-  <section id="tab-plan" class="panel" aria-labelledby="plan-h" hidden>
-    <h2 id="plan-h" class="h2">Plan the whole day</h2>
-    <form id="plan-form" class="plan-form">
-      <label>Start at <select id="plan-start"></select></label>
-      <label>From <select id="plan-from">
-        <option value="here">Where I am now</option>
-        <option value="start">My start point</option>
-      </select></label>
-      <button type="submit" class="btn">Plan my day</button>
-    </form>
-    <p class="note" id="plan-note">The plan respects every deal's hours, your busy times, how many sit-down meals you
-      want and your pace (set under Me). Pin a deal under Deals to make the plan include it.</p>
-    <div id="plan-out"></div>
   </section>
 
   <!-- Map -->
@@ -197,9 +213,10 @@
     <h2 id="about-h" class="h2">About this</h2>
     <h3 class="h3">What it is</h3>
     <p>A free planner for veterans and service members in Fargo-Moorhead on Veterans Day, Wednesday 11 November
-      2026. It suggests where to go next from where you are, checks you can get there before each deal ends, and
-      learns from what you skip and collect. Veterans who use it share whether each deal was honoured, so everyone
-      sees what's working.</p>
+      2026. It builds your route from where you are, what you're after and the time you have left, checks you can
+      get to each stop before its deal ends, and re-plans as you go. Pick Best for me, or Maximize for the most stops,
+      the most savings or both. It learns from what you skip and collect, and veterans who use it share whether each
+      deal was honoured, so everyone sees what's working.</p>
     <h3 class="h3">Method</h3>
     <p>Offers come from each business's own 2026 announcements where we found them, and otherwise from 2026 deal
       lists (Military.com, Stars and Stripes and others) and local news. Every deal shows its sources and a grade:

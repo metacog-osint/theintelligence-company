@@ -54,6 +54,32 @@ test("the CSP lets the map tiles in", () => {
   assert.match(csp, /img-src [^;]*https:\/\/tile\.openstreetmap\.org/);
 });
 
+test("the data files are revalidated on every load, so a rebuild reaches phones at once and the two never mismatch", () => {
+  const fb = JSON.parse(read("firebase.json"));
+  const rule = fb.hosting[0].headers.find((r) => r.source === "/veterans/**/*.json");
+  assert.ok(rule, "a header rule for the planner's JSON");
+  assert.equal(rule.headers.find((h) => h.key === "Cache-Control").value, "no-cache");
+});
+
+test("the route builder is the first tab: goals, likes, times and the route's parts are on the page", () => {
+  assert.match(HTML, /<a href="#route" class="tab" data-tab="route" aria-current="page">Route<\/a>/);
+  assert.ok(!/data-tab="(next|plan)"/.test(HTML), "the old Next and Plan tabs are gone");
+  for (const id of ["rb", "rb-leave", "rb-end", "goal-kind", "goal-max", "likes", "rb-togo", "route-sum", "next-card", "route-list", "soon", "alts"]) {
+    assert.match(HTML, new RegExp(`id="${id}"`), id);
+  }
+  for (const g of ["stops", "savings", "both"]) assert.match(HTML, new RegExp(`data-goal="${g}"`));
+});
+
+test("tickets for later are tagged, and deals that need a purchase are marked", () => {
+  const byId = Object.fromEntries(DEALS.offers.map((o) => [o.id, o]));
+  for (const id of ["great-clips", "texas-roadhouse", "freddys"]) {
+    assert.equal(byId[id].ticket, true, `${id} is a ticket`);
+    assert.ok(byId[id].minutes <= 10, `${id} is a quick stop`);
+    assert.ok(!byId[id].group, `${id} doesn't use up a one-a-day slot`);
+  }
+  for (const id of ["firehouse-subs", "chipotle", "jiffy-lube"]) assert.equal(byId[id].purchase, true, `${id} needs a purchase`);
+});
+
 test("the data: every offer has a store, every store an offer, all inside the metro and the day", () => {
   const offers = new Map(DEALS.offers.map((o) => [o.id, o]));
   const ids = new Set();

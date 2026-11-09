@@ -1,5 +1,12 @@
-/*! Veterans Day route engine v1.0 · The Intelligence Company · pure functions: no DOM, no network, no storage.
+/*! Veterans Day route engine v1.1 · The Intelligence Company · pure functions: no DOM, no network, no storage.
  *  Browser: window.VDEngine. Node (tests): require("./engine.js").
+ *
+ *  Goals (profile.goal): "best" weighs each deal's value against your time at your pace; "stops" fits in the most
+ *  places before you're done; "savings" the most dollars; "both" scores each plan half on stops and half on dollars,
+ *  each as a share of what the other two goals reach. Every goal keeps to deal windows, busy times, your done-by
+ *  time, the meal limit, your appetite and anything you've turned off.
+ *  Appetite: food eaten there fills you up (a sit-down meal 1, a quick bite 0.4) and wears off at 0.3 an hour. A
+ *  ticket for later (a voucher or card) and food you take home (profile.togo) fill nothing.
  *
  *  Inputs are plain objects (see prepare()). Times are epoch milliseconds; the data file already holds every window
  *  in UTC, so nothing here depends on a time zone. Drive times come from the data file's tables:
@@ -17,8 +24,12 @@
   var MIN = 60000, HOUR = 3600000;
   var GRADE_P = { A: 0.9, B: 0.75, C: 0.4 };
   var LOCAL_KMH = 25, DETOUR = 1.4, PARK_MS = 2.5 * MIN, ARRIVE_BY_MS = 5 * MIN, MAX_WAIT_MS = 4 * HOUR;
-  var FULL_MS = 2.5 * HOUR, DECAY_MIN = 120, LINE_FRESH_MS = 40 * MIN, OUT_FRESH_MS = 6 * HOUR;
+  var DECAY_MIN = 120, LINE_FRESH_MS = 40 * MIN, OUT_FRESH_MS = 6 * HOUR;
   var PACE = { relaxed: 0.5, balanced: 0.25, max: 0.1 }; // dollars of value a minute of your day is worth
+  var GOALS = ["best", "stops", "savings", "both"];
+  var DIGEST = 0.3; // share of a full meal gone each hour: a sit-down meal wears off in about 3 hours
+  var MEALTIMES = [[360, 630], [630, 870], [990, 1230]]; // local minutes: 6:00–10:30, 10:30–14:30, 16:30–20:30
+  var TAKEAWAY = { to_go: 1, drive_thru: 1, dine_in_or_to_go: 1, in_store: 1 };
 
   function km(a, b) {
     var p = Math.PI / 180, dLat = (b.lat - a.lat) * p, dLng = (b.lng - a.lng) * p;
@@ -102,15 +113,30 @@
     }
     return { ok: ok, f: f, mult: mult, flags: flags };
   }
+  // ---------------------------------------------------------------- appetite
+  // How much of a meal a deal is when eaten there: 1 a sit-down meal, 0 a coffee or a ticket for later.
+  function eatWeight(o) {
+    if (o.ticket) return 0;
+    if (o.eat !== undefined && o.eat !== null) return o.eat;
+    if (o.meal) return o.dineIn ? 1 : 0.8;
+    return o.snack ? 0.4 : 0;
+  }
+  function takeaway(o) { return !o.dineIn && !o.ticket && (!o.mode || !!TAKEAWAY[o.mode]); }
+  function eatsThere(o, togo) { return eatWeight(o) > 0 && !(togo && takeaway(o)); }
+  function digest(fill, from, to) { return Math.max(0, fill - DIGEST * Math.max(0, to - from) / HOUR); }
+  function appetite(fill) { return Math.min(1, Math.max(0.05, 1.15 - fill)); } // empty 1, after a big meal 0.15
+
   var PROOF = { military_id: "military ID", dd214: "DD-214", va_card: "VA ID card", dl_veteran: "veteran driver's licence",
     photo_in_uniform: "photo in uniform", idme_online: "ID.me" };
   function proofLabel(p) { return PROOF[p] || p.replace(/_/g, " "); }
 
   // ---------------------------------------------------------------- preparing a run
   // data: {offers: [...], places: [...], drive: {...}, tzOffsetMin}
-  // profile: {status, spouse, kids, proof: {}, ready: {}, pace, dayEnd(ms), mealsMax, roads, blocks: [{start,end}]}
+  // profile: {status, spouse, kids, proof: {}, ready: {}, pace, dayEnd(ms), mealsMax, roads, blocks: [{start,end}],
+  //           goal: "best"|"stops"|"savings"|"both", togo: true when food that can be taken home is saved for later}
   // state: {done: {offerId: {r: "worked"|"away", t, place}}, away: {placeId: t}, strikes: {offerId: {n, until}},
-  //         vetoed: {offerId: true}, pinned: {offerId: true}, prefs: {category: weight}}
+  //         vetoed: {offerId: true}, pinned: {offerId: true}, prefs: {category: weight, purchase: weight}}
+  //         prefs.purchase weighs deals that need a purchase (a buy-one-get-one, a percentage off); 0 leaves them out.
   // reports: {place: {placeId: [events]}, offer: {offerId: [events]}}
   // overrides: {id: {status: "dead"|"caution", note}} for an offer or a place (set by the operators on the day)
   function prepare(data, profile, state, reports, now, pos, overrides) {
@@ -118,12 +144,17 @@
     reports = reports || { place: {}, offer: {} };
     var offersById = {}, cands = [], excluded = {};
     data.offers.forEach(function (o) { offersById[o.id] = o; });
-    var meals = 0, fullUntil = 0, snacks = 0;
+    // Sit-down meals so far, and how full you are now from what you ate there.
+    var meals = 0, ate = [], fill = 0, fillT = now;
     Object.keys(state.done || {}).forEach(function (id) {
       var d = state.done[id], o = offersById[id];
-      if (o && d.r === "worked" && o.meal && o.dineIn) { meals++; fullUntil = Math.max(fullUntil, d.t + FULL_MS); }
-      if (o && d.r === "worked" && o.snack && now - d.t < 3 * HOUR) snacks++;
+      if (!o || d.r !== "worked") return;
+      if (o.meal && o.dineIn) meals++;
+      if (eatsThere(o, profile.togo)) ate.push({ t: d.t, w: eatWeight(o) });
     });
+    ate.sort(function (a, b) { return a.t - b.t; });
+    ate.forEach(function (e, k) { fill = (k ? digest(fill, fillT, e.t) : 0) + e.w; fillT = e.t; });
+    if (ate.length) fill = digest(fill, fillT, now);
     data.places.forEach(function (pl, i) {
       var o = offersById[pl.offer];
       if (!o) return;
@@ -150,6 +181,11 @@
       var conf = confidence(o, pl.id, reports, now);
       var pref = state.prefs && state.prefs[o.category] !== undefined ? state.prefs[o.category] : 1;
       if (pref <= 0) { excluded[pl.id] = "category off"; return; }
+      if (o.purchase) {
+        var pp = state.prefs && state.prefs.purchase !== undefined ? state.prefs.purchase : 1;
+        if (pp <= 0) { excluded[pl.id] = "needs a purchase (turned off)"; return; }
+        pref *= pp;
+      }
       var flags = el.flags.slice();
       if (state.done && state.done[o.id] && state.done[o.id].r === "away") flags.push("Turned away at another location");
       if (o.caution) flags.push(o.caution);
@@ -157,10 +193,13 @@
       if (overrides[pl.id] && overrides[pl.id].status === "caution") flags.push(overrides[pl.id].note);
       if (conf.ranOut) flags.push("Reported run out");
       var retry = state.done && state.done[o.id] && state.done[o.id].r === "away" ? 0.6 : 1;
+      var q = el.f * conf.p * retry * (o.caution ? 0.7 : 1); // the chance it works out for you
       cands.push({
         i: i, place: pl, offer: o, open: open, close: close, conf: conf, flags: flags,
         // worth: what a stop is worth to the planner when it has no dollar value (a ceremony)
-        base: (o.worth !== undefined ? o.worth : o.value) * el.mult * el.f * conf.p * pref * retry * (o.caution ? 0.7 : 1),
+        base: (o.worth !== undefined ? o.worth : o.value) * el.mult * q * pref,
+        dollars: o.value * el.mult * q,  // "savings": expected dollars, likes ignored
+        count: Math.min(1, q / 0.3),     // "stops": a place counts in full unless it's a long shot
         pinned: !!(state.pinned && state.pinned[o.id])
       });
     });
@@ -172,9 +211,11 @@
       dayEnd: profile.dayEnd, mealsMax: profile.mealsMax === undefined ? 2 : profile.mealsMax,
       blocks: (profile.blocks || []).slice().sort(function (a, b) { return a.start - b.start; }),
       tzOffsetMin: data.tzOffsetMin === undefined ? -360 : data.tzOffsetMin,
-      meals: meals, fullUntil: fullUntil, snacks: snacks
+      goal: GOALS.indexOf(profile.goal) >= 0 ? profile.goal : "best", togo: !!profile.togo, ref: null,
+      meals: meals, fill: fill
     };
   }
+  function withGoal(ctx, goal) { var c = {}; for (var k in ctx) c[k] = ctx[k]; c.goal = goal; return c; }
 
   function localMinutes(ctx, t) { var m = Math.floor((t + ctx.tzOffsetMin * MIN) / MIN) % 1440; return m < 0 ? m + 1440 : m; }
   function isPeak(ctx, t) { var m = localMinutes(ctx, t); return (m >= 690 && m < 795) || (m >= 1020 && m < 1140); }
@@ -213,29 +254,40 @@
     }
     if (start - arrive > MAX_WAIT_MS) return null;
     if (depart > ctx.dayEnd) return null;
-    var full = 1;
-    if (o.meal && o.dineIn) {
-      if (st.meals >= ctx.mealsMax) full = 0.05;
-      else if (start < st.fullUntil) full = 0.25;
-    } else if (o.meal && start < st.fullUntil) full = 0.8; // to go: save it for later
-    if (o.snack) full *= Math.pow(0.85, st.snacks); // each quick bite already eaten makes the next one worth less
-    var ev = c.base * full;
+    // Appetite: eating while full is worth less; a ticket for later or food taken home fills nothing.
+    var w = eatWeight(o), here = eatsThere(o, ctx.togo), fill = digest(st.fill, st.fillT, start), full = 1;
+    if (o.meal && o.dineIn && st.meals >= ctx.mealsMax) return null; // past your sit-down meal limit
+    if (here) full = appetite(fill);
+    if (full < 0.3) return null; // too full to eat it there
+    if (here && o.meal && ctx.goal === "best" && !mealtime(ctx, start)) full *= 0.75;
+    if (w > 0 && !here) full *= 0.9; // saved for later
+    var ev = c.base * full, used = (depart - st.t) / MIN, eat = Math.min(1, full * 2);
     // Driving and lines cost the full rate; time at the stop itself (eating, a haircut) a third of it, since that is
     // the point of going. Waiting for a window to open costs the full rate for 20 minutes, then counts as free time
     // (the plan says "free until …" and you leave later).
     var waitMin = (start - arrive) / MIN;
     var cost = (d / MIN + queue + Math.min(waitMin, 20) + 0.1 * Math.max(0, waitMin - 20) + 0.3 * o.minutes) * ctx.lambda;
-    var gain = ev - cost + (c.pinned ? 40 : 0);
+    var gain;
+    // The Maximize goals ignore pace and likes (Off still counts); the minutes only break ties toward quicker stops.
+    if (ctx.goal === "stops") gain = c.count * eat - 0.003 * used + (c.pinned ? 3 : 0);
+    else if (ctx.goal === "savings") gain = c.dollars * full - 0.01 * used + (c.pinned ? 40 : 0);
+    else if (ctx.goal === "both") gain = 50 * c.count * eat / ctx.ref.n + 50 * c.dollars * full / ctx.ref.d - 0.01 * used + (c.pinned ? 20 : 0);
+    else gain = ev - cost + (c.pinned ? 40 : 0);
     return {
       c: c, leave: leave, arrive: arrive, start: start, depart: depart,
       driveMin: d / MIN, waitMin: (start - arrive) / MIN, queueMin: queue,
       slackMin: (c.close - ARRIVE_BY_MS - arrive) / MIN, arriveBy: c.close - ARRIVE_BY_MS,
-      ev: ev, full: full, gain: gain
+      ev: ev, full: full, gain: gain, eats: here, fillAfter: fill + (here ? w : 0),
+      dollars: c.dollars * full, counts: c.count * eat
     };
+  }
+  function mealtime(ctx, t) {
+    var m = localMinutes(ctx, t);
+    return MEALTIMES.some(function (w) { return m >= w[0] && m < w[1]; });
   }
 
   function startState(ctx, t, at) {
-    return { t: t, at: at === undefined ? -1 : at, used: {}, meals: ctx.meals, fullUntil: ctx.fullUntil, snacks: ctx.snacks, steps: [], score: 0, key: "" };
+    return { t: t, at: at === undefined ? -1 : at, used: {}, meals: ctx.meals, fill: ctx.fill, fillT: ctx.now, steps: [], score: 0, key: "" };
   }
   function extend(st, step) {
     var o = step.c.offer, used = {};
@@ -245,14 +297,29 @@
     var meal = o.meal && o.dineIn;
     return {
       t: step.depart, at: step.c.i, used: used,
-      meals: st.meals + (meal ? 1 : 0), fullUntil: meal ? step.depart + FULL_MS : st.fullUntil, snacks: st.snacks + (o.snack ? 1 : 0),
+      meals: st.meals + (meal ? 1 : 0), fill: step.fillAfter, fillT: step.start,
       steps: st.steps.concat([step]), score: st.score + step.gain,
       key: Object.keys(used).sort().join(",") + "@" + step.c.i
     };
   }
 
+  // A stop can score below zero on its own and still belong in the plan: a quick breakfast while you'd otherwise wait
+  // for a 9:00 opening. "best" keeps such stops (down to 15 minutes of your time) and lets the whole plan's score decide.
+  function floor(ctx) { return ctx.goal === "best" ? -15 * ctx.lambda : 0; }
+  // In the Maximize goals time is what runs out, so the search ranks partial plans by what they've collected less
+  // what their minutes could have collected elsewhere (about a stop every 20 minutes, $0.20 a minute, or the day's
+  // whole score spread over the time left). "best" already prices your time at your pace. The plan kept is still
+  // the one with the highest score.
+  function rate(ctx, t) {
+    if (ctx.goal === "stops") return 1 / 20;
+    if (ctx.goal === "savings") return 0.2;
+    if (ctx.goal === "both") return 100 / Math.max(60, (ctx.dayEnd - t) / MIN);
+    return 0;
+  }
+
   function beam(ctx, start, width, depth) {
-    var states = [start], best = start;
+    var states = [start], best = start, fl = floor(ctx), rho = rate(ctx, start.t);
+    var rank = function (s) { return s.score - rho * (s.t - start.t) / MIN; };
     for (var dpt = 0; dpt < depth && states.length; dpt++) {
       var next = [];
       for (var s = 0; s < states.length; s++) {
@@ -261,18 +328,18 @@
           var c = ctx.cands[j];
           if (st.used[c.offer.id] || (c.offer.group && st.used["g:" + c.offer.group])) continue;
           var step = evalStop(ctx, st, c);
-          if (!step || step.gain <= 0) continue;
+          if (!step || step.gain <= fl) continue;
           next.push(extend(st, step));
         }
       }
-      next.sort(function (a, b) { return b.score - a.score; });
+      next.sort(function (a, b) { return rank(b) - rank(a); });
       var seen = {}, kept = [];
       for (var n = 0; n < next.length && kept.length < width; n++) {
         if (seen[next[n].key]) continue;
         seen[next[n].key] = 1; kept.push(next[n]);
       }
       states = kept;
-      if (kept.length && kept[0].score > best.score) best = kept[0];
+      for (var b = 0; b < kept.length; b++) if (kept[b].score > best.score) best = kept[b];
     }
     return best;
   }
@@ -281,12 +348,13 @@
   // One entry per offer (its best location).
   function nextOptions(ctx, opts) {
     opts = opts || {};
-    var start = startState(ctx, opts.t || ctx.now, opts.at), byOffer = {};
+    needRef(ctx, opts.t || ctx.now);
+    var start = startState(ctx, opts.t || ctx.now, opts.at), byOffer = {}, fl = floor(ctx);
     // First stops: the two best locations of each offer, then the most promising few get the look-ahead.
     var firsts = [], perOffer = {};
     ctx.cands.forEach(function (c) {
       var step = evalStop(ctx, start, c);
-      if (step && step.gain > 0) firsts.push(step);
+      if (step && step.gain > fl) firsts.push(step);
     });
     firsts.sort(function (a, b) { return b.gain - a.gain; });
     firsts = firsts.filter(function (s) {
@@ -303,12 +371,61 @@
       .sort(function (a, b) { return b.total - a.total; }).slice(0, opts.limit || 12);
   }
 
-  // A whole day from a start time and place (position or place index).
+  // A whole day from a start time and place (position or place index). opts.first: a candidate you've chosen to go to
+  // first; the rest of the day is planned after it.
   function planDay(ctx, opts) {
     opts = opts || {};
-    var best = beam(ctx, startState(ctx, opts.t || ctx.now, opts.at), opts.width || 10, opts.depth || 24);
-    var value = best.steps.reduce(function (s, x) { return s + x.c.offer.value * (x.full < 1 ? 1 : 1); }, 0);
-    return { steps: best.steps, score: best.score, value: value };
+    var t = opts.t || ctx.now;
+    needRef(ctx, t);
+    var start = startState(ctx, t, opts.at);
+    if (opts.first) {
+      var lead = evalStop(ctx, start, opts.first);
+      if (lead) start = extend(start, lead);
+    }
+    var best = beam(ctx, start, opts.width || 10, opts.depth || (ctx.goal === "best" ? 24 : 40));
+    best = fillGaps(ctx, start, best);
+    return summarize(best.steps, best.score, ctx.ref);
+  }
+  // Re-run a list of stops from a state; null if one of them no longer fits.
+  function replay(ctx, st, cs) {
+    for (var i = 0; i < cs.length; i++) {
+      var step = evalStop(ctx, st, cs[i]);
+      if (!step) return null;
+      st = extend(st, step);
+    }
+    return st;
+  }
+  // The beam compares plans stop by stop, so a plan that grabs breakfast while waiting for a 9:00 opening looks a
+  // stop behind and drops out. Afterwards, try each unused stop in front of any wait of 15 minutes or more, and keep
+  // the insertion that raises the plan's score most; repeat while it helps.
+  function fillGaps(ctx, start, best) {
+    var n0 = start.steps.length;
+    for (var round = 0; round < 6; round++) {
+      var cs = best.steps.slice(n0).map(function (s) { return s.c; }), top = null;
+      for (var k = 0; k < cs.length; k++) {
+        if (best.steps[n0 + k].waitMin < 15) continue;
+        for (var j = 0; j < ctx.cands.length; j++) {
+          var c = ctx.cands[j];
+          if (best.used[c.offer.id] || (c.offer.group && best.used["g:" + c.offer.group])) continue;
+          var trial = replay(ctx, start, cs.slice(0, k).concat([c], cs.slice(k)));
+          if (trial && trial.score > (top ? top.score : best.score) + 1e-6) top = trial;
+        }
+      }
+      if (!top) break;
+      best = top;
+    }
+    return best;
+  }
+  function summarize(steps, score, ref) {
+    var sum = function (f) { return steps.reduce(function (s, x) { return s + f(x); }, 0); };
+    return { steps: steps, score: score, ref: ref, value: sum(function (x) { return x.c.offer.value; }),
+      dollars: sum(function (x) { return x.dollars; }), count: sum(function (x) { return x.counts; }) };
+  }
+  // "both" needs the best stop count and the best dollars first, to score a plan as a share of each.
+  function needRef(ctx, t) {
+    if (ctx.goal !== "both" || ctx.ref) return;
+    var n = planDay(withGoal(ctx, "stops"), { t: t }), d = planDay(withGoal(ctx, "savings"), { t: t });
+    ctx.ref = { n: Math.max(1, n.count), d: Math.max(1, d.dollars) };
   }
 
   // Preference learning: small nudges, shown to the user, never hidden.
@@ -329,9 +446,10 @@
   }
 
   return {
-    version: "1.0", km: km, fromPosition: fromPosition, stats: stats, confidence: confidence, eligibility: eligibility,
+    version: "1.1", km: km, fromPosition: fromPosition, stats: stats, confidence: confidence, eligibility: eligibility,
     proofLabel: proofLabel, prepare: prepare, evalStop: evalStop, nextOptions: nextOptions, planDay: planDay,
-    learn: learn, strike: strike, localMinutes: localMinutes, PACE: PACE, GRADE_P: GRADE_P,
-    _internal: { startState: startState, extend: extend, beam: beam, afterBlocks: afterBlocks }
+    learn: learn, strike: strike, localMinutes: localMinutes, eatWeight: eatWeight, takeaway: takeaway,
+    PACE: PACE, GRADE_P: GRADE_P, GOALS: GOALS,
+    _internal: { startState: startState, extend: extend, beam: beam, afterBlocks: afterBlocks, withGoal: withGoal }
   };
 });

@@ -51,15 +51,16 @@ CURATE = [
     dict(id="ihop", src="national", name="IHOP", loc="IHOP", osm="ihop", category="breakfast", minutes=45, busy=15, meal=True, dineIn=True),
     dict(id="perkins", src="national", name="Perkins", loc="Perkins", osm="perkins", category="breakfast", minutes=45, busy=10, meal=True, dineIn=True),
     # Quick bites and pickups
-    dict(id="texas-roadhouse", src="national", name="Texas Roadhouse", loc="Texas Roadhouse", osm="texasroadhouse", category="quick", minutes=8, busy=25, line=15, meal=False, dineIn=False),
+    # ticket=True: a card or voucher for a later visit. A quick stop with nothing eaten there (8 Nov 2026).
+    dict(id="texas-roadhouse", src="national", name="Texas Roadhouse", loc="Texas Roadhouse", osm="texasroadhouse", category="quick", minutes=8, busy=25, line=15, meal=False, dineIn=False, ticket=True),
     dict(id="wendys", src="national", name="Wendy's", loc="Wendy's", osm="wendys", category="quick", minutes=12, busy=10, meal=False, dineIn=False),
     dict(id="little-caesars", src="national", name="Little Caesars", loc="Little Caesars", osm="littlecaesars", category="quick", minutes=8, busy=10, meal=False, dineIn=False),
-    dict(id="firehouse-subs", src="national", name="Firehouse Subs", loc="Firehouse Subs", osm="firehouse", category="quick", minutes=15, busy=10, meal=False, dineIn=False),
+    dict(id="firehouse-subs", src="national", name="Firehouse Subs", loc="Firehouse Subs", osm="firehouse", category="quick", minutes=15, busy=10, meal=False, dineIn=False, purchase=True, eat=0.5),
     # Smashburger: the Fargo store (1801 45th St SW) closed in October 2026 (8 Nov 2026); no other FM store.
-    dict(id="chipotle", src="national", name="Chipotle", loc="Chipotle", osm="chipotle", category="quick", minutes=15, busy=10, meal=False, dineIn=True),
-    dict(id="qdoba", src="national", name="Qdoba", loc="Qdoba", osm="qdoba", category="quick", minutes=12, busy=5, meal=False, dineIn=True),
+    dict(id="chipotle", src="national", name="Chipotle", loc="Chipotle", osm="chipotle", category="quick", minutes=15, busy=10, meal=False, dineIn=True, purchase=True, eat=0.2),
+    dict(id="qdoba", src="national", name="Qdoba", loc="Qdoba", osm="qdoba", category="quick", minutes=12, busy=5, meal=False, dineIn=True, eat=0.2),
     dict(id="charleys", src="national", name="Charleys Cheesesteaks", loc="Charleys Cheesesteaks", osm="charleys", category="quick", minutes=8, busy=5, meal=False, dineIn=False),
-    dict(id="kwik-trip", src="national", name="Kwik Trip", loc="Kwik Trip", caution="Fargo stores are called Kwik Star", osm="kwiktrip", category="quick", minutes=7, busy=5, meal=False, dineIn=False),
+    dict(id="kwik-trip", src="national", name="Kwik Trip", loc="Kwik Trip", caution="Fargo stores are called Kwik Star", osm="kwiktrip", category="quick", minutes=7, busy=5, meal=False, dineIn=False, hours=("00:00", "24:00")),
     dict(id="pilot", src="national", name="Pilot / Flying J", loc="Pilot / Flying J", osm="pilot", category="quick", minutes=8, busy=5, meal=False, dineIn=False),
     dict(id="mission-bbq", src="national", name="Mission BBQ", loc="Mission BBQ", osm=None, category="quick", minutes=20, busy=10, meal=False, dineIn=True),
     dict(id="shake-shack", src="national", name="Shake Shack", loc="Shake Shack", osm=None, category="quick", minutes=20, busy=10, meal=False, dineIn=True),
@@ -69,23 +70,23 @@ CURATE = [
     dict(id="starbucks", src="national", name="Starbucks", loc="Starbucks", osm="starbucks", category="coffee", minutes=8, busy=5, meal=False, dineIn=False),
     dict(id="scooters", src="national", name="Scooter's Coffee", loc="Scooter's Coffee", osm="scooters", category="coffee", minutes=6, busy=5, meal=False, dineIn=False, drop=["1350 21st Ave N"], caution="New store; opening not confirmed: call first"),
     dict(id="caribou", src="national", name="Caribou Coffee", loc="Caribou Coffee", osm="caribou", category="coffee", minutes=8, busy=5, meal=False, dineIn=False),
-    dict(id="caseys", src="national", name="Casey's", loc="Casey's", osm="caseys", category="coffee", minutes=6, busy=3, meal=False, dineIn=False),
-    dict(id="circle-k", src="national", name="Circle K", loc="Circle K / Holiday", osm="holiday", category="coffee", minutes=6, busy=3, meal=False, dineIn=False),
+    dict(id="caseys", src="national", name="Casey's", loc="Casey's", osm="caseys", category="coffee", minutes=6, busy=3, meal=False, dineIn=False, hours=("05:00", "22:00")),
+    dict(id="circle-k", src="national", name="Circle K", loc="Circle K / Holiday", osm="holiday", category="coffee", minutes=6, busy=3, meal=False, dineIn=False, hours=("05:00", "23:00")),
     dict(id="dunkin", src="national", name="Dunkin'", loc="Dunkin'", osm="dunkin", category="coffee", minutes=6, busy=5, meal=False, dineIn=False),
     dict(id="biggby", src="national", name="Biggby Coffee", loc="Biggby Coffee", osm=None, category="coffee", minutes=6, busy=5, meal=False, dineIn=False),
     # Treats
     dict(id="krispy-kreme", src="national", name="Krispy Kreme", loc="Krispy Kreme", osm="krispykreme", category="treat", minutes=8, busy=5, meal=False, dineIn=False),
     dict(id="menchies", src="national", name="Menchie's", loc="Menchie's", osm="menchies", category="treat", minutes=10, busy=3, meal=False, dineIn=False),
-    dict(id="insomnia", src="national", name="Insomnia Cookies", loc="Insomnia Cookies", osm="insomnia", category="treat", minutes=8, busy=3, meal=False, dineIn=False),
-    dict(id="freddys", src="national", name="Freddy's Frozen Custard & Steakburgers", loc="Freddy's Frozen Custard & Steakburgers", osm="freddys", category="treat", minutes=6, busy=5, meal=False, dineIn=False),
-    # Services
-    dict(id="great-clips", group="haircut", src="national", name="Great Clips", loc="Great Clips", osm="greatclips", category="service", minutes=30, busy=20, meal=False, dineIn=False),
+    dict(id="insomnia", src="national", name="Insomnia Cookies", loc="Insomnia Cookies", osm="insomnia", category="treat", minutes=8, busy=3, meal=False, dineIn=False, purchase=True, eat=0.2),
+    dict(id="freddys", src="national", name="Freddy's Frozen Custard & Steakburgers", loc="Freddy's Frozen Custard & Steakburgers", osm="freddys", category="treat", minutes=6, busy=5, meal=False, dineIn=False, ticket=True),
+    # Services. Great Clips is planned as picking up the free-haircut card (no group: it doesn't use up the day's haircut).
+    dict(id="great-clips", src="national", name="Great Clips", loc="Great Clips", osm="greatclips", category="service", minutes=5, busy=5, line=3, meal=False, dineIn=False, ticket=True),
     dict(id="sport-clips", group="haircut", src="national", name="Sport Clips", loc="Sport Clips", osm="sportclips", category="service", minutes=30, busy=20, meal=False, dineIn=False, caution="Participating shops only, and this address isn't confirmed: call first"),
     dict(id="tommys-express", src="national", name="Tommy's Express Car Wash", loc="Tommy's Express Car Wash", osm="tommys", category="service", minutes=12, busy=10, meal=False, dineIn=False),
-    dict(id="jiffy-lube", src="national", name="Jiffy Lube", loc="Jiffy Lube", osm="jiffylube", category="service", minutes=30, busy=15, meal=False, dineIn=False, value=20, caution="Only some franchise shops take part: call first"),
+    dict(id="jiffy-lube", src="national", name="Jiffy Lube", loc="Jiffy Lube", osm="jiffylube", category="service", minutes=30, busy=15, meal=False, dineIn=False, value=20, purchase=True, caution="Only some franchise shops take part: call first"),
     # Shopping (no dollar value: what you save depends on what you buy, so they're listed, not routed, unless pinned)
-    dict(id="target", src="national", name="Target", loc="Target", osm="target", category="shopping", minutes=25, busy=5, meal=False, dineIn=False, value=0),
-    dict(id="kohls", src="national", name="Kohl's", loc="Kohl's", osm="kohls", category="shopping", minutes=25, busy=5, meal=False, dineIn=False, value=0),
+    dict(id="target", src="national", name="Target", loc="Target", osm="target", category="shopping", minutes=25, busy=5, meal=False, dineIn=False, value=0, purchase=True),
+    dict(id="kohls", src="national", name="Kohl's", loc="Kohl's", osm="kohls", category="shopping", minutes=25, busy=5, meal=False, dineIn=False, value=0, purchase=True),
     # Local (all grade C today: prior years only, so "call first")
     dict(id="fryn-pan", src="local", name="Fryn' Pan Family Restaurant (M", osm="frynpan", category="meal", minutes=45, busy=15, meal=True, dineIn=True, window=("08:00", "20:00")),
     dict(id="doolittles", src="local", name="Doolittle's Woodfire Grill (Fa", osm="doolittles", category="meal", minutes=55, busy=15, meal=True, dineIn=True),
@@ -301,6 +302,14 @@ def main():
         }
         if cur.get("worth") is not None:
             o["worth"] = cur["worth"]
+        # ticket: a card or voucher for later (quick, nothing eaten); purchase: you have to buy something to save;
+        # eat: how much of a meal it is when eaten there (the engine guesses from meal/dineIn/snack otherwise).
+        o["ticket"] = bool(cur.get("ticket"))
+        o["purchase"] = bool(cur.get("purchase"))
+        if o["ticket"]:
+            o["snack"] = False
+        if cur.get("eat") is not None:
+            o["eat"] = cur["eat"]
         if win:
             o["window_text"] = f"{win[0]}–{win[1] or 'close'} CST" if win[1] else f"from {win[0]} CST"
         if o["grade"] == "C" and not o["offer"].lower().startswith(("last year", "prior", "predicted")):
@@ -317,7 +326,8 @@ def main():
             hrs = parse_hours(s["wed_hours"])
             assumed = hrs is None or hrs[1] is None
             if assumed:
-                hrs = DEFAULT_HOURS[cur["category"]]
+                # The chain's usual hours when CURATE knows them (24-hour Kwik Trips), else the category's.
+                hrs = cur.get("hours") or DEFAULT_HOURS[cur["category"]]
             close_day = 1 if hrs[1] in ("24:00",) or hrs[1] < hrs[0] else 0
             close = local_iso("00:00", 1) if hrs[1] == "24:00" else local_iso(hrs[1], close_day)
             p = {"id": pid, "offer": o["id"], "name": "", "address": s["address"], "lat": lat, "lng": lng,

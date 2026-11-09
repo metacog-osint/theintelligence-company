@@ -6,27 +6,50 @@ Built 8 Nov 2026 at request for Guard colleagues and other veterans in Fargo-Moo
 11 Nov 2026. It is the first piece of a planned "For veterans" section on the hub.
 
 ## What it does
-- **Next:** the best stop from where you are now, timed against each deal's window ("arrive by"), with the next few
-  stops after it and other good choices. Got it / Turned away / Skip (a strike; three is a veto) / Never.
-- **Plan:** a whole day from a start time and place, with Google Maps links (10 stops per link, Google's limit).
+- **Route:** the whole day from where you are, timed against each deal's window, with Best for me or Maximize
+  (most stops, most savings, both), Google Maps links (10 stops per link, Google's limit) and other choices. Got it /
+  Turned away / Skip (a strike; three is a veto) / Never on the first stop; Go here first / Not today on the rest.
 - **Map**, **Deals** (search, filter, sources, pins), **Me** (status, spouse and kids, proof carried, sign-ups,
   sit-down meals, pace, done-by time, roads, busy times, likes, history, vetoes).
 - Before 4 AM CST on 11 Nov it runs in **preview**, planning as if it were Wednesday at a time you pick; marks made
   in preview stay on the phone and are never sent.
 
-## How it decides (engine.js, tested in `tests/veterans-engine.test.js`)
+## How it decides (engine.js v1.1, tested in `tests/veterans-engine.test.js`)
+- **The Route tab** (the main page since 9 Nov 2026, replacing Next and Plan): settings at the top (start point,
+  leave time, done-by time, goal, what you're after, take food home), then one route that rebuilds on every change,
+  every stop you mark, every report and every 150 m you move. Stop 1 is the big card; each later stop shows when
+  you'd arrive against when its deal ends, with a bar (blue the deal's hours, amber your visit) and red text when
+  under 25 minutes are left. "Ending soon, not on your route" lists deals closing within two hours, with "Add to my
+  route" (a pin). The Map draws the same route.
+- **Goals** (8 Nov 2026): *Best for me* weighs value against time at your pace and likes. *Maximize* has three:
+  *Most stops* (each place counts 1, less for long shots), *Most savings* (expected dollars) and *Stops + savings*
+  (half each, as a share of what the other two reach). Maximize ignores pace and Love; Off still leaves things out.
+  In Maximize the search ranks partial plans by what they collected less what their minutes could have collected
+  elsewhere (a stop every 20 minutes, $0.20 a minute), so it doesn't park at a store waiting for it to open.
 - Each stop's value = dollars × spouse/kids multiplier × chance it's honoured (grade A 0.9, B 0.75, C 0.4, less for
   "participating locations" and call-first notes, moved up or down by today's field reports) × your liking for
-  that kind of deal × meal fullness.
-- Its cost = minutes driving, in line and waiting (first 20 minutes) at your pace's rate (relaxed $0.50, balanced
-  $0.25, max haul $0.10 a minute), plus a third of the rate for time at the stop.
-- A beam search picks the best order; the Next tab looks three stops ahead from the 30 best first stops.
+  that kind of deal × appetite.
+- Its cost (Best for me) = minutes driving, in line and waiting (first 20 minutes) at your pace's rate (relaxed
+  $0.50, balanced $0.25, max haul $0.10 a minute), plus a third of the rate for time at the stop.
+- **Tickets for later** (8 Nov 2026): Great Clips, Texas Roadhouse and Freddy's hand out a card or voucher. They
+  are quick stops (`ticket` in CURATE) that fill nothing, and Great Clips' card doesn't use up the day's haircut.
+- **Appetite:** food eaten there fills you (a sit-down meal 1, a to-go meal 0.8, a quick bite 0.4, chips or a cookie
+  0.2) and wears off at 0.3 an hour. A stop is worth less the fuller you are, a sit-down meal outside mealtimes
+  (6:00–10:30, 10:30–14:30, 16:30–20:30) a quarter less in Best for me, and no stop asks you to eat when you're
+  nearly full or past your sit-down meal limit. "Take food home when I can" stops to-go food filling you.
+- **Deals that need a purchase** (`purchase` in CURATE: Firehouse's buy-one-get-one, Chipotle and Insomnia's minimum
+  spend, Jiffy Lube's half-off, Target, Kohl's) are Off by default under What I'm after.
+- A beam search picks the order; a second pass tries fitting an unused stop in front of any wait of 15 minutes or more
+  (breakfast while a 9:00 opening comes round). "Other places you could go next" looks three stops ahead.
 - Rules: arrive at least 5 minutes before a deal ends; a deal's own hours win when they don't overlap the store's
-  (Texas Roadhouse hands out vouchers at lunch, its dining room opens at 4); one haircut a day; after a sit-down
-  meal, another within 2.5 hours counts a quarter, none past the meal limit; each quick bite makes the next worth
-  15% less.
+  (Texas Roadhouse hands out vouchers at lunch, its dining room opens at 4); one haircut a day.
 - Drive times are OSRM's, computed ahead of time from a grid of points about every 800 m to every store, so a phone
   times its own trip and its location never leaves it.
+- Store hours: where a store's own Wednesday hours aren't known, the chain's usual hours from CURATE (`hours`: Kwik
+  Trip 24 hours, Casey's 5–10 PM, Circle K 5–11 PM, each from the one store of that chain whose hours are known),
+  else the category's; shown as "usual hours, about".
+- `firebase.json` serves the planner's JSON with `no-cache` (9 Nov 2026), so a rebuild reaches phones at once and
+  `deals.json` and `drive.json` can't come from different builds.
 
 ## Rebuilding the data
 From the repo root (Windows: `python`, not `python3`):
