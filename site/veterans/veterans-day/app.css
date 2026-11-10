@@ -185,6 +185,11 @@ html { scroll-padding-top: 56px; }
 
 /* The route */
 .route-sum { font: 600 15px/1.45 var(--sans); }
+.plan-pins { background: var(--card); border: 1px solid var(--rule); border-radius: 10px; padding: 10px 12px; display: grid; gap: 8px; }
+.plan-pins-list { list-style: none; padding: 0; display: grid; gap: 6px; }
+.plan-pins-list li { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; justify-content: space-between; font-size: 14px; }
+.loc-meta { font: 400 12px/1.4 var(--mono); color: var(--acc); display: block; }
+.sched-select { font: 500 13px/1.2 var(--sans); min-height: 36px; padding: 4px 8px; border-radius: 8px; }
 .route-list { list-style: none; padding: 0; display: grid; gap: 8px; }
 .route-list li.stop { background: var(--card); border: 1px solid var(--rule); border-radius: 10px; padding: 0 12px; }
 /* Each stop folds: when, where and its window bar show; tap for the address and the buttons. */
@@ -271,6 +276,7 @@ select, input[type=search], input[type=url], input:not([type]), input[type=text]
 }
 .chip { font: 500 14px/1.2 var(--sans); min-height: 36px; padding: 6px 12px; border-radius: 999px; cursor: pointer;
   border: 1px solid var(--rule); background: var(--card); color: var(--ink); }
+.chip-quick { border-color: var(--acc); }
 .chip[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
 .count-row { display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: center; justify-content: space-between; }
 .count-row .note { flex: 1 1 180px; }

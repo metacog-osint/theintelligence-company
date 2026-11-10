@@ -29,7 +29,7 @@
       <label class="area-pick" for="area">Area</label>
       <select id="area" class="area-sel">
         <option value="fargo-moorhead">Fargo-Moorhead, ND/MN</option>
-        <option value="bismarck-mandan">Bismarck-Mandan &amp; New Salem, ND</option>
+        <option value="bismarck-mandan">New Salem &amp; Bismarck/Mandan, ND</option>
         <option value="twin-cities">Twin Cities: Plymouth, Maple Grove, Roseville</option>
       </select>
       <span id="time-settings"></span>
@@ -67,6 +67,7 @@
         <p id="loc-status" class="loc-status">Drive times need a starting point.</p>
         <div class="loc-actions">
           <button type="button" id="loc-gps" class="btn btn-small">Use my location</button>
+          <select id="loc-preset" class="sched-select" aria-label="Start from town or area" hidden></select>
           <button type="button" id="loc-map" class="btn btn-quiet btn-small">Pick a start on the map</button>
         </div>
       </div>
@@ -106,6 +107,7 @@
     <p id="route-sum" class="route-sum" aria-live="polite"></p>
     <p id="drive-safe" class="note drive-safe" hidden>Your route has a bar on it. Drive safe: if you drink, bring a sober
       driver, take a cab or rideshare<span id="drive-safe-transit">, or ride MATBUS, which is free with a veteran ID</span>.</p>
+    <div id="route-pins" class="plan-pins" hidden></div>
     <article id="next-card" class="card next"></article>
     <div id="route-wrap" hidden>
       <h3 class="h3">Then</h3>
@@ -148,7 +150,7 @@
     <h2 id="deals-h" class="h2">Every deal</h2>
     <div class="filters">
       <label class="search"><span class="sr">Search</span>
-        <input id="q" type="search" placeholder="Search: pancakes, haircut, Applebee's…" autocomplete="off"></label>
+        <input id="q" type="search" placeholder="Search deals, streets or cities: Hornbacher's, 13th Ave, Mandan…" autocomplete="off"></label>
       <div id="chips" class="chips" role="group" aria-label="Show categories"></div>
       <div class="count-row">
         <p class="note" id="deals-count"></p>

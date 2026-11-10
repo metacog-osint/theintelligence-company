@@ -111,7 +111,7 @@
       profile: { status: "veteran", spouse: false, kids: 0, proof: { military_id: true }, ready: {}, pace: "balanced",
         dayEndMin: 21 * 60, mealsMax: 2, roads: "auto", blocks: [], togo: false },
       done: {}, away: {}, strikes: {}, vetoed: {}, pinned: {}, prefs: {}, learned: {},
-      starts: {}, area: null, gps: false, sent: [], previewMin: 8 * 60, cats: {}, // starts: a start point per area
+      starts: {}, area: null, gps: false, sent: [], previewMin: 8 * 60, cats: {}, qfilters: {}, // starts: a start point per area
       goal: "optimal", goalSet: false, maxGoal: "both", leaveMin: null // leaveMin: minutes after midnight, or null for "now"
     };
   }
@@ -156,7 +156,16 @@
     const prefs = {};
     CATS.forEach(([c]) => { prefs[c] = likeOf(c) * (S.learned[c] || 1); });
     prefs.purchase = likeOf("purchase");
-    return { done: S.done, away: S.away, strikes: S.strikes, vetoed: S.vetoed, pinned: S.pinned, prefs };
+    const pinned = {};
+    Object.entries(S.pinned || {}).forEach(([k, v]) => {
+      if (!v) return;
+      if (typeof v === "object") {
+        pinned[k] = { placeId: v.placeId || null, targetMs: v.targetMin !== undefined && v.targetMin !== null ? localMs(v.targetMin) : null };
+      } else {
+        pinned[k] = true;
+      }
+    });
+    return { done: S.done, away: S.away, strikes: S.strikes, vetoed: S.vetoed, pinned, prefs };
   }
   function engineReports() {
     const r = { place: {}, offer: {} };
@@ -217,12 +226,54 @@
     if (out) parts.push("someone reported they ran out");
     return h("p", { class: "field" + (away > worked || out ? " bad" : "") }, parts.join(", ") + " in the last 4 hours.");
   }
+  function callBtn(pl, cls) {
+    return pl && pl.phone ? h("a", { class: cls || "btn btn-quiet btn-small", href: "tel:" + pl.phone.replace(/[^\d+]/g, "") }, "Call") : null;
+  }
   function dirLinks(pl) {
     const ll = pl.lat + "," + pl.lng;
     return h("p", { class: "links" },
       ext("https://www.google.com/maps/dir/?api=1&travelmode=driving&destination=" + ll, "Directions", "btn btn-small"),
       ext("https://maps.apple.com/?dirflg=d&daddr=" + ll, "Apple Maps", "btn btn-quiet btn-small"),
-      pl.phone ? h("a", { class: "btn btn-quiet btn-small", href: "tel:" + pl.phone.replace(/[^\d+]/g, "") }, "Call") : null);
+      callBtn(pl));
+  }
+  function offerHoursMin(o, p) {
+    let openMs = o.start || (p ? p.open : dayStart + 6 * HOUR);
+    let closeMs = o.end || (p ? p.close : dayStart + 21 * HOUR);
+    if (p) { openMs = Math.max(openMs, p.open); closeMs = Math.min(closeMs, p.close); }
+    const startMin = Math.max(5 * 60, Math.ceil(((openMs - dayStart) / MIN) / 30) * 30);
+    const endMin = Math.min(22 * 60, Math.floor(((closeMs - dayStart - (o.minutes || 15) * MIN) / MIN) / 30) * 30);
+    return { startMin, endMin: Math.max(startMin, endMin) };
+  }
+  function setOfferSchedule(o, p, val) {
+    if (!val) {
+      delete S.pinned[o.id];
+      save(); renderAll();
+      toast("Removed " + o.brand + " from locked route stops.");
+      return;
+    }
+    const targetMin = val === "best" ? null : Number(val);
+    S.pinned[o.id] = { placeId: p ? p.id : null, targetMin };
+    delete S.vetoed[o.id];
+    delete S.strikes[o.id];
+    save(); renderAll();
+    const locLabel = p ? " (" + p.address.split(",")[0] + ")" : "";
+    const timeLabel = targetMin !== null ? " around " + fmt(localMs(targetMin)) : " at the best time";
+    toast("Added " + o.brand + locLabel + " to your route" + timeLabel + ".");
+  }
+  function makeSchedSelect(o, p) {
+    const cur = S.pinned[o.id];
+    const isThisPlace = cur && (cur === true || !cur.placeId || !p || cur.placeId === p.id);
+    const curVal = !isThisPlace ? "" : (typeof cur === "object" && cur.targetMin !== null && cur.targetMin !== undefined ? String(cur.targetMin) : "best");
+    const { startMin, endMin } = offerHoursMin(o, p);
+    const sel = h("select", { class: "sched-select", "aria-label": "Schedule " + o.brand + (p ? " at " + p.address.split(",")[0] : "") + " in route" },
+      h("option", { value: "" }, isThisPlace ? "★ In route (change…)" : "+ Build into route…"),
+      h("option", { value: "best" }, "★ Route at best time"));
+    for (let m = startMin; m <= endMin; m += 30) {
+      sel.append(h("option", { value: String(m) }, "Route at " + fmt(localMs(m))));
+    }
+    sel.value = curVal;
+    sel.addEventListener("change", () => setOfferSchedule(o, p, sel.value));
+    return sel;
   }
   function chips(o) {
     return [h("span", { class: "cat" }, CAT[o.category] || o.category), h("span", { class: "grade grade-" + o.grade, title: GRADE_LONG[o.grade] }, GRADE[o.grade]),
@@ -250,10 +301,86 @@
   function routeValue(steps) {
     return steps.reduce((s, x) => s + x.c.offer.value * (S.profile.spouse && x.c.offer.spouse === "yes" ? 2 : 1), 0);
   }
+  function renderRoutePins() {
+    const box = clear($("#route-pins"));
+    if (!box) return;
+    const keys = Object.keys(S.pinned).filter((k) => S.pinned[k] && offersById[k]);
+    if (!keys.length) { box.hidden = true; return; }
+    box.hidden = false;
+    const ul = h("ul", { class: "plan-pins-list" });
+    keys.forEach((k) => {
+      const o = offersById[k], spec = S.pinned[k];
+      const pl = spec && typeof spec === "object" && spec.placeId ? placesById[spec.placeId] : null;
+      const tMin = spec && typeof spec === "object" && spec.targetMin !== null && spec.targetMin !== undefined ? spec.targetMin : null;
+      const desc = o.brand + (pl ? " (" + pl.address.split(",")[0] + ")" : "") + (tMin !== null ? " · ~" + fmt(localMs(tMin)) : " · best time");
+      ul.append(h("li", null,
+        h("span", null, "★ " + desc),
+        h("button", { type: "button", class: "btn btn-quiet btn-small", onclick: () => { delete S.pinned[k]; save(); renderAll(); } }, "Remove")));
+    });
+    box.append(h("p", { class: "small" }, h("b", null, "Locked into your route:"), " we built your schedule around these picks."), ul);
+  }
+  function shareRouteText(plan) {
+    const lines = ["My Veterans Day 2026 Route (" + AREA.name + "):"];
+    plan.steps.forEach((x, idx) => {
+      const c = x.c, o = c.offer;
+      lines.push((idx + 1) + ". " + fmtNZ(x.start) + " — " + o.brand + " (" + o.offer + ") · " + c.place.address);
+    });
+    lines.push("Plan yours: https://theintelligence.company/veterans/veterans-day/" + (areaId === DEFAULT_AREA ? "" : "?area=" + areaId));
+    const text = lines.join("\n");
+    if (navigator.share) {
+      navigator.share({ title: "My Veterans Day Route", text }).catch(() => {});
+    } else if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(() => toast("Route copied to clipboard!"), () => toast("Could not copy route."));
+    } else {
+      toast("Sharing not supported on this browser.");
+    }
+  }
+  function downloadRouteIcs(plan) {
+    const pad = (n) => String(n).padStart(2, "0");
+    const toUtc = (ms) => {
+      const d = new Date(ms);
+      return d.getUTCFullYear() + pad(d.getUTCMonth() + 1) + pad(d.getUTCDate()) + "T" +
+        pad(d.getUTCHours()) + pad(d.getUTCMinutes()) + "00Z";
+    };
+    const stamp = toUtc(Date.now());
+    const evs = [
+      "BEGIN:VCALENDAR",
+      "VERSION:2.0",
+      "PRODID:-//The Intelligence Company//Veterans Day 2026//EN",
+      "CALSCALE:GREGORIAN"
+    ];
+    plan.steps.forEach((x, i) => {
+      const c = x.c, o = c.offer;
+      const summary = ("Veterans Day: " + o.brand + " (" + o.offer + ")").replace(/[,;\\]/g, " ");
+      const loc = c.place.address.replace(/[,;\\]/g, " ");
+      const desc = (o.limits || o.notes || "Bring military ID / proof of service.").replace(/\r?\n/g, " ").replace(/[,;\\]/g, " ");
+      evs.push(
+        "BEGIN:VEVENT",
+        "UID:vetday2026-" + areaId + "-" + i + "-" + c.place.id + "@theintelligence.company",
+        "DTSTAMP:" + stamp,
+        "DTSTART:" + toUtc(x.start),
+        "DTEND:" + toUtc(x.depart),
+        "SUMMARY:" + summary,
+        "LOCATION:" + loc,
+        "DESCRIPTION:" + desc,
+        "END:VEVENT"
+      );
+    });
+    evs.push("END:VCALENDAR");
+    const blob = new Blob([evs.join("\r\n")], { type: "text/calendar;charset=utf-8" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "veterans-day-2026-" + areaId + ".ics";
+    document.body.append(a);
+    a.click();
+    a.remove();
+    toast("Downloaded calendar file (.ics).");
+  }
   function renderRoute() {
     const r = buildRoute(), { ctx, plan, t, where } = r, steps = plan.steps;
     renderLoc(where);
     renderControls();
+    renderRoutePins();
     const card = clear($("#next-card")), sum = $("#route-sum");
     $("#drive-safe").hidden = true;
     if (mode() === "over") { sum.textContent = ""; card.append(h("p", { class: "empty" }, "That's a wrap for 2026. Your day is under Me.")); hideLists(); return; }
@@ -342,6 +469,21 @@
       if (go - prev > 20 * MIN) list.append(h("li", { class: "gap" }, "Free time " + fmtNZ(prev) + "–" + fmt(go)));
       // Folded: the stop's time, name and window show; the address, notes and buttons open on a tap.
       const id = c.place.id;
+      const sameOfferPlaces = data.places.filter((p) => p.offer === o.id);
+      let swapSel = null;
+      if (sameOfferPlaces.length > 1) {
+        swapSel = h("select", { class: "sched-select", "aria-label": "Change location for " + o.brand },
+          sameOfferPlaces.map((p) => h("option", { value: p.id }, p.address.split(",")[0])));
+        swapSel.value = c.place.id;
+        swapSel.addEventListener("change", () => {
+          const cur = S.pinned[o.id];
+          const tMin = cur && typeof cur === "object" ? cur.targetMin : null;
+          S.pinned[o.id] = { placeId: swapSel.value, targetMin: tMin };
+          openStops.add(swapSel.value);
+          save(); renderAll();
+          toast("Switched " + o.brand + " location.");
+        });
+      }
       list.append(h("li", { class: "stop" },
         h("details", { class: "stop-d fold", open: openStops.has(id), ontoggle: (ev) => { if (ev.target.open) openStops.add(id); else openStops.delete(id); } },
           h("summary", null,
@@ -356,8 +498,11 @@
           o.limits ? h("p", { class: "note" }, o.limits) : null,
           h("p", { class: "links" },
             h("button", { type: "button", class: "btn btn-quiet btn-small", onclick: () => { focus = id; renderAll(); window.scrollTo(0, 0); } }, "Go here first"),
+            makeSchedSelect(o, c.place),
+            swapSel,
             h("button", { type: "button", class: "btn btn-quiet btn-small", onclick: () => never(o) }, "Not today"),
-            ext("https://www.google.com/maps/dir/?api=1&travelmode=driving&destination=" + c.place.lat + "," + c.place.lng, "Directions", "btn btn-quiet btn-small")))));
+            ext("https://www.google.com/maps/dir/?api=1&travelmode=driving&destination=" + c.place.lat + "," + c.place.lng, "Directions", "btn btn-quiet btn-small"),
+            callBtn(c.place)))));
       prev = x.depart;
     });
     if (later.length > shown.length) {
@@ -383,7 +528,11 @@
       if (mid.length) url += "&waypoints=" + encodeURIComponent(mid.join("|"));
       links.append(ext(url, steps.length > 10 ? "Stops " + (i + 1) + "–" + (i + chunk.length) + " in Google Maps" : "Whole route in Google Maps", "btn btn-quiet"));
     }
-    links.append(h("button", { type: "button", class: "btn btn-quiet", onclick: () => window.print() }, "Print"));
+    links.append(
+      h("button", { type: "button", class: "btn btn-quiet", onclick: () => shareRouteText(plan) }, "Share / Copy route"),
+      h("button", { type: "button", class: "btn btn-quiet", onclick: () => downloadRouteIcs(plan) }, "Add to Calendar (.ics)"),
+      h("button", { type: "button", class: "btn btn-quiet", onclick: () => window.print() }, "Print")
+    );
   }
   // Deals that end within two hours and aren't on the route, so they don't slip by unnoticed.
   function renderSoon(ctx, plan, t) {
@@ -522,36 +671,60 @@
   }
 
   // ---------------------------------------------------------------- Deals
+  function normSearch(s) {
+    return String(s || "").toLowerCase().replace(/['’`.\-&/]/g, "").replace(/\s+/g, " ").trim();
+  }
+  function placeDriveInfo(p, ctx) {
+    const dMin = Math.max(1, Math.round(E.driveMinutes(ctx.pos, p, data.drive, ctx.trafficMult) - 2.5));
+    const miles = (E.km(ctx.pos, p) * 0.621371).toFixed(1);
+    return { dMin, miles };
+  }
   function dealState(ctx) {
     const byOffer = {};
     ctx.cands.forEach((c) => { (byOffer[c.offer.id] = byOffer[c.offer.id] || []).push(c); });
     return byOffer;
   }
   function renderDeals() {
-    const ctx = context(now(), position().pos), live = dealState(ctx);
-    const q = $("#q").value.trim().toLowerCase(), sort = $("#sort").value;
+    const t = now(), ctx = context(t, position().pos), live = dealState(ctx);
+    const rawQ = $("#q").value.trim(), q = normSearch(rawQ), sort = $("#sort").value;
     const anyCat = CATS.some(([c]) => S.cats[c]);
-    let list = data.offers.filter((o) => (!anyCat || S.cats[o.category]) &&
-      (!q || (o.brand + " " + o.offer + " " + (CAT[o.category] || "")).toLowerCase().includes(q)));
+    const qf = S.qfilters || {};
+    let list = data.offers.filter((o) => {
+      if (anyCat && !S.cats[o.category]) return false;
+      if (qf.openNow) {
+        const cs = live[o.id];
+        if (!cs || !cs.some((c) => c.open <= t && c.close > t)) return false;
+      }
+      if (qf.ticket && !o.ticket) return false;
+      if (qf.spouse && o.spouse !== "yes") return false;
+      if (!q) return true;
+      const places = data.places.filter((p) => p.offer === o.id);
+      const hay = normSearch(o.brand + " " + o.offer + " " + (CAT[o.category] || "") + " " + places.map((p) => p.address).join(" "));
+      return q.split(" ").every((tok) => hay.includes(tok));
+    });
     const end = (o) => { const cs = live[o.id]; return cs ? Math.min(...cs.map((c) => c.close)) : Infinity; };
     if (sort === "value") list.sort((a, b) => b.value - a.value);
     else if (sort === "name") list.sort((a, b) => a.brand.localeCompare(b.brand));
     else list.sort((a, b) => end(a) - end(b) || b.value - a.value);
     const box = clear($("#deal-list"));
     // A new search, filter or sort starts again from the first page.
-    const key = q + "|" + sort + "|" + CATS.filter(([c]) => S.cats[c]).map(([c]) => c).join(",");
+    const key = q + "|" + sort + "|" + CATS.filter(([c]) => S.cats[c]).map(([c]) => c).join(",") + "|" +
+      Object.keys(qf).filter((k) => qf[k]).join(",");
     if (key !== dealsKey) { dealsKey = key; dealsShown = DEALS_PAGE; }
-    $("#deals-count").textContent = list.length + " of " + data.offers.length + " deals" + (anyCat || q ? " match" : "") +
+    const anyFilter = anyCat || q || qf.openNow || qf.ticket || qf.spouse;
+    $("#deals-count").textContent = list.length + " of " + data.offers.length + " deals" + (anyFilter ? " match" : "") +
       ". Faded ones don't fit you right now; each says why.";
-    list.slice(0, dealsShown).forEach((o) => box.append(dealCard(o, live[o.id], ctx)));
+    list.slice(0, dealsShown).forEach((o) => box.append(dealCard(o, live[o.id], ctx, q)));
     const rest = list.length - dealsShown;
     $("#deals-more-wrap").hidden = rest <= 0;
     $("#deals-more").textContent = "Show all " + list.length + " deals (" + rest + " more)";
   }
   // A deal card: name, offer and when, at a glance; locations, proof, notes and sources fold under "Details".
-  function dealCard(o, cands, ctx) {
-    const places = data.places.filter((p) => p.offer === o.id);
-    const reason = cands ? null : (places.map((p) => ctx.excluded[p.id]).find(Boolean) || "not available");
+  function dealCard(o, cands, ctx, q) {
+    const places = data.places.filter((p) => p.offer === o.id)
+      .map((p) => ({ p, info: placeDriveInfo(p, ctx) }))
+      .sort((a, b) => a.info.dMin - b.info.dMin);
+    const reason = cands ? null : (places.map((x) => ctx.excluded[x.p.id]).find(Boolean) || "not available");
     const meta = [];
     if (o.start && o.end) meta.push(fmtNZ(o.start) + "–" + fmt(o.end));
     else if (o.start) meta.push("from " + fmt(o.start));
@@ -560,13 +733,19 @@
     meta.push(worthText(o));
     if (o.guard_reserve === "yes") meta.push("Guard/Reserve named"); else if (o.guard_reserve === "unclear") meta.push("Guard/Reserve not named");
     if (o.spouse === "yes") meta.push("spouse too");
-    const pinned = !!S.pinned[o.id];
+    const pinSpec = S.pinned[o.id];
+    const pinned = !!pinSpec;
+    const pinnedPlace = pinSpec && typeof pinSpec === "object" && pinSpec.placeId ? placesById[pinSpec.placeId] : null;
+    const pinnedMin = pinSpec && typeof pinSpec === "object" && pinSpec.targetMin !== null && pinSpec.targetMin !== undefined ? pinSpec.targetMin : null;
+    const pinLabel = !pinned ? "☆ Must do" : "★ Must do" +
+      (pinnedPlace ? " (" + pinnedPlace.address.split(",")[0] + ")" : "") +
+      (pinnedMin !== null ? " ~" + fmt(localMs(pinnedMin)) : "");
     const card = h("article", { class: "card deal" + (reason ? " out" : "") },
       h("div", { class: "deal-head" }, h("h3", { class: "deal-name" }, o.brand),
         h("button", { type: "button", class: "btn btn-quiet btn-small", "aria-pressed": pinned ? "true" : "false",
           title: "Must do: always on your route when it fits",
           onclick: () => { if (S.pinned[o.id]) delete S.pinned[o.id]; else S.pinned[o.id] = true; save(); renderAll(); } },
-          pinned ? "★ Must do" : "☆ Must do")),
+          pinLabel)),
       h("p", { class: "deal-chips" }, ...chips(o)),
       h("p", { class: "deal-offer" }, o.offer),
       h("p", { class: "deal-meta" }, meta.join(" · ")),
@@ -574,16 +753,30 @@
       o.category === "bar" ? h("p", { class: "note drive-safe" }, driveSafe()) : null,
       o.advance ? h("p", { class: "note" }, "Sign up first: " + o.advance) : null,
       reason ? h("p", { class: "note" }, "Not suggested: " + reason + ".") : null);
-    const locs = h("ul", { class: "locs" }, places.map((p) => {
+    const locs = h("ul", { class: "locs" }, places.map(({ p, info }, idx) => {
       const c = cands && cands.find((x) => x.place.id === p.id);
-      return h("li", null, h("span", null, p.address + (p.verified === "unverified" ? " (location not verified)" : "")),
+      const isClosest = places.length > 1 && idx === 0;
+      const distText = (isClosest ? "★ Closest · " : "") + info.dMin + " min drive (" + info.miles + " mi)";
+      return h("li", null,
+        h("span", null,
+          p.address + (p.verified === "unverified" ? " (location not verified)" : ""),
+          " ",
+          h("span", { class: "loc-meta" + (isClosest ? " closest" : "") }, distText)),
         h("span", { class: "links" },
-          c ? h("button", { type: "button", class: "btn btn-quiet btn-small", onclick: () => { focus = p.id; location.hash = "#route"; renderAll(); } }, "Go here next") : null,
-          ext("https://www.google.com/maps/dir/?api=1&travelmode=driving&destination=" + p.lat + "," + p.lng, "Directions", "btn btn-quiet btn-small")));
+          h("button", { type: "button", class: "btn btn-quiet btn-small", onclick: () => {
+            delete S.vetoed[o.id]; delete S.strikes[o.id];
+            if (!c) S.pinned[o.id] = { placeId: p.id, targetMin: null };
+            focus = p.id; save(); location.hash = "#route"; renderAll();
+            toast(o.brand + " (" + p.address.split(",")[0] + ") set as next stop.");
+          } }, "Go here next"),
+          makeSchedSelect(o, p),
+          ext("https://www.google.com/maps/dir/?api=1&travelmode=driving&destination=" + p.lat + "," + p.lng, "Directions", "btn btn-quiet btn-small"),
+          callBtn(p)));
     }));
     const n = (o.sources || []).length;
-    card.append(h("details", { class: "deal-more fold", open: openDeals.has(o.id), ontoggle: (ev) => { if (ev.target.open) openDeals.add(o.id); else openDeals.delete(o.id); } },
-      h("summary", null, "Details · " + (places.length === 1 ? "1 location" : places.length + " locations") + " · " + n + (n === 1 ? " source" : " sources")),
+    const closestHint = places.length ? " · closest " + places[0].info.dMin + " min away" : "";
+    card.append(h("details", { class: "deal-more fold", open: openDeals.has(o.id) || !!q || pinned, ontoggle: (ev) => { if (ev.target.open) openDeals.add(o.id); else openDeals.delete(o.id); } },
+      h("summary", null, "Details · " + (places.length === 1 ? "1 location" : places.length + " locations") + closestHint + " · " + n + (n === 1 ? " source" : " sources")),
       o.proof && o.proof.length ? h("p", { class: "note" }, "Bring: " + o.proof.map(E.proofLabel).join(" or ")) : null,
       o.voucher_use_by ? h("p", { class: "note" }, "Use the card or voucher by " + o.voucher_use_by + ".") : null,
       o.limits ? h("p", { class: "note" }, o.limits) : null,
@@ -622,6 +815,14 @@
   }
   function renderChips() {
     const box = clear($("#chips"));
+    S.qfilters = S.qfilters || {};
+    const QUICKS = [
+      ["openNow", "● Open right now"],
+      ["ticket", "Ticket for later"],
+      ["spouse", "Spouse too"]
+    ];
+    QUICKS.forEach(([k, label]) => box.append(h("button", { type: "button", class: "chip chip-quick", "aria-pressed": S.qfilters[k] ? "true" : "false",
+      onclick: () => { S.qfilters[k] = !S.qfilters[k]; save(); renderChips(); renderDeals(); } }, label)));
     CATS.forEach(([c, label]) => box.append(h("button", { type: "button", class: "chip", "aria-pressed": S.cats[c] ? "true" : "false",
       onclick: () => { S.cats[c] = !S.cats[c]; save(); renderChips(); renderDeals(); } }, label)));
   }
@@ -806,8 +1007,13 @@
   }
   function popup(c) {
     return h("div", { class: "vd-pop" }, h("b", null, c.offer.brand), h("span", null, c.offer.offer),
+      h("span", { class: "note" }, c.place.address),
       h("span", { class: "note" }, windowText(c) + " · " + GRADE[c.offer.grade]),
-      h("button", { type: "button", class: "btn btn-small", onclick: () => { focus = c.place.id; location.hash = "#route"; renderAll(); } }, "Go here next"));
+      h("div", { class: "links" },
+        h("button", { type: "button", class: "btn btn-small", onclick: () => { focus = c.place.id; location.hash = "#route"; renderAll(); } }, "Go here next"),
+        makeSchedSelect(c.offer, c.place),
+        ext("https://www.google.com/maps/dir/?api=1&travelmode=driving&destination=" + c.place.lat + "," + c.place.lng, "Directions", "btn btn-quiet btn-small"),
+        callBtn(c.place)));
   }
 
   // ---------------------------------------------------------------- weather (NWS) and the get-ready list
@@ -960,8 +1166,41 @@
   }
 
   // ---------------------------------------------------------------- areas
+  const AREA_STARTS = {
+    "fargo-moorhead": [
+      ["", "Start from town…"],
+      ["46.8600,-96.8100", "Fargo (13th Ave S)"],
+      ["46.8772,-96.7898", "Downtown Fargo"],
+      ["46.8750,-96.9004", "West Fargo"],
+      ["46.8739,-96.7678", "Moorhead, MN"]
+    ],
+    "bismarck-mandan": [
+      ["", "Start from town…"],
+      ["46.8439,-101.4118", "New Salem, ND"],
+      ["46.8267,-100.8896", "Mandan, ND"],
+      ["46.8083,-100.7837", "Bismarck, ND"]
+    ],
+    "twin-cities": [
+      ["", "Start from town…"],
+      ["45.0105,-93.4555", "Plymouth, MN"],
+      ["45.1095,-93.4558", "Maple Grove, MN"],
+      ["45.0119,-93.1669", "Roseville, MN"]
+    ]
+  };
+  const AREA_ALIASES = {
+    "new-salem": "bismarck-mandan",
+    "new-salem-bismarck": "bismarck-mandan",
+    "bismarck": "bismarck-mandan",
+    "mandan": "bismarck-mandan",
+    "fargo": "fargo-moorhead",
+    "moorhead": "fargo-moorhead",
+    "plymouth": "twin-cities",
+    "maple-grove": "twin-cities",
+    "roseville": "twin-cities"
+  };
   function pickArea() {
-    const q = new URLSearchParams(location.search).get("area");
+    const raw = new URLSearchParams(location.search).get("area") || new URLSearchParams(location.search).get("sector");
+    const q = raw ? (AREA_ALIASES[raw.toLowerCase()] || raw.toLowerCase()) : null;
     if (q && AREAS.some((a) => a.id === q)) { S.area = q; save(); return q; } // a shared link: remember it
     return AREAS.some((a) => a.id === S.area) ? S.area : DEFAULT_AREA;
   }
@@ -973,9 +1212,37 @@
       if (!AREAS.some((a) => a.id === id) || id === areaId) return;
       S.area = id; save();
       const u = new URL(location.href);
+      u.searchParams.delete("sector");
       if (id === DEFAULT_AREA) u.searchParams.delete("area"); else u.searchParams.set("area", id);
       if (u.href === location.href) location.reload(); else location.replace(u.href); // load that area's deals
     });
+    const preset = $("#loc-preset");
+    const opts = AREA_STARTS[areaId];
+    if (preset && opts) {
+      clear(preset);
+      opts.forEach(([val, label]) => preset.append(h("option", { value: val }, label)));
+      const cur = S.starts && S.starts[areaId];
+      if (cur) {
+        const match = opts.find(([val]) => {
+          if (!val) return false;
+          const [lat, lng] = val.split(",").map(Number);
+          return Math.abs(lat - cur.lat) < 0.01 && Math.abs(lng - cur.lng) < 0.01;
+        });
+        if (match) preset.value = match[0];
+      }
+      preset.hidden = false;
+      preset.addEventListener("change", () => {
+        if (!preset.value) return;
+        const [lat, lng] = preset.value.split(",").map(Number);
+        const label = preset.options[preset.selectedIndex].textContent;
+        S.starts[areaId] = { lat, lng };
+        save();
+        fitRoute = true;
+        if (map) map.setView([lat, lng], areaId === "bismarck-mandan" && label.includes("New Salem") ? 10 : AREA.zoom || 12);
+        renderAll();
+        toast("Start point set to " + label + ".");
+      });
+    }
   }
   function showArea() {
     document.title = "Veterans Day 2026 in " + AREA.name + " · The Intelligence Company";

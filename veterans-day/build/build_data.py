@@ -36,7 +36,7 @@ REGIONS = {
         center=(46.8600, -96.8100), center_label="the middle of Fargo", zoom=12,
         nws=(46.8772, -96.7898), wx_name="Fargo", transit="ride MATBUS, free with a veteran ID"),
     "bismarck-mandan": dict(
-        name="Bismarck-Mandan and New Salem", label="Bismarck-Mandan and New Salem, ND", out="bismarck-mandan",
+        name="New Salem & Bismarck/Mandan", label="New Salem & Bismarck/Mandan, ND", out="bismarck-mandan",
         research="bismarck-mandan", bbox=None, states=("ND",),
         areas=[("Bismarck and Lincoln", 46.800, -100.772, 10.0), ("Mandan", 46.828, -100.890, 5.0),
                ("New Salem", 46.845, -101.411, 3.0)],

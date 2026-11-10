@@ -375,3 +375,40 @@ test("an event open to the public is open to veterans, retirees, active duty and
   }
   assert.ok(!E.eligibility({ eligible: ["veteran"], guard_reserve: "no", proof: [] }, { status: "active", proof: {}, ready: {} }).ok, "veterans-only stays veterans-only");
 });
+
+test("appointment-only service deals stay out of automatic routes unless booked ahead or pinned, so breakfast leads the morning", () => {
+  const d = strip();
+  d.offers.push({ id: "oil-change", category: "service", status: "offering", grade: "B", eligible: ["veteran"],
+    guard_reserve: "unclear", spouse: "no", proof: [], value: 50, minutes: 45, meal: false, dineIn: false,
+    advance: "Book an appointment first" });
+  d.places.push({ id: "s4", offer: "oil-change", lat: 46.805, lng: -96.80, open: at(8), close: at(17) });
+  const ks = [1, 2, 3, 4];
+  d.drive = { places: ks.map((a) => ks.map((b) => Math.abs(a - b) * 300)),
+    anchors: [[46.80, -96.80], ...d.places.map((p) => [p.lat, p.lng])],
+    fromAnchor: [0, ...ks].map((a) => ks.map((b) => Math.abs(a - b) * 300)) };
+  const unbooked = E.prepare(d, profile({ goal: "optimal" }), state(), NO_REPORTS, at(8), { lat: 46.80, lng: -96.80 });
+  assert.match(unbooked.excluded.s4, /appointment first/);
+  const unbookedPlan = ids(E.planDay(unbooked, { t: at(8) }));
+  assert.ok(!unbookedPlan.includes("oil-change"));
+  assert.ok(unbookedPlan.includes("pancakes"));
+  const booked = E.prepare(d, profile({ goal: "optimal", ready: { "oil-change": true } }), state(), NO_REPORTS, at(8), { lat: 46.80, lng: -96.80 });
+  assert.ok(booked.cands.some((c) => c.offer.id === "oil-change"));
+});
+
+test("per-location and target-time pinning constrains branch and arrival window", () => {
+  const d = strip();
+  d.places.push({ id: "s1b", offer: "card", lat: 46.82, lng: -96.80, open: at(9), close: at(19) });
+  const ks = [1, 2, 3, 4];
+  d.drive = { places: ks.map((a) => ks.map((b) => Math.abs(a - b) * 300)),
+    anchors: [[46.80, -96.80], ...d.places.map((p) => [p.lat, p.lng])],
+    fromAnchor: [0, ...ks].map((a) => ks.map((b) => Math.abs(a - b) * 300)) };
+  const ctx = E.prepare(d, profile({ goal: "optimal" }), state({ pinned: { card: { placeId: "s1b", targetMs: at(10, 30) } } }), NO_REPORTS, at(8), { lat: 46.80, lng: -96.80 });
+  const cardCands = ctx.cands.filter((c) => c.offer.id === "card");
+  assert.equal(cardCands.length, 1);
+  assert.equal(cardCands[0].place.id, "s1b");
+  const plan = E.planDay(ctx, { t: at(8) });
+  const cardStep = plan.steps.find((s) => s.c.offer.id === "card");
+  assert.ok(cardStep, "pinned card is in the plan");
+  assert.equal(cardStep.c.place.id, "s1b");
+  assert.ok(cardStep.start >= at(10, 15) && cardStep.start <= at(11, 15), "scheduled near 10:30 AM");
+});
