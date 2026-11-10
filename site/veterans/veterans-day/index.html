@@ -24,11 +24,20 @@
 <header class="top">
   <div class="util">
     <a class="home" href="/">← The Intelligence Company</a>
-    <span class="util-right"><span class="where">Fargo-Moorhead, ND/MN</span><span id="time-settings"></span></span>
+    <span class="util-right">
+      <!-- The area picker (9 Nov 2026). Fargo-Moorhead first and the default; app.js remembers the pick. -->
+      <label class="area-pick" for="area">Area</label>
+      <select id="area" class="area-sel">
+        <option value="fargo-moorhead">Fargo-Moorhead, ND/MN</option>
+        <option value="bismarck-mandan">Bismarck-Mandan &amp; New Salem, ND</option>
+        <option value="twin-cities">Twin Cities: Plymouth, Maple Grove, Roseville</option>
+      </select>
+      <span id="time-settings"></span>
+    </span>
   </div>
   <div class="mast">
     <p class="kicker">For veterans · Wednesday 11 November 2026</p>
-    <h1>Veterans Day in Fargo-Moorhead</h1>
+    <h1>Veterans Day in <span class="area-name">Fargo-Moorhead</span></h1>
     <p class="clock" id="clock" aria-live="off">Loading the deals…</p>
   </div>
 </header>
@@ -95,7 +104,7 @@
     <div id="wx" class="wx" hidden></div>
     <p id="route-sum" class="route-sum" aria-live="polite"></p>
     <p id="drive-safe" class="note drive-safe" hidden>Your route has a bar on it. Drive safe: if you drink, bring a sober
-      driver, take a cab or rideshare, or ride MATBUS, which is free with a veteran ID.</p>
+      driver, take a cab or rideshare<span id="drive-safe-transit">, or ride MATBUS, which is free with a veteran ID</span>.</p>
     <article id="next-card" class="card next"></article>
     <div id="route-wrap" hidden>
       <h3 class="h3">Then</h3>
@@ -244,11 +253,13 @@
   <details id="about" class="about fold" aria-labelledby="about-h">
     <summary><h2 id="about-h" class="h2">About this planner</h2> <span class="fold-hint">How it works, limits, privacy, sources</span></summary>
     <h3 class="h3">What it is</h3>
-    <p>A free planner for veterans and service members in Fargo-Moorhead on Veterans Day, Wednesday 11 November
-      2026. It builds your route from where you are, what you're after and the time you have left, checks you can
+    <p>A free planner for veterans and service members in <span class="area-name">Fargo-Moorhead</span> on Veterans Day,
+      Wednesday 11 November 2026. It builds your route from where you are, what you're after and the time you have left, checks you can
       get to each stop before its deal ends, and re-plans as you go. Pick Best for me, or Maximize for the most stops,
       the most savings or both. It learns from what you skip and collect, and veterans who use it share whether each
       deal was honoured, so everyone sees what's working.</p>
+    <p>Pick your area at the top: Fargo-Moorhead, Bismarck-Mandan and New Salem, or Plymouth, Maple Grove and Roseville
+      in the Twin Cities. This phone remembers the pick, and a shared link can open an area directly.</p>
     <h3 class="h3">Method</h3>
     <p>Offers come from each business's own 2026 announcements where we found them, and otherwise from 2026 deal
       lists (Military.com, Stars and Stripes and others) and local news. Every deal shows its sources and a grade:
@@ -257,13 +268,16 @@
       first). A few places with a deal in earlier years only are listed at the end of Deals, off the route. Deals that
       need a purchase stay off your route until you turn them on under What I'm after; bars are on, and turn off
       there too. A ticket for later (a Great Clips or Freddy's card) doesn't open your route unless it has to. Store
-      locations are checked against the chains' store pages and OpenStreetMap. Drive times are worked out ahead of time on the road network (OSRM,
+      locations are checked against the chains' store pages and OpenStreetMap. Outside Fargo-Moorhead, store lists come
+      from the chains' own store finders, as collected by All the Places in late October and early November 2026, and
+      from OpenStreetMap, whose stores are marked as from directories. Drive times are worked out ahead of time on the road network (OSRM,
       from OpenStreetMap) from a grid of points across the metro to every store, so your phone can time your trip
       without sending your location anywhere.</p>
     <h3 class="h3">Limits</h3>
     <p>Chains let each store decide, and deals change on the day. A deal here is not a promise: when it matters,
       call ahead. Drive times are estimates for normal traffic. The app doesn't know about lines until someone
-      reports one.</p>
+      reports one. Bismarck-Mandan, New Salem and the Twin Cities were added the day before Veterans Day, with fewer
+      local deals checked than in Fargo-Moorhead and few 2026 times from veterans' posts.</p>
     <h3 class="h3">Your privacy</h3>
     <p>No accounts, analytics or tracking. Your location, settings and history stay on your phone. A report you send
       (for example "worked at this store") carries only the store, the outcome and the time, with no name or ID.
@@ -277,7 +291,7 @@
       map tiles, the store list hints at your part of town.</p>
     <h3 class="h3">Sources</h3>
     <p id="sources-line">Each deal lists its own sources under Deals. Places: © OpenStreetMap contributors (ODbL) and
-      the US Census Bureau geocoder. Drive times and route lines: OSRM, on OpenStreetMap data (route lines from the
+      the US Census Bureau geocoder; outside Fargo-Moorhead also All the Places (CC0). Drive times and route lines: OSRM, on OpenStreetMap data (route lines from the
       public server run by FOSSGIS). Weather: National Weather Service. Map tiles: OpenStreetMap Foundation.</p>
   </details>
 </main>

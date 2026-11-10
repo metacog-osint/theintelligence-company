@@ -1,0 +1,2821 @@
+{
+ "meta": {
+  "built_at": "2026-11-10T15:33:53Z",
+  "day": "2026-11-11",
+  "day_start": "2026-11-11T06:00:00Z",
+  "tz": "America/Chicago",
+  "tz_offset_min": -360,
+  "forecast_url": "https://api.weather.gov/gridpoints/BIS/110,47/forecast",
+  "sunrise": "2026-11-11T13:39:06Z",
+  "sunset": "2026-11-11T23:15:37Z",
+  "region": {
+   "id": "bismarck-mandan",
+   "name": "Bismarck-Mandan and New Salem",
+   "label": "Bismarck-Mandan and New Salem, ND",
+   "center": [
+    46.8083,
+    -100.7837
+   ],
+   "center_label": "downtown Bismarck",
+   "zoom": 11,
+   "wx_name": "Bismarck",
+   "transit": null,
+   "areas": [
+    [
+     "Bismarck and Lincoln",
+     46.8,
+     -100.772,
+     10.0
+    ],
+    [
+     "Mandan",
+     46.828,
+     -100.89,
+     5.0
+    ],
+    [
+     "New Salem",
+     46.845,
+     -101.411,
+     3.0
+    ]
+   ]
+  }
+ },
+ "offers": [
+  {
+   "id": "applebees",
+   "brand": "Applebee's",
+   "status": "offering",
+   "category": "meal",
+   "offer": "Free full-size entree from a special Veterans Day menu (7 items); some locations add a $5 Bounce Back card",
+   "value": 14,
+   "grade": "A",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 55,
+   "busy": 25,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active",
+    "guard_reserve"
+   ],
+   "guard_reserve": "yes",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "Dine-in only; participating locations",
+   "sources": [
+    {
+     "url": "https://www.fsrmagazine.com/industry-news/applebees-to-thank-service-members-with-free-entrees-on-veterans-day/",
+     "publisher": "Applebee's 2026 release, as carried by FSR magazine",
+     "published": "2026-11-02"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    },
+    {
+     "url": "https://veteran.com/veterans-day-discounts-sales-deals-free-meals/",
+     "publisher": "Veteran.com",
+     "published": "2026-11-06 (updated)"
+    }
+   ],
+   "notes": "Guard/Reserve wording from Stripes; Veteran.com lists veterans only. Hours not specified. Applebee's own 2026 release (19th year, seven entrees, dine-in at participating restaurants); applebees.com refuses automated reads.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false
+  },
+  {
+   "id": "olive-garden",
+   "brand": "Olive Garden",
+   "status": "offering",
+   "category": "meal",
+   "offer": "Free entree from a special menu",
+   "value": 14,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 55,
+   "busy": 25,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    }
+   ],
+   "notes": "Veteran.com files Olive Garden under 2025; Military.com and Stripes list it for 2026. Brand's own page not checked. No statement from the company itself for 2026 found (8 Nov 2026): compilers only.",
+   "caution": "Not announced by the company for 2026: call first",
+   "group": null,
+   "ticket": false,
+   "purchase": false
+  },
+  {
+   "id": "red-lobster",
+   "brand": "Red Lobster",
+   "status": "offering",
+   "category": "meal",
+   "offer": "Free Veteran's Shrimp & Chips",
+   "value": 14,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 55,
+   "busy": 20,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    }
+   ],
+   "notes": "Veteran.com lists a prior-year entry; Military.com/Stripes show 2026 item named 'Veteran's Shrimp & Chips'. Confirm. No statement from the company itself for 2026 found (8 Nov 2026): compilers only.",
+   "caution": "Not announced by the company for 2026: call first",
+   "group": null,
+   "ticket": false,
+   "purchase": false
+  },
+  {
+   "id": "buffalo-wild-wings",
+   "brand": "Buffalo Wild Wings",
+   "status": "offering",
+   "category": "meal",
+   "offer": "10 boneless wings + fries",
+   "value": 14,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in_or_to_go",
+   "minutes": 35,
+   "busy": 15,
+   "line": 3,
+   "meal": true,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active",
+    "retired"
+   ],
+   "guard_reserve": "yes",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "Dine-in, GO orders or counter orders; participating locations",
+   "sources": [
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://veteran.com/veterans-day-discounts-sales-deals-free-meals/",
+     "publisher": "Veteran.com",
+     "published": "2026-11-06 (updated)"
+    }
+   ],
+   "notes": "'All past and present service members' (Military.com) - would include Guard/Reserve who served; Stripes says veterans.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false
+  },
+  {
+   "id": "cracker-barrel",
+   "brand": "Cracker Barrel",
+   "status": "offering",
+   "category": "breakfast",
+   "offer": "Free Sunrise Pancake Special with valid ID; plus 10% off in-store restaurant/retail for ID.me-verified Rewards members (year-round)",
+   "value": 9,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 45,
+   "busy": 15,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": "10% year-round discount needs ID.me verification in Rewards account; Pancake Special needs ID only",
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://veteran.com/veterans-day-discounts-sales-deals-free-meals/",
+     "publisher": "Veteran.com",
+     "published": "2026-11-06 (updated)"
+    }
+   ],
+   "notes": "Veteran.com lists only the 10% ID.me discount; Military.com/Stripes list the free pancake special.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false
+  },
+  {
+   "id": "famous-daves",
+   "brand": "Famous Dave's",
+   "status": "offering",
+   "category": "meal",
+   "offer": "Complimentary two-meat lunch combo, dine-in, participating restaurants, proof required",
+   "value": 14,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 45,
+   "busy": 10,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://veteran.com/veterans-day-discounts-sales-deals-free-meals/",
+     "publisher": "Veteran.com",
+     "published": "2026-11-06 (updated)"
+    }
+   ],
+   "notes": "Veteran.com page text says 'Monday, Nov 11' (stale weekday copied from 2024) - date is unreliable; single source.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false
+  },
+  {
+   "id": "ruby-tuesday",
+   "brand": "Ruby Tuesday",
+   "status": "offering",
+   "category": "meal",
+   "offer": "Free Everyday Fresh Meal (entree, Garden Bar and bottomless drink, up to $17.99), dine-in, all day",
+   "value": 14,
+   "grade": "A",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 50,
+   "busy": 10,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active",
+    "guard_reserve"
+   ],
+   "guard_reserve": "yes",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.rubytuesday.com/veterans-day/",
+     "publisher": "Ruby Tuesday (own page)",
+     "published": "2026-10-27 (updated)"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    }
+   ],
+   "notes": "Ruby Tuesday's own page: veterans, retired, active duty and Reserve; all day, dine-in, participating locations; proof of service.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false
+  },
+  {
+   "id": "pizza-ranch",
+   "brand": "Pizza Ranch",
+   "status": "offering",
+   "category": "meal",
+   "offer": "Last year: each Pizza Ranch chose a free Veterans Day buffet for veterans or a Veterans Week discount. Nothing found for 2026 at these stores",
+   "value": 14,
+   "grade": "C",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 45,
+   "busy": 15,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.facebook.com/61566436502652/posts/below-is-a-list-of-local-discounts-and-freebies-in-our-area-for-veterans-day-roy/122235733094547883/",
+     "publisher": "Fargo American Legion Post 2 (Facebook list of local deals)",
+     "published": "2026-10-30"
+    },
+    {
+     "url": "https://pizzaranch.com/veterans-day-free-buffet",
+     "publisher": "Pizza Ranch (2025 page)",
+     "published": "2025"
+    }
+   ],
+   "notes": "2026 not found in any roundup. Pizza Ranch's blog says each restaurant picks a Veterans Day buffet or a Veterans Week discount.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false
+  },
+  {
+   "id": "dennys",
+   "brand": "Denny's",
+   "status": "offering",
+   "category": "breakfast",
+   "offer": "Free Original Grand Slam",
+   "value": 11,
+   "grade": "B",
+   "start": "2026-11-11T11:00:00Z",
+   "end": "2026-11-11T18:00:00Z",
+   "window_text": "05:00–12:00 CST",
+   "mode": "dine_in",
+   "minutes": 45,
+   "busy": 15,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active",
+    "retired"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "Participating locations",
+   "sources": [
+    {
+     "url": "https://usmilitary.org/veterans-day-discounts/",
+     "publisher": "usmilitary.org",
+     "published": "2026-11-05"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    },
+    {
+     "url": "https://www.legion.org/information-center/news/veterans-day/2026/november/veterans-day-deals-and-discounts",
+     "publisher": "American Legion",
+     "published": "2026-11-05"
+    }
+   ],
+   "notes": "USM cites the VA 2026 list: Wed 11 Nov, 5 a.m. to noon, dine-in only, ID required.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false
+  },
+  {
+   "id": "ihop",
+   "brand": "IHOP",
+   "status": "offering",
+   "category": "breakfast",
+   "offer": "Free Red, White & Blueberry Pancake Combo",
+   "value": 11,
+   "grade": "B",
+   "start": "2026-11-11T13:00:00Z",
+   "end": "2026-11-12T01:00:00Z",
+   "window_text": "07:00–19:00 CST",
+   "mode": "dine_in",
+   "minutes": 45,
+   "busy": 15,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://www.legion.org/information-center/news/veterans-day/2026/november/veterans-day-deals-and-discounts",
+     "publisher": "The American Legion",
+     "published": "2026-11-05"
+    }
+   ],
+   "notes": "Veteran.com page still shows a 'Tuesday' weekday (stale 2025 text) but Military.com and Stripes confirm 11 Nov. Combo = pancakes, eggs, hash browns, bacon/sausage. The American Legion's 2026 list (5 Nov) gives 7 AM–7 PM at participating restaurants; ihop.com refuses automated reads.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false
+  },
+  {
+   "id": "perkins",
+   "brand": "Perkins",
+   "status": "offering",
+   "category": "breakfast",
+   "offer": "Free Magnificent Seven breakfast at participating locations",
+   "value": 12,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": null,
+   "minutes": 45,
+   "busy": 10,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.fox4news.com/news/veterans-day-2026-deals",
+     "publisher": "FOX 4 Dallas-Fort Worth (FOX Local)",
+     "published": "2026-11-04 (updated 2026-11-05)"
+    },
+    {
+     "url": "https://livingonthecheap.com/veterans-day-freebies-deals/",
+     "publisher": "Living On The Cheap",
+     "published": "2026-11-07 (updated)"
+    },
+    {
+     "url": "https://thekrazycouponlady.com/tips/money/35-veterans-day-freebies-free-oil-change-flu-shot-dinner-dessert",
+     "publisher": "The Krazy Coupon Lady",
+     "published": "2026-11-07 (updated)"
+    },
+    {
+     "url": "https://www.facebook.com/61566436502652/posts/below-is-a-list-of-local-discounts-and-freebies-in-our-area-for-veterans-day-roy/122235733094547883/",
+     "publisher": "Fargo American Legion Post 2 (Facebook list of local deals)",
+     "published": "2026-10-30"
+    }
+   ],
+   "notes": "Fox 4's 2026 list (4 Nov, updated 5 Nov): participating Perkins, active duty and veterans, valid military ID, Wed 11 Nov 2026. No Perkins release for 2026 found.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false
+  },
+  {
+   "id": "texas-roadhouse",
+   "brand": "Texas Roadhouse",
+   "status": "offering",
+   "category": "quick",
+   "offer": "Free meal voucher handed out 11:00-14:00; redeem for 1 of 10 entrees + sides + drink",
+   "value": 18,
+   "grade": "B",
+   "start": "2026-11-11T17:00:00Z",
+   "end": "2026-11-11T20:00:00Z",
+   "window_text": "11:00–14:00 CST",
+   "mode": "voucher",
+   "minutes": 8,
+   "busy": 25,
+   "line": 15,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id",
+    "va_card",
+    "dd214"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": "2027-05-31",
+   "limits": "Voucher, redeem later through 31 May 2027; offers may vary by location",
+   "sources": [
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://veteran.com/veterans-day-discounts-sales-deals-free-meals/",
+     "publisher": "Veteran.com",
+     "published": "2026-11-06 (updated)"
+    }
+   ],
+   "notes": "Voucher is handed out 11-2 only (not redeemable as a meal on the spot necessarily); a third-party page says vouchers usable from dinner opening on 11 Nov. Texas Roadhouse's own 2026 release not found; 2025 release used the same structure.",
+   "caution": "",
+   "group": null,
+   "ticket": true,
+   "purchase": false
+  },
+  {
+   "id": "wendys",
+   "brand": "Wendy's",
+   "status": "offering",
+   "category": "quick",
+   "offer": "Free Dave's Single cheeseburger",
+   "value": 6,
+   "grade": "A",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in_or_to_go",
+   "minutes": 12,
+   "busy": 10,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": true,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "One per person, no purchase needed, no substitutions; identify in-store or at the drive-thru; app/kiosk/mobile/delivery excluded",
+   "sources": [
+    {
+     "url": "https://www.wendys.com/blog/wendysr-square-deal-blog/wendys-honors-veterans-and-active-duty-military-free-daves-single",
+     "publisher": "Wendy's (own blog)",
+     "published": "2026-11-02"
+    },
+    {
+     "url": "https://hip2save.com/deals/veterans-day-free-meals/",
+     "publisher": "Hip2Save",
+     "published": "2026-11-05"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://www.legion.org/information-center/news/veterans-day/2026/november/veterans-day-deals-and-discounts",
+     "publisher": "American Legion",
+     "published": "2026-11-05"
+    }
+   ],
+   "notes": "One 2026 'Military Wallet' page claims a free breakfast combo instead - that is the 2025 offer; four 2026 sources say Dave's Single. Wendy's own newsroom not found. Wendy's sometimes offers varying items; confirm. Wendy's own post: just say you're a veteran or active duty; participating US restaurants; not in a combo; not for digital, delivery or kiosk orders.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false
+  },
+  {
+   "id": "firehouse-subs",
+   "brand": "Firehouse Subs",
+   "status": "offering",
+   "category": "quick",
+   "offer": "Buy any size sub, get a second free",
+   "value": 9,
+   "grade": "A",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "in_store",
+   "minutes": 15,
+   "busy": 10,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": true,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "In-store only; second sub is equal or lesser value presumably",
+   "sources": [
+    {
+     "url": "https://news.firehousesubs.com/posts/firehouse-subs-honors-veterans-and-active-duty-military-with-a-veterans-day-bogo-offer",
+     "publisher": "Firehouse Subs newsroom",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    }
+   ],
+   "notes": "Veteran.com lists as 2025; Military.com (updated 8 Nov 2026) lists it without a year. Stripes also lists. Moderately confident. Firehouse's own post for Wed 11 Nov 2026: buy any sub, get one free, veterans and active duty with military ID, in store, participating restaurants.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": true,
+   "eat": 0.5
+  },
+  {
+   "id": "qdoba",
+   "brand": "Qdoba",
+   "status": "offering",
+   "category": "quick",
+   "offer": "Free chips and dip, dine-in, no purchase",
+   "value": 5,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 12,
+   "busy": 5,
+   "line": 3,
+   "meal": false,
+   "dineIn": true,
+   "snack": true,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://livingonthecheap.com/veterans-day-freebies-deals/",
+     "publisher": "Living On The Cheap",
+     "published": "2026-11-07 (updated)"
+    },
+    {
+     "url": "https://thekrazycouponlady.com/tips/money/35-veterans-day-freebies-free-oil-change-flu-shot-dinner-dessert",
+     "publisher": "The Krazy Coupon Lady",
+     "published": "2026-11-07 (updated)"
+    }
+   ],
+   "notes": "Living On The Cheap lists it as 2026; Krazy Coupon Lady marks it 'predicted'. Not on Military.com/Stripes lists. Treat as likely but not firm.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "eat": 0.2
+  },
+  {
+   "id": "pilot",
+   "brand": "Pilot / Flying J",
+   "status": "offering",
+   "category": "quick",
+   "offer": "Free sandwich + coffee or fountain drink via Pilot app",
+   "value": 8,
+   "grade": "A",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "to_go",
+   "minutes": 8,
+   "busy": 5,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": true,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [],
+   "advance": "ID.me verification in the Pilot app BEFORE visiting",
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://newsroom.pilotcompany.com/pilot-salutes-veterans-with-free-meals-and-funds-for-career-development",
+     "publisher": "Pilot Company newsroom (release)",
+     "published": "2026-10-23"
+    },
+    {
+     "url": "https://veteran.com/veterans-day-discounts-sales-deals-free-meals/",
+     "publisher": "Veteran.com",
+     "published": "2026-11-06 (updated)"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    }
+   ],
+   "notes": "Date not stated by Stripes; Veteran.com/Military.com say Nov 11 2026. ID.me required in advance. Pilot's 2026 release: veterans and active duty verified through ID.me, claimed in the Pilot app, participating locations.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false
+  },
+  {
+   "id": "blaze-pizza",
+   "brand": "Blaze Pizza",
+   "status": "offering",
+   "category": "quick",
+   "offer": "Free one-topping pizza",
+   "value": 8,
+   "grade": "A",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": null,
+   "minutes": 20,
+   "busy": 10,
+   "line": 3,
+   "meal": false,
+   "dineIn": true,
+   "snack": true,
+   "eligible": [
+    "veteran"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.manilatimes.net/2026/11/02/tmt-newswire/globenewswire/blaze-pizza-to-offer-free-one-topping-pizza-to-veterans-and-active-duty-military-on-veterans-day/2459600",
+     "publisher": "Blaze Pizza release (GlobeNewswire, carried by The Manila Times)",
+     "published": "2026-11-02"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    }
+   ],
+   "notes": "Blaze's 2026 release: veterans and active duty, participating locations; no hours or ID rule stated.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false
+  },
+  {
+   "id": "starbucks",
+   "brand": "Starbucks",
+   "status": "offering",
+   "category": "coffee",
+   "offer": "Free tall (12 oz) brewed coffee, hot or iced",
+   "value": 3,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in_or_to_go",
+   "minutes": 8,
+   "busy": 5,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active",
+    "spouse"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "yes",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "One per customer per visit; cafe and drive-thru; excludes Cold Brew/Nitro/customizations",
+   "sources": [
+    {
+     "url": "https://about.starbucks.com/stories/2026/starbucks-holiday-2026/",
+     "publisher": "Starbucks (page returned 403 to fetch; seen in search snippet)",
+     "published": "2026"
+    },
+    {
+     "url": "https://veteran.com/veterans-day-discounts-sales-deals-free-meals/",
+     "publisher": "Veteran.com",
+     "published": "2026-11-06 (updated)"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    }
+   ],
+   "notes": "Participating US stores incl. licensed (Target/grocery) locations. Proof not specified; spouses included.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false
+  },
+  {
+   "id": "scooters",
+   "brand": "Scooter's Coffee",
+   "status": "offering",
+   "category": "coffee",
+   "offer": "Free medium drink, in-store only",
+   "value": 5,
+   "grade": "A",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "in_store",
+   "minutes": 6,
+   "busy": 5,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.scooterscoffee.com/blog/post/veterans-day-2026",
+     "publisher": "Scooter's Coffee (own blog)",
+     "published": "2026-11-04"
+    },
+    {
+     "url": "https://veteran.com/veterans-day-discounts-sales-deals-free-meals/",
+     "publisher": "Veteran.com",
+     "published": "2026-11-06 (updated)"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    }
+   ],
+   "notes": "Scooter's own post: valid military ID, all day, in-store only (no delivery or mobile order-ahead), one per guest.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false
+  },
+  {
+   "id": "caribou",
+   "brand": "Caribou Coffee",
+   "status": "offering",
+   "category": "coffee",
+   "offer": "Prior years: a free small coffee of the day or cold press for veterans, service members and spouses",
+   "value": 5,
+   "grade": "C",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": null,
+   "minutes": 8,
+   "busy": 5,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active",
+    "spouse"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "yes",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://thekrazycouponlady.com/tips/money/35-veterans-day-freebies-free-oil-change-flu-shot-dinner-dessert",
+     "publisher": "The Krazy Coupon Lady",
+     "published": "2026-11-07 (updated)"
+    },
+    {
+     "url": "https://www.military.com/discounts/caribou-coffee-veterans-day-military-discount",
+     "publisher": "Military.com (prior year)",
+     "published": "prior year"
+    },
+    {
+     "url": "https://militarybridge.com/veterans-day-deals/",
+     "publisher": "MilitaryBridge (2026 list: awaiting verification)",
+     "published": "2026"
+    }
+   ],
+   "notes": "Caribou's own 2023 release and 2024 reports: a small coffee of the day or cold press, spouses included, military ID. For 2026 it is only predicted (The Krazy Coupon Lady) or awaiting verification (MilitaryBridge). Every metro store on Caribou's locator is listed; the NDSU Memorial Union store is on campus and may not take part.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false
+  },
+  {
+   "id": "circle-k",
+   "brand": "Circle K",
+   "status": "offering",
+   "category": "coffee",
+   "offer": "Free medium hot or iced coffee, no purchase",
+   "value": 3,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "to_go",
+   "minutes": 6,
+   "busy": 3,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://thekrazycouponlady.com/tips/money/35-veterans-day-freebies-free-oil-change-flu-shot-dinner-dessert",
+     "publisher": "The Krazy Coupon Lady",
+     "published": "2026-11-07 (updated)"
+    },
+    {
+     "url": "https://livingonthecheap.com/veterans-day-freebies-deals/",
+     "publisher": "Living On The Cheap",
+     "published": "2026-11-07 (updated)"
+    }
+   ],
+   "notes": "Veteran.com lists as 2025; Stripes/KCL/LOC list for 2026.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false
+  },
+  {
+   "id": "insomnia",
+   "brand": "Insomnia Cookies",
+   "status": "offering",
+   "category": "treat",
+   "offer": "Predicted: one free Deluxe cookie with $5+ in-store purchase",
+   "value": 3,
+   "grade": "C",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": null,
+   "minutes": 8,
+   "busy": 3,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": true,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://thekrazycouponlady.com/tips/money/35-veterans-day-freebies-free-oil-change-flu-shot-dinner-dessert",
+     "publisher": "The Krazy Coupon Lady",
+     "published": "2026-11-07 (updated)"
+    }
+   ],
+   "notes": "",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": true,
+   "eat": 0.2
+  },
+  {
+   "id": "freddys",
+   "brand": "Freddy's Frozen Custard & Steakburgers",
+   "status": "offering",
+   "category": "treat",
+   "offer": "Free combo meal card for visiting on Nov 11 (no purchase); redeem later",
+   "value": 11,
+   "grade": "A",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "voucher",
+   "minutes": 6,
+   "busy": 5,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": "2026-11-25",
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://freddys.com/veterans-day",
+     "publisher": "Freddy's (own page)",
+     "published": "2026 (cards redeem through 25 Nov 2026)"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://veteran.com/veterans-day-discounts-sales-deals-free-meals/",
+     "publisher": "Veteran.com",
+     "published": "2026-11-06 (updated)"
+    }
+   ],
+   "notes": "Card redeemable through 25 Nov 2026. Freddy's own 2026 page: no purchase; card from your local Freddy's on 11 Nov, redeem through 25 Nov 2026.",
+   "caution": "",
+   "group": null,
+   "ticket": true,
+   "purchase": false
+  },
+  {
+   "id": "great-clips",
+   "brand": "Great Clips",
+   "status": "offering",
+   "category": "service",
+   "offer": "Free haircut or a free-haircut card for a later visit; non-veteran customers that day get a card to give to a veteran",
+   "value": 22,
+   "grade": "A",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "in_store",
+   "minutes": 5,
+   "busy": 5,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": "2026-12-04",
+   "limits": "Card redeemable through 4 Dec 2026",
+   "sources": [
+    {
+     "url": "https://www.greatclips.com/about-us/news-room/vets-day-free-haircuts-2026",
+     "publisher": "Great Clips newsroom (release)",
+     "published": "2026-10-20"
+    },
+    {
+     "url": "https://hip2save.com/deals/veterans-day-free-meals/",
+     "publisher": "Hip2Save",
+     "published": "2026-11-05"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/retailers-veterans-day-military-discounts.html",
+     "publisher": "Military.com retail list",
+     "published": "2026-11-07 (updated)"
+    },
+    {
+     "url": "https://www.legion.org/information-center/news/veterans-day/2026/november/veterans-day-deals-and-discounts",
+     "publisher": "American Legion",
+     "published": "2026-11-05"
+    },
+    {
+     "url": "https://usmilitary.org/veterans-day-discounts/",
+     "publisher": "usmilitary.org",
+     "published": "2026-11-05"
+    }
+   ],
+   "notes": "Great Clips program page describes the annual Nov 11 program; 2026 card deadline of 4 Dec comes from roundups (2025 was 5 Dec). Hours/proof not specified. Salons are franchised; wait times likely long. Great Clips' 2026 release: any US salon; cards redeemable through 4 Dec 2026.",
+   "caution": "",
+   "group": null,
+   "ticket": true,
+   "purchase": false
+  },
+  {
+   "id": "sport-clips",
+   "brand": "Sport Clips",
+   "status": "offering",
+   "category": "service",
+   "offer": "Free haircut at participating locations",
+   "value": 25,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "in_store",
+   "minutes": 30,
+   "busy": 20,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://hip2save.com/deals/veterans-day-free-meals/",
+     "publisher": "Hip2Save",
+     "published": "2026-11-05"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://usmilitary.org/veterans-day-discounts/",
+     "publisher": "usmilitary.org",
+     "published": "2026-11-05"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/retailers-veterans-day-military-discounts.html",
+     "publisher": "Military.com retail list",
+     "published": "2026-11-07 (updated)"
+    }
+   ],
+   "notes": "Also $2/haircut donation to VFW scholarship through 14 Nov. Franchise: confirm the specific shop.",
+   "caution": "Participating shops only: call first",
+   "group": "haircut",
+   "ticket": false,
+   "purchase": false
+  },
+  {
+   "id": "jiffy-lube",
+   "brand": "Jiffy Lube",
+   "status": "offering",
+   "category": "service",
+   "offer": "Some franchisees: 50% off oil change on Nov 11; chain-wide ongoing 25% military discount reported",
+   "value": 20,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "in_store",
+   "minutes": 30,
+   "busy": 15,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active",
+    "retired"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://ccheadliner.com/2026/11/04/jiffy-lube-honors-active-retired-military-with-50-percent-discount-on-all-oil-changes-on-veterans-day/",
+     "publisher": "CC Headliner (one franchisee, Missouri)",
+     "published": "2026-11-04"
+    }
+   ],
+   "notes": "Call ahead.",
+   "caution": "Only some franchise shops take part: call first",
+   "group": null,
+   "ticket": false,
+   "purchase": true
+  },
+  {
+   "id": "target",
+   "brand": "Target",
+   "status": "offering",
+   "category": "shopping",
+   "offer": "20% off one qualifying storewide purchase, 5–11 Nov, in store and online (Target Circle Military Appreciation)",
+   "value": 0,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "in_store",
+   "minutes": 25,
+   "busy": 5,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active",
+    "military_community"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "yes",
+   "kids": null,
+   "proof": [],
+   "advance": "Verify your military status in Target Circle before you shop (members verified before get it automatically)",
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "One qualified purchase",
+   "sources": [
+    {
+     "url": "https://news.va.gov/150505/2026-veterans-day-discounts-free-meals-offers/",
+     "publisher": "VA News (VA Office of Digital Media)",
+     "published": "2026-10-26 (verified 22 Oct, updated through 11 Nov)"
+    },
+    {
+     "url": "https://hip2save.com/deals/veterans-day-free-meals/",
+     "publisher": "Hip2Save",
+     "published": "2026-11-05"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/retailers-veterans-day-military-discounts.html",
+     "publisher": "Military.com retail list",
+     "published": "2026-11-07 (updated)"
+    },
+    {
+     "url": "https://themilitarywallet.com/veterans-day-free-meals-and-discounts/",
+     "publisher": "The Military Wallet",
+     "published": "2026-11-06 (updated)"
+    },
+    {
+     "url": "https://www.fox4news.com/news/veterans-day-2026-deals",
+     "publisher": "FOX 4 Dallas-Fort Worth (FOX Local)",
+     "published": "2026-11-04 (updated 2026-11-05)"
+    }
+   ],
+   "notes": "Families included. Verify online first; the discount loads into Target Circle. VA News says one qualifying storewide purchase; Fox 4 says 20% off storewide. Target's own 2026 page not found.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": true
+  },
+  {
+   "id": "kohls",
+   "brand": "Kohl's",
+   "status": "offering",
+   "category": "shopping",
+   "offer": "30% off in store, 10–11 Nov",
+   "value": 0,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "in_store",
+   "minutes": 25,
+   "busy": 5,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active",
+    "family"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "yes",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://news.va.gov/150505/2026-veterans-day-discounts-free-meals-offers/",
+     "publisher": "VA News (VA Office of Digital Media)",
+     "published": "2026-10-26 (verified 22 Oct, updated through 11 Nov)"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/retailers-veterans-day-military-discounts.html",
+     "publisher": "Military.com retail list",
+     "published": "2026-11-07 (updated)"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://usmilitary.org/veterans-day-discounts/",
+     "publisher": "usmilitary.org",
+     "published": "2026-11-05"
+    }
+   ],
+   "notes": "Military Wallet separately says 15% every Monday (ongoing). VA News (26 Oct 2026) lists 30% off in store 10–11 Nov 2026 for military, veterans and families; Kohl's own 2026 page not found.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": true
+  },
+  {
+   "id": "nd-heritage-center",
+   "brand": "Veterans Day Program, ND Heritage Center & State Museum",
+   "status": "offering",
+   "category": "event",
+   "offer": "Public Veterans Day program in the Russell Reid Auditorium (KX calls it Russell Reid Hall). AMVETS choir at 9:30 AM, program at 9:45 AM. Free.",
+   "value": 0,
+   "grade": "A",
+   "start": "2026-11-11T15:30:00Z",
+   "end": "2026-11-11T17:00:00Z",
+   "window_text": "09:30–11:00 CST",
+   "mode": "event",
+   "minutes": 75,
+   "busy": 0,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "public",
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.kxnet.com/studio701/community/veterans-day-program-offers-salute-to-veterans-at-state-heritage-center/",
+     "publisher": "KX News (Studio 701), by Amber Schatz",
+     "published": "2026-11-04"
+    },
+    {
+     "url": "https://statemuseum.nd.gov/visit",
+     "publisher": "State Historical Society of ND (State Museum)",
+     "published": "seen 9 Nov 2026"
+    }
+   ],
+   "notes": "KX News (4 Nov 2026) quotes the organizers: AMVETS choir at 9:30 AM, program at 9:45 AM, in the Russell Reid Auditorium. No end time is published; plan on about an hour. Free and open to all in past years.",
+   "caution": "",
+   "group": null,
+   "worth": 12,
+   "arrive_by": "2026-11-11T15:45:00Z",
+   "ticket": false,
+   "purchase": false
+  },
+  {
+   "id": "all-veterans-memorial",
+   "brand": "All Veterans Memorial, 11 AM sunlight on the globe",
+   "status": "offering",
+   "category": "event",
+   "offer": "Last year: every Nov 11 at 11:00 AM, sunlight passes through the opening in the memorial dome and lands on North Dakota on the globe. Free, outdoors, weather dependent. No 2026 notice found.",
+   "value": 0,
+   "grade": "C",
+   "start": "2026-11-11T16:55:00Z",
+   "end": "2026-11-11T17:20:00Z",
+   "window_text": "10:55–11:20 CST",
+   "mode": "event",
+   "minutes": 20,
+   "busy": 0,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "public"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://noboundariesnd.com/listing/north-dakota-state-capitol/",
+     "publisher": "No Boundaries ND (Bismarck-Mandan CVB)",
+     "published": "seen 9 Nov 2026 (search result only; Capitol address and contact line)"
+    },
+    {
+     "url": "https://bismarcktribune.com/news/local/government-politics/veterans-day-celebrated-state-politicians-bismarck/article_cbe2219c-a061-11ef-8cb5-135343e814f5.html",
+     "publisher": "Bismarck Tribune",
+     "published": "2024-11 (date inferred from URL; article not read)"
+    }
+   ],
+   "notes": "A yearly tradition: at 11:00 AM on 11 Nov, sunlight through the memorial's dome lands on North Dakota on its globe (clear days). Next to the Heritage Center. No 2026 notice found.",
+   "caution": "",
+   "group": null,
+   "worth": 8,
+   "arrive_by": "2026-11-11T17:00:00Z",
+   "ticket": false,
+   "purchase": false
+  },
+  {
+   "id": "amvets-post-9",
+   "brand": "AMVETS Post 9",
+   "status": "offering",
+   "category": "event",
+   "offer": "Last year: a Veterans Day ceremony at the club (a rose ceremony for veterans who died that year, a gun salute, taps), then a free lunch for everyone there, from Post 9 (KX News, 2025). In an earlier year the club opened at 11 AM with the salute at noon. No 2026 time posted",
+   "value": 12,
+   "grade": "C",
+   "start": "2026-11-11T17:45:00Z",
+   "end": "2026-11-11T20:00:00Z",
+   "window_text": "11:45–14:00 CST",
+   "mode": "event",
+   "minutes": 60,
+   "busy": 10,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "public",
+    "veteran"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.bismarckamvets.com/",
+     "publisher": "Bismarck AMVETS Post 9 (own site)",
+     "published": "seen 9 Nov 2026"
+    },
+    {
+     "url": "https://www.burleigh.gov/departments/veterans-service-office/local-veterans-service-organizations/",
+     "publisher": "Burleigh County Veterans Service Office",
+     "published": "seen 9 Nov 2026"
+    },
+    {
+     "url": "https://www.kxnet.com/news/local-news/bismarcks-amvets-readies-for-veterans-day-celebration/",
+     "publisher": "KX News",
+     "published": "earlier year (page blocked by bot check; seen via search summary)"
+    }
+   ],
+   "notes": "No 2026 time posted. Call (701) 258-8324.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false
+  },
+  {
+   "id": "umary-veterans-day",
+   "brand": "University of Mary Veterans Day chapel service and luncheon",
+   "status": "offering",
+   "category": "event",
+   "offer": "Last year: 2025 chapel service at 11:00 AM in Founders Hall, Lumen Vitae University Center, open to the public, for current and former military, veterans and families; complimentary lunch afterward for veterans and service members in attendance (Crow's Nest Campus Restaurant). No 2026 announcement found.",
+   "value": 10,
+   "grade": "C",
+   "start": "2026-11-11T16:45:00Z",
+   "end": "2026-11-11T18:30:00Z",
+   "window_text": "10:45–12:30 CST",
+   "mode": "event",
+   "minutes": 90,
+   "busy": 5,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active",
+    "public"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.umary.edu/about/news/all-stories/annual-veterans-day-chapel-service-and-luncheon-2025",
+     "publisher": "University of Mary",
+     "published": "2025-10-29"
+    }
+   ],
+   "notes": "In 2025: a chapel service at 11:00 AM in Founders Hall (Lumen Vitae University Center), open to the public, then a free lunch for veterans and service members there. Nothing posted for 2026: check umary.edu.",
+   "caution": "",
+   "group": null,
+   "worth": 12,
+   "arrive_by": "2026-11-11T17:00:00Z",
+   "ticket": false,
+   "purchase": false
+  },
+  {
+   "id": "mandan-field-of-flags",
+   "brand": "Mandan Middle School Field of Flags display",
+   "status": "offering",
+   "category": "event",
+   "offer": "Flags planted in front of the school by students for the Disabled American Veterans Field of Flags; display stays up through Thu 12 Nov. Free to view from outside. KX (Nov 2026) reported $1,198 raised, the third straight year over goal.",
+   "value": 0,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "event",
+   "minutes": 10,
+   "busy": 0,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "public"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.kxnet.com/news/local-news/mandan-middle-school-students-plant-flags-in-support-of-disabled-american-veterans/",
+     "publisher": "KX News",
+     "published": "2026-11 (page blocked by bot check; seen via search summary)"
+    },
+    {
+     "url": "https://www.kxnet.com/news/local-news/mandan-middle-school-flags/",
+     "publisher": "KX News",
+     "published": "2025-11-07 (read: prior-year story, 120 flags, $1,352, yearly tradition)"
+    }
+   ],
+   "notes": "KX News reported the 2026 display; it stays up through Thu 12 Nov. View it from outside the school.",
+   "caution": "",
+   "group": null,
+   "worth": 4,
+   "ticket": false,
+   "purchase": false
+  }
+ ],
+ "places": [
+  {
+   "id": "applebees-3200-north-14th-street",
+   "offer": "applebees",
+   "name": "",
+   "address": "3200 North 14th Street, Bismarck, ND 58501",
+   "lat": 46.841343,
+   "lng": -100.771921,
+   "phone": "+1 701-255-0200",
+   "open": "2026-11-11T16:30:00Z",
+   "close": "2026-11-12T06:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "applebees-434-south-3rd",
+   "offer": "applebees",
+   "name": "",
+   "address": "434 South 3rd, Bismarck, ND 58504",
+   "lat": 46.801078,
+   "lng": -100.788094,
+   "phone": "+1 701-222-1018",
+   "open": "2026-11-11T16:30:00Z",
+   "close": "2026-11-12T06:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "olive-garden-3400-14th-street-north",
+   "offer": "olive-garden",
+   "name": "",
+   "address": "3400 14th Street North, Bismarck, ND 58503",
+   "lat": 46.843372,
+   "lng": -100.771567,
+   "phone": "",
+   "open": "2026-11-11T17:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "red-lobster-1130-e-century-ave",
+   "offer": "red-lobster",
+   "name": "",
+   "address": "1130 E Century AVE, Bismarck, ND 58503",
+   "lat": 46.838504,
+   "lng": -100.77401,
+   "phone": "+1 701-222-2363",
+   "open": "2026-11-11T17:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "buffalo-wild-wings-218-south-3rd-street",
+   "offer": "buffalo-wild-wings",
+   "name": "",
+   "address": "218 South 3rd Street, Bismarck, ND 58504",
+   "lat": 46.803345,
+   "lng": -100.788143,
+   "phone": "+1 701-323-9464",
+   "open": "2026-11-11T16:30:00Z",
+   "close": "2026-11-12T06:45:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "buffalo-wild-wings-3420-north-14th-street",
+   "offer": "buffalo-wild-wings",
+   "name": "",
+   "address": "3420 North 14th Street, Bismarck, ND 58503",
+   "lat": 46.84412,
+   "lng": -100.771297,
+   "phone": "+1 701-751-2568",
+   "open": "2026-11-11T16:30:00Z",
+   "close": "2026-11-12T06:45:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "cracker-barrel-1685-north-grandview-lane",
+   "offer": "cracker-barrel",
+   "name": "",
+   "address": "1685 North Grandview Lane, Bismarck, 58503",
+   "lat": 46.828671,
+   "lng": -100.81857,
+   "phone": "+1-701-223-2785",
+   "open": "2026-11-11T13:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "famous-daves-401-east-bismarck-expressway",
+   "offer": "famous-daves",
+   "name": "",
+   "address": "401 East Bismarck Expressway, Bismarck, ND 58504",
+   "lat": 46.794661,
+   "lng": -100.786278,
+   "phone": "+1 701-530-9800",
+   "open": "2026-11-11T17:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": true,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "ruby-tuesday-3520-state-street",
+   "offer": "ruby-tuesday",
+   "name": "",
+   "address": "3520 State Street, Bismarck, ND 58503",
+   "lat": 46.844071,
+   "lng": -100.77383,
+   "phone": "+1 701-751-4100",
+   "open": "2026-11-11T17:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": true,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "pizza-ranch-1431-east-lasalle-drive",
+   "offer": "pizza-ranch",
+   "name": "",
+   "address": "1431 East LaSalle Drive, Bismarck, ND 58503",
+   "lat": 46.861233,
+   "lng": -100.768608,
+   "phone": "+1 701-751-2636",
+   "open": "2026-11-11T17:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": true,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "pizza-ranch-305-e-main-street",
+   "offer": "pizza-ranch",
+   "name": "",
+   "address": "305 E Main Street, Mandan, ND 58554",
+   "lat": 46.826649,
+   "lng": -100.885287,
+   "phone": "+1 701-667-5400",
+   "open": "2026-11-11T17:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": true,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "dennys-405-s-7th-st",
+   "offer": "dennys",
+   "name": "",
+   "address": "405 S 7th St, Bismarck, ND 58504",
+   "lat": 46.801772,
+   "lng": -100.781236,
+   "phone": "+1 701-223-2015",
+   "open": "2026-11-11T13:00:00Z",
+   "close": "2026-11-12T08:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "ihop-1209-brookside-place",
+   "offer": "ihop",
+   "name": "",
+   "address": "1209 Brookside Place, Bismarck, ND 58503",
+   "lat": 46.863301,
+   "lng": -100.77134,
+   "phone": "+1 701-707-2534",
+   "open": "2026-11-11T06:00:00Z",
+   "close": "2026-11-12T06:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "perkins-1100-interstate-avenue",
+   "offer": "perkins",
+   "name": "",
+   "address": "1100 Interstate Avenue, Bismarck, ND 58501",
+   "lat": 46.83493,
+   "lng": -100.77401,
+   "phone": "+1 701-581-6082",
+   "open": "2026-11-11T11:30:00Z",
+   "close": "2026-11-12T06:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "perkins-100-east-bismarck-expressway",
+   "offer": "perkins",
+   "name": "",
+   "address": "100 East Bismarck Expressway, Bismarck, ND 58504",
+   "lat": 46.795422,
+   "lng": -100.791296,
+   "phone": "+1 701-221-3112",
+   "open": "2026-11-11T06:15:00Z",
+   "close": "2026-11-12T06:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "texas-roadhouse-1505-burnt-boat-drive",
+   "offer": "texas-roadhouse",
+   "name": "",
+   "address": "1505 Burnt Boat Drive, Bismarck, ND 58503",
+   "lat": 46.830827,
+   "lng": -100.815659,
+   "phone": "+1 701-250-6746",
+   "open": "2026-11-11T21:30:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "wendys-3120-n-14th-st",
+   "offer": "wendys",
+   "name": "",
+   "address": "3120 N. 14th St., Bismarck, ND 58503",
+   "lat": 46.840253,
+   "lng": -100.771953,
+   "phone": "+1 701-222-8889",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T07:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "wendys-900-east-bismarck-expressway",
+   "offer": "wendys",
+   "name": "",
+   "address": "900 East Bismarck Expressway, Bismarck, ND 58504",
+   "lat": 46.79529,
+   "lng": -100.778214,
+   "phone": "+1 701-224-8304",
+   "open": "2026-11-11T16:30:00Z",
+   "close": "2026-11-12T03:30:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "firehouse-subs-4521-ottawa-st",
+   "offer": "firehouse-subs",
+   "name": "",
+   "address": "4521 Ottawa St., Suite 1, Bismarck, ND 58503",
+   "lat": 46.855235,
+   "lng": -100.773552,
+   "phone": "+1 701-751-0894",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "qdoba-312-s-3rd-st",
+   "offer": "qdoba",
+   "name": "",
+   "address": "312 S 3rd St, Bismarck, ND 58504",
+   "lat": 46.802599,
+   "lng": -100.788122,
+   "phone": "",
+   "open": "2026-11-11T16:30:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "pilot-3936-miriam-ave",
+   "offer": "pilot",
+   "name": "",
+   "address": "3936 Miriam Ave, Bismarck, ND 58501",
+   "lat": 46.829433,
+   "lng": -100.729286,
+   "phone": "+1 701-289-6786",
+   "open": "2026-11-11T06:00:00Z",
+   "close": "2026-11-12T06:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "blaze-pizza-805-south-3rd-street",
+   "offer": "blaze-pizza",
+   "name": "",
+   "address": "805 South 3rd Street, Bismarck, ND 58504",
+   "lat": 46.79744,
+   "lng": -100.78725,
+   "phone": "+1 701-607-0030",
+   "open": "2026-11-11T16:30:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-715-s-washington",
+   "offer": "starbucks",
+   "name": "",
+   "address": "715 S. Washington, Bismarck, ND 58504",
+   "lat": 46.79763,
+   "lng": -100.79406,
+   "phone": "+1 701-221-2072",
+   "open": "2026-11-11T10:30:00Z",
+   "close": "2026-11-12T02:30:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-1229-w-century-ave",
+   "offer": "starbucks",
+   "name": "",
+   "address": "1229 W Century Ave, Bismarck, ND 58503",
+   "lat": 46.83227,
+   "lng": -100.81165,
+   "phone": "+1 701-222-6301",
+   "open": "2026-11-11T11:00:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-2124-n-12th-street",
+   "offer": "starbucks",
+   "name": "",
+   "address": "2124 N. 12th Street, Bismarck, ND 58501",
+   "lat": 46.82885,
+   "lng": -100.77373,
+   "phone": "+1 701-221-2486",
+   "open": "2026-11-11T10:30:00Z",
+   "close": "2026-11-12T03:30:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-1402-43rd-ave-ne",
+   "offer": "starbucks",
+   "name": "",
+   "address": "1402 43rd Ave NE, Bismarck, ND 58503",
+   "lat": 46.85279,
+   "lng": -100.77181,
+   "phone": "+1 701-222-1020",
+   "open": "2026-11-11T10:30:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "scooters-433-east-bismarck-expressway",
+   "offer": "scooters",
+   "name": "",
+   "address": "433 East Bismarck Expressway, Bismarck, ND 58504",
+   "lat": 46.800059,
+   "lng": -100.788574,
+   "phone": "+1 701-877-1590",
+   "open": "2026-11-11T11:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "caribou-3122-yorktown-drive",
+   "offer": "caribou",
+   "name": "",
+   "address": "3122 Yorktown Drive, Bismarck, ND 58503",
+   "lat": 46.840021,
+   "lng": -100.730119,
+   "phone": "+1 701-751-8009",
+   "open": "2026-11-11T11:30:00Z",
+   "close": "2026-11-12T00:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "caribou-3209-weiss-ave",
+   "offer": "caribou",
+   "name": "",
+   "address": "3209 Weiss Ave., Bismarck, ND 58503",
+   "lat": 46.842193,
+   "lng": -100.774974,
+   "phone": "+1 701-401-6599",
+   "open": "2026-11-11T12:00:00Z",
+   "close": "2026-11-12T00:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "caribou-900-43rd-ave-ne",
+   "offer": "caribou",
+   "name": "",
+   "address": "900 43rd AVE NE, Bismarck, ND 58503",
+   "lat": 46.853266,
+   "lng": -100.777243,
+   "phone": "+1 701-223-6617",
+   "open": "2026-11-11T12:00:00Z",
+   "close": "2026-11-12T01:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "caribou-3101-north-11th-street",
+   "offer": "caribou",
+   "name": "",
+   "address": "3101 North 11th Street, Bismarck, ND 58503",
+   "lat": 46.839913,
+   "lng": -100.774561,
+   "phone": "+1 701-258-7791",
+   "open": "2026-11-11T12:00:00Z",
+   "close": "2026-11-12T00:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "caribou-601-south-3rd-street",
+   "offer": "caribou",
+   "name": "",
+   "address": "601 South 3rd Street, Bismarck, ND 58504",
+   "lat": 46.799814,
+   "lng": -100.787308,
+   "phone": "+1 701-751-7507",
+   "open": "2026-11-11T11:00:00Z",
+   "close": "2026-11-12T01:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "circle-k-905-e-bismarck-expwy",
+   "offer": "circle-k",
+   "name": "",
+   "address": "905 E Bismarck Expwy, Bismarck, ND 58504",
+   "lat": 46.79459,
+   "lng": -100.778175,
+   "phone": "+1 701-223-4963",
+   "open": "2026-11-11T06:00:00Z",
+   "close": "2026-11-12T06:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "circle-k-3815-trenton-dr",
+   "offer": "circle-k",
+   "name": "",
+   "address": "3815 Trenton Dr, Bismarck, ND 58503",
+   "lat": 46.833731,
+   "lng": -100.731625,
+   "phone": "+1 701-223-6181",
+   "open": "2026-11-11T06:00:00Z",
+   "close": "2026-11-12T06:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "circle-k-3600-state-st",
+   "offer": "circle-k",
+   "name": "",
+   "address": "3600 State St, Bismarck, ND 58503",
+   "lat": 46.844886,
+   "lng": -100.773958,
+   "phone": "+1 701-255-3622",
+   "open": "2026-11-11T06:00:00Z",
+   "close": "2026-11-12T06:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "insomnia-630-east-main-ave",
+   "offer": "insomnia",
+   "name": "",
+   "address": "630 East Main Ave, Bismarck, ND 58501",
+   "lat": 46.805594,
+   "lng": -100.782375,
+   "phone": "+1 701-997-2698",
+   "open": "2026-11-11T17:00:00Z",
+   "close": "2026-11-12T07:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "freddys-5511-tree-top-lane",
+   "offer": "freddys",
+   "name": "",
+   "address": "5511 Tree Top Lane, Bismarck, ND 58503",
+   "lat": 46.865741,
+   "lng": -100.773735,
+   "phone": "+1 701-751-0958",
+   "open": "2026-11-11T16:30:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "great-clips-1223-w-century-ave",
+   "offer": "great-clips",
+   "name": "",
+   "address": "1223 W Century Ave, Bismarck, ND 58503",
+   "lat": 46.832482,
+   "lng": -100.81091,
+   "phone": "+1 701-751-4404",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T00:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "great-clips-914-s-12th-st",
+   "offer": "great-clips",
+   "name": "",
+   "address": "914 S 12th St, Bismarck, ND 58504",
+   "lat": 46.796468,
+   "lng": -100.774985,
+   "phone": "+1 701-751-8222",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T01:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "sport-clips-411-south-3rd-street",
+   "offer": "sport-clips",
+   "name": "",
+   "address": "411 South 3Rd Street, Bismarck, ND 58504",
+   "lat": 46.80167,
+   "lng": -100.78719,
+   "phone": "+1 701-751-0698",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T01:00:00Z",
+   "hoursAssumed": true,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "sport-clips-820-43rd-ave-ne",
+   "offer": "sport-clips",
+   "name": "",
+   "address": "820 43Rd Ave. Ne, Bismarck, ND 58503",
+   "lat": 46.85319,
+   "lng": -100.77858,
+   "phone": "+1 701-751-4004",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T01:00:00Z",
+   "hoursAssumed": true,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "jiffy-lube-1017-s-washington-st",
+   "offer": "jiffy-lube",
+   "name": "",
+   "address": "1017 S WASHINGTON ST, BISMARCK, ND 58504",
+   "lat": 46.794674,
+   "lng": -100.793664,
+   "phone": "+1 701-223-3245",
+   "open": "2026-11-11T14:00:00Z",
+   "close": "2026-11-12T00:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "target-600-kirkwood-mall",
+   "offer": "target",
+   "name": "",
+   "address": "600 Kirkwood Mall, Bismarck, ND 58504",
+   "lat": 46.799078,
+   "lng": -100.783506,
+   "phone": "+1 701-250-3180",
+   "open": "2026-11-11T13:00:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "kohls-1129-w-century-ave",
+   "offer": "kohls",
+   "name": "",
+   "address": "1129 W CENTURY AVE, BISMARCK, ND 58503",
+   "lat": 46.831462,
+   "lng": -100.80942,
+   "phone": "+1 701-224-6745",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "nd-heritage-center-612-e-boulevard-ave",
+   "offer": "nd-heritage-center",
+   "name": "",
+   "address": "612 E Boulevard Ave, Bismarck, ND 58505",
+   "lat": 46.8192459,
+   "lng": -100.7803171,
+   "phone": "701-328-2666",
+   "open": "2026-11-11T15:30:00Z",
+   "close": "2026-11-11T17:00:00Z",
+   "hoursAssumed": false,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "all-veterans-memorial-600-e-boulevard-ave",
+   "offer": "all-veterans-memorial",
+   "name": "",
+   "address": "600 E Boulevard Ave, Bismarck, ND 58505",
+   "lat": 46.816799,
+   "lng": -100.781294,
+   "phone": "unknown",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "census"
+  },
+  {
+   "id": "amvets-post-9-2402-railroad-ave",
+   "offer": "amvets-post-9",
+   "name": "",
+   "address": "2402 Railroad Ave, Bismarck, ND 58501",
+   "lat": 46.8041383,
+   "lng": -100.7556011,
+   "phone": "701-258-8324",
+   "open": "2026-11-11T17:00:00Z",
+   "close": "2026-11-12T06:30:00Z",
+   "hoursAssumed": false,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "umary-veterans-day-7500-university-dr",
+   "offer": "umary-veterans-day",
+   "name": "",
+   "address": "7500 University Dr, Bismarck, ND 58504",
+   "lat": 46.724869,
+   "lng": -100.7516229,
+   "phone": "unknown",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "mandan-field-of-flags-2901-12th-ave-nw",
+   "offer": "mandan-field-of-flags",
+   "name": "",
+   "address": "2901 12th Ave NW, Mandan, ND 58554",
+   "lat": 46.8519075,
+   "lng": -100.9080783,
+   "phone": "unknown",
+   "open": "2026-11-11T14:00:00Z",
+   "close": "2026-11-11T23:00:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "geo"
+  }
+ ],
+ "other": [
+  {
+   "id": "new-salem-post-91",
+   "day": "Wed 11 Nov, time not published",
+   "at": null,
+   "name": "New Salem: John Repsdorf American Legion Post 91 Veterans Day program",
+   "where": "Post 91, 400 Main Ave, New Salem (call 701-587-1215 or email ndpost91@gmail.com for the time and place)",
+   "offer": "In past years a Veterans Day program for veterans and families, public invited, with lunch served (held at Elm Crest Manor). Nothing posted for 2026.",
+   "grade": "C",
+   "note": "Not on the route because no 2026 time is published. Call before you plan around it.",
+   "sources": [
+    {
+     "url": "https://ndpost91.org/post-history",
+     "publisher": "John Repsdorf American Legion Post 91",
+     "published": "seen 9 Nov 2026"
+    },
+    {
+     "url": "https://ndpost91.org/post-location",
+     "publisher": "John Repsdorf American Legion Post 91",
+     "published": "seen 9 Nov 2026"
+    },
+    {
+     "url": "https://ndlegionhistory.org/post-histories/",
+     "publisher": "American Legion Dept. of ND post histories",
+     "published": "seen 9 Nov 2026"
+    },
+    {
+     "url": "https://ndpost91.org/",
+     "publisher": "John Repsdorf American Legion Post 91",
+     "published": "seen 9 Nov 2026"
+    }
+   ]
+  },
+  {
+   "id": "elks-veterans-feed-2026",
+   "day": "Thu 12 Nov, three seatings (times not found)",
+   "at": null,
+   "name": "16th Annual Veterans Feed (free turkey dinner)",
+   "where": "Bismarck/Mandan Elks Lodge #1199, 900 S Washington St, Bismarck, ND 58504 (lodge 701-255-1199)",
+   "offer": "Free turkey dinner with all the trimmings for veterans and first responders, three dining time slots, tickets reported still available as of KX's Nov 3 2026 story.",
+   "grade": "B",
+   "note": "KX News (3 Nov 2026) reported the 16th annual feed on Thu 12 Nov with three seatings and tickets still available; its times and ticket rules weren't readable here. In earlier years it ran 10:30 AM to 1:30 PM, free for a veteran and one guest, with proof of service and tickets from sponsor businesses. The Elks' own calendar doesn't list it. Call the lodge, (701) 255-1199.",
+   "sources": [
+    {
+     "url": "https://www.kxnet.com/studio701/community/16th-annual-veterans-feed-in-bismarck/",
+     "publisher": "KX News (Studio 701)",
+     "published": "2026-11-03"
+    },
+    {
+     "url": "https://www.kfyrtv.com/2025/11/13/veterans-find-camaraderie-bismarcks-15th-annual-veterans-feed/",
+     "publisher": "KFYR-TV",
+     "published": "2025-11-13"
+    },
+    {
+     "url": "https://www.veterans.nd.gov/news/active-militaryveterans-appreciation-event",
+     "publisher": "ND Dept of Veterans Affairs (2022 notice)",
+     "published": "2022"
+    },
+    {
+     "url": "https://bismanelks.com/events/month/",
+     "publisher": "Bismarck/Mandan Elks Lodge 1199",
+     "published": "seen 9 Nov 2026"
+    }
+   ]
+  },
+  {
+   "id": "nd-state-park-disabled-vet-pass",
+   "day": "Any day (not a Nov 11 perk)",
+   "at": null,
+   "name": "ND state park lifetime pass for disabled veterans and former POWs",
+   "where": "ND Parks & Recreation (apply by form; parkrec@nd.gov)",
+   "offer": "Free lifetime pass for ND veterans with a 50 percent or greater service-connected disability and former POWs; other ND veterans with a service-related disability may buy an annual permit for $28.",
+   "grade": "A",
+   "note": "Needs a current VA Summary of Benefits Letter (disability) or a DD-214 (former POWs). ND Parks' permit page says 'ND veterans'; whether non-residents qualify isn't stated there. No Veterans Day free-entry offer on the Parks site. Fort Abraham Lincoln still needs a vehicle permit.",
+   "sources": [
+    {
+     "url": "https://www.parkrec.nd.gov/stay/permits-gift-cards",
+     "publisher": "ND Parks & Recreation",
+     "published": "seen 9 Nov 2026"
+    }
+   ]
+  },
+  {
+   "id": "nps-veterans-day-trnp",
+   "day": "Wed 11 Nov (all day)",
+   "at": "2026-11-11T06:00:00Z",
+   "name": "Theodore Roosevelt National Park: no entrance fee on Veterans Day",
+   "where": "South Unit, Medora, ND (park 701-623-4466); about 130 miles and 2 hours west of Bismarck on I-94; Mountain time at Medora",
+   "offer": "NPS lists Nov 11 as a 2026 fee-free day. Free entrance is for US citizens and residents only. Normally $30 per vehicle for 7 days.",
+   "grade": "A",
+   "note": "Drive claim checked: Medora's tourism site says about 130 miles and about 2 hours. Medora is on Mountain time, so the clock goes back one hour driving west. Round trip is a 4+ hour day in mid-November; check 511 and park road conditions. The fee page says the park has been cashless since 1 May 2026 (page itself says last updated 2024, so verify). Veterans may also get a free Military Lifetime Pass.",
+   "sources": [
+    {
+     "url": "https://www.nps.gov/thro/planyourvisit/fees.htm",
+     "publisher": "National Park Service, Theodore Roosevelt NP",
+     "published": "seen 9 Nov 2026"
+    },
+    {
+     "url": "https://medora.com/?p=42399",
+     "publisher": "Medora (tourism)",
+     "published": "seen 9 Nov 2026"
+    }
+   ]
+  },
+  {
+   "id": "state-museum-veterans-day-status",
+   "day": "Wed 11 Nov",
+   "at": null,
+   "name": "ND Heritage Center & State Museum: open or closed on Veterans Day",
+   "where": "612 E Boulevard Ave, Bismarck (701-328-2666)",
+   "offer": "Admission is always free. The museum's FAQ and hours pages list closures as New Year's Day, Easter, Thanksgiving, Christmas Eve and Christmas Day; Veterans Day is not listed. The Groups page says only 'The facility is closed on state holidays.' Archives and offices close on state holidays.",
+   "grade": "C",
+   "note": "The museum's own hours and FAQ pages don't list Veterans Day as a closure, and the 9:45 AM program is in the building that morning. Whether the galleries are open all day isn't confirmed; state offices are closed. Call (701) 328-2666.",
+   "sources": [
+    {
+     "url": "https://statemuseum.nd.gov/visit/faqs",
+     "publisher": "State Historical Society of ND",
+     "published": "seen 9 Nov 2026"
+    },
+    {
+     "url": "https://statemuseum.nd.gov/visit/museum/hours",
+     "publisher": "State Historical Society of ND",
+     "published": "seen 9 Nov 2026"
+    },
+    {
+     "url": "https://statemuseum.nd.gov/visit/museum/groups",
+     "publisher": "State Historical Society of ND",
+     "published": "seen 9 Nov 2026"
+    }
+   ]
+  },
+  {
+   "id": "bis-man-transit-veterans",
+   "day": "Wed 11 Nov and ordinary days",
+   "at": null,
+   "name": "Bis-Man Transit / Capital Area Transit (CAT): veterans fare",
+   "where": "Bismarck-Mandan; (701) 258-6817",
+   "offer": "No free rides for veterans found, on Veterans Day or always. The fare page lists a reduced fare for 'Veterans with appropriate photo ID': $0.75 each way (regular $1.50), $3 day pass, $24 30-day pass. Seniors 65+ and paratransit ride free.",
+   "grade": "C",
+   "note": "CAT's fare page (dated 15 Jan 2017) lists a half-price fare for veterans with photo ID, so amounts may have changed. A 2015 notice said buses run on Veterans Day with the office closed; no 2026 holiday schedule was found. Call (701) 258-6817.",
+   "sources": [
+    {
+     "url": "https://bismantransit.com/paying-for-rides",
+     "publisher": "Bis-Man Transit",
+     "published": "page dated Jan 15 2017; seen 9 Nov 2026"
+    },
+    {
+     "url": "https://bismantransit.com/bismarck-mandan-transit-center-releases-holiday-service-schedule",
+     "publisher": "Bis-Man Transit",
+     "published": "2015-11-09"
+    },
+    {
+     "url": "https://bismantransit.com/",
+     "publisher": "Bis-Man Transit",
+     "published": "seen 9 Nov 2026"
+    }
+   ]
+  },
+  {
+   "id": "wed-closures",
+   "day": "Wed 11 Nov",
+   "at": null,
+   "name": "Closures on Veterans Day",
+   "where": "Bismarck-Mandan",
+   "offer": "Bismarck Parks & Recreation administrative office is closed 11 Nov; other Parks facilities keep normal hours.",
+   "grade": "B",
+   "note": "The Parks item is from the Parks district's Veterans Day hours page. State offices, federal offices and post offices also close on 11 Nov (federal holiday); check before a trip that needs one.",
+   "sources": [
+    {
+     "url": "https://www.bisparks.org/veterans-day-hours-2026/",
+     "publisher": "Bismarck Parks & Recreation District",
+     "published": "seen 9 Nov 2026 (via search summary)"
+    }
+   ]
+  }
+ ],
+ "leads": [
+  {
+   "name": "Jack's Steakhouse",
+   "area": "Bismarck",
+   "q": "Jack's Steakhouse 1201 S 12th St Bismarck ND",
+   "offer": "2015: free dessert for veterans and active duty, Nov 10-11. A 2017 list says free breakfast or lunch. May no longer offer it.",
+   "last_seen": "2017",
+   "source": {
+    "url": "https://965thewalleye.com/restaurants-in-bismarck-where-veterans-eat-free-on-veterans-day/",
+    "publisher": "96.5 The Walleye (article dated 9 Nov 2015)",
+    "published": null
+   }
+  },
+  {
+   "name": "Claudia's Bistro",
+   "area": "Bismarck",
+   "q": "Claudia's Bistro Bismarck ND",
+   "offer": "2017: free 16 oz coffee and a caramel or cinnamon roll for veterans",
+   "last_seen": "2017",
+   "source": {
+    "url": "https://cool987fm.com/where-veterans-can-get-free-stuff-in-bisman-on-veterans-day/",
+    "publisher": "Cool 98.7 FM (article dated 9 Nov 2017)",
+    "published": null
+   }
+  },
+  {
+   "name": "Blarney Stone Pub",
+   "area": "Bismarck",
+   "q": "Blarney Stone Pub Bismarck ND",
+   "offer": "2017: free pint for veterans",
+   "last_seen": "2017",
+   "source": {
+    "url": "https://cool987fm.com/where-veterans-can-get-free-stuff-in-bisman-on-veterans-day/",
+    "publisher": "Cool 98.7 FM (article dated 9 Nov 2017)",
+    "published": null
+   }
+  },
+  {
+   "name": "Williquors",
+   "area": "Bismarck",
+   "q": "Williquors Bismarck ND",
+   "offer": "2017: 10% off purchases for veterans",
+   "last_seen": "2017",
+   "source": {
+    "url": "https://cool987fm.com/where-veterans-can-get-free-stuff-in-bisman-on-veterans-day/",
+    "publisher": "Cool 98.7 FM (article dated 9 Nov 2017)",
+    "published": null
+   }
+  },
+  {
+   "name": "Sickies Garage",
+   "area": "Bismarck",
+   "q": "Sickies Garage Bismarck ND",
+   "offer": "2017: free Garage Burger or 20% off one item",
+   "last_seen": "2017",
+   "source": {
+    "url": "https://cool987fm.com/where-veterans-can-get-free-stuff-in-bisman-on-veterans-day/",
+    "publisher": "Cool 98.7 FM (article dated 9 Nov 2017)",
+    "published": null
+   }
+  },
+  {
+   "name": "Horizon Market",
+   "area": "Bismarck",
+   "q": "Horizon Market Bismarck ND",
+   "offer": "2017: free 'Swirly, Sooner or Later' drink",
+   "last_seen": "2017",
+   "source": {
+    "url": "https://cool987fm.com/where-veterans-can-get-free-stuff-in-bisman-on-veterans-day/",
+    "publisher": "Cool 98.7 FM (article dated 9 Nov 2017)",
+    "published": null
+   }
+  },
+  {
+   "name": "Orange Leaf",
+   "area": "Bismarck",
+   "q": "Orange Leaf frozen yogurt 1515 Burnt Boat Dr Bismarck ND",
+   "offer": "2015: free 11 oz frozen yogurt for veterans and active duty",
+   "last_seen": "2015",
+   "source": {
+    "url": "https://965thewalleye.com/restaurants-in-bismarck-where-veterans-eat-free-on-veterans-day/",
+    "publisher": "96.5 The Walleye (article dated 9 Nov 2015)",
+    "published": null
+   }
+  },
+  {
+   "name": "Mandan Moose Lodge",
+   "area": "Mandan",
+   "q": "Mandan Moose Lodge Mandan ND",
+   "offer": "Named on Morton County's 2025 list of Bismarck-Mandan Veterans Day meals; the offer itself wasn't readable. Call first.",
+   "last_seen": "2025",
+   "source": {
+    "url": "https://mortonnd.gov/index.asp?DE=51D689DF-BD2C-4A12-955E-5A87A3009314&SEC=9E4E1362-67D1-4B2A-8879-F9D6928BA897",
+    "publisher": "Morton County, ND (2025 Veterans Day meal discounts page; URL returned 404 when fetched)",
+    "published": null
+   }
+  },
+  {
+   "name": "Bismarck VFW Post 1326",
+   "area": "Bismarck",
+   "q": "VFW Post 1326 1235 S 12th St Bismarck ND",
+   "offer": "A free meal for veterans and spouses, freewill donation to the post's Helping Hand Fund (an older Bismarck Tribune item; nothing for 2026). Call 701-222-1525.",
+   "last_seen": "about 2011",
+   "source": {
+    "url": "https://www.burleigh.gov/departments/veterans-service-office/local-veterans-service-organizations/",
+    "publisher": "Burleigh County Veterans Service Office (post list)",
+    "published": null
+   }
+  }
+ ]
+}

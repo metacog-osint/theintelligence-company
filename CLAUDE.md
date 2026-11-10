@@ -157,6 +157,13 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
 - **9 Nov 2026 evening (live from `2e8f9c5` about 6:20 PM CST, approved; not pushed):** Marcus Theatres' free large popcorn added at West Acres and
   Century (69 deals at 168 stores; ticket question open), and the phone layout tightened: sticky tabs, About folded, Route settings and
   later stops folded, 20 deals then "Show all", Me reordered. Details in `veterans-day/README.md` ("Phone layout").
+- **Areas (9 Nov 2026; built 10 Nov, not committed or deployed yet):** an Area select in the top bar's right
+  corner: Fargo-Moorhead, ND/MN (the default and where a first visit lands), Bismarck-Mandan & New Salem, ND, and
+  Twin Cities: Plymouth, Maple Grove, Roseville. The pick is saved on the phone; `?area=<id>` opens and saves an area
+  (for links to friends). Fargo-Moorhead keeps `data/deals.json`; other areas have `data/<id>/`. REGIONS in
+  `build_data.py`; chain stores for new areas from All the Places plus OpenStreetMap (`build/stores_region.py`); engine
+  v1.3 adds `arriveBy` for ceremonies; Fargo-only notes stay out of other areas (`fm=`, `strip_fm`). An override on an
+  offer id now applies in every area. Details in `veterans-day/README.md` ("Areas").
 - 8 Nov 2026: a usable Veterans Day giveaway program his Guard colleagues can use on Wed 11 Nov 2026, with
   live location, timing against each deal's window, preferences, vetoes and strikes, and got-it / turned-away
   marks; the first piece of a planned "For veterans" section here (Title 10 and future military programs to follow).

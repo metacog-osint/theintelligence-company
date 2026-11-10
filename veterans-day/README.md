@@ -15,7 +15,7 @@ Built 8 Nov 2026 at request for Guard colleagues and other veterans in Fargo-Moo
 - Before 4 AM CST on 11 Nov it runs in **preview**, planning as if it were Wednesday at a time you pick; marks made
   in preview stay on the phone and are never sent.
 
-## How it decides (engine.js v1.2, tested in `tests/veterans-engine.test.js`)
+## How it decides (engine.js v1.3, tested in `tests/veterans-engine.test.js`)
 - **The Route tab** (the main page since 9 Nov 2026, replacing Next and Plan): settings at the top (start point,
   leave time, done-by time, goal, what you're after, take food home), then one route that rebuilds on every change,
   every stop you mark, every report and every 150 m you move. Stop 1 is the big card; each later stop shows when
@@ -117,14 +117,98 @@ local ones and the live page showed no console errors at phone size.
   in light and dark with folds open and closed (the What I'm after chips' spoken names now start with their visible
   words, and the hidden "Opens in a new tab" note sits in the footer landmark).
 
+## Areas (app v1.2, engine v1.3; built 10 Nov 2026, not yet committed or deployed)
+9 Nov 2026: "I have friends in New Salem, ND who would like to see this optimized for their location, too. Also
+have friends in the Rosedale, Plymouth, and Maple Grove areas of the Twin Cities ... a dropdown box in an upper corner
+... I want the program to maintain initial focus and landing on Fargo-Moorhead."
+- **The picker** is an Area select in the top bar's right corner, beside Time (on phones the bar wraps: home link,
+  Area, Time). Areas, in order: Fargo-Moorhead, ND/MN (the default), Bismarck-Mandan & New Salem, ND, and Twin Cities:
+  Plymouth, Maple Grove, Roseville. A first visit lands on Fargo-Moorhead. A pick is saved on the phone (`S.area` in
+  `vd2026-v1`) and becomes that visitor's landing area. A link with `?area=bismarck-mandan` or `?area=twin-cities`
+  opens that area and saves it, so anyone can send friends a link. Picking Fargo-Moorhead removes the parameter. Switching
+  reloads the page with that area's files.
+- **Files:** Fargo-Moorhead keeps `data/deals.json` and `data/drive.json` (unchanged apart from a `meta.region` block);
+  each other area has `data/<id>/`. `meta.region` gives the name, centre (where drive times start without a location),
+  map zoom, NWS place and the transit line on bars. `AREAS` in `app.js` lists the ids and folders; the test checks the
+  select, `AREAS` and the folders agree.
+- **Per area on the phone:** a start point per area (`S.starts`; the old single `S.start` is moved to Fargo-Moorhead's),
+  the last marked stop only in its own area, and a GPS fix more than 15 km from an area's grid counts as "outside":
+  drive times then start from that area's start point or centre, and the location line says so. Marks, vetoes and pins
+  are by offer id, so they follow you across areas (a chain's offer is one a day anyway). Shared reports are filtered
+  to the area's stores; the Me tab's community total covers every area and says so. A tip's address gets the area's
+  name added.
+- **Overrides** (`overrides` table): an offer id (`applebees`) now pulls that chain's deal in every area. To pull one
+  store, use its place id. Place ids never repeat across areas (a test checks).
+- **Engine v1.3:** `offer.arriveBy`, for a ceremony with a start time: the route must get you there by then, not just
+  5 minutes before it ends. Set by `arrive_by` in CURATE for the new areas' ceremonies (Heritage Center 9:45, All
+  Veterans Memorial 11:00, University of Mary 11:00, Maple Grove 11:00). Fargo-Moorhead's events don't use it yet,
+  though CURATE has an older, unused `arriveEarly` on the Air Museum and West Fargo VFW.
+- **Stores** (`build/stores_region.py <area> <cache folder>`, writes `research/<area>/locations-2026.json`): All the
+  Places (alltheplaces.xyz, CC0), the chains' own store finders as scraped weekly; run 31 Oct to 7 Nov 2026, or an
+  earlier week for five chains whose spider failed (Blaze 24 Oct; Red Lobster, Charleys, Shake Shack, Red Robin 17 Oct;
+  Pilot 10 Oct). A store found there is "confirmed". OpenStreetMap (Overpass) adds a store as "unverified" (the card
+  says "address from directories") only where the chain's list has nothing in the area, or is known to be partial
+  (`PARTIAL`: Wendy's list has no Twin Cities store; Little Caesars' has no North Dakota store). Where the chain's list
+  covers the area, an OpenStreetMap-only store is left out as likely closed (logged; for example a Golden Valley
+  "Red Lobster" that is now an American Legion). Chains All the Places lacks come from OpenStreetMap: Olive Garden,
+  Cracker Barrel, Casey's, Holiday, Tommy's Express, Mission BBQ, Granite City, Marcus. Hy-Vee's list is pharmacies
+  without coordinates, so its New Hope store is from OpenStreetMap. Wednesday hours come from the lists'
+  `opening_hours` ("00:00-01:00,09:00-24:00" reads as 9 AM to 1 AM); an OpenStreetMap tag that closes before noon is
+  ignored (usual hours instead). Addresses without a street or town are left out.
+- **Known gaps:** no Little Caesars on either new map (neither source lists one there with an address); Bismarck has
+  no Chili's, Red Robin, Hooters, Golden Corral (likely closed) or Walgreens in the lists; the Twin Cities area has no
+  Texas Roadhouse, IHOP, Little Caesars, Pizza Ranch or Sonic in it.
+- **Fargo-Moorhead's notes stay there.** National entries were researched for Fargo-Moorhead first, so outside it
+  the build drops note sentences that mention Fargo, Moorhead or FM (`strip_fm`), and CURATE's `fm=dict(...)` holds
+  Fargo-only cautions (Kwik Star, the Petro truck stop, Scooter's new store, Sport Clips' address, Ruby Tuesday, Granite
+  City). `elsewhere=dict(...)` replaces text outside it (Pizza Ranch, whose 2026 report is a sign at the Fargo store).
+  `only=(...)` limits an entry to some areas: Hardee's stays Fargo-Moorhead only (a recollection of a Fargo store), and
+  Red Robin, Outback, Golden Corral, Smashburger and Hy-Vee are the other areas only. A test fails if a new area's offer
+  mentions Fargo, FM, Moorhead, Kwik Star, the Petro or MATBUS.
+- **Public wording:** the new areas' local entries show a note written in CURATE (`show=dict(notes=..., offer=...)`);
+  the research helpers' first-person working notes stay in `research/<area>/notes.md` and `local-2026.json`. The
+  Deals-list items were reworded the same way. A test fails if a person's name, "I could…" or "my estimate" reaches the page.
+- **Drive tables:** `drive_matrix.py` lays each new area's grid over its circles (`areas` in REGIONS) plus 1 km, so New
+  Salem has start points of its own: Bismarck-Mandan 735 points (658 kept), Twin Cities 696 (689 kept). From a New
+  Salem start, the first Bismarck stop timed at 38 minutes (I-94, about 35 miles).
+- **Bismarck-Mandan and New Salem** (research `research/bismarck-mandan/notes.md`, from the research report
+  `Downloads\Veterans Day 2026_ Deals and Events for a New Salem, ND Veteran.md`, checked 9–10 Nov): circles Bismarck
+  and Lincoln (10 km), Mandan (5 km), New Salem (3 km). Local on the route: the ND Heritage Center program (A: KX News,
+  4 Nov 2026, organizers quoted; choir 9:30, program 9:45; end time not published, 11:00 assumed), the All Veterans
+  Memorial at 11:00 (C), AMVETS Post 9 lunch (C, earlier years), the University of Mary chapel service and lunch (C,
+  2025 at 11:00), the Mandan Middle School Field of Flags (B, daylight). Under Deals: New Salem's Post 91 program (no
+  2026 time; call 701-587-1215), the Elks Veterans Feed Thu 12 Nov (seatings not found), Theodore Roosevelt NP fee-free,
+  the disabled-veteran park pass, CAT's half-price veteran fare (no free rides), closures; the Bismarck VFW is a lead.
+  **Corrections to the research report:** the ND Legion history's "Auxiliary stew dinner" line belongs to Fairmount Post 106,
+  not New Salem; the State Museum's hours pages don't list Veterans Day as a closure; the Glen Ullin school program was
+  Tue 10 Nov 8:30 AM (past by the time this was built, so left out). All of Morton County is on Central time
+  (since 26 Oct 2003; 49 CFR 71.7). KX News pages sit behind a bot check, so some KX details are from search summaries.
+- **Twin Cities: Plymouth, Maple Grove, Roseville** (research `research/twin-cities/notes.md`): circles Plymouth
+  (7 km), Maple Grove (6 km), Roseville around Rosedale Center (6 km); drive times start from the middle of Plymouth.
+  Local on the route: the Maple Grove tribute, Central Park Veterans Memorial, 11:00–12:00 (A, the city's events page),
+  Malone's Arbor Lakes and the Tavern Grill Arden Hills (B, 6 Nov 2026 lists; addresses from directories). Under Deals:
+  5-8 Club, Tria (North Oaks) and Kendall's (Coon Rapids), just outside the area; the state ceremony in Duluth; the
+  Minnesota Zoo, Museum of Illusions and Science Museum; Metro Transit (free only with a VA ID marked Service Connected,
+  which the bar line says). No 2026 ceremony was found for Plymouth or Roseville; Plymouth's veterans breakfast was
+  Thu 5 Nov.
+- Checked 10 Nov in the `hub-main` preview: Fargo-Moorhead lands first; picking each area loads its deals, title,
+  heading, forecast and centre and saves the pick; a plain address then opens the saved area; the Twin Cities Map
+  draws the route by road; no console errors; no sideways scroll at 375 px. axe (WCAG 2.2 AA) clean on Route, Deals and
+  Me in all three areas, light and dark, desktop and phone. 86 node tests and the 28 browser tests pass. Totals:
+  Bismarck-Mandan and New Salem 33 deals at 49 stops (A 10, B 17, C 6); Twin Cities 34 deals at 181 stops (A 10,
+  B 22, C 2); Fargo-Moorhead unchanged at 69 deals, 168 stops.
+
 ## Rebuilding the data
 From the repo root (Windows: `python`, not `python3`):
 
 ```
-python -I veterans-day/build/build_data.py      # research -> data/deals.json (Census geocoder, NWS link)
-python -I veterans-day/build/drive_matrix.py    # only when stores change: OSRM tables -> data/drive.json (~2 min)
+python -I veterans-day/build/build_data.py [area ...]     # research -> each area's deals.json (default: all three)
+python -I veterans-day/build/drive_matrix.py [area ...]   # only when stores change: OSRM tables -> drive.json (~2 min each)
+python -I veterans-day/build/stores_region.py <area> <cache folder>   # new areas only: chain stores -> research/<area>/locations-2026.json
 cd tests && node --test --no-warnings veterans.test.js veterans-engine.test.js veterans-roads.test.js site.test.js
 ```
+Area ids: `fargo-moorhead`, `bismarck-mandan`, `twin-cities` (REGIONS in `build_data.py`). Rebuild Fargo-Moorhead's
+`drive.json` only when its stores change; the drive table must follow every change to an area's store list.
 
 `tests/veterans-map.test.js` (the Map in a browser) needs Playwright: see `tests/README.md`.
 

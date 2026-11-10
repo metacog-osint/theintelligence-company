@@ -1,13 +1,16 @@
-"""Build site/veterans/veterans-day/data/deals.json from the research files.
+"""Build each area's deals.json from the research files.
 
-Usage (from the repo root):  python -I veterans-day/build/build_data.py
-Inputs (veterans-day/research/): national-2026.json, local-2026.json, locations-2026.json, osm-matches.json
-Network: the US Census geocoder for store addresses without an OpenStreetMap pin, and the NWS points API for the
-forecast link. Everything about each offer is decided in CURATE below, in one place, so a reviewer can see why a
-deal is in, how long a stop takes and what window it has.
+Usage (from the repo root):  python -I veterans-day/build/build_data.py [area id ... | all]   (default: all)
+Areas are in REGIONS below. Fargo-Moorhead, the default, keeps its original paths: research in
+veterans-day/research/ and site/veterans/veterans-day/data/deals.json. Every other area has its own folder under both,
+named by its id (veterans-day/research/<id>/, data/<id>/deals.json).
+Inputs: national-2026.json (shared by every area), and per area local-2026.json, locations-2026.json, osm-matches.json
+and extras-2026.json. Network: the US Census geocoder for store addresses without coordinates, and the NWS points
+API for the forecast link. Everything about each offer is decided in CURATE below (and each area's `local` list), in
+one place, so a reviewer can see why a deal is in, how long a stop takes and what window it has.
 
 Place ids come from the offer and the street address, so they stay the same from one build to the next: field
-reports on the day refer to them.
+reports on the day refer to them, and they never repeat across areas (different streets).
 """
 import csv, io, json, math, os, re, sys, urllib.request, uuid
 from datetime import datetime, timezone, timedelta
@@ -20,6 +23,36 @@ TZ_OFFSET_MIN = -360  # CST; DST ended 1 Nov 2026
 DAY_START = datetime(2026, 11, 11, 6, 0, tzinfo=timezone.utc)  # local midnight
 BBOX = (46.72, -97.00, 47.00, -96.64)  # south, west, north, east: Horace to north Fargo, West Fargo to Dilworth
 UA = "tic-veterans-day-build/1.0 (support@theintelligence.company)"
+
+# The areas a visitor can pick (9 Nov 2026: friends in New Salem, ND, and in the Rosedale, Plymouth and Maple
+# Grove areas of the Twin Cities; Fargo-Moorhead stays the default and the landing page). All are on Central time.
+#   areas: (name, lat, lng, km) circles; a store counts when it is inside one, and drive_matrix.py lays its grid of
+#          start points over them. Fargo-Moorhead uses BBOX and the stores' own extent instead, as it always has.
+#   center: where drive times start until a visitor shares a location or picks a start (center_label says so).
+#   transit: finishes the drive-safe line on bars ("..., take a cab or rideshare, or <transit>."); None ends it there.
+REGIONS = {
+    "fargo-moorhead": dict(
+        name="Fargo-Moorhead", label="Fargo-Moorhead, ND/MN", out="", research="", bbox=BBOX, areas=None,
+        center=(46.8600, -96.8100), center_label="the middle of Fargo", zoom=12,
+        nws=(46.8772, -96.7898), wx_name="Fargo", transit="ride MATBUS, free with a veteran ID"),
+    "bismarck-mandan": dict(
+        name="Bismarck-Mandan and New Salem", label="Bismarck-Mandan and New Salem, ND", out="bismarck-mandan",
+        research="bismarck-mandan", bbox=None, states=("ND",),
+        areas=[("Bismarck and Lincoln", 46.800, -100.772, 10.0), ("Mandan", 46.828, -100.890, 5.0),
+               ("New Salem", 46.845, -101.411, 3.0)],
+        center=(46.8083, -100.7837), center_label="downtown Bismarck", zoom=11,
+        # Bis-Man Transit (CAT): a reduced fare for veterans, not a free ride (its fare page, dated 2017).
+        nws=(46.8083, -100.7837), wx_name="Bismarck", transit=None),
+    "twin-cities": dict(
+        name="Plymouth, Maple Grove and Roseville", label="Twin Cities: Plymouth, Maple Grove, Roseville, MN",
+        out="twin-cities", research="twin-cities", bbox=None, states=("MN",),
+        areas=[("Plymouth", 45.020, -93.455, 7.0), ("Maple Grove", 45.095, -93.440, 6.0),
+               ("Roseville", 45.015, -93.160, 6.0)],
+        center=(45.0225, -93.4600), center_label="the middle of Plymouth", zoom=11,
+        # Metro Transit: free only for service-connected disabled veterans (metrotransit.org/fares, read 9 Nov 2026).
+        nws=(45.0200, -93.3000), wx_name="the Twin Cities", transit="ride Metro Transit, free with a VA ID marked Service Connected"),
+}
+DEFAULT_REGION = "fargo-moorhead"
 
 # Default local hours by category when a store's Wednesday hours are unknown (flagged "usual hours").
 DEFAULT_HOURS = {"breakfast": ("06:00", "14:00"), "meal": ("11:00", "21:00"), "quick": ("10:30", "21:30"),
@@ -49,10 +82,18 @@ CURATE = [
     dict(id="hooters", src="national", name="Hooters", loc="Hooters", osm=None, category="meal", minutes=45, busy=10, meal=True, dineIn=True),
     dict(id="buca-di-beppo", src="national", name="Buca di Beppo", loc="Buca di Beppo", osm=None, category="meal", minutes=55, busy=15, meal=True, dineIn=True),
     dict(id="bob-evans", src="national", name="Bob Evans", loc="Bob Evans", osm=None, category="meal", minutes=45, busy=10, meal=True, dineIn=True),
-    dict(id="ruby-tuesday", src="national", name="Ruby Tuesday", loc="Ruby Tuesday", osm=None, category="meal", minutes=50, busy=10, meal=True, dineIn=True, caution="Store not confirmed open: call first"),
+    dict(id="ruby-tuesday", src="national", name="Ruby Tuesday", loc="Ruby Tuesday", osm=None, category="meal", minutes=50, busy=10, meal=True, dineIn=True, fm=dict(caution="Store not confirmed open: call first")),
     dict(id="dave-busters", src="national", name="Dave & Buster's", loc="Dave & Buster's", osm=None, category="meal", minutes=60, busy=10, meal=False, dineIn=True),
-    dict(id="granite-city", src="national", name="Granite City Food & Brewery", loc="Granite City Food & Brewery", osm="granitecity", category="meal", minutes=50, busy=15, meal=True, dineIn=True, window=("11:00", "16:00"), caution="Store and 2026 offer not confirmed: call first"),
-    dict(id="pizza-ranch", src="national", name="Pizza Ranch", loc="Pizza Ranch", osm="pizzaranch", category="meal", minutes=45, busy=15, meal=True, dineIn=True),
+    dict(id="granite-city", src="national", name="Granite City Food & Brewery", loc="Granite City Food & Brewery", osm="granitecity", category="meal", minutes=50, busy=15, meal=True, dineIn=True, window=("11:00", "16:00"), caution="2026 offer not confirmed: call first", fm=dict(caution="Store and 2026 offer not confirmed: call first")),
+    # The 2026 report is a sign at the Fargo store, so other areas get the chain's own rule (`elsewhere`).
+    dict(id="pizza-ranch", src="national", name="Pizza Ranch", loc="Pizza Ranch", osm="pizzaranch", category="meal", minutes=45, busy=15, meal=True, dineIn=True,
+         elsewhere=dict(offer="Last year: each Pizza Ranch chose a free Veterans Day buffet for veterans or a Veterans Week discount. Nothing found for 2026 at these stores")),
+    # Chains with a 2026 offer and no Fargo-Moorhead store (other areas only; added 9 Nov 2026 with the area picker).
+    dict(id="red-robin", src="national", name="Red Robin", loc="Red Robin", osm=None, category="meal", minutes=50, busy=20, meal=True, dineIn=True, only=("bismarck-mandan", "twin-cities")),
+    dict(id="outback", src="national", name="Outback Steakhouse", loc="Outback Steakhouse", osm=None, category="meal", minutes=40, busy=15, meal=False, dineIn=True, eat=0.5, only=("bismarck-mandan", "twin-cities")),
+    dict(id="golden-corral", src="national", name="Golden Corral", loc="Golden Corral", osm=None, category="meal", minutes=55, busy=25, meal=True, dineIn=True, only=("bismarck-mandan", "twin-cities")),
+    dict(id="smashburger", src="national", name="Smashburger", loc="Smashburger", osm=None, category="quick", minutes=20, busy=10, meal=False, dineIn=True, eat=0.6, caution="Lists differ (a free burger, or 25% off): ask first", only=("bismarck-mandan", "twin-cities")),
+    dict(id="hy-vee", src="national", name="Hy-Vee", loc="Hy-Vee", osm=None, category="breakfast", minutes=35, busy=15, meal=True, dineIn=True, window=("06:00", "10:00"), caution="Stores with hot food service only", only=("bismarck-mandan", "twin-cities")),
     # Breakfast
     dict(id="dennys", src="national", name="Denny's", loc="Denny's", osm="dennys", category="breakfast", minutes=45, busy=15, meal=True, dineIn=True),
     # IHOP: 7 AM-7 PM per the American Legion's 2026 list (5 Nov); ihop.com wasn't readable.
@@ -69,10 +110,11 @@ CURATE = [
     dict(id="chipotle", src="national", name="Chipotle", loc="Chipotle", osm="chipotle", category="quick", minutes=15, busy=10, meal=False, dineIn=True, purchase=True, eat=0.2),
     dict(id="qdoba", src="national", name="Qdoba", loc="Qdoba", osm="qdoba", category="quick", minutes=12, busy=5, meal=False, dineIn=True, eat=0.2),
     # Charleys: inside the Petro truck stop at 45th St S and 19th Ave S, next to Popeyes (8 Nov 2026).
-    dict(id="charleys", src="national", name="Charleys Cheesesteaks", loc="Charleys Cheesesteaks", osm="charleys", category="quick", minutes=8, busy=5, meal=False, dineIn=False, eat=0.2, caution="Inside the Petro truck stop, next to Popeyes; participating stores only"),
+    dict(id="charleys", src="national", name="Charleys Cheesesteaks", loc="Charleys Cheesesteaks", osm="charleys", category="quick", minutes=8, busy=5, meal=False, dineIn=False, eat=0.2, caution="Participating stores only", fm=dict(caution="Inside the Petro truck stop, next to Popeyes; participating stores only")),
     # Hardee's: remembered: a free breakfast sandwich in 2025 (8 Nov 2026); nothing published. Breakfast hours.
-    dict(id="hardees", src="national", name="Hardee's", loc="Hardee's", osm=None, category="quick", minutes=8, busy=5, meal=False, dineIn=False, window=("06:00", "10:30"), hours=("06:00", "22:00")),
-    dict(id="kwik-trip", src="national", name="Kwik Trip", loc="Kwik Trip", caution="Fargo stores are called Kwik Star", osm="kwiktrip", category="quick", minutes=7, busy=5, meal=False, dineIn=False, hours=("00:00", "24:00")),
+    # Fargo-Moorhead only: the memory is of a Fargo store, and nothing was published.
+    dict(id="hardees", src="national", name="Hardee's", loc="Hardee's", osm=None, category="quick", minutes=8, busy=5, meal=False, dineIn=False, window=("06:00", "10:30"), hours=("06:00", "22:00"), only=("fargo-moorhead",)),
+    dict(id="kwik-trip", src="national", name="Kwik Trip", loc="Kwik Trip", fm=dict(caution="Fargo stores are called Kwik Star"), osm="kwiktrip", category="quick", minutes=7, busy=5, meal=False, dineIn=False, hours=("00:00", "24:00")),
     dict(id="pilot", src="national", name="Pilot / Flying J", loc="Pilot / Flying J", osm="pilot", category="quick", minutes=8, busy=5, meal=False, dineIn=False),
     dict(id="mission-bbq", src="national", name="Mission BBQ", loc="Mission BBQ", osm=None, category="quick", minutes=20, busy=10, meal=False, dineIn=True),
     dict(id="shake-shack", src="national", name="Shake Shack", loc="Shake Shack", osm=None, category="quick", minutes=20, busy=10, meal=False, dineIn=True),
@@ -80,7 +122,7 @@ CURATE = [
     dict(id="blaze-pizza", src="national", name="Blaze Pizza", loc="Blaze Pizza", osm=None, category="quick", minutes=20, busy=10, meal=False, dineIn=True),
     # Coffee
     dict(id="starbucks", src="national", name="Starbucks", loc="Starbucks", osm="starbucks", category="coffee", minutes=8, busy=5, meal=False, dineIn=False),
-    dict(id="scooters", src="national", name="Scooter's Coffee", loc="Scooter's Coffee", osm="scooters", category="coffee", minutes=6, busy=5, meal=False, dineIn=False, drop=["1350 21st Ave N"], caution="New store; opening not confirmed: call first"),
+    dict(id="scooters", src="national", name="Scooter's Coffee", loc="Scooter's Coffee", osm="scooters", category="coffee", minutes=6, busy=5, meal=False, dineIn=False, fm=dict(drop=["1350 21st Ave N"], caution="New store; opening not confirmed: call first")),
     dict(id="caribou", src="national", name="Caribou Coffee", loc="Caribou Coffee", osm="caribou", category="coffee", minutes=8, busy=5, meal=False, dineIn=False),
     dict(id="caseys", src="national", name="Casey's", loc="Casey's", osm="caseys", category="coffee", minutes=6, busy=3, meal=False, dineIn=False, hours=("05:00", "22:00")),
     dict(id="circle-k", src="national", name="Circle K", loc="Circle K / Holiday", osm="holiday", category="coffee", minutes=6, busy=3, meal=False, dineIn=False, hours=("05:00", "23:00")),
@@ -99,7 +141,7 @@ CURATE = [
     dict(id="marcus", src="national", name="Marcus Theatres", loc="Marcus Theatres", osm=None, category="treat", minutes=10, busy=10, line=5, meal=False, dineIn=False, eat=0.3, hours=("12:00", "21:30")),
     # Services. Great Clips is planned as picking up the free-haircut card (no group: it doesn't use up the day's haircut).
     dict(id="great-clips", src="national", name="Great Clips", loc="Great Clips", osm="greatclips", category="service", minutes=5, busy=5, line=3, meal=False, dineIn=False, ticket=True),
-    dict(id="sport-clips", group="haircut", src="national", name="Sport Clips", loc="Sport Clips", osm="sportclips", category="service", minutes=30, busy=20, meal=False, dineIn=False, caution="Participating shops only, and this address isn't confirmed: call first"),
+    dict(id="sport-clips", group="haircut", src="national", name="Sport Clips", loc="Sport Clips", osm="sportclips", category="service", minutes=30, busy=20, meal=False, dineIn=False, caution="Participating shops only: call first", fm=dict(caution="Participating shops only, and this address isn't confirmed: call first")),
     dict(id="tommys-express", src="national", name="Tommy's Express Car Wash", loc="Tommy's Express Car Wash", osm="tommys", category="service", minutes=12, busy=10, meal=False, dineIn=False),
     dict(id="jiffy-lube", src="national", name="Jiffy Lube", loc="Jiffy Lube", osm="jiffylube", category="service", minutes=30, busy=15, meal=False, dineIn=False, value=20, purchase=True, caution="Only some franchise shops take part: call first"),
     # Shopping (no dollar value: what you save depends on what you buy, so they're listed, not routed, unless pinned)
@@ -142,10 +184,59 @@ CURATE = [
     dict(id="hen-house", src="local", name="Hen House Bar", osm=None, category="bar", minutes=45, busy=10, meal=True, dineIn=True, purchase=True),
     dict(id="spitfire", src="local", name="Spitfire Bar", osm=None, category="bar", minutes=45, busy=10, meal=True, dineIn=True, purchase=True),
 ]
+# The src="local" entries above are Fargo-Moorhead's. Every other area's local entries are listed here, in the same
+# form, and match the names in that area's research/<id>/local-2026.json.
+LOCAL = {
+    # Research 9-10 Nov 2026 (veterans-day/research/bismarck-mandan/notes.md). Only the Heritage Center program has a
+    # 2026 time (KX News, 4 Nov, organizers quoted); the rest are earlier years (grade C). New Salem's Post 91 and the
+    # Bismarck VFW have no time at all, so they're listed under Deals (extras), not routed. arrive_by: a ceremony's start
+    # (engine v1.3: the route gets you there by then, not just before it ends). Fargo-Moorhead's events don't use it yet.
+    "bismarck-mandan": [
+        dict(id="nd-heritage-center", src="local", name="Veterans Day Program, ND Heritage Center", osm=None, category="event", minutes=75, busy=0, meal=False, dineIn=False, window=("09:30", "11:00"), arrive_by="09:45", worth=12, show=dict(notes="KX News (4 Nov 2026) quotes the organizers: AMVETS choir at 9:30 AM, program at 9:45 AM, in the Russell Reid Auditorium. No end time is published; plan on about an hour. Free and open to all in past years.")),
+        dict(id="all-veterans-memorial", src="local", name="All Veterans Memorial", osm=None, category="event", minutes=20, busy=0, meal=False, dineIn=False, window=("10:55", "11:20"), arrive_by="11:00", worth=8, show=dict(notes="A yearly tradition: at 11:00 AM on 11 Nov, sunlight through the memorial's dome lands on North Dakota on its globe (clear days). Next to the Heritage Center. No 2026 notice found.")),
+        dict(id="amvets-post-9", src="local", name="AMVETS Post 9", osm=None, category="event", minutes=60, busy=10, meal=True, dineIn=True, window=("11:45", "14:00"), show=dict(offer="Last year: a Veterans Day ceremony at the club (a rose ceremony for veterans who died that year, a gun salute, taps), then a free lunch for everyone there, from Post 9 (KX News, 2025). In an earlier year the club opened at 11 AM with the salute at noon. No 2026 time posted", notes="No 2026 time posted. Call (701) 258-8324.")),
+        dict(id="umary-veterans-day", src="local", name="University of Mary Veterans Day", osm=None, category="event", minutes=90, busy=5, meal=True, dineIn=True, window=("10:45", "12:30"), arrive_by="11:00", worth=12, show=dict(notes="In 2025: a chapel service at 11:00 AM in Founders Hall (Lumen Vitae University Center), open to the public, then a free lunch for veterans and service members there. Nothing posted for 2026: check umary.edu.")),
+        # Flags on the school lawn: a drive-by in daylight (sunset is about 5 PM).
+        dict(id="mandan-field-of-flags", src="local", name="Mandan Middle School Field of Flags", osm=None, category="event", minutes=10, busy=0, meal=False, dineIn=False, hours=("08:00", "17:00"), worth=4, show=dict(notes="KX News reported the 2026 display; it stays up through Thu 12 Nov. View it from outside the school.")),
+    ],
+    # Research 9 Nov 2026 (veterans-day/research/twin-cities/notes.md): no 2026 ceremony found for Plymouth or
+    # Roseville. Places just outside the area (Tria, Kendall's) and the 5-8 Club (no address) are listed under Deals.
+    "twin-cities": [
+        dict(id="maple-grove-tribute", src="local", name="Maple Grove Veterans Day tribute", osm=None, category="event", minutes=60, busy=0, meal=False, dineIn=False, window=("11:00", "12:00"), arrive_by="11:00", worth=12, show=dict(notes="On the City of Maple Grove's events page for Wed 11 Nov 2026, hosted by Maple Grove Beyond the Yellow Ribbon and the Osseo-Maple Grove American Legion. Free, all ages.")),
+        dict(id="malones-maple-grove", src="local", name="Malone's Bar & Grill", osm=None, category="meal", minutes=55, busy=20, meal=True, dineIn=True, caution="One 2026 deal list carries it, and the address is from directories: call first", show=dict(notes="One 6 Nov 2026 deal list carries it (Twin Cities Frugal Mom); no post from the restaurant was found. Address from directories.")),
+        dict(id="tavern-grill-arden-hills", src="local", name="The Tavern Grill, Arden Hills", osm=None, category="meal", minutes=55, busy=20, meal=True, dineIn=True, caution="Address from directories: call first", show=dict(notes="A 6 Nov 2026 list (Bring Me The News) names Arden Hills among the Tavern Grill stores offering it. Address from directories.")),
+    ],
+}
 
 
-def load(name, default):
-    p = os.path.join(RES, name)
+def strip_fm(text):
+    """A national note without its sentences about Fargo-Moorhead (the research was done for it first)."""
+    parts = re.split(r"(?<=\.)\s+", text or "")
+    return " ".join(x for x in parts if x.strip() and not re.search(r"\bFM\b|Fargo|Moorhead", x)).strip()
+
+
+def curate_for(region):
+    """The CURATE entries that apply in an area: the shared national ones (an `only` list limits one to some areas),
+    with Fargo-Moorhead's own adjustments (`fm`) there, then the area's local entries."""
+    out = []
+    for cur in CURATE:
+        if cur["src"] == "local" and region != DEFAULT_REGION:
+            continue
+        if cur.get("only") and region not in cur["only"]:
+            continue
+        cur = dict(cur)
+        extra = cur.pop("fm", None)
+        if extra and region == DEFAULT_REGION:
+            cur.update(extra)
+        away = cur.pop("elsewhere", None)
+        if away and region != DEFAULT_REGION:
+            cur["override"] = away
+        out.append(cur)
+    return out + [dict(c) for c in LOCAL.get(region, [])]
+
+
+def load(name, default, sub=""):
+    p = os.path.join(RES, sub, name)
     return json.load(open(p, encoding="utf-8")) if os.path.exists(p) else default
 
 
@@ -219,6 +310,21 @@ def in_bbox(lat, lng):
     return BBOX[0] <= lat <= BBOX[2] and BBOX[1] <= lng <= BBOX[3]
 
 
+def km(a_lat, a_lng, b_lat, b_lng):
+    p = math.pi / 180
+    s = (math.sin((b_lat - a_lat) * p / 2) ** 2 +
+         math.cos(a_lat * p) * math.cos(b_lat * p) * math.sin((b_lng - a_lng) * p / 2) ** 2)
+    return 12742 * math.asin(math.sqrt(s))
+
+
+def in_region(reg, lat, lng):
+    """Inside the area: Fargo-Moorhead's box, or any of an area's circles."""
+    if reg.get("bbox"):
+        b = reg["bbox"]
+        return b[0] <= lat <= b[2] and b[1] <= lng <= b[3]
+    return any(km(lat, lng, a[1], a[2]) <= a[3] for a in reg["areas"])
+
+
 def slug(s):
     return re.sub(r"-+", "-", re.sub(r"[^a-z0-9]+", "-", s.lower())).strip("-")
 
@@ -272,16 +378,19 @@ def sun_times(lat, lng, date):
     return rise, sett
 
 
-def main():
+def main(region=DEFAULT_REGION):
+    reg = REGIONS[region]
+    sub = reg["research"]
+    out_path = os.path.join(os.path.dirname(OUT), reg["out"], "deals.json")
     national = {r["brand"]: r for r in load("national-2026.json", [])}
-    local = load("local-2026.json", [])
-    locs = load("locations-2026.json", {})
-    osm = load("osm-matches.json", {})
+    local = load("local-2026.json", [], sub)
+    locs = load("locations-2026.json", {}, sub)
+    osm = load("osm-matches.json", {}, sub)
     osm_by_id = {m["osm"]: m for ms in osm.values() for m in ms}
 
     offers, places, report = [], [], []
     to_geocode = []
-    for cur in CURATE:
+    for cur in curate_for(region):
         if cur["src"] == "national":
             r = national.get(cur["name"])
         else:
@@ -302,8 +411,8 @@ def main():
         stores = []
         L = find_loc(locs, cur.get("loc"))
         if L is not None:
-            if L.get("fm_presence") == "no":
-                report.append(f"skip {cur['id']}: no FM store ({L.get('basis_url', '')})")
+            if L.get("presence", L.get("fm_presence")) == "no":
+                report.append(f"skip {cur['id']}: no store in the area ({L.get('basis_url', '')})")
                 continue
             for s in L.get("stores", []):
                 if any(d in (s.get("address") or "") for d in cur.get("drop", [])):
@@ -364,6 +473,15 @@ def main():
         }
         if cur.get("worth") is not None:
             o["worth"] = cur["worth"]
+        if cur.get("arrive_by"):
+            o["arrive_by"] = local_iso(cur["arrive_by"])  # a ceremony: the latest arrival (engine v1.3)
+        if region != DEFAULT_REGION and cur["src"] == "national":
+            o["notes"] = strip_fm(o["notes"])
+        o.update(cur.get("override") or {})
+        # The new areas' local entries: the page's note (and offer text) from CURATE; research notes stay in notes.md.
+        if cur["src"] == "local" and region != DEFAULT_REGION:
+            o["notes"] = ""
+        o.update(cur.get("show") or {})
         # ticket: a card or voucher for later (quick, nothing eaten); purchase: you have to buy something to save;
         # eat: how much of a meal it is when eaten there (the engine guesses from meal/dineIn/snack otherwise).
         o["ticket"] = bool(cur.get("ticket"))
@@ -416,8 +534,8 @@ def main():
     for p in places:
         if p["lat"] is None:
             report.append(f"  no pin: {p['id']} {p['address']}")
-        elif not in_bbox(p["lat"], p["lng"]):
-            report.append(f"  outside metro: {p['id']} {p['address']}")
+        elif not in_region(reg, p["lat"], p["lng"]):
+            report.append(f"  outside the area: {p['id']} {p['address']}")
         else:
             kept.append(p)
     places = kept
@@ -430,16 +548,20 @@ def main():
     # forecast link and daylight
     forecast = None
     try:
-        req = urllib.request.Request("https://api.weather.gov/points/46.8772,-96.7898", headers={"User-Agent": UA, "Accept": "application/geo+json"})
+        req = urllib.request.Request("https://api.weather.gov/points/%.4f,%.4f" % reg["nws"], headers={"User-Agent": UA, "Accept": "application/geo+json"})
         forecast = json.loads(urllib.request.urlopen(req, timeout=30).read())["properties"]["forecast"]
     except Exception as e:  # the app works without it
         report.append(f"  NWS points lookup failed: {e}")
-    rise, sett = sun_times(46.8772, -96.7898, datetime(2026, 11, 11).date())
+    rise, sett = sun_times(reg["nws"][0], reg["nws"][1], datetime(2026, 11, 11).date())
     meta = {"built_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), "day": DAY,
             "day_start": DAY_START.strftime("%Y-%m-%dT%H:%M:%SZ"), "tz": "America/Chicago", "tz_offset_min": TZ_OFFSET_MIN,
-            "forecast_url": forecast, "sunrise": rise.strftime("%Y-%m-%dT%H:%M:%SZ"), "sunset": sett.strftime("%Y-%m-%dT%H:%M:%SZ")}
+            "forecast_url": forecast, "sunrise": rise.strftime("%Y-%m-%dT%H:%M:%SZ"), "sunset": sett.strftime("%Y-%m-%dT%H:%M:%SZ"),
+            # What the page says about the area, and where drive_matrix.py lays its grid (None: the stores' extent).
+            "region": {"id": region, "name": reg["name"], "label": reg["label"], "center": list(reg["center"]),
+                       "center_label": reg["center_label"], "zoom": reg["zoom"], "wx_name": reg["wx_name"],
+                       "transit": reg["transit"], "areas": [list(a) for a in reg["areas"]] if reg["areas"] else None}}
     # Under Deals, off the route: other days and region-wide perks, and places with a deal in earlier years only.
-    ex = load("extras-2026.json", {})
+    ex = load("extras-2026.json", {}, sub)
     other = []
     for e in ex.get("other", []):
         x = {k: e.get(k) for k in ("id", "day", "at", "name", "where", "offer", "grade", "note")}
@@ -449,9 +571,10 @@ def main():
     leads = [{"name": l["name"], "area": l.get("area") or "", "q": l["q"], "offer": l["offer"], "last_seen": l["last_seen"],
               "source": lead_src.get(l["src"])} for l in ex.get("leads", [])]
 
-    os.makedirs(os.path.dirname(OUT), exist_ok=True)
+    os.makedirs(os.path.dirname(out_path), exist_ok=True)
     json.dump({"meta": meta, "offers": offers, "places": places, "other": other, "leads": leads},
-              open(OUT, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+              open(out_path, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    print(f"== {region}: {os.path.relpath(out_path, ROOT)}")
     print(f"offers {len(offers)}  places {len(places)}  (pins: osm {sum(p['pin']=='osm' for p in places)}, census {sum(p['pin']=='census' for p in places)}, geo {sum(p['pin']=='geo' for p in places)})")
     print(f"other days and perks {len(other)}  earlier-year leads {len(leads)}")
     print(f"grades: " + ", ".join(f"{g} {sum(o['grade']==g for o in offers)}" for g in "ABC"))
@@ -459,4 +582,8 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    want = sys.argv[1:] or ["all"]
+    for r in (list(REGIONS) if want == ["all"] else want):
+        if r not in REGIONS:
+            raise SystemExit(f"unknown area {r!r}; one of: {', '.join(REGIONS)}")
+        main(r)

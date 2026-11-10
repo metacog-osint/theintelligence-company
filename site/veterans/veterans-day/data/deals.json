@@ -1,13 +1,27 @@
 {
  "meta": {
-  "built_at": "2026-11-10T00:13:34Z",
+  "built_at": "2026-11-10T15:18:09Z",
   "day": "2026-11-11",
   "day_start": "2026-11-11T06:00:00Z",
   "tz": "America/Chicago",
   "tz_offset_min": -360,
   "forecast_url": "https://api.weather.gov/gridpoints/FGF/100,57/forecast",
   "sunrise": "2026-11-11T13:23:19Z",
-  "sunset": "2026-11-11T22:59:27Z"
+  "sunset": "2026-11-11T22:59:27Z",
+  "region": {
+   "id": "fargo-moorhead",
+   "name": "Fargo-Moorhead",
+   "label": "Fargo-Moorhead, ND/MN",
+   "center": [
+    46.86,
+    -96.81
+   ],
+   "center_label": "the middle of Fargo",
+   "zoom": 12,
+   "wx_name": "Fargo",
+   "transit": "ride MATBUS, free with a veteran ID",
+   "areas": null
+  }
  },
  "offers": [
   {

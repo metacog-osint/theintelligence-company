@@ -1,4 +1,6 @@
-/*! Veterans Day 2026 planner · app v1.1 · The Intelligence Company. Load tic-time.js, engine.js and roads.js first.
+/*! Veterans Day 2026 planner · app v1.2 · The Intelligence Company. Load tic-time.js, engine.js and roads.js first.
+ *  v1.2 (10 Nov 2026): areas. Fargo-Moorhead, Bismarck-Mandan and New Salem, and the Twin Cities' Plymouth, Maple
+ *  Grove and Roseville, picked in the top bar.
  *  Everything about the user (settings, history, position) stays in this browser. The only network calls: the
  *  page's own data files, the NWS forecast, the shared field-report service (API below) and, on the Map tab, map tiles
  *  and the road shapes between the stores on your route (roads.js, from OSRM; never your position).
@@ -8,6 +10,18 @@
   const E = window.VDEngine, T = window.TicTime, R = window.VDRoads;
   const API = "https://vetday.metacog.workers.dev"; // field-report Worker (veterans-day/worker); "" keeps reports on the phone
   const KEY = "vd2026-v1", MIN = 60000, HOUR = 3600000;
+  // Areas (9 Nov 2026: friends in New Salem, ND, and in the Rosedale, Plymouth and Maple Grove areas of the Twin
+  // Cities). Fargo-Moorhead is the default and where a first visit lands. The area picked in the top bar is remembered
+  // on this phone; a link with ?area=<id> opens that area and remembers it. Each area's data sits in its own folder,
+  // and its deals.json says the rest (meta.region: name, centre, forecast place, transit). The ids match the <select>.
+  const AREAS = [
+    { id: "fargo-moorhead", dir: "data/" },
+    { id: "bismarck-mandan", dir: "data/bismarck-mandan/" },
+    { id: "twin-cities", dir: "data/twin-cities/" }
+  ];
+  const DEFAULT_AREA = "fargo-moorhead";
+  const AWAY_KM = 15; // further than this from the area's nearest start point, your location is somewhere else
+  let areaId = DEFAULT_AREA, AREA = null;
   const CATS = [["breakfast", "Breakfast"], ["meal", "Sit-down meals"], ["quick", "Quick bites"], ["coffee", "Coffee"],
     ["treat", "Treats"], ["bar", "Bars and breweries (21+)"], ["service", "Haircuts and car care"],
     ["shopping", "Shopping discounts"], ["event", "Ceremonies and veterans' posts"]];
@@ -16,7 +30,9 @@
   // Bars are on (8 Nov 2026), with a drive-safe line wherever one shows up.
   const LIKES = CATS.concat([["purchase", "Deals that need a purchase"]]);
   const OFF_BY_DEFAULT = { purchase: true };
-  const DRIVE_SAFE = "21 and over. If you drink, don't drive: bring a sober driver, take a cab or rideshare, or ride MATBUS, free with a veteran ID.";
+  const DRIVE_SAFE = "21 and over. If you drink, don't drive: bring a sober driver, take a cab or rideshare";
+  // Each area finishes the line with its own transit (MATBUS is free with a veteran ID in Fargo-Moorhead).
+  const driveSafe = () => DRIVE_SAFE + (AREA && AREA.transit ? ", or " + AREA.transit : "") + ".";
   const likeOf = (c) => (S.prefs[c] === undefined ? (OFF_BY_DEFAULT[c] ? 0 : 1) : S.prefs[c]);
   const likeWord = (w) => (w > 1 ? "Love" : w > 0 ? "Fine" : "Off");
   const GOAL_NAME = { best: "Best for me", stops: "Most stops", savings: "Most savings", both: "Stops + savings" };
@@ -34,7 +50,8 @@
   };
   const MODE = { dine_in: "dine-in", to_go: "to go", drive_thru: "drive-thru", dine_in_or_to_go: "dine-in or to go",
     in_store: "in store", online: "online", voucher: "card or voucher for later", event: "event" };
-  const CENTER = { lat: 46.8600, lng: -96.8100 }; // 13th Ave S and 25th St, Fargo: used until you set a start
+  // Where drive times start until you set a start: the area's centre (Fargo-Moorhead: 13th Ave S and 25th St, Fargo).
+  const center = () => (AREA && AREA.center ? { lat: AREA.center[0], lng: AREA.center[1] } : { lat: 46.8600, lng: -96.8100 });
 
   let data = null, offersById = {}, placesById = {}, dayStart = 0, S = null, wxSlick = false;
   const live = { pos: null, acc: null, at: 0, watch: null, last: null };
@@ -90,7 +107,7 @@
       profile: { status: "veteran", spouse: false, kids: 0, proof: { military_id: true }, ready: {}, pace: "balanced",
         dayEndMin: 21 * 60, mealsMax: 2, roads: "auto", blocks: [], togo: false },
       done: {}, away: {}, strikes: {}, vetoed: {}, pinned: {}, prefs: {}, learned: {},
-      start: null, gps: false, sent: [], previewMin: 8 * 60, cats: {},
+      starts: {}, area: null, gps: false, sent: [], previewMin: 8 * 60, cats: {}, // starts: a start point per area
       goal: "best", maxGoal: "both", leaveMin: null // leaveMin: minutes after midnight, or null for "now"
     };
   }
@@ -99,6 +116,9 @@
     try { s = JSON.parse(localStorage.getItem(KEY) || "null"); } catch (e) { s = null; }
     const d = defaults();
     if (!s) return d;
+    // Before areas there was one start point, always in Fargo-Moorhead.
+    if (s.start && !s.starts) s.starts = { [DEFAULT_AREA]: s.start };
+    delete s.start;
     return Object.assign(d, s, { profile: Object.assign(d.profile, s.profile || {}) });
   }
   function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) { /* private mode: still works this visit */ } }
@@ -138,12 +158,23 @@
     S.sent.forEach((e) => { if (!e.synced) put(e); });
     return r;
   }
+  // Near enough to this area's grid of start points to time trips from there.
+  function inArea(p) {
+    const a = data && data.drive && data.drive.anchors;
+    if (!a || !a.length) return true;
+    let best = Infinity;
+    for (let i = 0; i < a.length; i++) best = Math.min(best, E.km(p, { lat: a[i][0], lng: a[i][1] }));
+    return best <= AWAY_KM;
+  }
   function position() {
-    if (live.pos && Date.now() - live.at < 10 * MIN) return { pos: live.pos, kind: "gps" };
+    const gpsOn = live.pos && Date.now() - live.at < 10 * MIN;
+    if (gpsOn && inArea(live.pos)) return { pos: live.pos, kind: "gps" };
     // Without live location, assume you're still at the stop you last marked, for two hours.
-    if (S.last && Math.abs(now() - S.last.t) < 2 * HOUR) return { pos: S.last, kind: "last" };
-    if (S.start) return { pos: S.start, kind: "start" };
-    return { pos: CENTER, kind: "center" };
+    if (S.last && Math.abs(now() - S.last.t) < 2 * HOUR && (S.last.area || DEFAULT_AREA) === areaId) return { pos: S.last, kind: "last" };
+    const away = !!gpsOn; // your location is in another area: plan from this area's start or centre, and say so
+    const st = S.starts[areaId];
+    if (st) return { pos: st, kind: "start", away };
+    return { pos: center(), kind: "center", away };
   }
   function context(t, pos) {
     return E.prepare(data, engineProfile(), engineState(), engineReports(), t, pos, shared.overrides);
@@ -158,7 +189,8 @@
   function whyBits(step) {
     const c = step.c, o = c.offer, bits = [];
     bits.push(step.driveMin < 1.5 ? "you're here" : mins(step.driveMin - 2.5) + " drive");
-    if (o.end || c.close - dayStart < 23.5 * HOUR) bits.push((o.end ? "deal ends " : "closes ") + fmt(c.close));
+    if (o.arriveBy && o.arriveBy < c.close) bits.push("be there by " + fmt(o.arriveBy)); // a ceremony's start
+    else if (o.end || c.close - dayStart < 23.5 * HOUR) bits.push((o.end ? "deal ends " : "closes ") + fmt(c.close));
     else bits.push("open late");
     if (step.slackMin < 90) bits.push(mins(step.slackMin) + " to spare");
     let v = worthText(o);
@@ -250,7 +282,7 @@
     if (fl) card.append(fl);
     const flags = c.flags.concat(o.limits ? [o.limits] : []);
     if (flags.length) card.append(h("ul", { class: "flags" }, flags.map((f) => h("li", null, f))));
-    if (o.category === "bar") card.append(h("p", { class: "note drive-safe" }, DRIVE_SAFE));
+    if (o.category === "bar") card.append(h("p", { class: "note drive-safe" }, driveSafe()));
     card.append(dirLinks(pl));
     card.append(h("div", { class: "actions" },
       h("button", { type: "button", class: "btn btn-good", onclick: () => record(c, "worked") }, "✓ Got it"),
@@ -270,8 +302,9 @@
 
   // How a stop sits in its deal's window: when you'd arrive, when the deal ends, and the time to spare.
   function windowLine(x) {
-    const c = x.c, o = c.offer, spare = (c.close - x.arrive) / MIN;
-    const ends = o.end || c.close - dayStart < 23.5 * HOUR ? (o.end ? "deal ends " : "closes ") + fmt(c.close) : "open late";
+    const c = x.c, o = c.offer, by = o.arriveBy && o.arriveBy < c.close ? o.arriveBy : null; // a ceremony's start
+    const spare = ((by || c.close) - x.arrive) / MIN;
+    const ends = by ? "be there by " + fmt(by) : o.end || c.close - dayStart < 23.5 * HOUR ? (o.end ? "deal ends " : "closes ") + fmt(c.close) : "open late";
     const bits = ["Arrive " + fmtNZ(x.arrive), ends];
     if (ends !== "open late") bits.push(spare < 60 ? "only " + mins(spare) + " to spare" : mins(spare) + " to spare");
     return h("span", { class: "stop-win" + (spare < 25 ? " tight" : "") }, bits.join(" · "));
@@ -404,15 +437,17 @@
     const st = $("#loc-status");
     if (where.kind === "gps") st.textContent = "Using your location" + (live.acc ? " (within " + Math.round(live.acc) + " m)" : "") + ". It stays on this phone.";
     else if (where.kind === "last") st.textContent = "Drive times from " + S.last.name + ", your last stop. Share your location for live directions; it stays on this phone.";
+    else if (where.away) st.textContent = "You're outside " + AREA.name + ", so drive times are from " +
+      (where.kind === "start" ? "your start point there" : AREA.center_label) + ". Pick a start on the map, or choose your area at the top.";
     else if (where.kind === "start") st.textContent = "Drive times from your start point. Share your location for live directions; it stays on this phone.";
-    else st.textContent = "Drive times are from the middle of Fargo until you share your location or pick a start. Your location stays on this phone.";
+    else st.textContent = "Drive times are from " + AREA.center_label + " until you share your location or pick a start. Your location stays on this phone.";
     $("#loc-gps").textContent = live.watch !== null ? "Stop using my location" : "Use my location";
   }
 
   // ---------------------------------------------------------------- what you did
   function record(c, kind) {
     const t = now(), o = c.offer;
-    S.last = { lat: c.place.lat, lng: c.place.lng, name: o.brand, t };
+    S.last = { lat: c.place.lat, lng: c.place.lng, name: o.brand, t, area: areaId };
     if (kind === "worked") {
       S.done[o.id] = { r: "worked", t, place: c.place.id };
       S.learned = E.learn(S.learned, o.category, "worked");
@@ -526,7 +561,7 @@
       h("p", { class: "deal-offer" }, o.offer),
       h("p", { class: "deal-meta" }, meta.join(" · ")),
       // Kept in sight, not folded: the drive-safe line on every bar (8 Nov 2026) and sign-ups needed ahead.
-      o.category === "bar" ? h("p", { class: "note drive-safe" }, DRIVE_SAFE) : null,
+      o.category === "bar" ? h("p", { class: "note drive-safe" }, driveSafe()) : null,
       o.advance ? h("p", { class: "note" }, "Sign up first: " + o.advance) : null,
       reason ? h("p", { class: "note" }, "Not suggested: " + reason + ".") : null);
     const locs = h("ul", { class: "locs" }, places.map((p) => {
@@ -648,7 +683,7 @@
     if (!vet.children.length) vet.append(h("li", { class: "note" }, "None."));
     const com = $("#community");
     if (shared.community && shared.community.worked) {
-      com.textContent = "Today veterans using this reported " + shared.community.worked + " deals honoured, worth about " +
+      com.textContent = "Today veterans using this planner, in every area, reported " + shared.community.worked + " deals honoured, worth about " +
         money(shared.community.value || 0) + ". Updated " + fmt(shared.at) + ".";
     } else if (shared.ok === false) com.textContent = "Shared reports can't be reached right now. Your own marks still work.";
   }
@@ -698,7 +733,7 @@
     try { await loadLeaflet(); } catch (e) { clear($("#map")).append(h("p", { class: "empty" }, "The map couldn't load. Every deal is under Deals.")); return; }
     const L = window.L;
     if (!map) {
-      map = L.map("map", { zoomControl: true }).setView([46.862, -96.82], 12);
+      map = L.map("map", { zoomControl: true }).setView(AREA && AREA.center ? AREA.center : [46.862, -96.82], AREA && AREA.zoom ? AREA.zoom : 12);
       // OpenStreetMap's own tiles (free with credit, light use); app.css darkens them in dark mode.
       L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
         maxZoom: 19, attribution: "© <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors"
@@ -710,7 +745,7 @@
       map.on("click", (ev) => {
         if (!picking) return;
         picking = false;
-        S.start = { lat: Math.round(ev.latlng.lat * 1e5) / 1e5, lng: Math.round(ev.latlng.lng * 1e5) / 1e5 };
+        S.starts[areaId] = { lat: Math.round(ev.latlng.lat * 1e5) / 1e5, lng: Math.round(ev.latlng.lng * 1e5) / 1e5 };
         save(); toast("Start point set. It stays on this phone."); location.hash = "#route"; renderAll();
       });
     }
@@ -778,7 +813,7 @@
         (p.windSpeed ? ", wind " + p.windDirection + " " + p.windSpeed : "")).join(". ");
       wxSlick = ps.some((p) => /snow|sleet|freezing|ice|wintry/i.test(p.shortForecast + " " + (p.detailedForecast || "")));
       const box = clear($("#wx"));
-      box.append(h("b", null, "NWS forecast for Fargo, " + day.slice(8) + " Nov. "), text + ".",
+      box.append(h("b", null, "NWS forecast for " + (AREA ? AREA.wx_name : "Fargo") + ", " + day.slice(8) + " Nov. "), text + ".",
         data.meta.sunset ? " Sunset " + fmt(Date.parse(data.meta.sunset)) + "." : "",
         wxSlick ? h("span", null, " Snow or ice is possible, so drive times are stretched (change under Me).") : "");
       box.hidden = false;
@@ -896,6 +931,7 @@
       ev.preventDefault();
       const f = ev.target, msg = $("#tip-msg");
       const body = Object.fromEntries(["name", "address", "offer", "when", "source"].map((k) => [k, f[k].value.trim()]));
+      body.address = [body.address, "(" + AREA.name + ")"].filter(Boolean).join(" "); // which area the tip is for
       if (!API) { msg.textContent = "Tips aren't open yet. Email support@theintelligence.company instead."; return; }
       try {
         const r = await fetch(API + "/v1/tip", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
@@ -911,18 +947,53 @@
     setInterval(() => { if (!document.hidden) { sync(); pull(); } }, 60000);
   }
 
+  // ---------------------------------------------------------------- areas
+  function pickArea() {
+    const q = new URLSearchParams(location.search).get("area");
+    if (q && AREAS.some((a) => a.id === q)) { S.area = q; save(); return q; } // a shared link: remember it
+    return AREAS.some((a) => a.id === S.area) ? S.area : DEFAULT_AREA;
+  }
+  function wireArea() {
+    const sel = $("#area");
+    sel.value = areaId;
+    sel.addEventListener("change", () => {
+      const id = sel.value;
+      if (!AREAS.some((a) => a.id === id) || id === areaId) return;
+      S.area = id; save();
+      const u = new URL(location.href);
+      if (id === DEFAULT_AREA) u.searchParams.delete("area"); else u.searchParams.set("area", id);
+      if (u.href === location.href) location.reload(); else location.replace(u.href); // load that area's deals
+    });
+  }
+  function showArea() {
+    document.title = "Veterans Day 2026 in " + AREA.name + " · The Intelligence Company";
+    document.querySelectorAll(".area-name").forEach((el) => { el.textContent = AREA.name; });
+    $("#drive-safe-transit").textContent = AREA.transit ? ", or " + AREA.transit : "";
+  }
+
   async function main() {
     S = load();
+    areaId = pickArea();
+    wireArea();
+    const dir = AREAS.find((a) => a.id === areaId).dir;
     try {
-      const [d, drive] = await Promise.all([fetch("data/deals.json").then((r) => r.json()), fetch("data/drive.json").then((r) => r.json())]);
+      const [d, drive] = await Promise.all([fetch(dir + "deals.json").then((r) => r.json()), fetch(dir + "drive.json").then((r) => r.json())]);
       data = d; data.drive = drive;
     } catch (e) {
       $("#clock").textContent = "The deal list couldn't load. Check your connection and reload.";
       return;
     }
+    // Older data files have no region block: they are Fargo-Moorhead's.
+    AREA = data.meta.region || { id: DEFAULT_AREA, name: "Fargo-Moorhead", center: [46.86, -96.81], center_label: "the middle of Fargo",
+      zoom: 12, wx_name: "Fargo", transit: "ride MATBUS, free with a veteran ID" };
+    showArea();
     dayStart = Date.parse(data.meta.day_start);
     data.tzOffsetMin = data.meta.tz_offset_min;
-    data.offers.forEach((o) => { o.start = o.start ? Date.parse(o.start) : undefined; o.end = o.end ? Date.parse(o.end) : undefined; offersById[o.id] = o; });
+    data.offers.forEach((o) => {
+      o.start = o.start ? Date.parse(o.start) : undefined; o.end = o.end ? Date.parse(o.end) : undefined;
+      o.arriveBy = o.arrive_by ? Date.parse(o.arrive_by) : undefined; // engine v1.3: a ceremony's start
+      offersById[o.id] = o;
+    });
     data.places.forEach((p) => { p.open = Date.parse(p.open); p.close = Date.parse(p.close); placesById[p.id] = p; });
     const built = $("#built");
     built.setAttribute("datetime", data.meta.built_at);

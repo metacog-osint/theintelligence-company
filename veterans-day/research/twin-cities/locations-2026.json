@@ -1,0 +1,1995 @@
+{
+ "7 Brew": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (7_brew_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Applebee's": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (applebees): 4 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "1893 W Highway 36, Roseville, MN 55113",
+    "status": "confirmed",
+    "wed_hours": "11:00-01:00",
+    "phone": "+1 651-697-0648",
+    "url": "https://restaurants.applebees.com/en-us/mn/roseville/1893-w-highway-36-82025",
+    "geo": "45.011121,-93.179954",
+    "source": "All the Places 2026-10-31: applebees"
+   },
+   {
+    "address": "4203 Winnetka Avenue North, New Hope, MN 55428",
+    "status": "confirmed",
+    "wed_hours": "11:00-24:00",
+    "phone": "+1 763-533-1870",
+    "url": "https://restaurants.applebees.com/en-us/mn/newhope/4203-winnetka-avenue-north-82008",
+    "geo": "45.033131,-93.382423",
+    "source": "All the Places 2026-10-31: applebees"
+   },
+   {
+    "address": "3500 Vicksburg LN STE 100, Plymouth, MN 55447",
+    "status": "confirmed",
+    "wed_hours": "11:00-24:00",
+    "phone": "+1 763-553-1776",
+    "url": "https://restaurants.applebees.com/en-us/mn/plymouth/3500-vicksburg-ln-ste-100-82029",
+    "geo": "45.020404,-93.480497",
+    "source": "All the Places 2026-10-31: applebees"
+   },
+   {
+    "address": "14400 Weaver Lake Road, Maple Grove, MN 55311",
+    "status": "confirmed",
+    "wed_hours": "11:00-24:00",
+    "phone": "+1 763-494-3289",
+    "url": "https://restaurants.applebees.com/en-us/mn/maplegrove/14400-weaver-lake-road-82020",
+    "geo": "45.104458,-93.462801",
+    "source": "All the Places 2026-10-31: applebees"
+   }
+  ]
+ },
+ "Biggby Coffee": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (biggby_coffee_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Blaze Pizza": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-24 (blaze_pizza): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Bob Evans": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (bob_evans_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Buca di Beppo": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (buca_di_beppo_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Buffalo Wild Wings": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (buffalo_wild_wings_us): 3 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "4345 Nathan Lane N, Suite L, Plymouth, MN 55442",
+    "status": "confirmed",
+    "wed_hours": "10:00-23:45",
+    "phone": "+1 952-698-0315",
+    "url": "",
+    "geo": "45.033715,-93.409706",
+    "source": "All the Places 2026-10-31: buffalo_wild_wings_us"
+   },
+   {
+    "address": "3505 Vicksburg Lane, Plymouth, MN 55447",
+    "status": "confirmed",
+    "wed_hours": "11:00-23:45",
+    "phone": "+1 763-551-9464",
+    "url": "",
+    "geo": "45.020776,-93.484126",
+    "source": "All the Places 2026-10-31: buffalo_wild_wings_us"
+   },
+   {
+    "address": "1777 West County Road B2, Suite 215A, Roseville, MN 55113",
+    "status": "confirmed",
+    "wed_hours": "11:00-23:45",
+    "phone": "+1 651-636-0926",
+    "url": "",
+    "geo": "45.015377,-93.175502",
+    "source": "All the Places 2026-10-31: buffalo_wild_wings_us"
+   }
+  ]
+ },
+ "Caribou Coffee": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (caribou_coffee_us): 33 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "228 Little Canada Road, Little Canada, MN 55117",
+    "status": "confirmed",
+    "wed_hours": "05:30-19:00",
+    "phone": "+1 651-946-0070",
+    "url": "https://locations.cariboucoffee.com/us/mn/little-canada/228-little-canada-road",
+    "geo": "45.022910,-93.091089",
+    "source": "All the Places 2026-10-31: caribou_coffee_us"
+   },
+   {
+    "address": "3354 Rice Street, Little Canada, MN 55126",
+    "status": "confirmed",
+    "wed_hours": "05:00-19:00",
+    "phone": "+1 952-600-8408",
+    "url": "https://locations.cariboucoffee.com/us/mn/little-canada/3354-rice-street",
+    "geo": "45.042979,-93.105742",
+    "source": "All the Places 2026-10-31: caribou_coffee_us"
+   },
+   {
+    "address": "1720 Rice Street, Maplewood, MN 55113",
+    "status": "confirmed",
+    "wed_hours": "05:30-20:00",
+    "phone": "+1 612-428-4131",
+    "url": "https://locations.cariboucoffee.com/us/mn/maplewood/1720-rice-street",
+    "geo": "44.992992,-93.105491",
+    "source": "All the Places 2026-10-31: caribou_coffee_us"
+   },
+   {
+    "address": "3673 Lexington Avenue North, Arden Hills, MN 55126",
+    "status": "confirmed",
+    "wed_hours": "05:30-19:00",
+    "phone": "+1 651-490-0227",
+    "url": "https://locations.cariboucoffee.com/us/mn/arden-hills/3673-lexington-avenue-north",
+    "geo": "45.051656,-93.147637",
+    "source": "All the Places 2026-10-31: caribou_coffee_us"
+   },
+   {
+    "address": "1127 Larpenteur Avenue W, Roseville, MN 55113",
+    "status": "confirmed",
+    "wed_hours": "05:30-20:00",
+    "phone": "+1 651-487-5502",
+    "url": "https://locations.cariboucoffee.com/us/mn/roseville/1127-larpenteur-avenue-w",
+    "geo": "44.992702,-93.147621",
+    "source": "All the Places 2026-10-31: caribou_coffee_us"
+   },
+   {
+    "address": "2111 Snelling Avenue North, Roseville, MN 55113",
+    "status": "confirmed",
+    "wed_hours": "05:00-20:00",
+    "phone": "+1 651-636-5655",
+    "url": "https://locations.cariboucoffee.com/us/mn/roseville/2111-snelling-avenue-north",
+    "geo": "45.004721,-93.167415",
+    "source": "All the Places 2026-10-31: caribou_coffee_us"
+   },
+   {
+    "address": "2714 Lincoln Drive, Roseville, MN 55113",
+    "status": "confirmed",
+    "wed_hours": "06:00-18:00",
+    "phone": "+1 651-636-0976",
+    "url": "https://locations.cariboucoffee.com/us/mn/roseville/2714-lincoln-drive",
+    "geo": "45.022473,-93.168452",
+    "source": "All the Places 2026-10-31: caribou_coffee_us"
+   },
+   {
+    "address": "1601 West County Road C, Roseville, MN 55113",
+    "status": "confirmed",
+    "wed_hours": "06:00-18:00",
+    "phone": "+1 651-633-6960",
+    "url": "https://locations.cariboucoffee.com/us/mn/roseville/1601-west-county-road-c",
+    "geo": "45.021946,-93.170650",
+    "source": "All the Places 2026-10-31: caribou_coffee_us"
+   },
+   {
+    "address": "1595 MN-36 W, Roseville, MN 55113",
+    "status": "confirmed",
+    "wed_hours": "09:00-20:00",
+    "phone": "+1 651-633-7322",
+    "url": "https://locations.cariboucoffee.com/us/mn/roseville/1595-mn-36-w",
+    "geo": "45.012747,-93.172333",
+    "source": "All the Places 2026-10-31: caribou_coffee_us"
+   },
+   {
+    "address": "2360 Fairview Ave N, Roseville, MN 55113",
+    "status": "confirmed",
+    "wed_hours": "05:30-20:00",
+    "phone": "+1 952-444-4373",
+    "url": "https://locations.cariboucoffee.com/us/mn/roseville/2360-fairview-ave-n",
+    "geo": "45.011712,-93.175814",
+    "source": "All the Places 2026-10-31: caribou_coffee_us"
+   },
+   {
+    "address": "2218 County Road D, Roseville, MN 55112",
+    "status": "confirmed",
+    "wed_hours": "05:00-20:00",
+    "phone": "+1 651-631-3548",
+    "url": "https://locations.cariboucoffee.com/us/mn/roseville/2218-county-road-d",
+    "geo": "45.035451,-93.194447",
+    "source": "All the Places 2026-10-31: caribou_coffee_us"
+   },
+   {
+    "address": "2700 39th Avenue NE, Minneapolis, MN 55421",
+    "status": "confirmed",
+    "wed_hours": "05:30-19:00",
+    "phone": "+1 612-788-0170",
+    "url": "https://locations.cariboucoffee.com/us/mn/minneapolis/2700-39th-avenue-ne",
+    "geo": "45.039274,-93.220215",
+    "source": "All the Places 2026-10-31: caribou_coffee_us"
+   },
+   {
+    "address": "1730 New Brighton Boulevard, Minneapolis, MN 55413",
+    "status": "confirmed",
+    "wed_hours": "05:30-19:00",
+    "phone": "+1 612-788-1796",
+    "url": "https://locations.cariboucoffee.com/us/mn/minneapolis/1730-new-brighton-boulevard",
+    "geo": "45.005669,-93.228138",
+    "source": "All the Places 2026-10-31: caribou_coffee_us"
+   },
+   {
+    "address": "8479 West Broadway, Brooklyn Park, MN 55445",
+    "status": "confirmed",
+    "wed_hours": "05:30-19:00",
+    "phone": "+1 952-444-4323",
+    "url": "https://locations.cariboucoffee.com/us/mn/brooklyn-park/8479-west-broadway",
+    "geo": "45.108559,-93.378296",
+    "source": "All the Places 2026-10-31: caribou_coffee_us"
+   },
+   {
+    "address": "4210 Winnetka Avenue, New Hope, MN 55428",
+    "status": "confirmed",
+    "wed_hours": "06:00-18:00",
+    "phone": "+1 763-592-5073",
+    "url": "https://locations.cariboucoffee.com/us/mn/new-hope/4210-winnetka-avenue",
+    "geo": "45.033746,-93.379949",
+    "source": "All the Places 2026-10-31: caribou_coffee_us"
+   },
+   {
+    "address": "8881 Jefferson Highway, Osseo, MN 55369",
+    "status": "confirmed",
+    "wed_hours": "05:30-18:00",
+    "phone": "+1 763-493-0055",
+    "url": "https://locations.cariboucoffee.com/us/mn/osseo/8881-jefferson-highway",
+    "geo": "45.114908,-93.402968",
+    "source": "All the Places 2026-10-31: caribou_coffee_us"
+   },
+   {
+    "address": "1 General Mills Boulevard, Golden Valley, MN 55426",
+    "status": "confirmed",
+    "wed_hours": "06:30-16:00",
+    "phone": "+1 763-293-1111",
+    "url": "https://locations.cariboucoffee.com/us/mn/golden-valley/1-general-mills-boulevard",
+    "geo": "44.976070,-93.396277",
+    "source": "All the Places 2026-10-31: caribou_coffee_us"
+   },
+   {
+    "address": "9420 36th Avenue North, New Hope, MN 55427",
+    "status": "confirmed",
+    "wed_hours": "06:00-18:00",
+    "phone": "+1 763-546-1818",
+    "url": "https://locations.cariboucoffee.com/us/mn/new-hope/9420-36th-avenue-north",
+    "geo": "45.022655,-93.399592",
+    "source": "All the Places 2026-10-31: caribou_coffee_us"
+   },
+   {
+    "address": "4345 Nathan Lane North, Plymouth, MN 55442",
+    "status": "confirmed",
+    "wed_hours": "05:30-19:00",
+    "phone": "+1 763-551-4762",
+    "url": "https://locations.cariboucoffee.com/us/mn/plymouth/4345-nathan-lane-north",
+    "geo": "45.033744,-93.409013",
+    "source": "All the Places 2026-10-31: caribou_coffee_us"
+   },
+   {
+    "address": "12880 Elm Creek Boulevard, Maple Grove, MN 55369",
+    "status": "confirmed",
+    "wed_hours": "07:00-18:00",
+    "phone": "+1 763-299-1777",
+    "url": "https://locations.cariboucoffee.com/us/mn/maple-grove/12880-elm-creek-boulevard",
+    "geo": "45.096500,-93.444257",
+    "source": "All the Places 2026-10-31: caribou_coffee_us"
+   },
+   {
+    "address": "12850 Bass Lake Road, Maple Grove, MN 55369",
+    "status": "confirmed",
+    "wed_hours": "06:00-19:00",
+    "phone": "+1 763-553-1293",
+    "url": "https://locations.cariboucoffee.com/us/mn/maple-grove/12850-bass-lake-road",
+    "geo": "45.066019,-93.442564",
+    "source": "All the Places 2026-10-31: caribou_coffee_us"
+   },
+   {
+    "address": "12569 Wayzata Boulevard, Minnetonka, MN 55305",
+    "status": "confirmed",
+    "wed_hours": "09:00-20:00",
+    "phone": "+1 952-544-0939",
+    "url": "https://locations.cariboucoffee.com/us/mn/minnetonka/12569-wayzata-boulevard",
+    "geo": "44.968004,-93.437157",
+    "source": "All the Places 2026-10-31: caribou_coffee_us"
+   },
+   {
+    "address": "13250 Grove Drive, Maple Grove, MN 55369",
+    "status": "confirmed",
+    "wed_hours": "05:30-19:00",
+    "phone": "+1 612-445-5404",
+    "url": "https://locations.cariboucoffee.com/us/mn/maple-grove/13250-grove-drive",
+    "geo": "45.104240,-93.448549",
+    "source": "All the Places 2026-10-31: caribou_coffee_us"
+   },
+   {
+    "address": "1700 Plymouth Road, Minnetonka, MN 55305",
+    "status": "confirmed",
+    "wed_hours": "06:00-18:00",
+    "phone": "+1 952-546-1128",
+    "url": "https://locations.cariboucoffee.com/us/mn/minnetonka/1700-plymouth-road",
+    "geo": "44.967121,-93.443291",
+    "source": "All the Places 2026-10-31: caribou_coffee_us"
+   },
+   {
+    "address": "13081 Ridgedale Drive, Minnetonka, MN 55305",
+    "status": "confirmed",
+    "wed_hours": "07:00-16:00",
+    "phone": "+1 952-545-6945",
+    "url": "https://locations.cariboucoffee.com/us/mn/minnetonka/13081-ridgedale-drive",
+    "geo": "44.968445,-93.447172",
+    "source": "All the Places 2026-10-31: caribou_coffee_us"
+   },
+   {
+    "address": "2720 Annapolis Circle, Plymouth, MN 55441",
+    "status": "confirmed",
+    "wed_hours": "05:00-19:00",
+    "phone": "+1 763-551-4873",
+    "url": "https://locations.cariboucoffee.com/us/mn/plymouth/2720-annapolis-circle",
+    "geo": "45.009304,-93.450591",
+    "source": "All the Places 2026-10-31: caribou_coffee_us"
+   },
+   {
+    "address": "9805 Maple Grove Parkway, Maple Grove, MN 55369",
+    "status": "confirmed",
+    "wed_hours": "06:00-19:00",
+    "phone": "+1 612-426-3391",
+    "url": "https://locations.cariboucoffee.com/us/mn/maple-grove/9805-maple-grove-parkway",
+    "geo": "45.132445,-93.477977",
+    "source": "All the Places 2026-10-31: caribou_coffee_us"
+   },
+   {
+    "address": "16393 County Road 30, Maple Grove, MN 55311",
+    "status": "confirmed",
+    "wed_hours": "05:00-19:00",
+    "phone": "+1 763-416-4750",
+    "url": "https://locations.cariboucoffee.com/us/mn/maple-grove/16393-county-road-30",
+    "geo": "45.125426,-93.488779",
+    "source": "All the Places 2026-10-31: caribou_coffee_us"
+   },
+   {
+    "address": "3455 Vicksburg Lane, Plymouth, MN 55447",
+    "status": "confirmed",
+    "wed_hours": "06:30-18:00",
+    "phone": "+1 763-383-8770",
+    "url": "https://locations.cariboucoffee.com/us/mn/plymouth/3455-vicksburg-lane",
+    "geo": "45.019993,-93.485249",
+    "source": "All the Places 2026-10-31: caribou_coffee_us"
+   },
+   {
+    "address": "16725 County Road 24, Plymouth, MN 55447",
+    "status": "confirmed",
+    "wed_hours": "06:00-17:00",
+    "phone": "+1 612-488-1661",
+    "url": "https://locations.cariboucoffee.com/us/mn/plymouth/16725-county-road-24",
+    "geo": "45.019640,-93.493223",
+    "source": "All the Places 2026-10-31: caribou_coffee_us"
+   },
+   {
+    "address": "1400 County Road 101 N, Plymouth, MN 55447",
+    "status": "confirmed",
+    "wed_hours": "05:30-18:00",
+    "phone": "+1 763-473-1339",
+    "url": "https://locations.cariboucoffee.com/us/mn/plymouth/1400-county-road-101-n",
+    "geo": "44.994517,-93.501082",
+    "source": "All the Places 2026-10-31: caribou_coffee_us"
+   },
+   {
+    "address": "1151 East Wayzata Boulevard, Wayzata, MN 55391",
+    "status": "confirmed",
+    "wed_hours": "06:00-17:00",
+    "phone": "+1 612-428-4606",
+    "url": "https://locations.cariboucoffee.com/us/mn/wayzata/1151-east-wayzata-boulevard",
+    "geo": "44.972426,-93.500256",
+    "source": "All the Places 2026-10-31: caribou_coffee_us"
+   },
+   {
+    "address": "325 Clydesdale Trail, Medina, MN 55340",
+    "status": "confirmed",
+    "wed_hours": "06:00-19:00",
+    "phone": "+1 763-478-3027",
+    "url": "https://locations.cariboucoffee.com/us/mn/medina/325-clydesdale-trail",
+    "geo": "45.044724,-93.531297",
+    "source": "All the Places 2026-10-31: caribou_coffee_us"
+   }
+  ]
+ },
+ "Casey's": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Charleys Cheesesteaks": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-17 (charleys_philly_steaks): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Chili's": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (chilis): 2 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "1840 W. County Rd. B2, Roseville, MN 55113",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "+1 651-633-7718",
+    "url": "https://www.chilis.com/locations/us/minnesota/woodbury/roseville",
+    "geo": "45.013845,-93.177428",
+    "source": "All the Places 2026-10-31: chilis"
+   },
+   {
+    "address": "4000 Vinewood Ln., Plymouth, MN 55442",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "+1 763-557-7000",
+    "url": "https://www.chilis.com/locations/us/minnesota/woodbury/plymouth",
+    "geo": "45.028606,-93.448061",
+    "source": "All the Places 2026-10-31: chilis"
+   }
+  ]
+ },
+ "Chipotle": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (chipotle): 10 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "1313 Wayzata Blvd, Wayzata, MN 55391",
+    "status": "confirmed",
+    "wed_hours": "10:45-23:00",
+    "phone": "+1 952-473-7100",
+    "url": "https://locations.chipotle.com/mn/wayzata/1313-wayzata-blvd",
+    "geo": "44.971454,-93.496676",
+    "source": "All the Places 2026-10-31: chipotle"
+   },
+   {
+    "address": "1021 Red Fox Rd, Shoreview, MN 55126",
+    "status": "confirmed",
+    "wed_hours": "10:45-23:00",
+    "phone": "+1 651-900-8017",
+    "url": "https://locations.chipotle.com/mn/shoreview/1021-red-fox-rd",
+    "geo": "45.058069,-93.143498",
+    "source": "All the Places 2026-10-31: chipotle"
+   },
+   {
+    "address": "2325 Fairview Ave N, Roseville, MN 55113",
+    "status": "confirmed",
+    "wed_hours": "10:45-23:00",
+    "phone": "+1 612-361-5330",
+    "url": "https://locations.chipotle.com/mn/roseville/2325-fairview-ave-n",
+    "geo": "45.011667,-93.177555",
+    "source": "All the Places 2026-10-31: chipotle"
+   },
+   {
+    "address": "3425 Vicksburg Ln N, Plymouth, MN 55447",
+    "status": "confirmed",
+    "wed_hours": "10:45-23:00",
+    "phone": "+1 763-519-0063",
+    "url": "https://locations.chipotle.com/mn/plymouth/3425-vicksburg-ln-n",
+    "geo": "45.020568,-93.482557",
+    "source": "All the Places 2026-10-31: chipotle"
+   },
+   {
+    "address": "2720 Lincoln Dr, Roseville, MN 55113",
+    "status": "confirmed",
+    "wed_hours": "10:45-23:00",
+    "phone": "+1 612-260-1264",
+    "url": "https://locations.chipotle.com/mn/roseville/2720-lincoln-dr",
+    "geo": "45.023187,-93.167762",
+    "source": "All the Places 2026-10-31: chipotle"
+   },
+   {
+    "address": "1807 Plymouth Road, Minnetonka, MN 55305",
+    "status": "confirmed",
+    "wed_hours": "10:45-23:00",
+    "phone": "+1 763-222-1217",
+    "url": "https://locations.chipotle.com/mn/minnetonka/1807-plymouth-road",
+    "geo": "44.966786,-93.441738",
+    "source": "All the Places 2026-10-31: chipotle"
+   },
+   {
+    "address": "2701 39th Ave NE, Minneapolis, MN 55421",
+    "status": "confirmed",
+    "wed_hours": "10:45-23:00",
+    "phone": "+1 612-789-5000",
+    "url": "https://locations.chipotle.com/mn/minneapolis/2701-39th-ave-ne",
+    "geo": "45.038888,-93.219801",
+    "source": "All the Places 2026-10-31: chipotle"
+   },
+   {
+    "address": "7750 Main St N, Maple Grove, MN 55369",
+    "status": "confirmed",
+    "wed_hours": "10:45-23:00",
+    "phone": "+1 763-494-5005",
+    "url": "https://locations.chipotle.com/mn/maple-grove/7750-main-st-n",
+    "geo": "45.095613,-93.441324",
+    "source": "All the Places 2026-10-31: chipotle"
+   },
+   {
+    "address": "9881 Maple Grove Pkwy N, Maple Grove, MN 55369",
+    "status": "confirmed",
+    "wed_hours": "10:45-23:00",
+    "phone": "+1 763-420-5173",
+    "url": "https://locations.chipotle.com/mn/maple-grove/9881-maple-grove-pkwy-n",
+    "geo": "45.133597,-93.476870",
+    "source": "All the Places 2026-10-31: chipotle"
+   },
+   {
+    "address": "7631 Jolly Ln, Brooklyn Park, MN 55428",
+    "status": "confirmed",
+    "wed_hours": "10:45-22:00",
+    "phone": "+1 763-315-5936",
+    "url": "https://locations.chipotle.com/mn/brooklyn-park/7631-jolly-ln",
+    "geo": "45.094135,-93.383197",
+    "source": "All the Places 2026-10-31: chipotle"
+   }
+  ]
+ },
+ "Circle K / Holiday": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (circle_k): 32 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "200 Hwy 55, Medina, MN 55340",
+    "status": "confirmed",
+    "wed_hours": "05:00-23:00",
+    "phone": "+1 763-478-8115",
+    "url": "",
+    "geo": "45.044462,-93.526993",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "16350 96th Ave N, Maple Grove, MN 55311",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 763-420-9909",
+    "url": "",
+    "geo": "45.129098,-93.488445",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "16825 CR 24, Plymouth, MN 55447",
+    "status": "confirmed",
+    "wed_hours": "06:00-21:00",
+    "phone": "+1 763-551-3914",
+    "url": "",
+    "geo": "45.020358,-93.494285",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "1325 E Wayzata Blvd, Wayzata, MN 55391",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 952-473-3940",
+    "url": "",
+    "geo": "44.971742,-93.496214",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "3020 Fernbrook Ln, Plymouth, MN 55447",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 763-559-3690",
+    "url": "",
+    "geo": "45.013758,-93.460603",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "13303 Bass Lake Rd, Maple Grove, MN 55311",
+    "status": "confirmed",
+    "wed_hours": "05:00-23:00",
+    "phone": "+1 763-559-3059",
+    "url": "",
+    "geo": "45.067395,-93.449799",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "4075 Vinewood Ln, Plymouth, MN 55442",
+    "status": "confirmed",
+    "wed_hours": "05:00-23:00",
+    "phone": "+1 763-553-0565",
+    "url": "",
+    "geo": "45.029242,-93.449821",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "189 Cheshire Ln, Plymouth, MN 55441",
+    "status": "confirmed",
+    "wed_hours": "05:00-23:00",
+    "phone": "+1 763-404-0599",
+    "url": "",
+    "geo": "44.983947,-93.457869",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "12650 CR 10, Plymouth, MN 55442",
+    "status": "confirmed",
+    "wed_hours": "05:00-22:00",
+    "phone": "+1 763-550-2996",
+    "url": "",
+    "geo": "45.064961,-93.440432",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "2725 Campus Dr, Plymouth, MN 55441",
+    "status": "confirmed",
+    "wed_hours": "05:00-23:00",
+    "phone": "+1 763-551-2501",
+    "url": "",
+    "geo": "45.009418,-93.448935",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "11201 93rd Ave N, Maple Grove, MN 55369",
+    "status": "confirmed",
+    "wed_hours": "05:00-21:30",
+    "phone": "+1 763-425-4408",
+    "url": "",
+    "geo": "45.123333,-93.423520",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "124 Central Ave, Osseo, MN 55369",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 763-424-7885",
+    "url": "",
+    "geo": "45.117986,-93.401612",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "8517 Jefferson Ln N, Brooklyn Park, MN 55445",
+    "status": "confirmed",
+    "wed_hours": "05:00-23:00",
+    "phone": "+1 763-425-5455",
+    "url": "",
+    "geo": "45.109222,-93.401833",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "10900 Hwy 55, Plymouth, MN 55441",
+    "status": "confirmed",
+    "wed_hours": "05:00-23:00",
+    "phone": "+1 763-544-8836",
+    "url": "",
+    "geo": "44.988154,-93.418386",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "10100 CR 9, Plymouth, MN 55442",
+    "status": "confirmed",
+    "wed_hours": "05:00-23:00",
+    "phone": "+1 763-559-1889",
+    "url": "",
+    "geo": "45.034330,-93.408017",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "9705 Schmidt Lake Rd, Plymouth, MN 55442",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 763-694-9712",
+    "url": "",
+    "geo": "45.043316,-93.403098",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "9399 W Broadway, Brooklyn Park, MN 55445",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 763-425-4269",
+    "url": "",
+    "geo": "45.125253,-93.377334",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "9456 Medicine Lake Rd, New Hope, MN 55427",
+    "status": "confirmed",
+    "wed_hours": "05:00-23:00",
+    "phone": "+1 763-546-1922",
+    "url": "",
+    "geo": "45.007691,-93.399360",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "9700 Betty Crocker Dr, Plymouth, MN 55441",
+    "status": "confirmed",
+    "wed_hours": "05:00-23:00",
+    "phone": "+1 763-546-1900",
+    "url": "",
+    "geo": "44.978951,-93.403202",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "600 Boone Ave N, Golden Valley, MN 55426",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 763-545-3100",
+    "url": "",
+    "geo": "44.985180,-93.389956",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "7180 42nd Ave N, New Hope, MN 55427",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 763-746-7767",
+    "url": "",
+    "geo": "45.033066,-93.372236",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "3810 Silver Lake Rd NE, Saint Anthony, MN 55421",
+    "status": "confirmed",
+    "wed_hours": "05:00-22:00",
+    "phone": "+1 612-782-9940",
+    "url": "",
+    "geo": "45.038565,-93.219118",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "1301 Industrial Blvd NE, Minneapolis, MN 55413",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 612-331-2331",
+    "url": "",
+    "geo": "45.002348,-93.211045",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "950 CR D W, New Brighton, MN 55112",
+    "status": "confirmed",
+    "wed_hours": "05:00-22:00",
+    "phone": "+1 651-202-3943",
+    "url": "",
+    "geo": "45.035897,-93.200792",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "201 W CR E2, New Brighton, MN 55112",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 651-633-2371",
+    "url": "",
+    "geo": "45.057163,-93.189375",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "2102 Como Ave, Saint Paul, MN 55108",
+    "status": "confirmed",
+    "wed_hours": "05:00-22:00",
+    "phone": "+1 651-646-2466",
+    "url": "",
+    "geo": "44.977667,-93.189647",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "1583 Cty Rd C W, Roseville, MN 55113",
+    "status": "confirmed",
+    "wed_hours": "05:00-22:00",
+    "phone": "+1 651-376-1043",
+    "url": "",
+    "geo": "45.021440,-93.167780",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "1306 CR E, Arden Hills, MN 55112",
+    "status": "confirmed",
+    "wed_hours": "06:00-23:00",
+    "phone": "+1 651-493-0528",
+    "url": "",
+    "geo": "45.049710,-93.154450",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "3854 Lexington Ave N, Shoreview, MN 55126",
+    "status": "confirmed",
+    "wed_hours": "06:00-23:00",
+    "phone": "+1 651-483-1219",
+    "url": "",
+    "geo": "45.057722,-93.146419",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "1215 Larpenteur Ave West, Roseville, MN 55113",
+    "status": "confirmed",
+    "wed_hours": "05:00-23:00",
+    "phone": "+1 651-330-6514",
+    "url": "",
+    "geo": "44.992127,-93.151245",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "3467 N Rice St, Shoreview, MN 55126",
+    "status": "confirmed",
+    "wed_hours": "04:30-23:00",
+    "phone": "+1 651-383-2903",
+    "url": "",
+    "geo": "45.046620,-93.106920",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "1608 Rice St, Saint Paul, MN 55117",
+    "status": "confirmed",
+    "wed_hours": "05:00-23:00",
+    "phone": "+1 651-488-8143",
+    "url": "",
+    "geo": "44.989473,-93.105057",
+    "source": "All the Places 2026-10-31: circle_k"
+   }
+  ]
+ },
+ "Cracker Barrel": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Dave & Buster's": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (dave_and_busters): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "11780 Fountains Way, Maple Grove, MN 55369",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "+1 763-493-9815",
+    "url": "https://www.daveandbusters.com/us/en/about/locations/maple-grove",
+    "geo": "45.093283,-93.428772",
+    "source": "All the Places 2026-10-31: dave_and_busters"
+   }
+  ]
+ },
+ "Denny's": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (dennys_us): 0 in the area; OpenStreetMap: 1 in the area",
+  "stores": [
+   {
+    "address": "2045 Twin Lakes Parkway, Roseville, MN 55113",
+    "status": "unverified",
+    "wed_hours": "",
+    "phone": "",
+    "url": "",
+    "osm_id": "way/784522051",
+    "geo": "45.022947,-93.186948",
+    "source": "OpenStreetMap"
+   }
+  ]
+ },
+ "Dunkin'": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (dunkin_us): 6 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "2465 Fairview Ave N, Roseville, MN 55113",
+    "status": "confirmed",
+    "wed_hours": "05:00-19:45",
+    "phone": "+1 651-340-6939",
+    "url": "https://www.dunkindonuts.com/locations/us/mn/roseville/2465-fairview-ave-n/store-362874/",
+    "geo": "45.015260,-93.177639",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "2425 Rice St, Roseville, MN 55113",
+    "status": "confirmed",
+    "wed_hours": "05:00-18:45",
+    "phone": "+1 651-340-1084",
+    "url": "https://www.dunkindonuts.com/locations/us/mn/roseville/2425-rice-st/store-355733/",
+    "geo": "45.013900,-93.106530",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "3195A Vicksburg Lane North, Plymouth, MN 55447",
+    "status": "confirmed",
+    "wed_hours": "05:00-19:45",
+    "phone": "+1 612-254-8452",
+    "url": "https://www.dunkindonuts.com/locations/us/mn/plymouth/3195a-vicksburg-lane-north/store-363176/",
+    "geo": "45.016231,-93.482519",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "7820 42nd Ave N, New Hope, MN 55427",
+    "status": "confirmed",
+    "wed_hours": "05:00-19:45",
+    "phone": "+1 612-354-4500",
+    "url": "https://www.dunkindonuts.com/locations/us/mn/new-hope/7820-42nd-ave-n/store-355415/",
+    "geo": "45.033170,-93.378912",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "13530 Grove Drive, Maple Grove, MN 55311",
+    "status": "confirmed",
+    "wed_hours": "05:00-20:45",
+    "phone": "+1 763-273-5640",
+    "url": "https://www.dunkindonuts.com/locations/us/mn/maple-grove/13530-grove-drive/store-364094/",
+    "geo": "45.104747,-93.452279",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "9595 Zachary Lane N, Maple Grove, MN 55369",
+    "status": "confirmed",
+    "wed_hours": "05:00-18:45",
+    "phone": "+1 763-273-8679",
+    "url": "https://www.dunkindonuts.com/locations/us/mn/maple-grove/9595-zachary-lane-n/store-356656/",
+    "geo": "45.128944,-93.423488",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   }
+  ]
+ },
+ "Famous Dave's": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (famous_daves_us): 3 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "7825 Vinewood Lane, Maple Grove, MN 55369",
+    "status": "confirmed",
+    "wed_hours": "11:00-21:00",
+    "phone": "+1 763-416-4600",
+    "url": "https://www.famousdaves.com/Locations/maple-grove",
+    "geo": "45.096521,-93.448993",
+    "source": "All the Places 2026-10-31: famous_daves_us"
+   },
+   {
+    "address": "11308 Highway 55, Plymouth, MN 55441",
+    "status": "confirmed",
+    "wed_hours": "11:00-21:00",
+    "phone": "+1 763-525-0500",
+    "url": "https://www.famousdaves.com/Locations/Plymouth",
+    "geo": "44.989112,-93.422291",
+    "source": "All the Places 2026-10-31: famous_daves_us"
+   },
+   {
+    "address": "2131 Snelling Avenue, Roseville, MN 55113",
+    "status": "confirmed",
+    "wed_hours": "11:00-21:00",
+    "phone": "+1 651-633-4800",
+    "url": "https://www.famousdaves.com/Locations/roseville",
+    "geo": "45.004402,-93.166463",
+    "source": "All the Places 2026-10-31: famous_daves_us"
+   }
+  ]
+ },
+ "Fazoli's": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (fazolis_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Firehouse Subs": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (firehouse_subs): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "11649 Fountains Dr, Suite 3A, Maple Grove, MN 55369",
+    "status": "confirmed",
+    "wed_hours": "10:00-21:00",
+    "phone": "+1 763-657-7331",
+    "url": "https://www.firehousesubs.com/store-locator/store/67f17dd0-3b17-492a-9a9c-68ef7afb11eb",
+    "geo": "45.093878,-93.427387",
+    "source": "All the Places 2026-10-31: firehouse_subs"
+   }
+  ]
+ },
+ "Freddy's Frozen Custard & Steakburgers": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (freddys_us): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "11600 Fountains Drive, Maple Grove, MN 55369",
+    "status": "confirmed",
+    "wed_hours": "10:30-21:45",
+    "phone": "+1 763-600-6713",
+    "url": "https://www.freddys.com/location/maple-grove-mn",
+    "geo": "45.092350,-93.426321",
+    "source": "All the Places 2026-10-31: freddys_us"
+   }
+  ]
+ },
+ "Golden Corral": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (golden_corral): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Granite City Food & Brewery": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Great Clips": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (great_clips): 12 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "11210 Wayzata Blvd, Minnetonka, MN 55305",
+    "status": "confirmed",
+    "wed_hours": "08:00-18:00",
+    "phone": "+1 952-546-1070",
+    "url": "https://salons.greatclips.com/us/mn/minnetonka/11210-wayzata-blvd",
+    "geo": "44.973581,-93.421854",
+    "source": "All the Places 2026-10-31: great_clips"
+   },
+   {
+    "address": "3916 Silver Lake Rd, Saint Anthony, MN 55421",
+    "status": "confirmed",
+    "wed_hours": "08:00-19:00",
+    "phone": "+1 612-788-4971",
+    "url": "https://salons.greatclips.com/us/mn/saint-anthony/3916-silver-lake-rd",
+    "geo": "45.039971,-93.219164",
+    "source": "All the Places 2026-10-31: great_clips"
+   },
+   {
+    "address": "4190 Vinewood Ln N, Plymouth, MN 55442",
+    "status": "confirmed",
+    "wed_hours": "08:30-19:30",
+    "phone": "+1 763-553-2001",
+    "url": "https://salons.greatclips.com/us/mn/plymouth/4190-vinewood-ln-n",
+    "geo": "45.031182,-93.446714",
+    "source": "All the Places 2026-10-31: great_clips"
+   },
+   {
+    "address": "13550 Grove Drive, Maple Grove, MN 55311",
+    "status": "confirmed",
+    "wed_hours": "09:00-20:00",
+    "phone": "+1 763-420-7800",
+    "url": "https://salons.greatclips.com/us/mn/maple-grove/13550-grove-drive",
+    "geo": "45.104695,-93.452552",
+    "source": "All the Places 2026-10-31: great_clips"
+   },
+   {
+    "address": "1447 N Highway 101, Plymouth, MN 55447",
+    "status": "confirmed",
+    "wed_hours": "10:00-19:00",
+    "phone": "+1 763-473-3075",
+    "url": "https://salons.greatclips.com/us/mn/plymouth/1447-n-highway-101",
+    "geo": "44.994561,-93.503355",
+    "source": "All the Places 2026-10-31: great_clips"
+   },
+   {
+    "address": "2401 Fairview Ave N, Roseville, MN 55113",
+    "status": "confirmed",
+    "wed_hours": "08:00-19:00",
+    "phone": "+1 651-639-0665",
+    "url": "https://salons.greatclips.com/us/mn/roseville/2401-fairview-ave-n",
+    "geo": "45.012936,-93.178782",
+    "source": "All the Places 2026-10-31: great_clips"
+   },
+   {
+    "address": "3673 Lexington Ave N, Arden Hills, MN 55126",
+    "status": "confirmed",
+    "wed_hours": "09:00-19:00",
+    "phone": "+1 651-482-8397",
+    "url": "https://salons.greatclips.com/us/mn/arden-hills/3673-lexington-ave-n",
+    "geo": "45.051730,-93.148431",
+    "source": "All the Places 2026-10-31: great_clips"
+   },
+   {
+    "address": "4402 Nathan Ln N, Plymouth, MN 55442",
+    "status": "confirmed",
+    "wed_hours": "08:30-19:30",
+    "phone": "+1 763-559-2161",
+    "url": "https://salons.greatclips.com/us/mn/plymouth/4402-nathan-ln-n",
+    "geo": "45.034860,-93.407989",
+    "source": "All the Places 2026-10-31: great_clips"
+   },
+   {
+    "address": "310 Clydesdale Trl, Medina, MN 55340",
+    "status": "confirmed",
+    "wed_hours": "09:00-19:00",
+    "phone": "+1 763-478-2988",
+    "url": "https://salons.greatclips.com/us/mn/medina/310-clydesdale-trl",
+    "geo": "45.045579,-93.530502",
+    "source": "All the Places 2026-10-31: great_clips"
+   },
+   {
+    "address": "11654 Fountains Dr N, Maple Grove, MN 55369",
+    "status": "confirmed",
+    "wed_hours": "10:00-19:00",
+    "phone": "+1 763-488-1511",
+    "url": "https://salons.greatclips.com/us/mn/maple-grove/11654-fountains-dr-n",
+    "geo": "45.093855,-93.426489",
+    "source": "All the Places 2026-10-31: great_clips"
+   },
+   {
+    "address": "15539 Grove Circle N, Maple Grove, MN 55369",
+    "status": "confirmed",
+    "wed_hours": "08:00-20:00",
+    "phone": "+1 763-494-6702",
+    "url": "https://salons.greatclips.com/us/mn/maple-grove/15539-grove-circle-n",
+    "geo": "45.134704,-93.477307",
+    "source": "All the Places 2026-10-31: great_clips"
+   },
+   {
+    "address": "1789 Lexington Ave N, Roseville, MN 55113",
+    "status": "confirmed",
+    "wed_hours": "08:00-19:00",
+    "phone": "+1 651-488-5918",
+    "url": "https://salons.greatclips.com/us/mn/roseville/1789-lexington-ave-n",
+    "geo": "44.995160,-93.146961",
+    "source": "All the Places 2026-10-31: great_clips"
+   }
+  ]
+ },
+ "Hooters": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (hooters): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Hy-Vee": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (hy_vee_us): 0 in the area; OpenStreetMap: 1 in the area",
+  "stores": [
+   {
+    "address": "8200 42nd Avenue North, New Hope, MN 55428",
+    "status": "unverified",
+    "wed_hours": "",
+    "phone": "",
+    "url": "",
+    "osm_id": "way/546164353",
+    "geo": "45.034936,-93.384025",
+    "source": "OpenStreetMap"
+   }
+  ]
+ },
+ "IHOP": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (ihop): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Insomnia Cookies": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (insomnia_cookies): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Jiffy Lube": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (jiffy_lube_us): 2 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "8082 BROOKLYN BLVD, MINNEAPOLIS, MN 55445",
+    "status": "confirmed",
+    "wed_hours": "08:00-18:00",
+    "phone": "+1 763-424-5899",
+    "url": "https://www.jiffylube.com/locations/mn/minneapolis/604",
+    "geo": "45.094809,-93.382289",
+    "source": "All the Places 2026-10-31: jiffy_lube_us"
+   },
+   {
+    "address": "1585 W. COUNTY RD. C, ROSEVILLE, MN 55113",
+    "status": "confirmed",
+    "wed_hours": "08:00-19:00",
+    "phone": "+1 651-636-3931",
+    "url": "https://www.jiffylube.com/locations/mn/roseville/1382",
+    "geo": "45.021429,-93.168497",
+    "source": "All the Places 2026-10-31: jiffy_lube_us"
+   }
+  ]
+ },
+ "Kohl's": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (kohls_us): 3 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "8080 WEDGEWOOD LN N, MAPLE GROVE, MN 55369",
+    "status": "confirmed",
+    "wed_hours": "09:00-22:00",
+    "phone": "+1 763-420-4919",
+    "url": "https://www.kohls.com/stores/mn/maplegrove-241.shtml",
+    "geo": "45.101314,-93.448331",
+    "source": "All the Places 2026-10-31: kohls_us"
+   },
+   {
+    "address": "4190 VINEWOOD LN N, PLYMOUTH, MN 55442",
+    "status": "confirmed",
+    "wed_hours": "09:00-21:00",
+    "phone": "+1 763-557-7400",
+    "url": "https://www.kohls.com/stores/mn/plymouth-1470.shtml",
+    "geo": "45.029955,-93.446547",
+    "source": "All the Places 2026-10-31: kohls_us"
+   },
+   {
+    "address": "1651 COUNTY RD B2 W, ROSEVILLE, MN 55113",
+    "status": "confirmed",
+    "wed_hours": "09:00-22:00",
+    "phone": "+1 651-636-8322",
+    "url": "https://www.kohls.com/stores/mn/roseville-54.shtml",
+    "geo": "45.015853,-93.169575",
+    "source": "All the Places 2026-10-31: kohls_us"
+   }
+  ]
+ },
+ "Krispy Kreme": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (krispy_kreme_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Kwik Trip": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (kwik_trip): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "1605 ANNAPOLIS LN N, PLYMOUTH, MN 55441",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 763-577-1983",
+    "url": "https://www.kwiktrip.com/locator/store?id=411",
+    "geo": "44.997220,-93.454730",
+    "source": "All the Places 2026-10-31: kwik_trip"
+   }
+  ]
+ },
+ "Little Caesars": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (little_caesars_us): 0 in the area (a partial list); OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Marcus Theatres": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Menchie's": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (menchies): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Mission BBQ": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Olive Garden": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "OpenStreetMap: 2 in the area",
+  "stores": [
+   {
+    "address": "1525 County Road C West, Saint Paul, MN 55113",
+    "status": "unverified",
+    "wed_hours": "",
+    "phone": "",
+    "url": "",
+    "osm_id": "way/172242078",
+    "geo": "45.021485,-93.165124",
+    "source": "OpenStreetMap"
+   },
+   {
+    "address": "12520 Elm Creek Boulevard, Maple Grove, MN 55369",
+    "status": "unverified",
+    "wed_hours": "",
+    "phone": "",
+    "url": "",
+    "osm_id": "way/761505344",
+    "geo": "45.094798,-93.439373",
+    "source": "OpenStreetMap"
+   }
+  ]
+ },
+ "Outback Steakhouse": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (outback_steakhouse): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Perkins": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (perkins_us): 5 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "11801 73rd Avenue North, Maple Grove, MN 55369",
+    "status": "confirmed",
+    "wed_hours": "00:00-23:45",
+    "phone": "633401201",
+    "url": "https://perkinsrestaurants.com/location/perkins-restaurant-bakery-corp-1116-803425",
+    "geo": "45.087085,-93.430044",
+    "source": "All the Places 2026-10-31: perkins_us"
+   },
+   {
+    "address": "1495 County B Road West, Roseville, MN 55113",
+    "status": "confirmed",
+    "wed_hours": "04:00-03:45",
+    "phone": "+1 651-633-8080",
+    "url": "https://perkinsrestaurants.com/location/perkins-restaurant-bakery-corp-1084-803395",
+    "geo": "45.006535,-93.162590",
+    "source": "All the Places 2026-10-31: perkins_us"
+   },
+   {
+    "address": "8585 Aspen Lane North, Brooklyn Park, MN 55445",
+    "status": "confirmed",
+    "wed_hours": "05:30-23:00",
+    "phone": "+1 763-493-4444",
+    "url": "https://perkinsrestaurants.com/location/perkins-restaurant-bakery-corp-1223-802984",
+    "geo": "45.110233,-93.394565",
+    "source": "All the Places 2026-10-31: perkins_us"
+   },
+   {
+    "address": "2945 Empire Lane North, Plymouth, MN 55447",
+    "status": "confirmed",
+    "wed_hours": "05:30-23:00",
+    "phone": "+1 763-559-0270",
+    "url": "https://perkinsrestaurants.com/location/perkins-restaurant-bakery-corp-1021-802141",
+    "geo": "45.012028,-93.458808",
+    "source": "All the Places 2026-10-31: perkins_us"
+   },
+   {
+    "address": "696 County Road D West, New Brighton, MN 55112",
+    "status": "confirmed",
+    "wed_hours": "05:30-23:00",
+    "phone": "+1 651-631-2026",
+    "url": "https://perkinsrestaurants.com/location/perkins-restaurant-bakery-corp-1018-801557",
+    "geo": "45.036075,-93.195822",
+    "source": "All the Places 2026-10-31: perkins_us"
+   }
+  ]
+ },
+ "Pilot / Flying J": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-10 (pilot_flying_j): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Pizza Ranch": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (pizza_ranch_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Qdoba": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (qdoba): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "4345 Nathan Ln, Plymouth, MN 55442",
+    "status": "confirmed",
+    "wed_hours": "10:30-23:00",
+    "phone": "",
+    "url": "https://locations.qdoba.com/us/mn/plymouth/4345-nathan-ln",
+    "geo": "45.033699,-93.410252",
+    "source": "All the Places 2026-10-31: qdoba"
+   }
+  ]
+ },
+ "Red Lobster": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-17 (red_lobster_us): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "2330 Prior Avenue, Roseville, MN 55113",
+    "status": "confirmed",
+    "wed_hours": "11:00-22:00",
+    "phone": "+1 651-636-9800",
+    "url": "https://www.redlobster.com/locations/list/mn/roseville/2330-prior-avenue/",
+    "geo": "45.011016,-93.181540",
+    "source": "All the Places 2026-10-17: red_lobster_us"
+   }
+  ]
+ },
+ "Red Robin": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-17 (red_robin): 2 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "1090 Gramsie Rd, Shoreview, MN 55126",
+    "status": "confirmed",
+    "wed_hours": "11:00-22:00",
+    "phone": "+1 651-766-8417",
+    "url": "https://www.redrobin.com/location/red-robin-shoreview",
+    "geo": "45.060693,-93.146010",
+    "source": "All the Places 2026-10-17: red_robin"
+   },
+   {
+    "address": "2669 Campus Dr, Plymouth, MN 55441",
+    "status": "confirmed",
+    "wed_hours": "11:00-22:00",
+    "phone": "+1 763-559-7576",
+    "url": "https://www.redrobin.com/location/red-robin-plymouth",
+    "geo": "45.008629,-93.449611",
+    "source": "All the Places 2026-10-17: red_robin"
+   }
+  ]
+ },
+ "Ruby Tuesday": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (ruby_tuesday_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Scooter's Coffee": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (scooters_coffee_us): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "8401 84th Ave N, Brooklyn Park, MN 55445",
+    "status": "confirmed",
+    "wed_hours": "05:00-20:00",
+    "phone": "+1 763-270-0710",
+    "url": "",
+    "geo": "45.108371,-93.387186",
+    "source": "All the Places 2026-10-31: scooters_coffee_us"
+   }
+  ]
+ },
+ "Shake Shack": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-17 (shake_shack): 3 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "1807 Plymouth Rd, Minnetonka, MN 55305",
+    "status": "confirmed",
+    "wed_hours": "10:00-22:00",
+    "phone": "+1 612-464-0403",
+    "url": "https://shakeshack.com/location/minnetonka-mn",
+    "geo": "44.966780,-93.441719",
+    "source": "All the Places 2026-10-17: shake_shack"
+   },
+   {
+    "address": "1630 County Road B2 W, Roseville, MN 55113",
+    "status": "confirmed",
+    "wed_hours": "10:00-22:00",
+    "phone": "+1 747-271-2744",
+    "url": "https://shakeshack.com/location/rosedale-center-mn",
+    "geo": "45.014414,-93.168920",
+    "source": "All the Places 2026-10-17: shake_shack"
+   },
+   {
+    "address": "12351 Elm Creek Boulevard N., Maple Grove, MN 55369",
+    "status": "confirmed",
+    "wed_hours": "10:00-21:00",
+    "phone": "+1 763-319-8570",
+    "url": "https://shakeshack.com/location/maple-grove-mn",
+    "geo": "45.093663,-93.437943",
+    "source": "All the Places 2026-10-17: shake_shack"
+   }
+  ]
+ },
+ "Smashburger": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (smashburger): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "3225 Vicksburger Lane North Bldg. B, Plymouth, MN 55447",
+    "status": "confirmed",
+    "wed_hours": "10:30-22:00",
+    "phone": "+1 763-252-1496",
+    "url": "https://smashburger.com/locations/us/mn/plymouth/3225-vicksburger-lane-north-bldg-b",
+    "geo": "45.018271,-93.483325",
+    "source": "All the Places 2026-10-31: smashburger"
+   }
+  ]
+ },
+ "Sonic": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (sonic_drivein_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Sport Clips": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (sport_clips_us): 6 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "1157 Wayzata Blvd e, Wayzata, MN 55391",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "+1 952-300-8466",
+    "url": "https://sportclips.com/us-mn-wayzata-mn127",
+    "geo": "44.970730,-93.481430",
+    "source": "All the Places 2026-10-31: sport_clips_us"
+   },
+   {
+    "address": "1021 Red Fox Rd, Shoreview, MN 55126",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "+1 651-348-7898",
+    "url": "https://sportclips.com/us-mn-shoreview-mn120",
+    "geo": "45.058070,-93.143250",
+    "source": "All the Places 2026-10-31: sport_clips_us"
+   },
+   {
+    "address": "3570 Vicksburg Lane North, Plymouth, MN 55447",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "+1 763-551-7996",
+    "url": "https://sportclips.com/us-mn-plymouth-mn108",
+    "geo": "45.021550,-93.481340",
+    "source": "All the Places 2026-10-31: sport_clips_us"
+   },
+   {
+    "address": "1730 New Brighton Blvd., Minneapolis, MN 55413",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "+1 612-788-6330",
+    "url": "https://sportclips.com/us-mn-minneapolis-mn111",
+    "geo": "45.005670,-93.227840",
+    "source": "All the Places 2026-10-31: sport_clips_us"
+   },
+   {
+    "address": "16381 County Road 30, Maple Grove, MN 55311",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "+1 763-762-8962",
+    "url": "https://sportclips.com/us-mn-maplegrove-mn131",
+    "geo": "45.125300,-93.488310",
+    "source": "All the Places 2026-10-31: sport_clips_us"
+   },
+   {
+    "address": "4105 Vinewood Lane North, Plymouth, MN 55442",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "+1 763-270-0972",
+    "url": "https://sportclips.com/us-mn-plymouth-mn142",
+    "geo": "45.030070,-93.449970",
+    "source": "All the Places 2026-10-31: sport_clips_us"
+   }
+  ]
+ },
+ "Starbucks": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (starbucks_us): 12 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "1330 Wayzata Blvd, B, Wayzata, MN 55391",
+    "status": "confirmed",
+    "wed_hours": "05:00-20:00",
+    "phone": "+1 612-503-6752",
+    "url": "",
+    "geo": "44.970830,-93.495780",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "11129 Highway 55, Plymouth, MN 55441",
+    "status": "confirmed",
+    "wed_hours": "05:00-20:00",
+    "phone": "+1 612-716-2225",
+    "url": "",
+    "geo": "44.987680,-93.421140",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "15850 32nd Ave N, Plymouth, MN 55447",
+    "status": "confirmed",
+    "wed_hours": "05:00-20:00",
+    "phone": "+1 763-559-0439",
+    "url": "",
+    "geo": "45.017450,-93.481320",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "4090 Annapolis Lane, Plymouth, MN 55447",
+    "status": "confirmed",
+    "wed_hours": "04:30-20:00",
+    "phone": "+1 612-965-4879",
+    "url": "",
+    "geo": "45.028740,-93.456860",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "1820 Hwy 36, Hwy 36 & Fairview, Roseville, MN 55113",
+    "status": "confirmed",
+    "wed_hours": "05:00-21:00",
+    "phone": "+1 651-631-3089",
+    "url": "",
+    "geo": "45.007630,-93.176360",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "2305 Fairview Avenue, Roseville, MN 55113",
+    "status": "confirmed",
+    "wed_hours": "05:00-22:00",
+    "phone": "+1 651-697-0215",
+    "url": "",
+    "geo": "45.011110,-93.177610",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "900 Rosedale CTR, Roseville, MN 55113",
+    "status": "confirmed",
+    "wed_hours": "10:00-20:00",
+    "phone": "+1 651-639-6600",
+    "url": "",
+    "geo": "45.012390,-93.174090",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "3704 Silver Lake Rd NE, St. Anthony, MN 55421",
+    "status": "confirmed",
+    "wed_hours": "05:00-20:30",
+    "phone": "+1 612-788-1928",
+    "url": "",
+    "geo": "45.037250,-93.219050",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "3833 Lexington Ave N, Arden Hills, MN 55126",
+    "status": "confirmed",
+    "wed_hours": "05:00-20:30",
+    "phone": "+1 651-486-3805",
+    "url": "",
+    "geo": "45.057090,-93.147870",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "9404 Dunkirk Lane, Maple Grove, MN 55311",
+    "status": "confirmed",
+    "wed_hours": "05:00-16:00",
+    "phone": "+1 763-416-1877",
+    "url": "",
+    "geo": "45.125300,-93.491090",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "7979 Wedgewood Lane, Maple Grove, MN 55369",
+    "status": "confirmed",
+    "wed_hours": "05:00-20:00",
+    "phone": "+1 763-420-6311",
+    "url": "",
+    "geo": "45.099600,-93.450160",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "11850 Elm Creek Boulevard N, Maple Grove, MN 55369",
+    "status": "confirmed",
+    "wed_hours": "04:30-21:30",
+    "phone": "+1 763-465-0012",
+    "url": "",
+    "geo": "45.095730,-93.431160",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   }
+  ]
+ },
+ "Target": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (target_us): 8 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "3800 Lexington Ave N, Shoreview, MN 55126",
+    "status": "confirmed",
+    "wed_hours": "07:00-22:00",
+    "phone": "+1 651-486-0048",
+    "url": "https://www.target.com/sl/store/619",
+    "geo": "45.056743,-93.144848",
+    "source": "All the Places 2026-10-31: target_us"
+   },
+   {
+    "address": "300 Clydesdale Trl, Medina, MN 55340",
+    "status": "confirmed",
+    "wed_hours": "07:00-22:00",
+    "phone": "+1 763-852-0006",
+    "url": "https://www.target.com/sl/store/2223",
+    "geo": "45.045408,-93.529583",
+    "source": "All the Places 2026-10-31: target_us"
+   },
+   {
+    "address": "15300 Grove Circle N, Maple Grove, MN 55369",
+    "status": "confirmed",
+    "wed_hours": "07:00-22:00",
+    "phone": "+1 763-447-2506",
+    "url": "https://www.target.com/sl/store/2193",
+    "geo": "45.136208,-93.474429",
+    "source": "All the Places 2026-10-31: target_us"
+   },
+   {
+    "address": "1515 County Road B W, Roseville, MN 55113",
+    "status": "confirmed",
+    "wed_hours": "07:00-22:00",
+    "phone": "+1 651-631-0330",
+    "url": "https://www.target.com/sl/store/2101",
+    "geo": "45.007660,-93.163700",
+    "source": "All the Places 2026-10-31: target_us"
+   },
+   {
+    "address": "1650 New Brighton Blvd, Minneapolis, MN 55413",
+    "status": "confirmed",
+    "wed_hours": "07:00-22:00",
+    "phone": "+1 612-781-7033",
+    "url": "https://www.target.com/sl/store/1095",
+    "geo": "45.004814,-93.229932",
+    "source": "All the Places 2026-10-31: target_us"
+   },
+   {
+    "address": "7535 W Broadway Ave, Brooklyn Park, MN 55428",
+    "status": "confirmed",
+    "wed_hours": "08:00-22:00",
+    "phone": "+1 763-425-5400",
+    "url": "https://www.target.com/sl/store/693",
+    "geo": "45.091081,-93.377936",
+    "source": "All the Places 2026-10-31: target_us"
+   },
+   {
+    "address": "4175 Vinewood Ln N, Plymouth, MN 55442",
+    "status": "confirmed",
+    "wed_hours": "07:00-22:00",
+    "phone": "+1 763-553-0302",
+    "url": "https://www.target.com/sl/store/664",
+    "geo": "45.031424,-93.450801",
+    "source": "All the Places 2026-10-31: target_us"
+   },
+   {
+    "address": "13201 Ridgedale Dr, Minnetonka, MN 55305",
+    "status": "confirmed",
+    "wed_hours": "07:00-22:00",
+    "phone": "+1 952-542-8250",
+    "url": "https://www.target.com/sl/store/100",
+    "geo": "44.970157,-93.447411",
+    "source": "All the Places 2026-10-31: target_us"
+   }
+  ]
+ },
+ "Texas Roadhouse": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (texas_roadhouse): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Tommy's Express Car Wash": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Twin Peaks": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (twin_peaks): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Village Inn": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (village_inn_us): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "11909 Main St., Maple Grove, MN 55369",
+    "status": "confirmed",
+    "wed_hours": "09:30-12:00",
+    "phone": "+1 763-416-0010",
+    "url": "https://www.villageinn.com/Locations/Detail/30bc9d8a-2be8-4e31-b211-2db8e2405933",
+    "geo": "45.093641,-93.441869",
+    "source": "All the Places 2026-10-31: village_inn_us"
+   }
+  ]
+ },
+ "Walgreens": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (walgreens): 11 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "3700 SILVER LAKE RD NE, Saint Anthony, MN 55421",
+    "status": "confirmed",
+    "wed_hours": "07:00-21:00",
+    "phone": "+1 612-706-1988",
+    "url": "https://www.walgreens.com/locator/walgreens-3700+silver+lake+rd+ne-saint+anthony-mn-55421/id=6735",
+    "geo": "45.036144,-93.219342",
+    "source": "All the Places 2026-10-31: walgreens"
+   },
+   {
+    "address": "3255 VICKSBURG LN N, Plymouth, MN 55447",
+    "status": "confirmed",
+    "wed_hours": "07:00-22:00",
+    "phone": "+1 763-253-8917",
+    "url": "https://www.walgreens.com/locator/walgreens-3255+vicksburg+ln+n-plymouth-mn-55447/id=1002",
+    "geo": "45.017321,-93.482657",
+    "source": "All the Places 2026-10-31: walgreens"
+   },
+   {
+    "address": "1110 LARPENTEUR AVE W, Saint Paul, MN 55113",
+    "status": "confirmed",
+    "wed_hours": "07:00-22:00",
+    "phone": "+1 651-488-5516",
+    "url": "https://www.walgreens.com/locator/walgreens-1110+larpenteur+ave+w-saint+paul-mn-55113/id=15272",
+    "geo": "44.991799,-93.146879",
+    "source": "All the Places 2026-10-31: walgreens"
+   },
+   {
+    "address": "2635 RICE ST, Roseville, MN 55113",
+    "status": "confirmed",
+    "wed_hours": "07:00-22:00",
+    "phone": "+1 651-483-3976",
+    "url": "https://www.walgreens.com/locator/walgreens-2635+rice+st-roseville-mn-55113/id=13685",
+    "geo": "45.020090,-93.106518",
+    "source": "All the Places 2026-10-31: walgreens"
+   },
+   {
+    "address": "6025 SHENANDOAH LN N, Plymouth, MN 55446",
+    "status": "confirmed",
+    "wed_hours": "08:00-22:00",
+    "phone": "+1 763-252-1300",
+    "url": "https://www.walgreens.com/locator/walgreens-6025+shenandoah+ln+n-plymouth-mn-55446/id=12510",
+    "geo": "45.064686,-93.479852",
+    "source": "All the Places 2026-10-31: walgreens"
+   },
+   {
+    "address": "2500 WINNETKA AVE N, Golden Valley, MN 55427",
+    "status": "confirmed",
+    "wed_hours": "08:00-21:00",
+    "phone": "+1 763-544-1747",
+    "url": "https://www.walgreens.com/locator/walgreens-2500+winnetka+ave+n-golden+valley-mn-55427/id=13841",
+    "geo": "45.006452,-93.379880",
+    "source": "All the Places 2026-10-31: walgreens"
+   },
+   {
+    "address": "1700 RICE ST, Saint Paul, MN 55113",
+    "status": "confirmed",
+    "wed_hours": "08:00-22:00",
+    "phone": "+1 651-251-9811",
+    "url": "https://www.walgreens.com/locator/walgreens-1700+rice+st-saint+paul-mn-55113/id=10473",
+    "geo": "44.992233,-93.104231",
+    "source": "All the Places 2026-10-31: walgreens"
+   },
+   {
+    "address": "1055 WAYZATA BLVD E, Wayzata, MN 55391",
+    "status": "confirmed",
+    "wed_hours": "07:00-23:00",
+    "phone": "+1 952-473-8831",
+    "url": "https://www.walgreens.com/locator/walgreens-1055+wayzata+blvd+e-wayzata-mn-55391/id=15679",
+    "geo": "44.970818,-93.502648",
+    "source": "All the Places 2026-10-31: walgreens"
+   },
+   {
+    "address": "13611 GROVE DR, Maple Grove, MN 55311",
+    "status": "confirmed",
+    "wed_hours": "08:00-21:00",
+    "phone": "+1 763-420-7788",
+    "url": "https://www.walgreens.com/locator/walgreens-13611+grove+dr-maple+grove-mn-55311/id=1916",
+    "geo": "45.102422,-93.453429",
+    "source": "All the Places 2026-10-31: walgreens"
+   },
+   {
+    "address": "4200 WINNETKA AVE N, New Hope, MN 55428",
+    "status": "confirmed",
+    "wed_hours": "07:00-21:00",
+    "phone": "+1 763-545-6466",
+    "url": "https://www.walgreens.com/locator/walgreens-4200+winnetka+ave+n-new+hope-mn-55428/id=5882",
+    "geo": "45.033171,-93.379765",
+    "source": "All the Places 2026-10-31: walgreens"
+   },
+   {
+    "address": "2700 LINCOLN DR, Roseville, MN 55113",
+    "status": "confirmed",
+    "wed_hours": "07:00-22:00",
+    "phone": "+1 651-636-9369",
+    "url": "https://www.walgreens.com/locator/walgreens-2700+lincoln+dr-roseville-mn-55113/id=15560",
+    "geo": "45.022180,-93.167921",
+    "source": "All the Places 2026-10-31: walgreens"
+   }
+  ]
+ },
+ "Wendy's": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (wendys): 0 in the area (a partial list); OpenStreetMap: 8 in the area",
+  "stores": [
+   {
+    "address": "7445 West Broadway Avenue, Brooklyn Park, MN 55428",
+    "status": "unverified",
+    "wed_hours": "",
+    "phone": "+1 763-324-8313",
+    "url": "https://locations.wendys.com/united-states/mn/brooklyn-park/7445-71st-ave-n",
+    "osm_id": "node/4075446031",
+    "geo": "45.083231,-93.376074",
+    "source": "OpenStreetMap"
+   },
+   {
+    "address": "12950 Wayzata Boulevard, Minnetonka, MN 55305",
+    "status": "unverified",
+    "wed_hours": "10:00-01:00",
+    "phone": "+1 952-922-7007",
+    "url": "https://locations.wendys.com/united-states/mn/minnetonka/12950-wayzata-blvd",
+    "osm_id": "node/6329778692",
+    "geo": "44.972334,-93.443276",
+    "source": "OpenStreetMap"
+   },
+   {
+    "address": "1899 West Perimeter Drive, Roseville, MN 55113",
+    "status": "unverified",
+    "wed_hours": "",
+    "phone": "+1 651-478-6460",
+    "url": "https://locations.wendys.com/united-states/mn/roseville/1899-w-perimeter-dr",
+    "osm_id": "way/38452432",
+    "geo": "45.012246,-93.180094",
+    "source": "OpenStreetMap"
+   },
+   {
+    "address": "1251 Industrial Boulevard, Minneapolis, MN 55413",
+    "status": "unverified",
+    "wed_hours": "",
+    "phone": "+1 612-230-9917",
+    "url": "https://locations.wendys.com/united-states/mn/minneapolis/1251-industrial-boulevard",
+    "osm_id": "way/118402655",
+    "geo": "45.001615,-93.211254",
+    "source": "OpenStreetMap"
+   },
+   {
+    "address": "1051 Red Fox Road, Shoreview, MN 55126",
+    "status": "unverified",
+    "wed_hours": "",
+    "phone": "+1 651-478-6337",
+    "url": "https://locations.wendys.com/united-states/mn/shoreview/1051-red-fox-road",
+    "osm_id": "way/165915387",
+    "geo": "45.057778,-93.145366",
+    "source": "OpenStreetMap"
+   },
+   {
+    "address": "9850 Rockford Road, Plymouth, MN 55442",
+    "status": "unverified",
+    "wed_hours": "",
+    "phone": "+1 763-324-8265",
+    "url": "https://locations.wendys.com/united-states/mn/plymouth/9850-rockford-road",
+    "osm_id": "way/603472211",
+    "geo": "45.033924,-93.405321",
+    "source": "OpenStreetMap"
+   },
+   {
+    "address": "13645 83rd Way North, Maple Grove, MN 55369",
+    "status": "unverified",
+    "wed_hours": "",
+    "phone": "+1 763-420-6255",
+    "url": "https://locations.wendys.com/united-states/mn/maple-grove/13645-83rd-way-n",
+    "osm_id": "way/606943887",
+    "geo": "45.105499,-93.453376",
+    "source": "OpenStreetMap"
+   },
+   {
+    "address": "14370 28th Place North, Plymouth, MN 55447",
+    "status": "unverified",
+    "wed_hours": "",
+    "phone": "+1 763-324-8272",
+    "url": "https://locations.wendys.com/united-states/mn/plymouth/14370-28th-place-n",
+    "osm_id": "way/1014199903",
+    "geo": "45.011668,-93.462095",
+    "source": "OpenStreetMap"
+   }
+  ]
+ }
+}
