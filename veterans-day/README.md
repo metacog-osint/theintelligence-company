@@ -117,7 +117,7 @@ local ones and the live page showed no console errors at phone size.
   in light and dark with folds open and closed (the What I'm after chips' spoken names now start with their visible
   words, and the hidden "Opens in a new tab" note sits in the footer landmark).
 
-## Areas (app v1.2, engine v1.3; built 10 Nov 2026, not yet committed or deployed)
+## Areas (app v1.2, engine v1.3; live since about 9:40 AM CST 10 Nov 2026 from `62c984c`, approved; not pushed)
 9 Nov 2026: "I have friends in New Salem, ND who would like to see this optimized for their location, too. Also
 have friends in the Rosedale, Plymouth, and Maple Grove areas of the Twin Cities ... a dropdown box in an upper corner
 ... I want the program to maintain initial focus and landing on Fargo-Moorhead."

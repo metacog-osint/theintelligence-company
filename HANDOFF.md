@@ -1,16 +1,16 @@
-# Hub handoff: where things stand (10 Nov 2026 morning: Veterans Day areas built, awaiting approved; 9 Nov: route line, map fit, Marcus, phone layout live)
+# Hub handoff: where things stand (10 Nov 2026, 9:40 AM CST: Veterans Day areas live from 62c984c, not pushed; 9 Nov: route line, map fit, Marcus, phone layout live)
 
 Read with `CLAUDE.md` (the project's notes). Times are Central (CST since 1 Nov). Each commit, push and deploy needs
 Tom's yes.
 
 ## Veterans Day planner: areas, 10 Nov 2026 morning (the publisher, 9 Nov: New Salem friends; Rosedale, Plymouth, Maple Grove friends; "maintain initial focus and landing on Fargo-Moorhead")
-**Built in the main checkout, not committed or deployed.** An Area select in the top bar (Fargo-Moorhead default;
+**Live** since about 9:40 AM CST from `62c984c` ("Commit and deploy"; not pushed). The first deploy attempt failed on an expired Firebase sign-in; the publisher ran `firebase login --reauth`. Checked live: every planner file matches the commit (ignoring CRLF), Bismarck-Mandan and the Twin Cities load with their own forecast and centre, the Twin Cities map draws the route by road, a fresh phone visitor lands on Fargo-Moorhead, no console errors. An Area select in the top bar (Fargo-Moorhead default;
 Bismarck-Mandan & New Salem; Twin Cities: Plymouth, Maple Grove, Roseville), saved per phone, `?area=` links. Bismarck-
 Mandan and New Salem: 33 deals at 49 stops; Twin Cities area: 34 deals at 181 stops; Fargo-Moorhead's data unchanged (checked against the
 previous build). New `build/stores_region.py`; REGIONS, `fm=`/`only=`/`elsewhere=`/`arrive_by` in CURATE; engine v1.3
 (`arriveBy`); app v1.2. Research by two helper agents in `research/bismarck-mandan/` and `research/twin-cities/` (each
 with `notes.md`). Details, corrections to the publisher's New Salem report, gaps and checks: `veterans-day/README.md` ("Areas").
-To ship: approved, then commit, `firebase deploy --only hosting:hub --project context-484804`, push. The Worker needs
+Still to do: push (approved; GitHub's site-checks then run). Links for friends: `?area=bismarck-mandan` and `?area=twin-cities`. The Worker needs
 no change (it takes any place id).
 
 ## Veterans Day planner: route line on the Map, 9 Nov 2026, about 12:30 PM CST ("I would like to see an actual route line depicted on the map", then "Build it as written")
