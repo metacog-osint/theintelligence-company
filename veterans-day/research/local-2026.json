@@ -1444,6 +1444,12 @@
     "accessed": "2026-11-08"
    },
    {
+    "url": null,
+    "publisher": "Cash Wise store sign (Red, White & Thank You dinner: Wednesday, Nov 11th, 11AM-7PM)",
+    "published": "photo seen 10 Nov 2026 (shared with the planner, 10 Nov 2026)",
+    "accessed": "2026-11-10"
+   },
+   {
     "url": "https://www.openstreetmap.org/",
     "publisher": "OpenStreetMap (store and hours)",
     "published": "seen 8 Nov 2026",
@@ -1801,5 +1807,36 @@
    }
   ],
   "notes": "Valley News Live (9 Nov 2026). It doesn't say whether visitors are welcome at the flag ceremony and the art crawl, or give the address; the church's address is from directories."
+ },
+ {
+  "name": "Fargo Elks #260 Veterans Day chili feed",
+  "kind": "event",
+  "address": "3435 Broadway N, Fargo, ND 58102",
+  "phone": "(701) 293-5151",
+  "wednesday_hours": "unknown",
+  "status_2026": "offering",
+  "offer": "Veterans Day chili feed, free to all veterans, from 3 PM",
+  "est_value_usd": 8,
+  "dates": "2026-11-11",
+  "hours_local": "15:00-18:00",
+  "mode": "dine_in",
+  "eligible": [
+   "veteran"
+  ],
+  "eligibility_quote": "Free to all veterans",
+  "guard_reserve": "unclear",
+  "spouse_or_guest": "unclear",
+  "proof": [],
+  "limits": "",
+  "grade": "A",
+  "sources": [
+   {
+    "url": null,
+    "publisher": "Fargo Elks #260 (its flyer: Wednesday, November 11th, 3 PM)",
+    "published": "seen 10 Nov 2026 (shared with the planner, 10 Nov 2026)",
+    "accessed": "2026-11-10"
+   }
+  ],
+  "notes": "The lodge's own flyer: a chili feed free to all veterans, Wednesday, November 11th (a Wednesday in 2026), at 3 PM. No end time given, so the planner allows three hours. Call (701) 293-5151."
  }
 ]

@@ -1,6 +1,6 @@
 {
  "meta": {
-  "built_at": "2026-11-10T18:13:10Z",
+  "built_at": "2026-11-10T18:33:21Z",
   "day": "2026-11-11",
   "day_start": "2026-11-11T06:00:00Z",
   "tz": "America/Chicago",
@@ -1294,6 +1294,62 @@
    ],
    "notes": "Only two third-party roundups (Military Wallet, Veteran.com); not found on Kwik Trip's own newsroom. Verify at store; flag as lower confidence.",
    "caution": "Fargo stores are called Kwik Star",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal",
+    "coffee"
+   ]
+  },
+  {
+   "id": "mcdonalds",
+   "brand": "McDonald's",
+   "status": "offering",
+   "category": "quick",
+   "offer": "Reported for 2026: a free Breakfast Extra Value Meal for veterans with a valid ID",
+   "value": 8,
+   "grade": "C",
+   "start": "2026-11-11T11:00:00Z",
+   "end": "2026-11-11T16:30:00Z",
+   "window_text": "05:00–10:30 CST",
+   "mode": "dine_in_or_to_go",
+   "minutes": 10,
+   "busy": 10,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": true,
+   "eligible": [
+    "veteran"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "no",
+   "kids": null,
+   "proof": [
+    "military_id",
+    "va_card",
+    "dd214",
+    "dl_veteran"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "With a valid ID. Breakfast hours only.",
+   "sources": [
+    {
+     "url": null,
+     "publisher": "McDonald's store sign (First Responders Day 28 Oct and Veterans Day 11 Nov 2026); which store isn't known",
+     "published": "photo seen 10 Nov 2026 (shared with the planner, 10 Nov 2026)"
+    },
+    {
+     "url": null,
+     "publisher": "Waterloo-Cedar Falls, Iowa, Veterans Day 2026 list (McDonald's: free breakfast combo, to 10:30 AM, all locations there)",
+     "published": "seen 10 Nov 2026 (shared with the planner, 10 Nov 2026)"
+    }
+   ],
+   "notes": "A photo of one McDonald's sign offers veterans a free Breakfast Extra Value Meal on 11 Nov 2026 with a valid ID; it doesn't show which store. McDonald's owners set their own offers, so it may not run at every store: ask at yours. Nothing from McDonald's itself.",
+   "caution": "A sign at one McDonald's; each owner chooses: ask first",
    "group": null,
    "ticket": false,
    "purchase": false,
@@ -3205,6 +3261,11 @@
      "published": "undated; live 8 Nov 2026, says Wednesday, November 11 (a Tuesday in 2025)"
     },
     {
+     "url": null,
+     "publisher": "Cash Wise store sign (Red, White & Thank You dinner: Wednesday, Nov 11th, 11AM-7PM)",
+     "published": "photo seen 10 Nov 2026 (shared with the planner, 10 Nov 2026)"
+    },
+    {
      "url": "https://www.openstreetmap.org/",
      "publisher": "OpenStreetMap (store and hours)",
      "published": "seen 8 Nov 2026"
@@ -3376,6 +3437,51 @@
    "purchase": false,
    "kinds": [
     "flag"
+   ]
+  },
+  {
+   "id": "fargo-elks-chili",
+   "brand": "Fargo Elks #260 Veterans Day chili feed",
+   "status": "offering",
+   "category": "event",
+   "offer": "Veterans Day chili feed, free to all veterans, from 3 PM",
+   "value": 8,
+   "grade": "A",
+   "start": "2026-11-11T21:00:00Z",
+   "end": "2026-11-12T00:00:00Z",
+   "window_text": "15:00–18:00 CST",
+   "mode": "dine_in",
+   "minutes": 40,
+   "busy": 10,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": null,
+     "publisher": "Fargo Elks #260 (its flyer: Wednesday, November 11th, 3 PM)",
+     "published": "seen 10 Nov 2026 (shared with the planner, 10 Nov 2026)"
+    }
+   ],
+   "notes": "The lodge's own flyer: a chili feed free to all veterans, Wednesday, November 11th (a Wednesday in 2026), at 3 PM. No end time given, so the planner allows three hours. Call (701) 293-5151.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal"
    ]
   },
   {
@@ -4619,6 +4725,132 @@
    "hoursAssumed": true,
    "verified": "unverified",
    "pin": "geo"
+  },
+  {
+   "id": "mcdonalds-3220-39th-street-south",
+   "offer": "mcdonalds",
+   "name": "",
+   "address": "3220 39th Street South, Fargo",
+   "lat": 46.831703,
+   "lng": -96.844665,
+   "phone": "+1 701-281-0481",
+   "open": "2026-11-11T11:00:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "osm"
+  },
+  {
+   "id": "mcdonalds-1220-19th-avenue-north",
+   "offer": "mcdonalds",
+   "name": "",
+   "address": "1220 19th Avenue North, Fargo",
+   "lat": 46.904298,
+   "lng": -96.797282,
+   "phone": "+1 701-232-8480",
+   "open": "2026-11-11T11:00:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "osm"
+  },
+  {
+   "id": "mcdonalds-3009-highway-10-east",
+   "offer": "mcdonalds",
+   "name": "",
+   "address": "3009 Highway 10 East, Moorhead",
+   "lat": 46.875736,
+   "lng": -96.730608,
+   "phone": "+1 218-236-7070",
+   "open": "2026-11-11T11:00:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "osm"
+  },
+  {
+   "id": "mcdonalds-2424-south-university-drive",
+   "offer": "mcdonalds",
+   "name": "",
+   "address": "2424 South University Drive, Fargo",
+   "lat": 46.843035,
+   "lng": -96.797881,
+   "phone": "+1 701-232-8636",
+   "open": "2026-11-11T11:00:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "osm"
+  },
+  {
+   "id": "mcdonalds-4501-19th-avenue-southwest",
+   "offer": "mcdonalds",
+   "name": "",
+   "address": "4501 19th Avenue Southwest, Fargo",
+   "lat": 46.85156,
+   "lng": -96.86273,
+   "phone": "+1 701-281-2348",
+   "open": "2026-11-11T11:00:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "osm"
+  },
+  {
+   "id": "mcdonalds-1001-38th-street-south",
+   "offer": "mcdonalds",
+   "name": "",
+   "address": "1001 38th Street South, Fargo",
+   "lat": 46.865442,
+   "lng": -96.845135,
+   "phone": "+1 701-282-5796",
+   "open": "2026-11-11T11:00:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "osm"
+  },
+  {
+   "id": "mcdonalds-501-main-avenue-east",
+   "offer": "mcdonalds",
+   "name": "",
+   "address": "501 Main Avenue East, West Fargo",
+   "lat": 46.876168,
+   "lng": -96.890238,
+   "phone": "+1 701-281-9092",
+   "open": "2026-11-11T11:00:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "osm"
+  },
+  {
+   "id": "mcdonalds-5640-23rd-avenue-south",
+   "offer": "mcdonalds",
+   "name": "",
+   "address": "5640 23rd Avenue South, Fargo",
+   "lat": 46.84243,
+   "lng": -96.882542,
+   "phone": "+1 701-364-9667",
+   "open": "2026-11-11T11:00:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "osm"
+  },
+  {
+   "id": "mcdonalds-220-8th-street-south",
+   "offer": "mcdonalds",
+   "name": "",
+   "address": "220 8th Street South, Moorhead",
+   "lat": 46.872076,
+   "lng": -96.767351,
+   "phone": "+1 218-236-5011",
+   "open": "2026-11-11T11:00:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "osm"
   },
   {
    "id": "pilot-3150-39th-st-sw",
@@ -6266,6 +6498,20 @@
    "lat": 46.857358,
    "lng": -96.862097,
    "phone": "",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "census"
+  },
+  {
+   "id": "fargo-elks-chili-3435-broadway-n",
+   "offer": "fargo-elks-chili",
+   "name": "",
+   "address": "3435 Broadway N, Fargo, ND 58102",
+   "lat": 46.919747,
+   "lng": -96.787117,
+   "phone": "(701) 293-5151",
    "open": "2026-11-11T16:00:00Z",
    "close": "2026-11-12T02:00:00Z",
    "hoursAssumed": true,

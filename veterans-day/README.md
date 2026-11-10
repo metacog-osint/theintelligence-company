@@ -358,6 +358,24 @@ call the theatre about the ticket question and read Wednesday's first and last s
   word from DQ, so it stays a lead.
 - No tips were checked (`tips` table): that needs wrangler and the account owner's sign-in.
 
+**Files received, 10 Nov 2026 afternoon** (a Word file of five images from a North Dakota Guard colleague, a typed list
+and a flyer). Added: the **Fargo Elks #260 chili feed**, free to all veterans from 3 PM, 3435 Broadway N (A: the
+lodge's own flyer; no end time, three hours allowed); **McDonald's** free Breakfast Extra Value Meal for veterans with
+ID (C: a photo of one store's sign, store unknown; owners choose; breakfast hours 5:00-10:30; nine Fargo-Moorhead
+stores from OpenStreetMap, Fargo-Moorhead only). The build now skips an OpenStreetMap address that is only a house
+number (a McDonald's "5160"). Cash Wise's store sign matches its page (11 AM-7 PM, guest half price). Not added:
+- The typed list is **Waterloo-Cedar Falls, Iowa** ("CF", "W'loo", Love's Travel Stop, Icon Donuts, Pepper's), so
+  its store-specific offers (Chick-fil-A, Taco John's, Culver's, Panera, Dairy Queen, a Wendy's breakfast combo at a
+  Love's) say nothing about Fargo-Moorhead stores. Its Denny's, IHOP, Starbucks and Freddy's lines match ours.
+- The two 2026 graphics (a Minnesota one and a nationwide one, no publisher shown) agree with what we have: Denny's
+  5 AM-noon, IHOP 7 AM-7 PM, Starbucks with spouses, Freddy's card through 25 Nov. They differ on Wendy's (a breakfast
+  combo; Wendy's own 2026 post says a Dave's Single, which we keep) and Perkins (a Great American Trio; two 2026
+  lists say the Magnificent Seven). The Minnesota one names Twin Cities chains we don't carry (Crooked Pint, Green
+  Mill, Old Chicago, Kona Grill, Leo's Grill & Malt Shop, White Castle, Happy Joe's, Bruegger's, Noodles, Fogo de
+  Chão, McCormick & Schmick's): not added yet; each needs its stores in the circles and a new Twin Cities drive table.
+- Fargo Santa Day (Thu 17 Dec 2026, 5:30-7:30 PM, Armed Forces Reserve Center, 3290 31st St N): not a Veterans Day
+  event.
+
 ## Field-report service (`worker/`, Cloudflare Worker `vetday` + D1 `vetday`, free tier)
 Anonymous: a report is a place, an offer, an outcome (worked, away, out, line + minutes) and a time. Abuse limits
 use a salted hash of the caller's IP; the salt is random per UTC day and deleted after two days, and the hashes are

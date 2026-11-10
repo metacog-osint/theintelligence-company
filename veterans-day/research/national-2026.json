@@ -2639,24 +2639,44 @@
     "fm_presence_basis": "FM presence from background knowledge; store locator NOT checked this run",
     "fm_addresses_seen": [],
     "status_2026": "no_2026_info",
-    "offer": null,
-    "est_value_usd": null,
-    "dates": null,
-    "hours_local": null,
-    "mode": null,
+    "offer": "Reported for 2026: a free Breakfast Extra Value Meal for veterans with a valid ID",
+    "est_value_usd": 8,
+    "dates": "2026-11-11",
+    "hours_local": "05:00-10:30",
+    "mode": "dine_in_or_to_go",
     "voucher_use_by": null,
-    "eligible": [],
-    "eligibility_quote": null,
+    "eligible": [
+      "veteran"
+    ],
+    "eligibility_quote": "FREE Breakfast Extra Value Meal ... for Veterans on 11/11/26 *with valid ID",
     "guard_reserve": "unclear",
-    "spouse_or_guest": "unclear",
+    "spouse_or_guest": "no",
     "kids": null,
-    "proof": [],
+    "proof": [
+      "military_id",
+      "va_card",
+      "dd214",
+      "dl_veteran"
+    ],
     "advance_signup": null,
     "participating_locations_only": true,
-    "limits": null,
+    "limits": "With a valid ID. Breakfast hours only.",
     "grade": "C",
-    "sources": [],
-    "notes": "Nothing found in any roundup."
+    "sources": [
+      {
+        "url": null,
+        "publisher": "McDonald's store sign (First Responders Day 28 Oct and Veterans Day 11 Nov 2026); which store isn't known",
+        "published": "photo seen 10 Nov 2026 (shared with the planner, 10 Nov 2026)",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": null,
+        "publisher": "Waterloo-Cedar Falls, Iowa, Veterans Day 2026 list (McDonald's: free breakfast combo, to 10:30 AM, all locations there)",
+        "published": "seen 10 Nov 2026 (shared with the planner, 10 Nov 2026)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "notes": "A photo of one McDonald's sign offers veterans a free Breakfast Extra Value Meal on 11 Nov 2026 with a valid ID; it doesn't show which store. McDonald's owners set their own offers, so it may not run at every store: ask at yours. Nothing from McDonald's itself."
   },
   {
     "brand": "Burger King",

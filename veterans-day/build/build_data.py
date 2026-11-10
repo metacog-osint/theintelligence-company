@@ -120,6 +120,9 @@ CURATE = [
     # Fargo-Moorhead only: the memory is of a Fargo store, and nothing was published.
     dict(id="hardees", src="national", name="Hardee's", loc="Hardee's", osm=None, category="quick", minutes=8, busy=5, meal=False, dineIn=False, window=("06:00", "10:30"), hours=("06:00", "22:00"), only=("fargo-moorhead",)),
     dict(id="kwik-trip", src="national", name="Kwik Trip", loc="Kwik Trip", fm=dict(caution="Fargo stores are called Kwik Star"), osm="kwiktrip", category="quick", minutes=7, busy=5, meal=False, dineIn=False, hours=("00:00", "24:00"), kinds=["meal", "coffee"]),
+    # McDonald's: a photo of one store's sign (10 Nov 2026), store unknown; owners choose, so grade C and ask first.
+    # Fargo-Moorhead only: the sign came with Fargo items. Breakfast hours; stores from OpenStreetMap.
+    dict(id="mcdonalds", src="national", name="McDonald's", loc=None, osm="mcdonalds", category="quick", minutes=10, busy=10, meal=False, dineIn=False, window=("05:00", "10:30"), hours=("05:00", "23:00"), kinds=["meal", "coffee"], caution="A sign at one McDonald's; each owner chooses: ask first", only=("fargo-moorhead",)),
     dict(id="pilot", src="national", name="Pilot / Flying J", loc="Pilot / Flying J", osm="pilot", category="quick", minutes=8, busy=5, meal=False, dineIn=False, kinds=["meal", "coffee"]),
     dict(id="mission-bbq", src="national", name="Mission BBQ", loc="Mission BBQ", osm=None, category="quick", minutes=20, busy=10, meal=False, dineIn=True),
     dict(id="shake-shack", src="national", name="Shake Shack", loc="Shake Shack", osm=None, category="quick", minutes=20, busy=10, meal=False, dineIn=True),
@@ -178,6 +181,8 @@ CURATE = [
     # From Valley News Live's 2026 roundup (9 Nov): a flag swap at Scheels and a school Mass at Nativity (grade B).
     # The flag exchange needs an old flag to swap, so it has no weight on a route: it joins one only if you pin it.
     dict(id="scheels-flag-exchange", src="local", name="Scheels flag exchange", osm=None, category="event", minutes=10, busy=5, meal=False, dineIn=False, window=("11:00", "13:00"), worth=0, kinds=["flag"]),
+    # The Fargo Elks' own flyer (shared 10 Nov 2026): free chili for veterans from 3 PM; no end time given.
+    dict(id="fargo-elks-chili", src="local", name="Fargo Elks #260 Veterans Day chili feed", osm=None, category="event", minutes=40, busy=10, meal=True, dineIn=True, window=("15:00", "18:00"), kinds=["meal"]),
     dict(id="nativity-mass", src="local", name="Nativity Catholic Church Veterans Day Mass", osm=None, category="event", minutes=60, busy=0, meal=False, dineIn=False, window=("08:15", "10:15"), arrive_by="08:30", worth=8, hours=("08:00", "10:30")),
     # Bars: their own category, on the route since asked (8 Nov 2026: "Add the bars"); the app shows a drive-safe
     # line on their cards and on any route with one. All but Blarney Stone are earlier years only (grade C).
@@ -474,7 +479,8 @@ def main(region=DEFAULT_REGION):
                            "verified": "unverified", "url": "", "geo": r.get("geo")})
         elif cur.get("osm") and osm.get(cur["osm"]):
             for m in osm[cur["osm"]]:
-                if m.get("addr"):
+                # A bare house number ("5160") isn't an address anyone can use (10 Nov 2026).
+                if m.get("addr") and " " in m["addr"].strip():
                     stores.append({"address": m["addr"], "osm": m["osm"], "phone": m.get("phone", ""), "wed_hours": "",
                                    "verified": "unverified", "url": "", "geo": None})
         if not stores:
