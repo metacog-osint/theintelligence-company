@@ -363,7 +363,20 @@ and a flyer). Added: the **Fargo Elks #260 chili feed**, free to all veterans fr
 lodge's own flyer; no end time, three hours allowed); **McDonald's** free Breakfast Extra Value Meal for veterans with
 ID (C: a photo of one store's sign, store unknown; owners choose; breakfast hours 5:00-10:30; nine Fargo-Moorhead
 stores from OpenStreetMap, Fargo-Moorhead only). The build now skips an OpenStreetMap address that is only a house
-number (a McDonald's "5160"). Cash Wise's store sign matches its page (11 AM-7 PM, guest half price). Not added:
+number (a McDonald's "5160"). **Correction the same afternoon:** the chicken-dinner sign was Hornbacher's, not
+Cash Wise's; I had assumed Cash Wise because the offer matched. Added **Hornbacher's** free chicken dinner, 11 AM-7 PM
+(A: hornbachers.com/veterans-day, read 10 Nov, "Wednesday, November 11"; no store list; every Hornbacher's) at
+its six full stores from OpenStreetMap (Osgood 4151 45th St S, Southgate 1532 32nd Ave S, West Acres 4101 13th Ave S,
+Northport 2510 Broadway N, Moorhead 101 11th St S and 950 40th Ave S); the small Express on University Dr and the
+West Fargo fuel stop are left out (maybe no hot deli). The Pilot / Flying J named on 32nd Ave is the one already
+mapped, 3150 39th St SW at 32nd Ave S and I-29. Cash Wise stays (its own page, read again 10 Nov: Wednesday,
+November 11, 11am-7pm). **From Fargo Legion Post 2's "more options" Facebook post** (images shared, since the post
+didn't load here), each the business's own 2026 word, grade A: Pepper's Sports Cafe, a free lunch entree 11-4 with a
+military ID, dine-in, 2510 University Dr S (from directories; pin from OpenStreetMap); Fix It Forward Auto Care, a free
+oil change for any veteran at its five shops by appointment ((701) 515-9921; the 6219 53rd Ave S pin is approximate);
+Super Buffet, 1000 45th St S, veterans eat free 11 AM-9 PM plus its 17th annual ceremony with the DAV at 6 PM (its
+30 Oct 2026 post; removed from the earlier-years leads, and the 8 Nov note that its meal was Sun 8 Nov only was
+wrong); Royal Buffet up from C to A (its own post: free buffet 10-12 Nov). Not added:
 - The typed list is **Waterloo-Cedar Falls, Iowa** ("CF", "W'loo", Love's Travel Stop, Icon Donuts, Pepper's), so
   its store-specific offers (Chick-fil-A, Taco John's, Culver's, Panera, Dairy Queen, a Wendy's breakfast combo at a
   Love's) say nothing about Fargo-Moorhead stores. Its Denny's, IHOP, Starbucks and Freddy's lines match ours.
