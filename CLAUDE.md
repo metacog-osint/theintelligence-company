@@ -154,7 +154,7 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   (other days; earlier-years-only leads), bars on with a drive-safe line and no per-route cap, engine v1.2 keeps
   a ticket for later from opening a route, fargobites.com never linked (it redirects to a "verify" lure). Details in
   `veterans-day/README.md`.
-- **9 Nov 2026 evening (local, not committed or deployed):** Marcus Theatres' free large popcorn added at West Acres and
+- **9 Nov 2026 evening (live from `2e8f9c5` about 6:20 PM CST, approved; not pushed):** Marcus Theatres' free large popcorn added at West Acres and
   Century (69 deals at 168 stores; ticket question open), and the phone layout tightened: sticky tabs, About folded, Route settings and
   later stops folded, 20 deals then "Show all", Me reordered. Details in `veterans-day/README.md` ("Phone layout").
 - 8 Nov 2026: a usable Veterans Day giveaway program his Guard colleagues can use on Wed 11 Nov 2026, with
