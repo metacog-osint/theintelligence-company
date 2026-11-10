@@ -1,7 +1,13 @@
-# Hub handoff: where things stand (10 Nov 2026, 1:00 PM CST: Veterans Day Elks and McDonald's live from a4df358, not pushed; 12:15 PM: Optimal and re-checks live from 0b12a0d, pushed; 9:40 AM: areas live from 62c984c, pushed)
+# Hub handoff: where things stand (10 Nov 2026, 1:45 PM CST: Veterans Day Hornbacher's and Post 2 list live from d1d897c, not pushed; 1:00 PM: Elks and McDonald's live from a4df358, pushed; 12:15 PM: Optimal and re-checks live from 0b12a0d, pushed; 9:40 AM: areas live from 62c984c, pushed)
 
 Read with `CLAUDE.md` (the project's notes). Times are Central (CST since 1 Nov). Each commit, push and deploy needs
 Tom's yes.
+
+## Veterans Day planner: Hornbacher's and Post 2's list, 10 Nov 2026 about 1:45 PM CST ("Commit and deploy")
+**Live** from `d1d897c` (not pushed); live `deals.json` and `drive.json` match. Fargo-Moorhead 78 deals at 195 stops:
+Hornbacher's free chicken dinner at six stores (A; Cash Wise stays, A, four stores), Pepper's free lunch 11-4, Fix It
+Forward free oil change at five shops by appointment, Super Buffet free 11-9 plus its DAV ceremony at 6 PM, Royal
+Buffet up to A. Details in `veterans-day/README.md` ("the publisher's files").
 
 ## Veterans Day planner: Files received, 10 Nov 2026 afternoon ("please add any items we missed", then "Commit and deploy")
 **Live** since about 1:00 PM CST from `a4df358` (not pushed). Checked live: `deals.json`, `drive.json`, `engine.js` and
