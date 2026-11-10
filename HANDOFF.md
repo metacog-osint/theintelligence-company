@@ -1,7 +1,16 @@
-# Hub handoff: where things stand (10 Nov 2026, 12:15 PM CST: Veterans Day Optimal route and Tuesday re-checks live from 0b12a0d, not pushed; 9:40 AM: areas live from 62c984c, pushed)
+# Hub handoff: where things stand (10 Nov 2026, 1:00 PM CST: Veterans Day Elks and McDonald's live from a4df358, not pushed; 12:15 PM: Optimal and re-checks live from 0b12a0d, pushed; 9:40 AM: areas live from 62c984c, pushed)
 
 Read with `CLAUDE.md` (the project's notes). Times are Central (CST since 1 Nov). Each commit, push and deploy needs
 Tom's yes.
+
+## Veterans Day planner: Files received, 10 Nov 2026 afternoon ("please add any items we missed", then "Commit and deploy")
+**Live** since about 1:00 PM CST from `a4df358` (not pushed). Checked live: `deals.json`, `drive.json`, `engine.js` and
+`app.js` match the commit; Fargo-Moorhead 73 deals at 181 stops. Added the Fargo Elks #260 chili feed (free to
+veterans from 3 PM, 3435 Broadway N, grade A from the lodge's flyer) and McDonald's free Breakfast Extra Value Meal
+(grade C, one store's sign, 5:00-10:30, nine stores, Fargo-Moorhead only). Not added, with reasons, in
+`veterans-day/README.md` ("the publisher's files"): the typed list is Waterloo-Cedar Falls, Iowa; Santa Day is 17 Dec; the
+Minnesota graphic's Twin Cities chains (Crooked Pint, Green Mill, Old Chicago and others) wait for the publisher's call, since
+each needs store lookups and a new Twin Cities drive table.
 
 ## Veterans Day planner: Optimal route and the Tuesday re-checks, 10 Nov 2026 midday ("Commit and deploy")
 **Live** since about 12:15 PM CST from `0b12a0d` (not pushed: `0b12a0d` and its notes commit are local only; `62c984c`
