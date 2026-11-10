@@ -119,7 +119,7 @@ local ones and the live page showed no console errors at phone size.
   in light and dark with folds open and closed (the What I'm after chips' spoken names now start with their visible
   words, and the hidden "Opens in a new tab" note sits in the footer landmark).
 
-## Areas (app v1.2, engine v1.3; live since about 9:40 AM CST 10 Nov 2026 from `62c984c`, approved; not pushed)
+## Areas (app v1.2, engine v1.3; live since about 9:40 AM CST 10 Nov 2026 from `62c984c`, approved; pushed)
 9 Nov 2026: "I have friends in New Salem, ND who would like to see this optimized for their location, too. Also
 have friends in the Rosedale, Plymouth, and Maple Grove areas of the Twin Cities ... a dropdown box in an upper corner
 ... I want the program to maintain initial focus and landing on Fargo-Moorhead."
@@ -203,7 +203,7 @@ have friends in the Rosedale, Plymouth, and Maple Grove areas of the Twin Cities
   B 22, C 2); Fargo-Moorhead unchanged at 69 deals, 168 stops. After the 10 Nov re-check: Fargo-Moorhead 71 deals at
   171 stops (A 20, B 26, C 25), Bismarck-Mandan 33 at 49 (A 11, B 17, C 5), Twin Cities 34 at 181 (A 10, B 23, C 1).
 
-## Optimal (engine v1.4, app v1.3, 10 Nov 2026; not deployed yet)
+## Optimal (engine v1.4, app v1.3; live since about 12:15 PM CST 10 Nov 2026 from `0b12a0d`, approved; not pushed)
 10 Nov 2026: the Maximize routes "can include redundant types of locations on the same route in the same time
 frame e.g. multiple free coffee grabs within a short window of time ... most users won't want to do that. So the
 Optimal route will lead users to the best deals on a path without repeating the same types of stops." His answers

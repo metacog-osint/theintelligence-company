@@ -1,10 +1,36 @@
-# Hub handoff: where things stand (10 Nov 2026, 9:40 AM CST: Veterans Day areas live from 62c984c, not pushed; 9 Nov: route line, map fit, Marcus, phone layout live)
+# Hub handoff: where things stand (10 Nov 2026, 12:15 PM CST: Veterans Day Optimal route and Tuesday re-checks live from 0b12a0d, not pushed; 9:40 AM: areas live from 62c984c, pushed)
 
 Read with `CLAUDE.md` (the project's notes). Times are Central (CST since 1 Nov). Each commit, push and deploy needs
 Tom's yes.
 
+## Veterans Day planner: Optimal route and the Tuesday re-checks, 10 Nov 2026 midday ("Commit and deploy")
+**Live** since about 12:15 PM CST from `0b12a0d` (not pushed: `0b12a0d` and its notes commit are local only; `62c984c`
+and `1d775ae` are on GitHub. A push runs GitHub's site-checks). Checked live: the seven changed planner files match the commit (ignoring CRLF); at phone size
+a first visit lands on Fargo-Moorhead with Optimal pressed (16 stops from the middle of Fargo at 8 AM), `?area=bismarck-mandan`
+opens its area on Optimal, no sideways scroll, no console errors. Details: `veterans-day/README.md` ("Optimal" and
+"Re-check, Tue 10 Nov 2026"); Bismarck and Twin Cities findings in their `notes.md`.
+- **Optimal** (Tom's design, 10 Nov: finer kinds, a kind may come back after 3 hours, tickets don't count, its own
+  button, first and the default): engine v1.4, app v1.3. Phones still on the old default (Best for me) move to Optimal
+  once; a tapped goal stays (`S.goalSet`). Measured: Fargo-Moorhead Optimal 14.4 stops and about $97 a day with no kind
+  repeated inside 3 hours, against Most stops' 26.7 stops with 17.6 repeats.
+- **Fixed:** events open to the public were "not eligible" for veterans, retirees and active duty (the Air Museum
+  program, West Fargo VFW, the All Veterans Memorial and the Field of Flags never reached a route); a stop after free
+  time showed the wrong arrival time.
+- **Data:** 71 deals at 171 stops in Fargo-Moorhead (A 20, B 26, C 25; `drive.json` rebuilt), Bismarck-Mandan 33 at 49
+  (A 11), Twin Cities 34 at 181. New: Nativity Mass 8:30 and the Scheels flag exchange (Valley News Live, 9 Nov; the
+  first 2026 FM roundup), Sandy's downtown shop. Up: Sickies (A), Village Inn (B), University of Mary (A: 10:00 Mass and
+  brunch). Wendy's starts at 10:30 (general knowledge about its breakfast menu, not checked store by store).
+- **Still open for Tom:** Marcus's ticket question and Wednesday showtimes (marcustheatres.com blocks automated reads;
+  call West Acres, (701) 282-6930); the tips table (wrangler on this machine got Cloudflare's 7403 "account not
+  authorized": run `npx wrangler login` without `CLOUDFLARE_API_TOKEN`, then the README's query); the posts, bars and
+  other C entries have no 2026 word; New Salem Post 91's time, the Elks seatings and the Heritage Center end time
+  are still unpublished; Plymouth and Roseville have no ceremony found.
+- **Seen, not changed:** the Air Museum program rarely makes an Optimal or Best for me route unless Ceremonies is on
+  Love; the Plan for buttons are 36 px tall (`.seg button` beats `.seg-wide button`). Two browser tests (one hub, one
+  Map) time out only when the whole suite runs at once on this machine; each file passes alone.
+
 ## Veterans Day planner: areas, 10 Nov 2026 morning (the publisher, 9 Nov: New Salem friends; Rosedale, Plymouth, Maple Grove friends; "maintain initial focus and landing on Fargo-Moorhead")
-**Live** since about 9:40 AM CST from `62c984c` ("Commit and deploy"; not pushed). The first deploy attempt failed on an expired Firebase sign-in; the publisher ran `firebase login --reauth`. Checked live: every planner file matches the commit (ignoring CRLF), Bismarck-Mandan and the Twin Cities load with their own forecast and centre, the Twin Cities map draws the route by road, a fresh phone visitor lands on Fargo-Moorhead, no console errors. An Area select in the top bar (Fargo-Moorhead default;
+**Live** since about 9:40 AM CST from `62c984c` ("Commit and deploy"; pushed since, checked 10 Nov midday). The first deploy attempt failed on an expired Firebase sign-in; the publisher ran `firebase login --reauth`. Checked live: every planner file matches the commit (ignoring CRLF), Bismarck-Mandan and the Twin Cities load with their own forecast and centre, the Twin Cities map draws the route by road, a fresh phone visitor lands on Fargo-Moorhead, no console errors. An Area select in the top bar (Fargo-Moorhead default;
 Bismarck-Mandan & New Salem; Twin Cities: Plymouth, Maple Grove, Roseville), saved per phone, `?area=` links. Bismarck-
 Mandan and New Salem: 33 deals at 49 stops; Twin Cities area: 34 deals at 181 stops; Fargo-Moorhead's data unchanged (checked against the
 previous build). New `build/stores_region.py`; REGIONS, `fm=`/`only=`/`elsewhere=`/`arrive_by` in CURATE; engine v1.3
