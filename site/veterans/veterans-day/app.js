@@ -62,7 +62,7 @@
   const shared = { events: [], overrides: {}, community: null, at: 0, ok: null };
   let focus = null, picking = false, map = null, mapLayer = null, mapReady = null, lastAnnounce = "";
   let roadLines = null, routeLayer = null, shownRoute = null; // the Map's route line (roads.js)
-  let fitRoute = false, lastTab = null; // opening the Map zooms to the route once
+  let fitRoute = false, lastTab = null, mapFocusPlaceId = null; // opening the Map zooms to the route once
   // Folded stops and deal cards that are open. The lists are rebuilt every 30 seconds; these keep them open.
   const openStops = new Set(), openDeals = new Set();
   const DEALS_PAGE = 20; // deals shown before "Show all"
@@ -229,12 +229,41 @@
   function callBtn(pl, cls) {
     return pl && pl.phone ? h("a", { class: cls || "btn btn-quiet btn-small", href: "tel:" + pl.phone.replace(/[^\d+]/g, "") }, "Call") : null;
   }
-  function dirLinks(pl) {
+  function showOnMap(pl) {
+    if (!pl) return;
+    mapFocusPlaceId = pl.id;
+    location.hash = "#map";
+    renderAll();
+  }
+  function mapBtn(pl, cls) {
+    return pl ? h("button", { type: "button", class: cls || "btn btn-quiet btn-small", onclick: () => showOnMap(pl) }, "On map") : null;
+  }
+  function makeBranchSelect(o, pl) {
+    const sameOfferPlaces = data.places.filter((p) => p.offer === o.id);
+    if (sameOfferPlaces.length <= 1) return null;
+    const swapSel = h("select", { class: "sched-select", "aria-label": "Change location for " + o.brand },
+      sameOfferPlaces.map((p) => h("option", { value: p.id }, p.address.split(",")[0])));
+    swapSel.value = pl.id;
+    swapSel.addEventListener("change", () => {
+      const cur = S.pinned[o.id];
+      const tMin = cur && typeof cur === "object" ? cur.targetMin : null;
+      S.pinned[o.id] = { placeId: swapSel.value, targetMin: tMin };
+      if (focus === pl.id) focus = swapSel.value;
+      openStops.add(swapSel.value);
+      save(); renderAll();
+      toast("Switched " + o.brand + " location.");
+    });
+    return swapSel;
+  }
+  function dirLinks(pl, o) {
     const ll = pl.lat + "," + pl.lng;
     return h("p", { class: "links" },
       ext("https://www.google.com/maps/dir/?api=1&travelmode=driving&destination=" + ll, "Directions", "btn btn-small"),
       ext("https://maps.apple.com/?dirflg=d&daddr=" + ll, "Apple Maps", "btn btn-quiet btn-small"),
-      callBtn(pl));
+      mapBtn(pl),
+      callBtn(pl),
+      o ? makeSchedSelect(o, pl) : null,
+      o ? makeBranchSelect(o, pl) : null);
   }
   function offerHoursMin(o, p) {
     let openMs = o.start || (p ? p.open : dayStart + 6 * HOUR);
@@ -376,10 +405,53 @@
     a.remove();
     toast("Downloaded calendar file (.ics).");
   }
+  function renderRouteSearch(ctx) {
+    const inp = $("#route-q"), list = $("#route-q-list");
+    if (!inp || !list) return;
+    clear(list);
+    const q = normSearch(inp.value);
+    if (!q) { list.hidden = true; return; }
+    const matches = [];
+    data.offers.forEach((o) => {
+      if (o.status !== "offering") return;
+      const places = data.places.filter((p) => p.offer === o.id);
+      places.forEach((p) => {
+        const hay = normSearch(o.brand + " " + o.offer + " " + (CAT[o.category] || "") + " " + p.address);
+        if (q.split(" ").every((tok) => hay.includes(tok))) {
+          matches.push({ o, p, info: placeDriveInfo(p, ctx) });
+        }
+      });
+    });
+    matches.sort((a, b) => a.info.dMin - b.info.dMin);
+    if (!matches.length) {
+      list.hidden = false;
+      list.append(h("li", null, h("span", { class: "note" }, "No matching deals or locations in " + AREA.name + ".")));
+      return;
+    }
+    list.hidden = false;
+    matches.slice(0, 8).forEach(({ o, p, info }, idx) => {
+      const isClosest = matches.length > 1 && idx === 0;
+      const distText = (isClosest ? "★ Closest · " : "") + info.dMin + " min drive (" + info.miles + " mi)";
+      list.append(h("li", null,
+        h("span", null,
+          h("b", null, o.brand), " · " + o.offer + " — " + p.address.split(",")[0] + " ",
+          h("span", { class: "loc-meta" + (isClosest ? " closest" : "") }, distText)),
+        h("span", { class: "links" },
+          h("button", { type: "button", class: "btn btn-quiet btn-small", onclick: () => {
+            delete S.vetoed[o.id]; delete S.strikes[o.id];
+            S.pinned[o.id] = { placeId: p.id, targetMin: null };
+            focus = p.id; inp.value = ""; save(); renderAll();
+            toast(o.brand + " (" + p.address.split(",")[0] + ") set as next stop.");
+          } }, "Go here next"),
+          makeSchedSelect(o, p),
+          mapBtn(p))));
+    });
+  }
   function renderRoute() {
     const r = buildRoute(), { ctx, plan, t, where } = r, steps = plan.steps;
     renderLoc(where);
     renderControls();
+    renderRouteSearch(ctx);
     renderRoutePins();
     const card = clear($("#next-card")), sum = $("#route-sum");
     $("#drive-safe").hidden = true;
@@ -417,7 +489,7 @@
     const flags = c.flags.concat(o.limits ? [o.limits] : []);
     if (flags.length) card.append(h("ul", { class: "flags" }, flags.map((f) => h("li", null, f))));
     if (o.category === "bar") card.append(h("p", { class: "note drive-safe" }, driveSafe()));
-    card.append(dirLinks(pl));
+    card.append(dirLinks(pl, o));
     card.append(h("div", { class: "actions" },
       h("button", { type: "button", class: "btn btn-good", onclick: () => record(c, "worked") }, "✓ Got it"),
       h("button", { type: "button", class: "btn btn-bad", onclick: () => record(c, "away") }, "✗ Turned away"),
@@ -469,21 +541,7 @@
       if (go - prev > 20 * MIN) list.append(h("li", { class: "gap" }, "Free time " + fmtNZ(prev) + "–" + fmt(go)));
       // Folded: the stop's time, name and window show; the address, notes and buttons open on a tap.
       const id = c.place.id;
-      const sameOfferPlaces = data.places.filter((p) => p.offer === o.id);
-      let swapSel = null;
-      if (sameOfferPlaces.length > 1) {
-        swapSel = h("select", { class: "sched-select", "aria-label": "Change location for " + o.brand },
-          sameOfferPlaces.map((p) => h("option", { value: p.id }, p.address.split(",")[0])));
-        swapSel.value = c.place.id;
-        swapSel.addEventListener("change", () => {
-          const cur = S.pinned[o.id];
-          const tMin = cur && typeof cur === "object" ? cur.targetMin : null;
-          S.pinned[o.id] = { placeId: swapSel.value, targetMin: tMin };
-          openStops.add(swapSel.value);
-          save(); renderAll();
-          toast("Switched " + o.brand + " location.");
-        });
-      }
+      const swapSel = makeBranchSelect(o, c.place);
       list.append(h("li", { class: "stop" },
         h("details", { class: "stop-d fold", open: openStops.has(id), ontoggle: (ev) => { if (ev.target.open) openStops.add(id); else openStops.delete(id); } },
           h("summary", null,
@@ -500,6 +558,7 @@
             h("button", { type: "button", class: "btn btn-quiet btn-small", onclick: () => { focus = id; renderAll(); window.scrollTo(0, 0); } }, "Go here first"),
             makeSchedSelect(o, c.place),
             swapSel,
+            mapBtn(c.place),
             h("button", { type: "button", class: "btn btn-quiet btn-small", onclick: () => never(o) }, "Not today"),
             ext("https://www.google.com/maps/dir/?api=1&travelmode=driving&destination=" + c.place.lat + "," + c.place.lng, "Directions", "btn btn-quiet btn-small"),
             callBtn(c.place)))));
@@ -770,6 +829,7 @@
             toast(o.brand + " (" + p.address.split(",")[0] + ") set as next stop.");
           } }, "Go here next"),
           makeSchedSelect(o, p),
+          mapBtn(p),
           ext("https://www.google.com/maps/dir/?api=1&travelmode=driving&destination=" + p.lat + "," + p.lng, "Directions", "btn btn-quiet btn-small"),
           callBtn(p)));
     }));
@@ -965,29 +1025,52 @@
     const r = buildRoute(), t = r.t, where = r.where, ctx = r.ctx, plan = r.plan;
     const best = plan.steps[0];
     const now_ = css("--now"), later = css("--later"), ring = css("--ring");
+    const byPlace = {};
     ctx.cands.forEach((c) => {
       const isNow = c.open <= t, col = isNow ? now_ : later, hollow = c.offer.grade === "C";
       const m = L.circleMarker([c.place.lat, c.place.lng], { radius: 8, color: hollow ? col : ring, weight: hollow ? 3 : 2,
         fillColor: col, fillOpacity: hollow ? 0 : 0.95 });
       m.bindPopup(popup(c));
       m.addTo(mapLayer);
+      byPlace[c.place.id] = m;
     });
     plan.steps.forEach((x, i) => {
-      L.marker([x.c.place.lat, x.c.place.lng], { icon: L.divIcon({ className: "vd-num", html: h("span", null, String(i + 1)), iconSize: [24, 24] }),
+      const m = L.marker([x.c.place.lat, x.c.place.lng], { icon: L.divIcon({ className: "vd-num", html: h("span", null, String(i + 1)), iconSize: [24, 24] }),
         title: (i + 1) + ". " + x.c.offer.brand, keyboard: false }).bindPopup(popup(x.c)).addTo(mapLayer);
+      byPlace[x.c.place.id] = m;
     });
-    if (best) L.circleMarker([best.c.place.lat, best.c.place.lng], { radius: 12, color: css("--ink"), weight: 3,
-      fillColor: css("--mark"), fillOpacity: 1 }).bindPopup(popup(best.c)).addTo(mapLayer);
+    if (best) {
+      const m = L.circleMarker([best.c.place.lat, best.c.place.lng], { radius: 12, color: css("--ink"), weight: 3,
+        fillColor: css("--mark"), fillOpacity: 1 }).bindPopup(popup(best.c)).addTo(mapLayer);
+      byPlace[best.c.place.id] = m;
+    }
     if (where.kind !== "center") L.circleMarker([where.pos.lat, where.pos.lng], { radius: 6, color: ring, weight: 2,
       fillColor: css("--focus"), fillOpacity: 1 }).bindTooltip(where.kind === "gps" ? "You" : "Your start").addTo(mapLayer);
     shownRoute = { stops: plan.steps.map((x) => x.c.place), where };
     drawRoute();
     roadLines.want(shownRoute.stops); // stores only: never where you are
-    // Opening the Map zooms to the route's stores (not to your position). After that the view is yours: the
-    // 30-second refresh and re-plans don't move it.
-    if (fitRoute) {
+    if (mapFocusPlaceId) {
+      const targetId = mapFocusPlaceId;
+      mapFocusPlaceId = null;
       fitRoute = false;
-      if (shownRoute.stops.length) map.fitBounds(L.latLngBounds(shownRoute.stops.map((s) => [s.lat, s.lng])),
+      const pl = placesById[targetId];
+      if (pl) {
+        map.setView([pl.lat, pl.lng], 15, { animate: false });
+        if (!byPlace[targetId]) {
+          const o = offersById[pl.offer];
+          if (o) {
+            const fakeCand = { offer: o, place: pl, open: Math.max(o.start || 0, pl.open), close: Math.min(o.end || Infinity, pl.close) };
+            byPlace[targetId] = L.circleMarker([pl.lat, pl.lng], { radius: 9, color: ring, weight: 2, fillColor: later, fillOpacity: 0.9 })
+              .bindPopup(popup(fakeCand)).addTo(mapLayer);
+          }
+        }
+        if (byPlace[targetId]) byPlace[targetId].openPopup();
+      }
+    } else if (fitRoute) {
+      fitRoute = false;
+      const pts = shownRoute.stops.map((s) => [s.lat, s.lng]);
+      if (where.kind === "start") pts.push([where.pos.lat, where.pos.lng]);
+      if (pts.length) map.fitBounds(L.latLngBounds(pts),
         { paddingTopLeft: [52, 28], paddingBottomRight: [28, 28], maxZoom: 15, animate: false });
     }
   }
@@ -1137,6 +1220,7 @@
     timeOptions($("#preview-time"), 5 * 60, 22 * 60, 30, S.previewMin);
     $("#preview-time").addEventListener("change", (ev) => { S.previewMin = Number(ev.target.value); save(); renderAll(); });
     bindRoute();
+    if ($("#route-q")) $("#route-q").addEventListener("input", () => renderRouteSearch(context(leaveAt(), position().pos)));
     $("#q").addEventListener("input", renderDeals);
     $("#sort").addEventListener("change", renderDeals);
     $("#deals-more").addEventListener("click", () => { dealsShown = Infinity; renderDeals(); });

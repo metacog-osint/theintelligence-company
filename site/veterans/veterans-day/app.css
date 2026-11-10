@@ -265,6 +265,12 @@ select, input[type=search], input[type=url], input:not([type]), input[type=text]
 }
 
 /* Deals */
+.route-quick { display: grid; gap: 6px; }
+.route-q-list { list-style: none; padding: 8px 12px; margin: 0; border: 1px solid var(--acc); border-radius: 10px;
+  background: var(--card); display: grid; gap: 8px; }
+.route-q-list li { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; justify-content: space-between;
+  font-size: 14px; border-top: 1px solid var(--rule); padding-top: 6px; }
+.route-q-list li:first-child { border-top: 0; padding-top: 0; }
 .filters { display: grid; gap: 8px; }
 .search input { width: 100%; }
 .chips { display: flex; flex-wrap: wrap; gap: 6px; }
@@ -350,7 +356,7 @@ select, input[type=search], input[type=url], input:not([type]), input[type=text]
 }
 @media print {
   .tabs, .locbar, .actions, .alts, #alts-wrap, #soon-wrap, #ready, .preview, .about, .foot, .btn, form, .wx,
-  .next .links, .route-list .links { display: none !important; }
+  .route-quick, .next .links, .route-list .links { display: none !important; }
   .tabs { position: static; }
   .stop-d > summary::after { display: none; }
   .panel[hidden] { display: none !important; }
