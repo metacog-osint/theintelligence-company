@@ -107,6 +107,11 @@
     <p id="route-sum" class="route-sum" aria-live="polite"></p>
     <p id="drive-safe" class="note drive-safe" hidden>Your route has a bar on it. Drive safe: if you drink, bring a sober
       driver, take a cab or rideshare<span id="drive-safe-transit">, or ride MATBUS, which is free with a veteran ID</span>.</p>
+    <div class="route-quick">
+      <label class="search"><span class="sr">Quick-add a deal or location to your route</span>
+        <input id="route-q" type="search" placeholder="+ Quick-add a deal or place to your route (e.g. Hornbacher's, Perkins, 13th Ave)…" autocomplete="off"></label>
+      <ul id="route-q-list" class="locs route-q-list" hidden></ul>
+    </div>
     <div id="route-pins" class="plan-pins" hidden></div>
     <article id="next-card" class="card next"></article>
     <div id="route-wrap" hidden>
