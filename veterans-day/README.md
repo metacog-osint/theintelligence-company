@@ -15,13 +15,15 @@ Built 8 Nov 2026 at request for Guard colleagues and other veterans in Fargo-Moo
 - Before 4 AM CST on 11 Nov it runs in **preview**, planning as if it were Wednesday at a time you pick; marks made
   in preview stay on the phone and are never sent.
 
-## How it decides (engine.js v1.3, tested in `tests/veterans-engine.test.js`)
+## How it decides (engine.js v1.4, tested in `tests/veterans-engine.test.js`)
 - **The Route tab** (the main page since 9 Nov 2026, replacing Next and Plan): settings at the top (start point,
   leave time, done-by time, goal, what you're after, take food home), then one route that rebuilds on every change,
   every stop you mark, every report and every 150 m you move. Stop 1 is the big card; each later stop shows when
   you'd arrive against when its deal ends, with a bar (blue the deal's hours, amber your visit) and red text when
   under 25 minutes are left. "Ending soon, not on your route" lists deals closing within two hours, with "Add to my
   route" (a pin). The Map draws the same route.
+- **Optimal** (10 Nov 2026; the default since then): the best deal of each kind, never two of the same kind
+  within 3 hours. See "Optimal" below.
 - **Goals** (8 Nov 2026): *Best for me* weighs value against time at your pace and likes. *Maximize* has three:
   *Most stops* (each place counts 1, less for long shots), *Most savings* (expected dollars) and *Stops + savings*
   (half each, as a share of what the other two reach). Maximize ignores pace and Love; Off still leaves things out.
@@ -140,9 +142,10 @@ have friends in the Rosedale, Plymouth, and Maple Grove areas of the Twin Cities
 - **Overrides** (`overrides` table): an offer id (`applebees`) now pulls that chain's deal in every area. To pull one
   store, use its place id. Place ids never repeat across areas (a test checks).
 - **Engine v1.3:** `offer.arriveBy`, for a ceremony with a start time: the route must get you there by then, not just
-  5 minutes before it ends. Set by `arrive_by` in CURATE for the new areas' ceremonies (Heritage Center 9:45, All
-  Veterans Memorial 11:00, University of Mary 11:00, Maple Grove 11:00). Fargo-Moorhead's events don't use it yet,
-  though CURATE has an older, unused `arriveEarly` on the Air Museum and West Fargo VFW.
+  5 minutes before it ends. Set by `arrive_by` in CURATE for the ceremonies (Heritage Center 9:45, All Veterans
+  Memorial 11:00, University of Mary 10:00 since 10 Nov, Maple Grove 11:00; in Fargo-Moorhead since 10 Nov the Air
+  Museum program 11:00 and the Nativity Mass 8:30). West Fargo VFW keeps an older, unused `arriveEarly`: its stew
+  runs into the afternoon, so its 10:45 flag raising isn't a deadline.
 - **Stores** (`build/stores_region.py <area> <cache folder>`, writes `research/<area>/locations-2026.json`): All the
   Places (alltheplaces.xyz, CC0), the chains' own store finders as scraped weekly; run 31 Oct to 7 Nov 2026, or an
   earlier week for five chains whose spider failed (Blaze 24 Oct; Red Lobster, Charleys, Shake Shack, Red Robin 17 Oct;
@@ -175,8 +178,9 @@ have friends in the Rosedale, Plymouth, and Maple Grove areas of the Twin Cities
   `Downloads\Veterans Day 2026_ Deals and Events for a New Salem, ND Veteran.md`, checked 9–10 Nov): circles Bismarck
   and Lincoln (10 km), Mandan (5 km), New Salem (3 km). Local on the route: the ND Heritage Center program (A: KX News,
   4 Nov 2026, organizers quoted; choir 9:30, program 9:45; end time not published, 11:00 assumed), the All Veterans
-  Memorial at 11:00 (C), AMVETS Post 9 lunch (C, earlier years), the University of Mary chapel service and lunch (C,
-  2025 at 11:00), the Mandan Middle School Field of Flags (B, daylight). Under Deals: New Salem's Post 91 program (no
+  Memorial at 11:00 (C), AMVETS Post 9 lunch (C, earlier years), the University of Mary's Veterans Day Mass at 10:00
+  and free brunch (A since 10 Nov: its own 27 Oct 2026 post; it was graded C from 2025's 11:00 service), the Mandan
+  Middle School Field of Flags (B, daylight). Under Deals: New Salem's Post 91 program (no
   2026 time; call 701-587-1215), the Elks Veterans Feed Thu 12 Nov (seatings not found), Theodore Roosevelt NP fee-free,
   the disabled-veteran park pass, CAT's half-price veteran fare (no free rides), closures; the Bismarck VFW is a lead.
   **Corrections to the research report:** the ND Legion history's "Auxiliary stew dinner" line belongs to Fairmount Post 106,
@@ -196,7 +200,46 @@ have friends in the Rosedale, Plymouth, and Maple Grove areas of the Twin Cities
   draws the route by road; no console errors; no sideways scroll at 375 px. axe (WCAG 2.2 AA) clean on Route, Deals and
   Me in all three areas, light and dark, desktop and phone. 86 node tests and the 28 browser tests pass. Totals:
   Bismarck-Mandan and New Salem 33 deals at 49 stops (A 10, B 17, C 6); Twin Cities 34 deals at 181 stops (A 10,
-  B 22, C 2); Fargo-Moorhead unchanged at 69 deals, 168 stops.
+  B 22, C 2); Fargo-Moorhead unchanged at 69 deals, 168 stops. After the 10 Nov re-check: Fargo-Moorhead 71 deals at
+  171 stops (A 20, B 26, C 25), Bismarck-Mandan 33 at 49 (A 11, B 17, C 5), Twin Cities 34 at 181 (A 10, B 23, C 1).
+
+## Optimal (engine v1.4, app v1.3, 10 Nov 2026; not deployed yet)
+10 Nov 2026: the Maximize routes "can include redundant types of locations on the same route in the same time
+frame e.g. multiple free coffee grabs within a short window of time ... most users won't want to do that. So the
+Optimal route will lead users to the best deals on a path without repeating the same types of stops." His answers
+the same day: finer kinds than the Deals categories; a kind may come back after 3 hours; tickets for later don't
+count; Optimal is its own button, first, and the default.
+- **Kinds** (`kinds` on each offer, from `kinds_for` in `build_data.py`, `kinds=` in CURATE for exceptions): meal
+  (breakfast, lunch or dinner, at a table or a counter, post lunches included), snack (chips, fries, popcorn, the
+  Bloomin' Onion), coffee (Kwik Trip and Pilot are meal and coffee; the Air Museum's coffee hour is coffee), sweet
+  (donuts, cookies, shakes; Dunkin's offer is a donut), bar (bars with a free meal are bar and meal), haircut, car
+  wash, oil change, shopping, ceremony (a program that also feeds you is ceremony and meal: West Fargo VFW, AMVETS
+  Post 9, the University of Mary), memorial (the All Veterans Memorial, the Field of Flags), flag (Scheels), games
+  (Dave & Buster's). A ticket for later has none. A test checks every offer in every area has known kinds.
+- **The rule** (engine `tooSoon`, `SPACING_MS`): on an Optimal route no stop starts within 3 hours of the start of
+  an earlier stop of any of its kinds. What you marked Got it today counts (turned away doesn't). A pinned deal and
+  "Go here first" may repeat a kind; "Ending soon" lists a deal even when Optimal holds it back, since adding it pins
+  it. Being one kind a day (haircut) still holds in every goal.
+- **Scoring:** like Most savings (expected dollars, minutes only break ties, the search ranks plans at $0.20 a
+  minute), but counting likes and what a ceremony is worth (`ev`), and with Best for me's quarter off a sit-down meal
+  outside mealtimes. It ignores pace.
+- **The page:** Plan for reads Optimal · Best for me · Maximize. A new phone starts on Optimal; a phone still on the
+  old default, Best for me, moves to Optimal once on load, because the two can't be told apart; once a goal is
+  tapped (`S.goalSet`) the pick stays. Maximize picks never move. The About paragraph names Optimal.
+- **Measured** (20 sample days per area: five starts, leaving 7, 8, 10 or 12, done by 9 PM): Fargo-Moorhead Optimal
+  14.4 stops and about $97 a day with no kind repeated inside 3 hours; Most stops 26.7 stops with 17.6 such repeats;
+  Best for me 9.7 stops, $91, 1.6 repeats. Bismarck-Mandan Optimal 9.5 stops, Twin Cities 10.5, neither with a
+  repeat. Before the change, Most stops from the middle of Fargo at 8 AM went to six coffee places in under two
+  hours, then five bars.
+- **Fixed on the way (engine v1.4):** an offer open to the public was "not eligible" for veterans, retirees and
+  active duty, because the engine looked only for their own status in `eligible`. So the Air Museum program, the
+  West Fargo VFW program, Bismarck's All Veterans Memorial and the Mandan Field of Flags never reached a route.
+  `eligibility` now treats "public" as open to everyone (tested). Also: a stop after free time showed the earliest
+  possible arrival under a later "Leave" time ("Leave 3:50 PM ... Arrive 2:02 PM"); it now shows the arrival that
+  matches (`windowLine`, `x.start`).
+- **Seen, not changed:** the Air Museum program (worth 12, an hour) rarely makes an Optimal or Best for me route
+  unless Ceremonies is on Love; the Plan for buttons are 36 px tall, not 44, because `.seg button` comes after
+  `.seg-wide button` in `app.css` (as before).
 
 ## Rebuilding the data
 From the repo root (Windows: `python`, not `python3`):
@@ -282,6 +325,38 @@ OSM way/244092646). Now 69 deals at 168 stores. Category treat, a 10-minute coun
 estimate 12:00–21:30 in CURATE until Wednesday's showtimes are read. The "ask when you order" line is in `limits`,
 not `caution`: the engine counts a caution as a 30% chance the deal falls through. To do on the 10 Nov scrub:
 call the theatre about the ticket question and read Wednesday's first and last showtimes.
+
+**Re-check, Tue 10 Nov 2026 (the checklist; four research helpers, the main finds read again by hand; all read
+10 Nov).** Bismarck-Mandan and Twin Cities details are in their `notes.md`.
+- **The first 2026 Fargo-Moorhead roundup:** Valley News Live, 9 Nov 2026. It lists Hawley High School's 9:00
+  program, Nativity Catholic School and Church (Mass 8:30 with the students, flag ceremony 9:15, art crawl
+  9:45-10:15), the Air Museum program at 11:00, and a flag exchange at Scheels 11:00-1:00 with AMVETS Post 7 and the
+  Combat Veterans Motorcycle Association. Added: the Nativity Mass (B, 1825 11th St S from directories) and the
+  Scheels flag exchange (B, 1551 45th St S; worth 0 on a route, since you need an old flag: pin it); Hawley under
+  other days and places (outside the metro). A helper's Scheels address (5200 31st Ave S) was wrong. No KFGO, InForum,
+  WDAY, KVRR or Fargo Underground roundup yet.
+- **Up:** Sickies C to A (its own Specials & Events page: "Wednesday, November 11, 2026", a free Cheeseburger Basket
+  or 20% off one item; no stores named, so both Fargo stores; veterans only as written); Village Inn C to B (Military.com:
+  a 2-2-2 breakfast; Veteran.com, 9 Nov: a V.I.B. breakfast in store; they differ, and the company hasn't announced it).
+  Perkins gains RestaurantNews' 5 Nov 2026 list. The Air Museum program gains the roundup as a source and an 11:00
+  arrive-by.
+- **Changed:** Sandy's Donuts gains its downtown shop, 300 Broadway N (its own site lists three), and its usual hours
+  6:00-13:30 (the deal's window; it opened at 10:00 before, the category's default); Drekker's Wednesday hours
+  4-10 PM (its own site; 4-8 PM before); Wendy's deal starts at 10:30 (Wendy's own post gives no hours, but its
+  stores serve only breakfast until 10:30 and a Dave's Single isn't on that menu: general knowledge, not checked
+  store by store).
+- **No 2026 word, unchanged (C):** the Fargo VFW / Legion Post 2 stew (americanlegionpost2.net failed), AMVETS Post 7
+  lunch, Moorhead Legion, West Fargo VFW (its own undated page: "every November 11th", flag raising 10:45, stew in
+  the afternoon), Harwood Legion, Fryn' Pan, Doolittle's, Porter Creek (their sites say nothing; the publisher's confirmation
+  stands, offers unknown), Granite City, Pizza Ranch, Caribou, Insomnia, Hardee's, Pub West, Brewtus', Blarney
+  Stone, Royal Buffet and the ten bars. Facebook, Instagram and Google posts weren't readable.
+- **Marcus:** still open. marcustheatres.com sits behind an Imperva bot check, and no other site has Wednesday's
+  showtimes for West Acres or Century. Marcus's other free-popcorn offers (National Popcorn Day 2026, *Pressure*)
+  required a ticket, so the Veterans Day one may too: call West Acres, (701) 282-6930.
+- **Checked and left out:** Hy-Vee's 2026 free breakfast (its own page, 14 Oct) has no Fargo-Moorhead store (a helper
+  said otherwise); Dairy Queen's free medium Blizzard appears only on Veteran.com ("participating", 9 Nov) with no
+  word from DQ, so it stays a lead.
+- No tips were checked (`tips` table): that needs wrangler and the account owner's sign-in.
 
 ## Field-report service (`worker/`, Cloudflare Worker `vetday` + D1 `vetday`, free tier)
 Anonymous: a report is a place, an offer, an outcome (worked, away, out, line + minutes) and a time. Abuse limits

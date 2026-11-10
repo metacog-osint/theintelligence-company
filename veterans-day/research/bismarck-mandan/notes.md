@@ -46,3 +46,12 @@ No free rides for veterans found, on Veterans Day or always, for Bis-Man Transit
 6. AMVETS phone: (701) 258-8324 confirmed on its own site and the county list.
 7. Elks: address 900 S Washington St, lodge phone (701) 255-1199. The Elks' own calendar lists only "2 for $20 Burgers" for Thu 12 Nov and nothing for the feed.
 8. TRNP: Medora tourism says about 130 miles, about 2 hours: matches "about 2 hours". Mountain time at Medora.
+
+## Re-check, Tue 10 Nov 2026 (all read 10 Nov; snippet = search-result text only)
+- **University of Mary: changed, now grade A.** Its own post (umary.edu, 27 Oct 2026): Veterans Day Mass, Wed 11 Nov, 10 a.m., Our Lady of the Annunciation Chapel, open to everyone regardless of religious affiliation, a blessing for veterans and those serving near the end, then a complimentary brunch at The Crow's Nest campus restaurant for veterans, active-serving military and their families. No RSVP or end time. CURATE: window 9:45-12:15, arrive by 10:00, 105 minutes.
+- **New Salem Post 91:** still no 2026 time. Its /post-updates page lists only regular meetings (2nd Sunday, City Auditorium basement). Its history page: in the past the program was at Elm Crest Manor, public invited, lunch served, no year. Unchanged under Deals.
+- **AMVETS Post 9:** nothing for 2026; its FAQ says hours may vary around holidays. KX 11 Nov 2025 (snippet): ceremony, then a free lunch. Unchanged (C).
+- **Elks Veterans Feed (Thu 12 Nov):** still only KX's ~3 Nov story (snippet: 16th annual, three dining slots, tickets still available); seating times not readable. bismanelks.com lists only burgers for 12 Nov. Unchanged.
+- **Heritage Center:** still no end time (11:00 assumed). The State Museum's 2025 event page ran 10:00-11:00; its hours page lists no Veterans Day closure.
+- **New lead:** Bismarck Moose Lodge #302 (bismarckmoose.com/veteransmeal, undated): each year a free meal for all veterans; no date or time.
+- No dated 2026 Bismarck-Mandan roundup found (KFYR, KX, Tribune, radio, Chamber). Bismarck Parks (6 Nov 2026): only the office closes on 11 Nov.

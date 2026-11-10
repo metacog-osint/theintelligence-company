@@ -91,6 +91,22 @@
      "published": "2026-10-26 (verified 22 Oct, updated through 11 Nov)"
     }
    ]
+  },
+  {
+   "id": "hawley-school",
+   "day": "Wed 11 Nov, 9:00 AM",
+   "name": "Hawley High School Veterans Day program",
+   "where": "Hawley High School gym, Hawley, MN (about 25 miles east of Moorhead)",
+   "offer": "A Veterans Day program for veterans. The school asks veterans who plan to attend, or anyone bringing one, to contact Terri in the high school office (tgiere@hawley.k12.mn.us).",
+   "grade": "B",
+   "note": "Outside the metro, so not on the route.",
+   "sources": [
+    {
+     "url": "https://www.valleynewslive.com/2026/11/09/veterans-day-events-planned-across-f-m-area/",
+     "publisher": "Valley News Live (Veterans Day events planned across F-M area)",
+     "published": "2026-11-09"
+    }
+   ]
   }
  ],
  "leads": [

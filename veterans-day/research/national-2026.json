@@ -2060,10 +2060,10 @@
     "fm_presence": "yes",
     "fm_presence_basis": "not checked",
     "fm_addresses_seen": [],
-    "status_2026": "no_2026_info",
-    "offer": "Reported for 2026 (unconfirmed): free 2-2-2 breakfast",
+    "status_2026": "offering",
+    "offer": "Free breakfast in store: a 2-2-2 (Military.com) or a V.I.B. breakfast (Veteran.com); the lists differ",
     "est_value_usd": 11,
-    "dates": "not confirmed",
+    "dates": "2026-11-11",
     "hours_local": "unknown",
     "mode": null,
     "voucher_use_by": null,
@@ -2083,8 +2083,20 @@
     "advance_signup": null,
     "participating_locations_only": true,
     "limits": null,
-    "grade": "C",
+    "grade": "B",
     "sources": [
+      {
+        "url": "https://www.military.com/discounts/village-inn-veterans-day-military-discount",
+        "publisher": "Military.com (free 2-2-2 breakfast on November 11, 2026; dine-in or pick-up)",
+        "published": "undated; read 10 Nov 2026",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://veteran.com/village-inn-veterans-day-deal/",
+        "publisher": "Veteran.com (free V.I.B. breakfast, in store only)",
+        "published": "2026-11-09 (updated)",
+        "accessed": "2026-11-10"
+      },
       {
         "url": "https://www.villageinn.com/moorhead-mn",
         "publisher": "Village Inn (Moorhead store page: open 6 AM\u20138 PM)",
@@ -2098,7 +2110,7 @@
         "accessed": "2026-11-08"
       }
     ],
-    "notes": "Only one 2026 listing has this (a compiled report we couldn't trace to the business). Not announced by the business: call first. The Krazy Coupon Lady listed it as predicted. The Moorhead store's page lists 6 AM\u20138 PM daily but online ordering is off; call to check it's open. Fargo Legion Post 2's 30 Oct 2026 list also has it (free meal from a limited menu, drink extra); that list repeats older national offers, so it stays unconfirmed."
+    "notes": "Two 2026 deal lists carry it (read 10 Nov 2026) and disagree on which breakfast; Village Inn itself hasn't announced it. The Krazy Coupon Lady listed it as predicted. The Moorhead store's page lists 6 AM\u20138 PM daily but online ordering is off; call to check it's open. Fargo Legion Post 2's 30 Oct 2026 list also has it (free meal from a limited menu, drink extra); that list repeats older national offers, so it adds little on its own."
   },
   {
     "brand": "Perkins",
@@ -2129,6 +2141,12 @@
     "limits": null,
     "grade": "B",
     "sources": [
+      {
+        "url": "https://www.restaurantnews.com/veterans-day-free-meals-deals-2026-110526/",
+        "publisher": "RestaurantNews.com (free Magnificent Seven Breakfast Meal on Wednesday, November 11, 2026, participating locations)",
+        "published": "2026-11-05",
+        "accessed": "2026-11-10"
+      },
       {
         "url": "https://www.fox4news.com/news/veterans-day-2026-deals",
         "publisher": "FOX 4 Dallas-Fort Worth (FOX Local)",

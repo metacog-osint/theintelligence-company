@@ -69,6 +69,9 @@ NO_COMPANY_WORD = "Not announced by the company for 2026: call first"
 # One entry per offer that may appear. src: which research file; name: its brand/name there; loc: its key in
 # locations-2026.json; osm: fallback key in osm-matches.json. minutes: time at the stop; busy: typical line at
 # lunch and dinner peaks on Veterans Day (minutes); line: otherwise. window: local HH:MM override.
+# kinds: what the stop is, for the Optimal route (10 Nov 2026), which never puts two of the same kind within
+# 3 hours of each other (engine v1.4). Most come from the category (kinds_for below); `kinds=` here sets the rest. A
+# ticket for later has none (tickets don't count).
 CURATE = [
     # Sit-down meals (dine-in, count toward the meal limit)
     dict(id="applebees", src="national", name="Applebee's", loc="Applebee's", osm="applebees", category="meal", minutes=55, busy=25, meal=True, dineIn=True),
@@ -83,14 +86,14 @@ CURATE = [
     dict(id="buca-di-beppo", src="national", name="Buca di Beppo", loc="Buca di Beppo", osm=None, category="meal", minutes=55, busy=15, meal=True, dineIn=True),
     dict(id="bob-evans", src="national", name="Bob Evans", loc="Bob Evans", osm=None, category="meal", minutes=45, busy=10, meal=True, dineIn=True),
     dict(id="ruby-tuesday", src="national", name="Ruby Tuesday", loc="Ruby Tuesday", osm=None, category="meal", minutes=50, busy=10, meal=True, dineIn=True, fm=dict(caution="Store not confirmed open: call first")),
-    dict(id="dave-busters", src="national", name="Dave & Buster's", loc="Dave & Buster's", osm=None, category="meal", minutes=60, busy=10, meal=False, dineIn=True),
+    dict(id="dave-busters", src="national", name="Dave & Buster's", loc="Dave & Buster's", osm=None, category="meal", minutes=60, busy=10, meal=False, dineIn=True, kinds=["games"]),
     dict(id="granite-city", src="national", name="Granite City Food & Brewery", loc="Granite City Food & Brewery", osm="granitecity", category="meal", minutes=50, busy=15, meal=True, dineIn=True, window=("11:00", "16:00"), caution="2026 offer not confirmed: call first", fm=dict(caution="Store and 2026 offer not confirmed: call first")),
     # The 2026 report is a sign at the Fargo store, so other areas get the chain's own rule (`elsewhere`).
     dict(id="pizza-ranch", src="national", name="Pizza Ranch", loc="Pizza Ranch", osm="pizzaranch", category="meal", minutes=45, busy=15, meal=True, dineIn=True,
          elsewhere=dict(offer="Last year: each Pizza Ranch chose a free Veterans Day buffet for veterans or a Veterans Week discount. Nothing found for 2026 at these stores")),
     # Chains with a 2026 offer and no Fargo-Moorhead store (other areas only; added 9 Nov 2026 with the area picker).
     dict(id="red-robin", src="national", name="Red Robin", loc="Red Robin", osm=None, category="meal", minutes=50, busy=20, meal=True, dineIn=True, only=("bismarck-mandan", "twin-cities")),
-    dict(id="outback", src="national", name="Outback Steakhouse", loc="Outback Steakhouse", osm=None, category="meal", minutes=40, busy=15, meal=False, dineIn=True, eat=0.5, only=("bismarck-mandan", "twin-cities")),
+    dict(id="outback", src="national", name="Outback Steakhouse", loc="Outback Steakhouse", osm=None, category="meal", minutes=40, busy=15, meal=False, dineIn=True, eat=0.5, kinds=["snack"], only=("bismarck-mandan", "twin-cities")),
     dict(id="golden-corral", src="national", name="Golden Corral", loc="Golden Corral", osm=None, category="meal", minutes=55, busy=25, meal=True, dineIn=True, only=("bismarck-mandan", "twin-cities")),
     dict(id="smashburger", src="national", name="Smashburger", loc="Smashburger", osm=None, category="quick", minutes=20, busy=10, meal=False, dineIn=True, eat=0.6, caution="Lists differ (a free burger, or 25% off): ask first", only=("bismarck-mandan", "twin-cities")),
     dict(id="hy-vee", src="national", name="Hy-Vee", loc="Hy-Vee", osm=None, category="breakfast", minutes=35, busy=15, meal=True, dineIn=True, window=("06:00", "10:00"), caution="Stores with hot food service only", only=("bismarck-mandan", "twin-cities")),
@@ -99,11 +102,13 @@ CURATE = [
     # IHOP: 7 AM-7 PM per the American Legion's 2026 list (5 Nov); ihop.com wasn't readable.
     dict(id="ihop", src="national", name="IHOP", loc="IHOP", osm="ihop", category="breakfast", minutes=45, busy=15, meal=True, dineIn=True, window=("07:00", "19:00")),
     dict(id="perkins", src="national", name="Perkins", loc="Perkins", osm="perkins", category="breakfast", minutes=45, busy=10, meal=True, dineIn=True),
-    dict(id="village-inn", src="national", name="Village Inn", loc="Village Inn", osm=None, category="breakfast", minutes=45, busy=10, meal=True, dineIn=True, caution=ONE_REPORT),
+    dict(id="village-inn", src="national", name="Village Inn", loc="Village Inn", osm=None, category="breakfast", minutes=45, busy=10, meal=True, dineIn=True, caution="2026 lists differ on which breakfast, and Village Inn hasn't announced it: call first"),
     # Quick bites and pickups
     # ticket=True: a card or voucher for a later visit. A quick stop with nothing eaten there (8 Nov 2026).
     dict(id="texas-roadhouse", src="national", name="Texas Roadhouse", loc="Texas Roadhouse", osm="texasroadhouse", category="quick", minutes=8, busy=25, line=15, meal=False, dineIn=False, ticket=True),
-    dict(id="wendys", src="national", name="Wendy's", loc="Wendy's", osm="wendys", category="quick", minutes=12, busy=10, meal=False, dineIn=False),
+    # Wendy's own post gives no hours, but its stores serve only breakfast until 10:30 AM and a Dave's Single isn't on
+    # that menu (general knowledge, not checked store by store), so the deal starts at 10:30 (10 Nov 2026).
+    dict(id="wendys", src="national", name="Wendy's", loc="Wendy's", osm="wendys", category="quick", minutes=12, busy=10, meal=False, dineIn=False, window=("10:30", None)),
     dict(id="little-caesars", src="national", name="Little Caesars", loc="Little Caesars", osm="littlecaesars", category="quick", minutes=8, busy=10, meal=False, dineIn=False),
     dict(id="firehouse-subs", src="national", name="Firehouse Subs", loc="Firehouse Subs", osm="firehouse", category="quick", minutes=15, busy=10, meal=False, dineIn=False, purchase=True, eat=0.5),
     # Smashburger: the Fargo store (1801 45th St SW) closed in October 2026 (8 Nov 2026); no other FM store.
@@ -114,8 +119,8 @@ CURATE = [
     # Hardee's: remembered: a free breakfast sandwich in 2025 (8 Nov 2026); nothing published. Breakfast hours.
     # Fargo-Moorhead only: the memory is of a Fargo store, and nothing was published.
     dict(id="hardees", src="national", name="Hardee's", loc="Hardee's", osm=None, category="quick", minutes=8, busy=5, meal=False, dineIn=False, window=("06:00", "10:30"), hours=("06:00", "22:00"), only=("fargo-moorhead",)),
-    dict(id="kwik-trip", src="national", name="Kwik Trip", loc="Kwik Trip", fm=dict(caution="Fargo stores are called Kwik Star"), osm="kwiktrip", category="quick", minutes=7, busy=5, meal=False, dineIn=False, hours=("00:00", "24:00")),
-    dict(id="pilot", src="national", name="Pilot / Flying J", loc="Pilot / Flying J", osm="pilot", category="quick", minutes=8, busy=5, meal=False, dineIn=False),
+    dict(id="kwik-trip", src="national", name="Kwik Trip", loc="Kwik Trip", fm=dict(caution="Fargo stores are called Kwik Star"), osm="kwiktrip", category="quick", minutes=7, busy=5, meal=False, dineIn=False, hours=("00:00", "24:00"), kinds=["meal", "coffee"]),
+    dict(id="pilot", src="national", name="Pilot / Flying J", loc="Pilot / Flying J", osm="pilot", category="quick", minutes=8, busy=5, meal=False, dineIn=False, kinds=["meal", "coffee"]),
     dict(id="mission-bbq", src="national", name="Mission BBQ", loc="Mission BBQ", osm=None, category="quick", minutes=20, busy=10, meal=False, dineIn=True),
     dict(id="shake-shack", src="national", name="Shake Shack", loc="Shake Shack", osm=None, category="quick", minutes=20, busy=10, meal=False, dineIn=True),
     dict(id="fazolis", src="national", name="Fazoli's", loc="Fazoli's", osm="fazolis", category="quick", minutes=20, busy=5, meal=False, dineIn=False),
@@ -126,7 +131,7 @@ CURATE = [
     dict(id="caribou", src="national", name="Caribou Coffee", loc="Caribou Coffee", osm="caribou", category="coffee", minutes=8, busy=5, meal=False, dineIn=False),
     dict(id="caseys", src="national", name="Casey's", loc="Casey's", osm="caseys", category="coffee", minutes=6, busy=3, meal=False, dineIn=False, hours=("05:00", "22:00")),
     dict(id="circle-k", src="national", name="Circle K", loc="Circle K / Holiday", osm="holiday", category="coffee", minutes=6, busy=3, meal=False, dineIn=False, hours=("05:00", "23:00")),
-    dict(id="dunkin", src="national", name="Dunkin'", loc="Dunkin'", osm="dunkin", category="coffee", minutes=6, busy=5, meal=False, dineIn=False),
+    dict(id="dunkin", src="national", name="Dunkin'", loc="Dunkin'", osm="dunkin", category="coffee", minutes=6, busy=5, meal=False, dineIn=False, kinds=["sweet"]),  # a free donut
     dict(id="biggby", src="national", name="Biggby Coffee", loc="Biggby Coffee", osm=None, category="coffee", minutes=6, busy=5, meal=False, dineIn=False),
     dict(id="seven-brew", src="national", name="7 Brew", loc="7 Brew", osm=None, category="coffee", minutes=6, busy=5, meal=False, dineIn=False, purchase=True),
     # Treats
@@ -138,7 +143,7 @@ CURATE = [
     # Marcus: free large popcorn, "by request when ordering at the theatre" (its own banner, seen 9 Nov 2026). No
     # ticket requirement stated (said in its limits, not as a caution: a caution counts as a 30% chance it falls
     # through). A counter stop; hours follow showtimes, so usual hours here until they're read.
-    dict(id="marcus", src="national", name="Marcus Theatres", loc="Marcus Theatres", osm=None, category="treat", minutes=10, busy=10, line=5, meal=False, dineIn=False, eat=0.3, hours=("12:00", "21:30")),
+    dict(id="marcus", src="national", name="Marcus Theatres", loc="Marcus Theatres", osm=None, category="treat", minutes=10, busy=10, line=5, meal=False, dineIn=False, eat=0.3, hours=("12:00", "21:30"), kinds=["snack"]),
     # Services. Great Clips is planned as picking up the free-haircut card (no group: it doesn't use up the day's haircut).
     dict(id="great-clips", src="national", name="Great Clips", loc="Great Clips", osm="greatclips", category="service", minutes=5, busy=5, line=3, meal=False, dineIn=False, ticket=True),
     dict(id="sport-clips", group="haircut", src="national", name="Sport Clips", loc="Sport Clips", osm="sportclips", category="service", minutes=30, busy=20, meal=False, dineIn=False, caution="Participating shops only: call first", fm=dict(caution="Participating shops only, and this address isn't confirmed: call first")),
@@ -153,23 +158,27 @@ CURATE = [
     dict(id="fryn-pan", src="local", name="Fryn' Pan Family Restaurant (M", osm="frynpan", category="meal", minutes=45, busy=15, meal=True, dineIn=True, window=("08:00", "20:00")),
     dict(id="doolittles", src="local", name="Doolittle's Woodfire Grill (Fa", osm="doolittles", category="meal", minutes=55, busy=15, meal=True, dineIn=True),
     dict(id="porter-creek", src="local", name="Porter Creek Hardwood Grill (F", osm="portercreek", category="meal", minutes=55, busy=15, meal=True, dineIn=True),
-    dict(id="fargo-air-museum", src="local", name="Veterans Day Program, United P", osm="airmuseum", category="event", minutes=60, busy=0, meal=False, dineIn=False, window=("11:00", "12:00"), arriveEarly=True, worth=12),
-    dict(id="fargo-vfw-legion", src="local", name="Fargo VFW and American Legion", osm=None, category="event", minutes=40, busy=10, meal=True, dineIn=True, window=("11:45", "14:00")),
-    dict(id="amvets-post-7", src="local", name="Fargo AMVETS Post 7 Veterans D", osm=None, category="event", minutes=40, busy=10, meal=True, dineIn=True, window=("12:00", "14:00")),
-    dict(id="moorhead-legion", src="local", name="Moorhead American Legion Veter", osm=None, category="event", minutes=45, busy=10, meal=True, dineIn=True, window=("12:00", "18:30")),
+    dict(id="fargo-air-museum", src="local", name="Veterans Day Program, United P", osm="airmuseum", category="event", minutes=60, busy=0, meal=False, dineIn=False, window=("11:00", "12:00"), arrive_by="11:00", worth=12),
+    dict(id="fargo-vfw-legion", src="local", name="Fargo VFW and American Legion", osm=None, category="event", minutes=40, busy=10, meal=True, dineIn=True, window=("11:45", "14:00"), kinds=["meal"]),
+    dict(id="amvets-post-7", src="local", name="Fargo AMVETS Post 7 Veterans D", osm=None, category="event", minutes=40, busy=10, meal=True, dineIn=True, window=("12:00", "14:00"), kinds=["meal"]),
+    dict(id="moorhead-legion", src="local", name="Moorhead American Legion Veter", osm=None, category="event", minutes=45, busy=10, meal=True, dineIn=True, window=("12:00", "18:30"), kinds=["meal"]),
     dict(id="west-fargo-vfw", src="local", name="West Fargo VFW Post 7564 Veter", osm=None, category="event", minutes=45, busy=5, meal=True, dineIn=True, window=("10:30", "14:00"), arriveEarly=True, worth=12),
     # Added 8 Nov 2026 from the consolidated report: local offers that only one 2026 listing carries (grade C, call
     # first), the Air Museum's coffee hour and the Harwood Legion's stew.
-    dict(id="air-museum-coffee", src="local", name="Fargo Air Museum Veterans Coffee", osm=None, category="event", minutes=30, busy=5, meal=False, dineIn=True, window=("10:00", "12:00"), eat=0.2),
-    dict(id="harwood-legion", src="local", name="Harwood American Legion Post 297", osm=None, category="event", minutes=40, busy=5, meal=True, dineIn=True, window=("17:00", "19:00")),
-    dict(id="sickies", src="local", name="Sickies Garage Burgers & Brews (Fa", osm=None, category="meal", minutes=50, busy=15, meal=True, dineIn=True, caution=ONE_REPORT),
+    dict(id="air-museum-coffee", src="local", name="Fargo Air Museum Veterans Coffee", osm=None, category="event", minutes=30, busy=5, meal=False, dineIn=True, window=("10:00", "12:00"), eat=0.2, kinds=["coffee"]),
+    dict(id="harwood-legion", src="local", name="Harwood American Legion Post 297", osm=None, category="event", minutes=40, busy=5, meal=True, dineIn=True, window=("17:00", "19:00"), kinds=["meal"]),
+    dict(id="sickies", src="local", name="Sickies Garage Burgers & Brews (Fa", osm=None, category="meal", minutes=50, busy=15, meal=True, dineIn=True),
     dict(id="brewtus", src="local", name="Brewtus' Brickhouse", osm=None, category="meal", minutes=45, busy=10, meal=True, dineIn=True, window=("11:00", "14:00"), caution=ONE_REPORT),
-    dict(id="pub-west", src="local", name="Pub West", osm=None, category="meal", minutes=50, busy=10, meal=True, dineIn=True, purchase=True, caution="Offer and address not confirmed: call first"),
+    dict(id="pub-west", src="local", name="Pub West", osm=None, category="meal", minutes=50, busy=10, meal=True, dineIn=True, purchase=True, caution="Offer and address not confirmed: call first", kinds=["bar", "meal"]),
     # Cash Wise: its own page (8 Nov 2026) gives the dinner but no store list, so all four metro stores, "call yours".
     dict(id="cash-wise-deli", src="local", name="Cash Wise Foods deli", osm=None, category="quick", minutes=12, busy=5, meal=False, dineIn=False, eat=0.6, window=("11:00", "19:00"), caution="Cash Wise's page lists no stores: call yours first"),
     # Royal Buffet: free buffet 9-11 Nov on Fargo Legion Post 2's 30 Oct 2026 list (the same offer as 2023).
     dict(id="royal-buffet", src="local", name="Royal Buffet", osm=None, category="meal", minutes=50, busy=15, meal=True, dineIn=True, caution=ONE_REPORT),
-    dict(id="sandys-donuts", src="local", name="Sandy's Donuts", osm=None, category="treat", minutes=6, busy=5, meal=False, dineIn=False, window=("06:00", "13:30"), caution=ONE_REPORT),
+    dict(id="sandys-donuts", src="local", name="Sandy's Donuts", osm=None, category="treat", minutes=6, busy=5, meal=False, dineIn=False, window=("06:00", "13:30"), hours=("06:00", "13:30"), caution=ONE_REPORT),
+    # From Valley News Live's 2026 roundup (9 Nov): a flag swap at Scheels and a school Mass at Nativity (grade B).
+    # The flag exchange needs an old flag to swap, so it has no weight on a route: it joins one only if you pin it.
+    dict(id="scheels-flag-exchange", src="local", name="Scheels flag exchange", osm=None, category="event", minutes=10, busy=5, meal=False, dineIn=False, window=("11:00", "13:00"), worth=0, kinds=["flag"]),
+    dict(id="nativity-mass", src="local", name="Nativity Catholic Church Veterans Day Mass", osm=None, category="event", minutes=60, busy=0, meal=False, dineIn=False, window=("08:15", "10:15"), arrive_by="08:30", worth=8, hours=("08:00", "10:30")),
     # Bars: their own category, on the route since asked (8 Nov 2026: "Add the bars"); the app shows a drive-safe
     # line on their cards and on any route with one. All but Blarney Stone are earlier years only (grade C).
     dict(id="blarney-stone", src="local", name="Blarney Stone", osm=None, category="bar", minutes=30, busy=5, meal=False, dineIn=True, eat=0, caution=ONE_REPORT),
@@ -187,17 +196,18 @@ CURATE = [
 # The src="local" entries above are Fargo-Moorhead's. Every other area's local entries are listed here, in the same
 # form, and match the names in that area's research/<id>/local-2026.json.
 LOCAL = {
-    # Research 9-10 Nov 2026 (veterans-day/research/bismarck-mandan/notes.md). Only the Heritage Center program has a
-    # 2026 time (KX News, 4 Nov, organizers quoted); the rest are earlier years (grade C). New Salem's Post 91 and the
+    # Research 9-10 Nov 2026 (veterans-day/research/bismarck-mandan/notes.md). The Heritage Center program (KX News,
+    # 4 Nov, organizers quoted) and the University of Mary's Mass (its own post, 27 Oct) have 2026 times; the rest are
+    # earlier years (grade C). New Salem's Post 91 and the
     # Bismarck VFW have no time at all, so they're listed under Deals (extras), not routed. arrive_by: a ceremony's start
     # (engine v1.3: the route gets you there by then, not just before it ends). Fargo-Moorhead's events don't use it yet.
     "bismarck-mandan": [
         dict(id="nd-heritage-center", src="local", name="Veterans Day Program, ND Heritage Center", osm=None, category="event", minutes=75, busy=0, meal=False, dineIn=False, window=("09:30", "11:00"), arrive_by="09:45", worth=12, show=dict(notes="KX News (4 Nov 2026) quotes the organizers: AMVETS choir at 9:30 AM, program at 9:45 AM, in the Russell Reid Auditorium. No end time is published; plan on about an hour. Free and open to all in past years.")),
-        dict(id="all-veterans-memorial", src="local", name="All Veterans Memorial", osm=None, category="event", minutes=20, busy=0, meal=False, dineIn=False, window=("10:55", "11:20"), arrive_by="11:00", worth=8, show=dict(notes="A yearly tradition: at 11:00 AM on 11 Nov, sunlight through the memorial's dome lands on North Dakota on its globe (clear days). Next to the Heritage Center. No 2026 notice found.")),
+        dict(id="all-veterans-memorial", src="local", name="All Veterans Memorial", osm=None, category="event", minutes=20, busy=0, meal=False, dineIn=False, window=("10:55", "11:20"), arrive_by="11:00", worth=8, kinds=["memorial"], show=dict(notes="A yearly tradition: at 11:00 AM on 11 Nov, sunlight through the memorial's dome lands on North Dakota on its globe (clear days). Next to the Heritage Center. No 2026 notice found.")),
         dict(id="amvets-post-9", src="local", name="AMVETS Post 9", osm=None, category="event", minutes=60, busy=10, meal=True, dineIn=True, window=("11:45", "14:00"), show=dict(offer="Last year: a Veterans Day ceremony at the club (a rose ceremony for veterans who died that year, a gun salute, taps), then a free lunch for everyone there, from Post 9 (KX News, 2025). In an earlier year the club opened at 11 AM with the salute at noon. No 2026 time posted", notes="No 2026 time posted. Call (701) 258-8324.")),
-        dict(id="umary-veterans-day", src="local", name="University of Mary Veterans Day", osm=None, category="event", minutes=90, busy=5, meal=True, dineIn=True, window=("10:45", "12:30"), arrive_by="11:00", worth=12, show=dict(notes="In 2025: a chapel service at 11:00 AM in Founders Hall (Lumen Vitae University Center), open to the public, then a free lunch for veterans and service members there. Nothing posted for 2026: check umary.edu.")),
+        dict(id="umary-veterans-day", src="local", name="University of Mary Veterans Day", osm=None, category="event", minutes=105, busy=5, meal=True, dineIn=True, window=("09:45", "12:15"), arrive_by="10:00", worth=12, show=dict(notes="The University of Mary's own post (27 Oct 2026): Mass at 10:00 AM in Our Lady of the Annunciation Chapel, open to everyone, then a free brunch at The Crow's Nest campus restaurant for veterans, active-serving military and their families. No RSVP mentioned.")),
         # Flags on the school lawn: a drive-by in daylight (sunset is about 5 PM).
-        dict(id="mandan-field-of-flags", src="local", name="Mandan Middle School Field of Flags", osm=None, category="event", minutes=10, busy=0, meal=False, dineIn=False, hours=("08:00", "17:00"), worth=4, show=dict(notes="KX News reported the 2026 display; it stays up through Thu 12 Nov. View it from outside the school.")),
+        dict(id="mandan-field-of-flags", src="local", name="Mandan Middle School Field of Flags", osm=None, category="event", minutes=10, busy=0, meal=False, dineIn=False, hours=("08:00", "17:00"), worth=4, kinds=["memorial"], show=dict(notes="KX News reported the 2026 display; it stays up through Thu 12 Nov. View it from outside the school.")),
     ],
     # Research 9 Nov 2026 (veterans-day/research/twin-cities/notes.md): no 2026 ceremony found for Plymouth or
     # Roseville. Places just outside the area (Tria, Kendall's) and the 5-8 Club (no address) are listed under Deals.
@@ -207,6 +217,36 @@ LOCAL = {
         dict(id="tavern-grill-arden-hills", src="local", name="The Tavern Grill, Arden Hills", osm=None, category="meal", minutes=55, busy=20, meal=True, dineIn=True, caution="Address from directories: call first", show=dict(notes="A 6 Nov 2026 list (Bring Me The News) names Arden Hills among the Tavern Grill stores offering it. Address from directories.")),
     ],
 }
+
+
+SERVICE_KIND = {"tommys-express": "car-wash", "jiffy-lube": "oil-change"}
+
+
+def kinds_for(cur):
+    """What kind of stop an offer is, for the Optimal route: `kinds` in CURATE, else from its category. Food that is
+    a meal (breakfast, lunch or dinner, at a table or a counter) is "meal"; chips, fries and popcorn are "snack"."""
+    if cur.get("ticket"):
+        return []
+    if cur.get("kinds") is not None:
+        return list(cur["kinds"])
+    c = cur["category"]
+    if c in ("breakfast", "meal"):
+        return ["meal"]
+    if c == "quick":
+        return ["snack"] if cur.get("eat") is not None and cur["eat"] < 0.4 else ["meal"]
+    if c == "coffee":
+        return ["coffee"]
+    if c == "treat":
+        return ["sweet"]
+    if c == "bar":
+        return ["bar", "meal"] if cur.get("meal") else ["bar"]
+    if c == "service":
+        return [cur.get("group") or SERVICE_KIND.get(cur["id"], cur["id"])]
+    if c == "shopping":
+        return ["shopping"]
+    if c == "event":
+        return ["ceremony", "meal"] if cur.get("meal") else ["ceremony"]
+    raise ValueError(f"no kind for {cur['id']} ({c})")
 
 
 def strip_fm(text):
@@ -486,6 +526,7 @@ def main(region=DEFAULT_REGION):
         # eat: how much of a meal it is when eaten there (the engine guesses from meal/dineIn/snack otherwise).
         o["ticket"] = bool(cur.get("ticket"))
         o["purchase"] = bool(cur.get("purchase"))
+        o["kinds"] = kinds_for(cur)
         if o["ticket"]:
             o["snack"] = False
         if cur.get("eat") is not None:

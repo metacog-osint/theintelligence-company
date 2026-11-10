@@ -287,7 +287,7 @@ function strip(cardEnd) {
 }
 
 test("a route doesn't open with a ticket for later that fits further on, in every goal", () => {
-  for (const goal of ["best", "stops", "savings", "both"]) {
+  for (const goal of ["optimal", "best", "stops", "savings", "both"]) {
     const ctx = E.prepare(strip(), profile({ goal }), state(), NO_REPORTS, at(9), { lat: 46.80, lng: -96.80 });
     const plan = ids(E.planDay(ctx, { t: at(9) }));
     assert.notEqual(plan[0], "card", `${goal}: ${plan.join(" > ")}`);
@@ -301,4 +301,77 @@ test("a ticket still goes first when its window is closing, or when you chose it
   const all = E.prepare(strip(), profile(), state(), NO_REPORTS, at(9), { lat: 46.80, lng: -96.80 });
   const first = all.cands.find((c) => c.offer.id === "card");
   assert.equal(ids(E.planDay(all, { t: at(9), first }))[0], "card", "Go here first wins");
+});
+
+// ---------------------------------------------------------------- Optimal (v1.4, the publisher 10 Nov 2026)
+// Four coffee shops, a lunch and a haircut card in a row, 5 minutes apart. Most stops takes every coffee in a row;
+// Optimal takes the best one and never another within 3 hours. A ticket for later doesn't count as a repeat.
+function coffees() {
+  const ids6 = ["c1", "c2", "c3", "lunch", "card", "c4"];
+  const places = ids6.map((offer, k) => ({ id: "q" + k, offer, lat: 46.80 + k * 0.005, lng: -96.80, open: at(6), close: at(22) }));
+  const base = { status: "offering", grade: "A", eligible: ["veteran"], guard_reserve: "unclear", spouse: "no", proof: [], meal: false, dineIn: false };
+  const offers = [
+    { ...base, id: "c1", category: "coffee", kinds: ["coffee"], value: 3, minutes: 6 },
+    { ...base, id: "c2", category: "coffee", kinds: ["coffee"], value: 5, minutes: 6 },
+    { ...base, id: "c3", category: "coffee", kinds: ["coffee"], value: 4, minutes: 6 },
+    { ...base, id: "lunch", category: "meal", kinds: ["meal"], value: 14, minutes: 45, meal: true, dineIn: true, start: at(11), end: at(14) },
+    { ...base, id: "card", category: "service", kinds: [], value: 20, minutes: 5, ticket: true },
+    { ...base, id: "c4", category: "coffee", kinds: ["coffee"], value: 3, minutes: 6 },
+  ];
+  const s = 300, ks = [1, 2, 3, 4, 5, 6];
+  return { offers, places, tzOffsetMin: -360, drive: { places: ks.map((a) => ks.map((b) => Math.abs(a - b) * s)),
+    anchors: [[46.80, -96.80], ...places.map((p) => [p.lat, p.lng])], fromAnchor: [0, ...ks].map((a) => ks.map((b) => Math.abs(a - b) * s)) } };
+}
+const coffeeSteps = (plan) => plan.steps.filter((s) => s.c.offer.category === "coffee");
+const spaced = (steps) => steps.every((s, i) => i === 0 || s.start - steps[i - 1].start >= 3 * 60 * MIN);
+
+test("Optimal is the first goal, and takes the best coffee once in a morning where Most stops takes them all", () => {
+  assert.equal(E.GOALS[0], "optimal");
+  assert.equal(E.SPACING_MS, 3 * 60 * MIN);
+  const plan = (goal) => E.planDay(E.prepare(coffees(), profile({ goal, dayEnd: at(10, 30) }), state(), NO_REPORTS, at(8), home), { t: at(8) });
+  const opt = plan("optimal"), most = plan("stops");
+  assert.deepEqual(coffeeSteps(opt).map((s) => s.c.offer.id), ["c2"], "one coffee, the best one: " + ids(opt).join(" > "));
+  assert.ok(coffeeSteps(most).length >= 3, "Most stops still stacks them: " + ids(most).join(" > "));
+  assert.ok(ids(opt).includes("card"), "a ticket for later isn't a repeat of anything");
+});
+
+test("Optimal: the same kind can come back 3 hours later, never sooner", () => {
+  const ctx = E.prepare(coffees(), profile({ goal: "optimal", dayEnd: at(21) }), state(), NO_REPORTS, at(8), home);
+  const plan = E.planDay(ctx, { t: at(8) }), cs = coffeeSteps(plan);
+  assert.ok(cs.length >= 2, "a long day has room for a second coffee: " + ids(plan).join(" > "));
+  assert.ok(spaced(cs), "coffees start 3 hours apart or more");
+  assert.ok(ids(plan).includes("lunch"));
+});
+
+test("Optimal: a coffee you've had counts; a pin or Go here first may repeat it", () => {
+  const had = { c1: { r: "worked", t: at(8) } };
+  const p = profile({ goal: "optimal", dayEnd: at(10, 30) });
+  const none = E.planDay(E.prepare(coffees(), p, state({ done: had }), NO_REPORTS, at(9), home), { t: at(9) });
+  assert.equal(coffeeSteps(none).length, 0, "an hour after a coffee, no other: " + ids(none).join(" > "));
+  const pinned = E.planDay(E.prepare(coffees(), p, state({ done: had, pinned: { c3: true } }), NO_REPORTS, at(9), home), { t: at(9) });
+  assert.ok(ids(pinned).includes("c3"), "a pinned coffee fits anyway");
+  const ctx = E.prepare(coffees(), p, state({ done: had }), NO_REPORTS, at(9), home);
+  const first = ctx.cands.find((c) => c.offer.id === "c2");
+  assert.equal(ids(E.planDay(ctx, { t: at(9), first }))[0], "c2", "Go here first wins");
+  // A turned-away visit isn't a coffee you had.
+  const away = E.planDay(E.prepare(coffees(), p, state({ done: { c1: { r: "away", t: at(8) } } }), NO_REPORTS, at(9), home), { t: at(9) });
+  assert.equal(coffeeSteps(away).length, 1);
+});
+
+test("kinds: a ticket has none; older data falls back to the category", () => {
+  assert.deepEqual(E.kindsOf({ ticket: true, kinds: ["haircut"], category: "service" }), []);
+  assert.deepEqual(E.kindsOf({ category: "coffee" }), ["coffee"]);
+  assert.deepEqual(E.kindsOf({ category: "service", group: "haircut" }), ["haircut"]);
+  assert.deepEqual(E.kindsOf({ category: "service", id: "car-wash-x" }), ["car-wash-x"]);
+  assert.deepEqual(E.kindsOf({ category: "meal", kinds: ["bar", "meal"] }), ["bar", "meal"]);
+});
+
+test("an event open to the public is open to veterans, retirees, active duty and the Guard (v1.4 fix)", () => {
+  const o = { eligible: ["public"], guard_reserve: "unclear", proof: [] };
+  for (const status of ["veteran", "retired", "active", "guard_reserve"]) {
+    const el = E.eligibility(o, { status, proof: {}, ready: {} });
+    assert.ok(el.ok, status);
+    assert.ok(!el.flags.some((f) => /Guard/.test(f)), status + ": no 'ask' flag for a public event");
+  }
+  assert.ok(!E.eligibility({ eligible: ["veteran"], guard_reserve: "no", proof: [] }, { status: "active", proof: {}, ready: {} }).ok, "veterans-only stays veterans-only");
 });

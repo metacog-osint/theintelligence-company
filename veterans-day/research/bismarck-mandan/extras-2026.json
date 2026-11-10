@@ -242,6 +242,14 @@
    "offer": "A free meal for veterans and spouses, freewill donation to the post's Helping Hand Fund (an older Bismarck Tribune item; nothing for 2026). Call 701-222-1525.",
    "last_seen": "about 2011",
    "src": "burleigh"
+  },
+  {
+   "name": "Bismarck Moose Lodge #302",
+   "area": "Bismarck",
+   "q": "Moose Lodge 302 312 N 20th St Bismarck ND",
+   "offer": "Its page says that each year the lodge hosts a free meal for all veterans; no date or time given. Call (701) 224-8326.",
+   "last_seen": "undated page, read 10 Nov 2026",
+   "src": "moose302"
   }
  ],
  "lead_sources": {
@@ -260,6 +268,10 @@
   "burleigh": {
    "url": "https://www.burleigh.gov/departments/veterans-service-office/local-veterans-service-organizations/",
    "publisher": "Burleigh County Veterans Service Office (post list)"
+  },
+  "moose302": {
+   "url": "https://www.bismarckmoose.com/veteransmeal",
+   "publisher": "Bismarck Moose Lodge #302 (Veterans meal page, undated)"
   }
  }
 }
