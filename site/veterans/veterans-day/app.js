@@ -42,6 +42,12 @@
   let focus = null, picking = false, map = null, mapLayer = null, mapReady = null, lastAnnounce = "";
   let roadLines = null, routeLayer = null, shownRoute = null; // the Map's route line (roads.js)
   let fitRoute = false, lastTab = null; // opening the Map zooms to the route once
+  // Folded stops and deal cards that are open. The lists are rebuilt every 30 seconds; these keep them open.
+  const openStops = new Set(), openDeals = new Set();
+  const DEALS_PAGE = 20; // deals shown before "Show all"
+  let dealsShown = DEALS_PAGE, dealsKey = "";
+  const STOPS_PAGE = 5; // later stops shown under the first before "Show all": the route re-plans at every stop
+  let allStops = false;
 
   // ---------------------------------------------------------------- small helpers
   const $ = (s, r) => (r || document).querySelector(s);
@@ -70,7 +76,12 @@
   const fmtNZ = (ms) => T.format(new Date(ms), { date: false, zoneName: false });
   const money = (v) => "$" + Math.round(v);
   const worthText = (o) => (o.value > 0 ? "about " + money(o.value) : o.category === "shopping" ? "a discount" : "free");
-  const mins = (m) => (m < 1 ? "under a minute" : m < 60 ? Math.round(m) + " min" : Math.floor(m / 60) + " h " + Math.round(m % 60) + " min");
+  // "7 min", "1 h 5 min": no-break spaces keep a duration on one line; rounding first avoids "1 h 60 min".
+  const mins = (m) => {
+    if (m < 1) return "under a minute";
+    const r = Math.round(m);
+    return r < 60 ? r + " min" : Math.floor(r / 60) + " h " + (r % 60) + " min";
+  };
   const localMs = (minOfDay) => dayStart + minOfDay * MIN;
 
   // ---------------------------------------------------------------- stored state (this phone only)
@@ -170,9 +181,9 @@
   function dirLinks(pl) {
     const ll = pl.lat + "," + pl.lng;
     return h("p", { class: "links" },
-      ext("https://www.google.com/maps/dir/?api=1&travelmode=driving&destination=" + ll, "Directions", "btn"),
-      ext("https://maps.apple.com/?dirflg=d&daddr=" + ll, "Apple Maps", "btn btn-quiet"),
-      pl.phone ? h("a", { class: "btn btn-quiet", href: "tel:" + pl.phone.replace(/[^\d+]/g, "") }, "Call") : null);
+      ext("https://www.google.com/maps/dir/?api=1&travelmode=driving&destination=" + ll, "Directions", "btn btn-small"),
+      ext("https://maps.apple.com/?dirflg=d&daddr=" + ll, "Apple Maps", "btn btn-quiet btn-small"),
+      pl.phone ? h("a", { class: "btn btn-quiet btn-small", href: "tel:" + pl.phone.replace(/[^\d+]/g, "") }, "Call") : null);
   }
   function chips(o) {
     return [h("span", { class: "cat" }, CAT[o.category] || o.category), h("span", { class: "grade grade-" + o.grade, title: GRADE_LONG[o.grade] }, GRADE[o.grade]),
@@ -263,7 +274,7 @@
     const ends = o.end || c.close - dayStart < 23.5 * HOUR ? (o.end ? "deal ends " : "closes ") + fmt(c.close) : "open late";
     const bits = ["Arrive " + fmtNZ(x.arrive), ends];
     if (ends !== "open late") bits.push(spare < 60 ? "only " + mins(spare) + " to spare" : mins(spare) + " to spare");
-    return h("p", { class: "stop-win" + (spare < 25 ? " tight" : "") }, bits.join(" · "));
+    return h("span", { class: "stop-win" + (spare < 25 ? " tight" : "") }, bits.join(" · "));
   }
   const SVGNS = "http://www.w3.org/2000/svg";
   function svg(tag, attrs) {
@@ -284,23 +295,34 @@
   function renderStops(ctx, plan, t) {
     const list = clear($("#route-list")), steps = plan.steps, from = t, to = ctx.dayEnd;
     let prev = steps[0].depart;
-    steps.slice(1).forEach((x, k) => {
+    const later = steps.slice(1), shown = allStops ? later : later.slice(0, STOPS_PAGE);
+    shown.forEach((x, k) => {
       const c = x.c, o = c.offer, go = Math.max(x.leave, x.start - x.driveMin * MIN);
       if (go - prev > 20 * MIN) list.append(h("li", { class: "gap" }, "Free time " + fmtNZ(prev) + "–" + fmt(go)));
+      // Folded: the stop's time, name and window show; the address, notes and buttons open on a tap.
+      const id = c.place.id;
       list.append(h("li", { class: "stop" },
-        h("p", { class: "stop-when" }, (k + 2) + ". Leave " + fmtNZ(go) + " · " + mins(x.driveMin - 2.5) + " drive · about " +
-          Math.round(o.minutes + x.queueMin) + " min there"),
-        h("p", { class: "stop-name" }, h("b", null, o.brand), " · " + o.offer),
-        o.ticket ? h("p", { class: "stop-tag" }, h("span", { class: "cat cat-ticket" }, "Ticket for later"), " a quick stop, nothing to eat there") : null,
-        windowLine(x),
-        windowBar(x, from, to),
-        h("p", { class: "note" }, c.place.address + (c.flags.length ? " · " + c.flags.join("; ") : "")),
-        h("p", { class: "links" },
-          h("button", { type: "button", class: "btn btn-quiet btn-small", onclick: () => { focus = c.place.id; renderAll(); window.scrollTo(0, 0); } }, "Go here first"),
-          h("button", { type: "button", class: "btn btn-quiet btn-small", onclick: () => never(o) }, "Not today"),
-          ext("https://www.google.com/maps/dir/?api=1&travelmode=driving&destination=" + c.place.lat + "," + c.place.lng, "Directions", "btn btn-quiet btn-small"))));
+        h("details", { class: "stop-d fold", open: openStops.has(id), ontoggle: (ev) => { if (ev.target.open) openStops.add(id); else openStops.delete(id); } },
+          h("summary", null,
+            h("span", { class: "stop-name" }, h("span", { class: "stop-n", "aria-label": "Stop " + (k + 2) }, String(k + 2)), h("b", null, o.brand), " · " + o.offer,
+              o.ticket ? h("span", { class: "cat cat-ticket" }, "Ticket for later") : null),
+            h("span", { class: "stop-when" }, "Leave " + fmtNZ(go) + " · " + mins(x.driveMin - 2.5) + " drive · " +
+              mins(o.minutes + x.queueMin) + " there"),
+            windowLine(x),
+            windowBar(x, from, to)),
+          o.ticket ? h("p", { class: "note" }, "A card or voucher for later: a quick stop, nothing to eat there.") : null,
+          h("p", { class: "note" }, c.place.address + (c.flags.length ? " · " + c.flags.join("; ") : "")),
+          o.limits ? h("p", { class: "note" }, o.limits) : null,
+          h("p", { class: "links" },
+            h("button", { type: "button", class: "btn btn-quiet btn-small", onclick: () => { focus = id; renderAll(); window.scrollTo(0, 0); } }, "Go here first"),
+            h("button", { type: "button", class: "btn btn-quiet btn-small", onclick: () => never(o) }, "Not today"),
+            ext("https://www.google.com/maps/dir/?api=1&travelmode=driving&destination=" + c.place.lat + "," + c.place.lng, "Directions", "btn btn-quiet btn-small")))));
       prev = x.depart;
     });
+    if (later.length > shown.length) {
+      list.append(h("li", { class: "more-row" }, h("button", { type: "button", class: "btn btn-quiet more",
+        onclick: () => { allStops = true; renderAll(); } }, "Show all " + later.length + " later stops (" + (later.length - shown.length) + " more)")));
+    }
     $("#route-wrap").hidden = false;
     $("#route-list").hidden = steps.length < 2;
     const last = steps[steps.length - 1], left = (ctx.dayEnd - last.depart) / MIN, end = $("#route-end");
@@ -347,6 +369,7 @@
         h("span", { class: "a-why" }, whyBits(x.step).slice(0, 3).join(" · ")),
         h("button", { type: "button", class: "btn btn-quiet btn-small", onclick: () => { focus = x.step.c.place.id; renderAll(); window.scrollTo(0, 0); } }, "Go here"))));
     $("#alts-wrap").hidden = !alts.children.length;
+    $("#alts-n").textContent = "(" + alts.children.length + ")";
   }
   function hideLists() { ["#route-wrap", "#alts-wrap", "#soon-wrap"].forEach((s) => { $(s).hidden = true; }); }
 
@@ -363,12 +386,18 @@
     const box = clear($("#likes"));
     LIKES.forEach(([c, label]) => {
       const w = likeOf(c), word = likeWord(w);
-      box.append(h("button", { type: "button", class: "like like-" + word.toLowerCase(), "aria-label": label + ": " + word + ". Tap to change.",
+      // The spoken name starts with the visible words ("Breakfast Fine"), as speech control needs.
+      box.append(h("button", { type: "button", class: "like like-" + word.toLowerCase(), "aria-label": label + " " + word + ", tap to change",
         onclick: () => { S.prefs[c] = w > 1 ? 0 : w > 0 ? 1.5 : 1; save(); renderAll(); } },
-        h("span", { class: "like-name" }, label), h("span", { class: "like-state" }, word)));
+        h("span", { class: "like-name" }, label), " ", h("span", { class: "like-state" }, word)));
     });
     const love = LIKES.filter(([c]) => likeOf(c) > 1).length, off = LIKES.filter(([c]) => likeOf(c) <= 0).length;
-    $("#likes-sum").textContent = "What I'm after" + (love || off ? ": " + [love ? love + " loved" : "", off ? off + " off" : ""].filter(Boolean).join(", ") : "");
+    const likes = [love ? love + " loved" : "", off ? off + " off" : ""].filter(Boolean).join(", ");
+    $("#likes-sum").textContent = "What I'm after" + (likes ? ": " + likes : "");
+    // The folded settings' summary line: what the route is built on, without opening it.
+    const leave = S.leaveMin === null || S.leaveMin === undefined ? "Leave now" : "Leave " + fmtNZ(localMs(S.leaveMin));
+    $("#rb-set-sum").textContent = [leave, "done by " + fmtNZ(localMs(S.profile.dayEndMin)), GOAL_NAME[S.goal] || GOAL_NAME.best, likes]
+      .filter(Boolean).join(" · ");
   }
 
   function renderLoc(where) {
@@ -464,10 +493,17 @@
     else if (sort === "name") list.sort((a, b) => a.brand.localeCompare(b.brand));
     else list.sort((a, b) => end(a) - end(b) || b.value - a.value);
     const box = clear($("#deal-list"));
+    // A new search, filter or sort starts again from the first page.
+    const key = q + "|" + sort + "|" + CATS.filter(([c]) => S.cats[c]).map(([c]) => c).join(",");
+    if (key !== dealsKey) { dealsKey = key; dealsShown = DEALS_PAGE; }
     $("#deals-count").textContent = list.length + " of " + data.offers.length + " deals" + (anyCat || q ? " match" : "") +
       ". Faded ones don't fit you right now; each says why.";
-    list.forEach((o) => box.append(dealCard(o, live[o.id], ctx)));
+    list.slice(0, dealsShown).forEach((o) => box.append(dealCard(o, live[o.id], ctx)));
+    const rest = list.length - dealsShown;
+    $("#deals-more-wrap").hidden = rest <= 0;
+    $("#deals-more").textContent = "Show all " + list.length + " deals (" + rest + " more)";
   }
+  // A deal card: name, offer and when, at a glance; locations, proof, notes and sources fold under "Details".
   function dealCard(o, cands, ctx) {
     const places = data.places.filter((p) => p.offer === o.id);
     const reason = cands ? null : (places.map((p) => ctx.excluded[p.id]).find(Boolean) || "not available");
@@ -479,16 +515,20 @@
     meta.push(worthText(o));
     if (o.guard_reserve === "yes") meta.push("Guard/Reserve named"); else if (o.guard_reserve === "unclear") meta.push("Guard/Reserve not named");
     if (o.spouse === "yes") meta.push("spouse too");
+    const pinned = !!S.pinned[o.id];
     const card = h("article", { class: "card deal" + (reason ? " out" : "") },
-      h("div", { class: "deal-head" }, h("h3", { class: "deal-name" }, o.brand), h("span", null, ...chips(o))),
+      h("div", { class: "deal-head" }, h("h3", { class: "deal-name" }, o.brand),
+        h("button", { type: "button", class: "btn btn-quiet btn-small", "aria-pressed": pinned ? "true" : "false",
+          title: "Must do: always on your route when it fits",
+          onclick: () => { if (S.pinned[o.id]) delete S.pinned[o.id]; else S.pinned[o.id] = true; save(); renderAll(); } },
+          pinned ? "★ Must do" : "☆ Must do")),
+      h("p", { class: "deal-chips" }, ...chips(o)),
       h("p", { class: "deal-offer" }, o.offer),
       h("p", { class: "deal-meta" }, meta.join(" · ")),
+      // Kept in sight, not folded: the drive-safe line on every bar (8 Nov 2026) and sign-ups needed ahead.
       o.category === "bar" ? h("p", { class: "note drive-safe" }, DRIVE_SAFE) : null,
-      reason ? h("p", { class: "note" }, "Not suggested: " + reason + ".") : null,
-      o.proof && o.proof.length ? h("p", { class: "note" }, "Bring: " + o.proof.map(E.proofLabel).join(" or ")) : null,
       o.advance ? h("p", { class: "note" }, "Sign up first: " + o.advance) : null,
-      o.voucher_use_by ? h("p", { class: "note" }, "Use the card or voucher by " + o.voucher_use_by + ".") : null,
-      o.notes ? h("p", { class: "note" }, o.notes) : null);
+      reason ? h("p", { class: "note" }, "Not suggested: " + reason + ".") : null);
     const locs = h("ul", { class: "locs" }, places.map((p) => {
       const c = cands && cands.find((x) => x.place.id === p.id);
       return h("li", null, h("span", null, p.address + (p.verified === "unverified" ? " (location not verified)" : "")),
@@ -496,18 +536,19 @@
           c ? h("button", { type: "button", class: "btn btn-quiet btn-small", onclick: () => { focus = p.id; location.hash = "#route"; renderAll(); } }, "Go here next") : null,
           ext("https://www.google.com/maps/dir/?api=1&travelmode=driving&destination=" + p.lat + "," + p.lng, "Directions", "btn btn-quiet btn-small")));
     }));
-    card.append(h("details", null, h("summary", null, places.length === 1 ? "1 location" : places.length + " locations"), locs));
-    card.append(h("details", null, h("summary", null, "Sources (" + (o.sources || []).length + ")"),
+    const n = (o.sources || []).length;
+    card.append(h("details", { class: "deal-more fold", open: openDeals.has(o.id), ontoggle: (ev) => { if (ev.target.open) openDeals.add(o.id); else openDeals.delete(o.id); } },
+      h("summary", null, "Details · " + (places.length === 1 ? "1 location" : places.length + " locations") + " · " + n + (n === 1 ? " source" : " sources")),
+      o.proof && o.proof.length ? h("p", { class: "note" }, "Bring: " + o.proof.map(E.proofLabel).join(" or ")) : null,
+      o.voucher_use_by ? h("p", { class: "note" }, "Use the card or voucher by " + o.voucher_use_by + ".") : null,
+      o.limits ? h("p", { class: "note" }, o.limits) : null,
+      o.notes ? h("p", { class: "note" }, o.notes) : null,
+      locs,
       h("p", { class: "note" }, GRADE_LONG[o.grade]),
-      h("ul", { class: "srcs" }, (o.sources || []).map((s) => h("li", null, srcItem(s),
-        s.published ? " · " + s.published : "")))));
-    card.append(h("p", { class: "deal-actions" },
-      h("button", { type: "button", class: "btn btn-quiet btn-small", "aria-pressed": S.pinned[o.id] ? "true" : "false",
-        onclick: () => { if (S.pinned[o.id]) delete S.pinned[o.id]; else S.pinned[o.id] = true; save(); renderAll(); } },
-        S.pinned[o.id] ? "★ Must do (pinned)" : "☆ Must do"),
-      S.vetoed[o.id]
+      h("ul", { class: "srcs" }, (o.sources || []).map((s) => h("li", null, srcItem(s), s.published ? " · " + s.published : ""))),
+      h("p", { class: "deal-actions" }, S.vetoed[o.id]
         ? h("button", { type: "button", class: "btn btn-quiet btn-small", onclick: () => { delete S.vetoed[o.id]; delete S.strikes[o.id]; save(); renderAll(); } }, "Allow again")
-        : h("button", { type: "button", class: "btn btn-quiet btn-small", onclick: () => never(o) }, "Never this one")));
+        : h("button", { type: "button", class: "btn btn-quiet btn-small", onclick: () => never(o) }, "Never this one"))));
     return card;
   }
   // A source with no link (the site is gone or unsafe) is cited as text.
@@ -523,6 +564,7 @@
       x.note ? h("p", { class: "note" }, x.note) : null,
       x.sources && x.sources.length ? h("p", { class: "note" }, "Sources: ", x.sources.map((s, i) => [i ? " · " : "", srcItem(s)])) : null)));
     $("#other-wrap").hidden = !other.length;
+    $("#other-n").textContent = "(" + other.length + ")";
     $("#leads-n").textContent = String(leads.length);
     clear($("#leads"));
     leads.forEach((l) => $("#leads").append(h("li", null,
@@ -602,6 +644,7 @@
       if (o) vet.append(h("li", { class: "block-row" }, h("span", null, o.brand),
         h("button", { type: "button", class: "btn btn-quiet btn-small", onclick: () => { delete S.vetoed[id]; delete S.strikes[id]; save(); renderAll(); } }, "Allow again")));
     });
+    $("#vetoes-n").textContent = "(" + vet.children.length + ")";
     if (!vet.children.length) vet.append(h("li", { class: "note" }, "None."));
     const com = $("#community");
     if (shared.community && shared.community.worked) {
@@ -750,7 +793,6 @@
     ul.append(h("li", null, "Pin your must-dos under Deals. Mark anything you'd never do with \"Never this one\"."));
     ul.append(h("li", null, "Deals marked \"not confirmed\" are from earlier years: call before you go."));
     ul.append(h("li", null, "Charge your phone. On the day, tap \"Got it\" or \"Turned away\" at each stop: it re-plans and tells other veterans."));
-    $("#ready").open = mode() === "preview";
   }
 
   // ---------------------------------------------------------------- shell
@@ -766,7 +808,6 @@
     $("#over").hidden = m !== "over";
     if (m === "preview") {
       el.textContent = "Preview. Times are shown in " + T.zoneLabel() + ".";
-      $("#preview-when").textContent = "Wednesday at " + fmt(now());
     } else if (m === "live") el.textContent = "Now " + fmt(now()) + (shared.ok === false ? " · shared reports offline" : "");
     else el.textContent = "Veterans Day 2026 is over. Thank you.";
   }
@@ -778,6 +819,7 @@
     renderClock();
     const tab = currentTab();
     if (tab === "map" && lastTab !== "map") fitRoute = true;
+    const switched = lastTab !== null && tab !== lastTab;
     lastTab = tab;
     document.querySelectorAll(".tab").forEach((a) => { if (a.dataset.tab === tab) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
     document.querySelectorAll(".panel").forEach((p) => { p.hidden = p.id !== "tab-" + tab; });
@@ -786,6 +828,11 @@
     else if (tab === "me") renderMe();
     else if (tab === "map") renderMap();
     if (tab !== "map" && roadLines) roadLines.want([]); // ask OSRM for nothing while the Map is hidden
+    // A new tab opens at its top, just under the sticky tabs, not wherever the last one was scrolled to.
+    if (switched) {
+      const top = $("#main").getBoundingClientRect().top + window.scrollY - $(".tabs").offsetHeight;
+      if (window.scrollY > top) window.scrollTo(0, top);
+    }
   }
 
   function startGps() {
@@ -839,6 +886,12 @@
     bindRoute();
     $("#q").addEventListener("input", renderDeals);
     $("#sort").addEventListener("change", renderDeals);
+    $("#deals-more").addEventListener("click", () => { dealsShown = Infinity; renderDeals(); });
+    // Printing the route shows every stop and its address: list them all and open the folded stops first.
+    window.addEventListener("beforeprint", () => {
+      if (currentTab() === "route") { allStops = true; renderRoute(); }
+      document.querySelectorAll("details.stop-d").forEach((d) => { d.open = true; });
+    });
     $("#tip-form").addEventListener("submit", async (ev) => {
       ev.preventDefault();
       const f = ev.target, msg = $("#tip-msg");
@@ -875,7 +928,8 @@
     built.setAttribute("datetime", data.meta.built_at);
     built.textContent = fmt(Date.parse(data.meta.built_at)) + ", " + T.format(new Date(data.meta.built_at), { time: false, year: true });
     document.body.append(h("p", { id: "toast", class: "toast", role: "status", hidden: true }),
-      h("p", { id: "announce", class: "sr", "aria-live": "polite" }), h("span", { id: "newtab", class: "sr" }, "Opens in a new tab"));
+      h("p", { id: "announce", class: "sr", "aria-live": "polite" }));
+    $(".foot").append(h("span", { id: "newtab", class: "sr" }, "Opens in a new tab")); // inside a landmark, for axe
     wire();
     renderChips();
     renderReady();

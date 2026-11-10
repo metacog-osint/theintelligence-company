@@ -42,24 +42,43 @@ h1, h2, h3, p, ul, ol { margin: 0; }
 [hidden] { display: none !important; }
 
 /* Header */
-.top { background: var(--paper); border-bottom: 3px double var(--ink); }
+.top { background: var(--paper); }
 .util { display: flex; flex-wrap: wrap; gap: 6px 16px; justify-content: space-between; align-items: center;
   padding: 8px 16px; border-bottom: 1px solid var(--rule); font: 400 13px/1.4 var(--mono); color: var(--mut); }
 .util-right { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
 .util .tic-time-btn { font-family: var(--mono); color: var(--ink); }
 .home { text-decoration: none; color: var(--ink); }
-.mast { padding: 14px 16px 10px; max-width: 760px; margin: 0 auto; }
+.mast { padding: 12px 16px 8px; max-width: 760px; margin: 0 auto; }
 .kicker { font: 500 12px/1.4 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--acc); }
-h1 { font: 600 clamp(1.6rem, 6vw, 2.4rem)/1.1 var(--serif); letter-spacing: -.01em; margin-top: 4px; }
-.clock { font: 400 14px/1.4 var(--mono); color: var(--mut); margin-top: 6px; }
-.tabs { display: flex; max-width: 760px; margin: 0 auto; padding: 0 8px; overflow-x: auto; }
-.tab { flex: 1 0 auto; text-align: center; padding: 12px 10px; min-height: 44px; text-decoration: none; font-weight: 600;
+h1 { font: 600 clamp(1.45rem, 6vw, 2.4rem)/1.1 var(--serif); letter-spacing: -.01em; margin-top: 2px; }
+.clock { font: 400 14px/1.4 var(--mono); color: var(--mut); margin-top: 4px; }
+/* The tabs stick to the top of the screen. Above Leaflet's panes and controls (z-index up to 1000), which share the
+   page's stacking context; under the toast (3000). The time dialog is a modal, in the top layer. */
+.tabs { position: sticky; top: 0; z-index: 1100; background: var(--paper); border-bottom: 3px double var(--ink); }
+.tabs-in { display: flex; max-width: 760px; margin: 0 auto; padding: 0 8px; overflow-x: auto; }
+.tab { flex: 1 0 auto; text-align: center; padding: 11px 10px; min-height: 44px; text-decoration: none; font-weight: 600;
   color: var(--mut); border-bottom: 3px solid transparent; }
 .tab[aria-current="page"] { color: var(--ink); border-bottom-color: var(--mark); }
 
 /* Layout */
-main { max-width: 760px; margin: 0 auto; padding: 16px; }
-.panel { display: grid; gap: 14px; }
+main { max-width: 760px; margin: 0 auto; padding: 14px 16px 16px; }
+.panel { display: grid; gap: 12px; }
+/* Anything the page scrolls to lands under the sticky tabs, not behind them. */
+html { scroll-padding-top: 56px; }
+
+/* Folded sections: a summary row with a chevron at the right; the heading inside keeps the outline. */
+.fold > summary { cursor: pointer; list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 2px 10px;
+  min-height: 44px; padding-right: 26px; position: relative; }
+.fold > summary::-webkit-details-marker { display: none; }
+.fold > summary::after { content: ""; position: absolute; right: 6px; top: 50%; width: 8px; height: 8px; margin-top: -6px;
+  border-right: 2px solid var(--mut); border-bottom: 2px solid var(--mut); transform: rotate(45deg); }
+.fold[open] > summary::after { margin-top: -2px; transform: rotate(-135deg); }
+.fold > summary .h3, .fold > summary .h2 { margin: 0; }
+/* Spacing by margins, not grid gap: older Safari won't lay out <details> as a grid. */
+.fold > :not(summary) { margin-top: 10px; }
+.fold > summary + * { margin-top: 4px; }
+.fold-n, .fold-hint { font: 400 14px/1.4 var(--sans); color: var(--mut); }
+.panel > .fold { border-top: 1px solid var(--rule); }
 .h2 { font: 600 1.5rem/1.2 var(--serif); }
 .h3 { font: 600 1.15rem/1.3 var(--serif); margin-top: 6px; }
 .note { font-size: 14px; color: var(--mut); }
@@ -79,21 +98,23 @@ main { max-width: 760px; margin: 0 auto; padding: 16px; }
 .btn[disabled] { opacity: .5; cursor: default; }
 
 /* Preview / status bars */
-.preview { background: var(--warn-bg); color: var(--warn-ink); border-radius: 10px; padding: 12px 14px; display: grid; gap: 8px; }
-.preview select { font: inherit; padding: 6px; border-radius: 6px; }
-.locbar { display: grid; gap: 8px; }
+.preview { background: var(--warn-bg); color: var(--warn-ink); border-radius: 10px; padding: 10px 14px; display: grid; gap: 8px;
+  font-size: 15px; }
+.preview select { font: inherit; padding: 4px 6px; border-radius: 6px; min-height: 36px; }
+.preview-pick { white-space: nowrap; }
+.locbar { display: grid; gap: 6px; }
 .loc-status { font-size: 14px; color: var(--mut); }
 .loc-actions { display: flex; flex-wrap: wrap; gap: 8px; }
-.wx { border: 1px solid var(--rule); border-radius: 10px; padding: 10px 14px; font-size: 14px; background: var(--card); }
+.wx { border: 1px solid var(--rule); border-radius: 10px; padding: 8px 12px; font-size: 13px; line-height: 1.45; background: var(--card); }
 .wx b { color: var(--ink); }
 
 /* The next-stop card */
-.card { background: var(--card); border: 1px solid var(--rule); border-radius: 12px; padding: 16px; }
-.next { border-color: var(--ink); border-width: 2px; display: grid; gap: 10px; }
+.card { background: var(--card); border: 1px solid var(--rule); border-radius: 12px; padding: 14px; }
+.next { border-color: var(--ink); border-width: 2px; display: grid; gap: 8px; }
 .next-kicker { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font: 500 12px/1.4 var(--mono);
   letter-spacing: .06em; text-transform: uppercase; color: var(--acc); }
-.next-name { font: 600 1.7rem/1.15 var(--serif); }
-.next-offer { font-size: 1.1rem; font-weight: 600; color: var(--ink); }
+.next-name { font: 600 clamp(1.4rem, 5.5vw, 1.7rem)/1.15 var(--serif); }
+.next-offer { font-size: 1.05rem; font-weight: 600; color: var(--ink); }
 .next-addr { font-size: 14px; color: var(--mut); }
 .why { font: 400 14px/1.5 var(--mono); color: var(--body); }
 .why span + span::before { content: " · "; color: var(--mut); }
@@ -124,7 +145,6 @@ main { max-width: 760px; margin: 0 auto; padding: 16px; }
 .alts .a-why { font: 400 13px/1.4 var(--mono); color: var(--mut); grid-column: 1; }
 .alts .btn { grid-row: 1 / span 2; grid-column: 2; }
 
-.ready summary { cursor: pointer; font-weight: 600; min-height: 44px; display: flex; align-items: center; }
 .drive-safe { border-left: 3px solid var(--mark); padding-left: 8px; }
 /* Under Deals: other days and perks, and earlier-years-only places */
 .xlist li { background: var(--card); border: 1px solid var(--rule); border-radius: 10px; padding: 10px 12px;
@@ -133,17 +153,20 @@ main { max-width: 760px; margin: 0 auto; padding: 16px; }
 .xlist .links { align-items: center; }
 .ready-list { padding-left: 20px; display: grid; gap: 6px; font-size: 15px; }
 
-/* Route settings */
-.rb { display: grid; gap: 12px; }
+/* Route settings: one summary row ("Leave now · done by 9:00 PM · Best for me") that opens to the choices */
+.rb { display: grid; gap: 10px; }
+.rb-set { border: 1px solid var(--rule); border-radius: 10px; padding: 0 12px; background: var(--card); }
+.rb-set[open] { padding-bottom: 12px; }
+.rb-set-k { font-weight: 600; }
+.rb-set-sum { font: 400 13px/1.4 var(--mono); color: var(--mut); }
+.rb-body { display: grid; gap: 12px; }
 .rb-times { display: flex; flex-wrap: wrap; gap: 10px; }
 .rb-times label { display: grid; gap: 4px; font-size: 14px; color: var(--mut); flex: 1 1 140px; }
-.rb-goal { border: 0; padding: 0; margin: 0; display: grid; gap: 8px; min-width: 0; }
-.rb-goal legend { font-size: 14px; color: var(--mut); padding: 0; margin-bottom: 4px; }
+.rb-goal, .rb-likes { border: 0; padding: 0; margin: 0; display: grid; gap: 8px; min-width: 0; }
+.rb-goal legend, .rb-likes legend { font-size: 14px; color: var(--mut); padding: 0; margin-bottom: 4px; }
+.rb-likes legend { font-weight: 600; color: var(--ink); }
 .seg-wide { display: flex; width: 100%; }
 .seg-wide button { flex: 1 1 0; min-height: 44px; padding: 8px 6px; }
-.rb-likes { border: 1px solid var(--rule); border-radius: 10px; padding: 0 12px; background: var(--card); }
-.rb-likes[open] { padding-bottom: 12px; display: grid; gap: 8px; }
-.rb-likes summary { cursor: pointer; font-weight: 600; min-height: 44px; display: flex; align-items: center; }
 .likes { display: flex; flex-wrap: wrap; gap: 6px; }
 .like { font: 500 14px/1.2 var(--sans); min-height: 40px; padding: 6px 10px; border-radius: 999px; cursor: pointer;
   border: 1px solid var(--rule); background: var(--card); color: var(--ink); display: inline-flex; gap: 6px; align-items: center; }
@@ -156,15 +179,28 @@ main { max-width: 760px; margin: 0 auto; padding: 16px; }
 .cat-ticket { background: var(--mark); color: #14202E; }
 
 /* The route */
-.route-sum { font: 600 1.05rem/1.4 var(--sans); }
+.route-sum { font: 600 15px/1.45 var(--sans); }
 .route-list { list-style: none; padding: 0; display: grid; gap: 8px; }
-.route-list li.stop { background: var(--card); border: 1px solid var(--rule); border-radius: 10px; padding: 10px 12px;
-  display: grid; gap: 4px; }
-.route-list li.gap { border: 1px dashed var(--rule); border-radius: 10px; padding: 6px 12px; color: var(--mut); font-size: 14px; }
-.stop-when { font: 400 13px/1.4 var(--mono); color: var(--mut); }
+.route-list li.stop { background: var(--card); border: 1px solid var(--rule); border-radius: 10px; padding: 0 12px; }
+/* Each stop folds: when, where and its window bar show; tap for the address and the buttons. */
+.stop-d > summary { display: grid; gap: 3px; padding: 9px 0; min-height: 0; }
+.stop-d > summary::after { top: 16px; margin-top: 0; }
+.stop-d[open] > summary::after { top: 20px; }
+.stop-d .stop-name { padding-right: 24px; } /* only the first line makes room for the chevron */
+.stop-d[open] { padding-bottom: 10px; }
+.stop-d > :not(summary) { margin-top: 6px; }
+.route-list li.gap { border: 1px dashed var(--rule); border-radius: 10px; padding: 4px 12px; color: var(--mut); font-size: 14px; }
+.stop-when { display: block; font: 400 12px/1.45 var(--mono); color: var(--mut); }
+/* Folded, a long offer shows two lines; opened, all of it. */
+.stop-name { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; overflow: hidden; }
+.stop-d[open] .stop-name { -webkit-line-clamp: unset; line-clamp: none; }
+.route-list li.more-row { list-style: none; }
+/* The stop's number, as on the Map's numbered stops. */
+.stop-n { display: inline-block; min-width: 20px; height: 20px; padding: 0 4px; margin-right: 6px; border-radius: 10px;
+  background: var(--ink); color: var(--paper); font: 600 12px/20px var(--sans); text-align: center; vertical-align: 1px; }
 .stop-name b { font-weight: 600; }
-.stop-tag { font-size: 13px; color: var(--mut); }
-.stop-win { font: 400 13px/1.4 var(--mono); color: var(--body); }
+.stop-name .cat { margin-left: 4px; vertical-align: 1px; }
+.stop-win { display: block; font: 400 12px/1.45 var(--mono); color: var(--body); }
 .stop-win.tight { color: var(--bad); font-weight: 600; }
 .wbar { display: block; width: 100%; height: 10px; }
 .wb-day { fill: var(--rule); }
@@ -174,14 +210,18 @@ main { max-width: 760px; margin: 0 auto; padding: 16px; }
 
 /* Me and filter labels */
 .me-form label, .filters label { display: grid; gap: 4px; font-size: 14px; color: var(--mut); }
+.filters label.sort { display: flex; align-items: center; gap: 8px; flex: none; }
+.filters label.sort select { min-height: 40px; padding: 6px 8px; }
 select, input[type=search], input[type=url], input:not([type]), input[type=text] { font: 16px/1.3 var(--sans);
   padding: 8px 10px; border: 1px solid var(--rule); border-radius: 8px; background: var(--card); color: var(--ink);
   min-height: 44px; max-width: 100%; }
 
 /* Map */
 .panel-map { gap: 8px; }
-.map { height: min(70vh, 560px); border-radius: 10px; border: 1px solid var(--rule); background: var(--chip); }
-.legend { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: center; font-size: 14px; }
+/* As tall as the screen allows under the sticky tabs, so the map fills a phone once the tab opens. */
+.map { height: min(70vh, 560px); height: clamp(320px, calc(100svh - 120px), 760px); border-radius: 10px;
+  border: 1px solid var(--rule); background: var(--chip); }
+.legend { display: flex; flex-wrap: wrap; gap: 4px 14px; align-items: center; font-size: 13px; }
 .legend .leg { display: inline-flex; align-items: center; gap: 6px; } /* each key wraps with its label */
 .key { display: inline-block; flex: none; width: 14px; height: 14px; border-radius: 50%; }
 .key-now { background: var(--now); border: 2px solid var(--ring); outline: 1px solid var(--now); }
@@ -215,32 +255,53 @@ select, input[type=search], input[type=url], input:not([type]), input[type=text]
 }
 
 /* Deals */
-.filters { display: grid; gap: 10px; }
+.filters { display: grid; gap: 8px; }
 .search input { width: 100%; }
 .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+/* On phones the category chips are one row that scrolls sideways, not four rows. */
+@media (max-width: 639px) {
+  .chips { flex-wrap: nowrap; overflow-x: auto; margin: 0 -16px; padding: 2px 16px 4px; scrollbar-width: none; }
+  .chips::-webkit-scrollbar { display: none; }
+  .chip { flex: none; }
+}
 .chip { font: 500 14px/1.2 var(--sans); min-height: 36px; padding: 6px 12px; border-radius: 999px; cursor: pointer;
   border: 1px solid var(--rule); background: var(--card); color: var(--ink); }
 .chip[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
-.deal-list { display: grid; gap: 10px; }
-.deal { display: grid; gap: 6px; }
-.deal-head { display: flex; flex-wrap: wrap; gap: 6px; align-items: baseline; justify-content: space-between; }
-.deal-name { font: 600 1.2rem/1.2 var(--serif); }
+.count-row { display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: center; justify-content: space-between; }
+.count-row .note { flex: 1 1 180px; }
+.deal-list { display: grid; gap: 8px; }
+.deal { display: grid; gap: 4px; padding: 12px 14px 4px; }
+.deal-head { display: flex; gap: 8px; align-items: flex-start; justify-content: space-between; }
+.deal-name { font: 600 1.15rem/1.25 var(--serif); }
+.deal-head .btn { flex: none; margin-top: -2px; }
+.deal-chips { display: flex; flex-wrap: wrap; gap: 4px; }
 .deal-offer { font-weight: 600; }
 .deal-meta { font: 400 13px/1.5 var(--mono); color: var(--mut); }
-.deal details summary { cursor: pointer; font-size: 14px; min-height: 36px; display: flex; align-items: center; }
+.deal-more > summary { font-size: 14px; color: var(--mut); min-height: 40px; }
+.deal-more[open] { padding-bottom: 10px; }
+.deal-more > :not(summary) { margin-top: 8px; }
 .deal .locs { list-style: none; padding: 0; display: grid; gap: 6px; }
 .deal .locs li { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; justify-content: space-between;
   font-size: 14px; border-top: 1px solid var(--rule); padding-top: 6px; }
 .deal .srcs { font-size: 13px; color: var(--mut); padding-left: 18px; }
 .deal-actions { display: flex; flex-wrap: wrap; gap: 8px; }
 .deal.out { opacity: .65; }
+.more { width: 100%; }
 .tip-form { display: grid; gap: 10px; }
 .tip-form label { display: grid; gap: 4px; font-size: 14px; color: var(--mut); }
 
 /* Me */
-.me-form { display: grid; gap: 12px; }
-.me-form fieldset { border: 1px solid var(--rule); border-radius: 10px; padding: 10px 12px; display: grid; gap: 8px; }
-.me-form legend { font-weight: 600; color: var(--ink); padding: 0 4px; }
+.me-form { display: grid; gap: 10px; }
+.me-form fieldset { border: 1px solid var(--rule); border-radius: 10px; padding: 8px 12px 10px; display: grid; gap: 6px; min-width: 0; }
+.me-form legend, .legend-like { font-weight: 600; color: var(--ink); padding: 0 4px; }
+/* Short options two to a row, even on a phone; long selects (pace, roads) take the whole row. */
+.me-form fieldset.cols { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 4px 12px; }
+.me-form .span2 { grid-column: 1 / -1; }
+.me-form label.inline { display: flex; align-items: center; gap: 8px; color: var(--ink); font-size: 15px; }
+.me-form label.inline select { min-height: 36px; padding: 4px 8px; }
+.me-fold { border: 1px solid var(--rule); border-radius: 10px; padding: 0 12px; }
+.me-fold[open] { padding-bottom: 12px; }
+.me-fold .legend-like { padding: 0; }
 .me-form label:has(> input[type=radio]), .me-form label:has(> input[type=checkbox]) { display: flex; gap: 8px;
   align-items: center; font-size: 15px; color: var(--ink); min-height: 36px; }
 .prefs { display: grid; gap: 8px; }
@@ -265,8 +326,10 @@ select, input[type=search], input[type=url], input:not([type]), input[type=text]
   padding: 12px 16px; font-size: 15px; z-index: 3000; box-shadow: 0 6px 24px rgba(0,0,0,.25); }
 
 /* About and footer */
-.about { margin-top: 28px; padding-top: 18px; border-top: 3px double var(--ink); display: grid; gap: 8px; }
+.about { margin-top: 24px; padding-top: 6px; border-top: 3px double var(--ink); }
+.about > :not(summary) { margin-top: 8px; }
 .about p { color: var(--body); }
+.about > summary .h2 { font-size: 1.25rem; }
 .foot { max-width: 760px; margin: 24px auto 0; padding: 16px; border-top: 1px solid var(--rule); font-size: 13px;
   color: var(--mut); display: grid; gap: 4px; }
 
@@ -275,8 +338,10 @@ select, input[type=search], input[type=url], input:not([type]), input[type=text]
   .actions .actions-wide { grid-column: auto; }
 }
 @media print {
-  .top .tabs, .locbar, .actions, .alts, #alts-wrap, #soon-wrap, .preview, .about, .foot, .btn, form, .wx,
+  .tabs, .locbar, .actions, .alts, #alts-wrap, #soon-wrap, #ready, .preview, .about, .foot, .btn, form, .wx,
   .next .links, .route-list .links { display: none !important; }
+  .tabs { position: static; }
+  .stop-d > summary::after { display: none; }
   .panel[hidden] { display: none !important; }
   body { background: #fff; color: #000; }
 }

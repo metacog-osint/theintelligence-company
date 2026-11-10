@@ -95,6 +95,27 @@ wording the same day ("Build it as written"). **Live** since about 12:30 PM CST 
   the 30-second refresh, reports and re-plans don't move it; leaving the Map and coming back fits it again. Tested in
   `veterans-map.test.js`.
 
+## Phone layout (9 Nov 2026 evening, "every tab is a horribly long scroll, especially on phone screens")
+Measured at 375×812 before and after: Route 6,896 → about 2,700 px, Deals 36,227 → 6,000, Me 4,882 → 2,000,
+Map 3,195 → 1,360. Not deployed yet.
+- **Tabs stick to the top** (`nav.tabs` moved out of `<header>`, z-index 1100 over Leaflet's 1000). Switching tabs
+  opens the new one at its top (`renderAll`, `switched`).
+- **About folds** into one closed `<details id="about">` under every tab (it was 1,943 px on each). Its h3s and
+  privacy text are unchanged, so the house-layer tests still hold.
+- **Route:** the settings fold to one line ("Leave now · done by 9:00 PM · Best for me · 1 off", `#rb-set-sum`);
+  the preview box is two lines; each later stop folds to its number, name (two lines), timing and bar, with the
+  address and buttons on a tap; five later stops show, then "Show all"; "Other places you could go next" and "Get
+  ready" fold (Get ready no longer opens itself in preview). Print lists and opens every stop (`beforeprint`).
+- **Deals:** 20 cards, then "Show all"; each card keeps name, chips, offer, times, the drive-safe line on bars and
+  sign-ups, and folds proof, limits, notes, locations and sources under "Details". Category chips scroll sideways on
+  phones. Other days, earlier-year leads and the tip form fold.
+- **Me:** My day so far first; short options two to a row; What I like (also under Route settings) and vetoes fold.
+- Open stops and deal cards stay open through the 30-second refresh (`openStops`, `openDeals`). Folds use margins,
+  not grid gap, because older Safari won't lay out `<details>` as a grid.
+- Also fixed: `mins()` could print "1 h 60 min"; durations keep to one line; axe (WCAG 2.2 AA) is clean on every tab
+  in light and dark with folds open and closed (the What I'm after chips' spoken names now start with their visible
+  words, and the hidden "Opens in a new tab" note sits in the footer landmark).
+
 ## Rebuilding the data
 From the repo root (Windows: `python`, not `python3`):
 
@@ -164,6 +185,18 @@ Legion and Fargo Legion Post 2 lists):** now 68 deals at 166 stores (A 18, B 23,
   birthdays). No 2026 word found for the posts, bars or other C entries, and the publisher had confirmed none by phone yet.
 - No tips had come in through the page (the `tips` table was empty).
 - Seen, not changed: a deal's `caution` shows on Route cards only, not on the Deals list.
+
+**Marcus Theatres, 9 Nov 2026 evening (seen in an ad):** A 19 after it. Marcus's own banner
+(on marcustheatres.com, seen on its North Dakota theatres page): "All Veterans and Active Duty Military
+Receive a FREE Large Popcorn. Wednesday, November 11. Redeem offer by request when ordering at the theatre." No
+ticket requirement is stated; Marcus's earlier popcorn offer for the film *Pressure* (undated on its military page)
+said a ticket was required, so the absence looks deliberate, but it isn't confirmed. Not on the American Legion's
+5 Nov list or Marcus's military page. Two Fargo theatres: West Acres Cinema, 4101 17th Ave S ((701) 282-6930;
+OSM way/219117385), and Century Cinema, 3931 9th Ave S (Marcus writes 9th Avenue SW; (701) 281-1335 from Marcus's page;
+OSM way/244092646). Now 69 deals at 168 stores. Category treat, a 10-minute counter stop, value about $9 (estimate). Hours are the usual-hours
+estimate 12:00–21:30 in CURATE until Wednesday's showtimes are read. The "ask when you order" line is in `limits`,
+not `caution`: the engine counts a caution as a 30% chance the deal falls through. To do on the 10 Nov scrub:
+call the theatre about the ticket question and read Wednesday's first and last showtimes.
 
 ## Field-report service (`worker/`, Cloudflare Worker `vetday` + D1 `vetday`, free tier)
 Anonymous: a report is a place, an offer, an outcome (worked, away, out, line + minutes) and a time. Abuse limits

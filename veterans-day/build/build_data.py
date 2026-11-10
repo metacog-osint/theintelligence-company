@@ -93,6 +93,10 @@ CURATE = [
     dict(id="insomnia", src="national", name="Insomnia Cookies", loc="Insomnia Cookies", osm="insomnia", category="treat", minutes=8, busy=3, meal=False, dineIn=False, purchase=True, eat=0.2),
     dict(id="freddys", src="national", name="Freddy's Frozen Custard & Steakburgers", loc="Freddy's Frozen Custard & Steakburgers", osm="freddys", category="treat", minutes=6, busy=5, meal=False, dineIn=False, ticket=True),
     dict(id="sonic", src="national", name="Sonic", loc="Sonic", osm=None, category="treat", minutes=8, busy=5, meal=False, dineIn=False, purchase=True, eat=0.3),
+    # Marcus: free large popcorn, "by request when ordering at the theatre" (its own banner, seen 9 Nov 2026). No
+    # ticket requirement stated (said in its limits, not as a caution: a caution counts as a 30% chance it falls
+    # through). A counter stop; hours follow showtimes, so usual hours here until they're read.
+    dict(id="marcus", src="national", name="Marcus Theatres", loc="Marcus Theatres", osm=None, category="treat", minutes=10, busy=10, line=5, meal=False, dineIn=False, eat=0.3, hours=("12:00", "21:30")),
     # Services. Great Clips is planned as picking up the free-haircut card (no group: it doesn't use up the day's haircut).
     dict(id="great-clips", src="national", name="Great Clips", loc="Great Clips", osm="greatclips", category="service", minutes=5, busy=5, line=3, meal=False, dineIn=False, ticket=True),
     dict(id="sport-clips", group="haircut", src="national", name="Sport Clips", loc="Sport Clips", osm="sportclips", category="service", minutes=30, busy=20, meal=False, dineIn=False, caution="Participating shops only, and this address isn't confirmed: call first"),

@@ -1,6 +1,6 @@
 {
  "meta": {
-  "built_at": "2026-11-09T03:28:14Z",
+  "built_at": "2026-11-10T00:13:34Z",
   "day": "2026-11-11",
   "day_start": "2026-11-11T06:00:00Z",
   "tz": "America/Chicago",
@@ -1851,6 +1851,54 @@
    "group": null,
    "ticket": false,
    "purchase": true,
+   "eat": 0.3
+  },
+  {
+   "id": "marcus",
+   "brand": "Marcus Theatres",
+   "status": "offering",
+   "category": "treat",
+   "offer": "Free large popcorn",
+   "value": 9,
+   "grade": "A",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "in_store",
+   "minutes": 10,
+   "busy": 10,
+   "line": 5,
+   "meal": false,
+   "dineIn": false,
+   "snack": true,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "no",
+   "kids": null,
+   "proof": [
+    "military_id",
+    "va_card",
+    "dd214"
+   ],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "Ask for it when you order. Marcus doesn't say you need a movie ticket, or what proof it wants: bring your ID.",
+   "sources": [
+    {
+     "url": "https://www.marcustheatres.com/theatre-locations/state-ND",
+     "publisher": "Marcus Theatres (banner on its North Dakota theatres page)",
+     "published": "2026-11-09 (seen)"
+    }
+   ],
+   "notes": "Marcus's own banner: \"All Veterans and Active Duty Military Receive a FREE Large Popcorn. Wednesday, November 11. Redeem offer by request when ordering at the theatre.\" It doesn't say you need a movie ticket. The theatre opens for its first show: check showtimes.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
    "eat": 0.3
   },
   {
@@ -5229,6 +5277,34 @@
    "close": "2026-11-12T05:00:00Z",
    "hoursAssumed": false,
    "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "marcus-4101-17th-ave-s",
+   "offer": "marcus",
+   "name": "",
+   "address": "4101 17th Ave S, Fargo, ND 58103",
+   "lat": 46.85586,
+   "lng": -96.84756,
+   "phone": "(701) 282-6930",
+   "open": "2026-11-11T18:00:00Z",
+   "close": "2026-11-12T03:30:00Z",
+   "hoursAssumed": true,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "marcus-3931-9th-ave-s",
+   "offer": "marcus",
+   "name": "",
+   "address": "3931 9th Ave S, Fargo, ND 58103",
+   "lat": 46.86735,
+   "lng": -96.84651,
+   "phone": "(701) 281-1335",
+   "open": "2026-11-11T18:00:00Z",
+   "close": "2026-11-12T03:30:00Z",
+   "hoursAssumed": true,
+   "verified": "confirmed",
    "pin": "geo"
   },
   {

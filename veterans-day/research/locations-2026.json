@@ -1824,5 +1824,30 @@
     "geo": "46.85061,-96.72178"
    }
   ]
+ },
+ "Marcus Theatres": {
+  "fm_presence": "yes",
+  "basis_url": "https://www.marcustheatres.com/theatre-locations/state-ND",
+  "stores": [
+   {
+    "address": "4101 17th Ave S, Fargo, ND 58103",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "(701) 282-6930",
+    "osm": "way/219117385",
+    "geo": "46.85586,-96.84756",
+    "url": "https://www.marcustheatres.com/theatre-locations/west-acres-cinema-fargo"
+   },
+   {
+    "address": "3931 9th Ave S, Fargo, ND 58103",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "(701) 281-1335",
+    "osm": "way/244092646",
+    "geo": "46.86735,-96.84651",
+    "url": "https://www.marcustheatres.com/theatre-locations/century-cinema-fargo"
+   }
+  ],
+  "notes": "Two Fargo theatres (9 Nov 2026): West Acres Cinema on the south side of West Acres mall (OSM way/219117385; the Census geocoder puts it 90 m away) and Century Cinema, 3931 9th Ave S (Marcus writes 9th Avenue SW; the Census geocoder reads both forms as the same point, 80 m from OSM way/244092646). Century's phone is the one on Marcus's page; third-party sites also give (701) 461-8902 as its box office. Wednesday showtimes not read; hours are the usual-hours estimate in CURATE."
  }
 }
