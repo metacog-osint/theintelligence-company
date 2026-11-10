@@ -201,6 +201,13 @@
       else if (state.strikes && state.strikes[o.id] && state.strikes[o.id].until > now) why = "skipped for now";
       var el = eligibility(o, profile);
       if (!why && !el.ok) why = "not eligible";
+      var pinSpec = state.pinned && state.pinned[o.id];
+      if (!why && o.category === "service" && o.advance && !(profile.ready && profile.ready[o.id]) && !pinSpec) {
+        why = "book an appointment first (or mark Signed up ahead under Me)";
+      }
+      if (!why && pinSpec && typeof pinSpec === "object" && pinSpec.placeId && pinSpec.placeId !== pl.id) {
+        why = "another location chosen";
+      }
       // The deal's own hours inside the store's; if they don't overlap (Texas Roadhouse hands out vouchers at lunch
       // though the dining room opens at 4), the deal's own hours win.
       var open = Math.max(o.start || 0, pl.open), close = Math.min(o.end || Infinity, pl.close);
@@ -224,13 +231,14 @@
       if (conf.ranOut) flags.push("Reported run out");
       var retry = state.done && state.done[o.id] && state.done[o.id].r === "away" ? 0.6 : 1;
       var q = el.f * conf.p * retry * (o.caution ? 0.7 : 1); // the chance it works out for you
+      var pinTargetMs = (pinSpec && typeof pinSpec === "object" && pinSpec.targetMs) ? pinSpec.targetMs : null;
       cands.push({
         i: i, place: pl, offer: o, open: open, close: close, latest: latest, conf: conf, flags: flags,
         // worth: what a stop is worth to the planner when it has no dollar value (a ceremony)
         base: (o.worth !== undefined ? o.worth : o.value) * el.mult * q * pref,
         dollars: o.value * el.mult * q,  // "savings": expected dollars, likes ignored
         count: Math.min(1, q / 0.3),     // "stops": a place counts in full unless it's a long shot
-        pinned: !!(state.pinned && state.pinned[o.id]), kinds: kindsOf(o)
+        pinned: !!pinSpec, pinTargetMs: pinTargetMs, kinds: kindsOf(o)
       });
     });
     var drive = data.drive;
@@ -270,7 +278,11 @@
     var o = c.offer, arrive, start, depart, queue = 0;
     for (var tries = 0; tries < 4; tries++) {
       arrive = leave + d;
-      start = Math.max(arrive, c.open);
+      var minStart = c.open;
+      if (c.pinTargetMs && c.pinTargetMs - 15 * MIN > minStart && c.pinTargetMs <= c.latest) {
+        minStart = c.pinTargetMs - 15 * MIN;
+      }
+      start = Math.max(arrive, minStart);
       if (start > c.latest) return null;
       queue = c.conf.line !== null ? c.conf.line : (o.busy && isPeak(ctx, start) ? o.busy : (o.line || 3));
       depart = start + (queue + o.minutes) * MIN;
@@ -283,7 +295,7 @@
       leave = clash.end;
       if (tries === 3) return null;
     }
-    if (start - arrive > MAX_WAIT_MS) return null;
+    if (start - arrive > MAX_WAIT_MS && !c.pinTargetMs) return null;
     if (depart > ctx.dayEnd) return null;
     // "optimal": not a second coffee (bar, meal, haircut...) within 3 hours of the last; a pin says you want it anyway.
     if (ctx.goal === "optimal" && !force && !c.pinned && tooSoon(st.kinds, c, start)) return null;
@@ -295,19 +307,27 @@
     if (here && o.meal && (ctx.goal === "best" || ctx.goal === "optimal") && !mealtime(ctx, start)) full *= 0.75;
     if (w > 0 && !here) full *= 0.9; // saved for later
     var ev = c.base * full, used = (depart - st.t) / MIN, eat = Math.min(1, full * 2);
+    if ((ctx.goal === "optimal" || ctx.goal === "best") && localMinutes(ctx, start) < 630 && (o.category === "breakfast" || (o.end && localMinutes(ctx, c.close) <= 660))) {
+      ev *= 1.35;
+    }
     // Driving and lines cost the full rate; time at the stop itself (eating, a haircut) a third of it, since that is
     // the point of going. Waiting for a window to open costs the full rate for 20 minutes, then counts as free time
     // (the plan says "free until …" and you leave later).
     var waitMin = (start - arrive) / MIN;
     var cost = (d / MIN + queue + Math.min(waitMin, 20) + 0.1 * Math.max(0, waitMin - 20) + 0.3 * o.minutes) * ctx.lambda;
+    var pinBonus = c.pinned ? 40 : 0;
+    if (c.pinTargetMs) {
+      var diffMin = Math.abs(start - c.pinTargetMs) / MIN;
+      pinBonus += Math.max(0, 60 - diffMin * 1.5);
+    }
     var gain;
     // The Maximize goals ignore pace and likes (Off still counts); the minutes only break ties toward quicker stops.
     // "optimal" is like Most savings, but counts what you love and what a ceremony is worth (ev, not dollars).
-    if (ctx.goal === "optimal") gain = ev - 0.01 * used + (c.pinned ? 40 : 0);
-    else if (ctx.goal === "stops") gain = c.count * eat - 0.003 * used + (c.pinned ? 3 : 0);
-    else if (ctx.goal === "savings") gain = c.dollars * full - 0.01 * used + (c.pinned ? 40 : 0);
+    if (ctx.goal === "optimal") gain = ev - 0.01 * used + pinBonus;
+    else if (ctx.goal === "stops") gain = c.count * eat - 0.003 * used + (c.pinned ? 3 : 0) + (c.pinTargetMs ? Math.max(0, 4 - Math.abs(start - c.pinTargetMs) / MIN * 0.1) : 0);
+    else if (ctx.goal === "savings") gain = c.dollars * full - 0.01 * used + pinBonus;
     else if (ctx.goal === "both") gain = 50 * c.count * eat / ctx.ref.n + 50 * c.dollars * full / ctx.ref.d - 0.01 * used + (c.pinned ? 20 : 0);
-    else gain = ev - cost + (c.pinned ? 40 : 0);
+    else gain = ev - cost + pinBonus;
     return {
       c: c, leave: leave, arrive: arrive, start: start, depart: depart,
       driveMin: d / MIN, waitMin: (start - arrive) / MIN, queueMin: queue,
