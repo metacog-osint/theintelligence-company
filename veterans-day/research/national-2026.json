@@ -3361,5 +3361,47 @@
       }
     ],
     "notes": "No published 2025 or 2026 Hardee's Veterans Day offer was found; a local veteran remembers a free breakfast sandwich last year. Hardee's franchises set their own offers: call first."
+  },
+  {
+    "brand": "Marcus Theatres",
+    "scope": "national",
+    "fm_presence": "yes",
+    "fm_presence_basis": "Marcus's own theatre pages: West Acres Cinema and Century Cinema, both in Fargo",
+    "fm_addresses_seen": [
+      "4101 17th Ave S, Fargo, ND 58103",
+      "3931 9th Ave S, Fargo, ND 58103"
+    ],
+    "status_2026": "offering",
+    "offer": "Free large popcorn",
+    "est_value_usd": 9,
+    "dates": "2026-11-11",
+    "hours_local": null,
+    "mode": "in_store",
+    "eligible": [
+      "veteran",
+      "active"
+    ],
+    "eligibility_quote": "All Veterans and Active Duty Military Receive a FREE Large Popcorn. Wednesday, November 11. Redeem offer by request when ordering at the theatre.",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "no",
+    "kids": null,
+    "proof": [
+      "military_id",
+      "va_card",
+      "dd214"
+    ],
+    "advance_signup": null,
+    "participating_locations_only": false,
+    "limits": "Ask for it when you order. Marcus doesn't say you need a movie ticket, or what proof it wants: bring your ID.",
+    "grade": "A",
+    "sources": [
+      {
+        "url": "https://www.marcustheatres.com/theatre-locations/state-ND",
+        "publisher": "Marcus Theatres (banner on its North Dakota theatres page)",
+        "published": "2026-11-09 (seen)",
+        "accessed": "2026-11-09"
+      }
+    ],
+    "notes": "Marcus's own banner: \"All Veterans and Active Duty Military Receive a FREE Large Popcorn. Wednesday, November 11. Redeem offer by request when ordering at the theatre.\" It doesn't say you need a movie ticket. The theatre opens for its first show: check showtimes."
   }
 ]

@@ -31,22 +31,24 @@
     <h1>Veterans Day in Fargo-Moorhead</h1>
     <p class="clock" id="clock" aria-live="off">Loading the deals…</p>
   </div>
-  <nav class="tabs" aria-label="Sections">
+</header>
+<!-- The tabs stay at the top of the screen as you scroll (app.css), so every section is one tap away. -->
+<nav class="tabs" aria-label="Sections">
+  <div class="tabs-in">
     <a href="#route" class="tab" data-tab="route" aria-current="page">Route</a>
     <a href="#map" class="tab" data-tab="map">Map</a>
     <a href="#deals" class="tab" data-tab="deals">Deals</a>
     <a href="#me" class="tab" data-tab="me">Me</a>
-  </nav>
-</header>
+  </div>
+</nav>
 
 <main id="main">
   <!-- Route: the day, built from where you are, what you're after and the time left; rebuilt on every change -->
   <section id="tab-route" class="panel" aria-labelledby="route-h">
     <h2 id="route-h" class="sr">Your route</h2>
     <div id="preview" class="preview" hidden>
-      <p class="preview-text"><b>Preview.</b> It isn't Veterans Day yet, so the app plans as if it were
-        <span id="preview-when">Wednesday at 8:00 AM</span>.</p>
-      <label class="preview-pick">Pretend it's <select id="preview-time"></select></label>
+      <p class="preview-text"><b>Preview.</b> Until Veterans Day, it plans as if it were
+        <label class="preview-pick">Wednesday at <select id="preview-time"></select></label></p>
     </div>
     <div id="over" class="preview" hidden>
       <p><b>Veterans Day 2026 is over.</b> Thank you for your service. Your totals are under Me.</p>
@@ -55,33 +57,39 @@
       <div class="locbar" id="locbar">
         <p id="loc-status" class="loc-status">Drive times need a starting point.</p>
         <div class="loc-actions">
-          <button type="button" id="loc-gps" class="btn">Use my location</button>
-          <button type="button" id="loc-map" class="btn btn-quiet">Pick a start on the map</button>
+          <button type="button" id="loc-gps" class="btn btn-small">Use my location</button>
+          <button type="button" id="loc-map" class="btn btn-quiet btn-small">Pick a start on the map</button>
         </div>
       </div>
-      <div class="rb-times">
-        <label>Leave <select id="rb-leave"></select></label>
-        <label>Done by <select id="rb-end"></select></label>
-      </div>
-      <fieldset class="rb-goal">
-        <legend>Plan for</legend>
-        <div class="seg seg-wide" id="goal-kind" role="group" aria-label="Plan for">
-          <button type="button" data-kind="best">Best for me</button>
-          <button type="button" data-kind="max">Maximize</button>
+      <!-- Folded: the summary line shows the current choices, so the route itself starts higher on a phone. -->
+      <details class="rb-set fold" id="rb-set">
+        <summary><span class="rb-set-k">Route settings</span> <span id="rb-set-sum" class="rb-set-sum"></span></summary>
+        <div class="rb-body">
+          <div class="rb-times">
+            <label>Leave <select id="rb-leave"></select></label>
+            <label>Done by <select id="rb-end"></select></label>
+          </div>
+          <fieldset class="rb-goal">
+            <legend>Plan for</legend>
+            <div class="seg seg-wide" id="goal-kind" role="group" aria-label="Plan for">
+              <button type="button" data-kind="best">Best for me</button>
+              <button type="button" data-kind="max">Maximize</button>
+            </div>
+            <div class="seg seg-wide" id="goal-max" role="group" aria-label="Maximize" hidden>
+              <button type="button" data-goal="stops">Most stops</button>
+              <button type="button" data-goal="savings">Most savings</button>
+              <button type="button" data-goal="both">Stops + savings</button>
+            </div>
+            <p class="note" id="goal-note"></p>
+          </fieldset>
+          <fieldset class="rb-likes" id="rb-likes">
+            <legend id="likes-sum">What I'm after</legend>
+            <p class="note">Tap to switch between Fine, Love and Off.</p>
+            <div id="likes" class="likes"></div>
+            <label class="check"><input type="checkbox" id="rb-togo"> Take food home when I can, so it doesn't fill me up</label>
+            <p class="note">Pace, sit-down meals, busy times and who's with you are under Me.</p>
+          </fieldset>
         </div>
-        <div class="seg seg-wide" id="goal-max" role="group" aria-label="Maximize" hidden>
-          <button type="button" data-goal="stops">Most stops</button>
-          <button type="button" data-goal="savings">Most savings</button>
-          <button type="button" data-goal="both">Stops + savings</button>
-        </div>
-        <p class="note" id="goal-note"></p>
-      </fieldset>
-      <details class="rb-likes" id="rb-likes">
-        <summary id="likes-sum">What I'm after</summary>
-        <p class="note">Tap to switch between Fine, Love and Off.</p>
-        <div id="likes" class="likes"></div>
-        <label class="check"><input type="checkbox" id="rb-togo"> Take food home when I can, so it doesn't fill me up</label>
-        <p class="note">Pace, sit-down meals, busy times and who's with you are under Me.</p>
       </details>
     </form>
     <div id="wx" class="wx" hidden></div>
@@ -99,12 +107,12 @@
       <h3 class="h3">Ending soon, not on your route</h3>
       <ul id="soon" class="alts"></ul>
     </div>
-    <div id="alts-wrap" hidden>
-      <h3 class="h3">Other places you could go next</h3>
+    <details id="alts-wrap" class="fold" hidden>
+      <summary><h3 class="h3">Other places you could go next <span id="alts-n" class="fold-n"></span></h3></summary>
       <ul id="alts" class="alts"></ul>
-    </div>
-    <details id="ready" class="ready">
-      <summary>Get ready before Wednesday</summary>
+    </details>
+    <details id="ready" class="fold">
+      <summary><h3 class="h3">Get ready before Wednesday</h3></summary>
       <ul id="ready-list" class="ready-list"></ul>
     </details>
   </section>
@@ -132,55 +140,63 @@
       <label class="search"><span class="sr">Search</span>
         <input id="q" type="search" placeholder="Search: pancakes, haircut, Applebee's…" autocomplete="off"></label>
       <div id="chips" class="chips" role="group" aria-label="Show categories"></div>
-      <label>Sort <select id="sort">
-        <option value="soon">Ending soonest</option>
-        <option value="value">Most value</option>
-        <option value="name">A to Z</option>
-      </select></label>
+      <div class="count-row">
+        <p class="note" id="deals-count"></p>
+        <label class="sort">Sort <select id="sort">
+          <option value="soon">Ending soonest</option>
+          <option value="value">Most value</option>
+          <option value="name">A to Z</option>
+        </select></label>
+      </div>
     </div>
-    <p class="note" id="deals-count"></p>
     <div id="deal-list" class="deal-list"></div>
+    <p id="deals-more-wrap" hidden><button type="button" id="deals-more" class="btn btn-quiet more"></button></p>
 
-    <div id="other-wrap" hidden>
-      <h3 class="h3">Other days and beyond the route</h3>
+    <details id="other-wrap" class="fold" hidden>
+      <summary><h3 class="h3">Other days and beyond the route <span id="other-n" class="fold-n"></span></h3></summary>
       <ul id="other" class="plain xlist"></ul>
-    </div>
-    <details id="leads-wrap" class="ready" hidden>
-      <summary>Earlier years only: worth a call (<span id="leads-n">0</span>)</summary>
+    </details>
+    <details id="leads-wrap" class="fold" hidden>
+      <summary><h3 class="h3">Earlier years only: worth a call <span class="fold-n">(<span id="leads-n">0</span>)</span></h3></summary>
       <p class="note">These places had a Veterans Day deal in an earlier year and haven't said anything for 2026, so
         they aren't on the route or the map. Call before you go.</p>
       <ul id="leads" class="plain xlist"></ul>
     </details>
 
-    <h3 class="h3" id="tip-h">Spotted a deal we don't have?</h3>
-    <form id="tip-form" class="tip-form" aria-labelledby="tip-h">
-      <label>Business <input name="name" required maxlength="80"></label>
-      <label>Address or area <input name="address" maxlength="120"></label>
-      <label>What they're offering <input name="offer" required maxlength="200"></label>
-      <label>When (hours) <input name="when" maxlength="80"></label>
-      <label>Where you saw it (link) <input name="source" type="url" maxlength="300" placeholder="https://"></label>
-      <button type="submit" class="btn">Send the tip</button>
-      <p class="note" id="tip-msg" role="status">Tips are checked before they appear for everyone. Don't include
-        your name or contact details.</p>
-    </form>
+    <details id="tip-wrap" class="fold">
+      <summary><h3 class="h3" id="tip-h">Spotted a deal we don't have?</h3></summary>
+      <form id="tip-form" class="tip-form" aria-labelledby="tip-h">
+        <label>Business <input name="name" required maxlength="80"></label>
+        <label>Address or area <input name="address" maxlength="120"></label>
+        <label>What they're offering <input name="offer" required maxlength="200"></label>
+        <label>When (hours) <input name="when" maxlength="80"></label>
+        <label>Where you saw it (link) <input name="source" type="url" maxlength="300" placeholder="https://"></label>
+        <button type="submit" class="btn">Send the tip</button>
+        <p class="note" id="tip-msg" role="status">Tips are checked before they appear for everyone. Don't include
+          your name or contact details.</p>
+      </form>
+    </details>
   </section>
 
   <!-- Me: who you are, what you like, how your day is going -->
   <section id="tab-me" class="panel" aria-labelledby="me-h" hidden>
     <h2 id="me-h" class="h2">About you and your day</h2>
     <p class="note">Everything here stays on this phone. None of it is sent anywhere.</p>
+    <h3 class="h3">My day so far</h3>
+    <div id="mine"></div>
+    <p id="community" class="note">Shared reports appear here on Veterans Day.</p>
     <form id="me-form" class="me-form">
-      <fieldset><legend>I am</legend>
+      <fieldset class="cols"><legend>I am</legend>
         <label><input type="radio" name="status" value="veteran"> A veteran</label>
         <label><input type="radio" name="status" value="retired"> Retired military</label>
         <label><input type="radio" name="status" value="active"> Active duty</label>
-        <label><input type="radio" name="status" value="guard_reserve"> Serving in the Guard or Reserve</label>
+        <label><input type="radio" name="status" value="guard_reserve"> In the Guard or Reserve</label>
       </fieldset>
-      <fieldset><legend>With me</legend>
+      <fieldset class="cols"><legend>With me</legend>
         <label><input type="checkbox" name="spouse"> My spouse</label>
-        <label>Kids <select name="kids"><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></label>
+        <label class="inline">Kids <select name="kids"><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></label>
       </fieldset>
-      <fieldset><legend>I'll carry</legend>
+      <fieldset class="cols"><legend>I'll carry</legend>
         <label><input type="checkbox" name="proof" value="military_id"> Military ID or CAC</label>
         <label><input type="checkbox" name="proof" value="dd214"> DD-214</label>
         <label><input type="checkbox" name="proof" value="va_card"> VA health ID card</label>
@@ -188,15 +204,15 @@
         <label><input type="checkbox" name="proof" value="photo_in_uniform"> Photo of me in uniform</label>
       </fieldset>
       <fieldset id="ready-fs"><legend>Signed up ahead</legend></fieldset>
-      <fieldset><legend>My day</legend>
+      <fieldset class="cols"><legend>My day</legend>
         <label>Sit-down meals today <select name="mealsMax"><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option></select></label>
-        <label>Pace <select name="pace">
+        <label>Done by <select name="dayEnd" id="me-dayend"></select></label>
+        <label class="span2">Pace <select name="pace">
           <option value="relaxed">Relaxed: fewer, closer stops</option>
           <option value="balanced">Balanced</option>
           <option value="max">Max haul: every deal worth the drive</option>
         </select></label>
-        <label>Done by <select name="dayEnd" id="me-dayend"></select></label>
-        <label>Roads <select name="roads">
+        <label class="span2">Roads <select name="roads">
           <option value="auto">From the NWS forecast</option>
           <option value="normal">Normal</option>
           <option value="slick">Snow or ice: allow more time</option>
@@ -210,23 +226,23 @@
           <button type="button" id="block-add" class="btn btn-quiet">Add</button>
         </div>
       </fieldset>
-      <fieldset><legend>What I like</legend>
+      <details class="fold me-fold">
+        <summary><span class="legend-like">What I like</span> <span class="fold-hint">Also under Route settings</span></summary>
         <div id="prefs" class="prefs"></div>
         <p class="note">The app also learns a little: each deal you collect nudges its kind up, each skip nudges it
           down. The nudge shows next to each kind.</p>
-      </fieldset>
+      </details>
     </form>
-    <h3 class="h3">My day so far</h3>
-    <div id="mine"></div>
-    <h3 class="h3">Deals I said never to</h3>
-    <ul id="vetoes" class="plain"></ul>
-    <h3 class="h3">Everyone today</h3>
-    <p id="community" class="note">Shared reports appear here on Veterans Day.</p>
-    <p><button type="button" id="reset" class="btn btn-quiet">Start over (clears this phone)</button></p>
+    <details class="fold">
+      <summary><h3 class="h3">Deals I said never to <span id="vetoes-n" class="fold-n"></span></h3></summary>
+      <ul id="vetoes" class="plain"></ul>
+    </details>
+    <p><button type="button" id="reset" class="btn btn-quiet btn-small">Start over (clears this phone)</button></p>
   </section>
 
-  <section id="about" class="about" aria-labelledby="about-h">
-    <h2 id="about-h" class="h2">About this</h2>
+  <!-- Folded under every tab: what it is, method, limits, privacy and sources, one tap away. -->
+  <details id="about" class="about fold" aria-labelledby="about-h">
+    <summary><h2 id="about-h" class="h2">About this planner</h2> <span class="fold-hint">How it works, limits, privacy, sources</span></summary>
     <h3 class="h3">What it is</h3>
     <p>A free planner for veterans and service members in Fargo-Moorhead on Veterans Day, Wednesday 11 November
       2026. It builds your route from where you are, what you're after and the time you have left, checks you can
@@ -263,7 +279,7 @@
     <p id="sources-line">Each deal lists its own sources under Deals. Places: © OpenStreetMap contributors (ODbL) and
       the US Census Bureau geocoder. Drive times and route lines: OSRM, on OpenStreetMap data (route lines from the
       public server run by FOSSGIS). Weather: National Weather Service. Map tiles: OpenStreetMap Foundation.</p>
-  </section>
+  </details>
 </main>
 
 <footer class="foot">
