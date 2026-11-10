@@ -90,6 +90,28 @@ test("the route builder is the first tab: goals, likes, times and the route's pa
   for (const g of ["stops", "savings", "both"]) assert.match(HTML, new RegExp(`data-goal="${g}"`));
 });
 
+test("Plan for: Optimal is the first button and the default (10 Nov 2026)", () => {
+  const kinds = [...HTML.matchAll(/data-kind="([a-z]+)"/g)].map((m) => m[1]);
+  assert.deepEqual(kinds, ["optimal", "best", "max"]);
+  const app = SCRIPTS["app.js"];
+  assert.match(app, /goal: "optimal", goalSet: false/, "a new phone starts on Optimal");
+  assert.match(app, /if \(!s\.goalSet && \(s\.goal === "best" \|\| !s\.goal\)\) s\.goal = "optimal"/, "a phone left on the old default moves once");
+  for (const k of ["optimal", "best", "stops", "savings", "both"]) assert.match(app, new RegExp(k + ": \""), "GOAL_NAME and GOAL_NOTE: " + k);
+});
+
+test("every offer in every area says what kind of stop it is; tickets for later have no kind", () => {
+  const KNOWN = new Set(["meal", "snack", "coffee", "sweet", "bar", "haircut", "car-wash", "oil-change", "shopping",
+    "ceremony", "memorial", "flag", "games"]);
+  for (const [area, { deals }] of Object.entries(AREA_DATA)) {
+    for (const o of deals.offers) {
+      assert.ok(Array.isArray(o.kinds), `${area} ${o.id}: kinds`);
+      if (o.ticket) assert.deepEqual(o.kinds, [], `${area} ${o.id}: a ticket has no kind`);
+      else assert.ok(o.kinds.length > 0, `${area} ${o.id}: at least one kind`);
+      for (const k of o.kinds) assert.ok(KNOWN.has(k), `${area} ${o.id}: unknown kind ${k}`);
+    }
+  }
+});
+
 test("tickets for later are tagged, and deals that need a purchase are marked", () => {
   const byId = Object.fromEntries(DEALS.offers.map((o) => [o.id, o]));
   for (const id of ["great-clips", "texas-roadhouse", "freddys"]) {

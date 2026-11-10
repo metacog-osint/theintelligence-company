@@ -1,10 +1,15 @@
-/*! Veterans Day route engine v1.3 · The Intelligence Company · pure functions: no DOM, no network, no storage.
+/*! Veterans Day route engine v1.4 · The Intelligence Company · pure functions: no DOM, no network, no storage.
  *  Browser: window.VDEngine. Node (tests): require("./engine.js").
  *
- *  Goals (profile.goal): "best" weighs each deal's value against your time at your pace; "stops" fits in the most
+ *  Goals (profile.goal): "optimal" collects the best deal of each kind along the way, never two of the same kind
+ *  within 3 hours; "best" weighs each deal's value against your time at your pace; "stops" fits in the most
  *  places before you're done; "savings" the most dollars; "both" scores each plan half on stops and half on dollars,
  *  each as a share of what the other two goals reach. Every goal keeps to deal windows, busy times, your done-by
  *  time, the meal limit, your appetite and anything you've turned off.
+ *  v1.4 (10 Nov 2026): "optimal" (the Maximize routes stack "multiple free coffee grabs within a short window";
+ *  most people won't want that). offer.kinds (coffee, meal, bar, haircut, ...) say what a stop is; a ticket for
+ *  later has none and never counts. A stop you pinned or chose to go to first may repeat a kind; what you've marked
+ *  Got it today counts. Also: an offer open to the public is open to you (it was "not eligible" before).
  *  Appetite: food eaten there fills you up (a sit-down meal 1, a quick bite 0.4) and wears off at 0.3 an hour. A
  *  ticket for later (a voucher or card) and food you take home (profile.togo) fill nothing.
  *  v1.2 (8 Nov 2026): a route doesn't open with a ticket for later unless it fits nowhere later or moving it costs
@@ -30,7 +35,11 @@
   var LOCAL_KMH = 25, DETOUR = 1.4, PARK_MS = 2.5 * MIN, ARRIVE_BY_MS = 5 * MIN, MAX_WAIT_MS = 4 * HOUR;
   var DECAY_MIN = 120, LINE_FRESH_MS = 40 * MIN, OUT_FRESH_MS = 6 * HOUR;
   var PACE = { relaxed: 0.5, balanced: 0.25, max: 0.1 }; // dollars of value a minute of your day is worth
-  var GOALS = ["best", "stops", "savings", "both"];
+  var GOALS = ["optimal", "best", "stops", "savings", "both"];
+  var SPACING_MS = 3 * HOUR; // "optimal": the least time between two stops of the same kind (10 Nov 2026)
+  // Older data files have no kinds: guess from the category.
+  var CAT_KIND = { breakfast: "meal", meal: "meal", quick: "meal", coffee: "coffee", treat: "sweet", bar: "bar",
+    shopping: "shopping", event: "ceremony" };
   var DIGEST = 0.3; // share of a full meal gone each hour: a sit-down meal wears off in about 3 hours
   var MEALTIMES = [[360, 630], [630, 870], [990, 1230]]; // local minutes: 6:00–10:30, 10:30–14:30, 16:30–20:30
   var TAKEAWAY = { to_go: 1, drive_thru: 1, dine_in_or_to_go: 1, in_store: 1 };
@@ -95,7 +104,7 @@
   // ---------------------------------------------------------------- who qualifies
   function eligibility(offer, profile) {
     var st = profile.status, el = offer.eligible || [], flags = [], f = 1;
-    var ok = el.indexOf(st) >= 0 || (st === "retired" && el.indexOf("veteran") >= 0);
+    var ok = el.indexOf(st) >= 0 || el.indexOf("public") >= 0 || (st === "retired" && el.indexOf("veteran") >= 0);
     if (st === "guard_reserve") {
       if (offer.guard_reserve === "yes") ok = true;
       else if (offer.guard_reserve === "no") ok = false;
@@ -127,6 +136,21 @@
   }
   function takeaway(o) { return !o.dineIn && !o.ticket && (!o.mode || !!TAKEAWAY[o.mode]); }
   function eatsThere(o, togo) { return eatWeight(o) > 0 && !(togo && takeaway(o)); }
+  // What kind of stop it is, for "optimal": the data's kinds, else a guess from the category. A ticket has none.
+  function kindsOf(o) {
+    if (o.ticket) return [];
+    if (o.kinds) return o.kinds;
+    if (o.category === "service") return [o.group || o.id];
+    return [CAT_KIND[o.category] || o.category];
+  }
+  // A stop of a kind you had less than 3 hours earlier (kinds: {kind: when its last stop started}).
+  function tooSoon(kinds, c, t) {
+    for (var i = 0; i < c.kinds.length; i++) {
+      var k = kinds[c.kinds[i]];
+      if (k !== undefined && t - k < SPACING_MS) return true;
+    }
+    return false;
+  }
   function digest(fill, from, to) { return Math.max(0, fill - DIGEST * Math.max(0, to - from) / HOUR); }
   function appetite(fill) { return Math.min(1, Math.max(0.05, 1.15 - fill)); } // empty 1, after a big meal 0.15
 
@@ -148,11 +172,12 @@
     reports = reports || { place: {}, offer: {} };
     var offersById = {}, cands = [], excluded = {};
     data.offers.forEach(function (o) { offersById[o.id] = o; });
-    // Sit-down meals so far, and how full you are now from what you ate there.
-    var meals = 0, ate = [], fill = 0, fillT = now;
+    // Sit-down meals so far, how full you are now from what you ate there, and when you last had each kind of stop.
+    var meals = 0, ate = [], fill = 0, fillT = now, kindsT = {};
     Object.keys(state.done || {}).forEach(function (id) {
       var d = state.done[id], o = offersById[id];
       if (!o || d.r !== "worked") return;
+      kindsOf(o).forEach(function (k) { if (kindsT[k] === undefined || d.t > kindsT[k]) kindsT[k] = d.t; });
       if (o.meal && o.dineIn) meals++;
       if (eatsThere(o, profile.togo)) ate.push({ t: d.t, w: eatWeight(o) });
     });
@@ -205,7 +230,7 @@
         base: (o.worth !== undefined ? o.worth : o.value) * el.mult * q * pref,
         dollars: o.value * el.mult * q,  // "savings": expected dollars, likes ignored
         count: Math.min(1, q / 0.3),     // "stops": a place counts in full unless it's a long shot
-        pinned: !!(state.pinned && state.pinned[o.id])
+        pinned: !!(state.pinned && state.pinned[o.id]), kinds: kindsOf(o)
       });
     });
     var drive = data.drive;
@@ -217,7 +242,7 @@
       blocks: (profile.blocks || []).slice().sort(function (a, b) { return a.start - b.start; }),
       tzOffsetMin: data.tzOffsetMin === undefined ? -360 : data.tzOffsetMin,
       goal: GOALS.indexOf(profile.goal) >= 0 ? profile.goal : "best", togo: !!profile.togo, ref: null,
-      meals: meals, fill: fill
+      meals: meals, fill: fill, kindsT: kindsT
     };
   }
   function withGoal(ctx, goal) { var c = {}; for (var k in ctx) c[k] = ctx[k]; c.goal = goal; return c; }
@@ -237,8 +262,9 @@
     return t;
   }
 
-  // One stop from a search state; null if you can't make it.
-  function evalStop(ctx, st, c) {
+  // One stop from a search state; null if you can't make it. force: a stop you chose to go to first, which "optimal"
+  // takes even if it repeats a kind.
+  function evalStop(ctx, st, c, force) {
     var leave = afterBlocks(ctx, st.t), d = driveMs(ctx, st, c);
     if (!isFinite(d)) return null;
     var o = c.offer, arrive, start, depart, queue = 0;
@@ -259,12 +285,14 @@
     }
     if (start - arrive > MAX_WAIT_MS) return null;
     if (depart > ctx.dayEnd) return null;
+    // "optimal": not a second coffee (bar, meal, haircut...) within 3 hours of the last; a pin says you want it anyway.
+    if (ctx.goal === "optimal" && !force && !c.pinned && tooSoon(st.kinds, c, start)) return null;
     // Appetite: eating while full is worth less; a ticket for later or food taken home fills nothing.
     var w = eatWeight(o), here = eatsThere(o, ctx.togo), fill = digest(st.fill, st.fillT, start), full = 1;
     if (o.meal && o.dineIn && st.meals >= ctx.mealsMax) return null; // past your sit-down meal limit
     if (here) full = appetite(fill);
     if (full < 0.3) return null; // too full to eat it there
-    if (here && o.meal && ctx.goal === "best" && !mealtime(ctx, start)) full *= 0.75;
+    if (here && o.meal && (ctx.goal === "best" || ctx.goal === "optimal") && !mealtime(ctx, start)) full *= 0.75;
     if (w > 0 && !here) full *= 0.9; // saved for later
     var ev = c.base * full, used = (depart - st.t) / MIN, eat = Math.min(1, full * 2);
     // Driving and lines cost the full rate; time at the stop itself (eating, a haircut) a third of it, since that is
@@ -274,7 +302,9 @@
     var cost = (d / MIN + queue + Math.min(waitMin, 20) + 0.1 * Math.max(0, waitMin - 20) + 0.3 * o.minutes) * ctx.lambda;
     var gain;
     // The Maximize goals ignore pace and likes (Off still counts); the minutes only break ties toward quicker stops.
-    if (ctx.goal === "stops") gain = c.count * eat - 0.003 * used + (c.pinned ? 3 : 0);
+    // "optimal" is like Most savings, but counts what you love and what a ceremony is worth (ev, not dollars).
+    if (ctx.goal === "optimal") gain = ev - 0.01 * used + (c.pinned ? 40 : 0);
+    else if (ctx.goal === "stops") gain = c.count * eat - 0.003 * used + (c.pinned ? 3 : 0);
     else if (ctx.goal === "savings") gain = c.dollars * full - 0.01 * used + (c.pinned ? 40 : 0);
     else if (ctx.goal === "both") gain = 50 * c.count * eat / ctx.ref.n + 50 * c.dollars * full / ctx.ref.d - 0.01 * used + (c.pinned ? 20 : 0);
     else gain = ev - cost + (c.pinned ? 40 : 0);
@@ -292,16 +322,20 @@
   }
 
   function startState(ctx, t, at) {
-    return { t: t, at: at === undefined ? -1 : at, used: {}, meals: ctx.meals, fill: ctx.fill, fillT: ctx.now, steps: [], score: 0, key: "" };
+    var kinds = {};
+    for (var k in ctx.kindsT) kinds[k] = ctx.kindsT[k];
+    return { t: t, at: at === undefined ? -1 : at, used: {}, meals: ctx.meals, fill: ctx.fill, fillT: ctx.now, kinds: kinds, steps: [], score: 0, key: "" };
   }
   function extend(st, step) {
-    var o = step.c.offer, used = {};
+    var o = step.c.offer, used = {}, kinds = {};
     for (var k in st.used) used[k] = 1;
+    for (var q in st.kinds) kinds[q] = st.kinds[q];
+    step.c.kinds.forEach(function (x) { kinds[x] = step.start; });
     used[o.id] = 1;
     if (o.group) used["g:" + o.group] = 1; // one of a kind a day (a haircut)
     var meal = o.meal && o.dineIn;
     return {
-      t: step.depart, at: step.c.i, used: used,
+      t: step.depart, at: step.c.i, used: used, kinds: kinds,
       meals: st.meals + (meal ? 1 : 0), fill: step.fillAfter, fillT: step.start,
       steps: st.steps.concat([step]), score: st.score + step.gain,
       key: Object.keys(used).sort().join(",") + "@" + step.c.i
@@ -317,7 +351,7 @@
   // the one with the highest score.
   function rate(ctx, t) {
     if (ctx.goal === "stops") return 1 / 20;
-    if (ctx.goal === "savings") return 0.2;
+    if (ctx.goal === "savings" || ctx.goal === "optimal") return 0.2;
     if (ctx.goal === "both") return 100 / Math.max(60, (ctx.dayEnd - t) / MIN);
     return 0;
   }
@@ -384,7 +418,7 @@
     needRef(ctx, t);
     var start = startState(ctx, t, opts.at);
     if (opts.first) {
-      var lead = evalStop(ctx, start, opts.first);
+      var lead = evalStop(ctx, start, opts.first, true);
       if (lead) start = extend(start, lead);
     }
     var best = beam(ctx, start, opts.width || 10, opts.depth || (ctx.goal === "best" ? 24 : 40));
@@ -489,10 +523,10 @@
   }
 
   return {
-    version: "1.2", km: km, fromPosition: fromPosition, stats: stats, confidence: confidence, eligibility: eligibility,
+    version: "1.4", km: km, fromPosition: fromPosition, stats: stats, confidence: confidence, eligibility: eligibility,
     proofLabel: proofLabel, prepare: prepare, evalStop: evalStop, nextOptions: nextOptions, planDay: planDay,
-    learn: learn, strike: strike, localMinutes: localMinutes, eatWeight: eatWeight, takeaway: takeaway,
-    PACE: PACE, GRADE_P: GRADE_P, GOALS: GOALS,
+    learn: learn, strike: strike, localMinutes: localMinutes, eatWeight: eatWeight, takeaway: takeaway, kindsOf: kindsOf,
+    PACE: PACE, GRADE_P: GRADE_P, GOALS: GOALS, SPACING_MS: SPACING_MS,
     _internal: { startState: startState, extend: extend, beam: beam, afterBlocks: afterBlocks, withGoal: withGoal }
   };
 });

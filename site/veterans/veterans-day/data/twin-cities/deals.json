@@ -1,6 +1,6 @@
 {
  "meta": {
-  "built_at": "2026-11-10T15:33:53Z",
+  "built_at": "2026-11-10T18:12:34Z",
   "day": "2026-11-11",
   "day_start": "2026-11-11T06:00:00Z",
   "tz": "America/Chicago",
@@ -102,7 +102,10 @@
    "caution": "",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
   },
   {
    "id": "chilis",
@@ -162,7 +165,10 @@
    "caution": "",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
   },
   {
    "id": "olive-garden",
@@ -212,7 +218,10 @@
    "caution": "Not announced by the company for 2026: call first",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
   },
   {
    "id": "red-lobster",
@@ -262,7 +271,10 @@
    "caution": "Not announced by the company for 2026: call first",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
   },
   {
    "id": "buffalo-wild-wings",
@@ -318,7 +330,10 @@
    "caution": "",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
   },
   {
    "id": "famous-daves",
@@ -363,7 +378,10 @@
    "caution": "",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
   },
   {
    "id": "dave-busters",
@@ -406,7 +424,10 @@
    "caution": "",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "games"
+   ]
   },
   {
    "id": "red-robin",
@@ -461,7 +482,10 @@
    "caution": "",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
   },
   {
    "id": "smashburger",
@@ -517,6 +541,9 @@
    "group": null,
    "ticket": false,
    "purchase": false,
+   "kinds": [
+    "meal"
+   ],
    "eat": 0.6
   },
   {
@@ -572,7 +599,10 @@
    "caution": "Stores with hot food service only",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
   },
   {
    "id": "dennys",
@@ -633,7 +663,10 @@
    "caution": "",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
   },
   {
    "id": "perkins",
@@ -669,6 +702,11 @@
    "limits": "",
    "sources": [
     {
+     "url": "https://www.restaurantnews.com/veterans-day-free-meals-deals-2026-110526/",
+     "publisher": "RestaurantNews.com (free Magnificent Seven Breakfast Meal on Wednesday, November 11, 2026, participating locations)",
+     "published": "2026-11-05"
+    },
+    {
      "url": "https://www.fox4news.com/news/veterans-day-2026-deals",
      "publisher": "FOX 4 Dallas-Fort Worth (FOX Local)",
      "published": "2026-11-04 (updated 2026-11-05)"
@@ -693,16 +731,19 @@
    "caution": "",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
   },
   {
    "id": "village-inn",
    "brand": "Village Inn",
    "status": "offering",
    "category": "breakfast",
-   "offer": "Reported for 2026 (unconfirmed): free 2-2-2 breakfast",
+   "offer": "Free breakfast in store: a 2-2-2 (Military.com) or a V.I.B. breakfast (Veteran.com); the lists differ",
    "value": 11,
-   "grade": "C",
+   "grade": "B",
    "start": null,
    "end": null,
    "window_text": "",
@@ -731,6 +772,16 @@
    "limits": "",
    "sources": [
     {
+     "url": "https://www.military.com/discounts/village-inn-veterans-day-military-discount",
+     "publisher": "Military.com (free 2-2-2 breakfast on November 11, 2026; dine-in or pick-up)",
+     "published": "undated; read 10 Nov 2026"
+    },
+    {
+     "url": "https://veteran.com/village-inn-veterans-day-deal/",
+     "publisher": "Veteran.com (free V.I.B. breakfast, in store only)",
+     "published": "2026-11-09 (updated)"
+    },
+    {
      "url": "https://www.villageinn.com/moorhead-mn",
      "publisher": "Village Inn (Moorhead store page: open 6 AM–8 PM)",
      "published": "seen 8 Nov 2026"
@@ -741,11 +792,14 @@
      "published": "2026-10-30"
     }
    ],
-   "notes": "Only one 2026 listing has this (a compiled report we couldn't trace to the business). Not announced by the business: call first. The Krazy Coupon Lady listed it as predicted.",
-   "caution": "Only one unconfirmed 2026 listing: call first",
+   "notes": "Two 2026 deal lists carry it (read 10 Nov 2026) and disagree on which breakfast; Village Inn itself hasn't announced it. The Krazy Coupon Lady listed it as predicted.",
+   "caution": "2026 lists differ on which breakfast, and Village Inn hasn't announced it: call first",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
   },
   {
    "id": "wendys",
@@ -755,9 +809,9 @@
    "offer": "Free Dave's Single cheeseburger",
    "value": 6,
    "grade": "A",
-   "start": null,
+   "start": "2026-11-11T16:30:00Z",
    "end": null,
-   "window_text": "",
+   "window_text": "from 10:30 CST",
    "mode": "dine_in_or_to_go",
    "minutes": 12,
    "busy": 10,
@@ -808,7 +862,10 @@
    "caution": "",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
   },
   {
    "id": "firehouse-subs",
@@ -864,6 +921,9 @@
    "group": null,
    "ticket": false,
    "purchase": true,
+   "kinds": [
+    "meal"
+   ],
    "eat": 0.5
   },
   {
@@ -925,6 +985,9 @@
    "group": null,
    "ticket": false,
    "purchase": true,
+   "kinds": [
+    "snack"
+   ],
    "eat": 0.2
   },
   {
@@ -976,6 +1039,9 @@
    "group": null,
    "ticket": false,
    "purchase": false,
+   "kinds": [
+    "snack"
+   ],
    "eat": 0.2
   },
   {
@@ -1024,7 +1090,11 @@
    "caution": "",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "meal",
+    "coffee"
+   ]
   },
   {
    "id": "shake-shack",
@@ -1066,7 +1136,10 @@
    "caution": "",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
   },
   {
    "id": "starbucks",
@@ -1125,7 +1198,10 @@
    "caution": "",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "coffee"
+   ]
   },
   {
    "id": "scooters",
@@ -1180,7 +1256,10 @@
    "caution": "",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "coffee"
+   ]
   },
   {
    "id": "caribou",
@@ -1234,7 +1313,10 @@
    "caution": "",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "coffee"
+   ]
   },
   {
    "id": "circle-k",
@@ -1289,7 +1371,10 @@
    "caution": "",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "coffee"
+   ]
   },
   {
    "id": "dunkin",
@@ -1342,7 +1427,10 @@
    "caution": "",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "sweet"
+   ]
   },
   {
    "id": "freddys",
@@ -1402,7 +1490,8 @@
    "caution": "",
    "group": null,
    "ticket": true,
-   "purchase": false
+   "purchase": false,
+   "kinds": []
   },
   {
    "id": "great-clips",
@@ -1470,7 +1559,8 @@
    "caution": "",
    "group": null,
    "ticket": true,
-   "purchase": false
+   "purchase": false,
+   "kinds": []
   },
   {
    "id": "sport-clips",
@@ -1530,7 +1620,10 @@
    "caution": "Participating shops only: call first",
    "group": "haircut",
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "haircut"
+   ]
   },
   {
    "id": "jiffy-lube",
@@ -1576,7 +1669,10 @@
    "caution": "Only some franchise shops take part: call first",
    "group": null,
    "ticket": false,
-   "purchase": true
+   "purchase": true,
+   "kinds": [
+    "oil-change"
+   ]
   },
   {
    "id": "target",
@@ -1645,7 +1741,10 @@
    "caution": "",
    "group": null,
    "ticket": false,
-   "purchase": true
+   "purchase": true,
+   "kinds": [
+    "shopping"
+   ]
   },
   {
    "id": "kohls",
@@ -1706,7 +1805,10 @@
    "caution": "",
    "group": null,
    "ticket": false,
-   "purchase": true
+   "purchase": true,
+   "kinds": [
+    "shopping"
+   ]
   },
   {
    "id": "walgreens",
@@ -1763,7 +1865,10 @@
    "caution": "",
    "group": null,
    "ticket": false,
-   "purchase": true
+   "purchase": true,
+   "kinds": [
+    "shopping"
+   ]
   },
   {
    "id": "maple-grove-tribute",
@@ -1814,7 +1919,10 @@
    "worth": 12,
    "arrive_by": "2026-11-11T17:00:00Z",
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "ceremony"
+   ]
   },
   {
    "id": "malones-maple-grove",
@@ -1856,7 +1964,10 @@
    "caution": "One 2026 deal list carries it, and the address is from directories: call first",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
   },
   {
    "id": "tavern-grill-arden-hills",
@@ -1898,7 +2009,10 @@
    "caution": "Address from directories: call first",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
   }
  ],
  "places": [

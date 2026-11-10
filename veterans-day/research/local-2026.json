@@ -28,6 +28,12 @@
     "accessed": "2026-11-08"
    },
    {
+    "url": "https://www.valleynewslive.com/2026/11/09/veterans-day-events-planned-across-f-m-area/",
+    "publisher": "Valley News Live (Veterans Day events planned across F-M area)",
+    "published": "2026-11-09",
+    "accessed": "2026-11-10"
+   },
+   {
     "url": "https://fargoairmuseum.org/calendar/veterans-day-program/2025",
     "publisher": "Fargo Air Museum",
     "published": "2025-11-11 event page",
@@ -405,15 +411,14 @@
   "address": null,
   "phone": "(701) 532-3202",
   "wednesday_hours": "unknown",
-  "status_2026": "no_2026_info",
-  "offer": "Reported for 2026 (unconfirmed): free cheeseburger basket or 20% off, and a 'Buy a Vet a Bud' wall for a free pint (21+). 2021: free Garage Burger or 20% off",
+  "status_2026": "offering",
+  "offer": "Free Cheeseburger Basket, or 20% off any one item (its year-round Everyday Hero Discount)",
   "est_value_usd": 14,
-  "dates": "2026-11-11 (unconfirmed)",
+  "dates": "2026-11-11",
   "hours_local": null,
   "mode": "dine_in",
   "eligible": [
-   "veteran",
-   "active"
+   "veteran"
   ],
   "eligibility_quote": "",
   "guard_reserve": "unclear",
@@ -423,9 +428,21 @@
    "va_card",
    "dd214"
   ],
-  "limits": "",
-  "grade": "C",
+  "limits": "One free basket, or 20% off one item",
+  "grade": "A",
   "sources": [
+   {
+    "url": "https://sickiesburgers.com/specials-events",
+    "publisher": "Sickies Garage (its Specials & Events page: Veterans Day offer, Wednesday, November 11, 2026)",
+    "published": "seen 10 Nov 2026",
+    "accessed": "2026-11-10"
+   },
+   {
+    "url": "https://themilitarywallet.com/veterans-day-free-meals-and-discounts/",
+    "publisher": "The Military Wallet (lists Sickies Garage, North Dakota)",
+    "published": "2026-11-09 (updated)",
+    "accessed": "2026-11-10"
+   },
    {
     "url": "https://www.valleynewslive.com/2021/11/11/local-businesses-offer-deals-veterans/",
     "publisher": "Valley News Live (2021 list)",
@@ -439,7 +456,7 @@
     "accessed": "2026-11-08"
    }
   ],
-  "notes": "Only one 2026 listing has this (a compiled report we couldn't trace to the business). Not announced by the business: call first.",
+  "notes": "Sickies' own Specials & Events page (read 10 Nov 2026) gives the offer under 'Veterans Day offer: Wednesday, November 11, 2026'. It names no stores, so both Fargo stores are assumed; it doesn't say what proof to bring. Also all November: guests 'Buy a Vet a Bud', and from Veterans Day a veteran can pull a flag off the wall for a Bud or Bud Light pint (21+, while flags last at participating locations).",
   "stores": [
    {
     "address": "3431 Fiechtner Dr S, Fargo, ND 58103",
@@ -985,7 +1002,7 @@
   "kind": "bar",
   "address": "1666 1st Ave N, Fargo, ND 58102",
   "phone": "(701) 532-0506",
-  "wednesday_hours": "16:00-20:00",
+  "wednesday_hours": "16:00-22:00",
   "status_2026": "no_2026_info",
   "offer": "1 free pint on 10 and 11 Nov",
   "est_value_usd": 7,
@@ -1007,6 +1024,12 @@
   "limits": "",
   "grade": "C",
   "sources": [
+   {
+    "url": "https://www.drekkerbrewing.com/",
+    "publisher": "Drekker Brewing (taproom hours: Monday to Thursday 4 to 10 PM, 21+ after 8 PM)",
+    "published": "seen 10 Nov 2026",
+    "accessed": "2026-11-10"
+   },
    {
     "url": null,
     "publisher": "Fargo Bites, 2025 (not linked: the site now redirects elsewhere)",
@@ -1201,19 +1224,31 @@
   "grade": "C",
   "sources": [
    {
+    "url": "https://www.sandysdonuts.com/",
+    "publisher": "Sandy's Donuts (its three shops)",
+    "published": "seen 10 Nov 2026",
+    "accessed": "2026-11-10"
+   },
+   {
     "url": "https://www.openstreetmap.org/",
     "publisher": "OpenStreetMap (store addresses)",
     "published": "seen 8 Nov 2026",
     "accessed": "2026-11-08"
    }
   ],
-  "notes": "Only one 2026 listing has this (a compiled report we couldn't trace to the business). Not announced by the business: call first. The report also mentions a downtown Fargo store; not found.",
+  "notes": "Only one 2026 listing has this (a compiled report we couldn't trace to the business). Not announced by the business: call first. Sandy's own site lists three shops (read 10 Nov 2026), downtown Fargo among them; it says nothing about Veterans Day.",
   "stores": [
    {
     "address": "301 Main Ave W, West Fargo, ND 58078",
     "phone": "",
     "wed_hours": "",
     "geo": "46.87647,-96.90505"
+   },
+   {
+    "address": "300 Broadway N, Fargo, ND 58102",
+    "phone": "",
+    "wed_hours": "",
+    "note": "Sandy's own site (10 Nov 2026)."
    },
    {
     "address": "4215 45th St S, Fargo, ND 58104",
@@ -1698,5 +1733,73 @@
    }
   ],
   "notes": "Fargo American Legion Post 2's 30 Oct 2026 list quotes Royal Buffet's offer and address; the same 9\u201311 Nov offer ran in 2023, so the list may be repeating it. Nothing from Royal Buffet itself found: call first."
+ },
+ {
+  "name": "Scheels flag exchange (Fargo)",
+  "kind": "event",
+  "address": "1551 45th St S, Fargo, ND 58103",
+  "phone": "",
+  "wednesday_hours": "unknown",
+  "status_2026": "offering",
+  "offer": "Flag exchange: bring a faded or frayed U.S. flag and swap it for a free 3x5-foot nylon flag, while supplies last. With Fargo AMVETS Post 7 and the Combat Veterans Motorcycle Association, who see the old flags retired with dignity",
+  "est_value_usd": 0,
+  "dates": "2026-11-11",
+  "hours_local": "11:00-13:00",
+  "mode": "event",
+  "eligible": [
+   "veteran",
+   "active",
+   "guard_reserve",
+   "public"
+  ],
+  "eligibility_quote": "",
+  "guard_reserve": "yes",
+  "spouse_or_guest": "yes",
+  "proof": [],
+  "limits": "Bring a faded or frayed U.S. flag to swap. While supplies last.",
+  "grade": "B",
+  "sources": [
+   {
+    "url": "https://www.valleynewslive.com/2026/11/09/veterans-day-events-planned-across-f-m-area/",
+    "publisher": "Valley News Live (Veterans Day events planned across F-M area)",
+    "published": "2026-11-09",
+    "accessed": "2026-11-10"
+   }
+  ],
+  "notes": "Valley News Live (9 Nov 2026): 11 AM to 1 PM in front of the store's Ferris wheel. It doesn't say who can swap a flag. Store address from Scheels' Fargo listing."
+ },
+ {
+  "name": "Nativity Catholic Church Veterans Day Mass (Fargo)",
+  "kind": "event",
+  "address": "1825 11th St S, Fargo, ND 58103",
+  "phone": "(701) 232-2414",
+  "wednesday_hours": "unknown",
+  "status_2026": "offering",
+  "offer": "Veterans are invited to join the students of Nativity Catholic School for Mass at 8:30 AM. Then a flag ceremony at 9:15 in the school gym and a fourth-grade art crawl of patriotic artwork with refreshments, 9:45 to 10:15",
+  "est_value_usd": 0,
+  "dates": "2026-11-11",
+  "hours_local": "08:30-10:15",
+  "mode": "event",
+  "eligible": [
+   "veteran",
+   "active",
+   "guard_reserve",
+   "public"
+  ],
+  "eligibility_quote": "Veterans are invited to join students for the Mass.",
+  "guard_reserve": "yes",
+  "spouse_or_guest": "unclear",
+  "proof": [],
+  "limits": "",
+  "grade": "B",
+  "sources": [
+   {
+    "url": "https://www.valleynewslive.com/2026/11/09/veterans-day-events-planned-across-f-m-area/",
+    "publisher": "Valley News Live (Veterans Day events planned across F-M area)",
+    "published": "2026-11-09",
+    "accessed": "2026-11-10"
+   }
+  ],
+  "notes": "Valley News Live (9 Nov 2026). It doesn't say whether visitors are welcome at the flag ceremony and the art crawl, or give the address; the church's address is from directories."
  }
 ]

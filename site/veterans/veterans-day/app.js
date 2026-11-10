@@ -1,6 +1,9 @@
-/*! Veterans Day 2026 planner · app v1.2 · The Intelligence Company. Load tic-time.js, engine.js and roads.js first.
+/*! Veterans Day 2026 planner · app v1.3 · The Intelligence Company. Load tic-time.js, engine.js and roads.js first.
  *  v1.2 (10 Nov 2026): areas. Fargo-Moorhead, Bismarck-Mandan and New Salem, and the Twin Cities' Plymouth, Maple
  *  Grove and Roseville, picked in the top bar.
+ *  v1.3 (10 Nov 2026): Plan for Optimal (engine v1.4), first and the default: the best deal of each kind, no
+ *  two of a kind within 3 hours. A phone still on the old default, Best for me, moves to Optimal once; a goal tapped
+ *  after that stays (S.goalSet).
  *  Everything about the user (settings, history, position) stays in this browser. The only network calls: the
  *  page's own data files, the NWS forecast, the shared field-report service (API below) and, on the Map tab, map tiles
  *  and the road shapes between the stores on your route (roads.js, from OSRM; never your position).
@@ -35,8 +38,9 @@
   const driveSafe = () => DRIVE_SAFE + (AREA && AREA.transit ? ", or " + AREA.transit : "") + ".";
   const likeOf = (c) => (S.prefs[c] === undefined ? (OFF_BY_DEFAULT[c] ? 0 : 1) : S.prefs[c]);
   const likeWord = (w) => (w > 1 ? "Love" : w > 0 ? "Fine" : "Off");
-  const GOAL_NAME = { best: "Best for me", stops: "Most stops", savings: "Most savings", both: "Stops + savings" };
+  const GOAL_NAME = { optimal: "Optimal", best: "Best for me", stops: "Most stops", savings: "Most savings", both: "Stops + savings" };
   const GOAL_NOTE = {
+    optimal: "The best deal of each kind on your way, with no two of the same kind (coffee, meal, bar, haircut) within 3 hours. Tickets for later don't count, and a pinned deal always fits. Counts what you love; leaves out anything Off.",
     best: "Weighs each deal against your time, at your pace, with more of what you love.",
     stops: "Fits in the most places before you're done. Ignores pace and Love; leaves out anything Off.",
     savings: "Collects the most dollars before you're done. Ignores pace and Love; leaves out anything Off.",
@@ -108,7 +112,7 @@
         dayEndMin: 21 * 60, mealsMax: 2, roads: "auto", blocks: [], togo: false },
       done: {}, away: {}, strikes: {}, vetoed: {}, pinned: {}, prefs: {}, learned: {},
       starts: {}, area: null, gps: false, sent: [], previewMin: 8 * 60, cats: {}, // starts: a start point per area
-      goal: "best", maxGoal: "both", leaveMin: null // leaveMin: minutes after midnight, or null for "now"
+      goal: "optimal", goalSet: false, maxGoal: "both", leaveMin: null // leaveMin: minutes after midnight, or null for "now"
     };
   }
   function load() {
@@ -119,6 +123,9 @@
     // Before areas there was one start point, always in Fargo-Moorhead.
     if (s.start && !s.starts) s.starts = { [DEFAULT_AREA]: s.start };
     delete s.start;
+    // Before Optimal (10 Nov 2026) every phone started on Best for me. One that never picked a goal since gets the new
+    // default; Maximize picks stay.
+    if (!s.goalSet && (s.goal === "best" || !s.goal)) s.goal = "optimal";
     return Object.assign(d, s, { profile: Object.assign(d.profile, s.profile || {}) });
   }
   function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) { /* private mode: still works this visit */ } }
@@ -303,9 +310,10 @@
   // How a stop sits in its deal's window: when you'd arrive, when the deal ends, and the time to spare.
   function windowLine(x) {
     const c = x.c, o = c.offer, by = o.arriveBy && o.arriveBy < c.close ? o.arriveBy : null; // a ceremony's start
-    const spare = ((by || c.close) - x.arrive) / MIN;
+    // Leaving at the time the stop shows (after any free time) gets you there as it opens: x.start, not x.arrive.
+    const spare = ((by || c.close) - x.start) / MIN;
     const ends = by ? "be there by " + fmt(by) : o.end || c.close - dayStart < 23.5 * HOUR ? (o.end ? "deal ends " : "closes ") + fmt(c.close) : "open late";
-    const bits = ["Arrive " + fmtNZ(x.arrive), ends];
+    const bits = ["Arrive " + fmtNZ(x.start), ends];
     if (ends !== "open late") bits.push(spare < 60 ? "only " + mins(spare) + " to spare" : mins(spare) + " to spare");
     return h("span", { class: "stop-win" + (spare < 25 ? " tight" : "") }, bits.join(" · "));
   }
@@ -361,6 +369,7 @@
     const last = steps[steps.length - 1], left = (ctx.dayEnd - last.depart) / MIN, end = $("#route-end");
     if (left < 90) end.textContent = "That fills your day to your done-by time, " + fmt(ctx.dayEnd) + ".";
     else if (ctx.goal === "best") end.textContent = "The route stops at " + fmt(last.depart) + " because nothing else is worth the drive at your pace. Maximize fits in more; so does a faster pace under Me.";
+    else if (ctx.goal === "optimal") end.textContent = "Nothing else fits after " + fmt(last.depart) + " without a second stop of the same kind within 3 hours, or what's left is closed, done, turned off or more food than you'd want. Maximize fits in more.";
     else end.textContent = "Nothing else fits after " + fmt(last.depart) + ": what's left is closed, done, turned off, past your sit-down meal limit or more food than you'd want.";
     end.append(" On the day it re-plans after every stop you mark.");
     // Google Maps takes at most 9 stops between the start and the end: one link per 10 stops.
@@ -380,8 +389,9 @@
   function renderSoon(ctx, plan, t) {
     const box = clear($("#soon")), inRoute = new Set(plan.steps.map((x) => x.c.offer.id)), seen = new Set();
     const st0 = E._internal.startState(ctx, t);
+    // force: listed even when Optimal holds it back for repeating a kind; adding it pins it, and a pin always fits.
     ctx.cands.filter((c) => !inRoute.has(c.offer.id) && c.close - t < 2 * HOUR)
-      .map((c) => ({ c, step: E.evalStop(ctx, st0, c) })).filter((x) => x.step)
+      .map((c) => ({ c, step: E.evalStop(ctx, st0, c, true) })).filter((x) => x.step)
       .sort((a, b) => a.c.close - b.c.close || a.step.driveMin - b.step.driveMin)
       .forEach((x) => {
         const o = x.c.offer;
@@ -408,11 +418,11 @@
 
   // The route's settings at the top of the page: leave and done-by times, the goal, what you're after, food to go.
   function renderControls() {
-    const kind = S.goal === "best" ? "best" : "max";
+    const kind = S.goal === "best" || S.goal === "optimal" ? S.goal : "max";
     $("#goal-kind").querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", b.dataset.kind === kind ? "true" : "false"));
     $("#goal-max").hidden = kind !== "max";
     $("#goal-max").querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", b.dataset.goal === S.goal ? "true" : "false"));
-    $("#goal-note").textContent = GOAL_NOTE[S.goal] || GOAL_NOTE.best;
+    $("#goal-note").textContent = GOAL_NOTE[S.goal] || GOAL_NOTE.optimal;
     $("#rb-leave").value = S.leaveMin === null || S.leaveMin === undefined ? "now" : String(S.leaveMin);
     $("#rb-end").value = String(S.profile.dayEndMin);
     $("#rb-togo").checked = !!S.profile.togo;
@@ -429,7 +439,7 @@
     $("#likes-sum").textContent = "What I'm after" + (likes ? ": " + likes : "");
     // The folded settings' summary line: what the route is built on, without opening it.
     const leave = S.leaveMin === null || S.leaveMin === undefined ? "Leave now" : "Leave " + fmtNZ(localMs(S.leaveMin));
-    $("#rb-set-sum").textContent = [leave, "done by " + fmtNZ(localMs(S.profile.dayEndMin)), GOAL_NAME[S.goal] || GOAL_NAME.best, likes]
+    $("#rb-set-sum").textContent = [leave, "done by " + fmtNZ(localMs(S.profile.dayEndMin)), GOAL_NAME[S.goal] || GOAL_NAME.optimal, likes]
       .filter(Boolean).join(" · ");
   }
 
@@ -896,13 +906,15 @@
     $("#goal-kind").addEventListener("click", (ev) => {
       const b = ev.target.closest("button");
       if (!b) return;
-      S.goal = b.dataset.kind === "best" ? "best" : S.maxGoal || "both";
+      S.goal = b.dataset.kind === "best" || b.dataset.kind === "optimal" ? b.dataset.kind : S.maxGoal || "both";
+      S.goalSet = true;
       save(); renderAll();
     });
     $("#goal-max").addEventListener("click", (ev) => {
       const b = ev.target.closest("button");
       if (!b) return;
       S.goal = S.maxGoal = b.dataset.goal;
+      S.goalSet = true;
       save(); renderAll();
     });
     timeOptions($("#rb-leave"), 5 * 60, 21 * 60, 30, S.leaveMin === null ? "now" : S.leaveMin, ["now", "Now"]);

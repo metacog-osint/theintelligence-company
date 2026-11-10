@@ -246,29 +246,36 @@
   "geo": "46.790928,-100.7729308"
  },
  {
-  "guard_reserve": "unclear",
-  "spouse_or_guest": "unclear",
+  "guard_reserve": "yes",
+  "spouse_or_guest": "yes",
   "proof": [],
   "limits": "",
-  "eligibility_quote": "",
+  "eligibility_quote": "complimentary brunch for veterans, active-serving military personnel, and their families",
   "name": "University of Mary Veterans Day chapel service and luncheon",
   "kind": "event",
   "address": "7500 University Dr, Bismarck, ND 58504",
   "phone": "unknown",
   "wednesday_hours": "unknown",
-  "status_2026": "no_2026_info",
-  "offer": "Last year: 2025 chapel service at 11:00 AM in Founders Hall, Lumen Vitae University Center, open to the public, for current and former military, veterans and families; complimentary lunch afterward for veterans and service members in attendance (Crow's Nest Campus Restaurant). No 2026 announcement found.",
+  "status_2026": "offering",
+  "offer": "Veterans Day Mass at 10:00 AM in Our Lady of the Annunciation Chapel, open to everyone regardless of religious affiliation, with a blessing for veterans and those serving near the end. Then a free brunch at The Crow's Nest campus restaurant for veterans, active-serving military and their families",
   "est_value_usd": 10,
-  "dates": "2026-11-11 (unconfirmed)",
-  "hours_local": "11:00-12:30",
+  "dates": "2026-11-11",
+  "hours_local": "10:00-12:00",
   "mode": "event",
   "eligible": [
    "veteran",
    "active",
+   "guard_reserve",
    "public"
   ],
-  "grade": "C",
+  "grade": "A",
   "sources": [
+   {
+    "url": "https://www.umary.edu/about/news/all-stories/university-mary-invites-veterans-active-serving-military-and-families",
+    "publisher": "University of Mary (Veterans Day Mass, Wed 11 Nov, 10 a.m.)",
+    "published": "2026-10-27",
+    "accessed": "2026-11-10"
+   },
    {
     "url": "https://www.umary.edu/about/news/all-stories/annual-veterans-day-chapel-service-and-luncheon-2025",
     "publisher": "University of Mary",
@@ -276,7 +283,7 @@
     "accessed": "2026-11-09"
    }
   ],
-  "notes": "New lead not in the research report. The 2025 page says the ceremony is open to the public and media and lunch is for veterans and service members attending; it does not say whether family eat. Page contact numbers are admissions lines, so phone left unknown. 2024 was at 10 AM (search summary). Check umary.edu or call before going. Address from OpenStreetMap geocoder.",
+  "notes": "The University of Mary's own 27 Oct 2026 post: Mass at 10:00 AM, then the brunch. No RSVP or end time given. In 2025 it was an 11:00 service in Founders Hall with lunch. New lead not in the research report. The 2025 page says the ceremony is open to the public and media and lunch is for veterans and service members attending; it does not say whether family eat. Page contact numbers are admissions lines, so phone left unknown. 2024 was at 10 AM (search summary). Check umary.edu or call before going. Address from OpenStreetMap geocoder.",
   "suggest": {
    "category": "event",
    "minutes_at_stop": 90,

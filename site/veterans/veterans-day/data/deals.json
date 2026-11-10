@@ -1,6 +1,6 @@
 {
  "meta": {
-  "built_at": "2026-11-10T15:18:09Z",
+  "built_at": "2026-11-10T18:13:10Z",
   "day": "2026-11-11",
   "day_start": "2026-11-11T06:00:00Z",
   "tz": "America/Chicago",
@@ -83,7 +83,10 @@
    "caution": "",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
   },
   {
    "id": "chilis",
@@ -143,7 +146,10 @@
    "caution": "",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
   },
   {
    "id": "olive-garden",
@@ -193,7 +199,10 @@
    "caution": "Not announced by the company for 2026: call first",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
   },
   {
    "id": "red-lobster",
@@ -243,7 +252,10 @@
    "caution": "Not announced by the company for 2026: call first",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
   },
   {
    "id": "twin-peaks",
@@ -304,7 +316,10 @@
    "caution": "",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
   },
   {
    "id": "buffalo-wild-wings",
@@ -360,7 +375,10 @@
    "caution": "",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
   },
   {
    "id": "ruby-tuesday",
@@ -409,7 +427,10 @@
    "caution": "Store not confirmed open: call first",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
   },
   {
    "id": "granite-city",
@@ -452,7 +473,10 @@
    "caution": "Store and 2026 offer not confirmed: call first",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
   },
   {
    "id": "pizza-ranch",
@@ -500,7 +524,10 @@
    "caution": "",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
   },
   {
    "id": "dennys",
@@ -561,7 +588,10 @@
    "caution": "",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
   },
   {
    "id": "ihop",
@@ -616,7 +646,10 @@
    "caution": "",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
   },
   {
    "id": "perkins",
@@ -652,6 +685,11 @@
    "limits": "",
    "sources": [
     {
+     "url": "https://www.restaurantnews.com/veterans-day-free-meals-deals-2026-110526/",
+     "publisher": "RestaurantNews.com (free Magnificent Seven Breakfast Meal on Wednesday, November 11, 2026, participating locations)",
+     "published": "2026-11-05"
+    },
+    {
      "url": "https://www.fox4news.com/news/veterans-day-2026-deals",
      "publisher": "FOX 4 Dallas-Fort Worth (FOX Local)",
      "published": "2026-11-04 (updated 2026-11-05)"
@@ -676,16 +714,19 @@
    "caution": "",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
   },
   {
    "id": "village-inn",
    "brand": "Village Inn",
    "status": "offering",
    "category": "breakfast",
-   "offer": "Reported for 2026 (unconfirmed): free 2-2-2 breakfast",
+   "offer": "Free breakfast in store: a 2-2-2 (Military.com) or a V.I.B. breakfast (Veteran.com); the lists differ",
    "value": 11,
-   "grade": "C",
+   "grade": "B",
    "start": null,
    "end": null,
    "window_text": "",
@@ -714,6 +755,16 @@
    "limits": "",
    "sources": [
     {
+     "url": "https://www.military.com/discounts/village-inn-veterans-day-military-discount",
+     "publisher": "Military.com (free 2-2-2 breakfast on November 11, 2026; dine-in or pick-up)",
+     "published": "undated; read 10 Nov 2026"
+    },
+    {
+     "url": "https://veteran.com/village-inn-veterans-day-deal/",
+     "publisher": "Veteran.com (free V.I.B. breakfast, in store only)",
+     "published": "2026-11-09 (updated)"
+    },
+    {
      "url": "https://www.villageinn.com/moorhead-mn",
      "publisher": "Village Inn (Moorhead store page: open 6 AM–8 PM)",
      "published": "seen 8 Nov 2026"
@@ -724,11 +775,14 @@
      "published": "2026-10-30"
     }
    ],
-   "notes": "Only one 2026 listing has this (a compiled report we couldn't trace to the business). Not announced by the business: call first. The Krazy Coupon Lady listed it as predicted. The Moorhead store's page lists 6 AM–8 PM daily but online ordering is off; call to check it's open. Fargo Legion Post 2's 30 Oct 2026 list also has it (free meal from a limited menu, drink extra); that list repeats older national offers, so it stays unconfirmed.",
-   "caution": "Only one unconfirmed 2026 listing: call first",
+   "notes": "Two 2026 deal lists carry it (read 10 Nov 2026) and disagree on which breakfast; Village Inn itself hasn't announced it. The Krazy Coupon Lady listed it as predicted. The Moorhead store's page lists 6 AM–8 PM daily but online ordering is off; call to check it's open. Fargo Legion Post 2's 30 Oct 2026 list also has it (free meal from a limited menu, drink extra); that list repeats older national offers, so it adds little on its own.",
+   "caution": "2026 lists differ on which breakfast, and Village Inn hasn't announced it: call first",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
   },
   {
    "id": "texas-roadhouse",
@@ -785,7 +839,8 @@
    "caution": "",
    "group": null,
    "ticket": true,
-   "purchase": false
+   "purchase": false,
+   "kinds": []
   },
   {
    "id": "wendys",
@@ -795,9 +850,9 @@
    "offer": "Free Dave's Single cheeseburger",
    "value": 6,
    "grade": "A",
-   "start": null,
+   "start": "2026-11-11T16:30:00Z",
    "end": null,
-   "window_text": "",
+   "window_text": "from 10:30 CST",
    "mode": "dine_in_or_to_go",
    "minutes": 12,
    "busy": 10,
@@ -848,7 +903,10 @@
    "caution": "",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
   },
   {
    "id": "little-caesars",
@@ -903,7 +961,10 @@
    "caution": "",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
   },
   {
    "id": "firehouse-subs",
@@ -959,6 +1020,9 @@
    "group": null,
    "ticket": false,
    "purchase": true,
+   "kinds": [
+    "meal"
+   ],
    "eat": 0.5
   },
   {
@@ -1020,6 +1084,9 @@
    "group": null,
    "ticket": false,
    "purchase": true,
+   "kinds": [
+    "snack"
+   ],
    "eat": 0.2
   },
   {
@@ -1071,6 +1138,9 @@
    "group": null,
    "ticket": false,
    "purchase": false,
+   "kinds": [
+    "snack"
+   ],
    "eat": 0.2
   },
   {
@@ -1115,6 +1185,9 @@
    "group": null,
    "ticket": false,
    "purchase": false,
+   "kinds": [
+    "snack"
+   ],
    "eat": 0.2
   },
   {
@@ -1172,7 +1245,10 @@
    "caution": "",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
   },
   {
    "id": "kwik-trip",
@@ -1220,7 +1296,11 @@
    "caution": "Fargo stores are called Kwik Star",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "meal",
+    "coffee"
+   ]
   },
   {
    "id": "pilot",
@@ -1278,7 +1358,11 @@
    "caution": "",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "meal",
+    "coffee"
+   ]
   },
   {
    "id": "blaze-pizza",
@@ -1325,7 +1409,10 @@
    "caution": "",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
   },
   {
    "id": "starbucks",
@@ -1384,7 +1471,10 @@
    "caution": "",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "coffee"
+   ]
   },
   {
    "id": "scooters",
@@ -1439,7 +1529,10 @@
    "caution": "New store; opening not confirmed: call first",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "coffee"
+   ]
   },
   {
    "id": "caribou",
@@ -1493,7 +1586,10 @@
    "caution": "",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "coffee"
+   ]
   },
   {
    "id": "caseys",
@@ -1553,7 +1649,10 @@
    "caution": "",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "coffee"
+   ]
   },
   {
    "id": "circle-k",
@@ -1608,7 +1707,10 @@
    "caution": "",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "coffee"
+   ]
   },
   {
    "id": "dunkin",
@@ -1661,7 +1763,10 @@
    "caution": "",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "sweet"
+   ]
   },
   {
    "id": "seven-brew",
@@ -1713,7 +1818,10 @@
    "caution": "",
    "group": null,
    "ticket": false,
-   "purchase": true
+   "purchase": true,
+   "kinds": [
+    "coffee"
+   ]
   },
   {
    "id": "insomnia",
@@ -1757,6 +1865,9 @@
    "group": null,
    "ticket": false,
    "purchase": true,
+   "kinds": [
+    "sweet"
+   ],
    "eat": 0.2
   },
   {
@@ -1817,7 +1928,8 @@
    "caution": "",
    "group": null,
    "ticket": true,
-   "purchase": false
+   "purchase": false,
+   "kinds": []
   },
   {
    "id": "sonic",
@@ -1865,6 +1977,9 @@
    "group": null,
    "ticket": false,
    "purchase": true,
+   "kinds": [
+    "sweet"
+   ],
    "eat": 0.3
   },
   {
@@ -1913,6 +2028,9 @@
    "group": null,
    "ticket": false,
    "purchase": false,
+   "kinds": [
+    "snack"
+   ],
    "eat": 0.3
   },
   {
@@ -1981,7 +2099,8 @@
    "caution": "",
    "group": null,
    "ticket": true,
-   "purchase": false
+   "purchase": false,
+   "kinds": []
   },
   {
    "id": "sport-clips",
@@ -2041,7 +2160,10 @@
    "caution": "Participating shops only, and this address isn't confirmed: call first",
    "group": "haircut",
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "haircut"
+   ]
   },
   {
    "id": "tommys-express",
@@ -2099,7 +2221,10 @@
    "caution": "",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "car-wash"
+   ]
   },
   {
    "id": "jiffy-lube",
@@ -2145,7 +2270,10 @@
    "caution": "Only some franchise shops take part: call first",
    "group": null,
    "ticket": false,
-   "purchase": true
+   "purchase": true,
+   "kinds": [
+    "oil-change"
+   ]
   },
   {
    "id": "target",
@@ -2214,7 +2342,10 @@
    "caution": "",
    "group": null,
    "ticket": false,
-   "purchase": true
+   "purchase": true,
+   "kinds": [
+    "shopping"
+   ]
   },
   {
    "id": "kohls",
@@ -2275,7 +2406,10 @@
    "caution": "",
    "group": null,
    "ticket": false,
-   "purchase": true
+   "purchase": true,
+   "kinds": [
+    "shopping"
+   ]
   },
   {
    "id": "walgreens",
@@ -2332,7 +2466,10 @@
    "caution": "",
    "group": null,
    "ticket": false,
-   "purchase": true
+   "purchase": true,
+   "kinds": [
+    "shopping"
+   ]
   },
   {
    "id": "fryn-pan",
@@ -2382,7 +2519,10 @@
    "caution": "",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
   },
   {
    "id": "doolittles",
@@ -2435,7 +2575,10 @@
    "caution": "",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
   },
   {
    "id": "porter-creek",
@@ -2483,7 +2626,10 @@
    "caution": "",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
   },
   {
    "id": "fargo-air-museum",
@@ -2521,6 +2667,11 @@
      "published": "seen 8 Nov 2026"
     },
     {
+     "url": "https://www.valleynewslive.com/2026/11/09/veterans-day-events-planned-across-f-m-area/",
+     "publisher": "Valley News Live (Veterans Day events planned across F-M area)",
+     "published": "2026-11-09"
+    },
+    {
      "url": "https://fargoairmuseum.org/calendar/veterans-day-program/2025",
      "publisher": "Fargo Air Museum",
      "published": "2025-11-11 event page"
@@ -2540,8 +2691,12 @@
    "caution": "",
    "group": null,
    "worth": 12,
+   "arrive_by": "2026-11-11T17:00:00Z",
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "ceremony"
+   ]
   },
   {
    "id": "fargo-vfw-legion",
@@ -2589,7 +2744,10 @@
    "caution": "",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
   },
   {
    "id": "amvets-post-7",
@@ -2637,7 +2795,10 @@
    "caution": "",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
   },
   {
    "id": "moorhead-legion",
@@ -2685,7 +2846,10 @@
    "caution": "",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
   },
   {
    "id": "west-fargo-vfw",
@@ -2733,7 +2897,11 @@
    "group": null,
    "worth": 12,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "ceremony",
+    "meal"
+   ]
   },
   {
    "id": "air-museum-coffee",
@@ -2777,6 +2945,9 @@
    "group": null,
    "ticket": false,
    "purchase": false,
+   "kinds": [
+    "coffee"
+   ],
    "eat": 0.2
   },
   {
@@ -2821,16 +2992,19 @@
    "caution": "",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
   },
   {
    "id": "sickies",
    "brand": "Sickies Garage Burgers & Brews",
    "status": "offering",
    "category": "meal",
-   "offer": "Reported for 2026 (unconfirmed): free cheeseburger basket or 20% off, and a 'Buy a Vet a Bud' wall for a free pint (21+). 2021: free Garage Burger or 20% off",
+   "offer": "Free Cheeseburger Basket, or 20% off any one item (its year-round Everyday Hero Discount)",
    "value": 14,
-   "grade": "C",
+   "grade": "A",
    "start": null,
    "end": null,
    "window_text": "",
@@ -2842,8 +3016,7 @@
    "dineIn": true,
    "snack": false,
    "eligible": [
-    "veteran",
-    "active"
+    "veteran"
    ],
    "guard_reserve": "unclear",
    "spouse": "unclear",
@@ -2856,8 +3029,18 @@
    "advance": null,
    "participating": false,
    "voucher_use_by": null,
-   "limits": "",
+   "limits": "One free basket, or 20% off one item",
    "sources": [
+    {
+     "url": "https://sickiesburgers.com/specials-events",
+     "publisher": "Sickies Garage (its Specials & Events page: Veterans Day offer, Wednesday, November 11, 2026)",
+     "published": "seen 10 Nov 2026"
+    },
+    {
+     "url": "https://themilitarywallet.com/veterans-day-free-meals-and-discounts/",
+     "publisher": "The Military Wallet (lists Sickies Garage, North Dakota)",
+     "published": "2026-11-09 (updated)"
+    },
     {
      "url": "https://www.valleynewslive.com/2021/11/11/local-businesses-offer-deals-veterans/",
      "publisher": "Valley News Live (2021 list)",
@@ -2869,11 +3052,14 @@
      "published": "seen 8 Nov 2026"
     }
    ],
-   "notes": "Only one 2026 listing has this (a compiled report we couldn't trace to the business). Not announced by the business: call first.",
-   "caution": "Only one unconfirmed 2026 listing: call first",
+   "notes": "Sickies' own Specials & Events page (read 10 Nov 2026) gives the offer under 'Veterans Day offer: Wednesday, November 11, 2026'. It names no stores, so both Fargo stores are assumed; it doesn't say what proof to bring. Also all November: guests 'Buy a Vet a Bud', and from Veterans Day a veteran can pull a flag off the wall for a Bud or Bud Light pint (21+, while flags last at participating locations).",
+   "caution": "",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
   },
   {
    "id": "brewtus",
@@ -2920,7 +3106,10 @@
    "caution": "Only one unconfirmed 2026 listing: call first",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
   },
   {
    "id": "pub-west",
@@ -2967,7 +3156,11 @@
    "caution": "Offer and address not confirmed: call first",
    "group": null,
    "ticket": false,
-   "purchase": true
+   "purchase": true,
+   "kinds": [
+    "bar",
+    "meal"
+   ]
   },
   {
    "id": "cash-wise-deli",
@@ -3022,6 +3215,9 @@
    "group": null,
    "ticket": false,
    "purchase": false,
+   "kinds": [
+    "meal"
+   ],
    "eat": 0.6
   },
   {
@@ -3073,7 +3269,10 @@
    "caution": "Only one unconfirmed 2026 listing: call first",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
   },
   {
    "id": "sandys-donuts",
@@ -3111,16 +3310,123 @@
    "limits": "",
    "sources": [
     {
+     "url": "https://www.sandysdonuts.com/",
+     "publisher": "Sandy's Donuts (its three shops)",
+     "published": "seen 10 Nov 2026"
+    },
+    {
      "url": "https://www.openstreetmap.org/",
      "publisher": "OpenStreetMap (store addresses)",
      "published": "seen 8 Nov 2026"
     }
    ],
-   "notes": "Only one 2026 listing has this (a compiled report we couldn't trace to the business). Not announced by the business: call first. The report also mentions a downtown Fargo store; not found.",
+   "notes": "Only one 2026 listing has this (a compiled report we couldn't trace to the business). Not announced by the business: call first. Sandy's own site lists three shops (read 10 Nov 2026), downtown Fargo among them; it says nothing about Veterans Day.",
    "caution": "Only one unconfirmed 2026 listing: call first",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "sweet"
+   ]
+  },
+  {
+   "id": "scheels-flag-exchange",
+   "brand": "Scheels flag exchange",
+   "status": "offering",
+   "category": "event",
+   "offer": "Flag exchange: bring a faded or frayed U.S. flag and swap it for a free 3x5-foot nylon flag, while supplies last. With Fargo AMVETS Post 7 and the Combat Veterans Motorcycle Association, who see the old flags retired with dignity",
+   "value": 0,
+   "grade": "B",
+   "start": "2026-11-11T17:00:00Z",
+   "end": "2026-11-11T19:00:00Z",
+   "window_text": "11:00–13:00 CST",
+   "mode": "event",
+   "minutes": 10,
+   "busy": 5,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active",
+    "guard_reserve",
+    "public"
+   ],
+   "guard_reserve": "yes",
+   "spouse": "yes",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "Bring a faded or frayed U.S. flag to swap. While supplies last.",
+   "sources": [
+    {
+     "url": "https://www.valleynewslive.com/2026/11/09/veterans-day-events-planned-across-f-m-area/",
+     "publisher": "Valley News Live (Veterans Day events planned across F-M area)",
+     "published": "2026-11-09"
+    }
+   ],
+   "notes": "Valley News Live (9 Nov 2026): 11 AM to 1 PM in front of the store's Ferris wheel. It doesn't say who can swap a flag. Store address from Scheels' Fargo listing.",
+   "caution": "",
+   "group": null,
+   "worth": 0,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "flag"
+   ]
+  },
+  {
+   "id": "nativity-mass",
+   "brand": "Nativity Catholic Church Veterans Day Mass",
+   "status": "offering",
+   "category": "event",
+   "offer": "Veterans are invited to join the students of Nativity Catholic School for Mass at 8:30 AM. Then a flag ceremony at 9:15 in the school gym and a fourth-grade art crawl of patriotic artwork with refreshments, 9:45 to 10:15",
+   "value": 0,
+   "grade": "B",
+   "start": "2026-11-11T14:15:00Z",
+   "end": "2026-11-11T16:15:00Z",
+   "window_text": "08:15–10:15 CST",
+   "mode": "event",
+   "minutes": 60,
+   "busy": 0,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active",
+    "guard_reserve",
+    "public"
+   ],
+   "guard_reserve": "yes",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.valleynewslive.com/2026/11/09/veterans-day-events-planned-across-f-m-area/",
+     "publisher": "Valley News Live (Veterans Day events planned across F-M area)",
+     "published": "2026-11-09"
+    }
+   ],
+   "notes": "Valley News Live (9 Nov 2026). It doesn't say whether visitors are welcome at the flag ceremony and the art crawl, or give the address; the church's address is from directories.",
+   "caution": "",
+   "group": null,
+   "worth": 8,
+   "arrive_by": "2026-11-11T14:30:00Z",
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "ceremony"
+   ]
   },
   {
    "id": "blarney-stone",
@@ -3168,6 +3474,9 @@
    "group": null,
    "ticket": false,
    "purchase": false,
+   "kinds": [
+    "bar"
+   ],
    "eat": 0
   },
   {
@@ -3206,6 +3515,11 @@
    "limits": "",
    "sources": [
     {
+     "url": "https://www.drekkerbrewing.com/",
+     "publisher": "Drekker Brewing (taproom hours: Monday to Thursday 4 to 10 PM, 21+ after 8 PM)",
+     "published": "seen 10 Nov 2026"
+    },
+    {
      "url": null,
      "publisher": "Fargo Bites, 2025 (not linked: the site now redirects elsewhere)",
      "published": "2025"
@@ -3221,6 +3535,9 @@
    "group": null,
    "ticket": false,
    "purchase": false,
+   "kinds": [
+    "bar"
+   ],
    "eat": 0
   },
   {
@@ -3274,6 +3591,9 @@
    "group": null,
    "ticket": false,
    "purchase": false,
+   "kinds": [
+    "bar"
+   ],
    "eat": 0
   },
   {
@@ -3327,6 +3647,9 @@
    "group": null,
    "ticket": false,
    "purchase": false,
+   "kinds": [
+    "bar"
+   ],
    "eat": 0
   },
   {
@@ -3380,6 +3703,9 @@
    "group": null,
    "ticket": false,
    "purchase": false,
+   "kinds": [
+    "bar"
+   ],
    "eat": 0
   },
   {
@@ -3433,6 +3759,9 @@
    "group": null,
    "ticket": false,
    "purchase": false,
+   "kinds": [
+    "bar"
+   ],
    "eat": 0.3
   },
   {
@@ -3485,7 +3814,11 @@
    "caution": "",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "bar",
+    "meal"
+   ]
   },
   {
    "id": "chumleys",
@@ -3537,7 +3870,11 @@
    "caution": "",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "bar",
+    "meal"
+   ]
   },
   {
    "id": "bordertown",
@@ -3589,7 +3926,11 @@
    "caution": "",
    "group": null,
    "ticket": false,
-   "purchase": false
+   "purchase": false,
+   "kinds": [
+    "bar",
+    "meal"
+   ]
   },
   {
    "id": "hen-house",
@@ -3641,7 +3982,11 @@
    "caution": "",
    "group": null,
    "ticket": false,
-   "purchase": true
+   "purchase": true,
+   "kinds": [
+    "bar",
+    "meal"
+   ]
   },
   {
    "id": "spitfire",
@@ -3693,7 +4038,11 @@
    "caution": "",
    "group": null,
    "ticket": false,
-   "purchase": true
+   "purchase": true,
+   "kinds": [
+    "bar",
+    "meal"
+   ]
   }
  ],
  "places": [
@@ -5875,11 +6224,25 @@
    "lat": 46.87647,
    "lng": -96.90505,
    "phone": "",
-   "open": "2026-11-11T16:00:00Z",
-   "close": "2026-11-12T03:00:00Z",
+   "open": "2026-11-11T12:00:00Z",
+   "close": "2026-11-11T19:30:00Z",
    "hoursAssumed": true,
    "verified": "unverified",
    "pin": "geo"
+  },
+  {
+   "id": "sandys-donuts-300-broadway-n",
+   "offer": "sandys-donuts",
+   "name": "",
+   "address": "300 Broadway N, Fargo, ND 58102",
+   "lat": 46.879474,
+   "lng": -96.787775,
+   "phone": "",
+   "open": "2026-11-11T12:00:00Z",
+   "close": "2026-11-11T19:30:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "census"
   },
   {
    "id": "sandys-donuts-4215-45th-st-s",
@@ -5889,11 +6252,39 @@
    "lat": 46.81629,
    "lng": -96.86209,
    "phone": "",
-   "open": "2026-11-11T16:00:00Z",
-   "close": "2026-11-12T03:00:00Z",
+   "open": "2026-11-11T12:00:00Z",
+   "close": "2026-11-11T19:30:00Z",
    "hoursAssumed": true,
    "verified": "unverified",
    "pin": "geo"
+  },
+  {
+   "id": "scheels-flag-exchange-1551-45th-st-s",
+   "offer": "scheels-flag-exchange",
+   "name": "",
+   "address": "1551 45th St S, Fargo, ND 58103",
+   "lat": 46.857358,
+   "lng": -96.862097,
+   "phone": "",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "census"
+  },
+  {
+   "id": "nativity-mass-1825-11th-st-s",
+   "offer": "nativity-mass",
+   "name": "",
+   "address": "1825 11th St S, Fargo, ND 58103",
+   "lat": 46.85182,
+   "lng": -96.796501,
+   "phone": "(701) 232-2414",
+   "open": "2026-11-11T14:00:00Z",
+   "close": "2026-11-11T16:30:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "census"
   },
   {
    "id": "blarney-stone-1910-9th-st-e",
@@ -5918,7 +6309,7 @@
    "lng": -96.8079,
    "phone": "(701) 532-0506",
    "open": "2026-11-11T22:00:00Z",
-   "close": "2026-11-12T02:00:00Z",
+   "close": "2026-11-12T04:00:00Z",
    "hoursAssumed": false,
    "verified": "unverified",
    "pin": "geo"
@@ -6143,6 +6534,23 @@
      "url": "https://news.va.gov/150505/2026-veterans-day-discounts-free-meals-offers/",
      "publisher": "VA News (VA Office of Digital Media)",
      "published": "2026-10-26 (verified 22 Oct, updated through 11 Nov)"
+    }
+   ]
+  },
+  {
+   "id": "hawley-school",
+   "day": "Wed 11 Nov, 9:00 AM",
+   "at": null,
+   "name": "Hawley High School Veterans Day program",
+   "where": "Hawley High School gym, Hawley, MN (about 25 miles east of Moorhead)",
+   "offer": "A Veterans Day program for veterans. The school asks veterans who plan to attend, or anyone bringing one, to contact Terri in the high school office (tgiere@hawley.k12.mn.us).",
+   "grade": "B",
+   "note": "Outside the metro, so not on the route.",
+   "sources": [
+    {
+     "url": "https://www.valleynewslive.com/2026/11/09/veterans-day-events-planned-across-f-m-area/",
+     "publisher": "Valley News Live (Veterans Day events planned across F-M area)",
+     "published": "2026-11-09"
     }
    ]
   }

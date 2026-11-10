@@ -37,3 +37,10 @@ No free entry on 11 Nov. DNR lists Fri 27 Nov 2026 as the free day: https://www.
 - Dollar values for 5-8 Club, Tavern Grill, Tria, Kendall's are my estimates.
 - No geo coordinates supplied (none looked up).
 - Chains skipped (Applebee's Weaver Lake Rd, Chili's, Golden Corral Maplewood, Caribou, etc.).
+
+## Re-check, Tue 10 Nov 2026 (all read 10 Nov)
+- **Plymouth:** still no 11 Nov ceremony found. The city's free drive-thru veterans breakfast was Thu 5 Nov at the Plymouth Veterans Memorial, 3400 Plymouth Blvd (Sun Sailor, 20 Oct 2026). plymouthmn.gov/calendar returned 403.
+- **Roseville:** still no public ceremony found. Roseville VFW Post 7555 (1145 Woodhill Dr) told the Roseville Reader (9 Nov 2026) that Veterans Day is busy and its members visit senior residences; no public event, time or meal named. Rosetown American Legion Post 542 (700 County Rd C W, 651-483-3535): home page lists nothing; its November calendar is a PDF that couldn't be read, so call.
+- **Maple Grove tribute:** still on (city events page; a 1 Nov 2026 Maple Grove history Substack repeats it).
+- Nearby, outside the circles and from an aggregator only (StayHappening, updated 10 Nov): Columbia Heights VFW Post 230 dinner 3 PM; Minneapolis Post 1 and Eagles #34 dinner 5 PM. Not added.
+- Bring Me The News 2026 list (Yahoo repost, 6 Nov) names no business in Plymouth, Maple Grove or Roseville.
