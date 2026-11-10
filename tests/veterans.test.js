@@ -166,6 +166,96 @@ test("other days and earlier-year leads are listed under Deals, off the route", 
   for (const id of ["other-wrap", "other", "leads-wrap", "leads", "leads-n"]) assert.match(HTML, new RegExp(`id="${id}"`), id);
 });
 
+// ---------------------------------------------------------------- areas (10 Nov 2026)
+const AREAS = [...SCRIPTS["app.js"].matchAll(/\{ id: "([a-z-]+)", dir: "([a-z/-]+)" \}/g)].map((m) => ({ id: m[1], dir: m[2] }));
+const AREA_DATA = Object.fromEntries(AREAS.map((a) => [a.id, {
+  deals: JSON.parse(read(DIR + a.dir + "deals.json")), drive: JSON.parse(read(DIR + a.dir + "drive.json")) }]));
+const kmApart = (a, b) => {
+  const p = Math.PI / 180, s = Math.sin((b[0] - a[0]) * p / 2) ** 2 + Math.cos(a[0] * p) * Math.cos(b[0] * p) * Math.sin((b[1] - a[1]) * p / 2) ** 2;
+  return 12742 * Math.asin(Math.sqrt(s));
+};
+
+test("the area picker: Fargo-Moorhead first and the default, and its options match the app's areas and data folders", () => {
+  const opts = [...HTML.matchAll(/<option value="([a-z-]+)">([^<]+)<\/option>/g)].filter((m) => AREAS.some((a) => a.id === m[1]));
+  assert.deepEqual(opts.map((m) => m[1]), AREAS.map((a) => a.id), "the <select> lists the areas in app.js's order");
+  assert.equal(AREAS[0].id, "fargo-moorhead");
+  assert.equal(AREAS[0].dir, "data/", "Fargo-Moorhead keeps its original paths");
+  assert.match(SCRIPTS["app.js"], /const DEFAULT_AREA = "fargo-moorhead";/);
+  assert.match(opts[0][2], /^Fargo-Moorhead, ND\/MN$/);
+  assert.match(HTML, /<select id="area"/);
+  assert.match(SCRIPTS["app.js"], /URLSearchParams\(location\.search\)\.get\("area"\)/, "a link with ?area= opens an area");
+  for (const a of AREAS) {
+    const m = AREA_DATA[a.id].deals.meta.region;
+    assert.ok(m, `${a.id}: meta.region`);
+    assert.equal(m.id, a.id);
+    for (const k of ["name", "center", "center_label", "zoom", "wx_name"]) assert.ok(m[k], `${a.id}: meta.region.${k}`);
+    assert.equal(AREA_DATA[a.id].deals.meta.tz, "America/Chicago", `${a.id}: Central time`);
+    assert.ok(AREA_DATA[a.id].deals.meta.forecast_url, `${a.id}: an NWS forecast link`);
+  }
+});
+
+test("every other area: each offer has a store, each store an offer, inside the area's circles and the day", () => {
+  for (const a of AREAS.slice(1)) {
+    const { deals } = AREA_DATA[a.id], areas = deals.meta.region.areas;
+    assert.ok(areas && areas.length, `${a.id}: circles`);
+    const offers = new Map(deals.offers.map((o) => [o.id, o]));
+    assert.ok(deals.offers.length >= 20 && deals.places.length >= 40, `${a.id}: a usable number of deals`);
+    for (const p of deals.places) {
+      assert.ok(offers.has(p.offer), `${a.id} ${p.id}: unknown offer`);
+      assert.match(p.id, /^[a-z0-9][a-z0-9-]{0,79}$/);
+      assert.ok(areas.some(([, lat, lng, r]) => kmApart([p.lat, p.lng], [lat, lng]) <= r), `${a.id} ${p.id} is outside the area`);
+      const open = Date.parse(p.open), close = Date.parse(p.close);
+      assert.ok(open >= DAY_START && close <= DAY_START + 30 * 3600e3 && close > open, `${a.id} ${p.id}: hours`);
+    }
+    for (const o of deals.offers) {
+      assert.ok(deals.places.some((p) => p.offer === o.id), `${a.id} ${o.id} has no store`);
+      assert.ok(["A", "B", "C"].includes(o.grade));
+      if (o.grade !== "C") assert.ok(o.sources.length > 0, `${a.id} ${o.id}: an A or B grade needs a source`);
+      // Fargo-Moorhead's own notes stay there: Kwik Star, the Petro truck stop, MATBUS, a Fargo store.
+      assert.ok(!/Kwik Star|Petro|Popeyes|MATBUS|Fargo|\bFM\b|Moorhead/.test([o.caution, o.notes, o.offer, o.limits].join(" ").replace(/Fargo-Moorhead/g, "")), `${a.id} ${o.id}: a Fargo-only note`);
+    }
+    for (const x of deals.other || []) {
+      for (const k of ["id", "day", "name", "where", "offer"]) assert.ok(x[k], `${a.id} ${x.id}: ${k}`);
+      if (x.grade !== "C") assert.ok(x.sources.some((s) => s.url), `${a.id} ${x.id}: an A or B grade needs a linked source`);
+    }
+    assert.ok(!deals.offers.some((o) => o.id === "hardees"), `${a.id}: Hardee's is Fargo-Moorhead only (a recollection of a Fargo store)`);
+    // Researchers' working notes ("I could not read…", "the research report") stay in research/<area>/notes.md, off the page.
+    const shown = deals.offers.flatMap((o) => [o.offer, o.notes, o.limits, o.caution])
+      .concat((deals.other || []).flatMap((x) => [x.name, x.where, x.offer, x.note]), (deals.leads || []).map((l) => l.offer));
+    for (const t of shown) assert.ok(!/Tom's|\bTom\b|\bI (could|did|found|read|used|put|saw)\b|\bmy estimate/.test(t || ""), `${a.id}: internal wording on the page: ${t}`);
+  }
+});
+
+test("every area's drive tables match its stores, and its grid covers each of its circles", () => {
+  for (const a of AREAS) {
+    const { deals, drive } = AREA_DATA[a.id];
+    assert.deepEqual(drive.place_ids, deals.places.map((p) => p.id), `${a.id}: rebuild drive.json after deals.json`);
+    const n = deals.places.length;
+    assert.equal(drive.places.length, n);
+    for (const row of drive.places) assert.equal(row.length, n);
+    assert.equal(drive.anchors.length, drive.fromAnchor.length);
+    for (const row of drive.fromAnchor) assert.equal(row.length, n);
+    for (const [name, lat, lng] of deals.meta.region.areas || []) {
+      assert.ok(drive.anchors.some((g) => kmApart(g, [lat, lng]) < 1.5), `${a.id}: start points in ${name}`);
+    }
+  }
+});
+
+test("place ids never repeat across areas, so field reports can't mix them up", () => {
+  const seen = new Map();
+  for (const a of AREAS) for (const p of AREA_DATA[a.id].deals.places) {
+    assert.ok(!seen.has(p.id), `${p.id} is in ${seen.get(p.id)} and ${a.id}`);
+    seen.set(p.id, a.id);
+  }
+});
+
+test("the page names the area where it used to say Fargo-Moorhead, and keeps the house location in the footer", () => {
+  assert.match(HTML, /<h1>Veterans Day in <span class="area-name">Fargo-Moorhead<\/span><\/h1>/);
+  assert.match(HTML, /<span id="drive-safe-transit">/);
+  assert.match(/<footer[\s\S]*<\/footer>/.exec(HTML)[0], /Fargo-Moorhead, ND\/MN/);
+  assert.match(SCRIPTS["app.js"], /AREA\.center_label/, "the location line names the area's centre");
+});
+
 test("closed or absent stores stay out (Smashburger closed Oct 2026, per the publisher; no metro Hy-Vee, Red Robin, Golden Corral, Hooters, Famous Dave's)", () => {
   const ids = new Set(DEALS.offers.map((o) => o.id));
   for (const id of ["smashburger", "hy-vee", "red-robin", "golden-corral", "hooters", "famous-daves"]) assert.ok(!ids.has(id), id);

@@ -1,0 +1,220 @@
+{
+ "about": "Twin Cities west/northwest/north-east (Plymouth, Maple Grove, Roseville area) research for Veterans Day 2026, compiled 9 Nov 2026. Items here are not routable local stops on Wed 11 Nov, or are outside the area.",
+ "other": [
+  {
+   "id": "five-eight-club",
+   "day": "Wed 11 Nov",
+   "name": "5-8 Club: free burger for veterans",
+   "where": "Maplewood and Champlin stores (just outside the area; addresses not checked)",
+   "offer": "Free burger (classic or Juicy Lucy) with choice of fries, carrot sticks or coleslaw for veterans.",
+   "grade": "B",
+   "note": "A 6 Nov 2026 list (Bring Me The News) names the Champlin, Maplewood, Minneapolis and West St. Paul stores. Call yours first.",
+   "sources": [
+    {
+     "url": "https://www.yahoo.com/lifestyle/articles/list-twin-cities-restaurants-offering-154843154.html",
+     "publisher": "Bring Me The News (via Yahoo)",
+     "published": "2026-11-06"
+    }
+   ]
+  },
+  {
+   "id": "tria-north-oaks",
+   "day": "Wed 11 Nov, 4–9 PM",
+   "name": "Tria Restaurant: free meal",
+   "where": "5959 Centerville Rd, North Oaks (just outside the area, north of Shoreview)",
+   "offer": "Free meal from a limited menu for veterans and active-duty personnel.",
+   "grade": "B",
+   "note": "From a 6 Nov 2026 list; call to confirm.",
+   "sources": [
+    {
+     "url": "https://www.yahoo.com/lifestyle/articles/list-twin-cities-restaurants-offering-154843154.html",
+     "publisher": "Bring Me The News (via Yahoo)",
+     "published": "2026-11-06"
+    }
+   ]
+  },
+  {
+   "id": "kendalls-coon-rapids",
+   "day": "Wed 11 Nov, 11 AM–8 PM",
+   "name": "Kendall's Tavern and Chophouse: free meal",
+   "where": "12800 Bunker Prairie Rd NW, Coon Rapids (outside the area, north of Brooklyn Park)",
+   "offer": "Free meal from a limited menu for veterans and active-duty personnel.",
+   "grade": "B",
+   "note": "From a 6 Nov 2026 list; call to confirm.",
+   "sources": [
+    {
+     "url": "https://www.yahoo.com/lifestyle/articles/list-twin-cities-restaurants-offering-154843154.html",
+     "publisher": "Bring Me The News (via Yahoo)",
+     "published": "2026-11-06"
+    }
+   ]
+  },
+  {
+   "id": "mn-state-ceremony-duluth",
+   "day": "Wed 11 Nov, 10:00 CST (doors 8:30)",
+   "name": "Official State of Minnesota Veterans Day celebration",
+   "where": "Duluth National Guard Training and Community Center, Duluth",
+   "offer": "Free community breakfast from 8:30, program at 10:00: honor guard, live music, keynote, elected officials.",
+   "grade": "B",
+   "note": "Outside the area (about 150 miles). One source (Bring Me The News, 8 Nov 2026); the Minnesota Department of Veterans Affairs events page was empty when checked. The 2025 state event was in Mankato.",
+   "sources": [
+    {
+     "url": "https://www.yahoo.com/news/articles/whats-open-whats-closed-minnesota-133457325.html",
+     "publisher": "Bring Me The News (via Yahoo)",
+     "published": "2026-11-08"
+    }
+   ],
+   "at": "2026-11-11T16:00:00Z"
+  },
+  {
+   "id": "metro-transit-sc-veterans",
+   "day": "Every day",
+   "name": "Metro Transit: free fare for service-connected disabled veterans",
+   "where": "Metro Transit buses and trains",
+   "offer": "Veterans with a service-related disability ride free at all times with a VA Veteran ID card marked 'Service Connected' or 'SC' below the photo. No general free rides for all veterans on Veterans Day found.",
+   "grade": "A",
+   "note": "Questions: 612-467-1991 (per the fares page). Metro Transit runs its regular holiday schedule on 11 Nov per BMTN.",
+   "sources": [
+    {
+     "url": "https://www.metrotransit.org/fares",
+     "publisher": "Metro Transit",
+     "published": "seen 9 Nov 2026"
+    },
+    {
+     "url": "https://www.yahoo.com/news/articles/whats-open-whats-closed-minnesota-133457325.html",
+     "publisher": "Bring Me The News (via Yahoo)",
+     "published": "2026-11-08"
+    }
+   ]
+  },
+  {
+   "id": "mn-zoo-november",
+   "day": "All of November (parking free on Wed 11 Nov)",
+   "name": "Minnesota Zoo: free admission for veterans and active military",
+   "where": "Minnesota Zoo, Apple Valley",
+   "offer": "Free admission for veterans and active military through 30 Nov; up to six immediate family members 50% off. Parking not included, free parking extended 11 Nov per one list.",
+   "grade": "B",
+   "note": "Outside the area (about 40 miles south). Two 2026 lists carry it; the zoo's own page didn't show the offer when checked. Bring military ID and confirm.",
+   "sources": [
+    {
+     "url": "https://www.yahoo.com/lifestyle/articles/list-twin-cities-restaurants-offering-154843154.html",
+     "publisher": "Bring Me The News (via Yahoo)",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://twincitiesfrugalmom.com/2026/11/veterans-day-freebies-deals-2026/",
+     "publisher": "Twin Cities Frugal Mom",
+     "published": "2026-11-06"
+    }
+   ]
+  },
+  {
+   "id": "moa-illusions",
+   "day": "Wed 11 to Tue 17 Nov",
+   "name": "Museum of Illusions: free admission for veterans",
+   "where": "Mall of America, Bloomington",
+   "offer": "Free admission for active and retired US veterans 11-17 Nov with valid military ID in person.",
+   "grade": "B",
+   "note": "Outside the area. Single 2026 list (Twin Cities Frugal Mom, 6 Nov 2026).",
+   "sources": [
+    {
+     "url": "https://twincitiesfrugalmom.com/2026/11/veterans-day-freebies-deals-2026/",
+     "publisher": "Twin Cities Frugal Mom",
+     "published": "2026-11-06"
+    }
+   ]
+  },
+  {
+   "id": "free-geek-20",
+   "day": "Wed 11 Nov",
+   "name": "Free Geek Twin Cities: 20% veteran discount",
+   "where": "Twin Cities (address not given)",
+   "offer": "20% discount for veterans.",
+   "grade": "B",
+   "note": "Address and terms not given in the source.",
+   "sources": [
+    {
+     "url": "https://www.yahoo.com/lifestyle/articles/list-twin-cities-restaurants-offering-154843154.html",
+     "publisher": "Bring Me The News (via Yahoo)",
+     "published": "2026-11-06"
+    }
+   ]
+  },
+  {
+   "id": "science-museum-mn",
+   "day": "Wed 11 Nov",
+   "name": "Science Museum of Minnesota: free general admission for veterans and active duty",
+   "where": "Science Museum of Minnesota, St. Paul",
+   "offer": "Complimentary general admission with military ID.",
+   "grade": "C",
+   "note": "One undated deal-list page only; no museum announcement found. Call first.",
+   "sources": [
+    {
+     "url": "https://veteransdaydeals.us/veterans-day-deals-by-state/minnesota/",
+     "publisher": "veteransdaydeals.us",
+     "published": "seen 9 Nov 2026"
+    }
+   ]
+  },
+  {
+   "id": "national-fee-free-1111",
+   "day": "Wed 11 Nov",
+   "name": "National parks and other federal lands: fee-free day",
+   "where": "Federal lands nationwide, including Minnesota units",
+   "offer": "No entrance fee on 11 Nov at National Park Service sites for US citizens and residents (from 2026, nonresidents pay the regular fee).",
+   "grade": "B",
+   "note": "Federal lands only, not Minnesota state parks. From a 2026 local deal list; check nps.gov.",
+   "sources": [
+    {
+     "url": "https://twincitiesfrugalmom.com/2026/11/veterans-day-freebies-deals-2026/",
+     "publisher": "Twin Cities Frugal Mom",
+     "published": "2026-11-06"
+    }
+   ]
+  },
+  {
+   "id": "mn-state-parks-27nov",
+   "day": "Fri 27 Nov (not 11 Nov)",
+   "name": "Minnesota state parks: no free day on Veterans Day",
+   "where": "Minnesota state parks",
+   "offer": "The DNR's only listed free entrance day in the fall is Fri 27 Nov 2026. Nothing for 11 Nov.",
+   "grade": "A",
+   "note": "The DNR's page lists Fri 27 Nov 2026 and nothing for 11 Nov. Veteran and military vehicle-permit rules are on a separate DNR page.",
+   "sources": [
+    {
+     "url": "https://www.dnr.state.mn.us/state-parks/free-entrance-days-minnesota-state-parks.html",
+     "publisher": "Minnesota DNR",
+     "published": "seen 9 Nov 2026"
+    }
+   ]
+  }
+ ],
+ "leads": [
+  {
+   "name": "Minnesota Military & Veterans Museum Veterans Day Film Festival",
+   "area": "Little Falls, Stillwater, Mankato (not the metro west/north)",
+   "q": "Minnesota Military and Veterans Museum Veterans Day Film Festival",
+   "offer": "Free film screenings after local ceremonies (2025: Little Falls 1 pm, Stillwater 11:30, Mankato 11:30).",
+   "last_seen": "2025",
+   "src": "mnvetmuseum"
+  },
+  {
+   "name": "Osseo-Maple Grove American Legion Post 172",
+   "area": "Osseo",
+   "q": "American Legion Post 172 260 4th Ave SE Osseo MN",
+   "offer": "Post runs the Central Park ceremony with Beyond the Yellow Ribbon (see Wed 11 Nov entry); no separate post meal found for 2026.",
+   "last_seen": "2021",
+   "src": "mgcal"
+  }
+ ],
+ "lead_sources": {
+  "mnvetmuseum": {
+   "url": "https://www.mnvetmuseum.org/events/veterans-day-film-festival",
+   "publisher": "Minnesota Military & Veterans Museum"
+  },
+  "mgcal": {
+   "url": "https://maplegrovemn.gov/Calendar.aspx?EID=514",
+   "publisher": "City of Maple Grove calendar (2021 listing)"
+  }
+ }
+}

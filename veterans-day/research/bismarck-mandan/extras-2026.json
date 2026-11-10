@@ -1,0 +1,265 @@
+{
+ "about": "Bismarck-Mandan and New Salem local (non-chain) research, compiled 9-10 Nov 2026 for the Veterans Day 2026 planner. Only the ND Heritage Center program (KX, 4 Nov) is announced for Wednesday with a time. AMVETS, VFW, the New Salem Legion and the Memorial globe tradition are earlier-years-only: call first. National chains are handled elsewhere. KX News pages are behind a bot check; where noted, 2026 KX details came from the one page I could read or from search summaries.",
+ "other": [
+  {
+   "id": "new-salem-post-91",
+   "day": "Wed 11 Nov, time not published",
+   "name": "New Salem: John Repsdorf American Legion Post 91 Veterans Day program",
+   "where": "Post 91, 400 Main Ave, New Salem (call 701-587-1215 or email ndpost91@gmail.com for the time and place)",
+   "offer": "In past years a Veterans Day program for veterans and families, public invited, with lunch served (held at Elm Crest Manor). Nothing posted for 2026.",
+   "grade": "C",
+   "note": "Not on the route because no 2026 time is published. Call before you plan around it.",
+   "sources": [
+    {
+     "url": "https://ndpost91.org/post-history",
+     "publisher": "John Repsdorf American Legion Post 91",
+     "published": "seen 9 Nov 2026"
+    },
+    {
+     "url": "https://ndpost91.org/post-location",
+     "publisher": "John Repsdorf American Legion Post 91",
+     "published": "seen 9 Nov 2026"
+    },
+    {
+     "url": "https://ndlegionhistory.org/post-histories/",
+     "publisher": "American Legion Dept. of ND post histories",
+     "published": "seen 9 Nov 2026"
+    },
+    {
+     "url": "https://ndpost91.org/",
+     "publisher": "John Repsdorf American Legion Post 91",
+     "published": "seen 9 Nov 2026"
+    }
+   ]
+  },
+  {
+   "id": "elks-veterans-feed-2026",
+   "day": "Thu 12 Nov, three seatings (times not found)",
+   "name": "16th Annual Veterans Feed (free turkey dinner)",
+   "where": "Bismarck/Mandan Elks Lodge #1199, 900 S Washington St, Bismarck, ND 58504 (lodge 701-255-1199)",
+   "offer": "Free turkey dinner with all the trimmings for veterans and first responders, three dining time slots, tickets reported still available as of KX's Nov 3 2026 story.",
+   "grade": "B",
+   "note": "KX News (3 Nov 2026) reported the 16th annual feed on Thu 12 Nov with three seatings and tickets still available; its times and ticket rules weren't readable here. In earlier years it ran 10:30 AM to 1:30 PM, free for a veteran and one guest, with proof of service and tickets from sponsor businesses. The Elks' own calendar doesn't list it. Call the lodge, (701) 255-1199.",
+   "sources": [
+    {
+     "url": "https://www.kxnet.com/studio701/community/16th-annual-veterans-feed-in-bismarck/",
+     "publisher": "KX News (Studio 701)",
+     "published": "2026-11-03"
+    },
+    {
+     "url": "https://www.kfyrtv.com/2025/11/13/veterans-find-camaraderie-bismarcks-15th-annual-veterans-feed/",
+     "publisher": "KFYR-TV",
+     "published": "2025-11-13"
+    },
+    {
+     "url": "https://www.veterans.nd.gov/news/active-militaryveterans-appreciation-event",
+     "publisher": "ND Dept of Veterans Affairs (2022 notice)",
+     "published": "2022"
+    },
+    {
+     "url": "https://bismanelks.com/events/month/",
+     "publisher": "Bismarck/Mandan Elks Lodge 1199",
+     "published": "seen 9 Nov 2026"
+    }
+   ]
+  },
+  {
+   "id": "nd-state-park-disabled-vet-pass",
+   "day": "Any day (not a Nov 11 perk)",
+   "name": "ND state park lifetime pass for disabled veterans and former POWs",
+   "where": "ND Parks & Recreation (apply by form; parkrec@nd.gov)",
+   "offer": "Free lifetime pass for ND veterans with a 50 percent or greater service-connected disability and former POWs; other ND veterans with a service-related disability may buy an annual permit for $28.",
+   "grade": "A",
+   "note": "Needs a current VA Summary of Benefits Letter (disability) or a DD-214 (former POWs). ND Parks' permit page says 'ND veterans'; whether non-residents qualify isn't stated there. No Veterans Day free-entry offer on the Parks site. Fort Abraham Lincoln still needs a vehicle permit.",
+   "sources": [
+    {
+     "url": "https://www.parkrec.nd.gov/stay/permits-gift-cards",
+     "publisher": "ND Parks & Recreation",
+     "published": "seen 9 Nov 2026"
+    }
+   ]
+  },
+  {
+   "id": "nps-veterans-day-trnp",
+   "day": "Wed 11 Nov (all day)",
+   "at": "2026-11-11T06:00:00Z",
+   "name": "Theodore Roosevelt National Park: no entrance fee on Veterans Day",
+   "where": "South Unit, Medora, ND (park 701-623-4466); about 130 miles and 2 hours west of Bismarck on I-94; Mountain time at Medora",
+   "offer": "NPS lists Nov 11 as a 2026 fee-free day. Free entrance is for US citizens and residents only. Normally $30 per vehicle for 7 days.",
+   "grade": "A",
+   "note": "Drive claim checked: Medora's tourism site says about 130 miles and about 2 hours. Medora is on Mountain time, so the clock goes back one hour driving west. Round trip is a 4+ hour day in mid-November; check 511 and park road conditions. The fee page says the park has been cashless since 1 May 2026 (page itself says last updated 2024, so verify). Veterans may also get a free Military Lifetime Pass.",
+   "sources": [
+    {
+     "url": "https://www.nps.gov/thro/planyourvisit/fees.htm",
+     "publisher": "National Park Service, Theodore Roosevelt NP",
+     "published": "seen 9 Nov 2026"
+    },
+    {
+     "url": "https://medora.com/?p=42399",
+     "publisher": "Medora (tourism)",
+     "published": "seen 9 Nov 2026"
+    }
+   ]
+  },
+  {
+   "id": "state-museum-veterans-day-status",
+   "day": "Wed 11 Nov",
+   "name": "ND Heritage Center & State Museum: open or closed on Veterans Day",
+   "where": "612 E Boulevard Ave, Bismarck (701-328-2666)",
+   "offer": "Admission is always free. The museum's FAQ and hours pages list closures as New Year's Day, Easter, Thanksgiving, Christmas Eve and Christmas Day; Veterans Day is not listed. The Groups page says only 'The facility is closed on state holidays.' Archives and offices close on state holidays.",
+   "grade": "C",
+   "note": "The museum's own hours and FAQ pages don't list Veterans Day as a closure, and the 9:45 AM program is in the building that morning. Whether the galleries are open all day isn't confirmed; state offices are closed. Call (701) 328-2666.",
+   "sources": [
+    {
+     "url": "https://statemuseum.nd.gov/visit/faqs",
+     "publisher": "State Historical Society of ND",
+     "published": "seen 9 Nov 2026"
+    },
+    {
+     "url": "https://statemuseum.nd.gov/visit/museum/hours",
+     "publisher": "State Historical Society of ND",
+     "published": "seen 9 Nov 2026"
+    },
+    {
+     "url": "https://statemuseum.nd.gov/visit/museum/groups",
+     "publisher": "State Historical Society of ND",
+     "published": "seen 9 Nov 2026"
+    }
+   ]
+  },
+  {
+   "id": "bis-man-transit-veterans",
+   "day": "Wed 11 Nov and ordinary days",
+   "name": "Bis-Man Transit / Capital Area Transit (CAT): veterans fare",
+   "where": "Bismarck-Mandan; (701) 258-6817",
+   "offer": "No free rides for veterans found, on Veterans Day or always. The fare page lists a reduced fare for 'Veterans with appropriate photo ID': $0.75 each way (regular $1.50), $3 day pass, $24 30-day pass. Seniors 65+ and paratransit ride free.",
+   "grade": "C",
+   "note": "CAT's fare page (dated 15 Jan 2017) lists a half-price fare for veterans with photo ID, so amounts may have changed. A 2015 notice said buses run on Veterans Day with the office closed; no 2026 holiday schedule was found. Call (701) 258-6817.",
+   "sources": [
+    {
+     "url": "https://bismantransit.com/paying-for-rides",
+     "publisher": "Bis-Man Transit",
+     "published": "page dated Jan 15 2017; seen 9 Nov 2026"
+    },
+    {
+     "url": "https://bismantransit.com/bismarck-mandan-transit-center-releases-holiday-service-schedule",
+     "publisher": "Bis-Man Transit",
+     "published": "2015-11-09"
+    },
+    {
+     "url": "https://bismantransit.com/",
+     "publisher": "Bis-Man Transit",
+     "published": "seen 9 Nov 2026"
+    }
+   ]
+  },
+  {
+   "id": "wed-closures",
+   "day": "Wed 11 Nov",
+   "name": "Closures on Veterans Day",
+   "where": "Bismarck-Mandan",
+   "offer": "Bismarck Parks & Recreation administrative office is closed 11 Nov; other Parks facilities keep normal hours.",
+   "grade": "B",
+   "note": "The Parks item is from the Parks district's Veterans Day hours page. State offices, federal offices and post offices also close on 11 Nov (federal holiday); check before a trip that needs one.",
+   "sources": [
+    {
+     "url": "https://www.bisparks.org/veterans-day-hours-2026/",
+     "publisher": "Bismarck Parks & Recreation District",
+     "published": "seen 9 Nov 2026 (via search summary)"
+    }
+   ]
+  }
+ ],
+ "leads": [
+  {
+   "name": "Jack's Steakhouse",
+   "area": "Bismarck",
+   "q": "Jack's Steakhouse 1201 S 12th St Bismarck ND",
+   "offer": "2015: free dessert for veterans and active duty, Nov 10-11. A 2017 list says free breakfast or lunch. May no longer offer it.",
+   "last_seen": "2017",
+   "src": "walleye2015"
+  },
+  {
+   "name": "Claudia's Bistro",
+   "area": "Bismarck",
+   "q": "Claudia's Bistro Bismarck ND",
+   "offer": "2017: free 16 oz coffee and a caramel or cinnamon roll for veterans",
+   "last_seen": "2017",
+   "src": "cool2017"
+  },
+  {
+   "name": "Blarney Stone Pub",
+   "area": "Bismarck",
+   "q": "Blarney Stone Pub Bismarck ND",
+   "offer": "2017: free pint for veterans",
+   "last_seen": "2017",
+   "src": "cool2017"
+  },
+  {
+   "name": "Williquors",
+   "area": "Bismarck",
+   "q": "Williquors Bismarck ND",
+   "offer": "2017: 10% off purchases for veterans",
+   "last_seen": "2017",
+   "src": "cool2017"
+  },
+  {
+   "name": "Sickies Garage",
+   "area": "Bismarck",
+   "q": "Sickies Garage Bismarck ND",
+   "offer": "2017: free Garage Burger or 20% off one item",
+   "last_seen": "2017",
+   "src": "cool2017"
+  },
+  {
+   "name": "Horizon Market",
+   "area": "Bismarck",
+   "q": "Horizon Market Bismarck ND",
+   "offer": "2017: free 'Swirly, Sooner or Later' drink",
+   "last_seen": "2017",
+   "src": "cool2017"
+  },
+  {
+   "name": "Orange Leaf",
+   "area": "Bismarck",
+   "q": "Orange Leaf frozen yogurt 1515 Burnt Boat Dr Bismarck ND",
+   "offer": "2015: free 11 oz frozen yogurt for veterans and active duty",
+   "last_seen": "2015",
+   "src": "walleye2015"
+  },
+  {
+   "name": "Mandan Moose Lodge",
+   "area": "Mandan",
+   "q": "Mandan Moose Lodge Mandan ND",
+   "offer": "Named on Morton County's 2025 list of Bismarck-Mandan Veterans Day meals; the offer itself wasn't readable. Call first.",
+   "last_seen": "2025",
+   "src": "morton2025"
+  },
+  {
+   "name": "Bismarck VFW Post 1326",
+   "area": "Bismarck",
+   "q": "VFW Post 1326 1235 S 12th St Bismarck ND",
+   "offer": "A free meal for veterans and spouses, freewill donation to the post's Helping Hand Fund (an older Bismarck Tribune item; nothing for 2026). Call 701-222-1525.",
+   "last_seen": "about 2011",
+   "src": "burleigh"
+  }
+ ],
+ "lead_sources": {
+  "walleye2015": {
+   "url": "https://965thewalleye.com/restaurants-in-bismarck-where-veterans-eat-free-on-veterans-day/",
+   "publisher": "96.5 The Walleye (article dated 9 Nov 2015)"
+  },
+  "cool2017": {
+   "url": "https://cool987fm.com/where-veterans-can-get-free-stuff-in-bisman-on-veterans-day/",
+   "publisher": "Cool 98.7 FM (article dated 9 Nov 2017)"
+  },
+  "morton2025": {
+   "url": "https://mortonnd.gov/index.asp?DE=51D689DF-BD2C-4A12-955E-5A87A3009314&SEC=9E4E1362-67D1-4B2A-8879-F9D6928BA897",
+   "publisher": "Morton County, ND (2025 Veterans Day meal discounts page; URL returned 404 when fetched)"
+  },
+  "burleigh": {
+   "url": "https://www.burleigh.gov/departments/veterans-service-office/local-veterans-service-organizations/",
+   "publisher": "Burleigh County Veterans Service Office (post list)"
+  }
+ }
+}

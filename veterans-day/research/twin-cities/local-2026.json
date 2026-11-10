@@ -1,0 +1,278 @@
+[
+  {
+    "phone": "unknown",
+    "wednesday_hours": "11:00-12:00",
+    "status_2026": "confirmed",
+    "est_value_usd": 0,
+    "dates": "2026-11-11",
+    "hours_local": "11:00-12:00",
+    "mode": "event",
+    "eligible": [
+      "public",
+      "veteran",
+      "active"
+    ],
+    "eligibility_quote": "invites the community to commemorate Veterans Day",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "yes",
+    "proof": [],
+    "limits": "",
+    "name": "Maple Grove Veterans Day tribute (Beyond the Yellow Ribbon and Osseo-Maple Grove American Legion), Veterans Memorial, Central Park",
+    "kind": "event",
+    "address": "12000 Central Park Way, Maple Grove, MN 55369",
+    "offer": "Free community Veterans Day tribute at the Maple Grove Veterans Memorial in Central Park. All ages, free.",
+    "grade": "A",
+    "sources": [
+      {
+        "url": "https://www.maplegrovemn.gov/669/Community-events",
+        "publisher": "City of Maple Grove (Community events page)",
+        "published": "seen 9 Nov 2026",
+        "accessed": "2026-11-09"
+      },
+      {
+        "url": "https://maplegrovemnhistory.substack.com/p/maple-grove-has-always-answered-the",
+        "publisher": "Maple Grove history Substack",
+        "published": "2026-11-01",
+        "accessed": "2026-11-09"
+      }
+    ],
+    "notes": "City page lists 11:00-12:00 Wed 11 Nov 2026, Central Park, free, hosts Maple Grove Beyond the Yellow Ribbon and the Commander of the Osseo-Maple Grove American Legion. The Substack post (1 Nov 2026) says the same. The specific city calendar entry (Calendar.aspx?EID=514) is the 2021 9 a.m. ceremony, NOT 2026; ignore it. No 2026 bad-weather plan found (2021 plan was Phenow Pavilion in the park). Exact spot inside Central Park is the Veterans Memorial per Substack; address is the city's Central Park address.",
+    "suggest": {
+      "category": "event",
+      "minutes_at_stop": 60,
+      "window": "11:00-12:00",
+      "sit_down_meal": false,
+      "needs_purchase": false
+    }
+  },
+  {
+    "phone": "(763) 447-6500",
+    "wednesday_hours": "unknown",
+    "status_2026": "announced",
+    "est_value_usd": 20,
+    "dates": "2026-11-11",
+    "hours_local": null,
+    "mode": "dine_in",
+    "eligible": [
+      "veteran"
+    ],
+    "eligibility_quote": "Veterans: Please enjoy a free meal up to $20 on us on Veteran's Day, Wednesday, November 11th.",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "unclear",
+    "proof": [],
+    "limits": "Up to $20. Hours and proof not stated.",
+    "name": "Malone's Bar & Grill (Arbor Lakes)",
+    "kind": "business",
+    "address": "12635 Elm Creek Blvd N, Maple Grove, MN 55369",
+    "offer": "Free meal up to $20 for veterans on Veterans Day, Wed 11 Nov.",
+    "grade": "B",
+    "sources": [
+      {
+        "url": "https://twincitiesfrugalmom.com/2026/11/veterans-day-freebies-deals-2026/",
+        "publisher": "Twin Cities Frugal Mom",
+        "published": "2026-11-06",
+        "accessed": "2026-11-09"
+      }
+    ],
+    "notes": "Twin Cities Frugal Mom page (6 Nov 2026) carries the offer without hours or proof. The quote above comes from a search-result excerpt of a deal list, not the restaurant. Malone's own site (malonesbarandgrill.com) is a for-sale domain page; I could not read the restaurant's own post. Address and phone come from directory listings (AroundUs, HomePros), not read on the restaurant's page. Call to confirm hours and proof.",
+    "suggest": {
+      "category": "meal",
+      "minutes_at_stop": 60,
+      "window": null,
+      "sit_down_meal": true,
+      "needs_purchase": false
+    }
+  },
+  {
+    "phone": "unknown",
+    "wednesday_hours": "unknown",
+    "status_2026": "announced",
+    "est_value_usd": 14,
+    "dates": "2026-11-11",
+    "hours_local": null,
+    "mode": "dine_in",
+    "eligible": [
+      "veteran"
+    ],
+    "eligibility_quote": "",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "unclear",
+    "proof": [],
+    "limits": "Select menu. Hours and proof not stated.",
+    "name": "The Tavern Grill, Arden Hills (regional chain)",
+    "kind": "business",
+    "address": "3561 Lexington Ave N, Arden Hills, MN 55126",
+    "offer": "Every veteran gets a free meal: choice of a burger, chicken wrap or spicy chicken sandwich.",
+    "grade": "B",
+    "sources": [
+      {
+        "url": "https://www.yahoo.com/lifestyle/articles/list-twin-cities-restaurants-offering-154843154.html",
+        "publisher": "Bring Me The News (via Yahoo)",
+        "published": "2026-11-06",
+        "accessed": "2026-11-09"
+      }
+    ],
+    "notes": "BMTN list names Arden Hills among Tavern Grill locations (also Apple Valley, Blaine, Edina, Minnetonka, Woodbury). Regional Minnesota chain, kept because its offer is a local list item. Address from third-party listings (Birdeye, Cvent), not the restaurant site; phone not found. Value is my estimate of a burger meal, unverified.",
+    "suggest": {
+      "category": "meal",
+      "minutes_at_stop": 60,
+      "window": null,
+      "sit_down_meal": true,
+      "needs_purchase": false
+    }
+  },
+  {
+    "phone": "unknown",
+    "wednesday_hours": "unknown",
+    "status_2026": "announced",
+    "est_value_usd": 14,
+    "dates": "2026-11-11",
+    "hours_local": null,
+    "mode": "dine_in",
+    "eligible": [
+      "veteran"
+    ],
+    "eligibility_quote": "",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "unclear",
+    "proof": [],
+    "limits": "Street address, hours not found.",
+    "name": "5-8 Club, Maplewood",
+    "kind": "business",
+    "address": null,
+    "offer": "Free burger (classic or Juicy Lucy) with choice of fries, carrot sticks or coleslaw for veterans. Maplewood location named among four.",
+    "grade": "B",
+    "sources": [
+      {
+        "url": "https://www.yahoo.com/lifestyle/articles/list-twin-cities-restaurants-offering-154843154.html",
+        "publisher": "Bring Me The News (via Yahoo)",
+        "published": "2026-11-06",
+        "accessed": "2026-11-09"
+      }
+    ],
+    "notes": "BMTN 6 Nov 2026 lists Champlin, Maplewood, Minneapolis, West St. Paul with no addresses or hours. An AOL article about the same offer is undated in search results and returned 404 when I fetched it. Value is my estimate.",
+    "suggest": {
+      "category": "meal",
+      "minutes_at_stop": 60,
+      "window": null,
+      "sit_down_meal": true,
+      "needs_purchase": false
+    }
+  },
+  {
+    "phone": "unknown",
+    "wednesday_hours": "unknown",
+    "status_2026": "announced",
+    "est_value_usd": 14,
+    "dates": "2026-11-11",
+    "hours_local": null,
+    "mode": "dine_in",
+    "eligible": [
+      "veteran"
+    ],
+    "eligibility_quote": "",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "unclear",
+    "proof": [],
+    "limits": "Street address, hours not found.",
+    "name": "5-8 Club, Champlin",
+    "kind": "business",
+    "address": null,
+    "offer": "Free burger (classic or Juicy Lucy) with choice of fries, carrot sticks or coleslaw for veterans.",
+    "grade": "B",
+    "sources": [
+      {
+        "url": "https://www.yahoo.com/lifestyle/articles/list-twin-cities-restaurants-offering-154843154.html",
+        "publisher": "Bring Me The News (via Yahoo)",
+        "published": "2026-11-06",
+        "accessed": "2026-11-09"
+      }
+    ],
+    "notes": "Champlin is just outside the target towns (next to Brooklyn Park and Maple Grove). Same BMTN list as Maplewood. Address not given in the source.",
+    "suggest": {
+      "category": "meal",
+      "minutes_at_stop": 60,
+      "window": null,
+      "sit_down_meal": true,
+      "needs_purchase": false
+    }
+  },
+  {
+    "phone": "unknown",
+    "wednesday_hours": "16:00-21:00",
+    "status_2026": "announced",
+    "est_value_usd": 20,
+    "dates": "2026-11-11",
+    "hours_local": "16:00-21:00",
+    "mode": "dine_in",
+    "eligible": [
+      "veteran",
+      "active"
+    ],
+    "eligibility_quote": "",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "unclear",
+    "proof": [],
+    "limits": "Limited menu.",
+    "name": "Tria Restaurant",
+    "kind": "business",
+    "address": "5959 Centerville Rd, North Oaks, MN",
+    "offer": "Free meal from a limited menu for veterans and active-duty personnel.",
+    "grade": "B",
+    "sources": [
+      {
+        "url": "https://www.yahoo.com/lifestyle/articles/list-twin-cities-restaurants-offering-154843154.html",
+        "publisher": "Bring Me The News (via Yahoo)",
+        "published": "2026-11-06",
+        "accessed": "2026-11-09"
+      }
+    ],
+    "notes": "North Oaks borders Shoreview and Vadnais Heights; outside the listed towns but close to the Rosedale side. ZIP and phone not confirmed. Value estimated.",
+    "suggest": {
+      "category": "meal",
+      "minutes_at_stop": 75,
+      "window": "16:00-21:00",
+      "sit_down_meal": true,
+      "needs_purchase": false
+    }
+  },
+  {
+    "phone": "unknown",
+    "wednesday_hours": "11:00-20:00",
+    "status_2026": "announced",
+    "est_value_usd": 20,
+    "dates": "2026-11-11",
+    "hours_local": "11:00-20:00",
+    "mode": "dine_in",
+    "eligible": [
+      "veteran",
+      "active"
+    ],
+    "eligibility_quote": "",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "unclear",
+    "proof": [],
+    "limits": "Limited menu.",
+    "name": "Kendall's Tavern and Chophouse",
+    "kind": "business",
+    "address": "12800 Bunker Prairie Rd NW, Coon Rapids, MN",
+    "offer": "Free meal from a limited menu for veterans and active-duty personnel.",
+    "grade": "B",
+    "sources": [
+      {
+        "url": "https://www.yahoo.com/lifestyle/articles/list-twin-cities-restaurants-offering-154843154.html",
+        "publisher": "Bring Me The News (via Yahoo)",
+        "published": "2026-11-06",
+        "accessed": "2026-11-09"
+      }
+    ],
+    "notes": "Coon Rapids is north of Brooklyn Park, outside the listed towns; kept as a near-area option. ZIP and phone not confirmed. Value estimated.",
+    "suggest": {
+      "category": "meal",
+      "minutes_at_stop": 75,
+      "window": "11:00-20:00",
+      "sit_down_meal": true,
+      "needs_purchase": false
+    }
+  }
+]

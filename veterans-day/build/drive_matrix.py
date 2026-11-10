@@ -1,18 +1,24 @@
-"""Build site/veterans/veterans-day/data/drive.json: driving times on the road network (OSRM demo server, from
-OpenStreetMap) between every pair of stores, and from a grid of points about every 800 m across the metro to every
-store. The app joins a phone's position to its nearest grid points, so a position never has to be sent anywhere.
+"""Build each area's drive.json (beside its deals.json): driving times on the road network (OSRM demo server, from
+OpenStreetMap) between every pair of stores, and from a grid of points about every 800 m to every store. The app
+joins a phone's position to its nearest grid points, so a position never has to be sent anywhere.
 
-Usage (from the repo root, after build_data.py):  python -I veterans-day/build/drive_matrix.py
+Usage (from the repo root, after build_data.py):  python -I veterans-day/build/drive_matrix.py [area id ... | all]
+(default: all). Fargo-Moorhead's grid covers its stores' extent; another area's covers its circles (`areas` in
+REGIONS, build_data.py) plus 1 km, so a town with one stop (New Salem) still has start points of its own.
 Polite to the free server: one request a second, 50 x 50 per request.
 """
-import json, os, sys, time, urllib.request
+import json, math, os, sys, time, urllib.request
 from datetime import datetime, timezone
+
+sys.dont_write_bytecode = True
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import build_data as B  # noqa: E402  (REGIONS, km)
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 DATA = os.path.join(ROOT, "site", "veterans", "veterans-day", "data")
 UA = "tic-veterans-day-build/1.0 (support@theintelligence.company)"
 OSRM = "https://router.project-osrm.org/table/v1/driving/"
-STEP_LAT, STEP_LNG = 0.0072, 0.0105  # about 800 m each way at 46.9 N
+STEP_LAT, STEP_LNG = 0.0072, 0.0105  # about 800 m each way at 46.9 N (other latitudes: step_lng())
 SNAP_MAX_M = 400  # grid points further than this from any road are dropped
 CHUNK = 50
 _last = [0.0]
@@ -54,21 +60,56 @@ def full(src, dst):
     return rows, snaps
 
 
-def main():
-    deals = json.load(open(os.path.join(DATA, "deals.json"), encoding="utf-8"))
+def step_lng(lat):
+    return 0.0072 / math.cos(math.radians(lat))  # the same 800 m east-west as STEP_LAT north-south
+
+
+def area_grid(areas):
+    """Points about every 800 m inside the area's circles, each widened by 1 km."""
+    pts = []
+    for name, clat, clng, r in areas:
+        r += 1.0
+        dlat = r / 111.2
+        lat = clat - dlat
+        while lat <= clat + dlat:
+            st = step_lng(lat)
+            dlng = dlat / math.cos(math.radians(lat))
+            # snap to a shared lattice so overlapping circles share points
+            lng = math.floor((clng - dlng) / st) * st
+            while lng <= clng + dlng:
+                if B.km(lat, lng, clat, clng) <= r:
+                    pts.append((round(lat, 5), round(lng, 5)))
+                lng += st
+            lat += STEP_LAT
+    seen, out = set(), []
+    for p in pts:
+        k = (round(p[0] / STEP_LAT), round(p[1] / step_lng(p[0])))
+        if k not in seen:
+            seen.add(k); out.append(p)
+    return out
+
+
+def main(region=B.DEFAULT_REGION):
+    data = os.path.join(DATA, B.REGIONS[region]["out"])
+    deals = json.load(open(os.path.join(data, "deals.json"), encoding="utf-8"))
     places = [(p["lat"], p["lng"]) for p in deals["places"]]
-    lats = [p[0] for p in places]; lngs = [p[1] for p in places]
-    s, n = min(lats) - 0.012, max(lats) + 0.012
-    w, e = min(lngs) - 0.016, max(lngs) + 0.016
-    grid = []
-    lat = s
-    while lat <= n:
-        lng = w
-        while lng <= e:
-            grid.append((round(lat, 5), round(lng, 5)))
-            lng += STEP_LNG
-        lat += STEP_LAT
-    print(f"{len(places)} places, {len(grid)} grid points", flush=True)
+    areas = (deals["meta"].get("region") or {}).get("areas")
+    if areas:
+        grid = area_grid(areas)
+    else:
+        # Fargo-Moorhead, as first built: the stores' extent with a margin.
+        lats = [p[0] for p in places]; lngs = [p[1] for p in places]
+        s, n = min(lats) - 0.012, max(lats) + 0.012
+        w, e = min(lngs) - 0.016, max(lngs) + 0.016
+        grid = []
+        lat = s
+        while lat <= n:
+            lng = w
+            while lng <= e:
+                grid.append((round(lat, 5), round(lng, 5)))
+                lng += STEP_LNG
+            lat += STEP_LAT
+    print(f"== {region}: {len(places)} places, {len(grid)} grid points", flush=True)
     print("store to store", flush=True)
     pp, _ = full(places, places)
     print("grid to store", flush=True)
@@ -82,10 +123,14 @@ def main():
         "anchors": [list(grid[i]) for i in keep],
         "fromAnchor": [gp[i] for i in keep],
     }
-    json.dump(out, open(os.path.join(DATA, "drive.json"), "w", encoding="utf-8"), separators=(",", ":"))
-    size = os.path.getsize(os.path.join(DATA, "drive.json"))
+    json.dump(out, open(os.path.join(data, "drive.json"), "w", encoding="utf-8"), separators=(",", ":"))
+    size = os.path.getsize(os.path.join(data, "drive.json"))
     print(f"kept {len(keep)} of {len(grid)} grid points; drive.json {size // 1024} KB")
 
 
 if __name__ == "__main__":
-    main()
+    want = sys.argv[1:] or ["all"]
+    for r in (list(B.REGIONS) if want == ["all"] else want):
+        if r not in B.REGIONS:
+            raise SystemExit(f"unknown area {r!r}; one of: {', '.join(B.REGIONS)}")
+        main(r)

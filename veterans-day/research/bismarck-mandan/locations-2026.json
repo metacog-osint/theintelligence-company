@@ -1,0 +1,777 @@
+{
+ "7 Brew": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (7_brew_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Applebee's": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (applebees): 2 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "3200 North 14th Street, Bismarck, ND 58501",
+    "status": "confirmed",
+    "wed_hours": "10:30-24:00",
+    "phone": "+1 701-255-0200",
+    "url": "https://restaurants.applebees.com/en-us/nd/bismarck/3200-north-14th-street-96044",
+    "geo": "46.841343,-100.771921",
+    "source": "All the Places 2026-10-31: applebees"
+   },
+   {
+    "address": "434 South 3rd, Bismarck, ND 58504",
+    "status": "confirmed",
+    "wed_hours": "10:30-24:00",
+    "phone": "+1 701-222-1018",
+    "url": "https://restaurants.applebees.com/en-us/nd/bismarck/434-south-3rd-86097",
+    "geo": "46.801078,-100.788094",
+    "source": "All the Places 2026-10-31: applebees"
+   }
+  ]
+ },
+ "Biggby Coffee": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (biggby_coffee_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Blaze Pizza": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-24 (blaze_pizza): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "805 South 3rd Street, Bismarck, ND 58504",
+    "status": "confirmed",
+    "wed_hours": "10:30-22:00",
+    "phone": "+1 701-607-0030",
+    "url": "https://locations.blazepizza.com/us/nd/bismarck/blazepizza-1384",
+    "geo": "46.797440,-100.787250",
+    "source": "All the Places 2026-10-24: blaze_pizza"
+   }
+  ]
+ },
+ "Bob Evans": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (bob_evans_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Buca di Beppo": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (buca_di_beppo_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Buffalo Wild Wings": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (buffalo_wild_wings_us): 2 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "218 South 3rd Street, Bismarck, ND 58504",
+    "status": "confirmed",
+    "wed_hours": "10:30-00:45",
+    "phone": "+1 701-323-9464",
+    "url": "",
+    "geo": "46.803345,-100.788143",
+    "source": "All the Places 2026-10-31: buffalo_wild_wings_us"
+   },
+   {
+    "address": "3420 North 14th Street, Bismarck, ND 58503",
+    "status": "confirmed",
+    "wed_hours": "10:30-00:45",
+    "phone": "+1 701-751-2568",
+    "url": "",
+    "geo": "46.844120,-100.771297",
+    "source": "All the Places 2026-10-31: buffalo_wild_wings_us"
+   }
+  ]
+ },
+ "Caribou Coffee": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (caribou_coffee_us): 5 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "3122 Yorktown Drive, Bismarck, ND 58503",
+    "status": "confirmed",
+    "wed_hours": "05:30-18:00",
+    "phone": "+1 701-751-8009",
+    "url": "https://locations.cariboucoffee.com/us/nd/bismarck/3122-yorktown-drive",
+    "geo": "46.840021,-100.730119",
+    "source": "All the Places 2026-10-31: caribou_coffee_us"
+   },
+   {
+    "address": "3209 Weiss Ave., Bismarck, ND 58503",
+    "status": "confirmed",
+    "wed_hours": "06:00-18:00",
+    "phone": "+1 701-401-6599",
+    "url": "https://locations.cariboucoffee.com/us/nd/bismarck/3209-weiss-ave.",
+    "geo": "46.842193,-100.774974",
+    "source": "All the Places 2026-10-31: caribou_coffee_us"
+   },
+   {
+    "address": "900 43rd AVE NE, Bismarck, ND 58503",
+    "status": "confirmed",
+    "wed_hours": "06:00-19:00",
+    "phone": "+1 701-223-6617",
+    "url": "https://locations.cariboucoffee.com/us/nd/bismarck/900-43rd-ave-ne",
+    "geo": "46.853266,-100.777243",
+    "source": "All the Places 2026-10-31: caribou_coffee_us"
+   },
+   {
+    "address": "3101 North 11th Street, Bismarck, ND 58503",
+    "status": "confirmed",
+    "wed_hours": "06:00-18:00",
+    "phone": "+1 701-258-7791",
+    "url": "https://locations.cariboucoffee.com/us/nd/bismarck/3101-north-11th-street",
+    "geo": "46.839913,-100.774561",
+    "source": "All the Places 2026-10-31: caribou_coffee_us"
+   },
+   {
+    "address": "601 South 3rd Street, Bismarck, ND 58504",
+    "status": "confirmed",
+    "wed_hours": "05:00-19:00",
+    "phone": "+1 701-751-7507",
+    "url": "https://locations.cariboucoffee.com/us/nd/bismarck/601-south-3rd-street",
+    "geo": "46.799814,-100.787308",
+    "source": "All the Places 2026-10-31: caribou_coffee_us"
+   }
+  ]
+ },
+ "Casey's": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Charleys Cheesesteaks": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-17 (charleys_philly_steaks): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Chili's": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (chilis): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Chipotle": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (chipotle): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Circle K / Holiday": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (circle_k): 3 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "905 E Bismarck Expwy, Bismarck, ND 58504",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 701-223-4963",
+    "url": "",
+    "geo": "46.794590,-100.778175",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "3815 Trenton Dr, Bismarck, ND 58503",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 701-223-6181",
+    "url": "",
+    "geo": "46.833731,-100.731625",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "3600 State St, Bismarck, ND 58503",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 701-255-3622",
+    "url": "",
+    "geo": "46.844886,-100.773958",
+    "source": "All the Places 2026-10-31: circle_k"
+   }
+  ]
+ },
+ "Cracker Barrel": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "OpenStreetMap: 1 in the area",
+  "stores": [
+   {
+    "address": "1685 North Grandview Lane, Bismarck, 58503",
+    "status": "unverified",
+    "wed_hours": "07:00-21:00",
+    "phone": "+1-701-223-2785",
+    "url": "https://locations.crackerbarrel.com/nd/bismarck/447/",
+    "osm_id": "way/436131577",
+    "geo": "46.828671,-100.818570",
+    "source": "OpenStreetMap"
+   }
+  ]
+ },
+ "Dave & Buster's": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (dave_and_busters): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Denny's": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (dennys_us): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "405 S 7th St, Bismarck, ND 58504",
+    "status": "confirmed",
+    "wed_hours": "07:00-02:00",
+    "phone": "+1 701-223-2015",
+    "url": "https://locations.dennys.com/nd/bismarck/246240",
+    "geo": "46.801772,-100.781236",
+    "source": "All the Places 2026-10-31: dennys_us"
+   }
+  ]
+ },
+ "Dunkin'": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (dunkin_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Famous Dave's": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (famous_daves_us): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "401 East Bismarck Expressway, Bismarck, ND 58504",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "+1 701-530-9800",
+    "url": "https://www.famousdaves.com/Locations/Bismarck",
+    "geo": "46.794661,-100.786278",
+    "source": "All the Places 2026-10-31: famous_daves_us"
+   }
+  ]
+ },
+ "Fazoli's": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (fazolis_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Firehouse Subs": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (firehouse_subs): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "4521 Ottawa St., Suite 1, Bismarck, ND 58503",
+    "status": "confirmed",
+    "wed_hours": "10:00-21:00",
+    "phone": "+1 701-751-0894",
+    "url": "https://www.firehousesubs.com/store-locator/store/3c905b03-2995-49ae-9157-9db260e4bef0",
+    "geo": "46.855235,-100.773552",
+    "source": "All the Places 2026-10-31: firehouse_subs"
+   }
+  ]
+ },
+ "Freddy's Frozen Custard & Steakburgers": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (freddys_us): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "5511 Tree Top Lane, Bismarck, ND 58503",
+    "status": "confirmed",
+    "wed_hours": "10:30-22:00",
+    "phone": "+1 701-751-0958",
+    "url": "https://www.freddys.com/location/bismarck-tree-top-lane-nd",
+    "geo": "46.865741,-100.773735",
+    "source": "All the Places 2026-10-31: freddys_us"
+   }
+  ]
+ },
+ "Golden Corral": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (golden_corral): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Granite City Food & Brewery": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Great Clips": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (great_clips): 2 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "1223 W Century Ave, Bismarck, ND 58503",
+    "status": "confirmed",
+    "wed_hours": "10:00-18:00",
+    "phone": "+1 701-751-4404",
+    "url": "https://salons.greatclips.com/us/nd/bismarck/1223-w-century-ave",
+    "geo": "46.832482,-100.810910",
+    "source": "All the Places 2026-10-31: great_clips"
+   },
+   {
+    "address": "914 S 12th St, Bismarck, ND 58504",
+    "status": "confirmed",
+    "wed_hours": "09:00-19:00",
+    "phone": "+1 701-751-8222",
+    "url": "https://salons.greatclips.com/us/nd/bismarck/914-s-12th-st",
+    "geo": "46.796468,-100.774985",
+    "source": "All the Places 2026-10-31: great_clips"
+   }
+  ]
+ },
+ "Hooters": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (hooters): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Hy-Vee": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (hy_vee_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "IHOP": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (ihop): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "1209 Brookside Place, Bismarck, ND 58503",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 701-707-2534",
+    "url": "https://restaurants.ihop.com/nd/bismarck/breakfast-1209-brookside-place-3857",
+    "geo": "46.863301,-100.771340",
+    "source": "All the Places 2026-10-31: ihop"
+   }
+  ]
+ },
+ "Insomnia Cookies": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (insomnia_cookies): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "630 East Main Ave, Bismarck, ND 58501",
+    "status": "confirmed",
+    "wed_hours": "11:00-01:00",
+    "phone": "+1 701-997-2698",
+    "url": "",
+    "geo": "46.805594,-100.782375",
+    "source": "All the Places 2026-10-31: insomnia_cookies"
+   }
+  ]
+ },
+ "Jiffy Lube": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (jiffy_lube_us): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "1017 S WASHINGTON ST, BISMARCK, ND 58504",
+    "status": "confirmed",
+    "wed_hours": "08:00-18:00",
+    "phone": "+1 701-223-3245",
+    "url": "https://www.jiffylube.com/locations/nd/bismarck/519",
+    "geo": "46.794674,-100.793664",
+    "source": "All the Places 2026-10-31: jiffy_lube_us"
+   }
+  ]
+ },
+ "Kohl's": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (kohls_us): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "1129 W CENTURY AVE, BISMARCK, ND 58503",
+    "status": "confirmed",
+    "wed_hours": "09:00-22:00",
+    "phone": "+1 701-224-6745",
+    "url": "https://www.kohls.com/stores/nd/bismarck-184.shtml",
+    "geo": "46.831462,-100.809420",
+    "source": "All the Places 2026-10-31: kohls_us"
+   }
+  ]
+ },
+ "Krispy Kreme": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (krispy_kreme_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Kwik Trip": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (kwik_trip): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Little Caesars": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (little_caesars_us): 0 in the area (a partial list); OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Marcus Theatres": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Menchie's": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (menchies): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Mission BBQ": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Olive Garden": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "OpenStreetMap: 1 in the area",
+  "stores": [
+   {
+    "address": "3400 14th Street North, Bismarck, ND 58503",
+    "status": "unverified",
+    "wed_hours": "",
+    "phone": "",
+    "url": "https://www.olivegarden.com/locations/nd/bismarck/bismarck/1787",
+    "osm_id": "way/885061264",
+    "geo": "46.843372,-100.771567",
+    "source": "OpenStreetMap"
+   }
+  ]
+ },
+ "Outback Steakhouse": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (outback_steakhouse): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Perkins": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (perkins_us): 2 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "1100 Interstate Avenue, Bismarck, ND 58501",
+    "status": "confirmed",
+    "wed_hours": "05:30-24:00",
+    "phone": "+1 701-581-6082",
+    "url": "https://perkinsrestaurants.com/location/perkins-restaurant-bakery-corp-1083-803413",
+    "geo": "46.834930,-100.774010",
+    "source": "All the Places 2026-10-31: perkins_us"
+   },
+   {
+    "address": "100 East Bismarck Expressway, Bismarck, ND 58504",
+    "status": "confirmed",
+    "wed_hours": "00:15-24:00",
+    "phone": "+1 701-221-3112",
+    "url": "https://perkinsrestaurants.com/location/perkins-restaurant-bakery-corp-1174-802608",
+    "geo": "46.795422,-100.791296",
+    "source": "All the Places 2026-10-31: perkins_us"
+   }
+  ]
+ },
+ "Pilot / Flying J": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-10 (pilot_flying_j): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "3936 Miriam Ave, Bismarck, ND 58501",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 701-289-6786",
+    "url": "https://locations.pilotflyingj.com/us/nd/bismarck/3936-miriam-ave",
+    "geo": "46.829433,-100.729286",
+    "source": "All the Places 2026-10-10: pilot_flying_j"
+   }
+  ]
+ },
+ "Pizza Ranch": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (pizza_ranch_us): 2 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "1431 East LaSalle Drive, Bismarck, ND 58503",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "+1 701-751-2636",
+    "url": "https://pizzaranch.com/locations/nd/bismarck/1431-east-lasalle-drive",
+    "geo": "46.861233,-100.768608",
+    "source": "All the Places 2026-10-31: pizza_ranch_us"
+   },
+   {
+    "address": "305 E Main Street, Mandan, ND 58554",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "+1 701-667-5400",
+    "url": "https://pizzaranch.com/locations/nd/mandan/305-e-main-street",
+    "geo": "46.826649,-100.885287",
+    "source": "All the Places 2026-10-31: pizza_ranch_us"
+   }
+  ]
+ },
+ "Qdoba": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (qdoba): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "312 S 3rd St, Bismarck, ND 58504",
+    "status": "confirmed",
+    "wed_hours": "10:30-22:00",
+    "phone": "",
+    "url": "https://locations.qdoba.com/us/nd/bismarck/312-s-3rd-st",
+    "geo": "46.802599,-100.788122",
+    "source": "All the Places 2026-10-31: qdoba"
+   }
+  ]
+ },
+ "Red Lobster": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-17 (red_lobster_us): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "1130 E Century AVE, Bismarck, ND 58503",
+    "status": "confirmed",
+    "wed_hours": "11:00-21:00",
+    "phone": "+1 701-222-2363",
+    "url": "https://www.redlobster.com/locations/list/nd/bismarck/1130-e-century-ave/",
+    "geo": "46.838504,-100.774010",
+    "source": "All the Places 2026-10-17: red_lobster_us"
+   }
+  ]
+ },
+ "Red Robin": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-17 (red_robin): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Ruby Tuesday": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (ruby_tuesday_us): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "3520 State Street, Bismarck, ND 58503",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "+1 701-751-4100",
+    "url": "",
+    "geo": "46.844071,-100.773830",
+    "source": "All the Places 2026-10-31: ruby_tuesday_us"
+   }
+  ]
+ },
+ "Scooter's Coffee": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (scooters_coffee_us): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "433 East Bismarck Expressway, Bismarck, ND 58504",
+    "status": "confirmed",
+    "wed_hours": "05:00-21:00",
+    "phone": "+1 701-877-1590",
+    "url": "",
+    "geo": "46.800059,-100.788574",
+    "source": "All the Places 2026-10-31: scooters_coffee_us"
+   }
+  ]
+ },
+ "Shake Shack": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-17 (shake_shack): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Smashburger": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (smashburger): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Sonic": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (sonic_drivein_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Sport Clips": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (sport_clips_us): 2 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "411 South 3Rd Street, Bismarck, ND 58504",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "+1 701-751-0698",
+    "url": "https://sportclips.com/us-nd-bismarck-nd202",
+    "geo": "46.801670,-100.787190",
+    "source": "All the Places 2026-10-31: sport_clips_us"
+   },
+   {
+    "address": "820 43Rd Ave. Ne, Bismarck, ND 58503",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "+1 701-751-4004",
+    "url": "https://sportclips.com/us-nd-bismarck-nd203",
+    "geo": "46.853190,-100.778580",
+    "source": "All the Places 2026-10-31: sport_clips_us"
+   }
+  ]
+ },
+ "Starbucks": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (starbucks_us): 4 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "715 S. Washington, Bismarck, ND 58504",
+    "status": "confirmed",
+    "wed_hours": "04:30-20:30",
+    "phone": "+1 701-221-2072",
+    "url": "",
+    "geo": "46.797630,-100.794060",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "1229 W Century Ave, Bismarck, ND 58503",
+    "status": "confirmed",
+    "wed_hours": "05:00-20:00",
+    "phone": "+1 701-222-6301",
+    "url": "",
+    "geo": "46.832270,-100.811650",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "2124 N. 12th Street, Bismarck, ND 58501",
+    "status": "confirmed",
+    "wed_hours": "04:30-21:30",
+    "phone": "+1 701-221-2486",
+    "url": "",
+    "geo": "46.828850,-100.773730",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "1402 43rd Ave NE, Bismarck, ND 58503",
+    "status": "confirmed",
+    "wed_hours": "04:30-20:00",
+    "phone": "+1 701-222-1020",
+    "url": "",
+    "geo": "46.852790,-100.771810",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   }
+  ]
+ },
+ "Target": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (target_us): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "600 Kirkwood Mall, Bismarck, ND 58504",
+    "status": "confirmed",
+    "wed_hours": "07:00-22:00",
+    "phone": "+1 701-250-3180",
+    "url": "https://www.target.com/sl/store/2194",
+    "geo": "46.799078,-100.783506",
+    "source": "All the Places 2026-10-31: target_us"
+   }
+  ]
+ },
+ "Texas Roadhouse": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (texas_roadhouse): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "1505 Burnt Boat Drive, Bismarck, ND 58503",
+    "status": "confirmed",
+    "wed_hours": "15:30-22:00",
+    "phone": "+1 701-250-6746",
+    "url": "https://texasroadhouse.olo.com/menu/232-bismarcknd/",
+    "geo": "46.830827,-100.815659",
+    "source": "All the Places 2026-10-31: texas_roadhouse"
+   }
+  ]
+ },
+ "Tommy's Express Car Wash": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Twin Peaks": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (twin_peaks): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Village Inn": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (village_inn_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Walgreens": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (walgreens): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Wendy's": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (wendys): 1 in the area (a partial list); OpenStreetMap: 1 in the area",
+  "stores": [
+   {
+    "address": "3120 N. 14th St., Bismarck, ND 58503",
+    "status": "confirmed",
+    "wed_hours": "09:00-01:00",
+    "phone": "+1 701-222-8889",
+    "url": "https://locations.wendys.com/united-states/nd/bismarck/3120-n-14th-st/kids-meals.html",
+    "geo": "46.840253,-100.771953",
+    "source": "All the Places 2026-10-31: wendys"
+   },
+   {
+    "address": "900 East Bismarck Expressway, Bismarck, ND 58504",
+    "status": "unverified",
+    "wed_hours": "",
+    "phone": "+1 701-224-8304",
+    "url": "https://locations.wendys.com/united-states/nd/bismarck/900-east-bismarck-expressway",
+    "osm_id": "way/631749821",
+    "geo": "46.795290,-100.778214",
+    "source": "OpenStreetMap"
+   }
+  ]
+ }
+}

@@ -55,6 +55,22 @@ test("a deal you can't reach before it ends is left out", () => {
   assert.ok(!ids.includes("breakfast"), "breakfast ends 10:30; parking alone takes past the arrive-by time");
 });
 
+test("a ceremony with an arrive-by time (v1.3) is left out once you can't get there by its start", () => {
+  const ceremony = (arriveBy) => {
+    const d = town();
+    d.offers[2] = { id: "coffee", status: "offering", category: "event", value: 0, worth: 12, grade: "A", start: at(9, 30), end: at(11),
+      arriveBy, minutes: 60, eligible: ["veteran", "public"], guard_reserve: "unclear", spouse: "yes", proof: [] };
+    return E.nextOptions(E.prepare(d, profile(), state(), NO_REPORTS, at(9, 30), home)).map((o) => o.step);
+  };
+  // 20 minutes' drive and parking from home: arriving about 9:52.
+  assert.ok(ceremony(undefined).some((s) => s.c.offer.id === "coffee"), "without arriveBy, any time before 10:55 will do");
+  assert.ok(!ceremony(at(9, 45)).some((s) => s.c.offer.id === "coffee"), "the program starts at 9:45: too late");
+  const ok = ceremony(at(10, 0)).find((s) => s.c.offer.id === "coffee");
+  assert.ok(ok, "be there by 10:00: it fits");
+  assert.equal(ok.arriveBy, at(10, 0));
+  assert.ok(ok.slackMin < 10, "the time to spare counts to the arrive-by time, not the end");
+});
+
 test("the day plan collects all three in a workable order, each inside its window", () => {
   const data = town();
   const ctx = E.prepare(data, profile({ pace: "max" }), state(), NO_REPORTS, at(7), home);

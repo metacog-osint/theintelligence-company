@@ -1,4 +1,4 @@
-/*! Veterans Day route engine v1.2 · The Intelligence Company · pure functions: no DOM, no network, no storage.
+/*! Veterans Day route engine v1.3 · The Intelligence Company · pure functions: no DOM, no network, no storage.
  *  Browser: window.VDEngine. Node (tests): require("./engine.js").
  *
  *  Goals (profile.goal): "best" weighs each deal's value against your time at your pace; "stops" fits in the most
@@ -9,6 +9,8 @@
  *  ticket for later (a voucher or card) and food you take home (profile.togo) fill nothing.
  *  v1.2 (8 Nov 2026): a route doesn't open with a ticket for later unless it fits nowhere later or moving it costs
  *  more than 10 minutes, counting the drive back to where you started (deferTickets).
+ *  v1.3 (10 Nov 2026): offer.arriveBy (epoch ms), for a ceremony with a start time: the latest you can arrive,
+ *  instead of 5 minutes before it ends.
  *
  *  Inputs are plain objects (see prepare()). Times are epoch milliseconds; the data file already holds every window
  *  in UTC, so nothing here depends on a time zone. Drive times come from the data file's tables:
@@ -178,7 +180,8 @@
       // though the dining room opens at 4), the deal's own hours win.
       var open = Math.max(o.start || 0, pl.open), close = Math.min(o.end || Infinity, pl.close);
       if (close <= open && o.start && o.end) { open = o.start; close = o.end; }
-      if (!why && close - ARRIVE_BY_MS <= now) why = "over for today";
+      var latest = Math.min(close - ARRIVE_BY_MS, o.arriveBy || Infinity); // a ceremony: be there by its start
+      if (!why && latest <= now) why = "over for today";
       if (why) { excluded[pl.id] = why; return; }
       var conf = confidence(o, pl.id, reports, now);
       var pref = state.prefs && state.prefs[o.category] !== undefined ? state.prefs[o.category] : 1;
@@ -197,7 +200,7 @@
       var retry = state.done && state.done[o.id] && state.done[o.id].r === "away" ? 0.6 : 1;
       var q = el.f * conf.p * retry * (o.caution ? 0.7 : 1); // the chance it works out for you
       cands.push({
-        i: i, place: pl, offer: o, open: open, close: close, conf: conf, flags: flags,
+        i: i, place: pl, offer: o, open: open, close: close, latest: latest, conf: conf, flags: flags,
         // worth: what a stop is worth to the planner when it has no dollar value (a ceremony)
         base: (o.worth !== undefined ? o.worth : o.value) * el.mult * q * pref,
         dollars: o.value * el.mult * q,  // "savings": expected dollars, likes ignored
@@ -242,7 +245,7 @@
     for (var tries = 0; tries < 4; tries++) {
       arrive = leave + d;
       start = Math.max(arrive, c.open);
-      if (start > c.close - ARRIVE_BY_MS) return null;
+      if (start > c.latest) return null;
       queue = c.conf.line !== null ? c.conf.line : (o.busy && isPeak(ctx, start) ? o.busy : (o.line || 3));
       depart = start + (queue + o.minutes) * MIN;
       var clash = null;
@@ -278,7 +281,7 @@
     return {
       c: c, leave: leave, arrive: arrive, start: start, depart: depart,
       driveMin: d / MIN, waitMin: (start - arrive) / MIN, queueMin: queue,
-      slackMin: (c.close - ARRIVE_BY_MS - arrive) / MIN, arriveBy: c.close - ARRIVE_BY_MS,
+      slackMin: (c.latest - arrive) / MIN, arriveBy: c.latest,
       ev: ev, full: full, gain: gain, eats: here, fillAfter: fill + (here ? w : 0),
       dollars: c.dollars * full, counts: c.count * eat
     };

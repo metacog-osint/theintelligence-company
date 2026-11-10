@@ -1,0 +1,334 @@
+[
+ {
+  "guard_reserve": "unclear",
+  "spouse_or_guest": "unclear",
+  "proof": [],
+  "limits": "",
+  "eligibility_quote": "",
+  "name": "Veterans Day Program, ND Heritage Center & State Museum (AMVETS choir 9:30, program 9:45)",
+  "kind": "event",
+  "address": "612 E Boulevard Ave, Bismarck, ND 58505",
+  "phone": "701-328-2666",
+  "wednesday_hours": "09:30-11:00",
+  "status_2026": "confirmed",
+  "offer": "Public Veterans Day program in the Russell Reid Auditorium (KX calls it Russell Reid Hall). AMVETS choir at 9:30 AM, program at 9:45 AM. Free.",
+  "est_value_usd": 0,
+  "dates": "2026-11-11",
+  "hours_local": "09:30-11:00",
+  "mode": "event",
+  "eligible": [
+   "public",
+   "veteran",
+   "active"
+  ],
+  "grade": "A",
+  "sources": [
+   {
+    "url": "https://www.kxnet.com/studio701/community/veterans-day-program-offers-salute-to-veterans-at-state-heritage-center/",
+    "publisher": "KX News (Studio 701), by Amber Schatz",
+    "published": "2026-11-04",
+    "accessed": "2026-11-09"
+   },
+   {
+    "url": "https://statemuseum.nd.gov/visit",
+    "publisher": "State Historical Society of ND (State Museum)",
+    "published": "seen 9 Nov 2026",
+    "accessed": "2026-11-09"
+   }
+  ],
+  "notes": "KX News story of 4 Nov 2026 quotes organizers Darrell Emmil and Mamie Havelka announcing 9:30 choir, 9:45 program, 11 Nov. Page read in the browser pane (direct fetch is blocked by a bot check). The story is short: it gives no end time, no speaker and no cost line. 'Free and public' comes from earlier years (a 2023 Chamber listing says free and open to all) and the research report. End time 11:00 is an assumption from an older Bismarck Tribune snippet (9:45-11) and the 11 AM memorial tradition. Phone is the State Museum main line, not a program line. The story says the organizers are hoping for a sunny day (reason not in the text I could read; the memorial globe tradition is the likely reason, unconfirmed). I found no State Historical Society page for the 2026 program.",
+  "suggest": {
+   "category": "event",
+   "minutes_at_stop": 75,
+   "window": "09:30-11:00",
+   "sit_down_meal": false,
+   "needs_purchase": false
+  },
+  "geo": "46.8192459,-100.7803171"
+ },
+ {
+  "guard_reserve": "unclear",
+  "spouse_or_guest": "unclear",
+  "proof": [],
+  "limits": "",
+  "eligibility_quote": "",
+  "name": "All Veterans Memorial, 11 AM sunlight on the globe (Capitol grounds)",
+  "kind": "event",
+  "address": "600 E Boulevard Ave, Bismarck, ND 58505",
+  "phone": "unknown",
+  "wednesday_hours": "unknown",
+  "status_2026": "no_2026_info",
+  "offer": "Last year: every Nov 11 at 11:00 AM, sunlight passes through the opening in the memorial dome and lands on North Dakota on the globe. Free, outdoors, weather dependent. No 2026 notice found.",
+  "est_value_usd": 0,
+  "dates": "2026-11-11 (unconfirmed)",
+  "hours_local": "11:00-11:30",
+  "mode": "event",
+  "eligible": [
+   "public"
+  ],
+  "grade": "C",
+  "sources": [
+   {
+    "url": "https://noboundariesnd.com/listing/north-dakota-state-capitol/",
+    "publisher": "No Boundaries ND (Bismarck-Mandan CVB)",
+    "published": "seen 9 Nov 2026 (search result only; Capitol address and contact line)",
+    "accessed": "2026-11-09"
+   },
+   {
+    "url": "https://bismarcktribune.com/news/local/government-politics/veterans-day-celebrated-state-politicians-bismarck/article_cbe2219c-a061-11ef-8cb5-135343e814f5.html",
+    "publisher": "Bismarck Tribune",
+    "published": "2024-11 (date inferred from URL; article not read)",
+    "accessed": "2026-11-09"
+   }
+  ],
+  "notes": "Tradition described by the Bismarck Tribune 2024 story (seen only through a search-result summary; the fetch redirected to a paywall mirror I did not follow). Sunlight only works on a clear day near 11:00 AM. No 2026 notice from the Capitol or news. The 4 Nov 2026 KX story says the Heritage Center organizers hope for a sunny day, which is consistent but not explicit. The Capitol grounds are next to the Heritage Center, so it pairs with the 9:45 program. Address is the Capitol's; the memorial's exact spot on the grounds is not verified, so no geo.",
+  "suggest": {
+   "category": "event",
+   "minutes_at_stop": 20,
+   "window": "10:55-11:20",
+   "sit_down_meal": false,
+   "needs_purchase": false
+  }
+ },
+ {
+  "guard_reserve": "unclear",
+  "spouse_or_guest": "unclear",
+  "proof": [],
+  "limits": "",
+  "eligibility_quote": "",
+  "name": "AMVETS Post 9 (Roy C. Wagner Post), Veterans Day ceremony and lunch",
+  "kind": "veterans_org",
+  "address": "2402 Railroad Ave, Bismarck, ND 58501",
+  "phone": "701-258-8324",
+  "wednesday_hours": "11:00-00:30",
+  "status_2026": "no_2026_info",
+  "offer": "Last year: Veterans Day ceremony at the club (rose ceremony for veterans who died in the past year, gun salute, taps) followed by a free lunch for all attending, provided by Post 9 (KX News, Nov 11 2025, as quoted in the research report). An earlier year: club opened 11 AM, salute at noon, free roast beef dinner. No 2026 time found.",
+  "est_value_usd": 12,
+  "dates": "2026-11-11 (unconfirmed)",
+  "hours_local": "12:00-13:30",
+  "mode": "event",
+  "eligible": [
+   "public",
+   "veteran"
+  ],
+  "grade": "C",
+  "sources": [
+   {
+    "url": "https://www.bismarckamvets.com/",
+    "publisher": "Bismarck AMVETS Post 9 (own site)",
+    "published": "seen 9 Nov 2026",
+    "accessed": "2026-11-09"
+   },
+   {
+    "url": "https://www.burleigh.gov/departments/veterans-service-office/local-veterans-service-organizations/",
+    "publisher": "Burleigh County Veterans Service Office",
+    "published": "seen 9 Nov 2026",
+    "accessed": "2026-11-09"
+   },
+   {
+    "url": "https://www.kxnet.com/news/local-news/bismarcks-amvets-readies-for-veterans-day-celebration/",
+    "publisher": "KX News",
+    "published": "earlier year (page blocked by bot check; seen via search summary)",
+    "accessed": "2026-11-09"
+   }
+  ],
+  "notes": "Post's own site shows regular hours Mon-Sat 11:00-00:30, Sun 09:00-13:00, phone (701) 258-8324 (matches the Burleigh County list) and says nothing about Veterans Day. A search summary gave a different phone (222-1234) from a page I could not verify; I used 258-8324. Facebook (facebook.com/bismarck.amvets) is not readable without login. KX 2025 and earlier-year stories could not be opened (403 bot check), so the 2025 lunch description is the report's quote plus search summaries. The noon time is from an earlier year; a 2017 senator's calendar listed 12:50-2:00 PM. Call before routing. est_value is a rough guess at a lunch.",
+  "suggest": {
+   "category": "meal",
+   "minutes_at_stop": 75,
+   "window": "11:45-14:00",
+   "sit_down_meal": true,
+   "needs_purchase": false
+  },
+  "geo": "46.8041383,-100.7556011"
+ },
+ {
+  "guard_reserve": "unclear",
+  "spouse_or_guest": "unclear",
+  "proof": [],
+  "limits": "",
+  "eligibility_quote": "",
+  "name": "John Repsdorf American Legion Post 91 / Auxiliary Unit 180, New Salem Veterans Day program",
+  "kind": "veterans_org",
+  "address": "400 Main Ave, New Salem, ND 58563",
+  "phone": "701-587-1215",
+  "wednesday_hours": "unknown",
+  "status_2026": "no_2026_info",
+  "offer": "Last year: (undated, 'in the past') a Veterans Day program to honor veterans and families, public invited, lunch served. Post history says it was held at Elm Crest Manor. No 2026 time or venue published.",
+  "est_value_usd": 0,
+  "dates": "2026-11-11 (unconfirmed)",
+  "hours_local": null,
+  "mode": "event",
+  "eligible": [
+   "public",
+   "veteran"
+  ],
+  "grade": "C",
+  "sources": [
+   {
+    "url": "https://ndpost91.org/post-history",
+    "publisher": "John Repsdorf American Legion Post 91",
+    "published": "seen 9 Nov 2026",
+    "accessed": "2026-11-09"
+   },
+   {
+    "url": "https://ndpost91.org/post-location",
+    "publisher": "John Repsdorf American Legion Post 91",
+    "published": "seen 9 Nov 2026",
+    "accessed": "2026-11-09"
+   },
+   {
+    "url": "https://ndlegionhistory.org/post-histories/",
+    "publisher": "American Legion Dept. of ND post histories",
+    "published": "seen 9 Nov 2026",
+    "accessed": "2026-11-09"
+   },
+   {
+    "url": "https://ndpost91.org/",
+    "publisher": "John Repsdorf American Legion Post 91",
+    "published": "seen 9 Nov 2026",
+    "accessed": "2026-11-09"
+   }
+  ],
+  "notes": "Checked: ndpost91.org home, Post Updates (only a 2023 scoreboard item), Post Location, Post History; the ND Legion history page; searches for New Salem Veterans Day 2026 (nothing). Facebook page facebook.com/nsamericanlegion could not be read. No New Salem Journal or Morton County 2026 item found. CORRECTION to the research report: the line 'The Auxiliary hosts a stew dinner after the annual Veterans Day program' in the ND Legion history belongs to Post 106 (Fairmount), not New Salem. The New Salem entry says a program is held at Elm Crest Manor, 'the public is invited and a lunch is served', and Post 91's own page says 'In the past'. Address used is the post's location (New Salem City Auditorium); the historical venue Elm Crest Manor is at 100 Elm Ave per third-party directories (OSM geocode 46.845,-101.407), phone unverified. Post phone 701-587-1215 is on its own site (mailing address PO Box 17). The post meets 2nd Sunday monthly 7 PM in the auditorium basement. Call first.",
+  "suggest": {
+   "category": "event",
+   "minutes_at_stop": 60,
+   "window": null,
+   "sit_down_meal": true,
+   "needs_purchase": false
+  },
+  "geo": "46.842522,-101.411424"
+ },
+ {
+  "guard_reserve": "unclear",
+  "spouse_or_guest": "yes",
+  "proof": [],
+  "limits": "",
+  "eligibility_quote": "",
+  "name": "Bismarck VFW Post 1326 (Gilbert N. Nelson Post), Veterans Day free meal",
+  "kind": "veterans_org",
+  "address": "1235 S 12th St, Bismarck, ND 58504",
+  "phone": "701-222-1525",
+  "wednesday_hours": "unknown",
+  "status_2026": "no_2026_info",
+  "offer": "Last year: (an older Bismarck Tribune item, year not confirmed, likely over a decade old) a free meal for veterans and spouses with a freewill donation to the post's Helping Hand Fund. Nothing found for 2026.",
+  "est_value_usd": 0,
+  "dates": "2026-11-11 (unconfirmed)",
+  "hours_local": null,
+  "mode": "dine_in",
+  "eligible": [
+   "veteran"
+  ],
+  "grade": "C",
+  "sources": [
+   {
+    "url": "https://www.burleigh.gov/departments/veterans-service-office/local-veterans-service-organizations/",
+    "publisher": "Burleigh County Veterans Service Office",
+    "published": "seen 9 Nov 2026",
+    "accessed": "2026-11-09"
+   },
+   {
+    "url": "https://bismarcktribune.com/news/local/veterans-day-activities/article_4ec581c8-0b09-11e1-80fe-001cc4c03286.html",
+    "publisher": "Bismarck Tribune",
+    "published": "undated, URL id suggests 2011 (seen via search summary)",
+    "accessed": "2026-11-09"
+   }
+  ],
+  "notes": "Burleigh County list gives 1235 S 12th St and 701-222-1525. The old Tribune item gave another address (1326 E Broadway), probably an old location or a mix-up with the post number; use the county list. No 2026 posting found. Low confidence; call.",
+  "suggest": {
+   "category": "meal",
+   "minutes_at_stop": 60,
+   "window": null,
+   "sit_down_meal": true,
+   "needs_purchase": false
+  },
+  "geo": "46.790928,-100.7729308"
+ },
+ {
+  "guard_reserve": "unclear",
+  "spouse_or_guest": "unclear",
+  "proof": [],
+  "limits": "",
+  "eligibility_quote": "",
+  "name": "University of Mary Veterans Day chapel service and luncheon",
+  "kind": "event",
+  "address": "7500 University Dr, Bismarck, ND 58504",
+  "phone": "unknown",
+  "wednesday_hours": "unknown",
+  "status_2026": "no_2026_info",
+  "offer": "Last year: 2025 chapel service at 11:00 AM in Founders Hall, Lumen Vitae University Center, open to the public, for current and former military, veterans and families; complimentary lunch afterward for veterans and service members in attendance (Crow's Nest Campus Restaurant). No 2026 announcement found.",
+  "est_value_usd": 10,
+  "dates": "2026-11-11 (unconfirmed)",
+  "hours_local": "11:00-12:30",
+  "mode": "event",
+  "eligible": [
+   "veteran",
+   "active",
+   "public"
+  ],
+  "grade": "C",
+  "sources": [
+   {
+    "url": "https://www.umary.edu/about/news/all-stories/annual-veterans-day-chapel-service-and-luncheon-2025",
+    "publisher": "University of Mary",
+    "published": "2025-10-29",
+    "accessed": "2026-11-09"
+   }
+  ],
+  "notes": "New lead not in the research report. The 2025 page says the ceremony is open to the public and media and lunch is for veterans and service members attending; it does not say whether family eat. Page contact numbers are admissions lines, so phone left unknown. 2024 was at 10 AM (search summary). Check umary.edu or call before going. Address from OpenStreetMap geocoder.",
+  "suggest": {
+   "category": "event",
+   "minutes_at_stop": 90,
+   "window": "10:45-12:30",
+   "sit_down_meal": true,
+   "needs_purchase": false
+  },
+  "geo": "46.724869,-100.7516229"
+ },
+ {
+  "guard_reserve": "unclear",
+  "spouse_or_guest": "unclear",
+  "proof": [],
+  "limits": "",
+  "eligibility_quote": "",
+  "name": "Mandan Middle School Field of Flags display (DAV fundraiser)",
+  "kind": "event",
+  "address": "2901 12th Ave NW, Mandan, ND 58554",
+  "phone": "unknown",
+  "wednesday_hours": "unknown",
+  "status_2026": "announced",
+  "offer": "Flags planted in front of the school by students for the Disabled American Veterans Field of Flags; display stays up through Thu 12 Nov. Free to view from outside. KX (Nov 2026) reported $1,198 raised, the third straight year over goal.",
+  "est_value_usd": 0,
+  "dates": "2026-11-11",
+  "hours_local": null,
+  "mode": "event",
+  "eligible": [
+   "public"
+  ],
+  "grade": "B",
+  "sources": [
+   {
+    "url": "https://www.kxnet.com/news/local-news/mandan-middle-school-students-plant-flags-in-support-of-disabled-american-veterans/",
+    "publisher": "KX News",
+    "published": "2026-11 (page blocked by bot check; seen via search summary)",
+    "accessed": "2026-11-09"
+   },
+   {
+    "url": "https://www.kxnet.com/news/local-news/mandan-middle-school-flags/",
+    "publisher": "KX News",
+    "published": "2025-11-07 (read: prior-year story, 120 flags, $1,352, yearly tradition)",
+    "accessed": "2026-11-09"
+   }
+  ],
+  "notes": "The 2026 KX story could not be opened (CAPTCHA); the 2026 details (planting Wed 4 Nov, $1,198, 39th of 976, up through 12 Nov) come from a search-engine summary of it and from the research report. A search summary also mentioned a DAV member-news item with different numbers (47th of 1,085); I did not read it. The 2025 KX story, which I read, confirms a yearly tradition. Address is from the OpenStreetMap geocoder, not a school page. Not a staffed event: drive-by display, no hours.",
+  "suggest": {
+   "category": "event",
+   "minutes_at_stop": 10,
+   "window": null,
+   "sit_down_meal": false,
+   "needs_purchase": false
+  },
+  "geo": "46.8519075,-100.9080783"
+ }
+]
