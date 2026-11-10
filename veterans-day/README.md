@@ -97,7 +97,8 @@ wording the same day ("Build it as written"). **Live** since about 12:30 PM CST 
 
 ## Phone layout (9 Nov 2026 evening, "every tab is a horribly long scroll, especially on phone screens")
 Measured at 375×812 before and after: Route 6,896 → about 2,700 px, Deals 36,227 → 6,000, Me 4,882 → 2,000,
-Map 3,195 → 1,360. Not deployed yet.
+Map 3,195 → 1,360. Live from `2e8f9c5` about 6:20 PM CST 9 Nov 2026 (approved); the live files matched the
+local ones and the live page showed no console errors at phone size.
 - **Tabs stick to the top** (`nav.tabs` moved out of `<header>`, z-index 1100 over Leaflet's 1000). Switching tabs
   opens the new one at its top (`renderAll`, `switched`).
 - **About folds** into one closed `<details id="about">` under every tab (it was 1,943 px on each). Its h3s and
