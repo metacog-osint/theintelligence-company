@@ -157,7 +157,7 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
 - **9 Nov 2026 evening (live from `2e8f9c5` about 6:20 PM CST, approved; not pushed):** Marcus Theatres' free large popcorn added at West Acres and
   Century (69 deals at 168 stores; ticket question open), and the phone layout tightened: sticky tabs, About folded, Route settings and
   later stops folded, 20 deals then "Show all", Me reordered. Details in `veterans-day/README.md` ("Phone layout").
-- **Areas (9 Nov 2026; built 10 Nov, not committed or deployed yet):** an Area select in the top bar's right
+- **Areas (9 Nov 2026; live since about 9:40 AM CST 10 Nov 2026 from `62c984c`, approved; not pushed):** an Area select in the top bar's right
   corner: Fargo-Moorhead, ND/MN (the default and where a first visit lands), Bismarck-Mandan & New Salem, ND, and
   Twin Cities: Plymouth, Maple Grove, Roseville. The pick is saved on the phone; `?area=<id>` opens and saves an area
   (for links to friends). Fargo-Moorhead keeps `data/deals.json`; other areas have `data/<id>/`. REGIONS in
