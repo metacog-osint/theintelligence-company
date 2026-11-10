@@ -508,33 +508,39 @@
  {
   "name": "Super Buffet Sushi & Grill (Fargo)",
   "kind": "business",
-  "address": "100 45th St S, Fargo, ND (per 2021 article; not re-verified)",
+  "address": "1000 45th St S, Fargo, ND 58103",
   "phone": "unknown",
   "wednesday_hours": "unknown",
-  "status_2026": "no_2026_info",
-  "offer": "2021: free meal for veterans 11:00-21:00 on Thu 4 Nov 2021, not on Veterans Day itself",
-  "est_value_usd": 12,
-  "dates": "unknown",
-  "hours_local": "unknown",
+  "status_2026": "offering",
+  "offer": "Veterans eat free all day, 11 AM to 9 PM",
+  "est_value_usd": 15,
+  "dates": "2026-11-11",
+  "hours_local": "11:00-21:00",
   "mode": "dine_in",
   "eligible": [
    "veteran"
   ],
   "eligibility_quote": "",
-  "guard_reserve": "unclear",
+  "guard_reserve": "yes",
   "spouse_or_guest": "unclear",
   "proof": [],
   "limits": "",
-  "grade": "C",
+  "grade": "A",
   "sources": [
    {
-    "url": "https://www.inforum.com/business/from-free-food-to-haircuts-heres-where-military-veterans-can-find-deals-on-veterans-day",
-    "publisher": "InForum",
-    "published": "2021-11-03",
-    "accessed": "2026-11-08"
+    "url": null,
+    "publisher": "Super Buffet Sushi & Grill (its Google post of 30 Oct 2026: Veterans Day 17th Annual Ceremony, veterans eat free 11 AM-9 PM)",
+    "published": "2026-10-30",
+    "accessed": "2026-11-10"
+   },
+   {
+    "url": "https://www.facebook.com/61566436502652/posts/more-options-for-veterans-on-veterans-dayhornbachers/122236389578547883/",
+    "publisher": "Fargo American Legion Post 2 (Facebook: more options for veterans)",
+    "published": "seen 10 Nov 2026",
+    "accessed": "2026-11-10"
    }
   ],
-  "notes": "Past offer was on a different date than Nov 11."
+  "notes": "Super Buffet's own post (30 Oct 2026), shared by Fargo Legion Post 2. Its ceremony with the DAV starts at 6 PM."
  },
  {
   "name": "Benedict's Morning Heroes",
@@ -605,24 +611,44 @@
  {
   "name": "Pepper's Sports Cafe",
   "kind": "business",
-  "address": "unknown",
-  "phone": "unknown",
+  "address": "2510 University Dr S, Fargo, ND 58103",
+  "phone": "(701) 232-2366",
   "wednesday_hours": "unknown",
-  "status_2026": "no_2026_info",
-  "offer": "On last year's list; no 2026 post or report found",
-  "est_value_usd": 0,
-  "dates": "unknown",
-  "hours_local": "unknown",
-  "mode": "dine_in_or_to_go",
-  "eligible": [],
-  "eligibility_quote": "",
-  "guard_reserve": "unclear",
+  "status_2026": "offering",
+  "offer": "Free lunch entree for active duty, veterans, Reserve and National Guard with a valid military ID, dine-in only",
+  "est_value_usd": 14,
+  "dates": "2026-11-11",
+  "hours_local": "11:00-16:00",
+  "mode": "dine_in",
+  "eligible": [
+   "veteran",
+   "active",
+   "guard_reserve"
+  ],
+  "eligibility_quote": "Free entree is available for active-duty military, Veterans, Reserves, and National Guard with valid military ID.",
+  "guard_reserve": "yes",
   "spouse_or_guest": "unclear",
-  "proof": [],
-  "limits": "",
-  "grade": "C",
-  "sources": [],
-  "notes": "Searched 8 Nov 2026; nothing found. Do not show to users as an offer. Fargo Bites summary mentions Sandy's Donuts and Royal Buffet (multi-day, military ID) for a prior year, unverified."
+  "proof": [
+   "military_id"
+  ],
+  "limits": "Dine-in only. A valid military ID.",
+  "grade": "A",
+  "sources": [
+   {
+    "url": null,
+    "publisher": "Pepper's Sports Cafe (its flyer: Wednesday, November 11th, 11:00 am to 4:00 pm)",
+    "published": "seen 10 Nov 2026",
+    "accessed": "2026-11-10"
+   },
+   {
+    "url": "https://www.facebook.com/61566436502652/posts/more-options-for-veterans-on-veterans-dayhornbachers/122236389578547883/",
+    "publisher": "Fargo American Legion Post 2 (Facebook: more options for veterans)",
+    "published": "seen 10 Nov 2026",
+    "accessed": "2026-11-10"
+   }
+  ],
+  "notes": "Pepper's own flyer, posted by Fargo Legion Post 2. Address from directory listings (Birdeye, Yellow Pages). Pin from OpenStreetMap (2510 South University Drive).",
+  "geo": "46.843065,-96.798961"
  },
  {
   "name": "Pub West",
@@ -1444,12 +1470,6 @@
     "accessed": "2026-11-08"
    },
    {
-    "url": null,
-    "publisher": "Cash Wise store sign (Red, White & Thank You dinner: Wednesday, Nov 11th, 11AM-7PM)",
-    "published": "photo seen 10 Nov 2026 (shared with the planner, 10 Nov 2026)",
-    "accessed": "2026-11-10"
-   },
-   {
     "url": "https://www.openstreetmap.org/",
     "publisher": "OpenStreetMap (store and hours)",
     "published": "seen 8 Nov 2026",
@@ -1705,10 +1725,10 @@
   "address": "1620 32nd Ave S, Fargo, ND 58103",
   "phone": "",
   "wednesday_hours": "11:00-21:00 (directory listing, not confirmed)",
-  "status_2026": "no_2026_info",
-  "offer": "Reported for 2026 (unconfirmed): free buffet for veterans and active military, 9\u201311 Nov; show military or veteran ID to the host",
+  "status_2026": "offering",
+  "offer": "Free buffet meal for veterans and active military members, 10 to 12 Nov",
   "est_value_usd": 13,
-  "dates": "9-11 Nov 2026 (one unconfirmed listing)",
+  "dates": "2026-11-10 to 2026-11-12",
   "hours_local": "unknown",
   "mode": "dine_in",
   "eligible": [
@@ -1723,8 +1743,20 @@
    "va_card"
   ],
   "limits": "Dine-in buffet",
-  "grade": "C",
+  "grade": "A",
   "sources": [
+   {
+    "url": null,
+    "publisher": "Royal Buffet Chinese Restaurant (its Facebook post: free buffet meal, November 10 to November 12)",
+    "published": "about 8 Nov 2026",
+    "accessed": "2026-11-10"
+   },
+   {
+    "url": "https://www.facebook.com/61566436502652/posts/more-options-for-veterans-on-veterans-dayhornbachers/122236389578547883/",
+    "publisher": "Fargo American Legion Post 2 (Facebook: more options for veterans)",
+    "published": "seen 10 Nov 2026",
+    "accessed": "2026-11-10"
+   },
    {
     "url": "https://www.facebook.com/61566436502652/posts/below-is-a-list-of-local-discounts-and-freebies-in-our-area-for-veterans-day-roy/122235733094547883/",
     "publisher": "Fargo American Legion Post 2 (Facebook list of local deals)",
@@ -1738,7 +1770,7 @@
     "accessed": "2026-11-08"
    }
   ],
-  "notes": "Fargo American Legion Post 2's 30 Oct 2026 list quotes Royal Buffet's offer and address; the same 9\u201311 Nov offer ran in 2023, so the list may be repeating it. Nothing from Royal Buffet itself found: call first."
+  "notes": "Royal Buffet's own post (about 8 Nov 2026), shared by Fargo Legion Post 2. Fargo American Legion Post 2's 30 Oct 2026 list quotes Royal Buffet's offer and address; the same 9\u201311 Nov offer ran in 2023, so the list may be repeating it. Nothing from Royal Buffet itself found: call first."
  },
  {
   "name": "Scheels flag exchange (Fargo)",
@@ -1838,5 +1870,118 @@
    }
   ],
   "notes": "The lodge's own flyer: a chili feed free to all veterans, Wednesday, November 11th (a Wednesday in 2026), at 3 PM. No end time given, so the planner allows three hours. Call (701) 293-5151."
+ },
+ {
+  "kind": "event",
+  "wednesday_hours": "unknown",
+  "status_2026": "offering",
+  "dates": "2026-11-11",
+  "mode": "event",
+  "eligibility_quote": "",
+  "guard_reserve": "yes",
+  "spouse_or_guest": "yes",
+  "limits": "",
+  "grade": "A",
+  "name": "Super Buffet Veterans Day ceremony (with the DAV)",
+  "address": "1000 45th St S, Fargo, ND 58103",
+  "phone": "",
+  "offer": "Super Buffet's 17th annual Veterans Day ceremony with the DAV, 6 PM (the event runs to 9 PM); veterans eat free all day",
+  "est_value_usd": 0,
+  "hours_local": "18:00-21:00",
+  "eligible": [
+   "veteran",
+   "active",
+   "guard_reserve",
+   "public"
+  ],
+  "proof": [],
+  "sources": [
+   {
+    "url": null,
+    "publisher": "Super Buffet Sushi & Grill (its Google post of 30 Oct 2026: Veterans Day 17th Annual Ceremony, veterans eat free 11 AM-9 PM)",
+    "published": "2026-10-30",
+    "accessed": "2026-11-10"
+   },
+   {
+    "url": "https://www.facebook.com/61566436502652/posts/more-options-for-veterans-on-veterans-dayhornbachers/122236389578547883/",
+    "publisher": "Fargo American Legion Post 2 (Facebook: more options for veterans)",
+    "published": "seen 10 Nov 2026",
+    "accessed": "2026-11-10"
+   }
+  ],
+  "notes": "Hosted every year since 2009 (Super Buffet's post of 30 Oct 2026)."
+ },
+ {
+  "kind": "business",
+  "wednesday_hours": "07:30-18:00",
+  "status_2026": "offering",
+  "dates": "2026-11-11",
+  "mode": "in_store",
+  "eligibility_quote": "",
+  "guard_reserve": "yes",
+  "spouse_or_guest": "unclear",
+  "limits": "Some restrictions apply. Book first.",
+  "grade": "A",
+  "name": "Fix It Forward Auto Care",
+  "address": null,
+  "phone": "(701) 515-9921",
+  "offer": "Free oil change for any veteran (some restrictions apply), by appointment",
+  "est_value_usd": 50,
+  "hours_local": "07:30-18:00",
+  "eligible": [
+   "veteran"
+  ],
+  "proof": [],
+  "advance_signup": "Call (701) 515-9921 or book at fixitforwardautocare.com",
+  "sources": [
+   {
+    "url": null,
+    "publisher": "Fix It Forward Auto Care (its Facebook post: free oil changes to any veteran, Wednesday, November 11th, any of five F/M shops)",
+    "published": "about 9 Nov 2026",
+    "accessed": "2026-11-10"
+   },
+   {
+    "url": "http://www.fixitforwardautocare.com/",
+    "publisher": "Fix It Forward Auto Care (its five shops and hours)",
+    "published": "seen 10 Nov 2026",
+    "accessed": "2026-11-10"
+   },
+   {
+    "url": "https://www.facebook.com/61566436502652/posts/more-options-for-veterans-on-veterans-dayhornbachers/122236389578547883/",
+    "publisher": "Fargo American Legion Post 2 (Facebook: more options for veterans)",
+    "published": "seen 10 Nov 2026",
+    "accessed": "2026-11-10"
+   }
+  ],
+  "notes": "The shop's own post, shared by Fargo Legion Post 2. Appointments: (701) 515-9921 or online.",
+  "stores": [
+   {
+    "address": "6219 53rd Ave S, Fargo, ND 58104",
+    "phone": "(701) 781-6800",
+    "wed_hours": "07:30-18:00",
+    "geo": "46.802500,-96.890000",
+    "note": "Pin approximate: OpenStreetMap has 53rd Ave S but not this number."
+   },
+   {
+    "address": "2620 2nd Ave N, Moorhead, MN 56560",
+    "phone": "(218) 284-3200",
+    "wed_hours": "07:30-18:00"
+   },
+   {
+    "address": "1224 13th Ave E, West Fargo, ND 58078",
+    "phone": "(701) 282-2789",
+    "wed_hours": "07:30-18:00"
+   },
+   {
+    "address": "102 University Dr N, Fargo, ND 58102",
+    "phone": "(701) 237-5550",
+    "wed_hours": "07:30-18:00"
+   },
+   {
+    "address": "3471 University Dr S, Fargo, ND 58104",
+    "phone": "(701) 540-4044",
+    "wed_hours": "07:30-18:00"
+   }
+  ]
  }
 ]

@@ -2411,26 +2411,61 @@
     "scope": "national",
     "fm_presence": "yes",
     "fm_presence_basis": "FM presence from background knowledge; store locator NOT checked this run",
-    "fm_addresses_seen": [],
-    "status_2026": "no_2026_info",
-    "offer": null,
-    "est_value_usd": null,
-    "dates": null,
-    "hours_local": null,
-    "mode": null,
+    "fm_addresses_seen": [
+      "4151 45th St S",
+      "1532 32nd Ave S",
+      "4101 13th Ave S",
+      "2510 Broadway N",
+      "101 11th St S, Moorhead",
+      "950 40th Ave S, Moorhead"
+    ],
+    "status_2026": "offering",
+    "offer": "Free chicken dinner: 2 pieces of fried or grilled chicken or tenders, 2 sides, a dinner roll and a drink, dine-in or Grab & Go; a guest's meal is half price",
+    "est_value_usd": 10,
+    "dates": "2026-11-11",
+    "hours_local": "11:00-19:00",
+    "mode": "dine_in_or_to_go",
     "voucher_use_by": null,
-    "eligible": [],
-    "eligibility_quote": null,
-    "guard_reserve": "unclear",
+    "eligible": [
+      "veteran",
+      "active",
+      "guard_reserve",
+      "retired"
+    ],
+    "eligibility_quote": "To all active duty, National Guard, Reserve, former military and retired military.",
+    "guard_reserve": "yes",
     "spouse_or_guest": "unclear",
     "kids": null,
-    "proof": [],
+    "proof": [
+      "military_id",
+      "va_card",
+      "dd214"
+    ],
     "advance_signup": null,
-    "participating_locations_only": true,
-    "limits": null,
-    "grade": "C",
-    "sources": [],
-    "notes": "Nothing found in any roundup."
+    "participating_locations_only": false,
+    "limits": "One guest at half price",
+    "grade": "A",
+    "sources": [
+      {
+        "url": "https://hornbachers.com/veterans-day",
+        "publisher": "Hornbacher's (its Veterans Day page: Wednesday, November 11, 11am-7pm; store hours vary)",
+        "published": "seen 10 Nov 2026",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": null,
+        "publisher": "Hornbacher's store sign (Red, White & Thank You dinner: Wednesday, Nov 11th, 11AM-7PM); every Hornbacher's",
+        "published": "photo seen 10 Nov 2026 (shared with the planner)",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.facebook.com/61566436502652/posts/more-options-for-veterans-on-veterans-dayhornbachers/122236389578547883/",
+        "publisher": "Fargo American Legion Post 2 (Facebook: more options for veterans, Hornbacher's)",
+        "published": "seen 10 Nov 2026 (text not readable here)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "notes": "Hornbacher's own page and its store sign: Wednesday, Nov 11th (a Wednesday in 2026), 11 AM to 7 PM, for active duty, National Guard, Reserve, former and retired military, with a guest's meal at half price. Every Hornbacher's. The same dinner as Cash Wise's (both are Coborn's stores). The small Hornbacher's Express (1433 University Dr S) and the West Fargo fuel stop aren't listed: they may have no hot deli."
   },
   {
     "brand": "Culver's",

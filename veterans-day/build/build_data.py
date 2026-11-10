@@ -175,8 +175,15 @@ CURATE = [
     dict(id="pub-west", src="local", name="Pub West", osm=None, category="meal", minutes=50, busy=10, meal=True, dineIn=True, purchase=True, caution="Offer and address not confirmed: call first", kinds=["bar", "meal"]),
     # Cash Wise: its own page (8 Nov 2026) gives the dinner but no store list, so all four metro stores, "call yours".
     dict(id="cash-wise-deli", src="local", name="Cash Wise Foods deli", osm=None, category="quick", minutes=12, busy=5, meal=False, dineIn=False, eat=0.6, window=("11:00", "19:00"), caution="Cash Wise's page lists no stores: call yours first"),
+    # Hornbacher's: the same dinner (both are Coborn's stores); its sign, at every store (10 Nov 2026).
+    dict(id="hornbachers-deli", src="national", name="Hornbacher's", loc="Hornbacher's", osm=None, category="quick", minutes=12, busy=5, meal=False, dineIn=False, eat=0.6, window=("11:00", "19:00"), hours=("06:00", "22:00"), only=("fargo-moorhead",)),
     # Royal Buffet: free buffet 9-11 Nov on Fargo Legion Post 2's 30 Oct 2026 list (the same offer as 2023).
-    dict(id="royal-buffet", src="local", name="Royal Buffet", osm=None, category="meal", minutes=50, busy=15, meal=True, dineIn=True, caution=ONE_REPORT),
+    dict(id="royal-buffet", src="local", name="Royal Buffet", osm=None, category="meal", minutes=50, busy=15, meal=True, dineIn=True),
+    # From Fargo Legion Post 2's "more options" post (images shared 10 Nov 2026), each the business's own 2026 word.
+    dict(id="peppers", src="local", name="Pepper's Sports Cafe", osm=None, category="meal", minutes=50, busy=15, meal=True, dineIn=True, window=("11:00", "16:00")),
+    dict(id="super-buffet", src="local", name="Super Buffet Sushi & Grill", osm=None, category="meal", minutes=50, busy=15, meal=True, dineIn=True, window=("11:00", "21:00")),
+    dict(id="super-buffet-ceremony", src="local", name="Super Buffet Veterans Day ceremony", osm=None, category="event", minutes=60, busy=0, meal=False, dineIn=False, window=("17:45", "21:00"), arrive_by="18:00", worth=10),
+    dict(id="fix-it-forward", src="local", name="Fix It Forward Auto Care", osm=None, category="service", minutes=40, busy=10, meal=False, dineIn=False, kinds=["oil-change"]),
     dict(id="sandys-donuts", src="local", name="Sandy's Donuts", osm=None, category="treat", minutes=6, busy=5, meal=False, dineIn=False, window=("06:00", "13:30"), hours=("06:00", "13:30"), caution=ONE_REPORT),
     # From Valley News Live's 2026 roundup (9 Nov): a flag swap at Scheels and a school Mass at Nativity (grade B).
     # The flag exchange needs an old flag to swap, so it has no weight on a route: it joins one only if you pin it.
