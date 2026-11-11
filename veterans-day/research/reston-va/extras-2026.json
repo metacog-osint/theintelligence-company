@@ -1,0 +1,208 @@
+{
+ "about": "Reston & Northern Virginia (Reston, Herndon, Sterling, Tysons, Fairfax) research for Veterans Day 2026, compiled 10 Nov 2026. Items here are regional ceremonies, museums, parks and transit perks outside the local route circles or running all month.",
+ "other": [
+  {
+   "id": "arlington-national-cemetery-observance",
+   "day": "Wed 11 Nov, 11:00 AM EST (musical prelude 10:30)",
+   "name": "National Veterans Day Observance at Arlington National Cemetery",
+   "where": "Memorial Amphitheater, Arlington National Cemetery, Arlington, VA (about 20 miles east via I-66 or Silver Line)",
+   "offer": "National Veterans Day Observance: a wreath-laying at the Tomb of the Unknown Soldier at 11:00, then the observance in the Memorial Amphitheater. Free and open to the public.",
+   "grade": "A",
+   "note": "Expect security screening at the Welcome Center; allow extra time.",
+   "sources": [
+    {
+     "url": "https://patch.com/virginia/across-va/11-ways-observe-veterans-day-2026-virginia-parades-ceremonies-celebrations",
+     "publisher": "Patch",
+     "published": "2026-11-05"
+    }
+   ],
+   "at": "2026-11-11T16:00:00Z"
+  },
+  {
+   "id": "mount-vernon-veterans-day",
+   "day": "Wed 11 Nov, 9:00 AM-4:00 PM EST",
+   "name": "George Washington's Mount Vernon: free admission for military",
+   "where": "3200 Mount Vernon Memorial Hwy, Mount Vernon, VA (about 28 miles southeast)",
+   "offer": "Free admission for all active-duty, former and retired military personnel (not family or guests); free tickets on arrival. Veterans may place a floral tribute at the New Tomb and get a quarter-slice of 18th-century bread at the Half Crown Bakehouse while it lasts. Harmony Heritage Singers 11:00, U.S. Army Woodwind Quintet 12:30, Sons and Daughters of the American Revolution ceremony at the New Tomb 1:00, U.S. Air Force Strings 2:00.",
+   "grade": "A",
+   "note": "Its page doesn't say what proof to bring: carry a military ID, VA card or DD-214.",
+   "sources": [
+    {
+     "url": "https://www.mountvernon.org/plan-your-visit/calendar/events/mount-vernon-salutes-veterans",
+     "publisher": "George Washington's Mount Vernon",
+     "published": "2026"
+    }
+   ]
+  },
+  {
+   "id": "dc-prime-ashburn",
+   "day": "Wed 11 Nov",
+   "name": "DC Prime Steaks: free 9-oz Top Sirloin for veterans",
+   "where": "20120 Lakeview Center Plaza, Ashburn, VA 20147 (just west of Sterling on Route 7)",
+   "offer": "Complimentary 9-ounce Top Sirloin entree for veterans and active-duty military dining in on Wednesday, 11 Nov.",
+   "grade": "B",
+   "note": "Dine-in with military ID. Address not checked: call first.",
+   "sources": [
+    {
+     "url": "https://wtop.com/local/2026/11/deals-and-freebies-for-veterans-day/",
+     "publisher": "WTOP",
+     "published": "2026-11-09"
+    }
+   ]
+  },
+  {
+   "id": "great-falls-nps-fee-free",
+   "day": "Wed 11 Nov",
+   "name": "Great Falls Park & National Park Service sites: fee-free day",
+   "where": "9200 Old Dominion Dr, McLean, VA 22102 (15 minutes northeast of Reston) and all NPS sites",
+   "offer": "Entrance fees waived on Wednesday, 11 Nov at Great Falls Park, Shenandoah National Park, Manassas National Battlefield and all National Park Service sites for US citizens and residents.",
+   "grade": "A",
+   "note": "Veterans and Gold Star families also qualify for a free lifetime Interagency Military Pass at any federal recreation site.",
+   "sources": [
+    {
+     "url": "https://www.nps.gov/grfa/planyourvisit/fees.htm",
+     "publisher": "National Park Service (Great Falls Park)",
+     "published": "2026"
+    }
+   ]
+  },
+  {
+   "id": "udvar-hazy-center",
+   "day": "Every day, 10:00 AM–5:30 PM",
+   "name": "Smithsonian National Air and Space Museum Steven F. Udvar-Hazy Center",
+   "where": "14390 Air and Space Museum Pkwy, Chantilly, VA 20151 (10 minutes south of Reston/Herndon via Route 28)",
+   "offer": "Free museum admission every day (Space Shuttle Discovery, SR-71 Blackbird, Enola Gay and hundreds of military aircraft). Active-duty military and veterans receive military discounts at the Airbus IMAX Theater.",
+   "grade": "A",
+   "note": "Admission is free; parking is paid (check the museum's page for the late-afternoon rate).",
+   "sources": [
+    {
+     "url": "https://airandspace.si.edu/visit/udvar-hazy-center",
+     "publisher": "Smithsonian National Air and Space Museum",
+     "published": "2026"
+    }
+   ]
+  },
+  {
+   "id": "wmata-fairfax-connector-veterans",
+   "day": "Every day",
+   "name": "Metro: half fare for veterans rated 60% or more",
+   "where": "Metrorail (Silver Line: Reston Town Center, Wiehle-Reston East, Herndon) and Metrobus",
+   "offer": "Veterans with a VA disability rating of 60% or more qualify for Metro's Reduced Fare SmarTrip Photo ID card: half fare on Metrorail and Metrobus.",
+   "grade": "A",
+   "note": "Apply in person at Metro's Transit Accessibility Center with the VA rating letter. No special veteran fare on 11 Nov without the card.",
+   "sources": [
+    {
+     "url": "https://www.wmata.com/service/accessibility/reduced-fare.cfm",
+     "publisher": "WMATA",
+     "published": "2026"
+    }
+   ]
+  },
+  {
+   "id": "alexandria-veterans-day-ceremony",
+   "day": "Wed 11 Nov, 1:00 PM EST",
+   "name": "Alexandria Veterans Day Ceremony at Captain Rocky Versace Plaza",
+   "where": "Mount Vernon Recreation Center, 2701 Commonwealth Ave, Alexandria, VA",
+   "offer": "Annual public ceremony hosted by the City of Alexandria and Friends of Rocky Versace honoring Vietnam War fallen heroes and presenting Vietnam-era veteran lapel pins.",
+   "grade": "A",
+   "note": "Held indoors at the Mount Vernon Recreation Center; free and open to all.",
+   "sources": [
+    {
+     "url": "https://www.virginia.org/event/alexandria-veterans-day-ceremony/18952/",
+     "publisher": "Virginia Tourism Corporation",
+     "published": "2026-11"
+    },
+    {
+     "url": "https://patch.com/virginia/across-va/11-ways-observe-veterans-day-2026-virginia-parades-ceremonies-celebrations",
+     "publisher": "Patch",
+     "published": "2026-11-05"
+    }
+   ]
+  },
+  {
+   "id": "falls-church-ceremony",
+   "day": "Wed 11 Nov, 11:00 AM EST",
+   "name": "Falls Church Veterans Day Ceremony",
+   "where": "Veterans Memorial outside the Community Center, 223 Little Falls St, Falls Church (just east of Tysons)",
+   "offer": "The city's ceremony, with the Recreation and Parks Department and the Greater Falls Church Veterans Council.",
+   "grade": "A",
+   "note": "Free and open to the public.",
+   "sources": [
+    {
+     "url": "https://patch.com/virginia/across-va/11-ways-observe-veterans-day-2026-virginia-parades-ceremonies-celebrations",
+     "publisher": "Patch",
+     "published": "2026-11-05"
+    }
+   ],
+   "at": "2026-11-11T16:00:00Z"
+  },
+  {
+   "id": "leesburg-dodona-manor",
+   "day": "Wed 11 Nov, 10:00 AM-1:00 PM EST",
+   "name": "Leesburg Veterans Day Celebration, Dodona Manor",
+   "where": "312 E Market St, Leesburg (about 25 minutes northwest of Sterling)",
+   "offer": "Veterans Day celebration at Dodona Manor, George C. Marshall's home.",
+   "grade": "B",
+   "note": "The listing names no host or program: check before you go.",
+   "sources": [
+    {
+     "url": "https://patch.com/virginia/across-va/11-ways-observe-veterans-day-2026-virginia-parades-ceremonies-celebrations",
+     "publisher": "Patch",
+     "published": "2026-11-05"
+    }
+   ]
+  }
+ ],
+ "leads": [
+  {
+   "name": "Anita's New Mexico Style Mexican Food (Herndon, Vienna, Fairfax, Chantilly)",
+   "area": "Herndon (701 Elden St), Vienna (521 E Maple Ave), Fairfax, Chantilly",
+   "q": "Anita's New Mexico Style Mexican Food Herndon VA Veterans Day",
+   "offer": "Local Northern Virginia breakfast burrito institution; check your neighborhood store for any in-store veteran discount on 11 Nov.",
+   "last_seen": "2025",
+   "src": "anitas"
+  },
+  {
+   "name": "Glory Days Grill (Reston / North Point, Burke, Centreville)",
+   "area": "1400 North Point Village Ctr, Reston, VA 20194",
+   "q": "Glory Days Grill 1400 North Point Village Ctr Reston VA",
+   "offer": "Select franchise locations have offered veteran appetizer or entree discounts in past years; call the North Point Village store at (703) 689-0900.",
+   "last_seen": "2024",
+   "src": "glorydays"
+  },
+  {
+   "name": "Lake Anne Brew House",
+   "area": "11424 Washington Plaza W, Reston, VA 20190",
+   "q": "Lake Anne Brew House 11424 Washington Plaza W Reston VA",
+   "offer": "Veteran-friendly neighborhood taproom on Lake Anne Plaza; check taproom board for military appreciation pours.",
+   "last_seen": "2025",
+   "src": "lakeanne"
+  },
+  {
+   "name": "Jimmy's Old Town Tavern",
+   "area": "697 Spring St, Herndon, VA 20170",
+   "q": "Jimmy's Old Town Tavern Herndon Veterans Day",
+   "offer": "No Veterans Day offer found for 2026; call (703) 435-5467.",
+   "last_seen": "unknown",
+   "src": "jimmys"
+  }
+ ],
+ "lead_sources": {
+  "anitas": {
+   "url": "https://www.anitascorp.com/",
+   "publisher": "Anita's New Mexico Style Mexican Food"
+  },
+  "glorydays": {
+   "url": "https://www.glorydaysgrill.com/",
+   "publisher": "Glory Days Grill"
+  },
+  "lakeanne": {
+   "url": "https://lakeannebrewhouse.com/",
+   "publisher": "Lake Anne Brew House"
+  },
+  "jimmys": {
+   "url": "https://www.jimmystavern.com/",
+   "publisher": "Jimmy's Old Town Tavern"
+  }
+ }
+}

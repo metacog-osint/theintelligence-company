@@ -1,3 +1,6 @@
 .firebase/
 *.log
 node_modules/
+
+# All the Places downloads for build/stores_region.py (about 90 MB)
+.atp-cache/

@@ -51,6 +51,17 @@ REGIONS = {
         center=(45.0225, -93.4600), center_label="the middle of Plymouth", zoom=11,
         # Metro Transit: free only for service-connected disabled veterans (metrotransit.org/fares, read 9 Nov 2026).
         nws=(45.0200, -93.3000), wx_name="the Twin Cities", transit="ride Metro Transit, free with a VA ID marked Service Connected"),
+    "reston-va": dict(
+        name="Reston & Northern Virginia", label="Reston & Northern Virginia, VA",
+        out="reston-va", research="reston-va", bbox=None, states=("VA",),
+        tz="America/New_York", tz_offset_min=-300, tz_abbr="EST",
+        day_start=datetime(2026, 11, 11, 5, 0, tzinfo=timezone.utc),
+        areas=[("Reston and Herndon", 38.960, -77.365, 7.0), ("Sterling and Dulles", 39.015, -77.425, 5.5),
+               ("Vienna and Tysons", 38.915, -77.240, 5.5), ("Fairfax and Fair Oaks", 38.858, -77.330, 6.5)],
+        center=(38.9586, -77.3570), center_label="Reston Town Center", zoom=11,
+        nws=(38.9586, -77.3570), wx_name="Reston",
+        # WMATA's reduced fare: veterans rated 60% or more, with Metro's Reduced Fare SmarTrip ID (wmata.com, read 10 Nov 2026).
+        transit="ride Metro's Silver Line, half fare with Metro's Reduced Fare SmarTrip ID for veterans rated 60% or more"),
 }
 DEFAULT_REGION = "fargo-moorhead"
 
@@ -92,11 +103,18 @@ CURATE = [
     dict(id="pizza-ranch", src="national", name="Pizza Ranch", loc="Pizza Ranch", osm="pizzaranch", category="meal", minutes=45, busy=15, meal=True, dineIn=True,
          elsewhere=dict(offer="Last year: each Pizza Ranch chose a free Veterans Day buffet for veterans or a Veterans Week discount. Nothing found for 2026 at these stores")),
     # Chains with a 2026 offer and no Fargo-Moorhead store (other areas only; added 9 Nov 2026 with the area picker).
-    dict(id="red-robin", src="national", name="Red Robin", loc="Red Robin", osm=None, category="meal", minutes=50, busy=20, meal=True, dineIn=True, only=("bismarck-mandan", "twin-cities")),
-    dict(id="outback", src="national", name="Outback Steakhouse", loc="Outback Steakhouse", osm=None, category="meal", minutes=40, busy=15, meal=False, dineIn=True, eat=0.5, kinds=["snack"], only=("bismarck-mandan", "twin-cities")),
-    dict(id="golden-corral", src="national", name="Golden Corral", loc="Golden Corral", osm=None, category="meal", minutes=55, busy=25, meal=True, dineIn=True, only=("bismarck-mandan", "twin-cities")),
-    dict(id="smashburger", src="national", name="Smashburger", loc="Smashburger", osm=None, category="quick", minutes=20, busy=10, meal=False, dineIn=True, eat=0.6, caution="Lists differ (a free burger, or 25% off): ask first", only=("bismarck-mandan", "twin-cities")),
+    dict(id="red-robin", src="national", name="Red Robin", loc="Red Robin", osm=None, category="meal", minutes=50, busy=20, meal=True, dineIn=True, only=("bismarck-mandan", "twin-cities", "reston-va")),
+    dict(id="outback", src="national", name="Outback Steakhouse", loc="Outback Steakhouse", osm=None, category="meal", minutes=40, busy=15, meal=False, dineIn=True, eat=0.5, kinds=["snack"], only=("bismarck-mandan", "twin-cities", "reston-va")),
+    dict(id="golden-corral", src="national", name="Golden Corral", loc="Golden Corral", osm=None, category="meal", minutes=55, busy=25, meal=True, dineIn=True, only=("bismarck-mandan", "twin-cities", "reston-va")),
+    dict(id="smashburger", src="national", name="Smashburger", loc="Smashburger", osm=None, category="quick", minutes=20, busy=10, meal=False, dineIn=True, eat=0.6, caution="Lists differ (a free burger, or 25% off): ask first", only=("bismarck-mandan", "twin-cities", "reston-va")),
     dict(id="hy-vee", src="national", name="Hy-Vee", loc="Hy-Vee", osm=None, category="breakfast", minutes=35, busy=15, meal=True, dineIn=True, window=("06:00", "10:00"), caution="Stores with hot food service only", only=("bismarck-mandan", "twin-cities")),
+    dict(id="cpk", src="national", name="California Pizza Kitchen", loc="California Pizza Kitchen", osm=None, category="meal", minutes=50, busy=15, meal=True, dineIn=True, only=("reston-va",)),
+    dict(id="bonefish-grill", src="national", name="Bonefish Grill", loc="Bonefish Grill", osm=None, category="meal", minutes=40, busy=15, meal=False, dineIn=True, eat=0.5, kinds=["snack"], only=("reston-va",)),
+    dict(id="carrabbas", src="national", name="Carrabba's Italian Grill", loc="Carrabba's Italian Grill", osm=None, category="meal", minutes=45, busy=15, meal=False, dineIn=True, eat=0.5, kinds=["snack"], only=("reston-va",)),
+    dict(id="fogo-de-chao", src="national", name="Fogo de Chão", loc="Fogo de Chão", osm=None, category="meal", minutes=65, busy=15, meal=True, dineIn=True, purchase=True, only=("reston-va",)),
+    dict(id="bar-louie", src="national", name="Bar Louie", loc="Bar Louie", osm=None, category="meal", minutes=45, busy=15, meal=True, dineIn=True, kinds=["bar", "meal"], only=("reston-va",)),
+    dict(id="sheetz", src="national", name="Sheetz", loc="Sheetz", osm=None, category="quick", minutes=8, busy=5, meal=False, dineIn=False, hours=("00:00", "24:00"), kinds=["meal", "car-wash"], only=("reston-va",)),
+    dict(id="wawa", src="national", name="Wawa", loc="Wawa", osm=None, category="coffee", minutes=6, busy=3, meal=False, dineIn=False, hours=("00:00", "24:00"), only=("reston-va",)),
     # Breakfast
     dict(id="dennys", src="national", name="Denny's", loc="Denny's", osm="dennys", category="breakfast", minutes=45, busy=15, meal=True, dineIn=True),
     # IHOP: 7 AM-7 PM per the American Legion's 2026 list (5 Nov); ihop.com wasn't readable.
@@ -228,6 +246,18 @@ LOCAL = {
         dict(id="malones-maple-grove", src="local", name="Malone's Bar & Grill", osm=None, category="meal", minutes=55, busy=20, meal=True, dineIn=True, caution="One 2026 deal list carries it, and the address is from directories: call first", show=dict(notes="One 6 Nov 2026 deal list carries it (Twin Cities Frugal Mom); no post from the restaurant was found. Address from directories.")),
         dict(id="tavern-grill-arden-hills", src="local", name="The Tavern Grill, Arden Hills", osm=None, category="meal", minutes=55, busy=20, meal=True, dineIn=True, caution="Address from directories: call first", show=dict(notes="A 6 Nov 2026 list (Bring Me The News) names Arden Hills among the Tavern Grill stores offering it. Address from directories.")),
     ],
+    # Reston and Northern Virginia (Antigravity's research, 10 Nov 2026; sources, pins, grades and facts checked and
+    # corrected the same night: details in research/reston-va/notes.md). Jimmy's Old Town Tavern moved to the leads.
+    "reston-va": [
+        # A paid race ($35; watching is free), so it waits under "Deals that need a purchase".
+        dict(id="rtc-run-for-valor", src="local", name="RTC Run for Valor 5K, Reston Town Center", osm=None, category="event", minutes=90, busy=0, meal=False, dineIn=False, window=("06:45", "09:30"), arrive_by="07:45", worth=12, purchase=True, kinds=["ceremony"], show=dict(notes="The 2nd annual 5K, hosted by BXP for its veterans' group (Valor) with Microsoft, for Soldiers' Angels. Registration $35 through race day; watching is free. Remarks 7:45, start 8:00 at RTC Window Plaza on Opportunity Way; the finish is on Market St at the fountain. Free parking in the orange garage.")),
+        dict(id="herndon-post-184-ceremony", src="local", name="Herndon Veterans Day Ceremony (American Legion Post 184)", osm=None, category="event", minutes=60, busy=0, meal=False, dineIn=False, window=("10:45", "12:00"), arrive_by="11:00", worth=12, show=dict(notes="The Town of Herndon's ceremony, sponsored by Wayne M. Kidwell American Legion Post 184, at 11:00 AM on the Town Green (777 Lynn St). End time not published. An Avenue of Flags is on display at Chestnut Grove Cemetery.")),
+        dict(id="fairfax-post-177-ceremony", src="local", name="Fairfax Veterans Day Ceremony (American Legion Post 177)", osm=None, category="event", minutes=60, busy=0, meal=False, dineIn=False, window=("10:30", "11:30"), arrive_by="10:30", worth=12, show=dict(notes="American Legion Post 177 and VFW Post 8469, 3939 Oak St, Fairfax, from 10:30 AM; keynote Judge Michael C. Sprano (FFXnow, 10 Nov 2026). End time not published: an hour is allowed. Free and open to the public.")),
+        dict(id="kensington-reston-celebration", src="local", name="Veterans Day Ceremony, The Kensington Reston", osm=None, category="event", minutes=60, busy=0, meal=False, dineIn=False, window=("14:00", "16:00"), worth=10, caution="A senior-living community: RSVP or call (571) 494-8100 first", show=dict(notes="\"An Afternoon of Gratitude & Recognition\" at The Kensington Reston (11501 Sunrise Valley Dr), 2:00-4:00 PM: recognition of all veterans and live music. Its page has an RSVP and doesn't say whether the public may come.")),
+        dict(id="chick-fil-a-metro-dc", src="local", name="Chick-fil-A (Metro DC)", loc="Chick-fil-A", osm=None, category="quick", minutes=15, busy=12, meal=False, dineIn=False, drop=["4400 University Dr"], show=dict(notes="Chick-fil-A Metro DC's offer (cfametrodc.com, read 10 Nov 2026), open to close: a Chicken Biscuit, Egg White Grill or 4-count Chick-n-Minis until 10:30 AM; a Chicken Sandwich, Spicy Chicken Sandwich or 8-count Nuggets after. Proof of service required; not for mobile or delivery orders. All 10 stores shown are on its participating list.")),
+        dict(id="founding-farmers", src="local", name="Founding Farmers", osm=None, category="meal", minutes=55, busy=20, meal=True, dineIn=True, purchase=True, show=dict(notes="50% off brunch, lunch or dinner (not breakfast) for active-duty, retired military and veterans: food only, dine-in only, not to go. Bring a valid ID or DD-214, or wear your uniform. Reston Station (1904 Reston Metro Plaza) and Tysons (1800 Tysons Blvd); its page doesn't say every location takes part, so reserve or call first.")),
+        dict(id="teds-bulletin", src="local", name="Ted's Bulletin", osm=None, category="treat", minutes=10, busy=5, meal=False, dineIn=False, show=dict(notes="A free Ted's Tart for veterans (Military.com and Stars and Stripes 2026 lists; not Ted's own page). Reston Town Center, 11948 Market St.")),
+    ],
 }
 
 
@@ -292,9 +322,9 @@ def load(name, default, sub=""):
     return json.load(open(p, encoding="utf-8")) if os.path.exists(p) else default
 
 
-def local_iso(hhmm, day_offset=0):
+def local_iso(hhmm, day_offset=0, base_start=DAY_START):
     h, m = (int(x) for x in hhmm.split(":"))
-    t = DAY_START + timedelta(days=day_offset, hours=h, minutes=m)
+    t = base_start + timedelta(days=day_offset, hours=h, minutes=m)
     return t.strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
@@ -409,7 +439,7 @@ def census_batch(rows):
 
 def split_addr(a):
     a = re.sub(r"\s*\(.*?\)", "", a)
-    m = re.match(r"(.+?),\s*([A-Za-z .]+),\s*(ND|MN)\s*(\d{5})?", a)
+    m = re.match(r"(.+?),\s*([A-Za-z .]+),\s*(ND|MN|VA)\s*(\d{5})?", a)
     if not m:
         return None
     street = re.sub(r"\s*(Suite|Ste|Unit|#)\s*[\w-]+", "", m.group(1), flags=re.I).strip()
@@ -432,6 +462,10 @@ def sun_times(lat, lng, date):
 
 def main(region=DEFAULT_REGION):
     reg = REGIONS[region]
+    reg_day_start = reg.get("day_start", DAY_START)
+    reg_tz = reg.get("tz", "America/Chicago")
+    reg_tz_offset = reg.get("tz_offset_min", TZ_OFFSET_MIN)
+    reg_tz_abbr = reg.get("tz_abbr", "CST")
     sub = reg["research"]
     out_path = os.path.join(os.path.dirname(OUT), reg["out"], "deals.json")
     national = {r["brand"]: r for r in load("national-2026.json", [])}
@@ -511,7 +545,7 @@ def main(region=DEFAULT_REGION):
             # Local entries are C (earlier years only) unless the research grades them up, as the Air Museum's own
             # 2026 events list does for its program.
             "value": round(value), "grade": grade if cur["src"] == "national" else (grade if grade in ("A", "B") else "C"),
-            "start": local_iso(win[0]) if win else None, "end": local_iso(win[1]) if win and win[1] else None,
+            "start": local_iso(win[0], 0, reg_day_start) if win else None, "end": local_iso(win[1], 0, reg_day_start) if win and win[1] else None,
             "window_text": "", "mode": r.get("mode") or ("event" if cur["category"] == "event" else None),
             "minutes": cur["minutes"], "busy": cur.get("busy", 0), "line": cur.get("line", 3),
             "meal": cur["meal"], "dineIn": cur["dineIn"],
@@ -527,7 +561,7 @@ def main(region=DEFAULT_REGION):
         if cur.get("worth") is not None:
             o["worth"] = cur["worth"]
         if cur.get("arrive_by"):
-            o["arrive_by"] = local_iso(cur["arrive_by"])  # a ceremony: the latest arrival (engine v1.3)
+            o["arrive_by"] = local_iso(cur["arrive_by"], 0, reg_day_start)  # a ceremony: the latest arrival (engine v1.3)
         if region != DEFAULT_REGION and cur["src"] == "national":
             o["notes"] = strip_fm(o["notes"])
         o.update(cur.get("override") or {})
@@ -545,7 +579,7 @@ def main(region=DEFAULT_REGION):
         if cur.get("eat") is not None:
             o["eat"] = cur["eat"]
         if win:
-            o["window_text"] = f"{win[0]}–{win[1] or 'close'} CST" if win[1] else f"from {win[0]} CST"
+            o["window_text"] = f"{win[0]}–{win[1] or 'close'} {reg_tz_abbr}" if win[1] else f"from {win[0]} {reg_tz_abbr}"
         if o["grade"] == "C" and not o["offer"].lower().startswith(("last year", "prior", "predicted", "reported", "every", "in 20")):
             o["offer"] = "Last year: " + o["offer"] if cur["src"] == "local" else o["offer"]
         offers.append(o)
@@ -569,9 +603,9 @@ def main(region=DEFAULT_REGION):
                 # The chain's usual hours when CURATE knows them (24-hour Kwik Trips), else the category's.
                 hrs = cur.get("hours") or DEFAULT_HOURS[cur["category"]]
             close_day = 1 if hrs[1] in ("24:00",) or hrs[1] < hrs[0] else 0
-            close = local_iso("00:00", 1) if hrs[1] == "24:00" else local_iso(hrs[1], close_day)
+            close = local_iso("00:00", 1, reg_day_start) if hrs[1] == "24:00" else local_iso(hrs[1], close_day, reg_day_start)
             p = {"id": pid, "offer": o["id"], "name": "", "address": s["address"], "lat": lat, "lng": lng,
-                 "phone": s["phone"], "open": local_iso(hrs[0]), "close": close, "hoursAssumed": assumed,
+                 "phone": s["phone"], "open": local_iso(hrs[0], 0, reg_day_start), "close": close, "hoursAssumed": assumed,
                  "verified": s["verified"], "pin": pin}
             places.append(p)
             if lat is None:
@@ -608,7 +642,7 @@ def main(region=DEFAULT_REGION):
         report.append(f"  NWS points lookup failed: {e}")
     rise, sett = sun_times(reg["nws"][0], reg["nws"][1], datetime(2026, 11, 11).date())
     meta = {"built_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), "day": DAY,
-            "day_start": DAY_START.strftime("%Y-%m-%dT%H:%M:%SZ"), "tz": "America/Chicago", "tz_offset_min": TZ_OFFSET_MIN,
+            "day_start": reg_day_start.strftime("%Y-%m-%dT%H:%M:%SZ"), "tz": reg_tz, "tz_offset_min": reg_tz_offset,
             "forecast_url": forecast, "sunrise": rise.strftime("%Y-%m-%dT%H:%M:%SZ"), "sunset": sett.strftime("%Y-%m-%dT%H:%M:%SZ"),
             # What the page says about the area, and where drive_matrix.py lays its grid (None: the stores' extent).
             "region": {"id": region, "name": reg["name"], "label": reg["label"], "center": list(reg["center"]),

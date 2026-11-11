@@ -1,0 +1,5249 @@
+{
+ "meta": {
+  "built_at": "2026-11-11T04:29:59Z",
+  "day": "2026-11-11",
+  "day_start": "2026-11-11T05:00:00Z",
+  "tz": "America/New_York",
+  "tz_offset_min": -300,
+  "forecast_url": "https://api.weather.gov/gridpoints/LWX/85,73/forecast",
+  "sunrise": "2026-11-11T11:47:06Z",
+  "sunset": "2026-11-11T22:00:13Z",
+  "region": {
+   "id": "reston-va",
+   "name": "Reston & Northern Virginia",
+   "label": "Reston & Northern Virginia, VA",
+   "center": [
+    38.9586,
+    -77.357
+   ],
+   "center_label": "Reston Town Center",
+   "zoom": 11,
+   "wx_name": "Reston",
+   "transit": "ride Metro's Silver Line, half fare with Metro's Reduced Fare SmarTrip ID for veterans rated 60% or more",
+   "areas": [
+    [
+     "Reston and Herndon",
+     38.96,
+     -77.365,
+     7.0
+    ],
+    [
+     "Sterling and Dulles",
+     39.015,
+     -77.425,
+     5.5
+    ],
+    [
+     "Vienna and Tysons",
+     38.915,
+     -77.24,
+     5.5
+    ],
+    [
+     "Fairfax and Fair Oaks",
+     38.858,
+     -77.33,
+     6.5
+    ]
+   ]
+  }
+ },
+ "offers": [
+  {
+   "id": "applebees",
+   "brand": "Applebee's",
+   "status": "offering",
+   "category": "meal",
+   "offer": "Free full-size entree from a special Veterans Day menu (7 items); some locations add a $5 Bounce Back card",
+   "value": 14,
+   "grade": "A",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 55,
+   "busy": 25,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active",
+    "guard_reserve"
+   ],
+   "guard_reserve": "yes",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "Dine-in only; participating locations",
+   "sources": [
+    {
+     "url": "https://www.fsrmagazine.com/industry-news/applebees-to-thank-service-members-with-free-entrees-on-veterans-day/",
+     "publisher": "Applebee's 2026 release, as carried by FSR magazine",
+     "published": "2026-11-02"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    },
+    {
+     "url": "https://veteran.com/veterans-day-discounts-sales-deals-free-meals/",
+     "publisher": "Veteran.com",
+     "published": "2026-11-06 (updated)"
+    }
+   ],
+   "notes": "Guard/Reserve wording from Stripes; Veteran.com lists veterans only. Hours not specified. Applebee's own 2026 release (19th year, seven entrees, dine-in at participating restaurants); applebees.com refuses automated reads.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "chilis",
+   "brand": "Chili's",
+   "status": "offering",
+   "category": "meal",
+   "offer": "Free entree from a limited Veterans Day menu",
+   "value": 13,
+   "grade": "A",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 50,
+   "busy": 20,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.chilis.com/restaurant-events/veterans-day",
+     "publisher": "Chili's (own page)",
+     "published": "2026 (fine print: valid only on 11/11/2026)"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://veteran.com/veterans-day-discounts-sales-deals-free-meals/",
+     "publisher": "Veteran.com",
+     "published": "2026-11-06 (updated)"
+    }
+   ],
+   "notes": "Select items only; participating locations. Chili's own page: free meal on 11 Nov 2026 at participating restaurants, dine-in, limited menu, no drinks or gratuity.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "olive-garden",
+   "brand": "Olive Garden",
+   "status": "offering",
+   "category": "meal",
+   "offer": "Free entree from a special menu",
+   "value": 14,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 55,
+   "busy": 25,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    }
+   ],
+   "notes": "Veteran.com files Olive Garden under 2025; Military.com and Stripes list it for 2026. Brand's own page not checked. No statement from the company itself for 2026 found (8 Nov 2026): compilers only.",
+   "caution": "Not announced by the company for 2026: call first",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "red-lobster",
+   "brand": "Red Lobster",
+   "status": "offering",
+   "category": "meal",
+   "offer": "Free Veteran's Shrimp & Chips",
+   "value": 14,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 55,
+   "busy": 20,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    }
+   ],
+   "notes": "Veteran.com lists a prior-year entry; Military.com/Stripes show 2026 item named 'Veteran's Shrimp & Chips'. Confirm. No statement from the company itself for 2026 found (8 Nov 2026): compilers only.",
+   "caution": "Not announced by the company for 2026: call first",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "buffalo-wild-wings",
+   "brand": "Buffalo Wild Wings",
+   "status": "offering",
+   "category": "meal",
+   "offer": "10 boneless wings + fries",
+   "value": 14,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in_or_to_go",
+   "minutes": 35,
+   "busy": 15,
+   "line": 3,
+   "meal": true,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active",
+    "retired"
+   ],
+   "guard_reserve": "yes",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "Dine-in, GO orders or counter orders; participating locations",
+   "sources": [
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://veteran.com/veterans-day-discounts-sales-deals-free-meals/",
+     "publisher": "Veteran.com",
+     "published": "2026-11-06 (updated)"
+    }
+   ],
+   "notes": "'All past and present service members' (Military.com) - would include Guard/Reserve who served; Stripes says veterans.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "famous-daves",
+   "brand": "Famous Dave's",
+   "status": "offering",
+   "category": "meal",
+   "offer": "Complimentary two-meat lunch combo, dine-in, participating restaurants, proof required",
+   "value": 14,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 45,
+   "busy": 10,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://veteran.com/veterans-day-discounts-sales-deals-free-meals/",
+     "publisher": "Veteran.com",
+     "published": "2026-11-06 (updated)"
+    }
+   ],
+   "notes": "Veteran.com page text says 'Monday, Nov 11' (stale weekday copied from 2024) - date is unreliable; single source.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "dave-busters",
+   "brand": "Dave & Buster's",
+   "status": "offering",
+   "category": "meal",
+   "offer": "Free unlimited game play and/or free dessert with entree purchase, valid ID",
+   "value": 20,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 60,
+   "busy": 10,
+   "line": 3,
+   "meal": false,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    }
+   ],
+   "notes": "",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "games"
+   ]
+  },
+  {
+   "id": "red-robin",
+   "brand": "Red Robin",
+   "status": "offering",
+   "category": "meal",
+   "offer": "Free Red's Big Tavern Burger with bottomless steak fries",
+   "value": 16,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 50,
+   "busy": 20,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://veteran.com/veterans-day-discounts-sales-deals-free-meals/",
+     "publisher": "Veteran.com",
+     "published": "2026-11-06 (updated)"
+    }
+   ],
+   "notes": "",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "outback",
+   "brand": "Outback Steakhouse",
+   "status": "offering",
+   "category": "meal",
+   "offer": "Free Bloomin' Onion + Coca-Cola or 16-oz domestic draft ('Military Mates'); Dine Rewards payers also earn a Hero's Meal for a later visit",
+   "value": 12,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 40,
+   "busy": 15,
+   "line": 3,
+   "meal": false,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://veteran.com/veterans-day-discounts-sales-deals-free-meals/",
+     "publisher": "Veteran.com",
+     "published": "2026-11-06 (updated)"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    }
+   ],
+   "notes": "Military.com: Nov 10-11 free Bloomin' Onion + beverage. Dine Rewards enrollment not needed for the appetizer.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "snack"
+   ],
+   "eat": 0.5
+  },
+  {
+   "id": "cpk",
+   "brand": "California Pizza Kitchen",
+   "status": "offering",
+   "category": "meal",
+   "offer": "Free entree from a special Veterans Day menu and a non-alcoholic drink",
+   "value": 20,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 50,
+   "busy": 15,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active",
+    "guard_reserve"
+   ],
+   "guard_reserve": "yes",
+   "spouse": "no",
+   "kids": null,
+   "proof": [
+    "military_id",
+    "va_card",
+    "dd214",
+    "photo_in_uniform"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "Dine-in only; special menu of pizzas, pastas and salads.",
+   "sources": [
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-10 (updated)"
+    }
+   ],
+   "notes": "From Military.com's list (updated 10 Nov 2026); no 2026 word from CPK itself was found.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "bonefish-grill",
+   "brand": "Bonefish Grill",
+   "status": "offering",
+   "category": "meal",
+   "offer": "Free order of Bang Bang Shrimp and a non-alcoholic drink",
+   "value": 14,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 40,
+   "busy": 15,
+   "line": 3,
+   "meal": false,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active",
+    "guard_reserve"
+   ],
+   "guard_reserve": "yes",
+   "spouse": "no",
+   "kids": null,
+   "proof": [
+    "military_id",
+    "va_card",
+    "dd214"
+   ],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "Dine-in only; bring military ID.",
+   "sources": [
+    {
+     "url": "https://wtop.com/local/2026/11/deals-and-freebies-for-veterans-day/",
+     "publisher": "WTOP",
+     "published": "2026-11-09"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-10 (updated)"
+    }
+   ],
+   "notes": "From WTOP's and Military.com's 2026 lists; Bonefish's own 2026 post wasn't read.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "snack"
+   ],
+   "eat": 0.5
+  },
+  {
+   "id": "fogo-de-chao",
+   "brand": "Fogo de Chão",
+   "status": "offering",
+   "category": "meal",
+   "offer": "50% off Full or Indulgent Churrasco meal for veterans and active duty, plus 10% off for up to three guests",
+   "value": 32,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 65,
+   "busy": 15,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active",
+    "guard_reserve"
+   ],
+   "guard_reserve": "yes",
+   "spouse": "yes",
+   "kids": null,
+   "proof": [
+    "military_id",
+    "va_card",
+    "dd214"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "Dine-in only; half off requires paying the remaining half (beverages, dessert, tax and gratuity excluded).",
+   "sources": [
+    {
+     "url": "https://veteran.com/veterans-day-discounts-sales-deals-free-meals/",
+     "publisher": "Veteran.com",
+     "published": "2026-11-06 (updated)"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    }
+   ],
+   "notes": "Reservations recommended.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": true,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "bar-louie",
+   "brand": "Bar Louie",
+   "status": "offering",
+   "category": "meal",
+   "offer": "Free craft burger (excludes Big Louie)",
+   "value": 16,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 45,
+   "busy": 15,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active",
+    "guard_reserve"
+   ],
+   "guard_reserve": "yes",
+   "spouse": "no",
+   "kids": null,
+   "proof": [
+    "military_id",
+    "va_card",
+    "dd214"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "Dine-in only; excludes Big Louie; participating locations.",
+   "sources": [
+    {
+     "url": "https://news.va.gov/150505/2026-veterans-day-discounts-free-meals-offers/",
+     "publisher": "VA News",
+     "published": "2026"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    }
+   ],
+   "notes": "Valid 10–11 Nov 2026.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "bar",
+    "meal"
+   ]
+  },
+  {
+   "id": "sheetz",
+   "brand": "Sheetz",
+   "status": "offering",
+   "category": "quick",
+   "offer": "Free half turkey sub and a regular fountain drink, plus a free car wash at stores with a car wash",
+   "value": 10,
+   "grade": "A",
+   "start": "2026-11-11T05:00:00Z",
+   "end": "2026-11-12T05:00:00Z",
+   "window_text": "00:00–24:00 EST",
+   "mode": "in_store",
+   "minutes": 8,
+   "busy": 5,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": true,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "yes",
+   "spouse": "no",
+   "kids": null,
+   "proof": [
+    "military_id",
+    "va_card",
+    "dd214"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "Half turkey sub and regular fountain drink; extras cost extra. Free $9 car wash option at stores that have a car wash.",
+   "sources": [
+    {
+     "url": "https://www.convenience.org/Media/Daily/2026/November/6/4-Convenience-Retailers-Honor-Veterans_Ops",
+     "publisher": "NACS Daily (Sheetz 2026 announcement)",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    }
+   ],
+   "notes": "Open 24 hours. Bring military ID or proof of service.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal",
+    "car-wash"
+   ]
+  },
+  {
+   "id": "wawa",
+   "brand": "Wawa",
+   "status": "offering",
+   "category": "coffee",
+   "offer": "Free hot coffee of any size, all day",
+   "value": 3,
+   "grade": "A",
+   "start": "2026-11-11T05:00:00Z",
+   "end": "2026-11-12T05:00:00Z",
+   "window_text": "00:00–24:00 EST",
+   "mode": "in_store",
+   "minutes": 6,
+   "busy": 3,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active",
+    "guard_reserve",
+    "spouse"
+   ],
+   "guard_reserve": "yes",
+   "spouse": "yes",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "Any size hot coffee; family members included.",
+   "sources": [
+    {
+     "url": "https://www.convenience.org/Media/Daily/2026/November/6/4-Convenience-Retailers-Honor-Veterans_Ops",
+     "publisher": "NACS Daily (Wawa 2026 announcement)",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://news.va.gov/150505/2026-veterans-day-discounts-free-meals-offers/",
+     "publisher": "VA News",
+     "published": "2026"
+    }
+   ],
+   "notes": "Open 24 hours. Family members included; no ID required.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "coffee"
+   ]
+  },
+  {
+   "id": "dennys",
+   "brand": "Denny's",
+   "status": "offering",
+   "category": "breakfast",
+   "offer": "Free Original Grand Slam",
+   "value": 11,
+   "grade": "B",
+   "start": "2026-11-11T10:00:00Z",
+   "end": "2026-11-11T17:00:00Z",
+   "window_text": "05:00–12:00 EST",
+   "mode": "dine_in",
+   "minutes": 45,
+   "busy": 15,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active",
+    "retired"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "Participating locations",
+   "sources": [
+    {
+     "url": "https://usmilitary.org/veterans-day-discounts/",
+     "publisher": "usmilitary.org",
+     "published": "2026-11-05"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    },
+    {
+     "url": "https://www.legion.org/information-center/news/veterans-day/2026/november/veterans-day-deals-and-discounts",
+     "publisher": "American Legion",
+     "published": "2026-11-05"
+    }
+   ],
+   "notes": "USM cites the VA 2026 list: Wed 11 Nov, 5 a.m. to noon, dine-in only, ID required.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "ihop",
+   "brand": "IHOP",
+   "status": "offering",
+   "category": "breakfast",
+   "offer": "Free Red, White & Blueberry Pancake Combo",
+   "value": 11,
+   "grade": "B",
+   "start": "2026-11-11T12:00:00Z",
+   "end": "2026-11-12T00:00:00Z",
+   "window_text": "07:00–19:00 EST",
+   "mode": "dine_in",
+   "minutes": 45,
+   "busy": 15,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://www.legion.org/information-center/news/veterans-day/2026/november/veterans-day-deals-and-discounts",
+     "publisher": "The American Legion",
+     "published": "2026-11-05"
+    }
+   ],
+   "notes": "Veteran.com page still shows a 'Tuesday' weekday (stale 2025 text) but Military.com and Stripes confirm 11 Nov. Combo = pancakes, eggs, hash browns, bacon/sausage. The American Legion's 2026 list (5 Nov) gives 7 AM–7 PM at participating restaurants; ihop.com refuses automated reads.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "wendys",
+   "brand": "Wendy's",
+   "status": "offering",
+   "category": "quick",
+   "offer": "Free Dave's Single cheeseburger",
+   "value": 6,
+   "grade": "A",
+   "start": "2026-11-11T15:30:00Z",
+   "end": null,
+   "window_text": "from 10:30 EST",
+   "mode": "dine_in_or_to_go",
+   "minutes": 12,
+   "busy": 10,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": true,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "One per person, no purchase needed, no substitutions; identify in-store or at the drive-thru; app/kiosk/mobile/delivery excluded",
+   "sources": [
+    {
+     "url": "https://www.wendys.com/blog/wendysr-square-deal-blog/wendys-honors-veterans-and-active-duty-military-free-daves-single",
+     "publisher": "Wendy's (own blog)",
+     "published": "2026-11-02"
+    },
+    {
+     "url": "https://hip2save.com/deals/veterans-day-free-meals/",
+     "publisher": "Hip2Save",
+     "published": "2026-11-05"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://www.legion.org/information-center/news/veterans-day/2026/november/veterans-day-deals-and-discounts",
+     "publisher": "American Legion",
+     "published": "2026-11-05"
+    }
+   ],
+   "notes": "One 2026 'Military Wallet' page claims a free breakfast combo instead - that is the 2025 offer; four 2026 sources say Dave's Single. Wendy's own newsroom not found. Wendy's sometimes offers varying items; confirm. Wendy's own post: just say you're a veteran or active duty; participating US restaurants; not in a combo; not for digital, delivery or kiosk orders.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "little-caesars",
+   "brand": "Little Caesars",
+   "status": "offering",
+   "category": "quick",
+   "offer": "Free HOT-N-READY Lunch Combo (4 slices Detroit-style + 20-oz Pepsi)",
+   "value": 7,
+   "grade": "B",
+   "start": "2026-11-11T16:00:00Z",
+   "end": "2026-11-11T19:00:00Z",
+   "window_text": "11:00–14:00 EST",
+   "mode": "in_store",
+   "minutes": 8,
+   "busy": 10,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": true,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    },
+    {
+     "url": "https://thekrazycouponlady.com/tips/money/35-veterans-day-freebies-free-oil-change-flu-shot-dinner-dessert",
+     "publisher": "The Krazy Coupon Lady",
+     "published": "2026-11-07 (updated)"
+    }
+   ],
+   "notes": "Military.com: in-store only, 11 a.m.-2 p.m.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "firehouse-subs",
+   "brand": "Firehouse Subs",
+   "status": "offering",
+   "category": "quick",
+   "offer": "Buy any size sub, get a second free",
+   "value": 9,
+   "grade": "A",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "in_store",
+   "minutes": 15,
+   "busy": 10,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": true,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "In-store only; second sub is equal or lesser value presumably",
+   "sources": [
+    {
+     "url": "https://news.firehousesubs.com/posts/firehouse-subs-honors-veterans-and-active-duty-military-with-a-veterans-day-bogo-offer",
+     "publisher": "Firehouse Subs newsroom",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    }
+   ],
+   "notes": "Veteran.com lists as 2025; Military.com (updated 8 Nov 2026) lists it without a year. Stripes also lists. Moderately confident. Firehouse's own post for Wed 11 Nov 2026: buy any sub, get one free, veterans and active duty with military ID, in store, participating restaurants.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": true,
+   "kinds": [
+    "meal"
+   ],
+   "eat": 0.5
+  },
+  {
+   "id": "chipotle",
+   "brand": "Chipotle",
+   "status": "offering",
+   "category": "quick",
+   "offer": "Free chips with guac, queso blanco or salsa with $5+ in-restaurant purchase",
+   "value": 5,
+   "grade": "A",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 15,
+   "busy": 10,
+   "line": 3,
+   "meal": false,
+   "dineIn": true,
+   "snack": true,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "no",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "In-restaurant only; not catering, mobile, online or delivery",
+   "sources": [
+    {
+     "url": "https://newsroom.chipotle.com/veterans-day-2026-offer",
+     "publisher": "Chipotle newsroom (release)",
+     "published": "2026-11-05"
+    },
+    {
+     "url": "https://veteran.com/veterans-day-discounts-sales-deals-free-meals/",
+     "publisher": "Veteran.com",
+     "published": "2026-11-06 (updated)"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    }
+   ],
+   "notes": "Requires a $5 purchase. Chipotle's 2026 release: active duty and veterans only (not spouses), all day, in-restaurant, $5 minimum before tax.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": true,
+   "kinds": [
+    "snack"
+   ],
+   "eat": 0.2
+  },
+  {
+   "id": "qdoba",
+   "brand": "Qdoba",
+   "status": "offering",
+   "category": "quick",
+   "offer": "Free chips and dip, dine-in, no purchase",
+   "value": 5,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 12,
+   "busy": 5,
+   "line": 3,
+   "meal": false,
+   "dineIn": true,
+   "snack": true,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://livingonthecheap.com/veterans-day-freebies-deals/",
+     "publisher": "Living On The Cheap",
+     "published": "2026-11-07 (updated)"
+    },
+    {
+     "url": "https://thekrazycouponlady.com/tips/money/35-veterans-day-freebies-free-oil-change-flu-shot-dinner-dessert",
+     "publisher": "The Krazy Coupon Lady",
+     "published": "2026-11-07 (updated)"
+    }
+   ],
+   "notes": "Living On The Cheap lists it as 2026; Krazy Coupon Lady marks it 'predicted'. Not on Military.com/Stripes lists. Treat as likely but not firm.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "snack"
+   ],
+   "eat": 0.2
+  },
+  {
+   "id": "charleys",
+   "brand": "Charleys Cheesesteaks",
+   "status": "offering",
+   "category": "quick",
+   "offer": "Free regular Gourmet Fry, no purchase needed",
+   "value": 4,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "in_store",
+   "minutes": 8,
+   "busy": 5,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": true,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    }
+   ],
+   "notes": "Single source (Military.com). Location is inside a truck stop. Charleys' own page found is 2025's (free regular Gourmet Fry, in store, participating US stores).",
+   "caution": "Participating stores only",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "snack"
+   ],
+   "eat": 0.2
+  },
+  {
+   "id": "mission-bbq",
+   "brand": "Mission BBQ",
+   "status": "offering",
+   "category": "quick",
+   "offer": "Free sandwich",
+   "value": 11,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 20,
+   "busy": 10,
+   "line": 3,
+   "meal": false,
+   "dineIn": true,
+   "snack": true,
+   "eligible": [
+    "veteran"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    }
+   ],
+   "notes": "",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "shake-shack",
+   "brand": "Shake Shack",
+   "status": "offering",
+   "category": "quick",
+   "offer": "Free ShackBurger with ID/proof, participating",
+   "value": 8,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 20,
+   "busy": 10,
+   "line": 3,
+   "meal": false,
+   "dineIn": true,
+   "snack": true,
+   "eligible": [
+    "veteran"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    }
+   ],
+   "notes": "",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "blaze-pizza",
+   "brand": "Blaze Pizza",
+   "status": "offering",
+   "category": "quick",
+   "offer": "Free one-topping pizza",
+   "value": 8,
+   "grade": "A",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": null,
+   "minutes": 20,
+   "busy": 10,
+   "line": 3,
+   "meal": false,
+   "dineIn": true,
+   "snack": true,
+   "eligible": [
+    "veteran"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.manilatimes.net/2026/11/02/tmt-newswire/globenewswire/blaze-pizza-to-offer-free-one-topping-pizza-to-veterans-and-active-duty-military-on-veterans-day/2459600",
+     "publisher": "Blaze Pizza release (GlobeNewswire, carried by The Manila Times)",
+     "published": "2026-11-02"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    }
+   ],
+   "notes": "Blaze's 2026 release: veterans and active duty, participating locations; no hours or ID rule stated.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "starbucks",
+   "brand": "Starbucks",
+   "status": "offering",
+   "category": "coffee",
+   "offer": "Free tall (12 oz) brewed coffee, hot or iced",
+   "value": 3,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in_or_to_go",
+   "minutes": 8,
+   "busy": 5,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active",
+    "spouse"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "yes",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "One per customer per visit; cafe and drive-thru; excludes Cold Brew/Nitro/customizations",
+   "sources": [
+    {
+     "url": "https://about.starbucks.com/stories/2026/starbucks-holiday-2026/",
+     "publisher": "Starbucks (page returned 403 to fetch; seen in search snippet)",
+     "published": "2026"
+    },
+    {
+     "url": "https://veteran.com/veterans-day-discounts-sales-deals-free-meals/",
+     "publisher": "Veteran.com",
+     "published": "2026-11-06 (updated)"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    }
+   ],
+   "notes": "Participating US stores incl. licensed (Target/grocery) locations. Proof not specified; spouses included.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "coffee"
+   ]
+  },
+  {
+   "id": "circle-k",
+   "brand": "Circle K",
+   "status": "offering",
+   "category": "coffee",
+   "offer": "Free medium hot or iced coffee, no purchase",
+   "value": 3,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "to_go",
+   "minutes": 6,
+   "busy": 3,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://thekrazycouponlady.com/tips/money/35-veterans-day-freebies-free-oil-change-flu-shot-dinner-dessert",
+     "publisher": "The Krazy Coupon Lady",
+     "published": "2026-11-07 (updated)"
+    },
+    {
+     "url": "https://livingonthecheap.com/veterans-day-freebies-deals/",
+     "publisher": "Living On The Cheap",
+     "published": "2026-11-07 (updated)"
+    }
+   ],
+   "notes": "Veteran.com lists as 2025; Stripes/KCL/LOC list for 2026.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "coffee"
+   ]
+  },
+  {
+   "id": "dunkin",
+   "brand": "Dunkin'",
+   "status": "offering",
+   "category": "coffee",
+   "offer": "Free donut, in-store only, one per guest, while supplies last (not on mobile app orders)",
+   "value": 2,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "in_store",
+   "minutes": 6,
+   "busy": 5,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://livingonthecheap.com/veterans-day-freebies-deals/",
+     "publisher": "Living On The Cheap",
+     "published": "2026-11-07 (updated)"
+    }
+   ],
+   "notes": "USM says no 2026 announcement on Dunkin's own site as of 5 Nov.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "sweet"
+   ]
+  },
+  {
+   "id": "insomnia",
+   "brand": "Insomnia Cookies",
+   "status": "offering",
+   "category": "treat",
+   "offer": "Predicted: one free Deluxe cookie with $5+ in-store purchase",
+   "value": 3,
+   "grade": "C",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": null,
+   "minutes": 8,
+   "busy": 3,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": true,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://thekrazycouponlady.com/tips/money/35-veterans-day-freebies-free-oil-change-flu-shot-dinner-dessert",
+     "publisher": "The Krazy Coupon Lady",
+     "published": "2026-11-07 (updated)"
+    }
+   ],
+   "notes": "",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": true,
+   "kinds": [
+    "sweet"
+   ],
+   "eat": 0.2
+  },
+  {
+   "id": "freddys",
+   "brand": "Freddy's Frozen Custard & Steakburgers",
+   "status": "offering",
+   "category": "treat",
+   "offer": "Free combo meal card for visiting on Nov 11 (no purchase); redeem later",
+   "value": 11,
+   "grade": "A",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "voucher",
+   "minutes": 6,
+   "busy": 5,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": "2026-11-25",
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://freddys.com/veterans-day",
+     "publisher": "Freddy's (own page)",
+     "published": "2026 (cards redeem through 25 Nov 2026)"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://veteran.com/veterans-day-discounts-sales-deals-free-meals/",
+     "publisher": "Veteran.com",
+     "published": "2026-11-06 (updated)"
+    }
+   ],
+   "notes": "Card redeemable through 25 Nov 2026. Freddy's own 2026 page: no purchase; card from your local Freddy's on 11 Nov, redeem through 25 Nov 2026.",
+   "caution": "",
+   "group": null,
+   "ticket": true,
+   "purchase": false,
+   "kinds": []
+  },
+  {
+   "id": "great-clips",
+   "brand": "Great Clips",
+   "status": "offering",
+   "category": "service",
+   "offer": "Free haircut or a free-haircut card for a later visit; non-veteran customers that day get a card to give to a veteran",
+   "value": 22,
+   "grade": "A",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "in_store",
+   "minutes": 5,
+   "busy": 5,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": "2026-12-04",
+   "limits": "Card redeemable through 4 Dec 2026",
+   "sources": [
+    {
+     "url": "https://www.greatclips.com/about-us/news-room/vets-day-free-haircuts-2026",
+     "publisher": "Great Clips newsroom (release)",
+     "published": "2026-10-20"
+    },
+    {
+     "url": "https://hip2save.com/deals/veterans-day-free-meals/",
+     "publisher": "Hip2Save",
+     "published": "2026-11-05"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/retailers-veterans-day-military-discounts.html",
+     "publisher": "Military.com retail list",
+     "published": "2026-11-07 (updated)"
+    },
+    {
+     "url": "https://www.legion.org/information-center/news/veterans-day/2026/november/veterans-day-deals-and-discounts",
+     "publisher": "American Legion",
+     "published": "2026-11-05"
+    },
+    {
+     "url": "https://usmilitary.org/veterans-day-discounts/",
+     "publisher": "usmilitary.org",
+     "published": "2026-11-05"
+    }
+   ],
+   "notes": "Great Clips program page describes the annual Nov 11 program; 2026 card deadline of 4 Dec comes from roundups (2025 was 5 Dec). Hours/proof not specified. Salons are franchised; wait times likely long. Great Clips' 2026 release: any US salon; cards redeemable through 4 Dec 2026.",
+   "caution": "",
+   "group": null,
+   "ticket": true,
+   "purchase": false,
+   "kinds": []
+  },
+  {
+   "id": "sport-clips",
+   "brand": "Sport Clips",
+   "status": "offering",
+   "category": "service",
+   "offer": "Free haircut at participating locations",
+   "value": 25,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "in_store",
+   "minutes": 30,
+   "busy": 20,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://hip2save.com/deals/veterans-day-free-meals/",
+     "publisher": "Hip2Save",
+     "published": "2026-11-05"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://usmilitary.org/veterans-day-discounts/",
+     "publisher": "usmilitary.org",
+     "published": "2026-11-05"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/retailers-veterans-day-military-discounts.html",
+     "publisher": "Military.com retail list",
+     "published": "2026-11-07 (updated)"
+    }
+   ],
+   "notes": "Also $2/haircut donation to VFW scholarship through 14 Nov. Franchise: confirm the specific shop.",
+   "caution": "Participating shops only: call first",
+   "group": "haircut",
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "haircut"
+   ]
+  },
+  {
+   "id": "jiffy-lube",
+   "brand": "Jiffy Lube",
+   "status": "offering",
+   "category": "service",
+   "offer": "Some franchisees: 50% off oil change on Nov 11; chain-wide ongoing 25% military discount reported",
+   "value": 20,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "in_store",
+   "minutes": 30,
+   "busy": 15,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active",
+    "retired"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://ccheadliner.com/2026/11/04/jiffy-lube-honors-active-retired-military-with-50-percent-discount-on-all-oil-changes-on-veterans-day/",
+     "publisher": "CC Headliner (one franchisee, Missouri)",
+     "published": "2026-11-04"
+    }
+   ],
+   "notes": "Call ahead.",
+   "caution": "Only some franchise shops take part: call first",
+   "group": null,
+   "ticket": false,
+   "purchase": true,
+   "kinds": [
+    "oil-change"
+   ]
+  },
+  {
+   "id": "target",
+   "brand": "Target",
+   "status": "offering",
+   "category": "shopping",
+   "offer": "20% off one qualifying storewide purchase, 5–11 Nov, in store and online (Target Circle Military Appreciation)",
+   "value": 0,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "in_store",
+   "minutes": 25,
+   "busy": 5,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active",
+    "military_community"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "yes",
+   "kids": null,
+   "proof": [],
+   "advance": "Verify your military status in Target Circle before you shop (members verified before get it automatically)",
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "One qualified purchase",
+   "sources": [
+    {
+     "url": "https://news.va.gov/150505/2026-veterans-day-discounts-free-meals-offers/",
+     "publisher": "VA News (VA Office of Digital Media)",
+     "published": "2026-10-26 (verified 22 Oct, updated through 11 Nov)"
+    },
+    {
+     "url": "https://hip2save.com/deals/veterans-day-free-meals/",
+     "publisher": "Hip2Save",
+     "published": "2026-11-05"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/retailers-veterans-day-military-discounts.html",
+     "publisher": "Military.com retail list",
+     "published": "2026-11-07 (updated)"
+    },
+    {
+     "url": "https://themilitarywallet.com/veterans-day-free-meals-and-discounts/",
+     "publisher": "The Military Wallet",
+     "published": "2026-11-06 (updated)"
+    },
+    {
+     "url": "https://www.fox4news.com/news/veterans-day-2026-deals",
+     "publisher": "FOX 4 Dallas-Fort Worth (FOX Local)",
+     "published": "2026-11-04 (updated 2026-11-05)"
+    }
+   ],
+   "notes": "Families included. Verify online first; the discount loads into Target Circle. VA News says one qualifying storewide purchase; Fox 4 says 20% off storewide. Target's own 2026 page not found.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": true,
+   "kinds": [
+    "shopping"
+   ]
+  },
+  {
+   "id": "kohls",
+   "brand": "Kohl's",
+   "status": "offering",
+   "category": "shopping",
+   "offer": "30% off in store, 10–11 Nov",
+   "value": 0,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "in_store",
+   "minutes": 25,
+   "busy": 5,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active",
+    "family"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "yes",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://news.va.gov/150505/2026-veterans-day-discounts-free-meals-offers/",
+     "publisher": "VA News (VA Office of Digital Media)",
+     "published": "2026-10-26 (verified 22 Oct, updated through 11 Nov)"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/retailers-veterans-day-military-discounts.html",
+     "publisher": "Military.com retail list",
+     "published": "2026-11-07 (updated)"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://usmilitary.org/veterans-day-discounts/",
+     "publisher": "usmilitary.org",
+     "published": "2026-11-05"
+    }
+   ],
+   "notes": "Military Wallet separately says 15% every Monday (ongoing). VA News (26 Oct 2026) lists 30% off in store 10–11 Nov 2026 for military, veterans and families; Kohl's own 2026 page not found.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": true,
+   "kinds": [
+    "shopping"
+   ]
+  },
+  {
+   "id": "walgreens",
+   "brand": "Walgreens",
+   "status": "offering",
+   "category": "shopping",
+   "offer": "20% off eligible regular-priced items in store, 8–11 Nov",
+   "value": 0,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "in_store",
+   "minutes": 15,
+   "busy": 5,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "yes",
+   "kids": null,
+   "proof": [
+    "military_id",
+    "va_card",
+    "dd214"
+   ],
+   "advance": "a free myWalgreens account",
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "In store only; not with other coupons; excludes alcohol, tobacco, gift cards, stamps and more",
+   "sources": [
+    {
+     "url": "https://news.va.gov/150505/2026-veterans-day-discounts-free-meals-offers/",
+     "publisher": "VA News",
+     "published": "2026"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/retailers-veterans-day-military-discounts.html",
+     "publisher": "Military.com (retailers)",
+     "published": "2026"
+    },
+    {
+     "url": "https://themilitarywallet.com/walgreens-military-discount/",
+     "publisher": "The Military Wallet (Walgreens)",
+     "published": "2026"
+    }
+   ],
+   "notes": "Most 2026 lists give 8–11 Nov (one gives a later start). Immediate family included.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": true,
+   "kinds": [
+    "shopping"
+   ]
+  },
+  {
+   "id": "rtc-run-for-valor",
+   "brand": "RTC Run for Valor 5K, Reston Town Center",
+   "status": "offering",
+   "category": "event",
+   "offer": "2nd annual 5K run or walk at Reston Town Center, hosted by BXP for its veterans' employee group (Valor) with Microsoft; all proceeds to Soldiers' Angels.",
+   "value": 0,
+   "grade": "A",
+   "start": "2026-11-11T11:45:00Z",
+   "end": "2026-11-11T14:30:00Z",
+   "window_text": "06:45–09:30 EST",
+   "mode": "event",
+   "minutes": 90,
+   "busy": 0,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "public",
+    "veteran",
+    "active",
+    "guard_reserve"
+   ],
+   "guard_reserve": "yes",
+   "spouse": "yes",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "Registration $35 through race day; watching is free. Packet pickup opens 6:45 AM, remarks 7:45, anthem 7:50, start 8:00; the finish is on Market St in front of the fountain. Free parking in the orange garage.",
+   "sources": [
+    {
+     "url": "https://runsignup.com/Race/VA/Reston/RTCRunForValor5K",
+     "publisher": "RTC Run for Valor 5K (RunSignup)",
+     "published": "2026"
+    },
+    {
+     "url": "https://www.ffxnow.com/2026/11/10/veterans-day-to-close-fairfax-county-government-but-not-schools/",
+     "publisher": "FFXnow",
+     "published": "2026-11-10"
+    },
+    {
+     "url": "https://patch.com/virginia/across-va/11-ways-observe-veterans-day-2026-virginia-parades-ceremonies-celebrations",
+     "publisher": "Patch",
+     "published": "2026-11-05"
+    }
+   ],
+   "notes": "The 2nd annual 5K, hosted by BXP for its veterans' group (Valor) with Microsoft, for Soldiers' Angels. Registration $35 through race day; watching is free. Remarks 7:45, start 8:00 at RTC Window Plaza on Opportunity Way; the finish is on Market St at the fountain. Free parking in the orange garage.",
+   "caution": "",
+   "group": null,
+   "worth": 12,
+   "arrive_by": "2026-11-11T12:45:00Z",
+   "ticket": false,
+   "purchase": true,
+   "kinds": [
+    "ceremony"
+   ]
+  },
+  {
+   "id": "herndon-post-184-ceremony",
+   "brand": "Herndon Veterans Day Ceremony",
+   "status": "offering",
+   "category": "event",
+   "offer": "Annual public Veterans Day observance at the Herndon Veterans Memorial on the Town Green, hosted by Wayne M. Kidwell American Legion Post 184 and the Town of Herndon. Free and open to all.",
+   "value": 0,
+   "grade": "A",
+   "start": "2026-11-11T15:45:00Z",
+   "end": "2026-11-11T17:00:00Z",
+   "window_text": "10:45–12:00 EST",
+   "mode": "event",
+   "minutes": 60,
+   "busy": 0,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "public",
+    "veteran",
+    "active",
+    "guard_reserve"
+   ],
+   "guard_reserve": "yes",
+   "spouse": "yes",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "Outdoor ceremony on the Herndon Town Green behind the Municipal Center.",
+   "sources": [
+    {
+     "url": "https://www.ffxnow.com/2026/11/10/veterans-day-to-close-fairfax-county-government-but-not-schools/",
+     "publisher": "FFXnow",
+     "published": "2026-11-10"
+    },
+    {
+     "url": "https://patch.com/virginia/across-va/11-ways-observe-veterans-day-2026-virginia-parades-ceremonies-celebrations",
+     "publisher": "Patch",
+     "published": "2026-11-05"
+    }
+   ],
+   "notes": "The Town of Herndon's ceremony, sponsored by Wayne M. Kidwell American Legion Post 184, at 11:00 AM on the Town Green (777 Lynn St). End time not published. An Avenue of Flags is on display at Chestnut Grove Cemetery.",
+   "caution": "",
+   "group": null,
+   "worth": 12,
+   "arrive_by": "2026-11-11T16:00:00Z",
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "ceremony"
+   ]
+  },
+  {
+   "id": "fairfax-post-177-ceremony",
+   "brand": "Fairfax Veterans Day Ceremony",
+   "status": "offering",
+   "category": "event",
+   "offer": "Public Veterans Day ceremony at American Legion Post 177 with VFW Post 8469; keynote Judge Michael C. Sprano of the Fairfax Juvenile and Domestic Relations Court.",
+   "value": 0,
+   "grade": "A",
+   "start": "2026-11-11T15:30:00Z",
+   "end": "2026-11-11T16:30:00Z",
+   "window_text": "10:30–11:30 EST",
+   "mode": "event",
+   "minutes": 60,
+   "busy": 0,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "public",
+    "veteran",
+    "active",
+    "guard_reserve"
+   ],
+   "guard_reserve": "yes",
+   "spouse": "yes",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "Starts 10:30 AM; end time not published (an hour allowed).",
+   "sources": [
+    {
+     "url": "https://www.ffxnow.com/2026/11/10/veterans-day-to-close-fairfax-county-government-but-not-schools/",
+     "publisher": "FFXnow",
+     "published": "2026-11-10"
+    },
+    {
+     "url": "https://patch.com/virginia/across-va/11-ways-observe-veterans-day-2026-virginia-parades-ceremonies-celebrations",
+     "publisher": "Patch",
+     "published": "2026-11-05"
+    }
+   ],
+   "notes": "American Legion Post 177 and VFW Post 8469, 3939 Oak St, Fairfax, from 10:30 AM; keynote Judge Michael C. Sprano (FFXnow, 10 Nov 2026). End time not published: an hour is allowed. Free and open to the public.",
+   "caution": "",
+   "group": null,
+   "worth": 12,
+   "arrive_by": "2026-11-11T15:30:00Z",
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "ceremony"
+   ]
+  },
+  {
+   "id": "kensington-reston-celebration",
+   "brand": "Veterans Day Ceremony, The Kensington Reston",
+   "status": "offering",
+   "category": "event",
+   "offer": "\"An Afternoon of Gratitude & Recognition\": recognition of all veterans and live music.",
+   "value": 0,
+   "grade": "A",
+   "start": "2026-11-11T19:00:00Z",
+   "end": "2026-11-11T21:00:00Z",
+   "window_text": "14:00–16:00 EST",
+   "mode": "event",
+   "minutes": 60,
+   "busy": 0,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "public",
+    "veteran",
+    "active",
+    "guard_reserve"
+   ],
+   "guard_reserve": "yes",
+   "spouse": "yes",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "RSVP on its event page or call (571) 494-8100 first: The Kensington Reston is a senior-living community, and the page doesn't say whether the public may come.",
+   "sources": [
+    {
+     "url": "https://kensingtonreston.com/events/veterans-day-ceremony/",
+     "publisher": "The Kensington Reston",
+     "published": "2026"
+    }
+   ],
+   "notes": "\"An Afternoon of Gratitude & Recognition\" at The Kensington Reston (11501 Sunrise Valley Dr), 2:00-4:00 PM: recognition of all veterans and live music. Its page has an RSVP and doesn't say whether the public may come.",
+   "caution": "A senior-living community: RSVP or call (571) 494-8100 first",
+   "group": null,
+   "worth": 10,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "ceremony"
+   ]
+  },
+  {
+   "id": "chick-fil-a-metro-dc",
+   "brand": "Chick-fil-A",
+   "status": "offering",
+   "category": "quick",
+   "offer": "Free entree, open to close: a Chicken Biscuit, Egg White Grill or 4-count Chick-n-Minis until 10:30 AM; a Chicken Sandwich, Spicy Chicken Sandwich or 8-count Nuggets (regular or grilled) after.",
+   "value": 9,
+   "grade": "A",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in_or_to_go",
+   "minutes": 15,
+   "busy": 12,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": true,
+   "eligible": [
+    "veteran",
+    "guard_reserve"
+   ],
+   "guard_reserve": "yes",
+   "spouse": "no",
+   "kids": null,
+   "proof": [
+    "military_id",
+    "va_card",
+    "dd214",
+    "dl_veteran"
+   ],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "Proof of service required (DoD ID, a driver's license marked Veteran, VA ID or DD-214). Dine-in preferred; not valid for mobile orders, Chick-fil-A Delivery or third-party delivery.",
+   "sources": [
+    {
+     "url": "https://cfametrodc.com/",
+     "publisher": "Chick-fil-A Metro DC",
+     "published": "2026"
+    },
+    {
+     "url": "https://wtop.com/local/2026/11/deals-and-freebies-for-veterans-day/",
+     "publisher": "WTOP",
+     "published": "2026-11-09"
+    }
+   ],
+   "notes": "Chick-fil-A Metro DC's offer (cfametrodc.com, read 10 Nov 2026), open to close: a Chicken Biscuit, Egg White Grill or 4-count Chick-n-Minis until 10:30 AM; a Chicken Sandwich, Spicy Chicken Sandwich or 8-count Nuggets after. Proof of service required; not for mobile or delivery orders. All 10 stores shown are on its participating list.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "founding-farmers",
+   "brand": "Founding Farmers",
+   "status": "offering",
+   "category": "meal",
+   "offer": "50% off brunch, lunch or dinner for active-duty, retired military and veterans.",
+   "value": 14,
+   "grade": "A",
+   "start": "2026-11-11T16:00:00Z",
+   "end": "2026-11-12T02:00:00Z",
+   "window_text": "11:00–21:00 EST",
+   "mode": "dine_in",
+   "minutes": 55,
+   "busy": 20,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active",
+    "guard_reserve"
+   ],
+   "guard_reserve": "yes",
+   "spouse": "no",
+   "kids": null,
+   "proof": [
+    "military_id",
+    "dd214",
+    "photo_in_uniform"
+   ],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "Brunch, lunch or dinner (not breakfast). Food only: no alcohol; tax and gratuity not included. Dine-in only; not with other offers, to go or delivery. Bring a valid ID or DD-214, or wear your uniform.",
+   "sources": [
+    {
+     "url": "https://www.wearefoundingfarmers.com/a-time-to-serve-our-veterans/",
+     "publisher": "Founding Farmers",
+     "published": "2026"
+    },
+    {
+     "url": "https://wtop.com/local/2026/11/deals-and-freebies-for-veterans-day/",
+     "publisher": "WTOP",
+     "published": "2026-11-09"
+    }
+   ],
+   "notes": "50% off brunch, lunch or dinner (not breakfast) for active-duty, retired military and veterans: food only, dine-in only, not to go. Bring a valid ID or DD-214, or wear your uniform. Reston Station (1904 Reston Metro Plaza) and Tysons (1800 Tysons Blvd); its page doesn't say every location takes part, so reserve or call first.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": true,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "teds-bulletin",
+   "brand": "Ted's Bulletin",
+   "status": "offering",
+   "category": "treat",
+   "offer": "Free homemade Ted's Tart pastry in store for veterans and active-duty military.",
+   "value": 5,
+   "grade": "B",
+   "start": "2026-11-11T12:00:00Z",
+   "end": "2026-11-12T02:00:00Z",
+   "window_text": "07:00–21:00 EST",
+   "mode": "in_store",
+   "minutes": 10,
+   "busy": 5,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": true,
+   "eligible": [
+    "veteran",
+    "active",
+    "guard_reserve"
+   ],
+   "guard_reserve": "yes",
+   "spouse": "no",
+   "kids": null,
+   "proof": [
+    "military_id",
+    "va_card",
+    "dd214"
+   ],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "In-store only; bring military ID.",
+   "sources": [
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-10 (updated)"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    }
+   ],
+   "notes": "A free Ted's Tart for veterans (Military.com and Stars and Stripes 2026 lists; not Ted's own page). Reston Town Center, 11948 Market St.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "sweet"
+   ]
+  }
+ ],
+ "places": [
+  {
+   "id": "applebees-12970-fair-lakes-shopping-ctr",
+   "offer": "applebees",
+   "name": "",
+   "address": "12970 Fair Lakes Shopping Ctr, Fairfax, VA 22033",
+   "lat": 38.859987,
+   "lng": -77.390141,
+   "phone": "+1 703-802-9855",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "chilis-45555-eastern-plz",
+   "offer": "chilis",
+   "name": "",
+   "address": "45555 Eastern Plz, Sterling, VA 20166",
+   "lat": 39.023126,
+   "lng": -77.424073,
+   "phone": "+1 571-434-7200",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": true,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "olive-garden-8133-leesburg-pike",
+   "offer": "olive-garden",
+   "name": "",
+   "address": "8133 Leesburg Pike, Vienna, VA 22182",
+   "lat": 38.915442,
+   "lng": -77.227145,
+   "phone": "+1 703-893-3157",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "olive-garden-12980-fair-lakes-parkway",
+   "offer": "olive-garden",
+   "name": "",
+   "address": "12980 Fair Lakes Parkway, Fairfax, VA 22033",
+   "lat": 38.858715,
+   "lng": -77.39118,
+   "phone": "+1 703-631-4840",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "red-lobster-10325-fairfax-blvd",
+   "offer": "red-lobster",
+   "name": "",
+   "address": "10325 Fairfax Blvd, Fairfax, VA 22030",
+   "lat": 38.859884,
+   "lng": -77.30093,
+   "phone": "+1 703-691-1011",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "red-lobster-21065-dulles-town-center",
+   "offer": "red-lobster",
+   "name": "",
+   "address": "21065 Dulles Town Center, Sterling, VA 20166",
+   "lat": 39.028366,
+   "lng": -77.424071,
+   "phone": "+1 571-434-8815",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "buffalo-wild-wings-11204-james-swart-circle",
+   "offer": "buffalo-wild-wings",
+   "name": "",
+   "address": "11204 James Swart Circle, Fairfax, VA 22030",
+   "lat": 38.855766,
+   "lng": -77.333638,
+   "phone": "+1 703-267-6979",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T05:45:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "buffalo-wild-wings-46950-community-plaza",
+   "offer": "buffalo-wild-wings",
+   "name": "",
+   "address": "46950 Community Plaza, Sterling, VA 20164",
+   "lat": 39.01585,
+   "lng": -77.377407,
+   "phone": "+1 703-652-9499",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T04:45:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "buffalo-wild-wings-304-elden-street",
+   "offer": "buffalo-wild-wings",
+   "name": "",
+   "address": "304 Elden Street, Herndon, VA 20170",
+   "lat": 38.967655,
+   "lng": -77.372513,
+   "phone": "+1 571-210-4004",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T04:45:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "buffalo-wild-wings-21980-colorado-drive",
+   "offer": "buffalo-wild-wings",
+   "name": "",
+   "address": "21980 Colorado Drive, Dulles, VA 20166",
+   "lat": 39.007924,
+   "lng": -77.437206,
+   "phone": "+1 703-444-3048",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T04:45:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "famous-daves-2910-chain-bridge-road",
+   "offer": "famous-daves",
+   "name": "",
+   "address": "2910 Chain Bridge Road, Oakton, VA 22124",
+   "lat": 38.882458,
+   "lng": -77.298907,
+   "phone": "+1 703-281-3800",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "dave-busters-11958u-fair-oaks-mall",
+   "offer": "dave-busters",
+   "name": "",
+   "address": "11958u Fair Oaks Mall, Fairfax, VA 22033",
+   "lat": 38.863405,
+   "lng": -77.361481,
+   "phone": "+1 703-259-4050",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": true,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "red-robin-21045-dulles-town-cir",
+   "offer": "red-robin",
+   "name": "",
+   "address": "21045 Dulles Town Cir, Dulles, VA 20166",
+   "lat": 39.028876,
+   "lng": -77.425442,
+   "phone": "+1 703-421-0038",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "red-robin-13056-fairlakes-shop-ctr",
+   "offer": "red-robin",
+   "name": "",
+   "address": "13056 Fairlakes Shop Ctr, Fairfax, VA 22033",
+   "lat": 38.85806,
+   "lng": -77.395723,
+   "phone": "+1 703-502-0334",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "outback-365-elden-street",
+   "offer": "outback",
+   "name": "",
+   "address": "365 Elden Street, Herndon, VA 20170",
+   "lat": 38.966907,
+   "lng": -77.373596,
+   "phone": "+1 703-318-0999",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "outback-9579-braddock-road",
+   "offer": "outback",
+   "name": "",
+   "address": "9579 Braddock Road, Fairfax, VA 22032",
+   "lat": 38.818029,
+   "lng": -77.275951,
+   "phone": "+1 703-978-6283",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "cpk-961-chain-bridge-rd-mall",
+   "offer": "cpk",
+   "name": "",
+   "address": "961 Chain Bridge Rd Mall, McLean, VA 22102",
+   "lat": 38.917493,
+   "lng": -77.221097,
+   "phone": "+1 703-761-1473",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": true,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "bonefish-grill-13005-lee-jackson-hwy",
+   "offer": "bonefish-grill",
+   "name": "",
+   "address": "13005 Lee Jackson Hwy, Fairfax, VA 22033",
+   "lat": 38.879071,
+   "lng": -77.39584,
+   "phone": "+1 703-378-4970",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "fogo-de-chao-1775-tysons-boulevard-suite-50",
+   "offer": "fogo-de-chao",
+   "name": "",
+   "address": "1775 Tysons Boulevard Suite 50, Tysons, VA 22102",
+   "lat": 38.923841,
+   "lng": -77.221587,
+   "phone": "+1 703-556-0200",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": true,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "bar-louie-20586-easthampton-plaza",
+   "offer": "bar-louie",
+   "name": "",
+   "address": "20586 Easthampton Plaza, Ashburn, VA 20147",
+   "lat": 39.051657,
+   "lng": -77.454146,
+   "phone": "",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T07:00:00Z",
+   "hoursAssumed": false,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "sheetz-45550-dulles-plaza",
+   "offer": "sheetz",
+   "name": "",
+   "address": "45550 Dulles Plaza, Sterling, VA 20166",
+   "lat": 38.9783,
+   "lng": -77.4253,
+   "phone": "+1 571-746-0235",
+   "open": "2026-11-11T05:00:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "sheetz-21304-windmill-parc-drive",
+   "offer": "sheetz",
+   "name": "",
+   "address": "21304 WINDMILL PARC DRIVE, STERLING, VA 20166",
+   "lat": 39.0252,
+   "lng": -77.417,
+   "phone": "+1 571-413-0039",
+   "open": "2026-11-11T05:00:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "sheetz-22935-relocation-dr",
+   "offer": "sheetz",
+   "name": "",
+   "address": "22935 Relocation Dr, Sterling, VA 20166",
+   "lat": 38.9821,
+   "lng": -77.4462,
+   "phone": "+1 571-413-0986",
+   "open": "2026-11-11T05:00:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "sheetz-13840-mclearen-rd",
+   "offer": "sheetz",
+   "name": "",
+   "address": "13840 McLearen Rd, Herndon, VA 20171",
+   "lat": 38.9287,
+   "lng": -77.424,
+   "phone": "+1 571-519-0161",
+   "open": "2026-11-11T05:00:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "wawa-465-maple-ave-w",
+   "offer": "wawa",
+   "name": "",
+   "address": "465 maple ave w, vienna, VA 22180",
+   "lat": 38.894901,
+   "lng": -77.273923,
+   "phone": "",
+   "open": "2026-11-11T05:00:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "wawa-9700-fairfax-blvd",
+   "offer": "wawa",
+   "name": "",
+   "address": "9700 fairfax blvd, fairfax, VA 22031",
+   "lat": 38.864645,
+   "lng": -77.279817,
+   "phone": "",
+   "open": "2026-11-11T05:00:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "wawa-23055-oakgrove-rd",
+   "offer": "wawa",
+   "name": "",
+   "address": "23055 oakgrove rd, sterling, VA 20166",
+   "lat": 38.977994,
+   "lng": -77.411535,
+   "phone": "",
+   "open": "2026-11-11T05:00:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "wawa-45950-russell-branch-pkwy",
+   "offer": "wawa",
+   "name": "",
+   "address": "45950 russell branch pkwy, sterling, VA 20166",
+   "lat": 39.028466,
+   "lng": -77.435649,
+   "phone": "",
+   "open": "2026-11-11T05:00:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "dennys-10473-lee-hwy",
+   "offer": "dennys",
+   "name": "",
+   "address": "10473 Lee Hwy, Fairfax, VA 22030",
+   "lat": 38.858334,
+   "lng": -77.306468,
+   "phone": "+1 703-273-8133",
+   "open": "2026-11-11T05:00:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "ihop-44030-pipeline-plaza",
+   "offer": "ihop",
+   "name": "",
+   "address": "44030 Pipeline Plaza, Ashburn, VA 20147",
+   "lat": 39.022198,
+   "lng": -77.478561,
+   "phone": "+1 571-206-3672",
+   "open": "2026-11-11T11:00:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "ihop-494-elden-street",
+   "offer": "ihop",
+   "name": "",
+   "address": "494 Elden Street, Suite 8, Herndon, VA 20170",
+   "lat": 38.968924,
+   "lng": -77.377402,
+   "phone": "+1 703-657-2199",
+   "open": "2026-11-11T05:00:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "ihop-9490-blake-lane",
+   "offer": "ihop",
+   "name": "",
+   "address": "9490 Blake Lane, Fairfax, VA 22031",
+   "lat": 38.867485,
+   "lng": -77.271992,
+   "phone": "+1 703-277-1022",
+   "open": "2026-11-11T05:00:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "ihop-46931-cedar-lake-plaza",
+   "offer": "ihop",
+   "name": "",
+   "address": "46931 Cedar Lake Plaza, Sterling, VA 20164",
+   "lat": 39.017507,
+   "lng": -77.375952,
+   "phone": "+1 571-267-3937",
+   "open": "2026-11-11T05:00:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "wendys-8301-leesburg-pike",
+   "offer": "wendys",
+   "name": "",
+   "address": "8301 Leesburg Pike, Vienna, VA 22182",
+   "lat": 38.920084,
+   "lng": -77.233884,
+   "phone": "+1 703-893-6025",
+   "open": "2026-11-11T11:30:00Z",
+   "close": "2026-11-12T07:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "wendys-46350-potomac-run-plaza",
+   "offer": "wendys",
+   "name": "",
+   "address": "46350 Potomac Run Plaza, Sterling, VA 20164",
+   "lat": 39.026407,
+   "lng": -77.395885,
+   "phone": "+1 571-313-0042",
+   "open": "2026-11-11T09:00:00Z",
+   "close": "2026-11-12T08:59:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "wendys-1701-bracknell-drive",
+   "offer": "wendys",
+   "name": "",
+   "address": "1701 Bracknell Drive, Reston, VA 20194",
+   "lat": 38.967535,
+   "lng": -77.356507,
+   "phone": "+1 703-437-7292",
+   "open": "2026-11-11T11:30:00Z",
+   "close": "2026-11-12T06:30:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "wendys-3040-gate-house-plza",
+   "offer": "wendys",
+   "name": "",
+   "address": "3040 Gate House Plza, Falls Church, VA 22042",
+   "lat": 38.866085,
+   "lng": -77.230587,
+   "phone": "+1 703-641-0309",
+   "open": "2026-11-11T11:30:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "wendys-9688-main-street",
+   "offer": "wendys",
+   "name": "",
+   "address": "9688 Main Street, Fairfax, VA 22031",
+   "lat": 38.842255,
+   "lng": -77.275151,
+   "phone": "+1 703-764-3104",
+   "open": "2026-11-11T13:00:00Z",
+   "close": "2026-11-12T06:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "wendys-4000-jermantown-rd",
+   "offer": "wendys",
+   "name": "",
+   "address": "4000 Jermantown Rd, Fairfax, VA 22030",
+   "lat": 38.85552,
+   "lng": -77.332932,
+   "phone": "+1 703-385-3344",
+   "open": "2026-11-11T11:30:00Z",
+   "close": "2026-11-12T07:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "wendys-13030-fair-lakes-shopping-ctr",
+   "offer": "wendys",
+   "name": "",
+   "address": "13030 Fair Lakes Shopping Ctr, Fairfax, VA 22033",
+   "lat": 38.857829,
+   "lng": -77.393261,
+   "phone": "+1 703-968-0266",
+   "open": "2026-11-11T13:00:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "wendys-10695a-braddock-road",
+   "offer": "wendys",
+   "name": "",
+   "address": "10695a Braddock Road, Fairfax, VA 22030",
+   "lat": 38.826238,
+   "lng": -77.31513,
+   "phone": "+1 703-543-6899",
+   "open": "2026-11-11T11:30:00Z",
+   "close": "2026-11-12T07:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "wendys-2160-centreville-road",
+   "offer": "wendys",
+   "name": "",
+   "address": "2160 Centreville Road, Herndon, VA 20170",
+   "lat": 38.959269,
+   "lng": -77.4027,
+   "phone": "+1 703-435-2603",
+   "open": "2026-11-11T15:30:00Z",
+   "close": "2026-11-12T02:30:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "wendys-411-maple-avenue-east",
+   "offer": "wendys",
+   "name": "",
+   "address": "411 Maple Avenue East, Vienna, VA 22180",
+   "lat": 38.907347,
+   "lng": -77.257201,
+   "phone": "+1 703-242-7332",
+   "open": "2026-11-11T15:30:00Z",
+   "close": "2026-11-12T02:30:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "little-caesars-22045-enterprise-st",
+   "offer": "little-caesars",
+   "name": "",
+   "address": "22045 ENTERPRISE ST, STERLING, VA 20164",
+   "lat": 38.997534,
+   "lng": -77.409153,
+   "phone": "+1 571-434-0070",
+   "open": "2026-11-11T15:30:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "little-caesars-1250-elden-st",
+   "offer": "little-caesars",
+   "name": "",
+   "address": "1250 ELDEN ST, HERNDON, VA 20170",
+   "lat": 38.961881,
+   "lng": -77.400962,
+   "phone": "+1 571-267-2417",
+   "open": "2026-11-11T15:30:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "firehouse-subs-12120-fairfax-towne-center",
+   "offer": "firehouse-subs",
+   "name": "",
+   "address": "12120 Fairfax Towne Center, Fairfax, VA 22033",
+   "lat": 38.866973,
+   "lng": -77.366613,
+   "phone": "+1 703-865-7997",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "firehouse-subs-47010-community-plaza",
+   "offer": "firehouse-subs",
+   "name": "",
+   "address": "47010 Community Plaza, Suite 110, Sterling, VA 20164",
+   "lat": 39.015445,
+   "lng": -77.37483,
+   "phone": "+1 571-267-7717",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "firehouse-subs-9548-d-main-st",
+   "offer": "firehouse-subs",
+   "name": "",
+   "address": "9548-D Main St., Fairfax, VA 22031",
+   "lat": 38.84263,
+   "lng": -77.27349,
+   "phone": "+1 703-991-0783",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "firehouse-subs-2545-centreville-road",
+   "offer": "firehouse-subs",
+   "name": "",
+   "address": "2545 Centreville Road, Herndon, VA 20171",
+   "lat": 38.949043,
+   "lng": -77.411441,
+   "phone": "+1 703-376-8000",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "chipotle-8461-leesburg-pike",
+   "offer": "chipotle",
+   "name": "",
+   "address": "8461 Leesburg Pike, Vienna, VA 22182",
+   "lat": 38.924895,
+   "lng": -77.239884,
+   "phone": "+1 571-326-1608",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "chipotle-47010-community-plz",
+   "offer": "chipotle",
+   "name": "",
+   "address": "47010 Community Plz, Sterling, VA 20164",
+   "lat": 39.015589,
+   "lng": -77.375163,
+   "phone": "+1 703-444-6106",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "chipotle-21031-tripleseven-rd",
+   "offer": "chipotle",
+   "name": "",
+   "address": "21031 Tripleseven Rd, Sterling, VA 20165",
+   "lat": 39.034638,
+   "lng": -77.407112,
+   "phone": "+1 703-421-5079",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "chipotle-213-maple-ave-e",
+   "offer": "chipotle",
+   "name": "",
+   "address": "213 Maple Ave E, Vienna, VA 22180",
+   "lat": 38.9035,
+   "lng": -77.262046,
+   "phone": "+1 703-255-1100",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "chipotle-11913-freedom-dr",
+   "offer": "chipotle",
+   "name": "",
+   "address": "11913 Freedom Dr, Reston, VA 20190",
+   "lat": 38.959222,
+   "lng": -77.356775,
+   "phone": "+1 703-435-5795",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "chipotle-2946-chain-bridge-rd",
+   "offer": "chipotle",
+   "name": "",
+   "address": "2946 Chain Bridge Rd, Oakton, VA 22124",
+   "lat": 38.881287,
+   "lng": -77.301766,
+   "phone": "+1 571-328-5279",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "chipotle-12152-sunset-hills-rd",
+   "offer": "chipotle",
+   "name": "",
+   "address": "12152 Sunset Hills Rd, Reston, VA 20190",
+   "lat": 38.954881,
+   "lng": -77.366198,
+   "phone": "+1 703-435-0888",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "chipotle-11160-s-lakes-dr",
+   "offer": "chipotle",
+   "name": "",
+   "address": "11160 S Lakes Dr, Reston, VA 20191",
+   "lat": 38.938525,
+   "lng": -77.330547,
+   "phone": "+1 571-392-7746",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "chipotle-7923-l-tysons-corner-center",
+   "offer": "chipotle",
+   "name": "",
+   "address": "7923 L Tysons Corner Center, McLean, VA 22102",
+   "lat": 38.917645,
+   "lng": -77.220626,
+   "phone": "+1 703-288-3890",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "chipotle-13354-franklin-farm-rd",
+   "offer": "chipotle",
+   "name": "",
+   "address": "13354 Franklin Farm Rd, Herndon, VA 20171",
+   "lat": 38.907895,
+   "lng": -77.408754,
+   "phone": "+1 703-435-4715",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "chipotle-1144-elden-st",
+   "offer": "chipotle",
+   "name": "",
+   "address": "1144 Elden St, Herndon, VA 20170",
+   "lat": 38.963686,
+   "lng": -77.399054,
+   "phone": "+1 703-435-3325",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "chipotle-11062-main-st",
+   "offer": "chipotle",
+   "name": "",
+   "address": "11062 Main St, Fairfax, VA 22030",
+   "lat": 38.852613,
+   "lng": -77.327273,
+   "phone": "+1 703-934-7099",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "chipotle-22000-dulles-retail-plz",
+   "offer": "chipotle",
+   "name": "",
+   "address": "22000 Dulles Retail Plz, Dulles, VA 20166",
+   "lat": 39.006358,
+   "lng": -77.437058,
+   "phone": "+1 571-401-8103",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "chipotle-9506-main-st",
+   "offer": "chipotle",
+   "name": "",
+   "address": "9506 Main St, Fairfax, VA 22031",
+   "lat": 38.843022,
+   "lng": -77.273495,
+   "phone": "+1 571-328-5485",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "chipotle-4477-aquia-creek-lane",
+   "offer": "chipotle",
+   "name": "",
+   "address": "4477 Aquia Creek Lane, Fairfax, VA 22030",
+   "lat": 38.829878,
+   "lng": -77.307739,
+   "phone": "+1 571-459-2152",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "chipotle-13042-fair-lakes-shopping-ctr",
+   "offer": "chipotle",
+   "name": "",
+   "address": "13042 Fair Lakes Shopping Ctr, Fairfax, VA 22033",
+   "lat": 38.857263,
+   "lng": -77.394349,
+   "phone": "+1 703-222-1117",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "chipotle-11939-grand-commons-ave",
+   "offer": "chipotle",
+   "name": "",
+   "address": "11939 Grand Commons Ave, Fairfax, VA 22030",
+   "lat": 38.857659,
+   "lng": -77.3575,
+   "phone": "+1 703-222-7344",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "chipotle-8191-strawberry-ln",
+   "offer": "chipotle",
+   "name": "",
+   "address": "8191 Strawberry Ln, Falls Church, VA 22042",
+   "lat": 38.872043,
+   "lng": -77.22828,
+   "phone": "+1 571-423-5150",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "qdoba-10338-main-st",
+   "offer": "qdoba",
+   "name": "",
+   "address": "10338 Main St, Fairfax, VA 22030",
+   "lat": 38.846102,
+   "lng": -77.303513,
+   "phone": "",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T01:30:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "qdoba-7511-leesburg-pike",
+   "offer": "qdoba",
+   "name": "",
+   "address": "7511 Leesburg Pike, Falls Church, VA 22043",
+   "lat": 38.902607,
+   "lng": -77.205036,
+   "phone": "",
+   "open": "2026-11-11T15:30:00Z",
+   "close": "2026-11-12T02:30:00Z",
+   "hoursAssumed": true,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "charleys-21100-dulles-town-center-circle",
+   "offer": "charleys",
+   "name": "",
+   "address": "21100 Dulles Town Center Circle, Sterling, VA 20166",
+   "lat": 39.033224,
+   "lng": -77.425947,
+   "phone": "+1 703-404-7120",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T00:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "charleys-7947l-tyson-s-corner-center",
+   "offer": "charleys",
+   "name": "",
+   "address": "7947L Tyson's Corner Center, Space G2AL, McLean, VA 22102",
+   "lat": 38.917998,
+   "lng": -77.220956,
+   "phone": "+1 833-230-2930",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "mission-bbq-45979-denizen-plaza",
+   "offer": "mission-bbq",
+   "name": "",
+   "address": "45979 Denizen Plaza, Sterling, VA 20165",
+   "lat": 39.035326,
+   "lng": -77.409197,
+   "phone": "",
+   "open": "2026-11-11T15:30:00Z",
+   "close": "2026-11-12T02:30:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "shake-shack-11040-main-street",
+   "offer": "shake-shack",
+   "name": "",
+   "address": "11040 Main Street, Fairfax, VA 22030",
+   "lat": 38.85291,
+   "lng": -77.32578,
+   "phone": "",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "shake-shack-20961-southbank-st",
+   "offer": "shake-shack",
+   "name": "",
+   "address": "20961 Southbank St, Sterling, VA 20165",
+   "lat": 39.035371,
+   "lng": -77.397815,
+   "phone": "+1 571-650-3062",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "shake-shack-2911-district-ave",
+   "offer": "shake-shack",
+   "name": "",
+   "address": "2911 District Ave, Fairfax, VA 22031",
+   "lat": 38.871724,
+   "lng": -77.229289,
+   "phone": "+1 571-307-6701",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "shake-shack-11940-democracy-dr",
+   "offer": "shake-shack",
+   "name": "",
+   "address": "11940 Democracy Dr, Reston, VA 20190",
+   "lat": 38.958076,
+   "lng": -77.358105,
+   "phone": "+1 571-640-8702",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "shake-shack-8361a-leesburg-pike",
+   "offer": "shake-shack",
+   "name": "",
+   "address": "8361A Leesburg Pike, Vienna, VA 22182",
+   "lat": 38.921094,
+   "lng": -77.235881,
+   "phone": "+1 571-668-4307",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "shake-shack-7924-tysons-corner-center",
+   "offer": "shake-shack",
+   "name": "",
+   "address": "7924 Tysons Corner Center, McLean, VA 22102",
+   "lat": 38.918254,
+   "lng": -77.220902,
+   "phone": "+1 571-620-0383",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "blaze-pizza-george-mason-university",
+   "offer": "blaze-pizza",
+   "name": "",
+   "address": "George Mason University, 4477 Aquia Creek Ln, Fairfax, VA 22030",
+   "lat": 38.83061,
+   "lng": -77.30919,
+   "phone": "+1 703-993-9068",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T00:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-4400-university",
+   "offer": "starbucks",
+   "name": "",
+   "address": "4400 University, Fairfax, VA 22030",
+   "lat": 38.8295,
+   "lng": -77.30726,
+   "phone": "+1 703-993-3305",
+   "open": "2026-11-11T12:00:00Z",
+   "close": "2026-11-11T23:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-4401-university-drive",
+   "offer": "starbucks",
+   "name": "",
+   "address": "4401 University Drive, Fairfax, VA 22030",
+   "lat": 38.8338,
+   "lng": -77.30718,
+   "phone": "+1 703-993-5065",
+   "open": "2026-11-11T12:00:00Z",
+   "close": "2026-11-12T00:30:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-11725-lee-highway",
+   "offer": "starbucks",
+   "name": "",
+   "address": "11725 Lee Highway, Lee Plaza Center, Fairfax, VA 22030",
+   "lat": 38.84864,
+   "lng": -77.35297,
+   "phone": "+1 703-385-5732",
+   "open": "2026-11-11T10:00:00Z",
+   "close": "2026-11-12T01:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-10344-main-st",
+   "offer": "starbucks",
+   "name": "",
+   "address": "10344 Main St, University Shopping Center, Fairfax, VA 22030",
+   "lat": 38.84594,
+   "lng": -77.30347,
+   "phone": "+1 703-383-5870",
+   "open": "2026-11-11T10:00:00Z",
+   "close": "2026-11-12T01:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-10930-fairfax-blvd",
+   "offer": "starbucks",
+   "name": "",
+   "address": "10930 Fairfax Blvd, Fairfax, VA 22030",
+   "lat": 38.85366,
+   "lng": -77.32092,
+   "phone": "+1 703-218-5403",
+   "open": "2026-11-11T10:00:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-12957-fairlakes-shopping-center",
+   "offer": "starbucks",
+   "name": "",
+   "address": "12957 Fairlakes Shopping Center, Fair Lakes Center, Fairfax, VA 22033",
+   "lat": 38.85923,
+   "lng": -77.38826,
+   "phone": "+1 703-502-7800",
+   "open": "2026-11-11T09:30:00Z",
+   "close": "2026-11-12T01:30:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-12001-lee-jackson-memorial-hwy",
+   "offer": "starbucks",
+   "name": "",
+   "address": "12001 Lee Jackson Memorial Hwy, Fairfax, VA 22033",
+   "lat": 38.86611,
+   "lng": -77.36052,
+   "phone": "+1 703-273-2798",
+   "open": "2026-11-11T10:00:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-3046-gatehouse-plaza",
+   "offer": "starbucks",
+   "name": "",
+   "address": "3046 Gatehouse Plaza, Falls Church, VA 22042",
+   "lat": 38.86647,
+   "lng": -77.23011,
+   "phone": "+1 703-645-9182",
+   "open": "2026-11-11T09:30:00Z",
+   "close": "2026-11-12T02:30:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-3011-nutley-st",
+   "offer": "starbucks",
+   "name": "",
+   "address": "3011 Nutley St, Pan Am Shopping Center, 5A, Fairfax, VA 22031",
+   "lat": 38.87189,
+   "lng": -77.26132,
+   "phone": "+1 571-977-1131",
+   "open": "2026-11-11T09:30:00Z",
+   "close": "2026-11-12T01:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-2672-a-avenir-place",
+   "offer": "starbucks",
+   "name": "",
+   "address": "2672-A Avenir Place, Merrifield, VA 22180",
+   "lat": 38.88197,
+   "lng": -77.22877,
+   "phone": "+1 571-455-8319",
+   "open": "2026-11-11T10:00:00Z",
+   "close": "2026-11-12T01:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-2930-chain-bridge-road",
+   "offer": "starbucks",
+   "name": "",
+   "address": "2930 Chain Bridge Road, Oakton, VA 22124",
+   "lat": 38.88233,
+   "lng": -77.29991,
+   "phone": "+1 703-242-8244",
+   "open": "2026-11-11T10:00:00Z",
+   "close": "2026-11-12T01:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-1218-w-broad-st",
+   "offer": "starbucks",
+   "name": "",
+   "address": "1218 W Broad St, Falls Church, VA 22046",
+   "lat": 38.89449,
+   "lng": -77.18833,
+   "phone": "+1 703-534-3111",
+   "open": "2026-11-11T10:00:00Z",
+   "close": "2026-11-12T01:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-7501-h-leesburg-pike",
+   "offer": "starbucks",
+   "name": "",
+   "address": "7501 H Leesburg Pike, Idylwood Plaza, Falls Church, VA 22043",
+   "lat": 38.90256,
+   "lng": -77.20389,
+   "phone": "+1 703-288-9085",
+   "open": "2026-11-11T09:30:00Z",
+   "close": "2026-11-12T01:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-362-maple-ave-e",
+   "offer": "starbucks",
+   "name": "",
+   "address": "362 Maple Ave E, Vienna, VA 22180",
+   "lat": 38.90658,
+   "lng": -77.25942,
+   "phone": "+1 703-255-1233",
+   "open": "2026-11-11T10:00:00Z",
+   "close": "2026-11-12T01:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-8000-tysons-corner-center",
+   "offer": "starbucks",
+   "name": "",
+   "address": "8000 Tysons Corner Center, McLean, VA 22102",
+   "lat": 38.91821,
+   "lng": -77.22276,
+   "phone": "+1 703-893-4900",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T01:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-13037-a-lee-jackson-memorial-hwy",
+   "offer": "starbucks",
+   "name": "",
+   "address": "13037-A Lee Jackson Memorial Hwy, Space #A, Fairfax, VA 22033",
+   "lat": 38.87942,
+   "lng": -77.3964,
+   "phone": "+1 703-968-0026",
+   "open": "2026-11-11T09:30:00Z",
+   "close": "2026-11-12T01:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-13360-franklin-farm-rd",
+   "offer": "starbucks",
+   "name": "",
+   "address": "13360 Franklin Farm Rd, Herndon, VA 20171",
+   "lat": 38.90793,
+   "lng": -77.40803,
+   "phone": "+1 571-203-0355",
+   "open": "2026-11-11T09:30:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-2523-john-milton-dr",
+   "offer": "starbucks",
+   "name": "",
+   "address": "2523 John Milton Dr, Herndon, VA 20171",
+   "lat": 38.92764,
+   "lng": -77.37529,
+   "phone": "+1 703-264-9022",
+   "open": "2026-11-11T10:00:00Z",
+   "close": "2026-11-12T01:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-44844-autopilot-dr",
+   "offer": "starbucks",
+   "name": "",
+   "address": "44844 Autopilot Dr, Washington Dulless Int'l Airport, Sterling, VA 20166",
+   "lat": 38.94542,
+   "lng": -77.44261,
+   "phone": "+1 703-656-8093",
+   "open": "2026-11-11T10:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-45020-aviation-dr",
+   "offer": "starbucks",
+   "name": "",
+   "address": "45020 Aviation Dr, Sterling, VA 20166",
+   "lat": 38.94867,
+   "lng": -77.44202,
+   "phone": "+1 703-972-7183",
+   "open": "2026-11-11T10:00:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-2405-centreville-rd",
+   "offer": "starbucks",
+   "name": "",
+   "address": "2405 Centreville Rd, Ste 19, Herndon, VA 20171",
+   "lat": 38.95124,
+   "lng": -77.4087,
+   "phone": "+1 571-643-0240",
+   "open": "2026-11-11T09:30:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-7922-tysons-corner-center",
+   "offer": "starbucks",
+   "name": "",
+   "address": "7922 Tysons Corner Center, McLean, VA 22102",
+   "lat": 38.9184,
+   "lng": -77.22056,
+   "phone": "+1 703-893-4209",
+   "open": "2026-11-11T09:30:00Z",
+   "close": "2026-11-12T02:30:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-1680-capital-one-drive",
+   "offer": "starbucks",
+   "name": "",
+   "address": "1680 Capital One Drive, Sbux LS, McLean, VA 22102",
+   "lat": 38.9243,
+   "lng": -77.21308,
+   "phone": "+1 703-555-1234",
+   "open": "2026-11-11T12:30:00Z",
+   "close": "2026-11-11T21:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-1775-greensboro-station-place",
+   "offer": "starbucks",
+   "name": "",
+   "address": "1775 Greensboro Station Place, McLean, VA 22102",
+   "lat": 38.9213,
+   "lng": -77.23331,
+   "phone": "+1 703-442-0692",
+   "open": "2026-11-11T12:30:00Z",
+   "close": "2026-11-11T21:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-8381-leesburg-pike",
+   "offer": "starbucks",
+   "name": "",
+   "address": "8381 Leesburg Pike, Vienna, VA 22182",
+   "lat": 38.92164,
+   "lng": -77.23627,
+   "phone": "+1 703-893-5125",
+   "open": "2026-11-11T10:00:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-8520-d-leesburg-pike",
+   "offer": "starbucks",
+   "name": "",
+   "address": "8520 D Leesburg Pike, Tysons 3 Center, Vienna, VA 22182",
+   "lat": 38.92832,
+   "lng": -77.23927,
+   "phone": "+1 703-760-7037",
+   "open": "2026-11-11T10:00:00Z",
+   "close": "2026-11-12T01:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-11170-south-lakes-dr",
+   "offer": "starbucks",
+   "name": "",
+   "address": "11170 South Lakes Dr, South Lakes Village, Reston, VA 20191",
+   "lat": 38.93823,
+   "lng": -77.33008,
+   "phone": "+1 703-390-9213",
+   "open": "2026-11-11T10:00:00Z",
+   "close": "2026-11-12T01:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-1908-reston-metro-plaza",
+   "offer": "starbucks",
+   "name": "",
+   "address": "1908 Reston Metro Plaza, Reston, VA 20190",
+   "lat": 38.94908,
+   "lng": -77.33883,
+   "phone": "+1 571-308-5353",
+   "open": "2026-11-11T11:00:00Z",
+   "close": "2026-11-11T23:30:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-11610-a-plaza-america-dr",
+   "offer": "starbucks",
+   "name": "",
+   "address": "11610-A Plaza America Dr, Plaza America Shopping Center, Reston, VA 20190",
+   "lat": 38.9519,
+   "lng": -77.34747,
+   "phone": "+1 703-481-3485",
+   "open": "2026-11-11T10:00:00Z",
+   "close": "2026-11-12T01:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-44735-thorndike-st",
+   "offer": "starbucks",
+   "name": "",
+   "address": "44735 Thorndike St, Ashburn, VA 20147",
+   "lat": 39.05208,
+   "lng": -77.45255,
+   "phone": "+1 571-271-4807",
+   "open": "2026-11-11T09:30:00Z",
+   "close": "2026-11-12T01:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-3-pidgeon-hill-drive",
+   "offer": "starbucks",
+   "name": "",
+   "address": "3 Pidgeon Hill Drive, Countryside Marketplace, Sterling, VA 20165",
+   "lat": 39.03893,
+   "lng": -77.41287,
+   "phone": "+1 571-434-0247",
+   "open": "2026-11-11T10:00:00Z",
+   "close": "2026-11-12T01:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-210-21-southbank-street",
+   "offer": "starbucks",
+   "name": "",
+   "address": "210-21 Southbank Street, Sterling, VA 20165",
+   "lat": 39.03449,
+   "lng": -77.39816,
+   "phone": "+1 703-421-0932",
+   "open": "2026-11-11T10:00:00Z",
+   "close": "2026-11-12T01:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-46900-community-plz",
+   "offer": "starbucks",
+   "name": "",
+   "address": "46900 Community Plz, Sterling, VA 20164",
+   "lat": 39.01663,
+   "lng": -77.37696,
+   "phone": "+1 703-421-5767",
+   "open": "2026-11-11T09:00:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-44054-pipeline-plz",
+   "offer": "starbucks",
+   "name": "",
+   "address": "44054 Pipeline Plz, Suite 100, Ashburn, VA 20147",
+   "lat": 39.02302,
+   "lng": -77.47744,
+   "phone": "+1 703-723-8534",
+   "open": "2026-11-11T09:30:00Z",
+   "close": "2026-11-12T01:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-1444-north-point-village-center",
+   "offer": "starbucks",
+   "name": "",
+   "address": "1444 North Point Village Center, Reston, VA 20194",
+   "lat": 38.97975,
+   "lng": -77.34964,
+   "phone": "+1 703-787-9341",
+   "open": "2026-11-11T10:00:00Z",
+   "close": "2026-11-12T01:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-22114-gramercy-park-dr",
+   "offer": "starbucks",
+   "name": "",
+   "address": "22114 Gramercy Park Dr., Ashburn, VA 20147",
+   "lat": 39.00689,
+   "lng": -77.48698,
+   "phone": "",
+   "open": "2026-11-11T11:00:00Z",
+   "close": "2026-11-12T00:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-22420-flagstaff-plz",
+   "offer": "starbucks",
+   "name": "",
+   "address": "22420 Flagstaff Plz, unit 100, Ashburn, VA 20148",
+   "lat": 38.9964,
+   "lng": -77.48133,
+   "phone": "+1 202-815-9914",
+   "open": "2026-11-11T09:30:00Z",
+   "close": "2026-11-12T01:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-1140-elden-st",
+   "offer": "starbucks",
+   "name": "",
+   "address": "1140 Elden St, Herndon, VA 20170",
+   "lat": 38.96379,
+   "lng": -77.39882,
+   "phone": "+1 703-925-9336",
+   "open": "2026-11-11T09:30:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-11951-freedom-dr",
+   "offer": "starbucks",
+   "name": "",
+   "address": "11951 Freedom Dr, One Freedom Square, Reston, VA 20190",
+   "lat": 38.95878,
+   "lng": -77.35916,
+   "phone": "+1 571-203-0601",
+   "open": "2026-11-11T10:00:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "circle-k-44680-wellfleet-dr",
+   "offer": "circle-k",
+   "name": "",
+   "address": "44680 Wellfleet Dr, Ashburn, VA 20147",
+   "lat": 39.049066,
+   "lng": -77.453926,
+   "phone": "+1 703-724-1890",
+   "open": "2026-11-11T05:00:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "dunkin-411-maple-avenue-east",
+   "offer": "dunkin",
+   "name": "",
+   "address": "411 Maple Avenue East, Vienna, VA 22180",
+   "lat": 38.907437,
+   "lng": -77.257209,
+   "phone": "",
+   "open": "2026-11-11T11:00:00Z",
+   "close": "2026-11-12T00:00:00Z",
+   "hoursAssumed": true,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "dunkin-1495-cornerside-blvd",
+   "offer": "dunkin",
+   "name": "",
+   "address": "1495 Cornerside Blvd, Vienna, VA 22182",
+   "lat": 38.930421,
+   "lng": -77.24406,
+   "phone": "+1 571-336-0720",
+   "open": "2026-11-11T10:00:00Z",
+   "close": "2026-11-11T23:45:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "dunkin-2750-gallows-rd",
+   "offer": "dunkin",
+   "name": "",
+   "address": "2750 Gallows Rd, Unit E, Vienna, VA 22180",
+   "lat": 38.878467,
+   "lng": -77.227784,
+   "phone": "+1 703-992-8522",
+   "open": "2026-11-11T10:00:00Z",
+   "close": "2026-11-11T22:15:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "dunkin-314-maple-ave-w",
+   "offer": "dunkin",
+   "name": "",
+   "address": "314 Maple Ave W, Vienna, VA 22180",
+   "lat": 38.897582,
+   "lng": -77.269689,
+   "phone": "+1 703-865-4760",
+   "open": "2026-11-11T10:00:00Z",
+   "close": "2026-11-11T23:45:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "dunkin-23070-oak-grove-rd",
+   "offer": "dunkin",
+   "name": "",
+   "address": "23070 Oak Grove Rd, Sterling, VA 20166",
+   "lat": 38.978161,
+   "lng": -77.410423,
+   "phone": "+1 703-435-9233",
+   "open": "2026-11-11T09:30:00Z",
+   "close": "2026-11-11T23:45:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "dunkin-47010-community-plz",
+   "offer": "dunkin",
+   "name": "",
+   "address": "47010 Community Plz, Suite 180, Sterling, VA 20164",
+   "lat": 39.015474,
+   "lng": -77.374755,
+   "phone": "+1 703-202-8091",
+   "open": "2026-11-11T09:30:00Z",
+   "close": "2026-11-12T01:45:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "dunkin-2280-hunters-woods-plz",
+   "offer": "dunkin",
+   "name": "",
+   "address": "2280 Hunters Woods Plz, Reston, VA 20191",
+   "lat": 38.936131,
+   "lng": -77.363339,
+   "phone": "+1 703-860-9252",
+   "open": "2026-11-11T10:30:00Z",
+   "close": "2026-11-12T00:45:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "dunkin-2946-chain-bridge-rd",
+   "offer": "dunkin",
+   "name": "",
+   "address": "2946 Chain Bridge Rd, Suite F, Oakton, VA 22124",
+   "lat": 38.881123,
+   "lng": -77.301547,
+   "phone": "+1 571-340-3567",
+   "open": "2026-11-11T10:00:00Z",
+   "close": "2026-11-11T22:45:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "dunkin-8119-watson-st",
+   "offer": "dunkin",
+   "name": "",
+   "address": "8119 Watson St, McLean, VA 22102",
+   "lat": 38.916925,
+   "lng": -77.227162,
+   "phone": "+1 703-829-1610",
+   "open": "2026-11-11T09:30:00Z",
+   "close": "2026-11-12T02:45:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "dunkin-141-spring-st",
+   "offer": "dunkin",
+   "name": "",
+   "address": "141 Spring St, Suite 200, Herndon, VA 20170",
+   "lat": 38.958114,
+   "lng": -77.37359,
+   "phone": "+1 703-437-5672",
+   "open": "2026-11-11T09:30:00Z",
+   "close": "2026-11-11T23:45:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "dunkin-4349-chesapeake-ln",
+   "offer": "dunkin",
+   "name": "",
+   "address": "4349 Chesapeake Ln, George Mason University, Fairfax, VA 22030",
+   "lat": 38.832025,
+   "lng": -77.30619,
+   "phone": "+1 703-993-6688",
+   "open": "2026-11-11T12:00:00Z",
+   "close": "2026-11-11T22:45:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "dunkin-12701-shoppes-ln",
+   "offer": "dunkin",
+   "name": "",
+   "address": "12701 Shoppes Ln, Fairfax, VA 22033",
+   "lat": 38.861059,
+   "lng": -77.386526,
+   "phone": "+1 703-818-7480",
+   "open": "2026-11-11T10:00:00Z",
+   "close": "2026-11-12T02:45:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "dunkin-10020-main-st",
+   "offer": "dunkin",
+   "name": "",
+   "address": "10020 Main St, Fairfax, VA 22031",
+   "lat": 38.843819,
+   "lng": -77.292343,
+   "phone": "+1 703-537-0851",
+   "open": "2026-11-11T10:00:00Z",
+   "close": "2026-11-11T22:45:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "dunkin-10955-fairfax-blvd",
+   "offer": "dunkin",
+   "name": "",
+   "address": "10955 Fairfax Blvd, Ste 102, Fairfax, VA 22030",
+   "lat": 38.852547,
+   "lng": -77.322559,
+   "phone": "+1 703-279-1859",
+   "open": "2026-11-11T10:00:00Z",
+   "close": "2026-11-12T01:45:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "dunkin-10633-braddock-rd",
+   "offer": "dunkin",
+   "name": "",
+   "address": "10633 Braddock Rd, Fairfax, VA 22032",
+   "lat": 38.825533,
+   "lng": -77.314685,
+   "phone": "+1 703-691-4090",
+   "open": "2026-11-11T10:00:00Z",
+   "close": "2026-11-11T23:45:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "dunkin-9550-fairfax-blvd",
+   "offer": "dunkin",
+   "name": "",
+   "address": "9550 Fairfax Blvd, Fairfax, VA 22031",
+   "lat": 38.865146,
+   "lng": -77.27438,
+   "phone": "+1 703-591-3855",
+   "open": "2026-11-11T09:00:00Z",
+   "close": "2026-11-12T01:45:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "dunkin-13061-lee-jackson-memorial-hwy",
+   "offer": "dunkin",
+   "name": "",
+   "address": "13061 Lee Jackson Memorial Hwy, GREENBRIAR SHOPPING CENTER, Fairfax, VA 22033",
+   "lat": 38.880784,
+   "lng": -77.398364,
+   "phone": "+1 703-631-4503",
+   "open": "2026-11-11T09:00:00Z",
+   "close": "2026-11-12T00:45:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "dunkin-44110-ashburn-village-blvd",
+   "offer": "dunkin",
+   "name": "",
+   "address": "44110 Ashburn Village Blvd, #184, Ashburn, VA 20147",
+   "lat": 39.043891,
+   "lng": -77.47222,
+   "phone": "+1 571-415-6080",
+   "open": "2026-11-11T10:00:00Z",
+   "close": "2026-11-11T23:45:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "insomnia-10669-braddock-road",
+   "offer": "insomnia",
+   "name": "",
+   "address": "10669 Braddock Road, Space D-7, Fairfax, VA 22032",
+   "lat": 38.825051,
+   "lng": -77.314682,
+   "phone": "+1 571-370-5897",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T06:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "freddys-10030-fairfax-blvd",
+   "offer": "freddys",
+   "name": "",
+   "address": "10030 Fairfax Blvd, Fairfax, VA 22030",
+   "lat": 38.863266,
+   "lng": -77.291291,
+   "phone": "+1 703-293-2900",
+   "open": "2026-11-11T15:30:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "great-clips-3989-pickett-rd",
+   "offer": "great-clips",
+   "name": "",
+   "address": "3989 Pickett Rd, Fairfax, VA 22031",
+   "lat": 38.843135,
+   "lng": -77.272122,
+   "phone": "+1 571-407-7111",
+   "open": "2026-11-11T14:00:00Z",
+   "close": "2026-11-12T01:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "great-clips-11130-south-lakes-dr",
+   "offer": "great-clips",
+   "name": "",
+   "address": "11130 South Lakes Dr., Reston, VA 20191",
+   "lat": 38.939354,
+   "lng": -77.330525,
+   "phone": "+1 571-490-3649",
+   "open": "2026-11-11T14:00:00Z",
+   "close": "2026-11-12T01:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "great-clips-21385-epicerie-plz",
+   "offer": "great-clips",
+   "name": "",
+   "address": "21385 Epicerie Plz, Sterling, VA 20164",
+   "lat": 39.024212,
+   "lng": -77.395402,
+   "phone": "+1 571-313-1125",
+   "open": "2026-11-11T14:00:00Z",
+   "close": "2026-11-12T00:30:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "sport-clips-11224-james-swart-circle",
+   "offer": "sport-clips",
+   "name": "",
+   "address": "11224 James Swart Circle, Fairfax, VA 22030",
+   "lat": 38.85582,
+   "lng": -77.33577,
+   "phone": "+1 703-865-6655",
+   "open": "2026-11-11T14:00:00Z",
+   "close": "2026-11-12T00:00:00Z",
+   "hoursAssumed": true,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "sport-clips-20448-exchange-street",
+   "offer": "sport-clips",
+   "name": "",
+   "address": "20448 Exchange Street, Ashburn, VA 20147",
+   "lat": 39.0504,
+   "lng": -77.45337,
+   "phone": "+1 703-858-7200",
+   "open": "2026-11-11T14:00:00Z",
+   "close": "2026-11-12T00:00:00Z",
+   "hoursAssumed": true,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "jiffy-lube-10535-fairfax-boulevard",
+   "offer": "jiffy-lube",
+   "name": "",
+   "address": "10535 FAIRFAX BOULEVARD, FAIRFAX, VA 22030",
+   "lat": 38.857484,
+   "lng": -77.309832,
+   "phone": "+1 703-591-5439",
+   "open": "2026-11-11T13:00:00Z",
+   "close": "2026-11-12T00:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "jiffy-lube-43910-farmwell-hunt-plz",
+   "offer": "jiffy-lube",
+   "name": "",
+   "address": "43910 FARMWELL HUNT PLZ, ASHBURN, VA 20147",
+   "lat": 39.023569,
+   "lng": -77.480267,
+   "phone": "+1 703-724-3985",
+   "open": "2026-11-11T13:00:00Z",
+   "close": "2026-11-12T00:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "jiffy-lube-604-elden-st",
+   "offer": "jiffy-lube",
+   "name": "",
+   "address": "604 ELDEN ST, HERNDON, VA 20170",
+   "lat": 38.969417,
+   "lng": -77.381901,
+   "phone": "+1 703-435-2220",
+   "open": "2026-11-11T13:00:00Z",
+   "close": "2026-11-11T23:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "jiffy-lube-210-maple-ave-w",
+   "offer": "jiffy-lube",
+   "name": "",
+   "address": "210 MAPLE AVE W, VIENNA, VA 22180",
+   "lat": 38.899401,
+   "lng": -77.267536,
+   "phone": "+1 703-242-0691",
+   "open": "2026-11-11T13:00:00Z",
+   "close": "2026-11-12T00:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "jiffy-lube-46210-potomac-run-plz-unit-100",
+   "offer": "jiffy-lube",
+   "name": "",
+   "address": "46210 POTOMAC RUN PLZ UNIT 100, STERLING, VA 20164",
+   "lat": 39.027163,
+   "lng": -77.399482,
+   "phone": "+1 703-433-0460",
+   "open": "2026-11-11T13:00:00Z",
+   "close": "2026-11-11T23:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "jiffy-lube-1014-w-broad-st",
+   "offer": "jiffy-lube",
+   "name": "",
+   "address": "1014 W BROAD ST, FALLS CHURCH, VA 22046",
+   "lat": 38.891445,
+   "lng": -77.184889,
+   "phone": "+1 703-532-5823",
+   "open": "2026-11-11T13:00:00Z",
+   "close": "2026-11-12T00:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "target-2905-district-ave-s",
+   "offer": "target",
+   "name": "",
+   "address": "2905 District Ave S, Fairfax, VA 22031",
+   "lat": 38.872567,
+   "lng": -77.229434,
+   "phone": "+1 571-533-3751",
+   "open": "2026-11-11T12:00:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "target-45130-columbia-pl",
+   "offer": "target",
+   "name": "",
+   "address": "45130 Columbia Pl, Sterling, VA 20166",
+   "lat": 39.009216,
+   "lng": -77.439655,
+   "phone": "+1 703-463-2008",
+   "open": "2026-11-11T13:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "target-13047-fair-lakes-shopping-ctr",
+   "offer": "target",
+   "name": "",
+   "address": "13047 Fair Lakes Shopping Ctr, Fairfax, VA 22033",
+   "lat": 38.855688,
+   "lng": -77.392918,
+   "phone": "+1 703-449-7100",
+   "open": "2026-11-11T13:00:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "target-12197-sunset-hills-rd",
+   "offer": "target",
+   "name": "",
+   "address": "12197 Sunset Hills Rd, Reston, VA 20190",
+   "lat": 38.95471,
+   "lng": -77.369927,
+   "phone": "+1 703-478-0770",
+   "open": "2026-11-11T13:00:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "target-46201-potomac-run-plz",
+   "offer": "target",
+   "name": "",
+   "address": "46201 Potomac Run Plz, Sterling, VA 20164",
+   "lat": 39.026292,
+   "lng": -77.40061,
+   "phone": "+1 703-444-8440",
+   "open": "2026-11-11T13:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "kohls-21245-signal-hill-plaza",
+   "offer": "kohls",
+   "name": "",
+   "address": "21245 SIGNAL HILL PLAZA, STERLING, VA 20164",
+   "lat": 39.028038,
+   "lng": -77.389412,
+   "phone": "+1 703-430-3487",
+   "open": "2026-11-11T14:00:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "kohls-12551-fair-lakes-cir",
+   "offer": "kohls",
+   "name": "",
+   "address": "12551 FAIR LAKES CIR, FAIRFAX, VA 22033",
+   "lat": 38.857171,
+   "lng": -77.379635,
+   "phone": "+1 703-802-8063",
+   "open": "2026-11-11T14:00:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "walgreens-46965-cedar-lake-plz",
+   "offer": "walgreens",
+   "name": "",
+   "address": "46965 CEDAR LAKE PLZ, Sterling, VA 20164",
+   "lat": 39.017178,
+   "lng": -77.375315,
+   "phone": "+1 703-430-3328",
+   "open": "2026-11-11T12:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "walgreens-225-maple-ave-e",
+   "offer": "walgreens",
+   "name": "",
+   "address": "225 MAPLE AVE E, Vienna, VA 22180",
+   "lat": 38.903733,
+   "lng": -77.261274,
+   "phone": "+1 703-259-6342",
+   "open": "2026-11-11T12:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "walgreens-603-elden-st",
+   "offer": "walgreens",
+   "name": "",
+   "address": "603 ELDEN ST, Herndon, VA 20170",
+   "lat": 38.968704,
+   "lng": -77.381365,
+   "phone": "+1 703-796-6482",
+   "open": "2026-11-11T12:00:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "walgreens-10320-main-st",
+   "offer": "walgreens",
+   "name": "",
+   "address": "10320 MAIN ST, Fairfax, VA 22030",
+   "lat": 38.846056,
+   "lng": -77.302593,
+   "phone": "+1 703-591-1025",
+   "open": "2026-11-11T12:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "rtc-run-for-valor-rtc-window-plaza",
+   "offer": "rtc-run-for-valor",
+   "name": "",
+   "address": "RTC Window Plaza, Opportunity Way, Reston, VA 20190",
+   "lat": 38.9548,
+   "lng": -77.3614,
+   "phone": "",
+   "open": "2026-11-11T11:45:00Z",
+   "close": "2026-11-11T14:30:00Z",
+   "hoursAssumed": false,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "herndon-post-184-ceremony-777-lynn-st",
+   "offer": "herndon-post-184-ceremony",
+   "name": "",
+   "address": "777 Lynn St, Herndon, VA 20170",
+   "lat": 38.971359,
+   "lng": -77.385557,
+   "phone": "",
+   "open": "2026-11-11T15:45:00Z",
+   "close": "2026-11-11T17:00:00Z",
+   "hoursAssumed": false,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "fairfax-post-177-ceremony-3939-oak-st",
+   "offer": "fairfax-post-177-ceremony",
+   "name": "",
+   "address": "3939 Oak St, Fairfax, VA 22030",
+   "lat": 38.852025,
+   "lng": -77.316541,
+   "phone": "",
+   "open": "2026-11-11T15:30:00Z",
+   "close": "2026-11-11T16:30:00Z",
+   "hoursAssumed": false,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "kensington-reston-celebration-11501-sunrise-valley-dr",
+   "offer": "kensington-reston-celebration",
+   "name": "",
+   "address": "11501 Sunrise Valley Dr, Reston, VA 20191",
+   "lat": 38.945135,
+   "lng": -77.345114,
+   "phone": "(571) 494-8100",
+   "open": "2026-11-11T19:00:00Z",
+   "close": "2026-11-11T21:00:00Z",
+   "hoursAssumed": false,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "chick-fil-a-metro-dc-45440-dulles-crossing-plz",
+   "offer": "chick-fil-a-metro-dc",
+   "name": "",
+   "address": "45440 Dulles Crossing Plz, Sterling, VA 20166",
+   "lat": 39.02488,
+   "lng": -77.425749,
+   "phone": "+1 703-444-0300",
+   "open": "2026-11-11T11:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "chick-fil-a-metro-dc-46920-community-plz",
+   "offer": "chick-fil-a-metro-dc",
+   "name": "",
+   "address": "46920 Community Plz, Sterling, VA 20164",
+   "lat": 39.016074,
+   "lng": -77.376116,
+   "phone": "+1 703-444-1901",
+   "open": "2026-11-11T11:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "chick-fil-a-metro-dc-44835-lakeview-overlook-plz",
+   "offer": "chick-fil-a-metro-dc",
+   "name": "",
+   "address": "44835 Lakeview Overlook Plz, Ashburn, VA 20147",
+   "lat": 39.059884,
+   "lng": -77.449811,
+   "phone": "+1 703-723-6172",
+   "open": "2026-11-11T11:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "chick-fil-a-metro-dc-4516-fair-knoll-dr",
+   "offer": "chick-fil-a-metro-dc",
+   "name": "",
+   "address": "4516 Fair Knoll Dr, Fairfax, VA 22033",
+   "lat": 38.862322,
+   "lng": -77.387573,
+   "phone": "+1 703-222-1096",
+   "open": "2026-11-11T11:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "chick-fil-a-metro-dc-9509-fairfax-blvd",
+   "offer": "chick-fil-a-metro-dc",
+   "name": "",
+   "address": "9509 Fairfax Blvd, Fairfax, VA 22031",
+   "lat": 38.864447,
+   "lng": -77.27298,
+   "phone": "+1 703-934-2150",
+   "open": "2026-11-11T11:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "chick-fil-a-metro-dc-12160-sunset-hills-rd",
+   "offer": "chick-fil-a-metro-dc",
+   "name": "",
+   "address": "12160 Sunset Hills Rd, Reston, VA 20190",
+   "lat": 38.954626,
+   "lng": -77.366538,
+   "phone": "+1 571-203-1234",
+   "open": "2026-11-11T10:30:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "chick-fil-a-metro-dc-8461-leesburg-pike-ste-b",
+   "offer": "chick-fil-a-metro-dc",
+   "name": "",
+   "address": "8461 Leesburg Pike Ste B, Vienna, VA 22182",
+   "lat": 38.924635,
+   "lng": -77.239826,
+   "phone": "+1 703-847-1514",
+   "open": "2026-11-11T11:30:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "chick-fil-a-metro-dc-1494-northpoint-village-ctr",
+   "offer": "chick-fil-a-metro-dc",
+   "name": "",
+   "address": "1494 Northpoint Village Ctr, Reston, VA 20194",
+   "lat": 38.978617,
+   "lng": -77.348841,
+   "phone": "+1 703-481-1725",
+   "open": "2026-11-11T11:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "chick-fil-a-metro-dc-22015-dulles-retail-plz",
+   "offer": "chick-fil-a-metro-dc",
+   "name": "",
+   "address": "22015 Dulles Retail Plz, Sterling, VA 20166",
+   "lat": 39.007078,
+   "lng": -77.438053,
+   "phone": "+1 571-325-2669",
+   "open": "2026-11-11T11:30:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "chick-fil-a-metro-dc-538-maple-ave-w",
+   "offer": "chick-fil-a-metro-dc",
+   "name": "",
+   "address": "538 Maple Ave W, Vienna, VA 22180",
+   "lat": 38.893529,
+   "lng": -77.27468,
+   "phone": "+1 571-595-8511",
+   "open": "2026-11-11T11:00:00Z",
+   "close": "2026-11-12T03:30:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "founding-farmers-1904-reston-metro-plaza",
+   "offer": "founding-farmers",
+   "name": "",
+   "address": "1904 Reston Metro Plaza, Reston, VA 20190",
+   "lat": 38.948976,
+   "lng": -77.338276,
+   "phone": "(703) 480-0870",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "founding-farmers-1800-tysons-blvd",
+   "offer": "founding-farmers",
+   "name": "",
+   "address": "1800 Tysons Blvd, Tysons, VA 22102",
+   "lat": 38.92253,
+   "lng": -77.222568,
+   "phone": "(703) 442-8783",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "teds-bulletin-11948-market-st",
+   "offer": "teds-bulletin",
+   "name": "",
+   "address": "11948 Market St, Reston, VA 20190",
+   "lat": 38.958836,
+   "lng": -77.358455,
+   "phone": "(703) 956-9510",
+   "open": "2026-11-11T12:00:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": false,
+   "verified": "unverified",
+   "pin": "geo"
+  }
+ ],
+ "other": [
+  {
+   "id": "arlington-national-cemetery-observance",
+   "day": "Wed 11 Nov, 11:00 AM EST (musical prelude 10:30)",
+   "at": "2026-11-11T16:00:00Z",
+   "name": "National Veterans Day Observance at Arlington National Cemetery",
+   "where": "Memorial Amphitheater, Arlington National Cemetery, Arlington, VA (about 20 miles east via I-66 or Silver Line)",
+   "offer": "National Veterans Day Observance: a wreath-laying at the Tomb of the Unknown Soldier at 11:00, then the observance in the Memorial Amphitheater. Free and open to the public.",
+   "grade": "A",
+   "note": "Expect security screening at the Welcome Center; allow extra time.",
+   "sources": [
+    {
+     "url": "https://patch.com/virginia/across-va/11-ways-observe-veterans-day-2026-virginia-parades-ceremonies-celebrations",
+     "publisher": "Patch",
+     "published": "2026-11-05"
+    }
+   ]
+  },
+  {
+   "id": "mount-vernon-veterans-day",
+   "day": "Wed 11 Nov, 9:00 AM-4:00 PM EST",
+   "at": null,
+   "name": "George Washington's Mount Vernon: free admission for military",
+   "where": "3200 Mount Vernon Memorial Hwy, Mount Vernon, VA (about 28 miles southeast)",
+   "offer": "Free admission for all active-duty, former and retired military personnel (not family or guests); free tickets on arrival. Veterans may place a floral tribute at the New Tomb and get a quarter-slice of 18th-century bread at the Half Crown Bakehouse while it lasts. Harmony Heritage Singers 11:00, U.S. Army Woodwind Quintet 12:30, Sons and Daughters of the American Revolution ceremony at the New Tomb 1:00, U.S. Air Force Strings 2:00.",
+   "grade": "A",
+   "note": "Its page doesn't say what proof to bring: carry a military ID, VA card or DD-214.",
+   "sources": [
+    {
+     "url": "https://www.mountvernon.org/plan-your-visit/calendar/events/mount-vernon-salutes-veterans",
+     "publisher": "George Washington's Mount Vernon",
+     "published": "2026"
+    }
+   ]
+  },
+  {
+   "id": "dc-prime-ashburn",
+   "day": "Wed 11 Nov",
+   "at": null,
+   "name": "DC Prime Steaks: free 9-oz Top Sirloin for veterans",
+   "where": "20120 Lakeview Center Plaza, Ashburn, VA 20147 (just west of Sterling on Route 7)",
+   "offer": "Complimentary 9-ounce Top Sirloin entree for veterans and active-duty military dining in on Wednesday, 11 Nov.",
+   "grade": "B",
+   "note": "Dine-in with military ID. Address not checked: call first.",
+   "sources": [
+    {
+     "url": "https://wtop.com/local/2026/11/deals-and-freebies-for-veterans-day/",
+     "publisher": "WTOP",
+     "published": "2026-11-09"
+    }
+   ]
+  },
+  {
+   "id": "great-falls-nps-fee-free",
+   "day": "Wed 11 Nov",
+   "at": null,
+   "name": "Great Falls Park & National Park Service sites: fee-free day",
+   "where": "9200 Old Dominion Dr, McLean, VA 22102 (15 minutes northeast of Reston) and all NPS sites",
+   "offer": "Entrance fees waived on Wednesday, 11 Nov at Great Falls Park, Shenandoah National Park, Manassas National Battlefield and all National Park Service sites for US citizens and residents.",
+   "grade": "A",
+   "note": "Veterans and Gold Star families also qualify for a free lifetime Interagency Military Pass at any federal recreation site.",
+   "sources": [
+    {
+     "url": "https://www.nps.gov/grfa/planyourvisit/fees.htm",
+     "publisher": "National Park Service (Great Falls Park)",
+     "published": "2026"
+    }
+   ]
+  },
+  {
+   "id": "udvar-hazy-center",
+   "day": "Every day, 10:00 AM–5:30 PM",
+   "at": null,
+   "name": "Smithsonian National Air and Space Museum Steven F. Udvar-Hazy Center",
+   "where": "14390 Air and Space Museum Pkwy, Chantilly, VA 20151 (10 minutes south of Reston/Herndon via Route 28)",
+   "offer": "Free museum admission every day (Space Shuttle Discovery, SR-71 Blackbird, Enola Gay and hundreds of military aircraft). Active-duty military and veterans receive military discounts at the Airbus IMAX Theater.",
+   "grade": "A",
+   "note": "Admission is free; parking is paid (check the museum's page for the late-afternoon rate).",
+   "sources": [
+    {
+     "url": "https://airandspace.si.edu/visit/udvar-hazy-center",
+     "publisher": "Smithsonian National Air and Space Museum",
+     "published": "2026"
+    }
+   ]
+  },
+  {
+   "id": "wmata-fairfax-connector-veterans",
+   "day": "Every day",
+   "at": null,
+   "name": "Metro: half fare for veterans rated 60% or more",
+   "where": "Metrorail (Silver Line: Reston Town Center, Wiehle-Reston East, Herndon) and Metrobus",
+   "offer": "Veterans with a VA disability rating of 60% or more qualify for Metro's Reduced Fare SmarTrip Photo ID card: half fare on Metrorail and Metrobus.",
+   "grade": "A",
+   "note": "Apply in person at Metro's Transit Accessibility Center with the VA rating letter. No special veteran fare on 11 Nov without the card.",
+   "sources": [
+    {
+     "url": "https://www.wmata.com/service/accessibility/reduced-fare.cfm",
+     "publisher": "WMATA",
+     "published": "2026"
+    }
+   ]
+  },
+  {
+   "id": "alexandria-veterans-day-ceremony",
+   "day": "Wed 11 Nov, 1:00 PM EST",
+   "at": null,
+   "name": "Alexandria Veterans Day Ceremony at Captain Rocky Versace Plaza",
+   "where": "Mount Vernon Recreation Center, 2701 Commonwealth Ave, Alexandria, VA",
+   "offer": "Annual public ceremony hosted by the City of Alexandria and Friends of Rocky Versace honoring Vietnam War fallen heroes and presenting Vietnam-era veteran lapel pins.",
+   "grade": "A",
+   "note": "Held indoors at the Mount Vernon Recreation Center; free and open to all.",
+   "sources": [
+    {
+     "url": "https://www.virginia.org/event/alexandria-veterans-day-ceremony/18952/",
+     "publisher": "Virginia Tourism Corporation",
+     "published": "2026-11"
+    },
+    {
+     "url": "https://patch.com/virginia/across-va/11-ways-observe-veterans-day-2026-virginia-parades-ceremonies-celebrations",
+     "publisher": "Patch",
+     "published": "2026-11-05"
+    }
+   ]
+  },
+  {
+   "id": "falls-church-ceremony",
+   "day": "Wed 11 Nov, 11:00 AM EST",
+   "at": "2026-11-11T16:00:00Z",
+   "name": "Falls Church Veterans Day Ceremony",
+   "where": "Veterans Memorial outside the Community Center, 223 Little Falls St, Falls Church (just east of Tysons)",
+   "offer": "The city's ceremony, with the Recreation and Parks Department and the Greater Falls Church Veterans Council.",
+   "grade": "A",
+   "note": "Free and open to the public.",
+   "sources": [
+    {
+     "url": "https://patch.com/virginia/across-va/11-ways-observe-veterans-day-2026-virginia-parades-ceremonies-celebrations",
+     "publisher": "Patch",
+     "published": "2026-11-05"
+    }
+   ]
+  },
+  {
+   "id": "leesburg-dodona-manor",
+   "day": "Wed 11 Nov, 10:00 AM-1:00 PM EST",
+   "at": null,
+   "name": "Leesburg Veterans Day Celebration, Dodona Manor",
+   "where": "312 E Market St, Leesburg (about 25 minutes northwest of Sterling)",
+   "offer": "Veterans Day celebration at Dodona Manor, George C. Marshall's home.",
+   "grade": "B",
+   "note": "The listing names no host or program: check before you go.",
+   "sources": [
+    {
+     "url": "https://patch.com/virginia/across-va/11-ways-observe-veterans-day-2026-virginia-parades-ceremonies-celebrations",
+     "publisher": "Patch",
+     "published": "2026-11-05"
+    }
+   ]
+  }
+ ],
+ "leads": [
+  {
+   "name": "Anita's New Mexico Style Mexican Food (Herndon, Vienna, Fairfax, Chantilly)",
+   "area": "Herndon (701 Elden St), Vienna (521 E Maple Ave), Fairfax, Chantilly",
+   "q": "Anita's New Mexico Style Mexican Food Herndon VA Veterans Day",
+   "offer": "Local Northern Virginia breakfast burrito institution; check your neighborhood store for any in-store veteran discount on 11 Nov.",
+   "last_seen": "2025",
+   "source": {
+    "url": "https://www.anitascorp.com/",
+    "publisher": "Anita's New Mexico Style Mexican Food",
+    "published": null
+   }
+  },
+  {
+   "name": "Glory Days Grill (Reston / North Point, Burke, Centreville)",
+   "area": "1400 North Point Village Ctr, Reston, VA 20194",
+   "q": "Glory Days Grill 1400 North Point Village Ctr Reston VA",
+   "offer": "Select franchise locations have offered veteran appetizer or entree discounts in past years; call the North Point Village store at (703) 689-0900.",
+   "last_seen": "2024",
+   "source": {
+    "url": "https://www.glorydaysgrill.com/",
+    "publisher": "Glory Days Grill",
+    "published": null
+   }
+  },
+  {
+   "name": "Lake Anne Brew House",
+   "area": "11424 Washington Plaza W, Reston, VA 20190",
+   "q": "Lake Anne Brew House 11424 Washington Plaza W Reston VA",
+   "offer": "Veteran-friendly neighborhood taproom on Lake Anne Plaza; check taproom board for military appreciation pours.",
+   "last_seen": "2025",
+   "source": {
+    "url": "https://lakeannebrewhouse.com/",
+    "publisher": "Lake Anne Brew House",
+    "published": null
+   }
+  },
+  {
+   "name": "Jimmy's Old Town Tavern",
+   "area": "697 Spring St, Herndon, VA 20170",
+   "q": "Jimmy's Old Town Tavern Herndon Veterans Day",
+   "offer": "No Veterans Day offer found for 2026; call (703) 435-5467.",
+   "last_seen": "unknown",
+   "source": {
+    "url": "https://www.jimmystavern.com/",
+    "publisher": "Jimmy's Old Town Tavern",
+    "published": null
+   }
+  }
+ ]
+}

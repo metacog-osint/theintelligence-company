@@ -1,7 +1,42 @@
-# Hub handoff: where things stand (10 Nov 2026, 1:45 PM CST: Veterans Day Hornbacher's and Post 2 list live from d1d897c, not pushed; 1:00 PM: Elks and McDonald's live from a4df358, pushed; 12:15 PM: Optimal and re-checks live from 0b12a0d, pushed; 9:40 AM: areas live from 62c984c, pushed)
+# Hub handoff: where things stand (10 Nov 2026, about 11:00 PM CST: Veterans Day Reston area built and tested, and the live Deals tab's blank-page bug fixed, neither committed nor deployed; 5:30 PM: Antigravity's two commits live, not noted until now; 1:45 PM: Hornbacher's and Post 2 list live from d1d897c)
 
 Read with `CLAUDE.md` (the project's notes). Times are Central (CST since 1 Nov). Each commit, push and deploy needs
 Tom's yes.
+
+## Veterans Day planner: Reston & Northern Virginia, 10 Nov 2026 night (a fourth area for a colleague in Reston; "Yes, finish it")
+**Built and tested, not committed or deployed** (waiting on approved). The first pass was made in Antigravity
+(Gemini) that evening and stopped before building; this session reviewed it against the sources, corrected it and
+built it. Details: `veterans-day/README.md` ("Reston & Northern Virginia") and `research/reston-va/notes.md`.
+- **Area** `reston-va` (`?area=reston-va`), Eastern time; 44 deals at 178 stops (A 16, B 27, C 1). Reston's day starts
+  at 11 PM CST on 10 Nov; the 5K is at 7 AM CST.
+- **Checked true:** the Run for Valor 5K (8:00, BXP and Microsoft, Soldiers' Angels), Herndon at 11:00 (Post 184),
+  Fairfax Post 177 at 10:30 (keynote Judge Michael C. Sprano), The Kensington Reston 2-4 PM, Chick-fil-A Metro DC's
+  free entree (10 participating stores here), Founding Farmers 50%, Ted's tart, Wawa, Sheetz, Bonefish, Bar Louie,
+  Fogo, DC Prime, Mount Vernon, WMATA's half fare for veterans rated 60% or more.
+- **Corrected:** home-page sources replaced by the real pages; 5K start (RTC Window Plaza on Opportunity Way) and its
+  $35 fee (now a purchase deal); CPK and Bonefish A to B; Founding Farmers excludes breakfast; Jimmy's Old Town Tavern
+  to leads; pins 50-700 m off replaced; Fogo de Chão Tysons restored; George Mason's Chick-fil-A counter out;
+  `stores_region.py` reports failed downloads and reads a town from `addr:full`; `.atp-cache/` (90 MB) ignored.
+- **Antigravity's earlier commits:** `59c4f9e` (5:17 PM: New Salem heading, town start presets, smart search,
+  time-targeted routing, breakfast priority, engine and `firebase.json` changes) and `3373f4f` (5:28 PM: Route
+  quick-add search, Stop 1 branch and time controls, On map jump, start-point bounds) are **live** (live `app.js`,
+  `engine.js`, `index.html` and `app.css` match `3373f4f`, checked 10 Nov 10:15 PM) and unpushed (`master` is 2
+  ahead of `origin`). Not reviewed line by line.
+- **Live bug, fixed here (not deployed):** `59c4f9e` made `app.js` call `E.driveMinutes`, which `engine.js` never
+  had. Every deal card and the Route tab's quick-add search threw, so **the live Deals tab has been blank in every
+  area since about 5:30 PM** (checked 10 Nov 10:55 PM: live `app.js` calls it, live `engine.js` lacks it).
+  `placeDriveInfo` now reads the route's own drive table (`ctx.fromPos`). New test in `veterans.test.js`: every `E.`
+  name `app.js` uses must exist in the engine (it fails on the live `app.js`). 96 planner tests pass; checked in the
+  `hub-main` preview at phone size: Deals shows 20 cards in Fargo-Moorhead and Reston, quick-add finds Hornbacher's,
+  Reston's map draws its route.
+- **Seen, not changed:** the Deals search box's example text ("Hornbacher's, 13th Ave, Mandan…") is Fargo's in every
+  area; the 5K card reads "free" (watching is) beside "Needs a purchase" ($35 to run, in its details).
+- **Antigravity's `GEMINI.md`** (untracked) is a 16-line summary of this repo for Gemini. Suggested: make it a
+  pointer to `CLAUDE.md` and this file so both tools share one set of notes (Tom's call).
+- **To ship (approved):** commit, then `firebase deploy --only hosting:hub --project context-484804`; push when the publisher
+  says. Link for the colleague: https://theintelligence.company/veterans/veterans-day/?area=reston-va
+- **Not added (the publisher's call):** WTOP's Silver Diner, Greene Turtle, Melting Pot, Grace for Vets, Hard Rock DC, Pastis
+  (each needs store lookups).
 
 ## Veterans Day planner: Hornbacher's and Post 2's list, 10 Nov 2026 about 1:45 PM CST ("Commit and deploy")
 **Live** from `d1d897c` (not pushed); live `deals.json` and `drive.json` match. Fargo-Moorhead 78 deals at 195 stops:
