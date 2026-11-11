@@ -354,7 +354,7 @@ test("the 5K says what it costs: $35 to run, free to watch, and still scores as 
 
 test("practice marks from the preview clear once the day is live; real marks and 'Not today' stay (11 Nov 2026)", async () => {
   const vm = await import("node:vm");
-  const src = SCRIPTS["app.js"];
+  const src = SCRIPTS["app.js"].replace(/\r\n/g, "\n"); // a Windows checkout (core.autocrlf) has CRLF; the patterns expect LF
   const stamp = /\n {2}function previewStamp\(t\) \{.*\}\n/.exec(src), clear = /\n {2}function clearPreviewMarks\(\) \{[\s\S]*?\n {2}\}\n/.exec(src);
   assert.ok(stamp && clear, "previewStamp and clearPreviewMarks in app.js");
   assert.match(src, /function renderAll\(\) \{\n\s*clearPreviewMarks\(\);/, "checked on every render, so it runs as the day starts");
