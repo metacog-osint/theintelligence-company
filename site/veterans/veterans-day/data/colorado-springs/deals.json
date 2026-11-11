@@ -1,6 +1,6 @@
 {
  "meta": {
-  "built_at": "2026-11-11T06:26:12Z",
+  "built_at": "2026-11-11T06:28:48Z",
   "day": "2026-11-11",
   "day_start": "2026-11-11T07:00:00Z",
   "tz": "America/Denver",
@@ -4097,6 +4097,57 @@
    "kinds": [
     "meal"
    ]
+  },
+  {
+   "id": "melting-pot-springs",
+   "brand": "The Melting Pot",
+   "status": "offering",
+   "category": "meal",
+   "offer": "25% off the food bill for the veteran and one guest on 11 Nov, with a military ID, veteran card, retiree card or DD-214.",
+   "value": 25,
+   "grade": "A",
+   "start": "2026-11-11T19:00:00Z",
+   "end": "2026-11-12T04:00:00Z",
+   "window_text": "12:00–21:00 MST",
+   "mode": "dine_in",
+   "minutes": 90,
+   "busy": 10,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active",
+    "retired"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "yes",
+   "kids": null,
+   "proof": [
+    "military_id",
+    "va_card",
+    "dd214"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "Food only; a discount, not free; not with other offers.",
+   "sources": [
+    {
+     "url": "https://meltingpot.com/colorado-springs-co/melting-pot-events.aspx",
+     "publisher": "The Melting Pot Colorado Springs",
+     "published": "2026 (undated; terms say 11 Nov 2026)"
+    }
+   ],
+   "notes": "The Melting Pot Colorado Springs' own events page: on 11 Nov the veteran and one guest get 25% off their food bill, with a military ID, veteran card, retiree card or DD-214. Food only; not with other offers. 30 E Pikes Peak Ave, downtown; 719-385-0300.",
+   "caution": "Opens at noon; closing time not given: call 719-385-0300 to book",
+   "group": null,
+   "ticket": false,
+   "purchase": true,
+   "kinds": [
+    "meal"
+   ]
   }
  ],
  "places": [
@@ -8005,6 +8056,20 @@
    "hoursAssumed": false,
    "verified": "unverified",
    "pin": "geo"
+  },
+  {
+   "id": "melting-pot-springs-30-e-pikes-peak-ave",
+   "offer": "melting-pot-springs",
+   "name": "",
+   "address": "30 E Pikes Peak Ave, Colorado Springs, CO 80903",
+   "lat": 38.83391,
+   "lng": -104.824933,
+   "phone": "719-385-0300",
+   "open": "2026-11-11T18:00:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "geo"
   }
  ],
  "other": [
@@ -8321,18 +8386,6 @@
    "source": {
     "url": "https://gazette.com/2024/11/12/strategic-maneuvers-veteran-brewers-up-the-game-at-colorado-springs-craft-breweries/",
     "publisher": "The Gazette (12 Nov 2024)",
-    "published": null
-   }
-  },
-  {
-   "name": "The Melting Pot",
-   "area": "30 E Pikes Peak Ave, Ste A, Colorado Springs, (719) 385-0300",
-   "q": "Melting Pot Colorado Springs Veterans Day military",
-   "offer": "30% off with a military ID after 4 PM on 11 Nov 2015 (The Gazette's list, last updated Oct 2026, offers from 2015). The restaurant's own page (11 Nov 2026) has no veterans offer; open 4-9 PM Wednesday.",
-   "last_seen": "2015",
-   "source": {
-    "url": "https://gazette.com/?p=1871513",
-    "publisher": "The Gazette (2015 list, updated 6 Oct 2026)",
     "published": null
    }
   },

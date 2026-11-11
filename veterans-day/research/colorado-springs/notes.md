@@ -35,6 +35,10 @@ Springs (Chapel Hills), the east side on Powers Blvd by Peterson SFB, Fort Carso
   dine-in meal for every veteran, up to $70 of food, with a military or veteran ID, at participating locations (its
   only Springs store; the chain is Denver's). Routed at lunch, 11 AM-2:30 PM (closed 2:30-4; dinner 4-9:30 also
   counts). Suite 120 per most listings; one Gazette column says 102.
+- **The Melting Pot, 30 E Pikes Peak Ave** (A, purchase): its own Colorado Springs events page (from the coordinating
+  session's Colorado chain research, added after the first deploy attempt): 25% off the food bill for the veteran and
+  one guest on 11 Nov, with a military ID, veteran card, retiree card or DD-214; opens at noon. A purchase deal, Off by
+  default. This corrects the first pass, which had only a 2015 list's 30% after 4 PM and called it a lead.
 
 ## Under Deals (extras): other days, region-wide, on base or outside the circles
 - Pikes Peak Highway (A, City of Colorado Springs news, 9 Nov 2026): free on 11 Nov for **active and retired military**
@@ -69,8 +73,7 @@ Sertich Ice Center, Pikes Peak Highway. The Space Foundation Discovery Center is
 ## Checked, no 2026 offer (leads)
 Red Leg Brewing (its Tribute Wall page is 2025's; its own calendar has nothing for 11 Nov 2026), Jack Quinn's (KOAA's
 undated story only), Lost Friend Brewing, Phantom Canyon (the Thursday 20% rests on an Untappd listing; 2024's was a
-donation), The Melting Pot (the only 30% offer is in a Gazette list of 2015 offers; nothing on its Colorado Springs
-page), the National Museum of WWII Aviation (open 10-5 Wed; standing military rate only), Cheyenne Mountain Zoo, the
+donation), the National Museum of WWII Aviation (open 10-5 Wed; standing military rate only), Cheyenne Mountain Zoo, the
 Western Museum of Mining & Industry, the Cog Railway, Manitou Cliff Dwellings, ProRodeo Hall of Fame, the Fine Arts
 Center, the ANA Money Museum, 3 Hundred Days Distilling, Hoedown for Heroes. No local haircut, car-wash or coffee offer
 for 2026 turned up in the Gazette, KRDO, KOAA, KKTV, FOX21, Vetefits or Mile High on the Cheap.
@@ -78,8 +81,8 @@ for 2026 turned up in the Gazette, KRDO, KOAA, KKTV, FOX21, Vetefits or Mile Hig
 ## Corrections to the research report
 - Memorial Park: the Gazette's 10 Nov story doesn't use "wreath-laying"; KRDO's 1 Sep story does.
 - Pikes Peak Highway: active and retired military (2026 page), not every veteran.
-- Red Leg's Tribute Wall, Phantom Canyon's Military Night, Jack Quinn's free pint and The Melting Pot's 30% are earlier
-  years only.
+- Red Leg's Tribute Wall, Phantom Canyon's Military Night and Jack Quinn's free pint are earlier years only. The Melting
+  Pot's 2026 offer is 25% off food for the veteran and a guest from noon, not 30% after 4 PM.
 - The Olympic & Paralympic Museum is closed on Wednesdays; the Space Foundation Discovery Center is closed until 2027.
 - The In Their Honor parade was Saturday 7 Nov (KRDO).
 
