@@ -1,0 +1,180 @@
+[
+  {
+    "name": "Chick-fil-A (Metro DC)",
+    "kind": "business",
+    "status_2026": "confirmed",
+    "est_value_usd": 9,
+    "dates": "2026-11-11",
+    "hours_local": "store hours",
+    "mode": "dine_in_or_to_go",
+    "eligible": ["veteran", "guard_reserve"],
+    "eligibility_quote": "All military veterans are invited to receive an entree on us this Veterans Day.",
+    "guard_reserve": "yes",
+    "spouse_or_guest": "no",
+    "proof": ["military_id", "va_card", "dd214", "dl_veteran"],
+    "participating_locations_only": false,
+    "limits": "Proof of service required (DoD ID, a driver's license marked Veteran, VA ID or DD-214). Dine-in preferred; not valid for mobile orders, Chick-fil-A Delivery or third-party delivery.",
+    "offer": "Free entree, open to close: a Chicken Biscuit, Egg White Grill or 4-count Chick-n-Minis until 10:30 AM; a Chicken Sandwich, Spicy Chicken Sandwich or 8-count Nuggets (regular or grilled) after.",
+    "grade": "A",
+    "sources": [
+      {"url": "https://cfametrodc.com/", "publisher": "Chick-fil-A Metro DC", "published": "2026", "accessed": "2026-11-11"},
+      {"url": "https://www.chick-fil-a.com/locations/md/laurel", "publisher": "Chick-fil-A (the Laurel restaurant's page, via All the Places 2026-10-31)", "published": "2026", "accessed": "2026-11-11"}
+    ],
+    "notes": "Chick-fil-A Metro DC's participating list (read 11 Nov 2026, about 11:40 PM CST on 10 Nov) names one restaurant near Fort Meade: 'Laurel', which Chick-fil-A's own store page puts at 13600 Baltimore Ave, Ste 600. The other nine Chick-fil-A stores in the circles (Arundel Mills, Corridor Market Place, Waugh Chapel, Crofton, Columbia Mall, Johns Hopkins Road, Executive Park Drive, Dobbin Center, Snowden River Pkwy) aren't on it and are dropped in CURATE."
+  },
+  {
+    "name": "Silver Diner",
+    "kind": "business",
+    "status_2026": "announced",
+    "est_value_usd": 4,
+    "dates": "2026-11-11",
+    "hours_local": "07:00-23:00",
+    "mode": "in_store",
+    "eligible": ["veteran", "active"],
+    "eligibility_quote": "",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "no",
+    "proof": ["military_id"],
+    "participating_locations_only": false,
+    "limits": "25% off one entree. Bring a valid military ID. Stars and Stripes says all locations in DC, Maryland, Virginia and New Jersey; neither list says whether it is dine-in only.",
+    "offer": "25% off an entree for veterans and active-duty military.",
+    "grade": "B",
+    "stores": [
+      {"address": "8250 Gateway Overlook Dr, Elkridge, MD 21075", "phone": "(443) 733-5213", "wed_hours": "07:00-23:00", "geo": "39.183814,-76.795374", "status": "confirmed", "url": "https://locations.silverdiner.com/md/elkridge/restaurant-139.html"}
+    ],
+    "sources": [
+      {"url": "https://wtop.com/local/2026/11/deals-and-freebies-for-veterans-day/", "publisher": "WTOP", "published": "2026-11-09", "accessed": "2026-11-11"},
+      {"url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html", "publisher": "Stars and Stripes", "published": "2026-11-06", "accessed": "2026-11-11"}
+    ],
+    "notes": "Not on Silver Diner's own pages (its Elkridge page, read 11 Nov 2026, mentions no offer). The Elkridge store is on Silver Diner's own locator (8250 Gateway Overlook Dr, Wednesday 7 AM-11 PM); its pin is OpenStreetMap's (way/142213153), 5 km inside the Columbia circle."
+  },
+  {
+    "name": "Grace for Vets free car wash (Flagship Carwash)",
+    "kind": "business",
+    "status_2026": "confirmed",
+    "est_value_usd": 12,
+    "dates": "2026-11-11",
+    "hours_local": "",
+    "mode": "in_store",
+    "eligible": ["veteran", "active"],
+    "eligibility_quote": "providing free car washes to all veterans and active-duty personnel",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "no",
+    "proof": [],
+    "participating_locations_only": true,
+    "limits": "A free wash for veterans and active-duty personnel on 11 Nov at participating washes. Grace for Vets doesn't say what proof to bring: carry a military or veteran ID. Hours not published for the day: call the wash.",
+    "offer": "Free car wash for veterans and active duty.",
+    "grade": "A",
+    "stores": [
+      {"address": "771 Donaldson Ave, Severn, MD 21144", "phone": "", "wed_hours": "", "geo": "39.135142,-76.678219", "status": "confirmed", "url": "https://www.graceforvets.com/find-a-participating-wash/"}
+    ],
+    "sources": [
+      {"url": "https://www.graceforvets.com/find-a-participating-wash/", "publisher": "Grace for Vets", "published": "undated (every Veterans Day)", "accessed": "2026-11-11"}
+    ],
+    "notes": "Grace for Vets' Maryland list (read 11 Nov 2026) has 21 washes; only Flagship Carwash, 771 Donaldson Ave, Severn, is inside the circles (pin from the Census geocoder). Water Works Car Wash, 6370 Old Washington Rd, Elkridge, and Flagship's Glen Burnie (7155 Ritchie Hwy) and Bowie (1956 Crain Hwy) sites are outside."
+  },
+  {
+    "name": "The Greene Turtle",
+    "kind": "business",
+    "status_2026": "announced",
+    "est_value_usd": 15,
+    "dates": "2026-11-11",
+    "hours_local": "",
+    "mode": "dine_in",
+    "eligible": ["veteran"],
+    "eligibility_quote": "Free dine-in meal up to $15",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "no",
+    "proof": ["military_id"],
+    "participating_locations_only": true,
+    "limits": "Dine-in, a meal up to $15. Bring a military or veteran ID. Lists say select locations: call first.",
+    "offer": "Free dine-in meal up to $15 for veterans.",
+    "grade": "B",
+    "stores": [
+      {"address": "8872 McGaw Rd, Columbia, MD 21045", "phone": "(410) 312-5255", "wed_hours": "", "geo": "39.188255,-76.818838", "status": "unverified", "url": ""},
+      {"address": "7556 Teague Rd, Ste 100, Hanover, MD 21076", "phone": "", "wed_hours": "", "geo": "39.154306,-76.719848", "status": "unverified", "url": ""}
+    ],
+    "sources": [
+      {"url": "https://wtop.com/local/2026/11/deals-and-freebies-for-veterans-day/", "publisher": "WTOP", "published": "2026-11-09", "accessed": "2026-11-11"},
+      {"url": "https://dealybee.com/guides/veterans-day-free-meals", "publisher": "Dealybee (DC, Maryland & Virginia list)", "published": "2026-11-09", "accessed": "2026-11-11"}
+    ],
+    "notes": "WTOP's 9 Nov 2026 list: 'Free dine-in meal up to $15'. Not on the Greene Turtle's own site, whose locator can't be read automatically (its military page shows only the everyday 15%). Stores from OpenStreetMap: Columbia (8872 McGaw Rd, node/3601445493) and Hanover at Arundel Mills (7556 Teague Rd Ste 100, node/4490975307; Cvent's venue listing gives the same address). OpenStreetMap also has an unaddressed Greene Turtle node at Waugh Chapel (Gambrills) that wasn't added: no address, and a Patch report says the chain's operator has replaced some Greene Turtles with other restaurants."
+  },
+  {
+    "name": "Main Event",
+    "kind": "business",
+    "status_2026": "announced",
+    "est_value_usd": 22,
+    "dates": "2026-11-11",
+    "hours_local": "",
+    "mode": "dine_in",
+    "eligible": ["veteran", "active"],
+    "eligibility_quote": "veterans and active duty members, enjoy a FREE double cheeseburger with fries + 30 minutes of game play on 11/11",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "no",
+    "proof": ["military_id"],
+    "participating_locations_only": true,
+    "limits": "Bring a military ID or proof of service. Participating centers; the Columbia page carries the offer but doesn't say Columbia takes part.",
+    "offer": "Free double cheeseburger with fries and 30 minutes of game play for veterans and active duty.",
+    "grade": "B",
+    "stores": [
+      {"address": "10300 Little Patuxent Pkwy, Columbia, MD 21044", "phone": "", "wed_hours": "", "geo": "39.214623,-76.862201", "status": "unverified", "url": "https://www.mainevent.com/locations/maryland/columbia/"}
+    ],
+    "sources": [
+      {"url": "https://www.mainevent.com/locations/maryland/columbia/", "publisher": "Main Event (Columbia page)", "published": "undated", "accessed": "2026-11-11"},
+      {"url": "https://www.legion.org/information-center/news/veterans-day/2026/november/veterans-day-deals-and-discounts", "publisher": "The American Legion", "published": "2026-11-05", "accessed": "2026-11-11"}
+    ],
+    "notes": "Main Event's Columbia page (read 11 Nov 2026) shows the 11/11 offer with no year; the American Legion's 5 Nov 2026 list carries the same offer at 'participating centers'. Graded B because the company's page has no year. In the Mall in Columbia (pin from OpenStreetMap, way/1218920815); hours not read."
+  },
+  {
+    "name": "All American Steakhouse",
+    "kind": "business",
+    "status_2026": "reported",
+    "est_value_usd": 14,
+    "dates": "2026-11-11",
+    "hours_local": "",
+    "mode": "dine_in",
+    "eligible": ["veteran"],
+    "eligibility_quote": "Veterans only, with valid ID. No substitution for fries. Must mention promotion to receive it.",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "no",
+    "proof": ["military_id"],
+    "participating_locations_only": false,
+    "limits": "Veterans only, with a valid ID; mention the promotion. No substitution for the fries.",
+    "offer": "Reported for 2026 (unconfirmed): one free sandwich or burger of your choice with fries",
+    "grade": "C",
+    "address": "1502 Annapolis Rd, Odenton, MD 21113",
+    "phone": "(410) 305-0505",
+    "geo": "39.097378,-76.719305",
+    "sources": [
+      {"url": "https://dealybee.com/guides/veterans-day-free-meals", "publisher": "Dealybee (DC, Maryland & Virginia list)", "published": "2026-11-09", "accessed": "2026-11-11"}
+    ],
+    "notes": "Only Dealybee's 9 Nov 2026 list carries it (Odenton, Edgewater and Ellicott City); no post from the restaurant was found (search 11 Nov 2026). Address, phone and pin from OpenStreetMap (node/13758421670); its hours tag ('11:30-10:30') is malformed, so usual hours are shown."
+  },
+  {
+    "name": "KPOT Korean BBQ & Hot Pot",
+    "kind": "business",
+    "status_2026": "reported",
+    "est_value_usd": 17,
+    "dates": "2026-11-11",
+    "hours_local": "",
+    "mode": "dine_in",
+    "eligible": ["veteran", "active"],
+    "eligibility_quote": "50% off for military members; free for first 20 redeemers with a valid military ID. Drinks not included.",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "no",
+    "proof": ["military_id"],
+    "participating_locations_only": false,
+    "limits": "Valid military ID; drinks not included. Free only for the first 20; 50% off after that.",
+    "offer": "Reported for 2026 (unconfirmed): free for the first 20 with a military ID, then 50% off",
+    "grade": "C",
+    "address": "351 Montrose Ave, Laurel, MD 20707",
+    "phone": "(240) 280-2840",
+    "geo": "39.097259,-76.854105",
+    "wednesday_hours": "12:00-23:00",
+    "sources": [
+      {"url": "https://dealybee.com/guides/veterans-day-free-meals", "publisher": "Dealybee (DC, Maryland & Virginia list)", "published": "2026-11-09", "accessed": "2026-11-11"}
+    ],
+    "notes": "Only Dealybee's 9 Nov 2026 list carries it (Laurel; the same offer at its Fairfax, Germantown and Towson stores); nothing from KPOT found (search 11 Nov 2026). Address, phone, Wednesday hours (12:00-23:00) and pin from OpenStreetMap (node/12706125201)."
+  }
+]

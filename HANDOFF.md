@@ -3,6 +3,34 @@
 Read with `CLAUDE.md` (the project's notes). Times are Central (CST since 1 Nov). Each commit, push and deploy needs
 Tom's yes.
 
+## Veterans Day planner: Reno–Sparks and Fort Meade, night of 10-11 Nov 2026 (the publisher, about 11:35 PM CST: "deploy everything to the site without my input")
+the publisher authorized tonight's Veterans Day merges, deploys and pushes without his yes, and went to sleep. The coordinating
+session ("Veterans Day regional locations setup") merges each area's branch into `master` here, tests, deploys from this
+checkout and pushes; the area sessions build in their own worktrees (`D:\Projects\_worktrees\hub-reno-sparks`,
+`hub-fort-meade`) and never deploy. the publisher's own session adding Colorado was told the same rules.
+- **Reno–Sparks: live** since about 12:00 AM CST 11 Nov from `ea1e106` (Reno `8dd2b76` plus a test fix), pushed. 40
+  deals at 136 stops (A 13, B 26, C 1), the first area on Pacific time (`day_start` 08:00 UTC). Checked live: planner
+  files and every area's data match `master`; headless Edge at 375 px shows 40 of 40 deals, Optimal 14 stops, no
+  errors. Details: `veterans-day/README.md` ("Reno–Sparks") and `research/reno-sparks/notes.md`.
+- **Test fix:** the practice-mark test now strips CRLF first (`core.autocrlf` is true here, so a merge rewrote `app.js`
+  with CRLF and the LF-only patterns failed). The map test once timed out on OSRM and passed on a rerun.
+- **Fort Meade: live** since about 12:00 AM CST 11 Nov from merge `b70250d`, pushed. 41 deals at 125 stops (A 9, B 30,
+  C 2), Eastern time, `?area=fort-meade` (aliases `meade`, `odenton`, `laurel`, `columbia`, ...). Stores on the
+  installation are kept off the route (`on_post` in REGIONS: base access needed). The National Cryptologic Museum is
+  not routed (grade C: NSA's pages say closed on federal holidays per a search summary; nsa.gov blocks automated
+  reads). Checked live: every area's data matches master; headless Edge at 375 px shows 41 of 41, Optimal 12 stops, no
+  errors. Details: `veterans-day/README.md` ("Fort Meade, MD") and `research/fort-meade/notes.md`.
+- Each area stays in preview until 4 AM local (`mode()` in `app.js`): Fort Meade goes live 3 AM CST, Reno 6 AM CST.
+- In the full `npm test` run the hub guide test and the map's OSRM test each failed once under load (several sessions
+  running) and passed alone; the 102 planner tests passed every time.
+- **Next (from the 3:35 AM CST check-in, after the usage reset):** a second research pass per area by background agents
+  in the same worktrees (day-of local roundups, the open items in each `notes.md`), then merge, deploy, push.
+- **Colorado (the publisher's own session, "Veterans Day locations setup"):** Denver (`vetday-denver`) and Colorado Springs
+  (`vetday-colorado-springs`) in their own worktrees; they merge into master here themselves, and each side messages
+  the other before merging.
+- The laptop is held awake until 9:30 AM CST by `hold-awake.ps1` (SetThreadExecutionState, display on) in this
+  session's scratchpad.
+
 ## Veterans Day planner: Reston's WTOP deals and page fixes, 10 Nov 2026 about 11:00 PM CST ("Finish the Reston work")
 **Live** since about 11:00 PM CST from `fd2e434` ("Commit, deploy and push"; pushed; site-checks run 42962816380
 passed). Checked live: `app.js`, `index.html` and Reston's `deals.json` and `drive.json` match the commit. GitHub's
