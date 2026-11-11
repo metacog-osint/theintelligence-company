@@ -91,14 +91,16 @@
     "offer": "Free dine-in meal up to $15 for veterans.",
     "grade": "B",
     "stores": [
-      {"address": "8872 McGaw Rd, Columbia, MD 21045", "phone": "(410) 312-5255", "wed_hours": "", "geo": "39.188255,-76.818838", "status": "unverified", "url": ""},
-      {"address": "7556 Teague Rd, Ste 100, Hanover, MD 21076", "phone": "", "wed_hours": "", "geo": "39.154306,-76.719848", "status": "unverified", "url": ""}
+      {"address": "8872 McGaw Rd, Suite C, Columbia, MD 21045", "phone": "(410) 312-5255", "wed_hours": "11:00-01:00", "geo": "39.188255,-76.818838", "status": "confirmed", "url": "https://www.thegreeneturtle.com/location/columbia/"},
+      {"address": "7556 Teague Rd, Hanover, MD 21076", "phone": "(410) 799-5001", "wed_hours": "11:00-23:00", "geo": "39.154306,-76.719848", "status": "confirmed", "url": "https://www.thegreeneturtle.com/location/hanover-at-arundel-mills/"},
+      {"address": "1407 S Main Chapel Way, Ste 115, Gambrills, MD 21054", "phone": "(410) 702-9896", "wed_hours": "11:00-24:00", "geo": "39.033089,-76.686765", "status": "confirmed", "url": "https://www.thegreeneturtle.com/location/gambrills/"}
     ],
     "sources": [
       {"url": "https://wtop.com/local/2026/11/deals-and-freebies-for-veterans-day/", "publisher": "WTOP", "published": "2026-11-09", "accessed": "2026-11-11"},
-      {"url": "https://dealybee.com/guides/veterans-day-free-meals", "publisher": "Dealybee (DC, Maryland & Virginia list)", "published": "2026-11-09", "accessed": "2026-11-11"}
+      {"url": "https://dealybee.com/guides/veterans-day-free-meals", "publisher": "Dealybee (DC, Maryland & Virginia list)", "published": "2026-11-09", "accessed": "2026-11-11"},
+      {"url": "https://www.thegreeneturtle.com/locations/", "publisher": "The Greene Turtle (its store list)", "published": "undated", "accessed": "2026-11-11"}
     ],
-    "notes": "WTOP's 9 Nov 2026 list: 'Free dine-in meal up to $15'. Not on the Greene Turtle's own site, whose locator can't be read automatically (its military page shows only the everyday 15%). Stores from OpenStreetMap: Columbia (8872 McGaw Rd, node/3601445493) and Hanover at Arundel Mills (7556 Teague Rd Ste 100, node/4490975307; Cvent's venue listing gives the same address). OpenStreetMap also has an unaddressed Greene Turtle node at Waugh Chapel (Gambrills) that wasn't added: no address, and a Patch report says the chain's operator has replaced some Greene Turtles with other restaurants."
+    "notes": "WTOP's 9 Nov 2026 list: 'Free dine-in meal up to $15'. Not on the Greene Turtle's own site (its pages, read 11 Nov 2026 about 12:05 AM CST, have no Veterans Day text). Stores from the Greene Turtle's own store list, read the same time (phase 2; phase 1 had only OpenStreetMap): Columbia, 8872 McGaw Road Suite C, (410) 312-5255, Tue-Thu 11 AM-1 AM; Hanover at Arundel Mills, 7556 Teague Rd (no suite on the chain's list; OpenStreetMap's Ste 100 dropped), (410) 799-5001, Sun-Wed 11 AM-11 PM; and Gambrills at Waugh Chapel, 1407 S Main Chapel Way Ste 115, (410) 702-9896, Sun-Thu 11 AM-midnight (pin from the chain's list). Columbia and Hanover keep OpenStreetMap's pins, within 15 m of the chain's. The chain's BWI Airport store is in the terminal and Burtonsville is 6.9 km from the Laurel circle's centre, both left out. Columbia's address string keeps '8872 McGaw Rd' first so its place id doesn't change."
   },
   {
     "name": "Main Event",
@@ -149,7 +151,7 @@
     "sources": [
       {"url": "https://dealybee.com/guides/veterans-day-free-meals", "publisher": "Dealybee (DC, Maryland & Virginia list)", "published": "2026-11-09", "accessed": "2026-11-11"}
     ],
-    "notes": "Only Dealybee's 9 Nov 2026 list carries it (Odenton, Edgewater and Ellicott City); no post from the restaurant was found (search 11 Nov 2026). Address, phone and pin from OpenStreetMap (node/13758421670); its hours tag ('11:30-10:30') is malformed, so usual hours are shown."
+    "notes": "Only Dealybee's 9 Nov 2026 list carries it, in one entry for Dale City, Edgewater, Ellicott City and Odenton whose link goes to the Ellicott City page. The restaurant's own site (read 11 Nov 2026) shows no veterans offer, and no post was found (searches 11 Nov 2026). Address, phone and pin from OpenStreetMap (node/13758421670); its hours tag ('11:30-10:30') is malformed, so usual hours are shown."
   },
   {
     "name": "KPOT Korean BBQ & Hot Pot",
@@ -175,6 +177,32 @@
     "sources": [
       {"url": "https://dealybee.com/guides/veterans-day-free-meals", "publisher": "Dealybee (DC, Maryland & Virginia list)", "published": "2026-11-09", "accessed": "2026-11-11"}
     ],
-    "notes": "Only Dealybee's 9 Nov 2026 list carries it (Laurel; the same offer at its Fairfax, Germantown and Towson stores); nothing from KPOT found (search 11 Nov 2026). Address, phone, Wednesday hours (12:00-23:00) and pin from OpenStreetMap (node/12706125201)."
+    "notes": "Only Dealybee's 9 Nov 2026 list carries it, in one entry for Fairfax, Huntington, Sterling and Laurel whose link goes to the Fairfax store's page (a second entry covers Germantown and Towson). Nothing from KPOT found (searches 11 Nov 2026), so whether Laurel takes part is unconfirmed (phase 1's note named Fairfax, Germantown and Towson only). Address, phone, Wednesday hours (12:00-23:00) and pin from OpenStreetMap (node/12706125201)."
+  },
+  {
+    "name": "Showroom Shine Car Wash",
+    "kind": "business",
+    "status_2026": "unconfirmed",
+    "est_value_usd": 12,
+    "dates": "2026-11-11",
+    "hours_local": "",
+    "mode": "in_store",
+    "eligible": ["veteran", "active"],
+    "eligibility_quote": "FREE WASH ACTIVE & RETIRED SERVICE MEMBERS WITH VALID ID. Valid at all locations.",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "no",
+    "proof": ["military_id"],
+    "participating_locations_only": false,
+    "limits": "Last year's terms: a free wash for active and retired service members with a valid ID (the page's text says veterans). No 2026 word found: call (240) 341-3177 first.",
+    "offer": "Last year: a free wash on 11 Nov for veterans (active and retired service members with a valid ID) at all its washes",
+    "grade": "C",
+    "stores": [
+      {"address": "735 McKnew Rd, Gambrills, MD 21054", "phone": "(240) 341-3177", "wed_hours": "", "geo": "39.053423,-76.659349", "status": "confirmed", "url": "https://www.showroomshinecarwash.com/veterans-day-free-wash"}
+    ],
+    "sources": [
+      {"url": "https://www.showroomshinecarwash.com/veterans-day-free-wash", "publisher": "Showroom Shine (its Veterans Day page, last updated 26 Sep 2025)", "published": "2025", "accessed": "2026-11-11"},
+      {"url": "https://www.wbaltv.com/article/free-car-wash-veterans-day-gambrills-glen-burnie/69395027", "publisher": "WBAL-TV", "published": "2025-11-11", "accessed": "2026-11-11"}
+    ],
+    "notes": "Phase 2 (11 Nov 2026, from the local-business helper's lead; read by hand about 12:10 AM CST). Showroom Shine's own Veterans Day page: 'FREE WASH ACTIVE & RETIRED SERVICE MEMBERS WITH VALID ID. Valid at all locations' and 'On November 11th ... Veterans wash absolutely free at all locations', with no year; its page data says last updated 26 Sep 2025, and WBAL reported the event on 11 Nov 2025 (radio-host appearances at Gambrills 10-12 and Glen Burnie 3-5, which are 2025's and not shown). No 2026 post found. Gambrills, 735 McKnew Rd, is 1.6 km from the Gambrills circle's centre (pin from OpenStreetMap way/825452908); Glen Burnie (7241 E Furnace Branch Rd) and Curtis Bay are outside. Hours not published: usual hours shown. Grade C, call first (earlier year only)."
   }
 ]
