@@ -1,6 +1,6 @@
 {
  "meta": {
-  "built_at": "2026-11-11T06:10:29Z",
+  "built_at": "2026-11-11T06:18:01Z",
   "day": "2026-11-11",
   "day_start": "2026-11-11T07:00:00Z",
   "tz": "America/Denver",
@@ -5375,7 +5375,7 @@
    "status": "offering",
    "category": "meal",
    "offer": "A free select entree with the purchase of a starter, for veterans, active duty, reservists and Gold Star families, through 11 Nov.",
-   "value": 0,
+   "value": 30,
    "grade": "A",
    "start": "2026-11-11T18:00:00Z",
    "end": "2026-11-12T04:00:00Z",
@@ -5426,7 +5426,7 @@
    "status": "offering",
    "category": "meal",
    "offer": "A free entree (Steak Frites, salmon, chicken or tagliatelle) with the purchase of any starter, for veterans, active duty, reservists and Gold Star families, through 11 Nov.",
-   "value": 0,
+   "value": 35,
    "grade": "A",
    "start": "2026-11-12T00:00:00Z",
    "end": "2026-11-12T05:00:00Z",
@@ -5482,7 +5482,7 @@
    "status": "offering",
    "category": "meal",
    "offer": "25% off the entire meal for veterans and active duty at Denver Chophouse & Brewery, LoDo.",
-   "value": 0,
+   "value": 8,
    "grade": "B",
    "start": "2026-11-11T18:00:00Z",
    "end": "2026-11-12T04:00:00Z",
@@ -5531,7 +5531,7 @@
    "status": "offering",
    "category": "meal",
    "offer": "25% off the entire meal for veterans and active duty at Henry's Tavern, Denver Pavilions on the 16th Street Mall.",
-   "value": 0,
+   "value": 8,
    "grade": "B",
    "start": "2026-11-11T18:00:00Z",
    "end": "2026-11-12T04:00:00Z",
@@ -5580,7 +5580,7 @@
    "status": "offering",
    "category": "meal",
    "offer": "20% off for veterans and active duty at ViewHouse; only the Ballpark location (2015 Market St) is named in a 2026 list.",
-   "value": 0,
+   "value": 6,
    "grade": "B",
    "start": "2026-11-11T18:00:00Z",
    "end": "2026-11-12T05:00:00Z",
@@ -5639,7 +5639,7 @@
    "status": "offering",
    "category": "meal",
    "offer": "10% off the total bill for veterans at Tamayo by Chef Richard Sandoval, Larimer Square, on 11 Nov.",
-   "value": 0,
+   "value": 3,
    "grade": "B",
    "start": "2026-11-11T18:00:00Z",
    "end": "2026-11-12T04:00:00Z",
@@ -5675,7 +5675,6 @@
    "notes": "10% off the total bill for veterans (Mile High on the Cheap, 10 Nov 2026). Larimer Square, 1400 Larimer St, Denver, CO 80202.",
    "caution": "Hours are not published; the window is an assumption. Call first.",
    "group": null,
-   "worth": 8,
    "ticket": false,
    "purchase": true,
    "kinds": [
@@ -8425,20 +8424,6 @@
    "lat": 39.754003,
    "lng": -104.998537,
    "phone": "+1 303-294-9277",
-   "open": "2026-11-11T18:00:00Z",
-   "close": "2026-11-12T04:00:00Z",
-   "hoursAssumed": true,
-   "verified": "confirmed",
-   "pin": "geo"
-  },
-  {
-   "id": "rodizio-grill-7340-s-clinton-st",
-   "offer": "rodizio-grill",
-   "name": "",
-   "address": "7340 S Clinton St, Englewood, CO 80112",
-   "lat": 39.58505,
-   "lng": -104.87841,
-   "phone": "+1 720-779-2949",
    "open": "2026-11-11T18:00:00Z",
    "close": "2026-11-12T04:00:00Z",
    "hoursAssumed": true,
@@ -11509,7 +11494,7 @@
    "where": "Fee-charging NPS sites, such as Rocky Mountain National Park and Great Sand Dunes",
    "offer": "Entrance fees waived for everyone at fee-charging National Park Service sites. Reservation and other fees may still apply.",
    "grade": "B",
-   "note": "KOOL 105 says U.S. citizens and residents. The NPS's own page was not checked.",
+   "note": "KOOL 105 (10 Nov 2026); the NPS's own page wasn't checked.",
    "sources": [
     {
      "url": "https://www.kool105.com/2026/11/10/veterans-day-deals-in-metro-denver/",
@@ -11523,10 +11508,10 @@
    "day": "Wed 11 Nov",
    "at": null,
    "name": "Denver Zoo: Community Free Day",
-   "where": "Denver Zoo, 2300 Steele St, Denver (inside circle 1, 2.0 km from its centre)",
+   "where": "Denver Zoo, 2300 Steele St, Denver",
    "offer": "A Community Free Day, open to everyone, with an advance timed ticket from the zoo's website. No walk-ups. Not a veterans-only offer.",
    "grade": "A",
-   "note": "The zoo's free-days page lists Wed 11 Nov 2026 with tickets released 28 Oct, first come, first served. The page does not say whether the day is sold out, and I could not check; assume tickets are gone. Hours are not on the free-days page. Next free days: Sat 14 Nov (tickets released 31 Oct) and Sun 22 Nov (released 8 Nov). Kept in extras because it needs a ticket booked in advance.",
+   "note": "The zoo's free-days page lists Wed 11 Nov 2026, with timed tickets released 28 Oct, first come, first served; they are most likely gone. Next free days: Sat 14 Nov and Sun 22 Nov.",
    "sources": [
     {
      "url": "https://denverzoo.org/free-days/",
@@ -11548,7 +11533,7 @@
    "where": "RTD bus and rail, Denver metro",
    "offer": "RTD publishes no free or reduced fare for veterans on 11 Nov 2026. Active-duty U.S. military ride free on all RTD services year-round, with proof.",
    "grade": "A",
-   "note": "RTD's fares page says: \"Youth 19 and under and active-duty U.S. military ride free on all RTD services.\" and \"Proof of eligibility is required for all Discount fare riders, youth, and active-duty military.\" It does not mention veterans or Veterans Day, and RTD's home page shows no Nov 11 alert (read 11 Nov). Not checked: RTD's Service Alerts page and its social posts, so say \"RTD has not announced\" rather than \"there is none\".",
+   "note": "RTD's fares page: \"Youth 19 and under and active-duty U.S. military ride free on all RTD services,\" with proof of eligibility. It names no veterans' fare or Veterans Day change, and RTD's home page showed no 11 Nov alert (read 11 Nov).",
    "sources": [
     {
      "url": "https://www.rtd-denver.com/fares-passes/fares",
@@ -11565,7 +11550,7 @@
    "where": "Denver, Westminster, Lakewood and Douglas County offices",
    "offer": "Most Denver city offices are closed (Mayor's Office, City Council, Clerk & Recorder, Auditor); Denver Health and DIA stay open. Westminster, Lakewood and Douglas County offices are closed too.",
    "grade": "B",
-   "note": "Denver per the Gazette; Westminster per its own Tribute Garden page; Douglas County per its own site; Lakewood per its holidays page (from a search snippet).",
+   "note": "Denver per the Denver Gazette (10 Nov 2026); Westminster per its own Tribute Garden page; Douglas County per its own site; Lakewood per its holidays page.",
    "sources": [
     {
      "url": "https://www.denvergazette.com/2026/11/10/veterans-day-events-deals-and-closures-in-denver/",
@@ -11584,10 +11569,10 @@
    "day": "Wed 11 Nov",
    "at": null,
    "name": "Westminster Golf: Walnut Creek",
-   "where": "10555 W Westmoor Dr, Westminster, CO 80021 (1.1 km outside circle 6)",
+   "where": "Walnut Creek Golf Course, 10555 W Westmoor Dr, Westminster",
    "offer": "One free round for veterans and active military with valid ID; cart extra (KOOL 105). Same unconfirmed offer as Legacy Ridge in the local list.",
    "grade": "B",
-   "note": "Not on the City of Westminster's golf pages. Call the pro shop (Walnut Creek 303-658-2840 per a search result).",
+   "note": "KOOL 105 (10 Nov 2026) only; not on the City of Westminster's golf pages. Call the pro shop, 303-658-2840.",
    "sources": [
     {
      "url": "https://www.kool105.com/2026/11/10/veterans-day-deals-in-metro-denver/",
@@ -11601,10 +11586,10 @@
    "day": "Wed 11 Nov",
    "at": null,
    "name": "Broken Tee Golf Course, Englewood: free round",
-   "where": "2101 W Oxford Ave, Englewood, CO 80110 (1.0 km outside circle 4)",
+   "where": "Broken Tee Golf Course, 2101 W Oxford Ave, Englewood",
    "offer": "One free round (green fee only) for veterans with a military ID on the Championship or Par 3 course; one round per veteran.",
    "grade": "B",
-   "note": "KOOL 105 (10 Nov 2026). The City of Englewood's veterans page (undated, from a search result) says the same for Veterans Day, so the offer is long-running. Phone 303-762-2670 (third-party listing). Cheap stretch: circle 4 radius 6.0 to 7.0 km reaches it.",
+   "note": "KOOL 105 (10 Nov 2026); the City of Englewood's veterans page (undated) lists the same Veterans Day round. Phone 303-762-2670.",
    "sources": [
     {
      "url": "https://www.kool105.com/2026/11/10/veterans-day-deals-in-metro-denver/",
@@ -11623,10 +11608,10 @@
    "day": "Wed 11 Nov",
    "at": null,
    "name": "Bonfire Burritos: free burrito",
-   "where": "Golden (2221 Ford St), Arvada (5800 Olde Wadsworth Blvd) and Wheat Ridge (4001 Clear Creek Dr); Wheat Ridge is 0.8 km outside circle 3",
+   "where": "Golden (2221 Ford St), Arvada (5800 Olde Wadsworth Blvd) and Wheat Ridge (4001 Clear Creek Dr)",
    "offer": "A free burrito for veterans and active-duty members.",
    "grade": "B",
-   "note": "Mile High on the Cheap (10 Nov 2026) names Arvada, Golden and Wheat Ridge. Bonfire's own site lists the three stores and hours (Golden 7-3, Arvada 6-2 weekdays, Wheat Ridge 6-2) but has no Veterans Day text. Wheat Ridge's OSM pin was not found; only the street (4001 Clear Creek Dr) is on the street segment, about 39.763,-105.145.",
+   "note": "Mile High on the Cheap (10 Nov 2026). Bonfire's own site lists the three stores and hours (Golden 7-3, Arvada 6-2 weekdays, Wheat Ridge 6-2) but no Veterans Day offer: call first.",
    "sources": [
     {
      "url": "https://www.milehighonthecheap.com/veterans-day-deals-freebies-denver/",
@@ -11645,10 +11630,10 @@
    "day": "Wed 11 Nov, 2-9 PM",
    "at": null,
    "name": "Holidaily Brewing, Golden: first pint free",
-   "where": "801 Brickyard Circle, Unit B, Golden, CO 80403 (13.8 km from circle 3)",
+   "where": "801 Brickyard Circle, Unit B, Golden",
    "offer": "First pint free with a military ID, 2-9 PM at the Golden taproom.",
    "grade": "B",
-   "note": "KOOL 105 (10 Nov 2026) only. Holidaily's own 2022 event was a 10% donation day with a free first pint; no 2026 page found.",
+   "note": "KOOL 105 (10 Nov 2026) only; no 2026 page from Holidaily.",
    "sources": [
     {
      "url": "https://www.kool105.com/2026/11/10/veterans-day-deals-in-metro-denver/",
@@ -11662,10 +11647,10 @@
    "day": "Wed 11 Nov",
    "at": null,
    "name": "Emagine Parker: free movie ticket",
-   "where": "18625 Stage Run, Parker, CO 80134 (10.5 km from circle 5)",
+   "where": "18625 Stage Run, Parker",
    "offer": "A free movie ticket for veterans (the only Colorado Emagine).",
    "grade": "B",
-   "note": "Mile High on the Cheap (10 Nov 2026). The theater's own page was not checked.",
+   "note": "Mile High on the Cheap (10 Nov 2026); the theater's own page wasn't checked.",
    "sources": [
     {
      "url": "https://www.milehighonthecheap.com/veterans-day-deals-freebies-denver/",
@@ -11679,10 +11664,10 @@
    "day": "Wed 11 Nov, 10-11:30 AM",
    "at": null,
    "name": "Cherokee Ranch & Castle, Sedalia: free Veterans Day tour",
-   "where": "6113 N Daniels Park Rd, Sedalia, CO 80135 (about 16 km from circle 5)",
+   "where": "6113 N Daniels Park Rd, Sedalia",
    "offer": "A free Veterans Day castle tour for veterans (others $22). Reservations required, 303-688-5555.",
    "grade": "B",
-   "note": "KOOL 105 (10 Nov 2026) gives the time and price. The ranch's own tours page lists a Veterans Day Tour under Other Tours with no date, time or price, and the same phone, 303-688-5555. Pin not computed (the address did not geocode); distance is approximate.",
+   "note": "KOOL 105 (10 Nov 2026) gives the time and price. The ranch's own tours page lists a Veterans Day Tour without a date, time or price; call 303-688-5555.",
    "sources": [
     {
      "url": "https://www.kool105.com/2026/11/10/veterans-day-deals-in-metro-denver/",
@@ -11704,7 +11689,7 @@
    "where": "Vehicle procession past The Lodge at Red Rocks; drivers meet at the Morrison Post Office",
    "offer": "Free to watch. Drivers meet at 9 AM and should RSVP.",
    "grade": "B",
-   "note": "KOOL 105 (10 Nov 2026) only; the organizer's page was not found. Morrison is well outside every circle.",
+   "note": "KOOL 105 (10 Nov 2026) only; no organizer's page found.",
    "sources": [
     {
      "url": "https://www.kool105.com/2026/11/10/veterans-day-deals-in-metro-denver/",
@@ -11718,10 +11703,10 @@
    "day": "Wed 11 Nov, 7 PM",
    "at": null,
    "name": "Parker Veterans Day fireworks",
-   "where": "Launched from just northeast of Salisbury Park, Parker (Salisbury Regional Park; no street address)",
+   "where": "Launched from just northeast of Salisbury Regional Park, Parker",
    "offer": "Free fireworks at 7 PM, weather permitting. Salisbury Regional Park North is closed; about 300 paved spaces; no parking along Parker Rd, Hess Rd or Main St.",
    "grade": "A",
-   "note": "The Town of Parker's own page. It is the July 4 show moved to Veterans Day after fire bans. Delays and cancellations go on the town's Facebook and X accounts. 10+ km from the circles.",
+   "note": "The Town of Parker's own page: its July 4 show, moved to Veterans Day after fire bans. Delays and cancellations go on the town's Facebook and X accounts.",
    "sources": [
     {
      "url": "https://www.parkerco.gov/VeteransDay",
@@ -11743,7 +11728,7 @@
    "where": "Miller's Landing, off Plum Creek Pkwy, Castle Rock",
    "offer": "Free fireworks at 7 PM, weather permitting. The July 4 show moved to Veterans Day after fire bans.",
    "grade": "B",
-   "note": "Denver7 and KOOL 105 say Miller's Landing off Plum Creek Pkwy; a search summary said Philip S. Miller Park, 1375 W Plum Creek Pkwy, which is not the same name. The town's page (crgov.com/2658/Fireworks-in-Castle-Rock) was not read.",
+   "note": "Denver7 and KOOL 105 (10 Nov 2026) say Miller's Landing off Plum Creek Pkwy; the town's own page wasn't read.",
    "sources": [
     {
      "url": "https://www.denver7.com/news/local-news/in-your-community/dougco/castle-rock-and-parker-set-to-hold-rescheduled-july-4-fireworks-on-veterans-day",
@@ -11765,7 +11750,7 @@
    "where": "Wings Over the Rockies, 7711 E Academy Blvd",
    "offer": "$20 per person: museum access, appetizers and refreshments, music by Bianca and the Fly Boys with swing dance demonstrations.",
    "grade": "A",
-   "note": "City of Aurora's page (year not printed; Nov 12 is a Thursday in 2026). A search summary said tickets were sold through Wed 4 Nov, which I could not verify, so call before going.",
+   "note": "The City of Aurora's page (no year printed; 12 Nov is a Thursday in 2026). Ticket sales may have closed earlier: call before going.",
    "sources": [
     {
      "url": "https://www.auroragov.org/things_to_do/events/veterans_salute",
@@ -11787,7 +11772,7 @@
    "where": "City Park, 2001 Colorado Blvd, Denver",
    "offer": "Free to attend. Parade 10:30 AM-noon, festival 9:30 AM-2:30 PM with a beer garden, vendors and kids' activities; 5K, 10K and 10K Rippetoe Rucksack Challenge need registration (runs 8:30-10:15 AM).",
    "grade": "B",
-   "note": "Denver Gazette (10 Nov 2026) and Colorado Sound (2 Nov 2026). The organizer (Colorado Veterans Project) page was not read.",
+   "note": "Denver Gazette (10 Nov 2026) and Colorado Sound (2 Nov 2026).",
    "sources": [
     {
      "url": "https://www.denvergazette.com/2026/11/10/veterans-day-events-deals-and-closures-in-denver/",
@@ -11809,7 +11794,7 @@
    "where": "1015 E 70th Ave, Suite A, Denver",
    "offer": "Free for veterans and families; register free online or at the check-in table; doors open at noon.",
    "grade": "A",
-   "note": "VETEFITS' own page. Its banners conflict (this Saturday, tomorrow, thank you to everyone who came), so confirm the date. Search found no second source.",
+   "note": "VETEFITS' own page; its banners disagree on the date, so confirm before going.",
    "sources": [
     {
      "url": "https://vetefits.com/veterans-day-meals/",
@@ -11822,7 +11807,7 @@
  "leads": [
   {
    "name": "Factotum Brewhouse",
-   "area": "3845 Lipan St, Denver (inside circle 1, 5.0 km from its centre)",
+   "area": "3845 Lipan St, Denver",
    "q": "Factotum Brewhouse Veterans Day 2026 Soldier's Reward Pilsner",
    "offer": "A Westword roundup (year not shown) says Factotum pours free Soldier's Reward Pilsner every Veterans Day for anyone showing proof of service. No 2026 page found.",
    "last_seen": "undated Westword",
@@ -11834,9 +11819,9 @@
   },
   {
    "name": "FlyteCo Brewing",
-   "area": "Denver (4437 W 38th Ave per OSM; the lead's Vets in Jets page lists 3120 Uinta St)",
+   "area": "Denver",
    "q": "FlyteCo Vets in Jets cream ale Veterans Day 2026",
-   "offer": "Vets in Jets Cream Ale with a free pint for vets. FlyteCo's own page found is for 11 Nov 2022 (7 AM-11 PM at 3120 Uinta St); Westword (year not shown) lists a release. No 2026 page.",
+   "offer": "Vets in Jets Cream Ale, with a free pint for veterans. FlyteCo's own page is for 11 Nov 2022; no 2026 page found.",
    "last_seen": "2022",
    "source": {
     "url": "https://flytecotower.com/events/vets-in-jets-release",
@@ -11846,25 +11831,13 @@
   },
   {
    "name": "Broomfield Veterans Day ceremony",
-   "area": "Veterans Memorial Museum, 12 Garden Center, Broomfield (inside circle 6, about 6.6 km)",
+   "area": "Broomfield Veterans Memorial Museum, 12 Garden Center, Broomfield",
    "q": "Broomfield Veterans Memorial Museum Veterans Day ceremony 2026",
-   "offer": "Colorado Sound (2 Nov 2026) lists a Wed 11 Nov ceremony at the Broomfield Veterans Memorial Museum with no time or address; the museum events line is 303-460-6801 (search result).",
+   "offer": "Colorado Sound (2 Nov 2026) lists a Wed 11 Nov ceremony at the museum with no time. Museum events line 303-460-6801.",
    "last_seen": "2026-11-02",
    "source": {
     "url": "https://coloradosound.org/veterans-day-2026-events-in-colorado/",
     "publisher": "Colorado Sound (2 Nov 2026)",
-    "published": null
-   }
-  },
-  {
-   "name": "U.S. Navy Band Commodores at Dazzle",
-   "area": "1080 14th St, Denver",
-   "q": "Navy Band Commodores Dazzle Denver 17 Nov 2026",
-   "offer": "The lead says two free jazz concerts Tue 17 Nov at 6 and 8:30 PM. No Dazzle or Navy Band listing found; the band's Nov 11 concerts were in Phoenix.",
-   "last_seen": "lead report (Mile High on the Cheap per the report)",
-   "source": {
-    "url": "https://www.milehighonthecheap.com/veterans-day-deals-freebies-denver/",
-    "publisher": "Mile High on the Cheap (the lead's source; I did not find it on the page)",
     "published": null
    }
   }
