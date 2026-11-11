@@ -12,18 +12,19 @@
   "hours_local": "10:45-13:00",
   "mode": "event",
   "eligible": ["public", "veteran", "active", "guard_reserve"],
-  "eligibility_quote": "Festivities begin Nov. 11 at 11:11 a.m., near the Virginia Street Bridge, south of the Virginia and First Street intersection (KOLO, 3 Nov 2026).",
+  "eligibility_quote": "The City of Reno invites the community to this year's Veterans Day Parade on Wednesday, Nov. 11, in downtown Reno. Festivities start at 11:11 a.m. (City of Reno, 3 Nov 2026).",
   "guard_reserve": "yes",
   "spouse_or_guest": "yes",
   "proof": [],
   "limits": "Streets close 5 AM-3 PM: Virginia St from Liberty St to Sixth St, and First St from N Sierra St to University Way. End time not published.",
   "offer": "The City of Reno's Veterans Day Parade: the opening ceremony at 11:11 AM near the Virginia Street Bridge (prayer, national anthem, city proclamation), then the parade north on Virginia Street from Liberty Street to Sixth Street. Free and open to all.",
-  "grade": "B",
+  "grade": "A",
   "sources": [
+   {"url": "https://www.reno.gov/community/media-center/newsroom/index.php?rz=newsDetails&id=892", "publisher": "City of Reno", "published": "2026-11-03", "accessed": "2026-11-11"},
    {"url": "https://www.kolotv.com/2026/11/03/city-reno-hosting-veterans-day-parade-downtown-reno/", "publisher": "KOLO 8", "published": "2026-11-03", "accessed": "2026-11-11"},
    {"url": "https://foxreno.com/news/local/veterans-day-events-in-northern-nevada-and-the-sierra-parades-and-ceremonies", "publisher": "Fox 11 Reno", "published": "2026-11-10", "accessed": "2026-11-11"}
   ],
-  "notes": "Theme \"Veterans Helping Veterans and Their Families\"; grand marshal retired Maj. Gen. Ron Bath; streamed on the city's YouTube from 11 AM (Fox 11, 10 Nov 2026). The City of Reno's own 2026 page wasn't found, so grade B. Fabulous Nevada lists 11:00; the city's time as reported by KOLO and Fox 11 is 11:11."
+  "notes": "Grade A since phase 2 (11 Nov 2026): the City of Reno's own release, \"City of Reno Host Veterans Day Parade on November 11 in Downtown Reno\" (reno.gov newsroom, published 3 Nov 2026, read 11 Nov), gives the 11:11 AM opening ceremony near the Virginia Street Bridge south of Virginia and First (prayer and national anthem by city employee Molly Slemp; proclamation read by Abigail Mayorga, a First Lieutenant in the Army Reserve and council liaison), the route north on Virginia St from Liberty St to Sixth St, closures 5 AM-3 PM on First St (N Sierra to University Way) and Virginia St (Liberty to Sixth), grand marshal Ret. Maj. Gen. Ron Bath, theme \"Veterans Helping Veterans and Their Families\", and a YouTube livestream from 11 AM. The newsroom loads by script (the old reno.gov news and calendar addresses return 404). 2 News (9 Nov 2026) carries the same. Fabulous Nevada lists 11:00; the city's 11:11 is used. End time not published."
  },
  {
   "name": "Veterans Day observance, Nevada Veterans Memorial Plaza",
@@ -73,9 +74,10 @@
   "grade": "B",
   "sources": [
    {"url": "https://foxreno.com/news/local/veterans-day-events-in-northern-nevada-and-the-sierra-parades-and-ceremonies", "publisher": "Fox 11 Reno", "published": "2026-11-10", "accessed": "2026-11-11"},
-   {"url": "https://www.nevadaart.org/art/exhibitions/broad-stripes-bright-stars-celebrating-250-years-of-americas-icons/", "publisher": "Nevada Museum of Art", "published": "2026", "accessed": "2026-11-11"}
+   {"url": "https://www.nevadaart.org/art/exhibitions/broad-stripes-bright-stars-celebrating-250-years-of-americas-icons/", "publisher": "Nevada Museum of Art", "published": "2026", "accessed": "2026-11-11"},
+   {"url": "https://www.nevadaart.org/visit/plan-your-visit/", "publisher": "Nevada Museum of Art", "published": "2026", "accessed": "2026-11-11"}
   ],
-  "notes": "Fox 11 quotes the museum's communications director, Valerie Primeau. The museum's own home and exhibition pages (read 11 Nov 2026) show the exhibition (7 Nov 2026-16 May 2027) and Wednesday hours 10-6 but not the free admission, so grade B. The $15 general admission is from the research report, not checked."
+  "notes": "Fox 11 quotes the museum's communications director, Valerie Primeau. The museum's own home and exhibition pages (read 11 Nov 2026) show the exhibition (7 Nov 2026-16 May 2027) and Wednesday hours 10-6 but not the free admission, so grade B. Phase 2 (11 Nov 2026): its own Plan Your Visit page confirms general admission $15, but also says \"Closed Mondays and national holidays\"; Veterans Day is a federal holiday, and its calendar lists nothing on 11 Nov. Fox 11 quotes the museum on 10-6 that day, so the card keeps the offer with \"call first\"."
  },
  {
   "name": "J Resort: The Buffet",
@@ -233,6 +235,58 @@
    {"url": "https://www.newsweek.com/veterans-day-2026-free-meals-deals-discounts-12687407", "publisher": "Newsweek", "published": "2026", "accessed": "2026-11-11"},
    {"url": "https://themilitarywallet.com/veterans-day-free-meals-and-discounts/", "publisher": "The Military Wallet", "published": "2026", "accessed": "2026-11-11"}
   ],
-  "notes": "On 2026 national lists (Newsweek; The Military Wallet; VA News, which the research report cites but which couldn't be read here). No In-N-Out post was found, and one page calls In-N-Out's announcement pending, so the card says call first. In-N-Out was on News 4's 2025 Reno list. Stores from All the Places (In-N-Out's own locator, run 31 Oct 2026)."
+  "notes": "On 2026 national lists (Newsweek; The Military Wallet; VA News, which the research report cites but which couldn't be read here). No In-N-Out post was found, and one page calls In-N-Out's announcement pending, so the card says call first. In-N-Out was on News 4's 2025 Reno list. Stores from All the Places (In-N-Out's own locator, run 31 Oct 2026). Phase 2 (11 Nov 2026): In-N-Out's Instagram, read signed out, has no Veterans Day post through 8 Nov 2026; VA News's 2026 page still couldn't be read in full; stays B."
+ },
+ {
+  "name": "BJ's Restaurant & Brewhouse",
+  "kind": "business",
+  "address": "425 Sparks Blvd, Sparks, NV 89434",
+  "phone": "(775) 398-3550",
+  "geo": "39.534225,-119.716189",
+  "wednesday_hours": "11:00-24:00",
+  "status_2026": "confirmed",
+  "est_value_usd": 9,
+  "dates": "2026-11-11",
+  "hours_local": "11:00-24:00",
+  "mode": "dine_in",
+  "eligible": ["veteran", "active", "retired"],
+  "eligibility_quote": "Thanking current and former military members with a free Chocolate Chunk Pizookie with dine-in at all locations (Fox 5 New York, 4 Nov 2026).",
+  "guard_reserve": "unclear",
+  "spouse_or_guest": "no",
+  "proof": ["military_id", "dd214", "va_card", "dl_veteran"],
+  "participating_locations_only": true,
+  "limits": "Dine-in, with a military ID or proof of service. Lists also give a coupon for a free appetizer on a later visit; they differ on its terms and end date (14 or 31 Dec).",
+  "offer": "A free Chocolate Chunk Pizookie (BJ's deep-dish cookie sundae) for veterans and active-duty military, dine-in.",
+  "grade": "B",
+  "sources": [
+   {"url": "https://www.fox5ny.com/news/veterans-day-2026-deals", "publisher": "Fox 5 New York", "published": "2026-11-04", "accessed": "2026-11-11"}
+  ],
+  "notes": "Phase 2 (11 Nov 2026). On 2026 national lists (Fox 5 New York, 4 Nov 2026, updated 5 Nov: \"at all locations\"; other lists say participating locations). No BJ's page or release was found, and its store pages returned 404 in the browser, so B with \"call first\". Address and phone from directories (OpenTable); pin from OpenStreetMap (BJ's, 425 Sparks Blvd, via Nominatim; the Census geocoder agrees within 100 m). Wednesday hours 11 AM-midnight from directories, not checked with the store. The Reno store at The Summit (13999 S Virginia St) is outside the South Reno circle (about 6.5 km from its centre). Value is an estimate. Guard and Reserve aren't named, so unclear."
+ },
+ {
+  "name": "Retro Radio Dolls Veterans Day Show, Reno Public Market",
+  "kind": "event",
+  "address": "299 E Plumb Ln, Reno, NV 89502",
+  "phone": "",
+  "geo": "39.506906,-119.802187",
+  "wednesday_hours": "17:00-19:00",
+  "status_2026": "confirmed",
+  "est_value_usd": 0,
+  "dates": "2026-11-11",
+  "hours_local": "17:00-19:00",
+  "mode": "event",
+  "eligible": ["public", "veteran", "active", "guard_reserve"],
+  "eligibility_quote": "We'll come together to recognize our veterans and the families who stand beside them.",
+  "guard_reserve": "yes",
+  "spouse_or_guest": "yes",
+  "proof": [],
+  "limits": "Admission isn't stated on the market's page, which takes RSVPs.",
+  "offer": "A Veterans Day tribute show by the Retro Radio Dolls (vintage harmonies, patriotic songs and swing-era classics) that recognizes veterans and their families, 5-7 PM.",
+  "grade": "A",
+  "sources": [
+   {"url": "https://www.renopublicmarket.com/events/retro-radio-dolls-veterans-day-show", "publisher": "Reno Public Market", "published": "2026", "accessed": "2026-11-11"},
+   {"url": "https://thisisreno.com/2026/11/upcoming-reno-activities-guide/", "publisher": "This Is Reno", "published": "2026-11-09", "accessed": "2026-11-11"}
+  ],
+  "notes": "Phase 2 (11 Nov 2026). Reno Public Market's own event page (read 11 Nov): Wednesday, 11 Nov 2026, 5:00-7:00 PM Pacific, with an RSVP button and no price. This Is Reno's 9 Nov 2026 events column (read in a browser; plain fetch returns 403) lists it as an editor's pick. Carson Now lists 8-10 PM and one listing says 12 Nov; the market's own 5-7 PM on the 11th is used. Pin from OpenStreetMap (Reno Public Market, 299 E Plumb Ln; usual hours 11 AM-9 PM Sunday-Thursday). No value: it's a show, worth a little on a route."
  }
 ]

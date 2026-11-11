@@ -277,19 +277,22 @@ was opened at its own source the same night and graded; research, corrections an
   `meta.tz_offset_min`, and the report Worker has no day window. Tests: every area's `day_start` is local midnight in
   its own zone with a matching offset and zone name on its windows; Reno's Denny's, J Resort and parade times in UTC;
   and the engine plans a Pacific copy of its test town exactly as the Central one, two hours later in UTC.
-- **Totals (11 Nov 2026):** 40 deals at 136 stops (A 13, B 26, C 1); 8 other-day and region-wide items; 12 leads.
+- **Totals (11 Nov 2026, after phase 2):** 42 deals at 138 stops (A 15, B 26, C 1); 8 other-day and region-wide
+  items; 13 leads. Phase 1 had 40 at 136 (A 13, B 26, C 1) and 12 leads.
 - **Local on the route:** J Resort's buffet 4-9 PM (A; current and retired military only), Atlantis's lunch buffet at
   Toucan Charlie's 11-3 (A; one per person for 9-11 Nov; Monarch Rewards), Legends Bay's LB Grill breakfast or burger
   7 AM-10 PM (A; veterans; LB Rewards), Gold Dust West (A; current and retired military; hours not published, call
   first), Squeeze In's free meal (A; its post names no stores, so all four here with call first), In-N-Out (B; on 2026
-  national lists only, call first), the Reno parade (B; 11:11 opening at the Virginia Street Bridge, `arrive_by` 11:00),
-  the Sparks Marina observance 9-11:30 (A, the plaza's own site), the Nevada Museum of Art free for veterans and
-  active duty 10-6 (B). The players' clubs use the sign-up-ahead handling (`advance_signup`).
+  national lists only, call first), the Reno parade (A since phase 2, the City of Reno's own release of 3 Nov 2026;
+  11:11 opening at the Virginia Street Bridge, `arrive_by` 11:00), the Sparks Marina observance 9-11:30 (A, the plaza's
+  own site), the Nevada Museum of Art free for veterans and active duty 10-6 (B; call first, since its own visit page
+  says it closes on national holidays), BJ's free Pizookie in Sparks (B, call first) and the Retro Radio Dolls'
+  Veterans Day show at Reno Public Market 5-7 PM (A, the market's own page; admission not stated). The players' clubs use the sign-up-ahead handling (`advance_signup`).
 - **Under Deals:** RTC Washoe's free rides for everyone all day (A; also the bar cards' transit line), Casino Fandango in
   Carson City (A), Virginia City, Fallon, Truckee and South Lake Tahoe events (B), NPS fee-free (A), the museum's free
   Saturday. Leads: Peppermill, Western Village, Grand Sierra (its page is 2024's), the Nugget, the Caesars downtown
-  casinos, Marked Studios, Black Bear Diner, Chick-fil-A, Jiffy Lube, the AUSA dinner, Dragon Lights, the Automobile
-  Museum.
+  casinos, Marked Studios, Black Bear Diner, Chick-fil-A, Jiffy Lube, the AUSA dinner (registration closed), Dragon
+  Lights, the Automobile Museum, Maverik (free coffee in 2024).
 - **Stores:** 125 at 32 chains from All the Places and OpenStreetMap, using the main checkout's `.atp-cache`. In-N-Out
   added (`innout`). `stores_region.py` now reads a street given only in `addr:full` (Twin Peaks Reno was dropped for
   it); other areas weren't re-run. Golden Corral, Smashburger, Cracker Barrel, Circle K, Freddy's have no store here;
@@ -301,8 +304,15 @@ was opened at its own source the same night and graded; research, corrections an
 - Checked in a preview on port 5058 at 375 px: the area loads from `?area=reno`, Optimal builds 14 stops at 8 AM PST,
   Deals lists 40 of 40 with Pacific windows shown in the viewer's zone, the Map draws, no sideways scroll, no console
   errors apart from the report Worker refusing that port's origin. 102 planner tests pass.
+- **Phase 2 (11 Nov 2026, about midnight CST, the evening of 10 Nov in Reno):** a wider pass of local news, city,
+  county and state pages, casino pages, posts and the open items, with This Is Reno, reno.gov and Instagram read in
+  Chrome. The City of Reno's own release raised the parade to A; the museum's own visit page (closed on national
+  holidays) added "call first"; BJ's (Sparks) and the Reno Public Market show were added; Dickey's (its only Nevada
+  store is in Carson City) and Lazy Dog (none here) were left out; Maverik became a lead. Nothing on the 11th had
+  ended (Reno's day hadn't begun); UNR's flag retirement and the VA canteen breakfast were Tuesday 10 Nov. Drive
+  table rebuilt (520 of 563 grid points); 102 tests pass; checked on port 5058. Details: the notes' "Phase 2".
 
-## Fort Meade, MD (built 11 Nov 2026 about 1 AM CST on branch `vetday-fort-meade`; the coordinating session merges and deploys it)
+## Fort Meade, MD (built 11 Nov 2026 on branch `vetday-fort-meade`; live from `b70250d` about midnight CST, the coordinating session's deploy; phase 2 on the branch from `858126a`)
 10 Nov 2026 night: an area for colleagues at Fort Meade, on Veterans Day itself. Built from a Claude research report (`Downloads\Veterans Day 2026 Near Fort Meade_ Deals, Freebies, Events and Closures.md`, 10 Nov about 11 PM CST)
 and the coordinating session's leads, each read at its own source on 11 Nov 2026. Every check, correction and judgment
 call: `research/fort-meade/notes.md`.
@@ -311,12 +321,14 @@ call: `research/fort-meade/notes.md`.
   `tz_offset_min` -300, `tz_abbr`, `day_start` 05:00 UTC). Circles: Fort Meade and Odenton 6 km, Gambrills and Crofton
   4.5, Severn/Hanover/Arundel Mills 4.5, Laurel 5, Columbia 6. Drive times start from Odenton; start presets for
   Odenton, Fort Meade (on post), Waugh Chapel, Arundel Mills, Laurel and Columbia. Drive table: 770 of 806 grid points.
-- **Totals:** 41 deals at 125 stops (A 9, B 30, C 2); 15 items under "Other days and places"; 1 lead.
+- **Totals:** 42 deals at 127 stops (A 9, B 30, C 3); 15 items under "Other days and places"; no leads (phase 2;
+  phase 1 had 41 at 125, A 9, B 30, C 2, and 1 lead).
 - **Local on the route:** Chick-fil-A Metro DC's free entree at its one participating store here, Laurel (13600
   Baltimore Ave; A, its own list; the other nine Chick-fil-A stores in the circles aren't on it and are dropped), Silver
   Diner Elkridge (B), Grace for Vets at Flagship Carwash, Severn (A, its own list), The Greene Turtle's free dine-in meal
-  up to $15 (B, WTOP 9 Nov; two stores from directories, call first), Main Event Columbia (B: its own page has no year;
-  American Legion 5 Nov), All American Steakhouse Odenton and KPOT Laurel (C, one 2026 list, call first). No 2026
+  up to $15 (B, WTOP 9 Nov; three stores from its own list since phase 2, call first), Main Event Columbia (B: its own
+  page has no year; American Legion 5 Nov), All American Steakhouse Odenton and KPOT Laurel (C, one 2026 list, call
+  first), Showroom Shine Car Wash Gambrills (C, last year's offer, call first; phase 2). No 2026
   ceremony was found inside the circles; Crownsville, the WWII Memorial and Annapolis (all 11:00) are under Deals.
 - **On post:** stores whose address reads "Fort Meade, MD" need installation access, so they stay off the route
   (`on_post` in REGIONS; the Exchange food court's Charleys, Qdoba and Starbucks, Dunkin' on Mapes Rd, a second Qdoba).
@@ -338,8 +350,21 @@ call: `research/fort-meade/notes.md`.
   practice-marks test's regex; converting the working files to LF (git's stored form) fixed it. 99 planner and site
   tests pass on the branch, 102 after merging master's Reno–Sparks area. Checked in a preview on port 5057 (not an allowed report origin) at 375 px: `?area=meade` opens and
   saves the area; 41 of 41 deals; 12-stop Optimal route; the Map draws it by road; no sideways scroll.
+- **Phase 2, the wider pass (11 Nov 2026 about 12:00-12:15 AM CST; `858126a`):** local news, county and city pages,
+  the base's pages, veterans posts and local businesses searched (three research helpers, every find read again by
+  hand). Little new exists inside the circles: no Capital Gazette, Banner, WBAL, WMAR, FOX45, Laurel Leader or Howard
+  County Times roundup for 2026, and no Legion, VFW or AMVETS post event found. Changes: the Greene Turtle's own store
+  list (readable: its page holds the stores as JSON) adds **Gambrills at Waugh Chapel** (1407 S Main Chapel Way) and
+  gives all three stores phones and Wednesday hours; **Showroom Shine Car Wash, Gambrills** (C, call first: its own
+  free-wash page is 2025's); **Bubba's 33 Glen Burnie** up to A (its own home page: free lunch Wednesday, Nov 11, until
+  4 PM; 7305 Ritchie Hwy, still outside); the closures card rewritten from Howard County's 9 Nov notice (Robinson
+  Nature Center open, libraries closed), the City of Laurel's alert (Wednesday trash moves to Thursday) and WTOP
+  (Anne Arundel's buses: only 201, 202, 203 and the BWI Express); the Cryptologic Museum card says closed on federal
+  holidays (NSA's pages); the Joe's Crab Shack lead removed (its own list has no Maryland restaurant); KPOT and All
+  American Steakhouse notes corrected (one list each, linked to other stores' pages; still C). Preview at 375 px:
+  42 of 42 deals, no sideways scroll; 102 tests pass. Details: `research/fort-meade/notes.md` ("Phase 2").
 
-## Denver metro, CO (seventh area, the first on Mountain time; built 11 Nov 2026 about midnight-2 AM CST on branch `vetday-denver`)
+## Denver metro, CO (seventh area, the first on Mountain time; built 10-11 Nov 2026 on branch `vetday-denver`; live since about 12:18 AM CST 11 Nov from `24edc10`, pushed)
 10 Nov 2026: Denver metro ("metro spread") from his research report, built overnight while he slept under his
 instruction to research, build and deploy without asking. Research, corrections and judgment calls:
 `research/denver/notes.md`.

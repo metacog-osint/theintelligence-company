@@ -5,7 +5,10 @@ Tom's yes.
 
 ## Veterans Day planner: Denver metro, CO, night of 10-11 Nov 2026 ("complete all work without requesting my yes or permission")
 Built in `D:\Projects\_worktrees\hub-denver` (branch `vetday-denver`) by a session started from the publisher's "Veterans Day
-locations setup"; merged, deployed and pushed from this checkout under that instruction.
+locations setup"; merged, deployed and pushed from this checkout under that instruction. **Live** since about 12:18 AM
+CST 11 Nov from merge `24edc10`, pushed. Checked live in Chrome: `?area=denver` loads Denver's 101 deals, forecast, a
+15-stop Optimal route and the map with no console errors; every area's deals and drive tables load and match;
+app.js, index.html and the data files match the commit. That Chrome's saved area was set back to Fargo-Moorhead.
 - 101 deals at 397 stops (A 20, B 79, C 2), `?area=denver`, Mountain time (`day_start` 07:00 UTC; live mode from 5 AM
   CST). Chains with many stores are thinned to 6 km apart (8 km for purchase deals); drive grid 1.1 km.
 - The shared Colorado chains are `ffba0e3` (branch `vetday-co-chains`, on master `9e9d28a`), sent to the Colorado Springs
