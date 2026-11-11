@@ -74,7 +74,8 @@ noted in the script, plus OpenStreetMap), 132 stores for 35 of 65 chains. Fixed 
 - `stores_region.py` now accepts "Maryland" as a state name, and `build_data.py`'s address splitter reads MD.
 
 ## Totals
-41 deals at 125 stops (A 9, B 30, C 2), 15 items under "Other days and places", 1 lead.
+Phase 1: 41 deals at 125 stops (A 9, B 30, C 2), 15 items under "Other days and places", 1 lead.
+Phase 2 (below): **42 deals at 127 stops (A 9, B 30, C 3), 15 items under "Other days and places", no leads.**
 
 ## Corrections to the research report
 1. **MTA ID:** the report's Tips line says MTA accepts "the first three" of "DoD ID, VA ID, DD-214 or MVA
@@ -163,7 +164,102 @@ Parks (A), the NPS fee-free day (B, Patch 10 Nov), the Cryptologic Museum (C), c
 - Chains with no store in the circles: Chili's, Cracker Barrel, Ruby Tuesday, Smashburger, CPK, Carrabba's, Fogo,
   Bar Louie, Sheetz (nearest Linthicum), Freddy's, Krispy Kreme and others (build log).
 
+## Phase 2: the wider pass (11 Nov 2026, about 12:00-12:15 AM CST, 1:00-1:15 AM Eastern)
+the brief: local news roundups of 9-11 Nov, county and city pages, the base's own pages, veterans posts, local
+businesses' own posts, and phase 1's open items. Three research helpers (news; county, base and posts; local
+businesses) searched in parallel; every addition and correction below was then read by hand at its own source.
+Fort Meade went live from `b70250d` while this ran (the coordinating session, `9e9d28a`); master was merged into the
+branch first (fast-forward), so these changes come on top of the live data.
+
+### Added or changed (on the route)
+- **The Greene Turtle: a third store, Gambrills at Waugh Chapel** (B, as before: WTOP 9 Nov). Its own store list
+  (thegreeneturtle.com/locations, read 11 Nov about 12:05 AM CST) is readable after all: the store data sits in the
+  page as JSON. In the circles: Columbia, 8872 McGaw Road Suite C, (410) 312-5255, Tue-Thu 11 AM-1 AM; Hanover at
+  Arundel Mills, 7556 Teague Rd, (410) 799-5001, Sun-Wed 11 AM-11 PM; **Gambrills, 1407 S Main Chapel Way Ste 115,
+  (410) 702-9896, Sun-Thu 11 AM-midnight** (pin from the chain's list, 1.7 km from the Gambrills circle's centre). All
+  three now show Wednesday hours and phones and count as "from the business's own list"; the card's caution is now
+  "Select locations: call first". Left out: BWI Airport (in the terminal) and Burtonsville (6.9 km from the Laurel
+  circle's centre). The chain's pages carry no Veterans Day text, so the offer stays B. Place ids are unchanged for
+  Columbia and Hanover (the id uses the street before the first comma).
+- **Showroom Shine Car Wash, 735 McKnew Rd, Gambrills** (C, call first; new). Its own Veterans Day page: "FREE WASH
+  ACTIVE & RETIRED SERVICE MEMBERS WITH VALID ID. Valid at all locations" and "On November 11th ... Veterans wash
+  absolutely free at all locations", with no year. The page's data says it was last updated 26 Sep 2025, and WBAL
+  reported the day on 11 Nov 2025 (opened), so this is last year's offer; no 2026 post was found. Pin from
+  OpenStreetMap (way/825452908, 1.6 km from the Gambrills circle's centre). Hours not published: usual hours shown.
+  Its 2025 radio-host appearances (Gambrills 10-12, Glen Burnie 3-5) aren't shown.
+
+### Under Deals
+- **Bubba's 33 Glen Burnie: B to A.** Its own home page (bubbas33.com, read 11 Nov): "Veterans Eat Free. Join us for
+  free lunch Wednesday, Nov 11. Available until 4pm! *Active, former, or retired military only. ID may be requested.
+  Offer is limited to select entrees". Address 7305 Ritchie Hwy (OpenStreetMap way/863278339; MapQuest agrees; the
+  chain's store page is a script shell that didn't load), 8.4 km from the Severn circle's centre, so still outside.
+- **What's closed and open**, rewritten from the governments' own notices: Howard County's release of 9 Nov 2026
+  (offices, 50+ centers, animal shelter, local courts and historic sites except the B&O Ellicott City Station Museum
+  closed; parks, Robinson Nature Center, the North Laurel, Gary J. Arthur and Roger Carter community centers and
+  Alpha Ridge Landfill open; RTA on its weekday schedule; the release gives both "Wednesday" and "Tuesday" for trash,
+  so the card says check); the Howard County Library System's closings page ("All Howard County Library System
+  branches will close Wednesday, November 11"); the City of Laurel's alert of 10 Nov 2026, 7:49 AM (city and passport
+  offices closed; Wednesday trash, recycling and compost move to Thursday 12 Nov; no bulky or yard-debris pickup on
+  11 Nov). From WTOP's 10 Nov list (opened): Anne Arundel's buses run only routes 201, 202 (Arundel Mills-Odenton),
+  203 and the BWI Express, and Call-N-Ride is closed; Prince George's buses run except P78.
+- **National Cryptologic Museum:** NSA's own museum pages say "closed on Sundays ... & Federal holidays" (read through
+  search results; nsa.gov still answers 403), so the card now says to expect it closed on 11 Nov. Still C, not routed.
+- **Joe's Crab Shack lead removed.** Joe's own Veterans Day page (read 11 Nov) confirms 20% off for veterans dining in
+  on Wednesday 11 Nov 2026, but its location list has no Maryland restaurant (Branson to Sevierville, 13 stores), so
+  Dealybee's "Severn" store doesn't exist.
+
+### Corrections (to phase 1 and the research report)
+1. **Robinson Nature Center is open on 11 Nov** (Howard County, 9 Nov 2026). Phase 1's correction 9 said it wasn't
+   confirmed and cited 2024's closure; the research report had it right.
+2. **Howard County libraries are closed** (HCLS's own closings page): the research report had this right; phase 1 couldn't
+   read the page. Howard County public schools are still unconfirmed (a third-party calendar says open; not used).
+3. **KPOT:** Dealybee lists the offer once for Fairfax, Huntington, Sterling and Laurel, linked to the Fairfax store's
+   page (Germantown and Towson are a second entry). Phase 1's note named Fairfax, Germantown and Towson; the card now
+   says Laurel's part isn't confirmed. Still C, call first.
+4. **All American Steakhouse:** Dealybee's entry covers Dale City, Edgewater, Ellicott City and Odenton and links the
+   Ellicott City page; the restaurant's own site (read 11 Nov) shows no veterans offer. Still C, call first.
+5. **The Greene Turtle's stores** come from its own list, not directories, and there are three, not two (above).
+6. **Joe's Crab Shack:** no Maryland restaurant (above).
+7. **Bubba's 33:** its own 2026 word exists (A, not B), and its Glen Burnie address is 7305 Ritchie Hwy.
+
+### Judgment calls (the conservative way)
+- Showroom Shine goes on the route as C with "call first" (the planner's treatment of an earlier year's offer with a
+  known address, as with Fargo's bars and Bismarck's AMVETS Post 9), not as a lead: its own page is still up and
+  says "all locations", but nothing dates it to 2026.
+- The Greene Turtle stays B: WTOP is the only 2026 source, and the chain's own pages say nothing about Veterans Day.
+- The closures card stays B: most of it is now the governments' own notices, but the bus lines are WTOP's.
+
+### Checked and left out (phase 2)
+- **News:** no 2026 local roundup for the circles from the Capital Gazette, Baltimore Sun (its result was 2025's),
+  Baltimore Banner, WBAL, WMAR (national list only), FOX45, WJZ, NBC Washington, DC News Now, Laurel Leader, Howard
+  County Times, Eye on Annapolis or Severna Park Voice. Patch's Howard (10 Nov), Prince George's (10 Nov), across-MD
+  ceremonies (5 Nov) and deals (10 Nov) lists add nothing new inside the circles; The BayNet's lists are Southern
+  Maryland only.
+- **Veterans posts:** no 2026 Veterans Day event found for American Legion Post 276 (8068 Quarterfield Rd, Severn),
+  VFW Meade Memorial Post 5172 (Odenton; no current address found) or any Legion, VFW or AMVETS post in Odenton,
+  Severn, Laurel, Columbia, Jessup or Crofton; mdlegion.org and vfwmd.org calendars weren't reachable. Facebook
+  posts aren't readable here. The nearest post event found is Legion Post 136's Greenbelt ceremony (11:11 AM,
+  Roosevelt Center; Patch Bowie, 10 Nov), outside the circles.
+- **Base:** MWR's home page shows a "Veterans Day Holiday Hours" banner with no text beyond phase 1's DFMWR sheet;
+  the commissary's 9-5 matches DeCA's store page; no 2026 Soundoff! or garrison event; Exchange and gate hours for 11
+  Nov not found from the Army's or Exchange's own pages.
+- **Car washes:** Autobell's own "Veteran's Day 2026" page promises a free wash but names no states or stores, and
+  OpenStreetMap has no Autobell in the circles; Mr Wash (Silver Spring, Kensington; MoCo Show 7 Nov) is outside; Tommy's
+  Express has no store here (build log).
+- **Already on the route:** Sport Clips' free Veterans Day haircuts (VFW release, Oct 2026; Gambrills and Columbia
+  shops) and Dave & Buster's Arundel Mills; Dealybee's "Golden Corral Severn" is presumably the chain's only store in
+  the circles, 7047 Arundel Mills Blvd.
+- **Year-round discounts, not Veterans Day offers:** Crooked Crab's Tuesday pints, Burgers @ Apollo (Odenton),
+  GrandE Buffet (Laurel), the Hotdog Hideout, the Greene Turtle's 15%, Bonefish's 10%, D&B's 15%.
+- **Outside the circles or not public:** Rams Head Dockside Glen Burnie (free appetizer, one list), Charter Senior
+  Living of Bowie (residents' event), UMGC Adelphi, Greenbelt, Cheltenham and College Park ceremonies, Spring Arbor
+  Severna Park, Cards for Troops Edgewater, Thunder Hill and Triadelphia Ridge school events.
+- **No 2026 source or no store:** Hysteria Brewing (listed as closed), Rodizio Grill, TCBY, Waters Car Wash, Wings and
+  Rings, Chicken N Pickle and Pluckers (no Maryland store found), the Odenton library's storytime (no 2026 listing),
+  Montpelier's free 2026 admission (not veteran-specific).
+
 ## Still open
-- Phone checks: the Greene Turtle's two stores, Main Event Columbia, All American Steakhouse, KPOT and Grace for Vets'
-  Severn wash are the ones worth a call.
-- The wider research pass (local news, county and city pages, posts, restaurants' own posts) is phase 2.
+- Phone checks worth making: Showroom Shine (240) 341-3177, the Greene Turtle's three stores, Main Event Columbia,
+  All American Steakhouse (410) 305-0505, KPOT (240) 280-2840 and Grace for Vets' Severn wash.
+- Howard County public schools on 11 Nov; the Exchange's and the gates' 11 Nov hours.
+- Veterans posts' own Facebook pages (Legion Post 276 Severn, VFW Post 5172 Odenton) can't be read here.

@@ -1,6 +1,6 @@
 # Denver metro (`denver`) research notes, 11 Nov 2026
 
-Built overnight 10-11 Nov 2026 (about midnight to 2 AM CST) for the "metro spread" area, overnight, under
+Built overnight 10-11 Nov 2026 (live about 12:18 AM CST from `24edc10`) for the "metro spread" area, overnight, under
 his instruction to research, build and deploy without asking. Source report: `Downloads\Denver-Veterans-Day-2026-Deals-and-Events.md`
 (10 Nov 2026), treated as leads. Every local item was checked at its own 2026 source on 11 Nov 2026 (00:00-00:15 CST,
 the evening of 10 Nov in Denver) and graded A = the business or organizer's own 2026 page, B = a dated 2026 outlet or
