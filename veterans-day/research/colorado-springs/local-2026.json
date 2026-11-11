@@ -189,5 +189,44 @@
    }
   ],
   "notes": "FOX21's page returns 403 to the fetch tools; the date and opening lines were read from its feed (fox21news.com/feed/?s=nana), the $70 limit and ID from a search excerpt. Suite 120 per most listings (one Gazette column says 102). Its only Springs store, in Polaris Pointe on the city's far north side (Northgate circle, added for it and for the city's north end). Pin: US Census geocoder. The planner routes the lunch window; dinner 4-9:30 PM also counts."
+ },
+ {
+  "name": "The Melting Pot",
+  "kind": "business",
+  "address": "30 E Pikes Peak Ave, Colorado Springs, CO 80903",
+  "phone": "719-385-0300",
+  "geo": "38.833910,-104.824933",
+  "wednesday_hours": "12:00-close",
+  "status_2026": "confirmed",
+  "est_value_usd": 25,
+  "dates": "2026-11-11",
+  "hours_local": "12:00-21:00",
+  "mode": "dine_in",
+  "eligible": [
+   "veteran",
+   "active",
+   "retired"
+  ],
+  "eligibility_quote": "Veterans and one guest will enjoy 25% off their food bill",
+  "guard_reserve": "unclear",
+  "spouse_or_guest": "yes",
+  "proof": [
+   "military_id",
+   "va_card",
+   "dd214"
+  ],
+  "participating_locations_only": true,
+  "limits": "Food only; a discount, not free; not with other offers.",
+  "offer": "25% off the food bill for the veteran and one guest on 11 Nov, with a military ID, veteran card, retiree card or DD-214.",
+  "grade": "A",
+  "sources": [
+   {
+    "url": "https://meltingpot.com/colorado-springs-co/melting-pot-events.aspx",
+    "publisher": "The Melting Pot Colorado Springs",
+    "published": "2026 (undated; terms say 11 Nov 2026)",
+    "accessed": "2026-11-11"
+   }
+  ],
+  "notes": "From the coordinating session's Colorado chain research (colorado-chains-2026.json). The store page labels the day both Wednesday and Tuesday; 11 Nov 2026 is a Wednesday. Opens at noon; closing time assumed 9 PM. Replaces the earlier lead (30% after 4 PM was a 2015 offer). Pin: US Census geocoder."
  }
 ]

@@ -9,11 +9,12 @@ Built in `[local path]` (branch `vetday-colorado-springs`); merged into `master`
 - **Not deployed yet.** `firebase deploy --only hosting:hub --project context-484804` from this checkout was refused by
   the side session's permission check (auto mode, "Production Deploy"), so the live site has no `colorado-springs`
   files (checked 12:27 AM CST). The next hub deploy from this checkout publishes it; nothing else is needed.
-- 70 deals at 279 stops (A 15, B 52, C 3), `?area=colorado-springs` (aliases `cos`, `springs`, `monument`, `falcon`,
+- 71 deals at 280 stops (A 16, B 52, C 3), `?area=colorado-springs` (aliases `cos`, `springs`, `monument`, `falcon`,
   `fort-carson`, `peterson`, `usafa`), Mountain time, live mode from 5 AM CST. Eight circles (the whole city plus
   Monument, Palmer Lake and Falcon).
 - Local: Memorial Park wreath-laying 11 AM, Tri-Lakes Post 9-11 in Palmer Lake 10 AM, Pikes Peak State College 11 AM,
-  Texas T-Bone and Famous Dave's sandwich, Nana's Dim Sum's free meal. Pikes Peak Highway is free for active and
+  Texas T-Bone and Famous Dave's sandwich, Nana's Dim Sum's free meal, The Melting Pot's 25% off food (from the
+  coordinator's chain research, added in a follow-up merge). Pikes Peak Highway is free for active and
   retired military only (the city's 2026 page). Mountain Metro announced nothing.
 - Details: `veterans-day/README.md` ("Colorado Springs, Monument & Falcon, CO") and
   `veterans-day/research/colorado-springs/notes.md`.

@@ -411,24 +411,26 @@ judgment calls: `research/colorado-springs/notes.md`.
   Drive table: 1,069 of 1,163 grid points at 800 m, 1.7 MB (Denver's is 2.5 MB at 1.1 km).
 - **Mountain time** like Denver (`day_start` 07:00 UTC). No transit line on the bar cards: Mountain Metro announced
   nothing for 11 Nov, so `transit=None`.
-- **Totals (11 Nov 2026):** 70 deals at 279 stops (A 15, B 52, C 3), under the 300 the engine was timed for (Optimal 67
-  ms, Maximize stops 109 ms in Node, against Reston's 91 and 76); 15 other-day and region-wide items; 14 leads. Stores:
+- **Totals (11 Nov 2026):** 71 deals at 280 stops (A 16, B 52, C 3), under the 300 the engine was timed for (Optimal 67
+  ms, Maximize stops 109 ms in Node at 279, against Reston's 91 and 76); 15 other-day and region-wide items; 13 leads. Stores:
   275 at 66 chains from All the Places and OpenStreetMap, with the shared Colorado chains (`ffba0e3`).
 - **Local on the route:** the Memorial Park wreath-laying and observance at 11 (B; Gazette 10 Nov, KRDO 1 Sep;
   `arrive_by` 11:00), Tri-Lakes Post 9-11 at the Crawford Memorial in Palmer Lake at 10 (B), Pikes Peak State College's
   wreath-laying at 11 (A; public access not stated, so a caution), Texas T-Bone and Famous Dave's free Georgia Chopped
   Pork Sandwich (B; FOX21 9 Nov; the national Famous Dave's entry `drop`s that store so it isn't routed twice), Nana's
-  Dim Sum's free meal up to $70 (B; FOX21 10 Nov; routed at lunch).
+  Dim Sum's free meal up to $70 (B; FOX21 10 Nov; routed at lunch), The Melting Pot downtown's 25% off food for the
+  veteran and a guest from noon (A, its own page; a purchase deal).
 - **Under Deals:** Pikes Peak Highway free for active and retired military (A; the city's 2026 page, not every
   veteran), Colorado state parks, NPS and Forest Service fee-free days, Salute from the Springs' 1,111 flags (no 2026
   flag site to pin), the USAFA Planetarium (base pass), UCCS, Fountain's Legion post, schools, Woodland Park and Teller
   County, and the Olympic & Paralympic Museum's November 20% (closed Wednesdays). Leads: Red Leg, Jack Quinn's, Lost
-  Friend, Phantom Canyon, The Melting Pot, the WWII Aviation museum and other attractions (earlier years or nothing).
+  Friend, Phantom Canyon, the WWII Aviation museum and other attractions (earlier years or nothing).
 - **Corrections to the report:** Pikes Peak Highway names active and retired military; Red Leg's Tribute Wall,
-  Phantom Canyon's Thursday deal, Jack Quinn's pint and The Melting Pot's 30% are earlier years; the Space Foundation
+  Phantom Canyon's Thursday deal and Jack Quinn's pint are earlier years; The Melting Pot is 25% from noon, not 30% after
+  4 PM; the Space Foundation
   Discovery Center is closed until January 2027; the In Their Honor parade was Saturday 7 Nov.
 - Checked in a preview on port 5064 at 375 px: `?area=cos` opens the area, the NWS forecast loads, Deals lists 70 of
-  70, Optimal builds 12 stops, no sideways scroll, no console errors apart from the report Worker refusing that port's
+  70 (before The Melting Pot was added), Optimal builds 12 stops, no sideways scroll, no console errors apart from the report Worker refusing that port's
   origin. 104 planner and site tests pass.
 
 ## Optimal (engine v1.4, app v1.3; live since about 12:15 PM CST 10 Nov 2026 from `0b12a0d`, approved; not pushed)
