@@ -1,10 +1,12 @@
-# Hub handoff: where things stand (10 Nov 2026, about 11:00 PM CST: Veterans Day Reston area built and tested, and the live Deals tab's blank-page bug fixed, neither committed nor deployed; 5:30 PM: Antigravity's two commits live, not noted until now; 1:45 PM: Hornbacher's and Post 2 list live from d1d897c)
+# Hub handoff: where things stand (10 Nov 2026, about 10:35 PM CST: Veterans Day Reston area and the Deals-tab fix live from fe2187a, not pushed; 5:30 PM: Antigravity's two commits live, not noted until now; 1:45 PM: Hornbacher's and Post 2 list live from d1d897c)
 
 Read with `CLAUDE.md` (the project's notes). Times are Central (CST since 1 Nov). Each commit, push and deploy needs
 Tom's yes.
 
 ## Veterans Day planner: Reston & Northern Virginia, 10 Nov 2026 night (a fourth area for a colleague in Reston; "Yes, finish it")
-**Built and tested, not committed or deployed** (waiting on approved). The first pass was made in Antigravity
+**Live** since about 10:35 PM CST from `fe2187a` ("Commit and deploy"; not pushed: `master` is ahead of
+GitHub). Checked live: the planner files and both areas' data match the commit, and headless Edge at phone size shows
+20 deal cards in Reston (44 deals) and in Fargo-Moorhead (78). The first pass was made in Antigravity
 (Gemini) that evening and stopped before building; this session reviewed it against the sources, corrected it and
 built it. Details: `veterans-day/README.md` ("Reston & Northern Virginia") and `research/reston-va/notes.md`.
 - **Area** `reston-va` (`?area=reston-va`), Eastern time; 44 deals at 178 stops (A 16, B 27, C 1). Reston's day starts
@@ -22,9 +24,9 @@ built it. Details: `veterans-day/README.md` ("Reston & Northern Virginia") and `
   quick-add search, Stop 1 branch and time controls, On map jump, start-point bounds) are **live** (live `app.js`,
   `engine.js`, `index.html` and `app.css` match `3373f4f`, checked 10 Nov 10:15 PM) and unpushed (`master` is 2
   ahead of `origin`). Not reviewed line by line.
-- **Live bug, fixed here (not deployed):** `59c4f9e` made `app.js` call `E.driveMinutes`, which `engine.js` never
-  had. Every deal card and the Route tab's quick-add search threw, so **the live Deals tab has been blank in every
-  area since about 5:30 PM** (checked 10 Nov 10:55 PM: live `app.js` calls it, live `engine.js` lacks it).
+- **Live bug, fixed (live from `fe2187a`):** `59c4f9e` made `app.js` call `E.driveMinutes`, which `engine.js` never
+  had. Every deal card and the Route tab's quick-add search threw, so **the live Deals tab was blank in every area
+  from about 5:30 to 10:35 PM** (checked about 10:25 PM: live `app.js` called it, live `engine.js` lacked it).
   `placeDriveInfo` now reads the route's own drive table (`ctx.fromPos`). New test in `veterans.test.js`: every `E.`
   name `app.js` uses must exist in the engine (it fails on the live `app.js`). 96 planner tests pass; checked in the
   `hub-main` preview at phone size: Deals shows 20 cards in Fargo-Moorhead and Reston, quick-add finds Hornbacher's,
@@ -33,8 +35,8 @@ built it. Details: `veterans-day/README.md` ("Reston & Northern Virginia") and `
   area; the 5K card reads "free" (watching is) beside "Needs a purchase" ($35 to run, in its details).
 - **Antigravity's `GEMINI.md`** (untracked) is a 16-line summary of this repo for Gemini. Suggested: make it a
   pointer to `CLAUDE.md` and this file so both tools share one set of notes (Tom's call).
-- **To ship (approved):** commit, then `firebase deploy --only hosting:hub --project context-484804`; push when the publisher
-  says. Link for the colleague: https://theintelligence.company/veterans/veterans-day/?area=reston-va
+- **Still to do:** push (approved; GitHub's site-checks then run). Link for the colleague:
+  https://theintelligence.company/veterans/veterans-day/?area=reston-va
 - **Not added (the publisher's call):** WTOP's Silver Diner, Greene Turtle, Melting Pot, Grace for Vets, Hard Rock DC, Pastis
   (each needs store lookups).
 
