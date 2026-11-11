@@ -3,6 +3,17 @@
 Read with `CLAUDE.md` (the project's notes). Times are Central (CST since 1 Nov). Each commit, push and deploy needs
 Tom's yes.
 
+## Veterans Day planner: Denver metro, CO, night of 10-11 Nov 2026 ("complete all work without requesting my yes or permission")
+Built in `[local path]` (branch `vetday-denver`) by a session started from the publisher's "Veterans Day
+locations setup"; merged, deployed and pushed from this checkout under that instruction.
+- 101 deals at 397 stops (A 20, B 79, C 2), `?area=denver`, Mountain time (`day_start` 07:00 UTC; live mode from 5 AM
+  CST). Chains with many stores are thinned to 6 km apart (8 km for purchase deals); drive grid 1.1 km.
+- The shared Colorado chains are `ffba0e3` (branch `vetday-co-chains`, on master `9e9d28a`), sent to the Colorado Springs
+  session to cherry-pick. The Melting Pot is a local entry in each area.
+- Open items for the day: STK's and the Denver restaurants' hours (call first), Bass Pro/Cabela's end time (9-10 or
+  9-11), whether the zoo's free-day tickets are gone, RTD (nothing for veterans found).
+- Details: `veterans-day/README.md` ("Denver metro, CO") and `veterans-day/research/denver/notes.md`.
+
 ## Veterans Day planner: Reno–Sparks and Fort Meade, night of 10-11 Nov 2026 (the publisher, about 11:35 PM CST: "deploy everything to the site without my input")
 the publisher authorized tonight's Veterans Day merges, deploys and pushes without his yes, and went to sleep. The coordinating
 session ("Veterans Day regional locations setup") merges each area's branch into `master` here, tests, deploys from this
