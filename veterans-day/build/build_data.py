@@ -74,6 +74,21 @@ REGIONS = {
         nws=(39.5296, -119.8138), wx_name="Reno",
         # RTC Washoe: every service free for every rider all day on 11 Nov (its own release, 9 Nov 2026).
         transit="ride RTC Washoe's buses, free for everyone all day on 11 Nov"),
+    # The first Mountain area (11 Nov 2026, the pick: the whole city with Fort Carson's and Peterson's sides, plus
+    # Monument, Palmer Lake and Falcon): research/colorado-springs/notes.md.
+    "colorado-springs": dict(
+        name="Colorado Springs", label="Colorado Springs, Monument & Falcon, CO",
+        out="colorado-springs", research="colorado-springs", bbox=None, states=("CO",),
+        tz="America/Denver", tz_offset_min=-420, tz_abbr="MST",
+        day_start=datetime(2026, 11, 11, 7, 0, tzinfo=timezone.utc),
+        areas=[("Downtown and central Springs", 38.845, -104.800, 6.0), ("North Springs and the Academy side", 38.920, -104.800, 6.0),
+               ("East side and Peterson SFB", 38.840, -104.720, 6.0), ("South side and Fort Carson", 38.770, -104.790, 6.0),
+               ("Monument and Palmer Lake", 39.100, -104.880, 5.0), ("Falcon", 38.935, -104.610, 4.0),
+               # The rest of the city (the publisher chose the whole city): the far north and the Powers corridor.
+               ("Northgate, Polaris Pointe and Interquest", 39.005, -104.805, 4.0), ("Powers corridor and Stetson Hills", 38.915, -104.715, 5.0)],
+        center=(38.8339, -104.8214), center_label="downtown Colorado Springs", zoom=10,
+        nws=(38.8339, -104.8214), wx_name="Colorado Springs",
+        transit=None),
 }
 DEFAULT_REGION = "fargo-moorhead"
 
@@ -104,7 +119,8 @@ CURATE = [
     dict(id="twin-peaks", src="national", name="Twin Peaks", loc="Twin Peaks", osm="twinpeaks", category="meal", minutes=50, busy=15, meal=True, dineIn=True),
     dict(id="buffalo-wild-wings", src="national", name="Buffalo Wild Wings", loc="Buffalo Wild Wings", osm="bww", category="meal", minutes=35, busy=15, meal=True, dineIn=False),
     dict(id="cracker-barrel", src="national", name="Cracker Barrel", loc="Cracker Barrel", osm="crackerbarrel", category="breakfast", minutes=45, busy=15, meal=True, dineIn=True),
-    dict(id="famous-daves", src="national", name="Famous Dave's", loc="Famous Dave's", osm="famousdaves", category="meal", minutes=45, busy=10, meal=True, dineIn=True),
+    # Colorado Springs' store has its own 2026 offer (FOX21, 9 Nov 2026), so it is a local entry there instead.
+    dict(id="famous-daves", src="national", name="Famous Dave's", loc="Famous Dave's", osm="famousdaves", category="meal", minutes=45, busy=10, meal=True, dineIn=True, drop=["5245 N Academy"]),
     dict(id="hooters", src="national", name="Hooters", loc="Hooters", osm=None, category="meal", minutes=45, busy=10, meal=True, dineIn=True),
     dict(id="buca-di-beppo", src="national", name="Buca di Beppo", loc="Buca di Beppo", osm=None, category="meal", minutes=55, busy=15, meal=True, dineIn=True),
     dict(id="bob-evans", src="national", name="Bob Evans", loc="Bob Evans", osm=None, category="meal", minutes=45, busy=10, meal=True, dineIn=True),
@@ -290,6 +306,16 @@ LOCAL = {
         dict(id="gold-dust-west", src="local", name="Gold Dust West", osm=None, category="meal", minutes=50, busy=20, meal=True, dineIn=True, caution="Hours and restaurant not published: call (775) 323-2211 first", show=dict(notes="Gold Dust West's own page: a free meal for current and retired military, dine-in, with a military ID. Veterans who aren't retired aren't named. No hours, restaurant or menu published, so usual meal hours are shown. 444 Vine St.")),
         dict(id="squeeze-in", src="local", name="Squeeze In", osm=None, category="breakfast", minutes=50, busy=25, meal=True, dineIn=True, caution="Its post names no stores, hours or proof: call yours first", show=dict(notes="Squeeze In's own post (10 Nov 2026): a free meal of your choice for veterans on 11 Nov. It doesn't name stores, hours or proof, so bring your ID and call first. Hours are each store's usual Wednesday hours from its own site.")),
         dict(id="in-n-out", src="local", name="In-N-Out Burger", loc="In-N-Out Burger", osm=None, category="quick", minutes=20, busy=20, meal=True, dineIn=True, caution=NO_COMPANY_WORD, show=dict(notes="On 2026 national lists (Newsweek, The Military Wallet): a free burger, fries and drink for veterans, active duty, Reserve and Guard with proof of service, plus a Veterans Day decal. Not announced by In-N-Out itself. Order inside: lists differ on the drive-through.")),
+    ],
+    # Colorado Springs, Monument and Falcon (11 Nov 2026, from the research report of 10 Nov; every item checked at its own
+    # source the same night: research/colorado-springs/notes.md). Few local businesses posted 2026 offers; the chains
+    # carry most of the day.
+    "colorado-springs": [
+        dict(id="memorial-park-wreath", src="local", name="Wreath-Laying Ceremony and Observance, Memorial Park", osm=None, category="event", minutes=60, busy=0, meal=False, dineIn=False, window=("10:45", "12:00"), arrive_by="11:00", worth=12, kinds=["ceremony", "memorial"], show=dict(notes="The Pikes Peak Veterans Council and Special Forces Association Chapter 4-24 hold the city's Veterans Day wreath-laying and observance at 11 AM in the monuments garden at Memorial Park, with Mayor Yemi Mobolade and others speaking. About an hour, rain or shine; bring a chair. Free and open to all (The Gazette, 10 Nov 2026; KRDO, 1 Sep 2026). 1605 E Pikes Peak Ave.")),
+        dict(id="tri-lakes-palmer-lake", src="local", name="Tri-Lakes Post 9-11 Veterans Day memorial", osm=None, category="event", minutes=45, busy=0, meal=False, dineIn=False, window=("09:45", "11:00"), arrive_by="10:00", worth=10, kinds=["ceremony", "memorial"], caution="End time not published", show=dict(notes="American Legion Tri-Lakes Post 9-11 holds its Veterans Day memorial at 10 AM at the MSG William J. Crawford Memorial in Palmer Lake, by the Palmer Lake Regional Recreation Area (The Gazette, 10 Nov 2026). No street address or end time is published.")),
+        dict(id="ppsc-wreath", src="local", name="Pikes Peak State College Veterans Day wreath-laying", osm=None, category="event", minutes=45, busy=0, meal=False, dineIn=False, window=("10:45", "12:00"), arrive_by="11:00", worth=8, kinds=["ceremony", "memorial"], caution="The college doesn't say whether the public may attend: ask its MVP office (mvp@pikespeak.edu, 719-502-4100)", show=dict(notes="Pikes Peak State College's Veterans Day wreath-laying at 11 AM in the Veterans Memorial Courtyard, Centennial Campus, during its Veterans Week; Field of Flags at every campus 6-16 Nov (the college's own page; The Gazette, 10 Nov 2026). 5675 S Academy Blvd.")),
+        dict(id="texas-t-bone-famous-daves", src="local", name="Texas T-Bone Steakhouse and Famous Dave's", osm=None, category="meal", minutes=40, busy=15, meal=True, dineIn=False, window=("11:00", "20:30"), worth=12, kinds=["meal"], caution="Hours and proof not in the story: call (719) 434-4771 first", show=dict(notes="Texas T-Bone Steakhouse and Famous Dave's BBQ, sharing one building at 5245 N Academy Blvd, give a free Georgia Chopped Pork Sandwich to active-duty, inactive and retired military on 11 Nov, dine-in or takeout, with ID (FOX21's Living Local, 9 Nov 2026). Hours are from listings.")),
+        dict(id="nanas-dim-sum", src="local", name="Nana's Dim Sum & Dumplings", osm=None, category="meal", minutes=60, busy=20, meal=True, dineIn=True, window=("11:00", "14:30"), worth=20, kinds=["meal"], caution="Closed 2:30-4 PM; dinner 4-9:30 PM also counts", show=dict(notes="Nana's Dim Sum & Dumplings gives every veteran a free dine-in meal on Veterans Day, up to $70 of food each, with a military or veteran ID, at participating locations (FOX21, 10 Nov 2026). Lunch 11 AM-2:30 PM and dinner 4-9:30 PM. 1895 Democracy Point, Suite 120, Polaris Pointe; 720-908-7867.")),
     ],
 }
 

@@ -1,0 +1,446 @@
+{
+ "about": "Colorado Springs, Monument and Falcon research for Veterans Day 2026, checked 11 Nov 2026 against each source (local items only; national chains are handled elsewhere). Items here are region-wide perks, events on bases or outside the route circles, and other days. Closed on 11 Nov per the City of Colorado Springs (9 Nov 2026): City Hall and the other city offices, Municipal Court, Mountain Metro's administrative offices, the Pioneers Museum, the Deerfield Hills, Hillside and Westside community centers, the Helen Hunt Falls and Starsmore visitor centers and the Parks, Recreation and Cultural Services office; Rock Ledge Ranch's buildings are closed but the grounds are open. Open: Fairview and Evergreen cemeteries (gates), Patty Jewett and Valley Hi golf courses, the Sertich Ice Center and Pikes Peak Highway. Mountain Metro itself says nothing about Veterans Day fares or free rides: its Mountain Metro page and its news list (latest item 1 Sep 2026) have no notice, and the city's closures page lists only its administrative offices as closed. Its holiday rule is service by the day of the week (no service only on Thanksgiving, Christmas and New Year's Day), so a regular Wednesday is expected: call 719-385-7433 to be sure. The U.S. Olympic & Paralympic Museum is closed Wednesdays, and the Space Foundation Discovery Center is closed for renovation until January 2027.",
+ "other": [
+  {
+   "id": "pikes-peak-highway-free",
+   "day": "Wed 11 Nov, all day (weather permitting)",
+   "name": "Pikes Peak Highway: free admission for military",
+   "where": "Pikes Peak Highway, Cascade (west of Colorado Springs, off US 24)",
+   "offer": "Free admission on 11 Nov for active and retired military with ID, weather permitting. Check road status before driving up.",
+   "grade": "A",
+   "note": "The city's 9 Nov 2026 closures page names active and retired military. The city's older Veterans Day discount page (undated, \"Monday, Nov. 11\", so a past year) says \"all that have served\", which would include veterans; it couldn't be opened here, so call before relying on it as a veteran not retired. Veterans with no military ID should bring a DD-214 or VA card.",
+   "sources": [
+    {
+     "url": "https://coloradosprings.gov/news/city-observe-veterans-day-wednesday",
+     "publisher": "City of Colorado Springs",
+     "published": "2026-11-09"
+    }
+   ]
+  },
+  {
+   "id": "cpw-state-parks",
+   "day": "Wed 11 Nov, 8:00 AM-10:00 PM MST",
+   "name": "Colorado state parks: free entry for veterans, active duty and Guard",
+   "where": "Every Colorado Parks and Wildlife state park, for example Cheyenne Mountain State Park in Colorado Springs",
+   "offer": "Free park entry for veterans, active-duty military and National Guard members with proof (DD-214, DD Form 2, DD Form 2765, a military ID, a Colorado license or state ID marked Veteran, or a VA medical card). Camping, fishing and other fees still apply.",
+   "grade": "A",
+   "note": "CPW's page says both \"registration is required\" and \"no registration required\": check before you go. KRDO (6 Nov 2026) says everyone in the vehicle gets in (not on CPW's page; not checked).",
+   "sources": [
+    {
+     "url": "https://cpw.state.co.us/event/2026/11/free-park-entry-veterans-and-active-military",
+     "publisher": "Colorado Parks and Wildlife",
+     "published": "2026"
+    },
+    {
+     "url": "https://krdo.com/news/2026/11/06/cpw-offering-free-admission-to-state-parks-for-all-veterans-and-military-members-on-veterans-day/",
+     "publisher": "KRDO",
+     "published": "2026-11-06"
+    }
+   ]
+  },
+  {
+   "id": "nps-fee-free-day",
+   "day": "Wed 11 Nov",
+   "name": "National parks: fee-free day for US residents",
+   "where": "Every National Park Service site that charges entrance; the nearest to Colorado Springs is Florissant Fossil Beds National Monument in Teller County",
+   "offer": "Entrance fees are waived on Veterans Day for US citizens and residents only (nonresidents pay). Timed-entry, reservation, camping and other fees still apply.",
+   "grade": "A",
+   "note": "Veterans, Gold Star families and active military also get a free lifetime Military Pass for federal recreation sites, good any day.",
+   "sources": [
+    {
+     "url": "https://www.nps.gov/planyourvisit/fee-free-parks.htm",
+     "publisher": "National Park Service",
+     "published": "2026-10-09"
+    }
+   ]
+  },
+  {
+   "id": "usfs-fee-free-day",
+   "day": "Wed 11 Nov",
+   "name": "National forests: day-use fees waived for everyone",
+   "where": "Forest Service lands, including Pike National Forest around Colorado Springs, Woodland Park and Monument",
+   "offer": "The Forest Service lists Veterans Day, 11 Nov 2026, as a fee-free day: recreation fees waived at most day-use sites. Camping and concession sites aren't covered, and concessions may vary.",
+   "grade": "A",
+   "note": "The page carries no date of its own. Pike National Forest's own notice wasn't read.",
+   "sources": [
+    {
+     "url": "https://www.fs.usda.gov/passespermits/fee-legislation-text.shtml",
+     "publisher": "U.S. Forest Service",
+     "published": "2026"
+    }
+   ]
+  },
+  {
+   "id": "salute-from-the-springs",
+   "day": "Through Wed 11 Nov, all day",
+   "name": "Salute from the Springs: 1,111 flags downtown",
+   "where": "Downtown Colorado Springs, in the street medians along the parade area (2026 streets not published; in 2025 S Cascade Ave and N and S Nevada Ave)",
+   "offer": "1,111 American flags, each in the name of a veteran or service member, from 1 Nov through Veterans Day. Free to walk or drive past.",
+   "grade": "A",
+   "note": "Not routed, because no flag site is published for 2026. The In Their Honor parade ran Sat 7 Nov.",
+   "sources": [
+    {
+     "url": "https://ithveteransdayparade.com/",
+     "publisher": "In Their Honor Veterans Day Parade",
+     "published": "2026",
+     "accessed": "2026-11-11"
+    },
+    {
+     "url": "https://krdo.com/news/2026/09/01/colorado-springs-veterans-day-rosie-riveter/",
+     "publisher": "KRDO",
+     "published": "2026-09-01",
+     "accessed": "2026-11-11"
+    },
+    {
+     "url": "https://gazette.com/2026/11/04/more-than-100-groups-will-march-in-annual-veterans-parade/",
+     "publisher": "The Gazette",
+     "published": "2026-11-04",
+     "accessed": "2026-11-11"
+    }
+   ]
+  },
+  {
+   "id": "usafa-planetarium",
+   "day": "Wed 11 Nov, 11:00 AM, 1:00 PM and 3:00 PM MST",
+   "name": "Air Force Academy Planetarium: free showings of America the Beautiful",
+   "where": "U.S. Air Force Academy (on base; needs base access)",
+   "offer": "Free screenings of the documentary \"America the Beautiful\" at 11 AM, 1 PM and 3 PM, first come, first served. Visitors not tied to the Defense Department, or not with someone who is, must request a base-access pass through the Academy's website.",
+   "grade": "B",
+   "note": "The Gazette gives no address; the planetarium's own page wasn't found.",
+   "sources": [
+    {
+     "url": "https://gazette.com/2026/11/10/veterans-day-events-scheduled-across-colorado-springs-area/",
+     "publisher": "The Gazette",
+     "published": "2026-11-10"
+    }
+   ],
+   "at": "2026-11-11T18:00:00Z"
+  },
+  {
+   "id": "usafa-hoops",
+   "day": "Wed 11 Nov, 1:00 PM and 4:00 PM MST",
+   "name": "Air Force basketball Veterans Day doubleheader",
+   "where": "Clune Arena, U.S. Air Force Academy (on base; needs base access)",
+   "offer": "Men host Loyola (Ill.) at 1 PM and women host San Francisco at 4 PM. No Veterans Day ticket offer was found.",
+   "grade": "B",
+   "sources": [
+    {
+     "url": "https://gazette.com/2026/11/10/briggeman-air-force-hoops-doubleheader-will-feature-opposite-styles/",
+     "publisher": "The Gazette",
+     "published": "2026-11-10"
+    }
+   ],
+   "at": "2026-11-11T20:00:00Z"
+  },
+  {
+   "id": "uccs-cops-vets-walk",
+   "day": "Wed 11 Nov, 11:00 AM MST",
+   "name": "UCCS Cops & Vets Mile Walk",
+   "where": "University of Colorado Colorado Springs (location not published for 2026; the 2025 walk started at the West Lawn)",
+   "offer": "UCCS Veteran & Military Affairs and campus police hold a mile walk at 11 AM during Veterans Week (9-13 Nov); a Veterans Week Luncheon follows Thu 12 Nov in Berger Hall.",
+   "grade": "B",
+   "note": "The Gazette (10 Nov 2026) doesn't say where or who may join; UCCS's 2025 listing was for students and alumni. Not routable: call UCCS Veteran & Military Affairs, 719-255-8227.",
+   "sources": [
+    {
+     "url": "https://gazette.com/2026/11/10/veterans-day-events-scheduled-across-colorado-springs-area/",
+     "publisher": "The Gazette",
+     "published": "2026-11-10"
+    }
+   ],
+   "at": "2026-11-11T18:00:00Z"
+  },
+  {
+   "id": "fountain-legion-post-38",
+   "day": "Wed 11 Nov, 11:00 AM MST",
+   "name": "American Legion Post 38: Veterans Day ceremony, Fountain",
+   "where": "6685 Southmoor Dr, Fountain, CO (about 6.3 km from the South side circle's center, just outside)",
+   "offer": "The post's Veterans Day ceremony at 11 AM.",
+   "grade": "B",
+   "note": "The Gazette doesn't say who may attend. Fountain is south of Fort Carson.",
+   "sources": [
+    {
+     "url": "https://gazette.com/2026/11/10/veterans-day-events-scheduled-across-colorado-springs-area/",
+     "publisher": "The Gazette",
+     "published": "2026-11-10"
+    }
+   ],
+   "at": "2026-11-11T18:00:00Z"
+  },
+  {
+   "id": "tca-veterans-assembly",
+   "day": "Wed 11 Nov, 9:30-10:30 AM MST",
+   "name": "The Classical Academy: Veterans Day assembly",
+   "where": "North Campus gym, The Classical Academy North Campus, 975 Stout Rd, Colorado Springs",
+   "offer": "A student-led assembly open to veterans, military families and the community, with retired Air Force JAG officer Timothy M. Goines speaking.",
+   "grade": "B",
+   "note": "The street address is from OpenStreetMap and the Census geocoder, not the Gazette.",
+   "sources": [
+    {
+     "url": "https://gazette.com/2026/11/10/veterans-day-events-scheduled-across-colorado-springs-area/",
+     "publisher": "The Gazette",
+     "published": "2026-11-10"
+    }
+   ],
+   "at": "2026-11-11T16:30:00Z"
+  },
+  {
+   "id": "jenkins-ms-bench",
+   "day": "Wed 11 Nov, 2:15 PM MST",
+   "name": "Jenkins Middle School: memorial bench dedication",
+   "where": "Francis L. Jenkins Middle School, 6410 Austin Bluffs Pkwy, Colorado Springs",
+   "offer": "Dedication of a memorial bench and commemorative rocks for veterans (an Eagle Scout project), 2:15 PM; a reception for veterans at 2:30 and a student, staff and guest assembly at 2:45.",
+   "grade": "B",
+   "note": "A school event; the Gazette doesn't say it is open to the public. Call the school first.",
+   "sources": [
+    {
+     "url": "https://gazette.com/2026/11/10/veterans-day-events-scheduled-across-colorado-springs-area/",
+     "publisher": "The Gazette",
+     "published": "2026-11-10"
+    }
+   ],
+   "at": "2026-11-11T21:15:00Z"
+  },
+  {
+   "id": "school-programs",
+   "day": "Wed 11 Nov, mornings",
+   "name": "School Veterans Day programs: Fremont Elementary, Cheyenne Mountain High and others",
+   "where": "Fremont Elementary (8:10-8:50 AM gym assembly, veterans, active duty and family only, RSVP required); Cheyenne Mountain High School's morning gym program; Broadmoor and Gold Camp elementaries' assemblies",
+   "offer": "District 11 and District 12 schools hold assemblies for veterans and their families; times are given only for Fremont.",
+   "grade": "B",
+   "note": "Call each school.",
+   "sources": [
+    {
+     "url": "https://gazette.com/2026/11/10/veterans-day-events-scheduled-across-colorado-springs-area/",
+     "publisher": "The Gazette",
+     "published": "2026-11-10"
+    }
+   ]
+  },
+  {
+   "id": "woodland-park-hs",
+   "day": "Wed 11 Nov, 1:30 PM MST",
+   "name": "Woodland Park Jr/Sr High: Veterans Day assembly, breakfast and celebration",
+   "where": "Woodland Park Junior/Senior High School, Woodland Park (Teller County, west on US 24)",
+   "offer": "A Veterans Day breakfast and celebration open to the public, with refreshments after the 1:30 PM assembly.",
+   "grade": "B",
+   "sources": [
+    {
+     "url": "https://gazette.com/2026/11/10/veterans-day-events-scheduled-across-colorado-springs-area/",
+     "publisher": "The Gazette",
+     "published": "2026-11-10"
+    }
+   ],
+   "at": "2026-11-11T20:30:00Z"
+  },
+  {
+   "id": "teller-county-dinner",
+   "day": "Wed 11 Nov, 5:00 PM MST (ceremony 5:30)",
+   "name": "Teller County Veterans Day dinner",
+   "where": "Shining Mountain Golf Course, Woodland Park",
+   "offer": "A Veterans Day dinner at 5 PM with a formal ceremony at 5:30.",
+   "grade": "B",
+   "note": "The Gazette (10 Nov 2026) doesn't give a price or the host. In 2025 Teller County hosted a free dinner for veterans and families at the Ute Pass Cultural Center, 4-7 PM (KOAA, Nov 2025): confirm before assuming it is free this year.",
+   "sources": [
+    {
+     "url": "https://gazette.com/2026/11/10/veterans-day-events-scheduled-across-colorado-springs-area/",
+     "publisher": "The Gazette",
+     "published": "2026-11-10"
+    }
+   ],
+   "at": "2026-11-12T00:00:00Z"
+  },
+  {
+   "id": "bass-pro-breakfast",
+   "day": "Wed 11 Nov, 9:00-11:00 AM MST",
+   "name": "Bass Pro Shops: Veterans Appreciation Breakfast",
+   "where": "13012 Bass Pro Dr, Colorado Springs, CO 80921, (719) 488-7300 (far north, outside the circles)",
+   "offer": "A free breakfast for veterans, with a raffle entry for a Land of the Free merchandise collection, per Mile High on the Cheap.",
+   "grade": "B",
+   "note": "Only one aggregator carries it, and it covers the Denver area; Bass Pro's own page wasn't found and one search found no store listing. Call first.",
+   "sources": [
+    {
+     "url": "https://www.milehighonthecheap.com/veterans-day-deals-freebies-denver/",
+     "publisher": "Mile High on the Cheap",
+     "published": "2026-11-10"
+    }
+   ],
+   "at": "2026-11-11T16:00:00Z"
+  },
+  {
+   "id": "usopm-veterans-20",
+   "day": "Thu 12 Nov onward (closed Wed 11 Nov)",
+   "name": "U.S. Olympic & Paralympic Museum: 20% off for veterans in November",
+   "where": "200 S Sierra Madre St, Colorado Springs, 719-497-1234",
+   "offer": "Veterans get 20% off admission throughout November 2026, including the 12 PM Valor to Victory tour (60 minutes, daily). The museum is closed Tuesdays and Wednesdays, so not on Veterans Day itself.",
+   "grade": "A",
+   "note": "From the museum's own November post (5 Nov 2026), which doesn't name the proof. Its older pages (Veterans Day 2024: 50% off) are out of date.",
+   "sources": [
+    {
+     "url": "https://usopm.org/things-to-do-in-november-at-the-u-s-olympic-paralympic-museum",
+     "publisher": "U.S. Olympic & Paralympic Museum",
+     "published": "2026-11-05"
+    }
+   ]
+  }
+ ],
+ "leads": [
+  {
+   "name": "Red Leg Brewing Company (veteran-owned)",
+   "area": "2323 Garden of the Gods Rd, Colorado Springs, (719) 598-3776",
+   "q": "Red Leg Brewing Veterans Day 2026",
+   "offer": "Its Veterans Day Tribute Wall (photos and notes in the taproom) ran from Veterans Day to 12 Dec in 2025, and a Veterans Mug Club raffle ($5 flagship pours) drew winners on Veterans Day. Its own event calendar, read 11 Nov 2026, lists no Veterans Day event in November 2026 (trivia at 6:30 PM on the 11th).",
+   "last_seen": "2025",
+   "src": "redleg"
+  },
+  {
+   "name": "Jack Quinn's Irish Pub",
+   "area": "21 S Tejon St, Colorado Springs, (719) 385-0766",
+   "q": "Jack Quinn's Irish Pub Colorado Springs veterans",
+   "offer": "KOAA's undated roundup: 15% off food for veterans any day, and a free pint on a past Veterans Day (it names a Saturday, so not 2026). The pub's own site (11 Nov 2026) shows nothing for veterans; open 11 AM-10 PM Wednesdays.",
+   "last_seen": "",
+   "src": "koaa-deals"
+  },
+  {
+   "name": "Lost Friend Brewing (veteran-owned)",
+   "area": "2458 Montebello Square Dr, Colorado Springs",
+   "q": "Lost Friend Brewing Veterans Day",
+   "offer": "No 2026 Veterans Day offer found; its home page lists none (open 11 AM-9 PM Wednesdays).",
+   "last_seen": "",
+   "src": ""
+  },
+  {
+   "name": "Phantom Canyon Brewing",
+   "area": "2 E Pikes Peak Ave, Colorado Springs",
+   "q": "Phantom Canyon Brewing military night",
+   "offer": "The lead report's Thursday Military Night, 20% off for military and veterans (so Thu 12 Nov), came from an Untappd listing and couldn't be confirmed; the brewery's home page doesn't mention it. In 2024 it planned to give 10% of sales to the Torchlight Initiative on Veterans Day (The Gazette, 12 Nov 2024).",
+   "last_seen": "2024",
+   "src": "pc-gaz2024"
+  },
+  {
+   "name": "The Melting Pot",
+   "area": "30 E Pikes Peak Ave, Ste A, Colorado Springs, (719) 385-0300",
+   "q": "Melting Pot Colorado Springs Veterans Day military",
+   "offer": "30% off with a military ID after 4 PM on 11 Nov 2015 (The Gazette's list, last updated Oct 2026, offers from 2015). The restaurant's own page (11 Nov 2026) has no veterans offer; open 4-9 PM Wednesday.",
+   "last_seen": "2015",
+   "src": "gaz2015"
+  },
+  {
+   "name": "National Museum of World War II Aviation",
+   "area": "775 Aviation Way, Colorado Springs, (719) 637-7559",
+   "q": "National Museum of WWII Aviation Veterans Day",
+   "offer": "Open Wed 10 AM-5 PM. No Veterans Day offer on its page. Standing rates: military $13-15 (the page gives two sets of prices), WWII veterans free. Its next event is a talk on Sat 14 Nov. The Gazette's military calendar prints the address as 755.",
+   "last_seen": "2026",
+   "src": "wwiiaviation"
+  },
+  {
+   "name": "Cheyenne Mountain Zoo",
+   "area": "4250 Cheyenne Mountain Zoo Rd, Colorado Springs",
+   "q": "Cheyenne Mountain Zoo military appreciation",
+   "offer": "No Veterans Day offer. Its Military Appreciation Week is 50% off base admission with military ID, a DD-214, a veteran-marked license, a VA, VFW or Legion ID or (spouse) a military spouse ID; its page says \"2027 dates TBA\".",
+   "last_seen": "",
+   "src": "cmzoo"
+  },
+  {
+   "name": "Space Foundation Discovery Center",
+   "area": "4425 Arrowswest Dr, Colorado Springs",
+   "q": "Space Foundation Discovery Center Military Appreciation Day",
+   "offer": "Closed for renovation, reopening January 2027 (its own page). Its Military Appreciation Day was Sat 8 Nov 2025, free for veterans, military and families.",
+   "last_seen": "2025",
+   "src": "discoverspace"
+  },
+  {
+   "name": "Western Museum of Mining & Industry",
+   "area": "225 N Gate Blvd, Colorado Springs",
+   "q": "Western Museum of Mining Industry Veterans Day free admission",
+   "offer": "Open that Wednesday for a homeschool class (1-2:30 PM). Its November 2026 calendar has no veterans offer; free veterans admission appeared on its 2022 and 2024 calendars.",
+   "last_seen": "2024",
+   "src": "wmmi"
+  },
+  {
+   "name": "Pikes Peak Cog Railway, Manitou Cliff Dwellings, ProRodeo Hall of Fame, Colorado Springs Fine Arts Center",
+   "area": "Manitou Springs and Colorado Springs",
+   "q": "Pikes Peak Cog Railway Manitou Cliff Dwellings ProRodeo Fine Arts Center Veterans Day 2026",
+   "offer": "No 2026 Veterans Day offer found for any of the four (a Cliff Dwellings coupon listing expired 12/31/2025).",
+   "last_seen": "",
+   "src": ""
+  },
+  {
+   "name": "ANA Money Museum",
+   "area": "818 N Cascade Ave, Colorado Springs",
+   "q": "ANA Money Museum veterans free admission",
+   "offer": "Its Purple Heart exhibit ran at Veterans Day 2025, and a 2024 listing gave free entry to veterans, active duty and families. Nothing found for 2026.",
+   "last_seen": "2025",
+   "src": "ana-koaa"
+  },
+  {
+   "name": "3 Hundred Days Distilling",
+   "area": "Colorado Springs",
+   "q": "3 Hundred Days Distilling veterans 10%",
+   "offer": "10% off for veterans, with no date or holiday tied to it (VisitCOS's veteran-owned business page, undated). Not a Veterans Day offer.",
+   "last_seen": "",
+   "src": "visitcos"
+  },
+  {
+   "name": "Teller County Veterans Day dinner",
+   "area": "Ute Pass Cultural Center, 210 E Midland Ave, Woodland Park",
+   "q": "Teller County Veterans Day dinner free",
+   "offer": "In 2025: a free dinner for veterans and families, 4-7 PM, ceremony at 5 PM. The 2026 dinner is at Shining Mountain Golf Course at 5 PM (The Gazette); price not stated.",
+   "last_seen": "2025",
+   "src": "koaa-2025"
+  },
+  {
+   "name": "Hoedown for Heroes (Mt. Carmel Veterans Service Center)",
+   "area": "Flying W Ranch, Colorado Springs",
+   "q": "Hoedown for Heroes 2026 Mt Carmel",
+   "offer": "A ticketed gala (Fri 14 Nov 2025, 5:30 PM, tickets listed at $200). No 2026 date found.",
+   "last_seen": "2025",
+   "src": "koaa-2025"
+  }
+ ],
+ "lead_sources": {
+  "redleg": {
+   "url": "https://redlegbrewing.com/event/veterans-day-tribute-wall/",
+   "publisher": "Red Leg Brewing Company (2025 event page)"
+  },
+  "koaa-deals": {
+   "url": "https://www.koaa.com/news/covering-colorado/veterans-day-deals-dont-miss-out-on-these-deals-for-veterans-and-active-duty",
+   "publisher": "KOAA (undated, earlier year)"
+  },
+  "pc-gaz2024": {
+   "url": "https://gazette.com/2024/11/12/strategic-maneuvers-veteran-brewers-up-the-game-at-colorado-springs-craft-breweries/",
+   "publisher": "The Gazette (12 Nov 2024)"
+  },
+  "gaz2015": {
+   "url": "https://gazette.com/?p=1871513",
+   "publisher": "The Gazette (2015 list, updated 6 Oct 2026)"
+  },
+  "wwiiaviation": {
+   "url": "https://www.worldwariiaviation.org/",
+   "publisher": "National Museum of World War II Aviation"
+  },
+  "cmzoo": {
+   "url": "https://www.cmzoo.org/events-programs/special-events/military-appreciation-week/",
+   "publisher": "Cheyenne Mountain Zoo"
+  },
+  "discoverspace": {
+   "url": "https://discoverspace.org/?p=43008",
+   "publisher": "Space Foundation Discovery Center (2025 listing)"
+  },
+  "wmmi": {
+   "url": "https://wmmi.org/education/education.html/calendar/2026/11",
+   "publisher": "Western Museum of Mining & Industry (Nov 2026 calendar)"
+  },
+  "ana-koaa": {
+   "url": "https://www.koaa.com/community/you-are-not-alone/pikes-peak-region-honoring-those-who-served-this-veterans-day",
+   "publisher": "KOAA (Nov 2025)"
+  },
+  "visitcos": {
+   "url": "https://www.visitcos.com/blog/celebrate-veterans-day-at-one-of-these-veteran-owned-businesses/",
+   "publisher": "Visit Colorado Springs"
+  },
+  "koaa-2025": {
+   "url": "https://www.koaa.com/community/you-are-not-alone/pikes-peak-region-honoring-those-who-served-this-veterans-day",
+   "publisher": "KOAA (Nov 2025)"
+  }
+ }
+}
