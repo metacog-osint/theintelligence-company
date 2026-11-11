@@ -201,7 +201,7 @@ const AREAS = [...SCRIPTS["app.js"].matchAll(/\{ id: "([a-z-]+)", dir: "([a-z/-]
 const AREA_DATA = Object.fromEntries(AREAS.map((a) => [a.id, {
   deals: JSON.parse(read(DIR + a.dir + "deals.json")), drive: JSON.parse(read(DIR + a.dir + "drive.json")) }]));
 // Areas off Central time (Reston, 10 Nov 2026; Reno-Sparks, the first on Pacific time, 11 Nov 2026).
-const AREA_TZ = { "reston-va": "America/New_York", "reno-sparks": "America/Los_Angeles" };
+const AREA_TZ = { "reston-va": "America/New_York", "reno-sparks": "America/Los_Angeles", "fort-meade": "America/New_York" };
 const kmApart = (a, b) => {
   const p = Math.PI / 180, s = Math.sin((b[0] - a[0]) * p / 2) ** 2 + Math.cos(a[0] * p) * Math.cos(b[0] * p) * Math.sin((b[1] - a[1]) * p / 2) ** 2;
   return 12742 * Math.asin(Math.sqrt(s));

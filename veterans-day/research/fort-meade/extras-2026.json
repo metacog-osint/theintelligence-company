@@ -1,0 +1,205 @@
+{
+ "about": "Fort Meade, Odenton, Laurel and Columbia, MD: what the route can't hold, checked 11 Nov 2026 (about midnight CST). Transit, on-post perks that need installation access, ceremonies outside the circles, other days, standing perks and closures.",
+ "other": [
+  {
+   "id": "mta-free-rides",
+   "day": "Wed 11 Nov, all day",
+   "name": "MDOT MTA: free rides on MARC, Local Bus, Metro Subway, Light Rail, Commuter Bus and Mobility",
+   "where": "All MTA service, including MARC's Odenton, BWI, Savage/Jessup and Laurel stations",
+   "offer": "Free rides for all US military veterans, active-duty military and members of the National Guard and Reserves. Regular schedules.",
+   "grade": "A",
+   "note": "Show one of three IDs: a DoD-issued ID (Armed Forces, Uniformed Services or Military Retiree), a VA-issued ID, or an MVA driver's license or state ID with the Veteran designation. A DD-214 is not on MTA's list. Metro (WMATA) and county buses are separate.",
+   "sources": [
+    {"url": "https://www.mta.maryland.gov/service-alerts/29401", "publisher": "MDOT MTA service alert 29401", "published": "2026-11-09"}
+   ]
+  },
+  {
+   "id": "fort-meade-exchange",
+   "day": "Sale Fri 6 to Thu 12 Nov; challenge coins Wed 11 Nov",
+   "name": "Fort Meade Main Exchange: Veterans Day sale and challenge coins (installation access needed)",
+   "where": "2799 Rose St, Fort Meade (on post: you need installation access and Exchange shopping privileges)",
+   "offer": "The Exchange's Veterans Day sale on electronics, clothing, shoes and more, 6-12 Nov, with extra savings on select items for MILITARY STAR cardholders. Challenge coins on 11 Nov, while supplies last, for shoppers with in-store benefits (active duty, military retirees and service-connected disabled veterans).",
+   "grade": "B",
+   "note": "Not routed: it's on post. A 2020 garrison post about STAR-card fuel and coffee perks is not repeated for 2026. The food court's Charleys, Qdoba and Starbucks are left off the route for the same reason.",
+   "sources": [
+    {"url": "https://publicaffairs-sme.com/ExchangePost/2026/11/04/2026-veterans-day-retail-deals-and-discounts/", "publisher": "Military.com, reposted by the Exchange Post", "published": "2026-11-04"},
+    {"url": "https://patch.com/maryland/across-md/veterans-day-2026-free-meals-discounts-deals-maryland", "publisher": "Patch", "published": "2026-11-10"}
+   ]
+  },
+  {
+   "id": "fort-meade-commissary",
+   "day": "Wed 11 Nov, 9:00 AM-5:00 PM",
+   "name": "Fort Meade Commissary: holiday hours",
+   "where": "Bldg. 2786 MacArthur Rd, Fort Meade (on post)",
+   "offer": "Open 9 AM-5 PM on Veterans Day (usually 8 AM-9 PM on weekdays). Authorized patrons include veterans with any service-connected disability, Purple Heart recipients, former POWs and designated primary family caregivers.",
+   "grade": "A",
+   "note": "Installation access needed.",
+   "sources": [
+    {"url": "https://corp.commissaries.com/shopping/store-locations/fort-meade", "publisher": "Defense Commissary Agency (Fort Meade store page)", "published": "2026"}
+   ]
+  },
+  {
+   "id": "fort-meade-mwr-hours",
+   "day": "Wed 11 Nov",
+   "name": "Fort Meade MWR: Veterans Day hours",
+   "where": "Fort Meade (on post)",
+   "offer": "Bowling Center noon-4 PM; Gaffney Fitness Center 8 AM-noon; Murphy Field House 24/7 for registered users. Closed: Club Meade, Arts & Crafts, Auto Skills, the library, Java Cafe, Leisure Travel, Outdoor Recreation's office, the Pet Care Center, Army Community Service and every CYS program.",
+   "grade": "A",
+   "note": "From DFMWR's holiday-hours sheet, dated 17 Aug 2026. No 2026 installation Veterans Day ceremony was found (garrison site and news, 11 Nov).",
+   "sources": [
+    {"url": "https://meade.armymwr.com/happenings/veterans-day-holiday-hours", "publisher": "Fort Meade FMWR", "published": "2026-10-26"}
+   ]
+  },
+  {
+   "id": "crownsville-veterans-cemetery",
+   "day": "Wed 11 Nov, 11:00 AM EST",
+   "at": "2026-11-11T16:00:00Z",
+   "name": "Crownsville Veterans Cemetery ceremony",
+   "where": "1122 Sunrise Beach Rd, Crownsville (about 20 minutes east of Odenton)",
+   "offer": "The state's Veterans Day ceremony at the cemetery. Veterans, military families and community members are invited.",
+   "grade": "B",
+   "note": "",
+   "sources": [
+    {"url": "https://patch.com/maryland/across-md/12-ways-observe-veterans-day-2026-maryland-parades-ceremonies-celebrations", "publisher": "Patch", "published": "2026-11-05"}
+   ]
+  },
+  {
+   "id": "maryland-wwii-memorial",
+   "day": "Wed 11 Nov, 11:00 AM EST",
+   "at": "2026-11-11T16:00:00Z",
+   "name": "Maryland World War II Memorial ceremony",
+   "where": "1920 Governor Ritchie Hwy, Annapolis (about 25 minutes east)",
+   "offer": "A Veterans Day ceremony hosted by the Maryland Department of Veterans and Military Families.",
+   "grade": "B",
+   "note": "Patch doesn't say whether it's open to the public.",
+   "sources": [
+    {"url": "https://patch.com/maryland/across-md/12-ways-observe-veterans-day-2026-maryland-parades-ceremonies-celebrations", "publisher": "Patch", "published": "2026-11-05"}
+   ]
+  },
+  {
+   "id": "annapolis-fra-ceremony",
+   "day": "Wed 11 Nov, 11:00 AM EST",
+   "at": "2026-11-11T16:00:00Z",
+   "name": "Annapolis Veterans Day ceremony (Fleet Reserve Association)",
+   "where": "Memorial Circle, downtown Annapolis; in bad weather, the Fleet Reserve Club, 100 Compromise St",
+   "offer": "The Fleet Reserve Association's Veterans Day ceremony.",
+   "grade": "B",
+   "note": "",
+   "sources": [
+    {"url": "https://patch.com/maryland/across-md/12-ways-observe-veterans-day-2026-maryland-parades-ceremonies-celebrations", "publisher": "Patch", "published": "2026-11-05"}
+   ]
+  },
+  {
+   "id": "arlington-national-cemetery-observance",
+   "day": "Wed 11 Nov, 11:00 AM EST (musical prelude 10:30)",
+   "at": "2026-11-11T16:00:00Z",
+   "name": "National Veterans Day Observance at Arlington National Cemetery",
+   "where": "Memorial Amphitheater, Arlington National Cemetery, Arlington, VA (MARC to Union Station, free for veterans on 11 Nov, then Metro)",
+   "offer": "The national observance: a wreath-laying at the Tomb of the Unknown Soldier at 11:00, then the observance in the Memorial Amphitheater. Free and open to the public.",
+   "grade": "A",
+   "note": "Expect security screening at the Welcome Center; allow extra time. Metro isn't part of MTA's free rides and runs a weekend schedule (5 AM-midnight) on 11 Nov.",
+   "sources": [
+    {"url": "https://patch.com/virginia/across-va/11-ways-observe-veterans-day-2026-virginia-parades-ceremonies-celebrations", "publisher": "Patch", "published": "2026-11-05"},
+    {"url": "https://wtop.com/local/2026/11/whats-open-and-closed-in-the-dc-region-on-veterans-day-2026/", "publisher": "WTOP", "published": "2026-11-10"}
+   ]
+  },
+  {
+   "id": "laurel-appreciation-breakfast",
+   "day": "Sat 14 Nov, 10:00 AM-noon",
+   "name": "Laurel Veterans Day Appreciation Breakfast",
+   "where": "Laurel Multiservice Center, 204 Fort Meade Rd, Laurel",
+   "offer": "The City of Laurel's third annual breakfast honoring veterans and military families, hosted by Mayor Keith R. Sydnor.",
+   "grade": "B",
+   "note": "Patch doesn't mention an RSVP; the city's November newsletter has details.",
+   "sources": [
+    {"url": "https://patch.com/maryland/bowie/veterans-day-2026-ceremonies-events-prince-georges-co", "publisher": "Patch", "published": "2026-11-10"}
+   ]
+  },
+  {
+   "id": "army-field-band-quartet",
+   "day": "Wed 18 Nov, 6:00-7:00 PM",
+   "name": "US Army Field Band Saxophone Quartet: Veterans Day concert",
+   "where": "Bain 50+ Center, 5470 Ruth Keeton Way, Columbia",
+   "offer": "A Howard County concert honoring veterans; light refreshments.",
+   "grade": "B",
+   "note": "Registration required (through Howard County).",
+   "sources": [
+    {"url": "https://patch.com/maryland/columbia/veterans-day-2026-ceremonies-events-howard-county", "publisher": "Patch", "published": "2026-11-10"}
+   ]
+  },
+  {
+   "id": "bubbas-33-glen-burnie",
+   "day": "Wed 11 Nov, until 4:00 PM",
+   "name": "Bubba's 33: free lunch (Glen Burnie, outside the area)",
+   "where": "Glen Burnie (street address not confirmed)",
+   "offer": "A free lunch from select entrees until 4 PM for active, former or retired military with proof of service.",
+   "grade": "B",
+   "note": "Bubba's 33 is Texas Roadhouse's sister chain; the nearest store is in Glen Burnie, outside the circles. Call first.",
+   "sources": [
+    {"url": "https://www.legion.org/information-center/news/veterans-day/2026/november/veterans-day-deals-and-discounts", "publisher": "The American Legion", "published": "2026-11-05"}
+   ]
+  },
+  {
+   "id": "maryland-state-parks",
+   "day": "Every day",
+   "name": "Maryland State Parks: free day-use entry for veterans",
+   "where": "Every Maryland state park day-use area (Patapsco Valley, Sandy Point and others)",
+   "offer": "Day-use entrance charges are waived for all US veterans, residents or not. Active-duty military and Maryland National Guard members get the same by showing their military ID at the gate.",
+   "grade": "A",
+   "note": "For the veteran or card holder only, not others in the car, unless the park charges per vehicle (then the vehicle fee is waived). Other facility charges still apply.",
+   "sources": [
+    {"url": "https://dnr.maryland.gov/Publiclands/Pages/oc.aspx", "publisher": "Maryland DNR (Service Charges for Maryland State Parks)", "published": "standing policy"}
+   ]
+  },
+  {
+   "id": "nps-fee-free-day",
+   "day": "Wed 11 Nov",
+   "name": "National Park Service: fee-free day",
+   "where": "Every National Park Service site that charges entry, such as Fort McHenry in Baltimore",
+   "offer": "Entrance fees are waived at National Park Service sites on Veterans Day.",
+   "grade": "B",
+   "note": "Veterans and Gold Star families can also get a free lifetime Interagency Military Pass.",
+   "sources": [
+    {"url": "https://patch.com/maryland/across-md/veterans-day-2026-free-meals-discounts-deals-maryland", "publisher": "Patch", "published": "2026-11-10"}
+   ]
+  },
+  {
+   "id": "national-cryptologic-museum",
+   "day": "Usually Tue-Sat 10 AM-4 PM; 11 Nov not confirmed",
+   "name": "National Cryptologic Museum (always free)",
+   "where": "8290 Colony Seven Rd, Annapolis Junction (beside Fort Meade)",
+   "offer": "NSA's museum of codes and code-breaking; admission is always free.",
+   "grade": "C",
+   "note": "Not a Veterans Day offer, and NSA's museum pages reportedly say it closes on federal holidays (nsa.gov couldn't be read here): call (301) 688-5849 before going.",
+   "sources": [
+    {"url": "https://www.nsa.gov/museum/", "publisher": "National Security Agency", "published": "undated"}
+   ]
+  },
+  {
+   "id": "closures",
+   "day": "Wed 11 Nov",
+   "name": "What's closed and open",
+   "where": "Anne Arundel, Prince George's and Howard counties",
+   "offer": "Federal offices are closed and there's no mail delivery. Anne Arundel County: county offices closed; public schools and libraries open; curbside trash and recycling on the normal schedule. Prince George's County (most of Laurel): county offices, public schools and libraries closed; trash collected. Howard County: the County Council's offices are closed; its full 2026 notice wasn't found (in 2024 its offices, courts, 50+ centers, animal shelter, Robinson Nature Center and historic sites closed while parks stayed open). MARC runs full service on all three lines; Metrorail runs its weekend schedule, 5 AM-midnight.",
+   "grade": "B",
+   "note": "Howard County libraries and schools weren't confirmed for 2026: check before going.",
+   "sources": [
+    {"url": "https://wtop.com/local/2026/11/whats-open-and-closed-in-the-dc-region-on-veterans-day-2026/", "publisher": "WTOP", "published": "2026-11-10"},
+    {"url": "https://www.aacounty.org/news-events/events/holiday-calendar/veterans-day", "publisher": "Anne Arundel County", "published": "2026"}
+   ]
+  }
+ ],
+ "leads": [
+  {
+   "name": "Joe's Crab Shack (Severn / Arundel Mills)",
+   "area": "Severn",
+   "q": "Joe's Crab Shack Arundel Mills Hanover MD",
+   "offer": "Dealybee's 9 Nov 2026 list: 20% off the meal for veterans dining in, parties up to 4, with a military ID. No store address was found in the area (Joe's locator page is gone; OpenStreetMap has only Halethorpe).",
+   "last_seen": "2026 (one list, no address)",
+   "src": "dealybee"
+  }
+ ],
+ "lead_sources": {
+  "dealybee": {"url": "https://dealybee.com/guides/veterans-day-free-meals", "publisher": "Dealybee (DC, Maryland & Virginia list, 9 Nov 2026)"}
+ }
+}
