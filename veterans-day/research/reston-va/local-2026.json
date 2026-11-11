@@ -1,0 +1,311 @@
+[
+  {
+    "name": "RTC Run for Valor 5K, Reston Town Center",
+    "kind": "event",
+    "address": "RTC Window Plaza, Opportunity Way, Reston, VA 20190",
+    "phone": "",
+    "geo": "38.954800,-77.361400",
+    "wednesday_hours": "06:45-09:30",
+    "status_2026": "confirmed",
+    "est_value_usd": 0,
+    "dates": "2026-11-11",
+    "hours_local": "06:45-09:30",
+    "mode": "event",
+    "eligible": [
+      "public",
+      "veteran",
+      "active",
+      "guard_reserve"
+    ],
+    "eligibility_quote": "Registration fee is $35 through race day.",
+    "guard_reserve": "yes",
+    "spouse_or_guest": "yes",
+    "proof": [],
+    "limits": "Registration $35 through race day; watching is free. Packet pickup opens 6:45 AM, remarks 7:45, anthem 7:50, start 8:00; the finish is on Market St in front of the fountain. Free parking in the orange garage.",
+    "offer": "2nd annual 5K run or walk at Reston Town Center, hosted by BXP for its veterans' employee group (Valor) with Microsoft; all proceeds to Soldiers' Angels.",
+    "grade": "A",
+    "sources": [
+      {
+        "url": "https://runsignup.com/Race/VA/Reston/RTCRunForValor5K",
+        "publisher": "RTC Run for Valor 5K (RunSignup)",
+        "published": "2026",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.ffxnow.com/2026/11/10/veterans-day-to-close-fairfax-county-government-but-not-schools/",
+        "publisher": "FFXnow",
+        "published": "2026-11-10",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://patch.com/virginia/across-va/11-ways-observe-veterans-day-2026-virginia-parades-ceremonies-celebrations",
+        "publisher": "Patch",
+        "published": "2026-11-05",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "notes": "Starts 8:00 AM at RTC Window Plaza on Opportunity Way (the race's own page and FFXnow; the first pass had the Pavilion at 11900 Market St). Pin from OpenStreetMap's Opportunity Way."
+  },
+  {
+    "name": "Herndon Veterans Day Ceremony (American Legion Post 184)",
+    "kind": "event",
+    "address": "777 Lynn St, Herndon, VA 20170",
+    "phone": "",
+    "geo": "38.971359,-77.385557",
+    "wednesday_hours": "10:45-12:00",
+    "status_2026": "confirmed",
+    "est_value_usd": 0,
+    "dates": "2026-11-11",
+    "hours_local": "10:45-12:00",
+    "mode": "event",
+    "eligible": [
+      "public",
+      "veteran",
+      "active",
+      "guard_reserve"
+    ],
+    "eligibility_quote": "Sponsored by American Legion Post 184, the Town of Herndon will observe Veterans Day with a ceremony on the Town Green (777 Lynn Street) at 11 a.m.",
+    "guard_reserve": "yes",
+    "spouse_or_guest": "yes",
+    "proof": [],
+    "limits": "Outdoor ceremony on the Herndon Town Green behind the Municipal Center.",
+    "offer": "Annual public Veterans Day observance at the Herndon Veterans Memorial on the Town Green, hosted by Wayne M. Kidwell American Legion Post 184 and the Town of Herndon. Free and open to all.",
+    "grade": "A",
+    "sources": [
+      {
+        "url": "https://www.ffxnow.com/2026/11/10/veterans-day-to-close-fairfax-county-government-but-not-schools/",
+        "publisher": "FFXnow",
+        "published": "2026-11-10",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://patch.com/virginia/across-va/11-ways-observe-veterans-day-2026-virginia-parades-ceremonies-celebrations",
+        "publisher": "Patch",
+        "published": "2026-11-05",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "notes": "11:00 AM on the Town Green, 777 Lynn St; end time not published. An Avenue of Flags is on display at Chestnut Grove Cemetery (FFXnow)."
+  },
+  {
+    "name": "Fairfax Veterans Day Ceremony (American Legion Post 177)",
+    "kind": "event",
+    "address": "3939 Oak St, Fairfax, VA 22030",
+    "phone": "",
+    "geo": "38.852025,-77.316541",
+    "wednesday_hours": "10:30-11:30",
+    "status_2026": "confirmed",
+    "est_value_usd": 0,
+    "dates": "2026-11-11",
+    "hours_local": "10:30-11:30",
+    "mode": "event",
+    "eligible": [
+      "public",
+      "veteran",
+      "active",
+      "guard_reserve"
+    ],
+    "eligibility_quote": "American Legion Post 177 (3939 Oak Street) will host a ceremony with Veterans of Foreign Wars Post 8469. The event will start at 10:30 a.m.",
+    "guard_reserve": "yes",
+    "spouse_or_guest": "yes",
+    "proof": [],
+    "limits": "Starts 10:30 AM; end time not published (an hour allowed).",
+    "offer": "Public Veterans Day ceremony at American Legion Post 177 with VFW Post 8469; keynote Judge Michael C. Sprano of the Fairfax Juvenile and Domestic Relations Court.",
+    "grade": "A",
+    "sources": [
+      {
+        "url": "https://www.ffxnow.com/2026/11/10/veterans-day-to-close-fairfax-county-government-but-not-schools/",
+        "publisher": "FFXnow",
+        "published": "2026-11-10",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://patch.com/virginia/across-va/11-ways-observe-veterans-day-2026-virginia-parades-ceremonies-celebrations",
+        "publisher": "Patch",
+        "published": "2026-11-05",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "notes": "10:30 AM at 3939 Oak St, Fairfax. The end time isn't published."
+  },
+  {
+    "name": "Veterans Day Ceremony, The Kensington Reston",
+    "kind": "event",
+    "address": "11501 Sunrise Valley Dr, Reston, VA 20191",
+    "phone": "(571) 494-8100",
+    "geo": "38.945135,-77.345114",
+    "wednesday_hours": "14:00-16:00",
+    "status_2026": "confirmed",
+    "est_value_usd": 0,
+    "dates": "2026-11-11",
+    "hours_local": "14:00-16:00",
+    "mode": "event",
+    "eligible": [
+      "public",
+      "veteran",
+      "active",
+      "guard_reserve"
+    ],
+    "eligibility_quote": "Join us as we honor and celebrate the brave men and women who have served our country.",
+    "guard_reserve": "yes",
+    "spouse_or_guest": "yes",
+    "proof": [],
+    "limits": "RSVP on its event page or call (571) 494-8100 first: The Kensington Reston is a senior-living community, and the page doesn't say whether the public may come.",
+    "offer": "\"An Afternoon of Gratitude & Recognition\": recognition of all veterans and live music.",
+    "grade": "A",
+    "sources": [
+      {
+        "url": "https://kensingtonreston.com/events/veterans-day-ceremony/",
+        "publisher": "The Kensington Reston",
+        "published": "2026",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "notes": "2:00-4:00 PM at 11501 Sunrise Valley Dr, Reston."
+  },
+  {
+    "name": "Chick-fil-A (Metro DC)",
+    "kind": "business",
+    "status_2026": "confirmed",
+    "est_value_usd": 9,
+    "dates": "2026-11-11",
+    "hours_local": "store hours",
+    "mode": "dine_in_or_to_go",
+    "eligible": [
+      "veteran",
+      "guard_reserve"
+    ],
+    "eligibility_quote": "All military veterans are invited to receive an entree on us this Veterans Day.",
+    "guard_reserve": "yes",
+    "spouse_or_guest": "no",
+    "proof": [
+      "military_id",
+      "va_card",
+      "dd214",
+      "dl_veteran"
+    ],
+    "participating_locations_only": false,
+    "limits": "Proof of service required (DoD ID, a driver's license marked Veteran, VA ID or DD-214). Dine-in preferred; not valid for mobile orders, Chick-fil-A Delivery or third-party delivery.",
+    "offer": "Free entree, open to close: a Chicken Biscuit, Egg White Grill or 4-count Chick-n-Minis until 10:30 AM; a Chicken Sandwich, Spicy Chicken Sandwich or 8-count Nuggets (regular or grilled) after.",
+    "grade": "A",
+    "sources": [
+      {
+        "url": "https://cfametrodc.com/",
+        "publisher": "Chick-fil-A Metro DC",
+        "published": "2026",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://wtop.com/local/2026/11/deals-and-freebies-for-veterans-day/",
+        "publisher": "WTOP",
+        "published": "2026-11-09",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "notes": "Only at Chick-fil-A Metro DC's participating restaurants. All 10 mapped here are on its list (read 10 Nov 2026); George Mason's student-union counter isn't, so it's left out."
+  },
+  {
+    "name": "Founding Farmers",
+    "kind": "business",
+    "status_2026": "confirmed",
+    "est_value_usd": 14,
+    "dates": "2026-11-11",
+    "hours_local": "11:00-21:00",
+    "mode": "dine_in",
+    "eligible": [
+      "veteran",
+      "active",
+      "guard_reserve"
+    ],
+    "eligibility_quote": "We offer a 50% discount for active duty, retired military personnel, and veterans, which applies on Wednesday, November 11.",
+    "guard_reserve": "yes",
+    "spouse_or_guest": "no",
+    "proof": [
+      "military_id",
+      "dd214",
+      "photo_in_uniform"
+    ],
+    "participating_locations_only": false,
+    "limits": "Brunch, lunch or dinner (not breakfast). Food only: no alcohol; tax and gratuity not included. Dine-in only; not with other offers, to go or delivery. Bring a valid ID or DD-214, or wear your uniform.",
+    "offer": "50% off brunch, lunch or dinner for active-duty, retired military and veterans.",
+    "grade": "A",
+    "stores": [
+      {
+        "address": "1904 Reston Metro Plaza, Reston, VA 20190",
+        "phone": "(703) 480-0870",
+        "wed_hours": "",
+        "geo": "38.948976,-77.338276"
+      },
+      {
+        "address": "1800 Tysons Blvd, Tysons, VA 22102",
+        "phone": "(703) 442-8783",
+        "wed_hours": "",
+        "geo": "38.922530,-77.222568"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.wearefoundingfarmers.com/a-time-to-serve-our-veterans/",
+        "publisher": "Founding Farmers",
+        "published": "2026",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://wtop.com/local/2026/11/deals-and-freebies-for-veterans-day/",
+        "publisher": "WTOP",
+        "published": "2026-11-09",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "notes": "Reston Station (1904 Reston Metro Plaza) and Tysons (1800 Tysons Blvd). Its page doesn't say every location takes part; reserve or call first. Store hours not checked."
+  },
+  {
+    "name": "Ted's Bulletin",
+    "kind": "business",
+    "status_2026": "announced",
+    "est_value_usd": 5,
+    "dates": "2026-11-11",
+    "hours_local": "07:00-21:00",
+    "mode": "in_store",
+    "eligible": [
+      "veteran",
+      "active",
+      "guard_reserve"
+    ],
+    "eligibility_quote": "Veterans get a free Ted's Tart on November 11.",
+    "guard_reserve": "yes",
+    "spouse_or_guest": "no",
+    "proof": [
+      "military_id",
+      "va_card",
+      "dd214"
+    ],
+    "participating_locations_only": false,
+    "limits": "In-store only; bring military ID.",
+    "offer": "Free homemade Ted's Tart pastry in store for veterans and active-duty military.",
+    "grade": "B",
+    "stores": [
+      {
+        "address": "11948 Market St, Reston, VA 20190",
+        "phone": "(703) 956-9510",
+        "wed_hours": "07:00-21:00",
+        "geo": "38.958836,-77.358455"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+        "publisher": "Military.com",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+        "publisher": "Stars and Stripes",
+        "published": "2026-11-06",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "notes": "Reston Town Center, 11948 Market St (open as of September 2026). From lists, not Ted's own page."
+  }
+]

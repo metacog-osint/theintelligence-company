@@ -1,0 +1,1975 @@
+{
+ "7 Brew": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (7_brew_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Applebee's": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (applebees): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "12970 Fair Lakes Shopping Ctr, Fairfax, VA 22033",
+    "status": "confirmed",
+    "wed_hours": "11:00-23:00",
+    "phone": "+1 703-802-9855",
+    "url": "https://restaurants.applebees.com/en-us/va/fairfax/12970-fair-lakes-shopping-ctr-79067",
+    "geo": "38.859987,-77.390141",
+    "source": "All the Places 2026-10-31: applebees"
+   }
+  ]
+ },
+ "Bar Louie": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places download failed (bar_louie); OpenStreetMap: 1 in the area",
+  "stores": [
+   {
+    "address": "20586 Easthampton Plaza, Ashburn, VA 20147",
+    "status": "unverified",
+    "wed_hours": "11:00-02:00",
+    "phone": "",
+    "url": "",
+    "osm_id": "node/6094139054",
+    "geo": "39.051657,-77.454146",
+    "source": "OpenStreetMap"
+   }
+  ]
+ },
+ "Biggby Coffee": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (biggby_coffee_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Blaze Pizza": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-24 (blaze_pizza): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "George Mason University, 4477 Aquia Creek Ln, Fairfax, VA 22030",
+    "status": "confirmed",
+    "wed_hours": "11:00-19:00",
+    "phone": "+1 703-993-9068",
+    "url": "https://locations.blazepizza.com/us/va/fairfax/blazepizza-1247",
+    "geo": "38.830610,-77.309190",
+    "source": "All the Places 2026-10-24: blaze_pizza"
+   }
+  ]
+ },
+ "Bob Evans": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (bob_evans_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Bonefish Grill": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (bonefish_grill): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "13005 Lee Jackson Hwy, Fairfax, VA 22033",
+    "status": "confirmed",
+    "wed_hours": "11:00-22:00",
+    "phone": "+1 703-378-4970",
+    "url": "https://locations.bonefishgrill.com/virginia/fairfax/13005-lee-jackson-hwy",
+    "geo": "38.879071,-77.395840",
+    "source": "All the Places 2026-10-31: bonefish_grill"
+   }
+  ]
+ },
+ "Buca di Beppo": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (buca_di_beppo_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Buffalo Wild Wings": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (buffalo_wild_wings_us): 4 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "11204 James Swart Circle, Fairfax, VA 22030",
+    "status": "confirmed",
+    "wed_hours": "11:00-00:45",
+    "phone": "+1 703-267-6979",
+    "url": "",
+    "geo": "38.855766,-77.333638",
+    "source": "All the Places 2026-10-31: buffalo_wild_wings_us"
+   },
+   {
+    "address": "46950 Community Plaza, Sterling, VA 20164",
+    "status": "confirmed",
+    "wed_hours": "11:00-23:45",
+    "phone": "+1 703-652-9499",
+    "url": "",
+    "geo": "39.015850,-77.377407",
+    "source": "All the Places 2026-10-31: buffalo_wild_wings_us"
+   },
+   {
+    "address": "304 Elden Street, Herndon, VA 20170",
+    "status": "confirmed",
+    "wed_hours": "11:00-23:45",
+    "phone": "+1 571-210-4004",
+    "url": "",
+    "geo": "38.967655,-77.372513",
+    "source": "All the Places 2026-10-31: buffalo_wild_wings_us"
+   },
+   {
+    "address": "21980 Colorado Drive, Dulles, VA 20166",
+    "status": "confirmed",
+    "wed_hours": "11:00-23:45",
+    "phone": "+1 703-444-3048",
+    "url": "",
+    "geo": "39.007924,-77.437206",
+    "source": "All the Places 2026-10-31: buffalo_wild_wings_us"
+   }
+  ]
+ },
+ "California Pizza Kitchen": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (california_pizza_kitchen): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "961 Chain Bridge Rd Mall, McLean, VA 22102",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "+1 703-761-1473",
+    "url": "https://www.cpk.com/locations/29650",
+    "geo": "38.917493,-77.221097",
+    "source": "All the Places 2026-10-31: california_pizza_kitchen"
+   }
+  ]
+ },
+ "Caribou Coffee": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (caribou_coffee_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Carrabba's Italian Grill": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places download failed (carrabbas); OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Casey's": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Charleys Cheesesteaks": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-17 (charleys_philly_steaks): 2 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "21100 Dulles Town Center Circle, Sterling, VA 20166",
+    "status": "confirmed",
+    "wed_hours": "11:00-19:00",
+    "phone": "+1 703-404-7120",
+    "url": "https://www.charleys.com/locations/dulles-town-center-mall/",
+    "geo": "39.033224,-77.425947",
+    "source": "All the Places 2026-10-17: charleys_philly_steaks"
+   },
+   {
+    "address": "7947L Tyson's Corner Center, Space G2AL, McLean, VA 22102",
+    "status": "confirmed",
+    "wed_hours": "10:00-21:00",
+    "phone": "+1 833-230-2930",
+    "url": "https://www.charleys.com/locations/tysons-corner-center/",
+    "geo": "38.917998,-77.220956",
+    "source": "All the Places 2026-10-17: charleys_philly_steaks"
+   }
+  ]
+ },
+ "Chick-fil-A": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (chick_fil_a): 10 in the area (George Mason's student-union counter left out); OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "45440 Dulles Crossing Plz, Sterling, VA 20166",
+    "status": "confirmed",
+    "wed_hours": "06:00-22:00",
+    "phone": "+1 703-444-0300",
+    "url": "https://www.chick-fil-a.com/locations/va/dulles-town-crossing",
+    "geo": "39.024880,-77.425749",
+    "source": "All the Places 2026-10-31: chick_fil_a"
+   },
+   {
+    "address": "46920 Community Plz, Sterling, VA 20164",
+    "status": "confirmed",
+    "wed_hours": "06:00-22:00",
+    "phone": "+1 703-444-1901",
+    "url": "https://www.chick-fil-a.com/locations/va/sugarland-crossing",
+    "geo": "39.016074,-77.376116",
+    "source": "All the Places 2026-10-31: chick_fil_a"
+   },
+   {
+    "address": "44835 Lakeview Overlook Plz, Ashburn, VA 20147",
+    "status": "confirmed",
+    "wed_hours": "06:00-22:00",
+    "phone": "+1 703-723-6172",
+    "url": "https://www.chick-fil-a.com/locations/va/george-washington",
+    "geo": "39.059884,-77.449811",
+    "source": "All the Places 2026-10-31: chick_fil_a"
+   },
+   {
+    "address": "4516 Fair Knoll Dr, Fairfax, VA 22033",
+    "status": "confirmed",
+    "wed_hours": "06:00-22:00",
+    "phone": "+1 703-222-1096",
+    "url": "https://www.chick-fil-a.com/locations/va/fair-lakes-va",
+    "geo": "38.862322,-77.387573",
+    "source": "All the Places 2026-10-31: chick_fil_a"
+   },
+   {
+    "address": "9509 Fairfax Blvd, Fairfax, VA 22031",
+    "status": "confirmed",
+    "wed_hours": "06:00-22:00",
+    "phone": "+1 703-934-2150",
+    "url": "https://www.chick-fil-a.com/locations/va/fairfax-circle",
+    "geo": "38.864447,-77.272980",
+    "source": "All the Places 2026-10-31: chick_fil_a"
+   },
+   {
+    "address": "12160 Sunset Hills Rd, Reston, VA 20190",
+    "status": "confirmed",
+    "wed_hours": "05:30-22:00",
+    "phone": "+1 571-203-1234",
+    "url": "https://www.chick-fil-a.com/locations/va/village-commons",
+    "geo": "38.954626,-77.366538",
+    "source": "All the Places 2026-10-31: chick_fil_a"
+   },
+   {
+    "address": "8461 Leesburg Pike Ste B, Vienna, VA 22182",
+    "status": "confirmed",
+    "wed_hours": "06:30-22:00",
+    "phone": "+1 703-847-1514",
+    "url": "https://www.chick-fil-a.com/locations/va/tysons-west-in-line",
+    "geo": "38.924635,-77.239826",
+    "source": "All the Places 2026-10-31: chick_fil_a"
+   },
+   {
+    "address": "1494 Northpoint Village Ctr, Reston, VA 20194",
+    "status": "confirmed",
+    "wed_hours": "06:00-22:00",
+    "phone": "+1 703-481-1725",
+    "url": "https://www.chick-fil-a.com/locations/va/north-point-village",
+    "geo": "38.978617,-77.348841",
+    "source": "All the Places 2026-10-31: chick_fil_a"
+   },
+   {
+    "address": "22015 Dulles Retail Plz, Sterling, VA 20166",
+    "status": "confirmed",
+    "wed_hours": "06:30-22:00",
+    "phone": "+1 571-325-2669",
+    "url": "https://www.chick-fil-a.com/locations/va/dulles-28-and-waxpool-road",
+    "geo": "39.007078,-77.438053",
+    "source": "All the Places 2026-10-31: chick_fil_a"
+   },
+   {
+    "address": "538 Maple Ave W, Vienna, VA 22180",
+    "status": "confirmed",
+    "wed_hours": "06:00-22:30",
+    "phone": "+1 571-595-8511",
+    "url": "https://www.chick-fil-a.com/locations/va/vienna-on-maple",
+    "geo": "38.893529,-77.274680",
+    "source": "All the Places 2026-10-31: chick_fil_a"
+   }
+  ]
+ },
+ "Chili's": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (chilis): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "45555 Eastern Plz, Sterling, VA 20166",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "+1 571-434-7200",
+    "url": "https://www.chilis.com/locations/us/virginia/sterling/dulles-town-crossing",
+    "geo": "39.023126,-77.424073",
+    "source": "All the Places 2026-10-31: chilis"
+   }
+  ]
+ },
+ "Chipotle": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (chipotle): 18 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "8461 Leesburg Pike, Vienna, VA 22182",
+    "status": "confirmed",
+    "wed_hours": "10:00-23:00",
+    "phone": "+1 571-326-1608",
+    "url": "https://locations.chipotle.com/va/vienna/8461-leesburg-pike",
+    "geo": "38.924895,-77.239884",
+    "source": "All the Places 2026-10-31: chipotle"
+   },
+   {
+    "address": "47010 Community Plz, Sterling, VA 20164",
+    "status": "confirmed",
+    "wed_hours": "10:00-23:00",
+    "phone": "+1 703-444-6106",
+    "url": "https://locations.chipotle.com/va/sterling/47010-community-plz",
+    "geo": "39.015589,-77.375163",
+    "source": "All the Places 2026-10-31: chipotle"
+   },
+   {
+    "address": "21031 Tripleseven Rd, Sterling, VA 20165",
+    "status": "confirmed",
+    "wed_hours": "10:00-23:00",
+    "phone": "+1 703-421-5079",
+    "url": "https://locations.chipotle.com/va/sterling/21031-tripleseven-rd",
+    "geo": "39.034638,-77.407112",
+    "source": "All the Places 2026-10-31: chipotle"
+   },
+   {
+    "address": "213 Maple Ave E, Vienna, VA 22180",
+    "status": "confirmed",
+    "wed_hours": "10:00-23:00",
+    "phone": "+1 703-255-1100",
+    "url": "https://locations.chipotle.com/va/vienna/213-maple-ave-e",
+    "geo": "38.903500,-77.262046",
+    "source": "All the Places 2026-10-31: chipotle"
+   },
+   {
+    "address": "11913 Freedom Dr, Reston, VA 20190",
+    "status": "confirmed",
+    "wed_hours": "10:00-23:00",
+    "phone": "+1 703-435-5795",
+    "url": "https://locations.chipotle.com/va/reston/11913-freedom-dr",
+    "geo": "38.959222,-77.356775",
+    "source": "All the Places 2026-10-31: chipotle"
+   },
+   {
+    "address": "2946 Chain Bridge Rd, Oakton, VA 22124",
+    "status": "confirmed",
+    "wed_hours": "10:00-23:00",
+    "phone": "+1 571-328-5279",
+    "url": "https://locations.chipotle.com/va/oakton/2946-chain-bridge-rd",
+    "geo": "38.881287,-77.301766",
+    "source": "All the Places 2026-10-31: chipotle"
+   },
+   {
+    "address": "12152 Sunset Hills Rd, Reston, VA 20190",
+    "status": "confirmed",
+    "wed_hours": "10:00-23:00",
+    "phone": "+1 703-435-0888",
+    "url": "https://locations.chipotle.com/va/reston/12152-sunset-hills-rd",
+    "geo": "38.954881,-77.366198",
+    "source": "All the Places 2026-10-31: chipotle"
+   },
+   {
+    "address": "11160 S Lakes Dr, Reston, VA 20191",
+    "status": "confirmed",
+    "wed_hours": "10:00-22:00",
+    "phone": "+1 571-392-7746",
+    "url": "https://locations.chipotle.com/va/reston/11160-s-lakes-dr",
+    "geo": "38.938525,-77.330547",
+    "source": "All the Places 2026-10-31: chipotle"
+   },
+   {
+    "address": "7923 L Tysons Corner Center, McLean, VA 22102",
+    "status": "confirmed",
+    "wed_hours": "10:00-23:00",
+    "phone": "+1 703-288-3890",
+    "url": "https://locations.chipotle.com/va/mclean/7923-l-tysons-corner-center",
+    "geo": "38.917645,-77.220626",
+    "source": "All the Places 2026-10-31: chipotle"
+   },
+   {
+    "address": "13354 Franklin Farm Rd, Herndon, VA 20171",
+    "status": "confirmed",
+    "wed_hours": "10:00-23:00",
+    "phone": "+1 703-435-4715",
+    "url": "https://locations.chipotle.com/va/herndon/13354-franklin-farm-rd",
+    "geo": "38.907895,-77.408754",
+    "source": "All the Places 2026-10-31: chipotle"
+   },
+   {
+    "address": "1144 Elden St, Herndon, VA 20170",
+    "status": "confirmed",
+    "wed_hours": "10:00-23:00",
+    "phone": "+1 703-435-3325",
+    "url": "https://locations.chipotle.com/va/herndon/1144-elden-st",
+    "geo": "38.963686,-77.399054",
+    "source": "All the Places 2026-10-31: chipotle"
+   },
+   {
+    "address": "11062 Main St, Fairfax, VA 22030",
+    "status": "confirmed",
+    "wed_hours": "10:00-23:00",
+    "phone": "+1 703-934-7099",
+    "url": "https://locations.chipotle.com/va/fairfax/11062-main-st",
+    "geo": "38.852613,-77.327273",
+    "source": "All the Places 2026-10-31: chipotle"
+   },
+   {
+    "address": "22000 Dulles Retail Plz, Dulles, VA 20166",
+    "status": "confirmed",
+    "wed_hours": "10:00-23:00",
+    "phone": "+1 571-401-8103",
+    "url": "https://locations.chipotle.com/va/dulles/22000-dulles-retail-plz",
+    "geo": "39.006358,-77.437058",
+    "source": "All the Places 2026-10-31: chipotle"
+   },
+   {
+    "address": "9506 Main St, Fairfax, VA 22031",
+    "status": "confirmed",
+    "wed_hours": "10:00-23:00",
+    "phone": "+1 571-328-5485",
+    "url": "https://locations.chipotle.com/va/fairfax/9506-main-st",
+    "geo": "38.843022,-77.273495",
+    "source": "All the Places 2026-10-31: chipotle"
+   },
+   {
+    "address": "4477 Aquia Creek Lane, Fairfax, VA 22030",
+    "status": "confirmed",
+    "wed_hours": "10:00-22:00",
+    "phone": "+1 571-459-2152",
+    "url": "https://locations.chipotle.com/va/fairfax/4477-aquia-creek-lane",
+    "geo": "38.829878,-77.307739",
+    "source": "All the Places 2026-10-31: chipotle"
+   },
+   {
+    "address": "13042 Fair Lakes Shopping Ctr, Fairfax, VA 22033",
+    "status": "confirmed",
+    "wed_hours": "10:00-23:00",
+    "phone": "+1 703-222-1117",
+    "url": "https://locations.chipotle.com/va/fairfax/13042-fair-lakes-shopping-ctr",
+    "geo": "38.857263,-77.394349",
+    "source": "All the Places 2026-10-31: chipotle"
+   },
+   {
+    "address": "11939 Grand Commons Ave, Fairfax, VA 22030",
+    "status": "confirmed",
+    "wed_hours": "10:00-23:00",
+    "phone": "+1 703-222-7344",
+    "url": "https://locations.chipotle.com/va/fairfax/11939-grand-commons-ave",
+    "geo": "38.857659,-77.357500",
+    "source": "All the Places 2026-10-31: chipotle"
+   },
+   {
+    "address": "8191 Strawberry Ln, Falls Church, VA 22042",
+    "status": "confirmed",
+    "wed_hours": "10:00-23:00",
+    "phone": "+1 571-423-5150",
+    "url": "https://locations.chipotle.com/va/falls-church/8191-strawberry-ln",
+    "geo": "38.872043,-77.228280",
+    "source": "All the Places 2026-10-31: chipotle"
+   }
+  ]
+ },
+ "Circle K / Holiday": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (circle_k): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "44680 Wellfleet Dr, Ashburn, VA 20147",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 703-724-1890",
+    "url": "",
+    "geo": "39.049066,-77.453926",
+    "source": "All the Places 2026-10-31: circle_k"
+   }
+  ]
+ },
+ "Cracker Barrel": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Dave & Buster's": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (dave_and_busters): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "11958u Fair Oaks Mall, Fairfax, VA 22033",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "+1 703-259-4050",
+    "url": "https://www.daveandbusters.com/us/en/about/locations/fairfax",
+    "geo": "38.863405,-77.361481",
+    "source": "All the Places 2026-10-31: dave_and_busters"
+   }
+  ]
+ },
+ "Denny's": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (dennys_us): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "10473 Lee Hwy, Fairfax, VA 22030",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 703-273-8133",
+    "url": "https://locations.dennys.com/va/fairfax/247411",
+    "geo": "38.858334,-77.306468",
+    "source": "All the Places 2026-10-31: dennys_us"
+   }
+  ]
+ },
+ "Dunkin'": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (dunkin_us): 18 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "411 Maple Avenue East, Vienna, VA 22180",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "",
+    "url": "https://www.dunkindonuts.com/locations/us/va/vienna/411-maple-avenue-east/store-366586/",
+    "geo": "38.907437,-77.257209",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "1495 Cornerside Blvd, Vienna, VA 22182",
+    "status": "confirmed",
+    "wed_hours": "05:00-18:45",
+    "phone": "+1 571-336-0720",
+    "url": "https://www.dunkindonuts.com/locations/us/va/vienna/1495-cornerside-blvd/store-358600/",
+    "geo": "38.930421,-77.244060",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "2750 Gallows Rd, Unit E, Vienna, VA 22180",
+    "status": "confirmed",
+    "wed_hours": "05:00-17:15",
+    "phone": "+1 703-992-8522",
+    "url": "https://www.dunkindonuts.com/locations/us/va/vienna/2750-gallows-rd/store-350973/",
+    "geo": "38.878467,-77.227784",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "314 Maple Ave W, Vienna, VA 22180",
+    "status": "confirmed",
+    "wed_hours": "05:00-18:45",
+    "phone": "+1 703-865-4760",
+    "url": "https://www.dunkindonuts.com/locations/us/va/vienna/314-maple-ave-w/store-302972/",
+    "geo": "38.897582,-77.269689",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "23070 Oak Grove Rd, Sterling, VA 20166",
+    "status": "confirmed",
+    "wed_hours": "04:30-18:45",
+    "phone": "+1 703-435-9233",
+    "url": "https://www.dunkindonuts.com/locations/us/va/sterling/23070-oak-grove-rd/store-344775/",
+    "geo": "38.978161,-77.410423",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "47010 Community Plz, Suite 180, Sterling, VA 20164",
+    "status": "confirmed",
+    "wed_hours": "04:30-20:45",
+    "phone": "+1 703-202-8091",
+    "url": "https://www.dunkindonuts.com/locations/us/va/sterling/47010-community-plz/store-335797/",
+    "geo": "39.015474,-77.374755",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "2280 Hunters Woods Plz, Reston, VA 20191",
+    "status": "confirmed",
+    "wed_hours": "05:30-19:45",
+    "phone": "+1 703-860-9252",
+    "url": "https://www.dunkindonuts.com/locations/us/va/reston/2280-hunters-woods-plz/store-349165/",
+    "geo": "38.936131,-77.363339",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "2946 Chain Bridge Rd, Suite F, Oakton, VA 22124",
+    "status": "confirmed",
+    "wed_hours": "05:00-17:45",
+    "phone": "+1 571-340-3567",
+    "url": "https://www.dunkindonuts.com/locations/us/va/oakton/2946-chain-bridge-rd/store-355111/",
+    "geo": "38.881123,-77.301547",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "8119 Watson St, McLean, VA 22102",
+    "status": "confirmed",
+    "wed_hours": "04:30-21:45",
+    "phone": "+1 703-829-1610",
+    "url": "https://www.dunkindonuts.com/locations/us/va/mclean/8119-watson-st/store-343544/",
+    "geo": "38.916925,-77.227162",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "141 Spring St, Suite 200, Herndon, VA 20170",
+    "status": "confirmed",
+    "wed_hours": "04:30-18:45",
+    "phone": "+1 703-437-5672",
+    "url": "https://www.dunkindonuts.com/locations/us/va/herndon/141-spring-st/store-344857/",
+    "geo": "38.958114,-77.373590",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "4349 Chesapeake Ln, George Mason University, Fairfax, VA 22030",
+    "status": "confirmed",
+    "wed_hours": "07:00-17:45",
+    "phone": "+1 703-993-6688",
+    "url": "https://www.dunkindonuts.com/locations/us/va/fairfax/4349-chesapeake-ln/store-356615/",
+    "geo": "38.832025,-77.306190",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "12701 Shoppes Ln, Fairfax, VA 22033",
+    "status": "confirmed",
+    "wed_hours": "05:00-21:45",
+    "phone": "+1 703-818-7480",
+    "url": "https://www.dunkindonuts.com/locations/us/va/fairfax/12701-shoppes-ln/store-353496/",
+    "geo": "38.861059,-77.386526",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "10020 Main St, Fairfax, VA 22031",
+    "status": "confirmed",
+    "wed_hours": "05:00-17:45",
+    "phone": "+1 703-537-0851",
+    "url": "https://www.dunkindonuts.com/locations/us/va/fairfax/10020-main-st/store-350656/",
+    "geo": "38.843819,-77.292343",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "10955 Fairfax Blvd, Ste 102, Fairfax, VA 22030",
+    "status": "confirmed",
+    "wed_hours": "05:00-20:45",
+    "phone": "+1 703-279-1859",
+    "url": "https://www.dunkindonuts.com/locations/us/va/fairfax/10955-fairfax-blvd/store-349668/",
+    "geo": "38.852547,-77.322559",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "10633 Braddock Rd, Fairfax, VA 22032",
+    "status": "confirmed",
+    "wed_hours": "05:00-18:45",
+    "phone": "+1 703-691-4090",
+    "url": "https://www.dunkindonuts.com/locations/us/va/fairfax/10633-braddock-rd/store-308047/",
+    "geo": "38.825533,-77.314685",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "9550 Fairfax Blvd, Fairfax, VA 22031",
+    "status": "confirmed",
+    "wed_hours": "04:00-20:45",
+    "phone": "+1 703-591-3855",
+    "url": "https://www.dunkindonuts.com/locations/us/va/fairfax/9550-fairfax-blvd/store-306136/",
+    "geo": "38.865146,-77.274380",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "13061 Lee Jackson Memorial Hwy, GREENBRIAR SHOPPING CENTER, Fairfax, VA 22033",
+    "status": "confirmed",
+    "wed_hours": "04:00-19:45",
+    "phone": "+1 703-631-4503",
+    "url": "https://www.dunkindonuts.com/locations/us/va/fairfax/13061-lee-jackson-memorial-hwy/store-302694/",
+    "geo": "38.880784,-77.398364",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "44110 Ashburn Village Blvd, #184, Ashburn, VA 20147",
+    "status": "confirmed",
+    "wed_hours": "05:00-18:45",
+    "phone": "+1 571-415-6080",
+    "url": "https://www.dunkindonuts.com/locations/us/va/ashburn/44110-ashburn-village-blvd/store-350041/",
+    "geo": "39.043891,-77.472220",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   }
+  ]
+ },
+ "Famous Dave's": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (famous_daves_us): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "2910 Chain Bridge Road, Oakton, VA 22124",
+    "status": "confirmed",
+    "wed_hours": "11:00-21:00",
+    "phone": "+1 703-281-3800",
+    "url": "https://www.famousdaves.com/Locations/oakton",
+    "geo": "38.882458,-77.298907",
+    "source": "All the Places 2026-10-31: famous_daves_us"
+   }
+  ]
+ },
+ "Fazoli's": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (fazolis_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Firehouse Subs": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (firehouse_subs): 4 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "12120 Fairfax Towne Center, Fairfax, VA 22033",
+    "status": "confirmed",
+    "wed_hours": "10:00-21:00",
+    "phone": "+1 703-865-7997",
+    "url": "https://www.firehousesubs.com/store-locator/store/55KMLOnlxuKx3S8revYDUT",
+    "geo": "38.866973,-77.366613",
+    "source": "All the Places 2026-10-31: firehouse_subs"
+   },
+   {
+    "address": "47010 Community Plaza, Suite 110, Sterling, VA 20164",
+    "status": "confirmed",
+    "wed_hours": "10:00-21:00",
+    "phone": "+1 571-267-7717",
+    "url": "https://www.firehousesubs.com/store-locator/store/GR87NptNWiuRBaPNyd8H8b",
+    "geo": "39.015445,-77.374830",
+    "source": "All the Places 2026-10-31: firehouse_subs"
+   },
+   {
+    "address": "9548-D Main St., Fairfax, VA 22031",
+    "status": "confirmed",
+    "wed_hours": "10:00-21:00",
+    "phone": "+1 703-991-0783",
+    "url": "https://www.firehousesubs.com/store-locator/store/hJZjwxAehbnocdau6Q6eUx",
+    "geo": "38.842630,-77.273490",
+    "source": "All the Places 2026-10-31: firehouse_subs"
+   },
+   {
+    "address": "2545 Centreville Road, Herndon, VA 20171",
+    "status": "confirmed",
+    "wed_hours": "10:00-21:00",
+    "phone": "+1 703-376-8000",
+    "url": "https://www.firehousesubs.com/store-locator/store/rw0U6z1KBoPH68cJM6k5oA",
+    "geo": "38.949043,-77.411441",
+    "source": "All the Places 2026-10-31: firehouse_subs"
+   }
+  ]
+ },
+ "Fogo de Chão": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (fogo_de_chao): 1 in the area (town read from its full address)",
+  "stores": [
+   {
+    "address": "1775 Tysons Boulevard Suite 50, Tysons, VA 22102",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "+1 703-556-0200",
+    "url": "https://fogodechao.com/location/tysons/",
+    "geo": "38.923841,-77.221587",
+    "source": "All the Places 2026-10-31: fogo_de_chao"
+   }
+  ]
+ },
+ "Freddy's Frozen Custard & Steakburgers": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (freddys_us): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "10030 Fairfax Blvd, Fairfax, VA 22030",
+    "status": "confirmed",
+    "wed_hours": "10:30-22:00",
+    "phone": "+1 703-293-2900",
+    "url": "https://www.freddys.com/location/fairfax-va",
+    "geo": "38.863266,-77.291291",
+    "source": "All the Places 2026-10-31: freddys_us"
+   }
+  ]
+ },
+ "Golden Corral": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (golden_corral): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Granite City Food & Brewery": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Great Clips": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (great_clips): 3 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "3989 Pickett Rd, Fairfax, VA 22031",
+    "status": "confirmed",
+    "wed_hours": "09:00-20:00",
+    "phone": "+1 571-407-7111",
+    "url": "https://salons.greatclips.com/us/va/fairfax/3989-pickett-rd",
+    "geo": "38.843135,-77.272122",
+    "source": "All the Places 2026-10-31: great_clips"
+   },
+   {
+    "address": "11130 South Lakes Dr., Reston, VA 20191",
+    "status": "confirmed",
+    "wed_hours": "09:00-20:00",
+    "phone": "+1 571-490-3649",
+    "url": "https://salons.greatclips.com/us/va/reston/11130-south-lakes-dr",
+    "geo": "38.939354,-77.330525",
+    "source": "All the Places 2026-10-31: great_clips"
+   },
+   {
+    "address": "21385 Epicerie Plz, Sterling, VA 20164",
+    "status": "confirmed",
+    "wed_hours": "09:00-19:30",
+    "phone": "+1 571-313-1125",
+    "url": "https://salons.greatclips.com/us/va/sterling/21385-epicerie-plz",
+    "geo": "39.024212,-77.395402",
+    "source": "All the Places 2026-10-31: great_clips"
+   }
+  ]
+ },
+ "Hooters": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (hooters): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "IHOP": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (ihop): 4 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "44030 Pipeline Plaza, Ashburn, VA 20147",
+    "status": "confirmed",
+    "wed_hours": "06:00-24:00",
+    "phone": "+1 571-206-3672",
+    "url": "https://restaurants.ihop.com/va/ashburn/breakfast-44030-pipeline-plaza-3129",
+    "geo": "39.022198,-77.478561",
+    "source": "All the Places 2026-10-31: ihop"
+   },
+   {
+    "address": "494 Elden Street, Suite 8, Herndon, VA 20170",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 703-657-2199",
+    "url": "https://restaurants.ihop.com/va/herndon/breakfast-494-elden-street-3637",
+    "geo": "38.968924,-77.377402",
+    "source": "All the Places 2026-10-31: ihop"
+   },
+   {
+    "address": "9490 Blake Lane, Fairfax, VA 22031",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 703-277-1022",
+    "url": "https://restaurants.ihop.com/va/fairfax/breakfast-9490-blake-lane-471",
+    "geo": "38.867485,-77.271992",
+    "source": "All the Places 2026-10-31: ihop"
+   },
+   {
+    "address": "46931 Cedar Lake Plaza, Sterling, VA 20164",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 571-267-3937",
+    "url": "https://restaurants.ihop.com/va/sterling/breakfast-46931-cedar-lake-plaza-580",
+    "geo": "39.017507,-77.375952",
+    "source": "All the Places 2026-10-31: ihop"
+   }
+  ]
+ },
+ "Insomnia Cookies": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (insomnia_cookies): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "10669 Braddock Road, Space D-7, Fairfax, VA 22032",
+    "status": "confirmed",
+    "wed_hours": "11:00-01:00",
+    "phone": "+1 571-370-5897",
+    "url": "",
+    "geo": "38.825051,-77.314682",
+    "source": "All the Places 2026-10-31: insomnia_cookies"
+   }
+  ]
+ },
+ "Jiffy Lube": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (jiffy_lube_us): 6 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "10535 FAIRFAX BOULEVARD, FAIRFAX, VA 22030",
+    "status": "confirmed",
+    "wed_hours": "08:00-19:00",
+    "phone": "+1 703-591-5439",
+    "url": "https://www.jiffylube.com/locations/va/fairfax/83",
+    "geo": "38.857484,-77.309832",
+    "source": "All the Places 2026-10-31: jiffy_lube_us"
+   },
+   {
+    "address": "43910 FARMWELL HUNT PLZ, ASHBURN, VA 20147",
+    "status": "confirmed",
+    "wed_hours": "08:00-19:00",
+    "phone": "+1 703-724-3985",
+    "url": "https://www.jiffylube.com/locations/va/ashburn/2687",
+    "geo": "39.023569,-77.480267",
+    "source": "All the Places 2026-10-31: jiffy_lube_us"
+   },
+   {
+    "address": "604 ELDEN ST, HERNDON, VA 20170",
+    "status": "confirmed",
+    "wed_hours": "08:00-18:00",
+    "phone": "+1 703-435-2220",
+    "url": "https://www.jiffylube.com/locations/va/herndon/92",
+    "geo": "38.969417,-77.381901",
+    "source": "All the Places 2026-10-31: jiffy_lube_us"
+   },
+   {
+    "address": "210 MAPLE AVE W, VIENNA, VA 22180",
+    "status": "confirmed",
+    "wed_hours": "08:00-19:00",
+    "phone": "+1 703-242-0691",
+    "url": "https://www.jiffylube.com/locations/va/vienna/1192",
+    "geo": "38.899401,-77.267536",
+    "source": "All the Places 2026-10-31: jiffy_lube_us"
+   },
+   {
+    "address": "46210 POTOMAC RUN PLZ UNIT 100, STERLING, VA 20164",
+    "status": "confirmed",
+    "wed_hours": "08:00-18:00",
+    "phone": "+1 703-433-0460",
+    "url": "https://www.jiffylube.com/locations/va/sterling/1911",
+    "geo": "39.027163,-77.399482",
+    "source": "All the Places 2026-10-31: jiffy_lube_us"
+   },
+   {
+    "address": "1014 W BROAD ST, FALLS CHURCH, VA 22046",
+    "status": "confirmed",
+    "wed_hours": "08:00-19:00",
+    "phone": "+1 703-532-5823",
+    "url": "https://www.jiffylube.com/locations/va/falls-church/872",
+    "geo": "38.891445,-77.184889",
+    "source": "All the Places 2026-10-31: jiffy_lube_us"
+   }
+  ]
+ },
+ "Kohl's": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (kohls_us): 2 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "21245 SIGNAL HILL PLAZA, STERLING, VA 20164",
+    "status": "confirmed",
+    "wed_hours": "09:00-21:00",
+    "phone": "+1 703-430-3487",
+    "url": "https://www.kohls.com/stores/va/sterling-295.shtml",
+    "geo": "39.028038,-77.389412",
+    "source": "All the Places 2026-10-31: kohls_us"
+   },
+   {
+    "address": "12551 FAIR LAKES CIR, FAIRFAX, VA 22033",
+    "status": "confirmed",
+    "wed_hours": "09:00-21:00",
+    "phone": "+1 703-802-8063",
+    "url": "https://www.kohls.com/stores/va/fairfax-312.shtml",
+    "geo": "38.857171,-77.379635",
+    "source": "All the Places 2026-10-31: kohls_us"
+   }
+  ]
+ },
+ "Krispy Kreme": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places download failed (krispy_kreme_us); OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Kwik Trip": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (kwik_trip): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Little Caesars": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (little_caesars_us): 2 in the area (a partial list); OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "22045 ENTERPRISE ST, STERLING, VA 20164",
+    "status": "confirmed",
+    "wed_hours": "10:30-23:00",
+    "phone": "+1 571-434-0070",
+    "url": "https://littlecaesars.com/en-us/store/10184",
+    "geo": "38.997534,-77.409153",
+    "source": "All the Places 2026-10-31: little_caesars_us"
+   },
+   {
+    "address": "1250 ELDEN ST, HERNDON, VA 20170",
+    "status": "confirmed",
+    "wed_hours": "10:30-23:00",
+    "phone": "+1 571-267-2417",
+    "url": "https://littlecaesars.com/en-us/store/21312",
+    "geo": "38.961881,-77.400962",
+    "source": "All the Places 2026-10-31: little_caesars_us"
+   }
+  ]
+ },
+ "Marcus Theatres": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Menchie's": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (menchies): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Mission BBQ": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "OpenStreetMap: 1 in the area",
+  "stores": [
+   {
+    "address": "45979 Denizen Plaza, Sterling, VA 20165",
+    "status": "unverified",
+    "wed_hours": "",
+    "phone": "",
+    "url": "",
+    "osm_id": "way/45065394",
+    "geo": "39.035326,-77.409197",
+    "source": "OpenStreetMap"
+   }
+  ]
+ },
+ "Olive Garden": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "OpenStreetMap: 2 in the area",
+  "stores": [
+   {
+    "address": "8133 Leesburg Pike, Vienna, VA 22182",
+    "status": "unverified",
+    "wed_hours": "",
+    "phone": "+1 703-893-3157",
+    "url": "https://www.olivegarden.com/locations/va/vienna/vienna/1361",
+    "osm_id": "node/2128168272",
+    "geo": "38.915442,-77.227145",
+    "source": "OpenStreetMap"
+   },
+   {
+    "address": "12980 Fair Lakes Parkway, Fairfax, VA 22033",
+    "status": "unverified",
+    "wed_hours": "11:00-22:00",
+    "phone": "+1 703-631-4840",
+    "url": "https://www.olivegarden.com/locations/va/fairfax/fairfax/1462",
+    "osm_id": "way/196400902",
+    "geo": "38.858715,-77.391180",
+    "source": "OpenStreetMap"
+   }
+  ]
+ },
+ "Outback Steakhouse": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (outback_steakhouse): 2 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "365 Elden Street, Herndon, VA 20170",
+    "status": "confirmed",
+    "wed_hours": "11:00-22:00",
+    "phone": "+1 703-318-0999",
+    "url": "https://locations.outback.com/virginia/herndon/365-elden-street",
+    "geo": "38.966907,-77.373596",
+    "source": "All the Places 2026-10-31: outback_steakhouse"
+   },
+   {
+    "address": "9579 Braddock Road, Fairfax, VA 22032",
+    "status": "confirmed",
+    "wed_hours": "11:00-22:00",
+    "phone": "+1 703-978-6283",
+    "url": "https://locations.outback.com/virginia/fairfax/9579-braddock-road",
+    "geo": "38.818029,-77.275951",
+    "source": "All the Places 2026-10-31: outback_steakhouse"
+   }
+  ]
+ },
+ "Perkins": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (perkins_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Pilot / Flying J": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-10 (pilot_flying_j): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Pizza Ranch": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (pizza_ranch_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Qdoba": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (qdoba): 2 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "10338 Main St, Fairfax, VA 22030",
+    "status": "confirmed",
+    "wed_hours": "11:00-20:30",
+    "phone": "",
+    "url": "https://locations.qdoba.com/us/va/fairfax/10338-main-st",
+    "geo": "38.846102,-77.303513",
+    "source": "All the Places 2026-10-31: qdoba"
+   },
+   {
+    "address": "7511 Leesburg Pike, Falls Church, VA 22043",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "",
+    "url": "https://locations.qdoba.com/us/va/falls-church/7511-leesburg-pike/delivery",
+    "geo": "38.902607,-77.205036",
+    "source": "All the Places 2026-10-31: qdoba"
+   }
+  ]
+ },
+ "Red Lobster": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-17 (red_lobster_us): 2 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "10325 Fairfax Blvd, Fairfax, VA 22030",
+    "status": "confirmed",
+    "wed_hours": "11:00-22:00",
+    "phone": "+1 703-691-1011",
+    "url": "https://www.redlobster.com/locations/list/va/fairfax/10325-fairfax-blvd/",
+    "geo": "38.859884,-77.300930",
+    "source": "All the Places 2026-10-17: red_lobster_us"
+   },
+   {
+    "address": "21065 Dulles Town Center, Sterling, VA 20166",
+    "status": "confirmed",
+    "wed_hours": "11:00-22:00",
+    "phone": "+1 571-434-8815",
+    "url": "https://www.redlobster.com/locations/list/va/sterling/21065-dulles-town-center/",
+    "geo": "39.028366,-77.424071",
+    "source": "All the Places 2026-10-17: red_lobster_us"
+   }
+  ]
+ },
+ "Red Robin": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-17 (red_robin): 2 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "21045 Dulles Town Cir, Dulles, VA 20166",
+    "status": "confirmed",
+    "wed_hours": "11:00-21:00",
+    "phone": "+1 703-421-0038",
+    "url": "https://www.redrobin.com/location/red-robin-dulles-town-center",
+    "geo": "39.028876,-77.425442",
+    "source": "All the Places 2026-10-17: red_robin"
+   },
+   {
+    "address": "13056 Fairlakes Shop Ctr, Fairfax, VA 22033",
+    "status": "confirmed",
+    "wed_hours": "11:00-21:00",
+    "phone": "+1 703-502-0334",
+    "url": "https://www.redrobin.com/location/red-robin-fairlakes",
+    "geo": "38.858060,-77.395723",
+    "source": "All the Places 2026-10-17: red_robin"
+   }
+  ]
+ },
+ "Ruby Tuesday": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (ruby_tuesday_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Scooter's Coffee": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (scooters_coffee_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Shake Shack": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-17 (shake_shack): 6 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "11040 Main Street, Fairfax, VA 22030",
+    "status": "confirmed",
+    "wed_hours": "10:00-22:00",
+    "phone": "",
+    "url": "https://shakeshack.com/location/kamp-washington-va",
+    "geo": "38.852910,-77.325780",
+    "source": "All the Places 2026-10-17: shake_shack"
+   },
+   {
+    "address": "20961 Southbank St, Sterling, VA 20165",
+    "status": "confirmed",
+    "wed_hours": "10:00-22:00",
+    "phone": "+1 571-650-3062",
+    "url": "https://shakeshack.com/location/cascades-va",
+    "geo": "39.035371,-77.397815",
+    "source": "All the Places 2026-10-17: shake_shack"
+   },
+   {
+    "address": "2911 District Ave, Fairfax, VA 22031",
+    "status": "confirmed",
+    "wed_hours": "10:00-23:00",
+    "phone": "+1 571-307-6701",
+    "url": "https://shakeshack.com/location/mosaic-district-va",
+    "geo": "38.871724,-77.229289",
+    "source": "All the Places 2026-10-17: shake_shack"
+   },
+   {
+    "address": "11940 Democracy Dr, Reston, VA 20190",
+    "status": "confirmed",
+    "wed_hours": "10:00-22:00",
+    "phone": "+1 571-640-8702",
+    "url": "https://shakeshack.com/location/reston-va",
+    "geo": "38.958076,-77.358105",
+    "source": "All the Places 2026-10-17: shake_shack"
+   },
+   {
+    "address": "8361A Leesburg Pike, Vienna, VA 22182",
+    "status": "confirmed",
+    "wed_hours": "10:00-22:00",
+    "phone": "+1 571-668-4307",
+    "url": "https://shakeshack.com/location/pike-7-va",
+    "geo": "38.921094,-77.235881",
+    "source": "All the Places 2026-10-17: shake_shack"
+   },
+   {
+    "address": "7924 Tysons Corner Center, McLean, VA 22102",
+    "status": "confirmed",
+    "wed_hours": "10:00-22:00",
+    "phone": "+1 571-620-0383",
+    "url": "https://shakeshack.com/location/tysons-corner-center-va",
+    "geo": "38.918254,-77.220902",
+    "source": "All the Places 2026-10-17: shake_shack"
+   }
+  ]
+ },
+ "Sheetz": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (sheetz): 4 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "45550 Dulles Plaza, Sterling, VA 20166",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 571-746-0235",
+    "url": "https://orders.sheetz.com/findASheetz/store/622",
+    "geo": "38.978300,-77.425300",
+    "source": "All the Places 2026-10-31: sheetz"
+   },
+   {
+    "address": "21304 WINDMILL PARC DRIVE, STERLING, VA 20166",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 571-413-0039",
+    "url": "https://orders.sheetz.com/findASheetz/store/666",
+    "geo": "39.025200,-77.417000",
+    "source": "All the Places 2026-10-31: sheetz"
+   },
+   {
+    "address": "22935 Relocation Dr, Sterling, VA 20166",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 571-413-0986",
+    "url": "https://orders.sheetz.com/findASheetz/store/711",
+    "geo": "38.982100,-77.446200",
+    "source": "All the Places 2026-10-31: sheetz"
+   },
+   {
+    "address": "13840 McLearen Rd, Herndon, VA 20171",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 571-519-0161",
+    "url": "https://orders.sheetz.com/findASheetz/store/726",
+    "geo": "38.928700,-77.424000",
+    "source": "All the Places 2026-10-31: sheetz"
+   }
+  ]
+ },
+ "Smashburger": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (smashburger): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Sonic": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (sonic_drivein_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Sport Clips": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (sport_clips_us): 2 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "11224 James Swart Circle, Fairfax, VA 22030",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "+1 703-865-6655",
+    "url": "https://sportclips.com/us-va-fairfax-va108",
+    "geo": "38.855820,-77.335770",
+    "source": "All the Places 2026-10-31: sport_clips_us"
+   },
+   {
+    "address": "20448 Exchange Street, Ashburn, VA 20147",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "+1 703-858-7200",
+    "url": "https://sportclips.com/us-va-ashburn-va115",
+    "geo": "39.050400,-77.453370",
+    "source": "All the Places 2026-10-31: sport_clips_us"
+   }
+  ]
+ },
+ "Starbucks": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (starbucks_us): 39 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "4400 University, Fairfax, VA 22030",
+    "status": "confirmed",
+    "wed_hours": "07:00-18:00",
+    "phone": "+1 703-993-3305",
+    "url": "",
+    "geo": "38.829500,-77.307260",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "4401 University Drive, Fairfax, VA 22030",
+    "status": "confirmed",
+    "wed_hours": "07:00-19:30",
+    "phone": "+1 703-993-5065",
+    "url": "",
+    "geo": "38.833800,-77.307180",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "11725 Lee Highway, Lee Plaza Center, Fairfax, VA 22030",
+    "status": "confirmed",
+    "wed_hours": "05:00-20:00",
+    "phone": "+1 703-385-5732",
+    "url": "",
+    "geo": "38.848640,-77.352970",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "10344 Main St, University Shopping Center, Fairfax, VA 22030",
+    "status": "confirmed",
+    "wed_hours": "05:00-20:00",
+    "phone": "+1 703-383-5870",
+    "url": "",
+    "geo": "38.845940,-77.303470",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "10930 Fairfax Blvd, Fairfax, VA 22030",
+    "status": "confirmed",
+    "wed_hours": "05:00-21:00",
+    "phone": "+1 703-218-5403",
+    "url": "",
+    "geo": "38.853660,-77.320920",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "12957 Fairlakes Shopping Center, Fair Lakes Center, Fairfax, VA 22033",
+    "status": "confirmed",
+    "wed_hours": "04:30-20:30",
+    "phone": "+1 703-502-7800",
+    "url": "",
+    "geo": "38.859230,-77.388260",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "12001 Lee Jackson Memorial Hwy, Fairfax, VA 22033",
+    "status": "confirmed",
+    "wed_hours": "05:00-21:00",
+    "phone": "+1 703-273-2798",
+    "url": "",
+    "geo": "38.866110,-77.360520",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "3046 Gatehouse Plaza, Falls Church, VA 22042",
+    "status": "confirmed",
+    "wed_hours": "04:30-21:30",
+    "phone": "+1 703-645-9182",
+    "url": "",
+    "geo": "38.866470,-77.230110",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "3011 Nutley St, Pan Am Shopping Center, 5A, Fairfax, VA 22031",
+    "status": "confirmed",
+    "wed_hours": "04:30-20:00",
+    "phone": "+1 571-977-1131",
+    "url": "",
+    "geo": "38.871890,-77.261320",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "2672-A Avenir Place, Merrifield, VA 22180",
+    "status": "confirmed",
+    "wed_hours": "05:00-20:00",
+    "phone": "+1 571-455-8319",
+    "url": "",
+    "geo": "38.881970,-77.228770",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "2930 Chain Bridge Road, Oakton, VA 22124",
+    "status": "confirmed",
+    "wed_hours": "05:00-20:00",
+    "phone": "+1 703-242-8244",
+    "url": "",
+    "geo": "38.882330,-77.299910",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "1218 W Broad St, Falls Church, VA 22046",
+    "status": "confirmed",
+    "wed_hours": "05:00-20:00",
+    "phone": "+1 703-534-3111",
+    "url": "",
+    "geo": "38.894490,-77.188330",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "7501 H Leesburg Pike, Idylwood Plaza, Falls Church, VA 22043",
+    "status": "confirmed",
+    "wed_hours": "04:30-20:00",
+    "phone": "+1 703-288-9085",
+    "url": "",
+    "geo": "38.902560,-77.203890",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "362 Maple Ave E, Vienna, VA 22180",
+    "status": "confirmed",
+    "wed_hours": "05:00-20:00",
+    "phone": "+1 703-255-1233",
+    "url": "",
+    "geo": "38.906580,-77.259420",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "8000 Tysons Corner Center, McLean, VA 22102",
+    "status": "confirmed",
+    "wed_hours": "10:00-20:00",
+    "phone": "+1 703-893-4900",
+    "url": "",
+    "geo": "38.918210,-77.222760",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "13037-A Lee Jackson Memorial Hwy, Space #A, Fairfax, VA 22033",
+    "status": "confirmed",
+    "wed_hours": "04:30-20:00",
+    "phone": "+1 703-968-0026",
+    "url": "",
+    "geo": "38.879420,-77.396400",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "13360 Franklin Farm Rd, Herndon, VA 20171",
+    "status": "confirmed",
+    "wed_hours": "04:30-21:00",
+    "phone": "+1 571-203-0355",
+    "url": "",
+    "geo": "38.907930,-77.408030",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "2523 John Milton Dr, Herndon, VA 20171",
+    "status": "confirmed",
+    "wed_hours": "05:00-20:00",
+    "phone": "+1 703-264-9022",
+    "url": "",
+    "geo": "38.927640,-77.375290",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "44844 Autopilot Dr, Washington Dulless Int'l Airport, Sterling, VA 20166",
+    "status": "confirmed",
+    "wed_hours": "05:00-22:00",
+    "phone": "+1 703-656-8093",
+    "url": "",
+    "geo": "38.945420,-77.442610",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "45020 Aviation Dr, Sterling, VA 20166",
+    "status": "confirmed",
+    "wed_hours": "05:00-21:00",
+    "phone": "+1 703-972-7183",
+    "url": "",
+    "geo": "38.948670,-77.442020",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "2405 Centreville Rd, Ste 19, Herndon, VA 20171",
+    "status": "confirmed",
+    "wed_hours": "04:30-21:00",
+    "phone": "+1 571-643-0240",
+    "url": "",
+    "geo": "38.951240,-77.408700",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "7922 Tysons Corner Center, McLean, VA 22102",
+    "status": "confirmed",
+    "wed_hours": "04:30-21:30",
+    "phone": "+1 703-893-4209",
+    "url": "",
+    "geo": "38.918400,-77.220560",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "1680 Capital One Drive, Sbux LS, McLean, VA 22102",
+    "status": "confirmed",
+    "wed_hours": "07:30-16:00",
+    "phone": "+1 703-555-1234",
+    "url": "",
+    "geo": "38.924300,-77.213080",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "1775 Greensboro Station Place, McLean, VA 22102",
+    "status": "confirmed",
+    "wed_hours": "07:30-16:00",
+    "phone": "+1 703-442-0692",
+    "url": "",
+    "geo": "38.921300,-77.233310",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "8381 Leesburg Pike, Vienna, VA 22182",
+    "status": "confirmed",
+    "wed_hours": "05:00-21:00",
+    "phone": "+1 703-893-5125",
+    "url": "",
+    "geo": "38.921640,-77.236270",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "8520 D Leesburg Pike, Tysons 3 Center, Vienna, VA 22182",
+    "status": "confirmed",
+    "wed_hours": "05:00-20:00",
+    "phone": "+1 703-760-7037",
+    "url": "",
+    "geo": "38.928320,-77.239270",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "11170 South Lakes Dr, South Lakes Village, Reston, VA 20191",
+    "status": "confirmed",
+    "wed_hours": "05:00-20:00",
+    "phone": "+1 703-390-9213",
+    "url": "",
+    "geo": "38.938230,-77.330080",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "1908 Reston Metro Plaza, Reston, VA 20190",
+    "status": "confirmed",
+    "wed_hours": "06:00-18:30",
+    "phone": "+1 571-308-5353",
+    "url": "",
+    "geo": "38.949080,-77.338830",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "11610-A Plaza America Dr, Plaza America Shopping Center, Reston, VA 20190",
+    "status": "confirmed",
+    "wed_hours": "05:00-20:00",
+    "phone": "+1 703-481-3485",
+    "url": "",
+    "geo": "38.951900,-77.347470",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "44735 Thorndike St, Ashburn, VA 20147",
+    "status": "confirmed",
+    "wed_hours": "04:30-20:00",
+    "phone": "+1 571-271-4807",
+    "url": "",
+    "geo": "39.052080,-77.452550",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "3 Pidgeon Hill Drive, Countryside Marketplace, Sterling, VA 20165",
+    "status": "confirmed",
+    "wed_hours": "05:00-20:00",
+    "phone": "+1 571-434-0247",
+    "url": "",
+    "geo": "39.038930,-77.412870",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "210-21 Southbank Street, Sterling, VA 20165",
+    "status": "confirmed",
+    "wed_hours": "05:00-20:00",
+    "phone": "+1 703-421-0932",
+    "url": "",
+    "geo": "39.034490,-77.398160",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "46900 Community Plz, Sterling, VA 20164",
+    "status": "confirmed",
+    "wed_hours": "04:00-21:00",
+    "phone": "+1 703-421-5767",
+    "url": "",
+    "geo": "39.016630,-77.376960",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "44054 Pipeline Plz, Suite 100, Ashburn, VA 20147",
+    "status": "confirmed",
+    "wed_hours": "04:30-20:00",
+    "phone": "+1 703-723-8534",
+    "url": "",
+    "geo": "39.023020,-77.477440",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "1444 North Point Village Center, Reston, VA 20194",
+    "status": "confirmed",
+    "wed_hours": "05:00-20:00",
+    "phone": "+1 703-787-9341",
+    "url": "",
+    "geo": "38.979750,-77.349640",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "22114 Gramercy Park Dr., Ashburn, VA 20147",
+    "status": "confirmed",
+    "wed_hours": "06:00-19:00",
+    "phone": "",
+    "url": "",
+    "geo": "39.006890,-77.486980",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "22420 Flagstaff Plz, unit 100, Ashburn, VA 20148",
+    "status": "confirmed",
+    "wed_hours": "04:30-20:00",
+    "phone": "+1 202-815-9914",
+    "url": "",
+    "geo": "38.996400,-77.481330",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "1140 Elden St, Herndon, VA 20170",
+    "status": "confirmed",
+    "wed_hours": "04:30-21:00",
+    "phone": "+1 703-925-9336",
+    "url": "",
+    "geo": "38.963790,-77.398820",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "11951 Freedom Dr, One Freedom Square, Reston, VA 20190",
+    "status": "confirmed",
+    "wed_hours": "05:00-21:00",
+    "phone": "+1 571-203-0601",
+    "url": "",
+    "geo": "38.958780,-77.359160",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   }
+  ]
+ },
+ "Target": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (target_us): 5 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "2905 District Ave S, Fairfax, VA 22031",
+    "status": "confirmed",
+    "wed_hours": "07:00-23:00",
+    "phone": "+1 571-533-3751",
+    "url": "https://www.target.com/sl/store/2790",
+    "geo": "38.872567,-77.229434",
+    "source": "All the Places 2026-10-31: target_us"
+   },
+   {
+    "address": "45130 Columbia Pl, Sterling, VA 20166",
+    "status": "confirmed",
+    "wed_hours": "08:00-22:00",
+    "phone": "+1 703-463-2008",
+    "url": "https://www.target.com/sl/store/2272",
+    "geo": "39.009216,-77.439655",
+    "source": "All the Places 2026-10-31: target_us"
+   },
+   {
+    "address": "13047 Fair Lakes Shopping Ctr, Fairfax, VA 22033",
+    "status": "confirmed",
+    "wed_hours": "08:00-23:00",
+    "phone": "+1 703-449-7100",
+    "url": "https://www.target.com/sl/store/1341",
+    "geo": "38.855688,-77.392918",
+    "source": "All the Places 2026-10-31: target_us"
+   },
+   {
+    "address": "12197 Sunset Hills Rd, Reston, VA 20190",
+    "status": "confirmed",
+    "wed_hours": "08:00-23:00",
+    "phone": "+1 703-478-0770",
+    "url": "https://www.target.com/sl/store/1088",
+    "geo": "38.954710,-77.369927",
+    "source": "All the Places 2026-10-31: target_us"
+   },
+   {
+    "address": "46201 Potomac Run Plz, Sterling, VA 20164",
+    "status": "confirmed",
+    "wed_hours": "08:00-22:00",
+    "phone": "+1 703-444-8440",
+    "url": "https://www.target.com/sl/store/1009",
+    "geo": "39.026292,-77.400610",
+    "source": "All the Places 2026-10-31: target_us"
+   }
+  ]
+ },
+ "Texas Roadhouse": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (texas_roadhouse): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Tommy's Express Car Wash": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Twin Peaks": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (twin_peaks): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Village Inn": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (village_inn_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Walgreens": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (walgreens): 4 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "46965 CEDAR LAKE PLZ, Sterling, VA 20164",
+    "status": "confirmed",
+    "wed_hours": "07:00-22:00",
+    "phone": "+1 703-430-3328",
+    "url": "https://www.walgreens.com/locator/walgreens-46965+cedar+lake+plz-sterling-va-20164/id=18429",
+    "geo": "39.017178,-77.375315",
+    "source": "All the Places 2026-10-31: walgreens"
+   },
+   {
+    "address": "225 MAPLE AVE E, Vienna, VA 22180",
+    "status": "confirmed",
+    "wed_hours": "07:00-22:00",
+    "phone": "+1 703-259-6342",
+    "url": "https://www.walgreens.com/locator/walgreens-225+maple+ave+e-vienna-va-22180/id=13589",
+    "geo": "38.903733,-77.261274",
+    "source": "All the Places 2026-10-31: walgreens"
+   },
+   {
+    "address": "603 ELDEN ST, Herndon, VA 20170",
+    "status": "confirmed",
+    "wed_hours": "07:00-24:00",
+    "phone": "+1 703-796-6482",
+    "url": "https://www.walgreens.com/locator/walgreens-603+elden+st-herndon-va-20170/id=10165",
+    "geo": "38.968704,-77.381365",
+    "source": "All the Places 2026-10-31: walgreens"
+   },
+   {
+    "address": "10320 MAIN ST, Fairfax, VA 22030",
+    "status": "confirmed",
+    "wed_hours": "07:00-22:00",
+    "phone": "+1 703-591-1025",
+    "url": "https://www.walgreens.com/locator/walgreens-10320+main+st-fairfax-va-22030/id=10712",
+    "geo": "38.846056,-77.302593",
+    "source": "All the Places 2026-10-31: walgreens"
+   }
+  ]
+ },
+ "Wawa": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (wawa): 4 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "465 maple ave w, vienna, VA 22180",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "",
+    "url": "https://www.wawa.com/locations/8669",
+    "geo": "38.894901,-77.273923",
+    "source": "All the Places 2026-10-31: wawa"
+   },
+   {
+    "address": "9700 fairfax blvd, fairfax, VA 22031",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "",
+    "url": "https://www.wawa.com/locations/8671",
+    "geo": "38.864645,-77.279817",
+    "source": "All the Places 2026-10-31: wawa"
+   },
+   {
+    "address": "23055 oakgrove rd, sterling, VA 20166",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "",
+    "url": "https://www.wawa.com/locations/8640",
+    "geo": "38.977994,-77.411535",
+    "source": "All the Places 2026-10-31: wawa"
+   },
+   {
+    "address": "45950 russell branch pkwy, sterling, VA 20166",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "",
+    "url": "https://www.wawa.com/locations/8662",
+    "geo": "39.028466,-77.435649",
+    "source": "All the Places 2026-10-31: wawa"
+   }
+  ]
+ },
+ "Wendy's": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (wendys): 8 in the area (a partial list); OpenStreetMap: 2 in the area",
+  "stores": [
+   {
+    "address": "8301 Leesburg Pike, Vienna, VA 22182",
+    "status": "confirmed",
+    "wed_hours": "06:30-02:00",
+    "phone": "+1 703-893-6025",
+    "url": "https://locations.wendys.com/united-states/va/vienna/8301-leesburg-pike/kids-meals.html",
+    "geo": "38.920084,-77.233884",
+    "source": "All the Places 2026-10-31: wendys"
+   },
+   {
+    "address": "46350 Potomac Run Plaza, Sterling, VA 20164",
+    "status": "confirmed",
+    "wed_hours": "04:00-03:59",
+    "phone": "+1 571-313-0042",
+    "url": "https://locations.wendys.com/united-states/va/sterling/46350-potomac-run-plaza/breakfast-menu.html",
+    "geo": "39.026407,-77.395885",
+    "source": "All the Places 2026-10-31: wendys"
+   },
+   {
+    "address": "1701 Bracknell Drive, Reston, VA 20194",
+    "status": "confirmed",
+    "wed_hours": "06:30-01:30",
+    "phone": "+1 703-437-7292",
+    "url": "https://locations.wendys.com/united-states/va/reston/1701-bracknell-drive/kids-meals.html",
+    "geo": "38.967535,-77.356507",
+    "source": "All the Places 2026-10-31: wendys"
+   },
+   {
+    "address": "3040 Gate House Plza, Falls Church, VA 22042",
+    "status": "confirmed",
+    "wed_hours": "06:30-24:00",
+    "phone": "+1 703-641-0309",
+    "url": "https://locations.wendys.com/united-states/va/falls-church/3040-gate-house-plza/kids-meals.html",
+    "geo": "38.866085,-77.230587",
+    "source": "All the Places 2026-10-31: wendys"
+   },
+   {
+    "address": "9688 Main Street, Fairfax, VA 22031",
+    "status": "confirmed",
+    "wed_hours": "08:00-01:00",
+    "phone": "+1 703-764-3104",
+    "url": "https://locations.wendys.com/united-states/va/fairfax/9688-main-street/kids-meals.html",
+    "geo": "38.842255,-77.275151",
+    "source": "All the Places 2026-10-31: wendys"
+   },
+   {
+    "address": "4000 Jermantown Rd, Fairfax, VA 22030",
+    "status": "confirmed",
+    "wed_hours": "06:30-02:00",
+    "phone": "+1 703-385-3344",
+    "url": "https://locations.wendys.com/united-states/va/fairfax/4000-jermantown-rd/kids-meals.html",
+    "geo": "38.855520,-77.332932",
+    "source": "All the Places 2026-10-31: wendys"
+   },
+   {
+    "address": "13030 Fair Lakes Shopping Ctr, Fairfax, VA 22033",
+    "status": "confirmed",
+    "wed_hours": "08:00-24:00",
+    "phone": "+1 703-968-0266",
+    "url": "https://locations.wendys.com/united-states/va/fairfax/13030-fair-lakes-shopping-ctr/kids-meals.html",
+    "geo": "38.857829,-77.393261",
+    "source": "All the Places 2026-10-31: wendys"
+   },
+   {
+    "address": "10695a Braddock Road, Fairfax, VA 22030",
+    "status": "confirmed",
+    "wed_hours": "06:30-02:00",
+    "phone": "+1 703-543-6899",
+    "url": "https://locations.wendys.com/united-states/va/fairfax/10695a-braddock-road/kids-meals.html",
+    "geo": "38.826238,-77.315130",
+    "source": "All the Places 2026-10-31: wendys"
+   },
+   {
+    "address": "2160 Centreville Road, Herndon, VA 20170",
+    "status": "unverified",
+    "wed_hours": "",
+    "phone": "+1 703-435-2603",
+    "url": "https://locations.wendys.com/united-states/va/herndon/2160-centreville-road",
+    "osm_id": "way/45145102",
+    "geo": "38.959269,-77.402700",
+    "source": "OpenStreetMap"
+   },
+   {
+    "address": "411 Maple Avenue East, Vienna, VA 22180",
+    "status": "unverified",
+    "wed_hours": "",
+    "phone": "+1 703-242-7332",
+    "url": "https://locations.wendys.com/united-states/va/vienna/411-east-maple-av",
+    "osm_id": "way/155920424",
+    "geo": "38.907347,-77.257201",
+    "source": "OpenStreetMap"
+   }
+  ]
+ }
+}

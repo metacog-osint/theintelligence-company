@@ -2878,26 +2878,36 @@
     "fm_presence_basis": "Sheetz does not operate in North Dakota/Minnesota (background knowledge)",
     "fm_addresses_seen": [],
     "status_2026": "offering",
-    "offer": "Free half turkey sub, fountain drink, car wash",
-    "est_value_usd": null,
+    "offer": "Free half turkey sub and a regular fountain drink, plus a free car wash at stores with a car wash",
+    "est_value_usd": 10,
     "dates": "2026-11-11",
-    "hours_local": "unknown",
-    "mode": null,
+    "hours_local": "00:00-24:00",
+    "mode": "in_store",
     "voucher_use_by": null,
     "eligible": [
       "veteran",
       "active"
     ],
-    "eligibility_quote": null,
-    "guard_reserve": "unclear",
-    "spouse_or_guest": "unclear",
+    "eligibility_quote": "Sheetz invites all veterans and active-duty military personnel to enjoy a free half turkey sub and a regular size fountain drink",
+    "guard_reserve": "yes",
+    "spouse_or_guest": "no",
     "kids": null,
-    "proof": [],
+    "proof": [
+      "military_id",
+      "va_card",
+      "dd214"
+    ],
     "advance_signup": null,
     "participating_locations_only": true,
-    "limits": null,
-    "grade": "B",
+    "limits": "Half turkey sub and regular fountain drink; extras cost extra. Free $9 car wash option at stores that have a car wash.",
+    "grade": "A",
     "sources": [
+      {
+        "url": "https://www.convenience.org/Media/Daily/2026/November/6/4-Convenience-Retailers-Honor-Veterans_Ops",
+        "publisher": "NACS Daily (Sheetz 2026 announcement)",
+        "published": "2026-11-06",
+        "accessed": "2026-11-10"
+      },
       {
         "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
         "publisher": "Military.com",
@@ -2905,7 +2915,7 @@
         "accessed": "2026-11-08"
       }
     ],
-    "notes": "Not relevant to FM."
+    "notes": "Open 24 hours. Bring military ID or proof of service."
   },
   {
     "brand": "Bob Evans",
@@ -3476,5 +3486,280 @@
       }
     ],
     "notes": "Marcus's own banner: \"All Veterans and Active Duty Military Receive a FREE Large Popcorn. Wednesday, November 11. Redeem offer by request when ordering at the theatre.\" It doesn't say you need a movie ticket. The theatre opens for its first show: check showtimes."
+  },
+  {
+    "brand": "Wawa",
+    "scope": "national",
+    "fm_presence": "no",
+    "fm_presence_basis": "East Coast / Mid-Atlantic chain",
+    "fm_addresses_seen": [],
+    "status_2026": "offering",
+    "offer": "Free hot coffee of any size, all day",
+    "est_value_usd": 3,
+    "dates": "2026-11-11",
+    "hours_local": "00:00-24:00",
+    "mode": "in_store",
+    "voucher_use_by": null,
+    "eligible": [
+      "veteran",
+      "active",
+      "guard_reserve",
+      "spouse"
+    ],
+    "eligibility_quote": "Veterans, active-duty military members and their families can enjoy a free cup of hot coffee of any size all day on Veterans Day.",
+    "guard_reserve": "yes",
+    "spouse_or_guest": "yes",
+    "kids": null,
+    "proof": [],
+    "advance_signup": null,
+    "participating_locations_only": false,
+    "limits": "Any size hot coffee; family members included.",
+    "grade": "A",
+    "sources": [
+      {
+        "url": "https://www.convenience.org/Media/Daily/2026/November/6/4-Convenience-Retailers-Honor-Veterans_Ops",
+        "publisher": "NACS Daily (Wawa 2026 announcement)",
+        "published": "2026-11-06",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://news.va.gov/150505/2026-veterans-day-discounts-free-meals-offers/",
+        "publisher": "VA News",
+        "published": "2026",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "notes": "Open 24 hours. Family members included; no ID required."
+  },
+  {
+    "brand": "California Pizza Kitchen",
+    "scope": "national",
+    "fm_presence": "no",
+    "fm_presence_basis": "No FM location",
+    "fm_addresses_seen": [],
+    "status_2026": "offering",
+    "offer": "Free entree from a special Veterans Day menu and a non-alcoholic drink",
+    "est_value_usd": 20,
+    "dates": "2026-11-11",
+    "hours_local": "store hours",
+    "mode": "dine_in",
+    "voucher_use_by": null,
+    "eligible": [
+      "veteran",
+      "active",
+      "guard_reserve"
+    ],
+    "eligibility_quote": "Veterans and active-duty military can choose one free entree from a special menu on November 11.",
+    "guard_reserve": "yes",
+    "spouse_or_guest": "no",
+    "kids": null,
+    "proof": [
+      "military_id",
+      "va_card",
+      "dd214",
+      "photo_in_uniform"
+    ],
+    "advance_signup": null,
+    "participating_locations_only": true,
+    "limits": "Dine-in only; special menu of pizzas, pastas and salads.",
+    "grade": "B",
+    "sources": [
+      {
+        "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+        "publisher": "Military.com",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "notes": "From Military.com's list (updated 10 Nov 2026); no 2026 word from CPK itself was found."
+  },
+  {
+    "brand": "Bonefish Grill",
+    "scope": "national",
+    "fm_presence": "no",
+    "fm_presence_basis": "No FM location",
+    "fm_addresses_seen": [],
+    "status_2026": "offering",
+    "offer": "Free order of Bang Bang Shrimp and a non-alcoholic drink",
+    "est_value_usd": 14,
+    "dates": "2026-11-11",
+    "hours_local": "store hours",
+    "mode": "dine_in",
+    "voucher_use_by": null,
+    "eligible": [
+      "veteran",
+      "active",
+      "guard_reserve"
+    ],
+    "eligibility_quote": "Active duty service members and veterans receive a complimentary order of Bang Bang Shrimp and a soft drink on November 11.",
+    "guard_reserve": "yes",
+    "spouse_or_guest": "no",
+    "kids": null,
+    "proof": [
+      "military_id",
+      "va_card",
+      "dd214"
+    ],
+    "advance_signup": null,
+    "participating_locations_only": false,
+    "limits": "Dine-in only; bring military ID.",
+    "grade": "B",
+    "sources": [
+      {
+        "url": "https://wtop.com/local/2026/11/deals-and-freebies-for-veterans-day/",
+        "publisher": "WTOP",
+        "published": "2026-11-09",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+        "publisher": "Military.com",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "notes": "From WTOP's and Military.com's 2026 lists; Bonefish's own 2026 post wasn't read."
+  },
+  {
+    "brand": "Carrabba's Italian Grill",
+    "scope": "national",
+    "fm_presence": "no",
+    "fm_presence_basis": "No FM location",
+    "fm_addresses_seen": [],
+    "status_2026": "offering",
+    "offer": "Free dine-in appetizer or dessert with a soft drink, plus 10% Heroes Discount",
+    "est_value_usd": 13,
+    "dates": "2026-11-09 to 2026-11-11",
+    "hours_local": "store hours",
+    "mode": "dine_in",
+    "voucher_use_by": null,
+    "eligible": [
+      "veteran",
+      "active",
+      "guard_reserve",
+      "spouse"
+    ],
+    "eligibility_quote": "Active and retired military and their spouses receive a complimentary appetizer or dessert.",
+    "guard_reserve": "yes",
+    "spouse_or_guest": "yes",
+    "kids": null,
+    "proof": [
+      "military_id",
+      "va_card",
+      "dd214"
+    ],
+    "advance_signup": null,
+    "participating_locations_only": false,
+    "limits": "Dine-in only; bring military ID.",
+    "grade": "A",
+    "sources": [
+      {
+        "url": "https://www.carrabbas.com/offers/heroes-discount",
+        "publisher": "Carrabba's Italian Grill",
+        "published": "2026",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://news.va.gov/150505/2026-veterans-day-discounts-free-meals-offers/",
+        "publisher": "VA News",
+        "published": "2026",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "notes": "Also offers a year-round 10% Heroes Discount."
+  },
+  {
+    "brand": "Fogo de Chão",
+    "scope": "national",
+    "fm_presence": "no",
+    "fm_presence_basis": "No FM location",
+    "fm_addresses_seen": [],
+    "status_2026": "offering",
+    "offer": "50% off Full or Indulgent Churrasco meal for veterans and active duty, plus 10% off for up to three guests",
+    "est_value_usd": 32,
+    "dates": "2026-11-07 to 2026-11-11",
+    "hours_local": "store hours",
+    "mode": "dine_in",
+    "voucher_use_by": null,
+    "eligible": [
+      "veteran",
+      "active",
+      "guard_reserve"
+    ],
+    "eligibility_quote": "50% off Full or Indulgent Churrasco meal for veterans and active-duty personnel, plus 10% off for up to three guests.",
+    "guard_reserve": "yes",
+    "spouse_or_guest": "yes",
+    "kids": null,
+    "proof": [
+      "military_id",
+      "va_card",
+      "dd214"
+    ],
+    "advance_signup": null,
+    "participating_locations_only": true,
+    "limits": "Dine-in only; half off requires paying the remaining half (beverages, dessert, tax and gratuity excluded).",
+    "grade": "B",
+    "sources": [
+      {
+        "url": "https://veteran.com/veterans-day-discounts-sales-deals-free-meals/",
+        "publisher": "Veteran.com",
+        "published": "2026-11-06 (updated)",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+        "publisher": "Military.com",
+        "published": "2026-11-08 (updated)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "notes": "Reservations recommended."
+  },
+  {
+    "brand": "Bar Louie",
+    "scope": "national",
+    "fm_presence": "no",
+    "fm_presence_basis": "No FM location",
+    "fm_addresses_seen": [],
+    "status_2026": "offering",
+    "offer": "Free craft burger (excludes Big Louie)",
+    "est_value_usd": 16,
+    "dates": "2026-11-10 to 2026-11-11",
+    "hours_local": "store hours",
+    "mode": "dine_in",
+    "voucher_use_by": null,
+    "eligible": [
+      "veteran",
+      "active",
+      "guard_reserve"
+    ],
+    "eligibility_quote": "Active-duty military and veterans receive a free craft burger when dining in.",
+    "guard_reserve": "yes",
+    "spouse_or_guest": "no",
+    "kids": null,
+    "proof": [
+      "military_id",
+      "va_card",
+      "dd214"
+    ],
+    "advance_signup": null,
+    "participating_locations_only": true,
+    "limits": "Dine-in only; excludes Big Louie; participating locations.",
+    "grade": "B",
+    "sources": [
+      {
+        "url": "https://news.va.gov/150505/2026-veterans-day-discounts-free-meals-offers/",
+        "publisher": "VA News",
+        "published": "2026",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+        "publisher": "Military.com",
+        "published": "2026-11-08 (updated)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "notes": "Valid 10–11 Nov 2026."
   }
 ]

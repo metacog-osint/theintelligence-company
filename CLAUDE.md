@@ -170,6 +170,14 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   `build_data.py`; chain stores for new areas from All the Places plus OpenStreetMap (`build/stores_region.py`); engine
   v1.3 adds `arriveBy` for ceremonies; Fargo-only notes stay out of other areas (`fm=`, `strip_fm`). An override on an
   offer id now applies in every area. Details in `veterans-day/README.md` ("Areas").
+- **Reston & Northern Virginia (10 Nov 2026 evening; a fourth area for a colleague):** `reston-va`,
+  `?area=reston-va`, the first area on Eastern time (`tz`, `tz_offset_min`, `tz_abbr`, `day_start` in REGIONS). First
+  pass made in Antigravity (Gemini), which stopped before building; checked, corrected and built by Claude the same
+  night (44 deals at 178 stops). Details and the corrections in `veterans-day/README.md` ("Reston & Northern
+  Virginia") and `research/reston-va/notes.md`. Antigravity also deployed two unnoted commits that evening,
+  `59c4f9e` and `3373f4f` (start presets, smart search, quick-add, Stop 1 controls; live, checked 10 Nov). `59c4f9e`
+  called an engine function that didn't exist, which blanked the live Deals tab; fixed the same night, and a test now
+  checks every engine name `app.js` uses.
 - 8 Nov 2026: a usable Veterans Day giveaway program his Guard colleagues can use on Wed 11 Nov 2026, with
   live location, timing against each deal's window, preferences, vetoes and strikes, and got-it / turned-away
   marks; the first piece of a planned "For veterans" section here (Title 10 and future military programs to follow).

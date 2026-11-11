@@ -203,6 +203,42 @@ have friends in the Rosedale, Plymouth, and Maple Grove areas of the Twin Cities
   B 22, C 2); Fargo-Moorhead unchanged at 69 deals, 168 stops. After the 10 Nov re-check: Fargo-Moorhead 71 deals at
   171 stops (A 20, B 26, C 25), Bismarck-Mandan 33 at 49 (A 11, B 17, C 5), Twin Cities 34 at 181 (A 10, B 23, C 1).
 
+## Reston & Northern Virginia (fourth area, 10 Nov 2026 night)
+10 Nov 2026: a fourth area for a colleague in Reston, VA. The first pass (research, REGIONS, CURATE, the store
+script, the picker and the test change) was made in Antigravity (Gemini) that evening, which stopped before building.
+Claude checked it against the sources the same night, corrected it and built it. Research and every correction:
+`research/reston-va/notes.md`.
+- **Area** `reston-va`, "Reston & Northern Virginia, VA", `?area=reston-va` (aliases `reston`, `herndon`, `tysons`,
+  `fairfax`, `nova`). Circles: Reston and Herndon 7 km, Sterling and Dulles 5.5, Vienna and Tysons 5.5, Fairfax and
+  Fair Oaks 6.5. Start presets: Reston Town Center, South Reston, Herndon, Sterling, Tysons, Fairfax.
+- **Eastern time.** The first area off Central: REGIONS carries `tz`, `tz_offset_min` (-300), `tz_abbr` and `day_start`
+  (05:00 UTC), and `local_iso` takes the area's day start, so windows read "EST" and the engine's mealtimes use the
+  area's offset (`meta.tz_offset_min`). Clock times on the page come from the shared time module, so a phone shows its
+  own zone. The area test now reads each area's own `day_start` and zone.
+- **Totals:** 44 deals at 178 stops (A 16, B 27, C 1); drive table from Reston Town Center's grid. Local on the
+  route: the RTC Run for Valor 5K (A; $35 to run, so a purchase deal, Off by default), Herndon's ceremony at 11:00 (A),
+  Fairfax Post 177's at 10:30 (A), The Kensington Reston 2-4 PM (A, RSVP or call first: a senior-living community),
+  Chick-fil-A Metro DC's free entree at its 10 participating stores here (A), Founding Farmers' 50% off brunch, lunch
+  or dinner (A, purchase), Ted's Bulletin's tart (B). Chains new to the planner: Wawa, Sheetz, Bonefish, California
+  Pizza Kitchen, Fogo de Chão, Bar Louie (Carrabba's has no store in the circles).
+- **Corrections to the first pass** (all 10 Nov): sources were sites' home pages with a placeholder date, now the pages
+  that carry each offer; the 5K starts at RTC Window Plaza on Opportunity Way (not the Pavilion) and costs $35;
+  California Pizza Kitchen and Bonefish A to B (no 2026 word from the company), CPK's BOGO card dropped (no source);
+  Founding Farmers' discount excludes breakfast; Jimmy's Old Town Tavern (no offer found) moved to the leads;
+  hand-typed pins 50-700 m off replaced from OpenStreetMap; hand-typed Chick-fil-A addresses removed; the transit line
+  names only what WMATA confirms (half fare for veterans rated 60% or more, with Metro's Reduced Fare SmarTrip ID).
+- **`stores_region.py` fixes:** a failed All the Places download now prints a warning and says so in the basis (it
+  read "0 in the area", and the first pass's `except BaseException` also caught Ctrl-C); a town given only in
+  `addr:full` is used (Fogo de Chão Tysons was dropped for it); campus Chick-fil-A counters are skipped. The download
+  cache `.atp-cache/` (about 90 MB) is in `.gitignore`.
+- **Not added (the publisher's call):** WTOP's 9 Nov list also has Silver Diner, The Greene Turtle, The Melting Pot, Grace for
+  Vets, Hard Rock Cafe DC and Pastis; each needs store lookups.
+- **Fixed the same night (every area):** Antigravity's `59c4f9e` (live since about 5:30 PM) called `E.driveMinutes`,
+  which the engine never had, so every deal card and the Route tab's quick-add search threw and the Deals tab was
+  blank. `placeDriveInfo` in `app.js` now reads the route's drive table (`ctx.fromPos`, seconds from you to each
+  place, no parking) and falls back to a straight-line estimate. `veterans.test.js` checks every `E.` name `app.js`
+  uses exists in the engine.
+
 ## Optimal (engine v1.4, app v1.3; live since about 12:15 PM CST 10 Nov 2026 from `0b12a0d`, approved; not pushed)
 10 Nov 2026: the Maximize routes "can include redundant types of locations on the same route in the same time
 frame e.g. multiple free coffee grabs within a short window of time ... most users won't want to do that. So the
@@ -245,12 +281,12 @@ count; Optimal is its own button, first, and the default.
 From the repo root (Windows: `python`, not `python3`):
 
 ```
-python -I veterans-day/build/build_data.py [area ...]     # research -> each area's deals.json (default: all three)
+python -I veterans-day/build/build_data.py [area ...]     # research -> each area's deals.json (default: all four)
 python -I veterans-day/build/drive_matrix.py [area ...]   # only when stores change: OSRM tables -> drive.json (~2 min each)
 python -I veterans-day/build/stores_region.py <area> <cache folder>   # new areas only: chain stores -> research/<area>/locations-2026.json
 cd tests && node --test --no-warnings veterans.test.js veterans-engine.test.js veterans-roads.test.js site.test.js
 ```
-Area ids: `fargo-moorhead`, `bismarck-mandan`, `twin-cities` (REGIONS in `build_data.py`). Rebuild Fargo-Moorhead's
+Area ids: `fargo-moorhead`, `bismarck-mandan`, `twin-cities`, `reston-va` (REGIONS in `build_data.py`). Rebuild Fargo-Moorhead's
 `drive.json` only when its stores change; the drive table must follow every change to an area's store list.
 
 `tests/veterans-map.test.js` (the Map in a browser) needs Playwright: see `tests/README.md`.

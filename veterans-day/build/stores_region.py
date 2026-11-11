@@ -54,6 +54,10 @@ SPIDERS = {
     "Red Lobster": ("red_lobster_us", "2026-10-17-13-32-31"), "Charleys Cheesesteaks": ("charleys_philly_steaks", "2026-10-17-13-32-31"),
     "Shake Shack": ("shake_shack", "2026-10-17-13-32-31"), "Red Robin": ("red_robin", "2026-10-17-13-32-31"),
     "Pilot / Flying J": ("pilot_flying_j", "2026-10-10-13-32-41"),
+    "Chick-fil-A": ("chick_fil_a", LATEST), "Sheetz": ("sheetz", LATEST), "Wawa": ("wawa", LATEST),
+    "California Pizza Kitchen": ("california_pizza_kitchen", LATEST), "Bonefish Grill": ("bonefish_grill", LATEST),
+    "Carrabba's Italian Grill": ("carrabbas", LATEST), "Fogo de Chão": ("fogo_de_chao", LATEST),
+    "Bar Louie": ("bar_louie", LATEST),
 }
 # Every chain's OpenStreetMap name or brand, as a regex (POSIX-safe: Overpass runs the combined one too).
 OSM = {
@@ -77,14 +81,19 @@ OSM = {
     "Olive Garden": r"^Olive Garden", "Cracker Barrel": r"^Cracker Barrel", "Marcus Theatres": r"^Marcus ",
     "Casey's": r"^Casey'?s( General Store)?$", "Tommy's Express Car Wash": r"^Tommy'?s Express", "Mission BBQ": r"^Mission BBQ",
     "Granite City Food & Brewery": r"^Granite City",
+    "Chick-fil-A": r"^Chick-fil-A", "Sheetz": r"^Sheetz", "Wawa": r"^Wawa",
+    "California Pizza Kitchen": r"^California Pizza Kitchen", "Bonefish Grill": r"^Bonefish Grill",
+    "Carrabba's Italian Grill": r"^Carrabba'?s", "Fogo de Chão": r"^Fogo de Ch", "Bar Louie": r"^Bar Louie",
 }
-FUEL_OK = {"Circle K / Holiday", "Casey's", "Kwik Trip", "Pilot / Flying J"}
+FUEL_OK = {"Circle K / Holiday", "Casey's", "Kwik Trip", "Pilot / Flying J", "Sheetz", "Wawa"}
 # All the Places lists known to miss whole regions (checked 10 Nov 2026): OpenStreetMap fills them in.
 PARTIAL = {"Wendy's", "Little Caesars"}
 # Within a spider, features that aren't the store the offer is for.
 SKIP = {
     # Licensed Starbucks counters (inside Target, grocery stores, hotels, hospitals) run their own promotions.
-    "Starbucks": lambda p: bool(p.get("located_in")) or bool(re.search(r"\b(target|cub|lunds|byerly|hy-?vee|hospital|hotel|marriott|hilton|barnes|airport|university|college)\b", (p.get("name") or "") + " " + (p.get("branch") or ""), re.I)),
+    "Starbucks": lambda p: bool(p.get("located_in")) or bool(re.search(r"\b(target|cub|lunds|byerly|hy-?vee|harris ?teeter|safeway|giant|wegmans|hospital|hotel|marriott|hilton|hyatt|sheraton|westin|barnes|airport|university|college)\b", (p.get("name") or "") + " " + (p.get("branch") or ""), re.I)),
+    # Campus counters (George Mason's student union) aren't on Chick-fil-A Metro DC's participating list, 10 Nov 2026.
+    "Chick-fil-A": lambda p: bool(re.search(r"universit|college|campus|\bSUB\b|airport|hospital", (p.get("name") or "") + " " + (p.get("branch") or ""), re.I)),
     # Hy-Vee's spider also lists its gas stations, liquor and convenience stores: only the supermarkets serve breakfast.
     "Hy-Vee": lambda p: p.get("shop") not in (None, "supermarket") or bool(re.search(r"fast ?& ?fresh|wine|spirits|gas|dollar|health ?market|mainstreet|drugtown", (p.get("name") or "") + " " + (p.get("branch") or ""), re.I)),
     "Target": lambda p: p.get("shop") not in (None, "department_store", "supermarket", "variety_store"),
@@ -109,8 +118,13 @@ def atp_features(cache, spider, run):
     f = os.path.join(folder, spider + ".geojson")
     if not os.path.exists(f) or os.path.getsize(f) == 0:
         print(f"  download {run}/{spider}", flush=True)
-        body = get(ATP.format(run=run, spider=spider), timeout=300)
-        open(f, "wb").write(body)
+        try:
+            body = get(ATP.format(run=run, spider=spider), timeout=300)
+            open(f, "wb").write(body)
+        except (Exception, SystemExit) as e:  # get() raises SystemExit after its retries; Ctrl-C still stops the run
+            # None, not []: main() records a failed download in the basis instead of "0 in the area".
+            print(f"  WARNING: All the Places download failed for {spider} ({e}); OpenStreetMap only", flush=True)
+            return None
     return json.load(open(f, encoding="utf-8")).get("features", [])
 
 
@@ -158,7 +172,7 @@ def located(features, states):
         g = f.get("geometry") or {}
         if g.get("type") == "Point":
             out.append((g["coordinates"][1], g["coordinates"][0], p))
-        elif (p.get("addr:state") or "").upper()[:2] in states or (p.get("addr:state") or "") in ("North Dakota", "Minnesota"):
+        elif (p.get("addr:state") or "").upper()[:2] in states or (p.get("addr:state") or "") in ("North Dakota", "Minnesota", "Virginia"):
             street = p.get("addr:street_address") or " ".join(x for x in (p.get("addr:housenumber"), p.get("addr:street")) if x)
             if street:
                 todo.append((str(i), street, p.get("addr:city") or "", (p.get("addr:state") or "")[:2].upper(), (p.get("addr:postcode") or "")[:5]))
@@ -174,6 +188,10 @@ def address(p):
     street = p.get("addr:street_address") or " ".join(x for x in (p.get("addr:housenumber"), p.get("addr:street")) if x)
     street = re.sub(r"\s+", " ", street or "").strip()
     city, state, zp = p.get("addr:city") or "", p.get("addr:state") or "", (p.get("addr:postcode") or "")[:5]
+    if not city:
+        # Some spiders give the town only in addr:full ("1775 Tysons Boulevard Suite 50, Tysons, VA 22102": Fogo de Chão).
+        m = re.match(r".+?,\s*([A-Za-z .'-]+),\s*[A-Z]{2}\b", p.get("addr:full") or "")
+        city = m.group(1).strip() if m else ""
     if not re.search(r"[A-Za-z]{2}", street) or not city:
         return ""  # a house number alone ("851"), or no town: not an address a visitor can use
     tail = " ".join(x for x in (state, zp) if x)
@@ -210,7 +228,13 @@ def main(region, cache):
         if loc in SPIDERS:
             spider, run = SPIDERS[loc]
             n = 0
-            pts = located(atp_features(cache, spider, run), reg["states"])
+            feats = atp_features(cache, spider, run)
+            if feats is None:
+                basis.append(f"All the Places download failed ({spider})")
+                covers[loc] = 0  # let OpenStreetMap fill in
+                out[loc] = {"presence": "no", "basis_url": "https://www.alltheplaces.xyz/", "basis": "; ".join(basis), "stores": stores}
+                continue
+            pts = located(feats, reg["states"])
             # Does the chain's own list cover this area? (Wendy's has no Twin Cities store in it.)
             covers[loc] = 0 if loc in PARTIAL else sum(1 for lat, lng, _ in pts if inside(lat, lng))
             for lat, lng, p in pts:

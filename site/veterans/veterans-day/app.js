@@ -20,7 +20,8 @@
   const AREAS = [
     { id: "fargo-moorhead", dir: "data/" },
     { id: "bismarck-mandan", dir: "data/bismarck-mandan/" },
-    { id: "twin-cities", dir: "data/twin-cities/" }
+    { id: "twin-cities", dir: "data/twin-cities/" },
+    { id: "reston-va", dir: "data/reston-va/" }
   ];
   const DEFAULT_AREA = "fargo-moorhead";
   const AWAY_KM = 15; // further than this from the area's nearest start point, your location is somewhere else
@@ -733,10 +734,16 @@
   function normSearch(s) {
     return String(s || "").toLowerCase().replace(/['’`.\-&/]/g, "").replace(/\s+/g, " ").trim();
   }
+  // Drive minutes from where you are, from the route's own table (ctx.fromPos: seconds to each place, no parking),
+  // and straight-line miles. 59c4f9e called an engine "driveMinutes" that never existed, so every deal card and the
+  // quick-add search threw (found 10 Nov 2026).
+  let placeIdx = null, placeIdxOf = null;
   function placeDriveInfo(p, ctx) {
-    const dMin = Math.max(1, Math.round(E.driveMinutes(ctx.pos, p, data.drive, ctx.trafficMult) - 2.5));
-    const miles = (E.km(ctx.pos, p) * 0.621371).toFixed(1);
-    return { dMin, miles };
+    if (placeIdxOf !== data.places) { placeIdx = new Map(data.places.map((x, i) => [x.id, i])); placeIdxOf = data.places; }
+    const sec = ctx.fromPos ? ctx.fromPos[placeIdx.get(p.id)] : null;
+    const km = ctx.pos ? E.km(ctx.pos, p) : 0;
+    const dMin = Math.max(1, Math.round(sec !== null && sec !== undefined && isFinite(sec) ? sec * ctx.roads / 60 : km * 1.4 / 25 * 60));
+    return { dMin, miles: (km * 0.621371).toFixed(1) };
   }
   function dealState(ctx) {
     const byOffer = {};
@@ -1269,6 +1276,15 @@
       ["45.0105,-93.4555", "Plymouth, MN"],
       ["45.1095,-93.4558", "Maple Grove, MN"],
       ["45.0119,-93.1669", "Roseville, MN"]
+    ],
+    "reston-va": [
+      ["", "Start from town…"],
+      ["38.9586,-77.3570", "Reston Town Center, VA"],
+      ["38.9369,-77.3315", "South Reston (South Lakes), VA"],
+      ["38.9698,-77.3861", "Herndon, VA"],
+      ["39.0150,-77.4250", "Sterling / Dulles, VA"],
+      ["38.9187,-77.2225", "Tysons, VA"],
+      ["38.8543,-77.3106", "Fairfax, VA"]
     ]
   };
   const AREA_ALIASES = {
@@ -1280,7 +1296,12 @@
     "moorhead": "fargo-moorhead",
     "plymouth": "twin-cities",
     "maple-grove": "twin-cities",
-    "roseville": "twin-cities"
+    "roseville": "twin-cities",
+    "reston": "reston-va",
+    "herndon": "reston-va",
+    "tysons": "reston-va",
+    "fairfax": "reston-va",
+    "nova": "reston-va"
   };
   function pickArea() {
     const raw = new URLSearchParams(location.search).get("area") || new URLSearchParams(location.search).get("sector");

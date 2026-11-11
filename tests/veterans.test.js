@@ -29,6 +29,14 @@ test("its scripts build no inline styles or handlers and use no eval", () => {
   }
 });
 
+test("every engine function the page calls exists (10 Nov 2026: E.driveMinutes didn't, and the Deals tab went blank)", async () => {
+  const { createRequire } = await import("node:module");
+  const engine = createRequire(import.meta.url)("../" + DIR + "engine.js");
+  const used = new Set([...SCRIPTS["app.js"].matchAll(/\bE\.([A-Za-z_]\w*)/g)].map((m) => m[1]));
+  const missing = [...used].filter((name) => !(name in engine));
+  assert.deepEqual(missing, [], "app.js calls engine names that engine.js doesn't export");
+});
+
 test("every file the page refers to exists", () => {
   const refs = [...HTML.matchAll(/\s(?:href|src)="([^"#][^"]*)"/g)].map((m) => m[1]).filter((r) => !/^(https?:|mailto:|tel:)/.test(r));
   refs.push("vendor/leaflet/leaflet.js", "vendor/leaflet/leaflet.css", "data/deals.json", "data/drive.json");
@@ -211,14 +219,14 @@ test("the area picker: Fargo-Moorhead first and the default, and its options mat
     assert.ok(m, `${a.id}: meta.region`);
     assert.equal(m.id, a.id);
     for (const k of ["name", "center", "center_label", "zoom", "wx_name"]) assert.ok(m[k], `${a.id}: meta.region.${k}`);
-    assert.equal(AREA_DATA[a.id].deals.meta.tz, "America/Chicago", `${a.id}: Central time`);
+    assert.equal(AREA_DATA[a.id].deals.meta.tz, a.id === "reston-va" ? "America/New_York" : "America/Chicago", `${a.id}: time zone`);
     assert.ok(AREA_DATA[a.id].deals.meta.forecast_url, `${a.id}: an NWS forecast link`);
   }
 });
 
 test("every other area: each offer has a store, each store an offer, inside the area's circles and the day", () => {
   for (const a of AREAS.slice(1)) {
-    const { deals } = AREA_DATA[a.id], areas = deals.meta.region.areas;
+    const { deals } = AREA_DATA[a.id], areas = deals.meta.region.areas, areaDayStart = Date.parse(deals.meta.day_start);
     assert.ok(areas && areas.length, `${a.id}: circles`);
     const offers = new Map(deals.offers.map((o) => [o.id, o]));
     assert.ok(deals.offers.length >= 20 && deals.places.length >= 40, `${a.id}: a usable number of deals`);
@@ -227,7 +235,7 @@ test("every other area: each offer has a store, each store an offer, inside the 
       assert.match(p.id, /^[a-z0-9][a-z0-9-]{0,79}$/);
       assert.ok(areas.some(([, lat, lng, r]) => kmApart([p.lat, p.lng], [lat, lng]) <= r), `${a.id} ${p.id} is outside the area`);
       const open = Date.parse(p.open), close = Date.parse(p.close);
-      assert.ok(open >= DAY_START && close <= DAY_START + 30 * 3600e3 && close > open, `${a.id} ${p.id}: hours`);
+      assert.ok(open >= areaDayStart && close <= areaDayStart + 30 * 3600e3 && close > open, `${a.id} ${p.id}: hours`);
     }
     for (const o of deals.offers) {
       assert.ok(deals.places.some((p) => p.offer === o.id), `${a.id} ${o.id} has no store`);
