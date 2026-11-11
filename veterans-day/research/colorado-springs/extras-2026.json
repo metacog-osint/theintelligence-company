@@ -250,23 +250,6 @@
    "at": "2026-11-12T00:00:00Z"
   },
   {
-   "id": "bass-pro-breakfast",
-   "day": "Wed 11 Nov, 9:00-11:00 AM MST",
-   "name": "Bass Pro Shops: Veterans Appreciation Breakfast",
-   "where": "13012 Bass Pro Dr, Colorado Springs, CO 80921, (719) 488-7300 (far north, outside the circles)",
-   "offer": "A free breakfast for veterans, with a raffle entry for a Land of the Free merchandise collection, per Mile High on the Cheap.",
-   "grade": "B",
-   "note": "Only one aggregator carries it, and it covers the Denver area; Bass Pro's own page wasn't found and one search found no store listing. Call first.",
-   "sources": [
-    {
-     "url": "https://www.milehighonthecheap.com/veterans-day-deals-freebies-denver/",
-     "publisher": "Mile High on the Cheap",
-     "published": "2026-11-10"
-    }
-   ],
-   "at": "2026-11-11T16:00:00Z"
-  },
-  {
    "id": "usopm-veterans-20",
    "day": "Thu 12 Nov onward (closed Wed 11 Nov)",
    "name": "U.S. Olympic & Paralympic Museum: 20% off for veterans in November",
