@@ -1,6 +1,6 @@
 {
  "meta": {
-  "built_at": "2026-11-11T06:18:01Z",
+  "built_at": "2026-11-11T06:21:32Z",
   "day": "2026-11-11",
   "day_start": "2026-11-11T07:00:00Z",
   "tz": "America/Denver",
@@ -3057,8 +3057,9 @@
     }
    ],
    "notes": "Chain's own 2026 event page not found. Denver Gazette lists 9-10 a.m. plus 10% off in-store for service members; Mile High on the Cheap lists 9-11 a.m. and a raffle for a Land of the Free merchandise collection. Colorado stores: Bass Pro Denver (7970 Northfield Blvd.), Cabela's Thornton (14050 Lincoln St.), Cabela's Lone Tree (10670 Cabela Dr.), Bass Pro Colorado Springs, Loveland. Sources differ on end time (10 or 11 a.m.); arrive at 9.",
-   "caution": "Lists differ on when it ends (10 or 11 AM): go at 9",
+   "caution": "Lists differ on when it ends (10 or 11 AM): be there at 9",
    "group": null,
+   "arrive_by": "2026-11-11T16:00:00Z",
    "ticket": false,
    "purchase": false,
    "kinds": [
