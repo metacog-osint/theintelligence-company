@@ -57,6 +57,7 @@ SPIDERS = {
     "Chick-fil-A": ("chick_fil_a", LATEST), "Sheetz": ("sheetz", LATEST), "Wawa": ("wawa", LATEST),
     "California Pizza Kitchen": ("california_pizza_kitchen", LATEST), "Bonefish Grill": ("bonefish_grill", LATEST),
     "Carrabba's Italian Grill": ("carrabbas_italian_grill", LATEST), "Fogo de Chão": ("fogo_de_chao", LATEST),
+    "In-N-Out Burger": ("innout", LATEST),
 }
 # No All the Places spider for Bar Louie (run 2026-10-31 checked 11 Nov 2026): OpenStreetMap only. Carrabba's spider is
 # carrabbas_italian_grill, not carrabbas; krispy_kreme_us was right (its 10 Nov download failed once).
@@ -85,6 +86,7 @@ OSM = {
     "Chick-fil-A": r"^Chick-fil-A", "Sheetz": r"^Sheetz", "Wawa": r"^Wawa",
     "California Pizza Kitchen": r"^California Pizza Kitchen", "Bonefish Grill": r"^Bonefish Grill",
     "Carrabba's Italian Grill": r"^Carrabba'?s", "Fogo de Chão": r"^Fogo de Ch", "Bar Louie": r"^Bar Louie",
+    "In-N-Out Burger": r"^In-N-Out",
 }
 FUEL_OK = {"Circle K / Holiday", "Casey's", "Kwik Trip", "Pilot / Flying J", "Sheetz", "Wawa"}
 # All the Places lists known to miss whole regions (checked 10 Nov 2026): OpenStreetMap fills them in.
@@ -173,7 +175,7 @@ def located(features, states):
         g = f.get("geometry") or {}
         if g.get("type") == "Point":
             out.append((g["coordinates"][1], g["coordinates"][0], p))
-        elif (p.get("addr:state") or "").upper()[:2] in states or (p.get("addr:state") or "") in ("North Dakota", "Minnesota", "Virginia", "Maryland"):
+        elif (p.get("addr:state") or "").upper()[:2] in states or (p.get("addr:state") or "") in ("North Dakota", "Minnesota", "Virginia", "Nevada", "Maryland"):
             street = p.get("addr:street_address") or " ".join(x for x in (p.get("addr:housenumber"), p.get("addr:street")) if x)
             if street:
                 todo.append((str(i), street, p.get("addr:city") or "", (p.get("addr:state") or "")[:2].upper(), (p.get("addr:postcode") or "")[:5]))
@@ -187,6 +189,9 @@ def located(features, states):
 
 def address(p):
     street = p.get("addr:street_address") or " ".join(x for x in (p.get("addr:housenumber"), p.get("addr:street")) if x)
+    if not street and p.get("addr:full"):
+        # Some spiders give the street only in addr:full ("4905 S Virginia St.": Twin Peaks Reno, 11 Nov 2026).
+        street = p["addr:full"].split(",")[0]
     street = re.sub(r"\s+", " ", street or "").strip()
     city, state, zp = p.get("addr:city") or "", p.get("addr:state") or "", (p.get("addr:postcode") or "")[:5]
     if not city:

@@ -1,0 +1,1542 @@
+{
+ "7 Brew": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (7_brew_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Applebee's": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (applebees): 2 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "693 North McCarran Blvd., Sparks, NV 89431",
+    "status": "confirmed",
+    "wed_hours": "11:00-24:00",
+    "phone": "+1 775-358-5811",
+    "url": "https://restaurants.applebees.com/en-us/nv/sparks/693-north-mccarran-blvd.-82064",
+    "geo": "39.541000,-119.734200",
+    "source": "All the Places 2026-10-31: applebees"
+   },
+   {
+    "address": "4805 Kietzke Lane, Reno, NV 89509",
+    "status": "confirmed",
+    "wed_hours": "11:00-24:00",
+    "phone": "+1 775-825-2800",
+    "url": "https://restaurants.applebees.com/en-us/nv/reno/4805-kietzke-lane-82071",
+    "geo": "39.481100,-119.793600",
+    "source": "All the Places 2026-10-31: applebees"
+   }
+  ]
+ },
+ "Bar Louie": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Biggby Coffee": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (biggby_coffee_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Blaze Pizza": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-24 (blaze_pizza): 2 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "1370 Big Fish Dr., Suite 110, Sparks, NV 89434",
+    "status": "confirmed",
+    "wed_hours": "10:30-22:30",
+    "phone": "+1 775-980-0077",
+    "url": "https://locations.blazepizza.com/us/nv/sparks/blazepizza-1331",
+    "geo": "39.531740,-119.717490",
+    "source": "All the Places 2026-10-24: blaze_pizza"
+   },
+   {
+    "address": "537 South Meadows Pkwy, Suite 160, Reno, NV 89521",
+    "status": "confirmed",
+    "wed_hours": "10:30-22:30",
+    "phone": "+1 775-293-4042",
+    "url": "https://locations.blazepizza.com/us/nv/reno/blazepizza-1291",
+    "geo": "39.438860,-119.761210",
+    "source": "All the Places 2026-10-24: blaze_pizza"
+   }
+  ]
+ },
+ "Bob Evans": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (bob_evans_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Bonefish Grill": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (bonefish_grill): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Buca di Beppo": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (buca_di_beppo_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Buffalo Wild Wings": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (buffalo_wild_wings_us): 2 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "1560 East Lincoln Way, Sparks, NV 89434",
+    "status": "confirmed",
+    "wed_hours": "11:00-23:45",
+    "phone": "+1 775-737-9741",
+    "url": "",
+    "geo": "39.533999,-119.717892",
+    "source": "All the Places 2026-10-31: buffalo_wild_wings_us"
+   },
+   {
+    "address": "4978 S. Virginia St, Reno, NV 89509",
+    "status": "confirmed",
+    "wed_hours": "10:00-23:45",
+    "phone": "+1 775-221-7121",
+    "url": "",
+    "geo": "39.481335,-119.790004",
+    "source": "All the Places 2026-10-31: buffalo_wild_wings_us"
+   }
+  ]
+ },
+ "California Pizza Kitchen": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (california_pizza_kitchen): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Caribou Coffee": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (caribou_coffee_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Carrabba's Italian Grill": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (carrabbas_italian_grill): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Casey's": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Charleys Cheesesteaks": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-17 (charleys_philly_steaks): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "5615 Meadowood Mall Cir, Reno, NV 89502",
+    "status": "confirmed",
+    "wed_hours": "10:00-20:00",
+    "phone": "+1 775-622-4409",
+    "url": "https://www.charleys.com/locations/meadowood-mall/",
+    "geo": "39.474296,-119.781609",
+    "source": "All the Places 2026-10-17: charleys_philly_steaks"
+   }
+  ]
+ },
+ "Chili's": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (chilis): 2 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "10340 N. McCarran Blvd., Reno, NV 89503",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "+1 775-787-3388",
+    "url": "https://www.chilis.com/locations/us/nevada/reno/mccarran",
+    "geo": "39.532587,-119.863890",
+    "source": "All the Places 2026-10-31: chilis"
+   },
+   {
+    "address": "5090 Smithridge Dr., Reno, NV 89502",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "+1 775-829-7775",
+    "url": "https://www.chilis.com/locations/us/nevada/reno/reno",
+    "geo": "39.477381,-119.788778",
+    "source": "All the Places 2026-10-31: chilis"
+   }
+  ]
+ },
+ "Chipotle": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (chipotle): 6 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "1560 E Lincoln Way, Sparks, NV 89434",
+    "status": "confirmed",
+    "wed_hours": "10:30-22:00",
+    "phone": "+1 775-358-0695",
+    "url": "https://locations.chipotle.com/nv/sparks/1560-e-lincoln-way",
+    "geo": "39.533989,-119.718142",
+    "source": "All the Places 2026-10-31: chipotle"
+   },
+   {
+    "address": "13911 S Virginia St, Reno, NV 89511",
+    "status": "confirmed",
+    "wed_hours": "10:30-22:00",
+    "phone": "+1 775-260-0130",
+    "url": "https://locations.chipotle.com/nv/reno/13911-s-virginia-st",
+    "geo": "39.405965,-119.749990",
+    "source": "All the Places 2026-10-31: chipotle"
+   },
+   {
+    "address": "925 W 5th St, Reno, NV 89503",
+    "status": "confirmed",
+    "wed_hours": "10:30-23:00",
+    "phone": "+1 775-636-7647",
+    "url": "https://locations.chipotle.com/nv/reno/925-w-5th-st",
+    "geo": "39.529576,-119.828874",
+    "source": "All the Places 2026-10-31: chipotle"
+   },
+   {
+    "address": "537 S Meadows Pkwy, Reno, NV 89521",
+    "status": "confirmed",
+    "wed_hours": "10:30-22:00",
+    "phone": "+1 775-851-1476",
+    "url": "https://locations.chipotle.com/nv/reno/537-s-meadows-pkwy",
+    "geo": "39.438721,-119.761203",
+    "source": "All the Places 2026-10-31: chipotle"
+   },
+   {
+    "address": "6395 S McCarran Blvd, Reno, NV 89509",
+    "status": "confirmed",
+    "wed_hours": "10:30-22:00",
+    "phone": "+1 775-825-3862",
+    "url": "https://locations.chipotle.com/nv/reno/6395-s-mccarran-blvd",
+    "geo": "39.477469,-119.793162",
+    "source": "All the Places 2026-10-31: chipotle"
+   },
+   {
+    "address": "5144 Mae Anne Ave, Reno, NV 89523",
+    "status": "confirmed",
+    "wed_hours": "10:30-22:00",
+    "phone": "+1 775-624-6203",
+    "url": "https://locations.chipotle.com/nv/reno/5144-mae-anne-ave",
+    "geo": "39.532307,-119.865380",
+    "source": "All the Places 2026-10-31: chipotle"
+   }
+  ]
+ },
+ "Circle K / Holiday": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (circle_k): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Cracker Barrel": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Dave & Buster's": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (dave_and_busters): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "13969 South Virginia Street, Reno, NV 89511",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "+1 775-332-5858",
+    "url": "https://www.daveandbusters.com/us/en/about/locations/reno",
+    "geo": "39.405039,-119.748513",
+    "source": "All the Places 2026-10-31: dave_and_busters"
+   }
+  ]
+ },
+ "Denny's": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (dennys_us): 3 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "680 N. Wells Ave., Reno, NV 89512",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 775-322-9039",
+    "url": "https://locations.dennys.com/nv/reno/248733",
+    "geo": "39.535891,-119.802824",
+    "source": "All the Places 2026-10-31: dennys_us"
+   },
+   {
+    "address": "1100 E Plumb Lane, Reno, NV 89502",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 775-446-8835",
+    "url": "https://locations.dennys.com/nv/reno/247252",
+    "geo": "39.505320,-119.784968",
+    "source": "All the Places 2026-10-31: dennys_us"
+   },
+   {
+    "address": "205 Nugget Ave., Sparks, NV 89431",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 775-359-9053",
+    "url": "https://locations.dennys.com/nv/sparks/248734",
+    "geo": "39.532963,-119.740198",
+    "source": "All the Places 2026-10-31: dennys_us"
+   }
+  ]
+ },
+ "Dunkin'": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (dunkin_us): 4 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "435 Sparks Blvd, Suite #121, Sparks, NV 89434",
+    "status": "confirmed",
+    "wed_hours": "04:00-20:45",
+    "phone": "+1 520-304-9034",
+    "url": "https://www.dunkindonuts.com/locations/us/nv/sparks/435-sparks-blvd/store-353932/",
+    "geo": "39.535390,-119.716096",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "Path 1, Pennington Student Center, Reno, NV 89512",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "",
+    "url": "https://www.dunkindonuts.com/locations/us/nv/reno/path-1/store-366531/",
+    "geo": "39.540155,-119.815574",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "155 Damonte Ranch Pkwy, Reno, NV 89521",
+    "status": "confirmed",
+    "wed_hours": "06:00-17:45",
+    "phone": "+1 520-304-9034",
+    "url": "https://www.dunkindonuts.com/locations/us/nv/reno/155-damonte-ranch-pkwy/store-362691/",
+    "geo": "39.422620,-119.756600",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "5260 W 7th St, Walmart, Reno, NV 89523",
+    "status": "confirmed",
+    "wed_hours": "06:00-19:45",
+    "phone": "+1 520-304-9034",
+    "url": "https://www.dunkindonuts.com/locations/us/nv/reno/5260-w-7th-st/store-359630/",
+    "geo": "39.535150,-119.867069",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   }
+  ]
+ },
+ "Famous Dave's": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (famous_daves_us): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "4925 Kietzke Lane, Reno, NV 89509",
+    "status": "confirmed",
+    "wed_hours": "11:00-20:30",
+    "phone": "+1 775-826-7427",
+    "url": "https://www.famousdaves.com/Locations/reno",
+    "geo": "39.478409,-119.795069",
+    "source": "All the Places 2026-10-31: famous_daves_us"
+   }
+  ]
+ },
+ "Fazoli's": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (fazolis_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Firehouse Subs": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (firehouse_subs): 3 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "593 E. Prater Way, Sparks, NV 89431",
+    "status": "confirmed",
+    "wed_hours": "10:00-22:00",
+    "phone": "+1 775-376-8200",
+    "url": "https://www.firehousesubs.com/store-locator/store/GR87NptNWiuRBaPNyd8aVZ",
+    "geo": "39.541576,-119.736605",
+    "source": "All the Places 2026-10-31: firehouse_subs"
+   },
+   {
+    "address": "199 Damonte Ranch Pkwy., Unit K, Reno, NV 89521",
+    "status": "confirmed",
+    "wed_hours": "10:00-21:00",
+    "phone": "+1 775-851-1072",
+    "url": "https://www.firehousesubs.com/store-locator/store/GkrGejcyZl7uGwvxIPBrf1",
+    "geo": "39.421140,-119.755615",
+    "source": "All the Places 2026-10-31: firehouse_subs"
+   },
+   {
+    "address": "925 W. 5th St., Suite #125, Reno, NV 89503",
+    "status": "confirmed",
+    "wed_hours": "10:00-21:00",
+    "phone": "+1 775-622-1078",
+    "url": "https://www.firehousesubs.com/store-locator/store/cat9HDXmWZg5O71jycrIJV",
+    "geo": "39.528705,-119.828013",
+    "source": "All the Places 2026-10-31: firehouse_subs"
+   }
+  ]
+ },
+ "Fogo de Chão": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (fogo_de_chao): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Freddy's Frozen Custard & Steakburgers": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (freddys_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Golden Corral": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (golden_corral): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Granite City Food & Brewery": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Great Clips": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (great_clips): 6 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "4751 Galleria Pkwy, Sparks, NV 89436",
+    "status": "confirmed",
+    "wed_hours": "08:00-19:00",
+    "phone": "+1 775-870-9815",
+    "url": "https://salons.greatclips.com/us/nv/sparks/4751-galleria-pkwy",
+    "geo": "39.577646,-119.740613",
+    "source": "All the Places 2026-10-31: great_clips"
+   },
+   {
+    "address": "748 S Meadow Pkwy, Reno, NV 89521",
+    "status": "confirmed",
+    "wed_hours": "09:00-19:00",
+    "phone": "+1 775-851-8437",
+    "url": "https://salons.greatclips.com/us/nv/reno/748-s-meadow-pkwy",
+    "geo": "39.437382,-119.757468",
+    "source": "All the Places 2026-10-31: great_clips"
+   },
+   {
+    "address": "4809 Kietzke Ln, Reno, NV 89509",
+    "status": "confirmed",
+    "wed_hours": "09:00-19:00",
+    "phone": "+1 775-827-2211",
+    "url": "https://salons.greatclips.com/us/nv/reno/4809-kietzke-ln",
+    "geo": "39.481522,-119.794512",
+    "source": "All the Places 2026-10-31: great_clips"
+   },
+   {
+    "address": "10490 N McCarran Blvd, Reno, NV 89503",
+    "status": "confirmed",
+    "wed_hours": "08:00-19:00",
+    "phone": "+1 775-870-9891",
+    "url": "https://salons.greatclips.com/us/nv/reno/10490-n-mccarran-blvd",
+    "geo": "39.533889,-119.862648",
+    "source": "All the Places 2026-10-31: great_clips"
+   },
+   {
+    "address": "1495 E Prater Way, Sparks, NV 89431",
+    "status": "confirmed",
+    "wed_hours": "09:00-19:00",
+    "phone": "+1 775-501-5368",
+    "url": "https://salons.greatclips.com/us/nv/sparks/1495-e-prater-way",
+    "geo": "39.541452,-119.716242",
+    "source": "All the Places 2026-10-31: great_clips"
+   },
+   {
+    "address": "6633 South Virginia St., Reno, NV 89511",
+    "status": "confirmed",
+    "wed_hours": "09:00-19:00",
+    "phone": "+1 775-221-7394",
+    "url": "https://salons.greatclips.com/us/nv/reno/6633-south-virginia-st",
+    "geo": "39.465768,-119.784199",
+    "source": "All the Places 2026-10-31: great_clips"
+   }
+  ]
+ },
+ "Hooters": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (hooters): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "IHOP": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (ihop): 4 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "4752 Galleria Pkwy, Sparks, NV 89436",
+    "status": "confirmed",
+    "wed_hours": "06:00-22:00",
+    "phone": "+1 775-626-1060",
+    "url": "https://restaurants.ihop.com/nv/sparks/breakfast-4752-galleria-pkwy-3178",
+    "geo": "39.577935,-119.739868",
+    "source": "All the Places 2026-10-31: ihop"
+   },
+   {
+    "address": "9786 S Virginia St, Reno, NV 89511",
+    "status": "confirmed",
+    "wed_hours": "06:00-22:00",
+    "phone": "+1 775-853-6655",
+    "url": "https://restaurants.ihop.com/nv/reno/breakfast-9786-s-virginia-st-3111",
+    "geo": "39.441498,-119.770435",
+    "source": "All the Places 2026-10-31: ihop"
+   },
+   {
+    "address": "1800 S Virginia St, Reno, NV 89502",
+    "status": "confirmed",
+    "wed_hours": "07:00-22:00",
+    "phone": "+1 775-786-5028",
+    "url": "https://restaurants.ihop.com/nv/reno/breakfast-1800-s-virginia-st-630",
+    "geo": "39.506405,-119.803188",
+    "source": "All the Places 2026-10-31: ihop"
+   },
+   {
+    "address": "10150 N Mccarran Blvd, Reno, NV 89503",
+    "status": "confirmed",
+    "wed_hours": "07:00-22:00",
+    "phone": "+1 775-787-7700",
+    "url": "https://restaurants.ihop.com/nv/reno/breakfast-10150-n-mccarran-blvd-1721",
+    "geo": "39.525855,-119.861587",
+    "source": "All the Places 2026-10-31: ihop"
+   }
+  ]
+ },
+ "In-N-Out Burger": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (innout): 3 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "280 Pyramid Way, Sparks, NV 89431",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "",
+    "url": "http://locations.in-n-out.com/188",
+    "geo": "39.535570,-119.752590",
+    "source": "All the Places 2026-10-31: innout"
+   },
+   {
+    "address": "8215 S. Virginia St., Reno, NV 89511",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "",
+    "url": "http://locations.in-n-out.com/186",
+    "geo": "39.452010,-119.777320",
+    "source": "All the Places 2026-10-31: innout"
+   },
+   {
+    "address": "915 W. 5th Street, Reno, NV 89503",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "",
+    "url": "http://locations.in-n-out.com/377",
+    "geo": "39.528790,-119.828050",
+    "source": "All the Places 2026-10-31: innout"
+   }
+  ]
+ },
+ "Insomnia Cookies": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (insomnia_cookies): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "935 N. Virginia Street, Reno, NV 89503",
+    "status": "confirmed",
+    "wed_hours": "11:00-01:00",
+    "phone": "+1 775-434-1748",
+    "url": "",
+    "geo": "39.536831,-119.816739",
+    "source": "All the Places 2026-10-31: insomnia_cookies"
+   }
+  ]
+ },
+ "Jiffy Lube": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (jiffy_lube_us): 8 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "215 E PRATER WAY, SPARKS, NV 89431",
+    "status": "confirmed",
+    "wed_hours": "07:30-18:00",
+    "phone": "+1 775-346-5762",
+    "url": "https://www.jiffylube.com/locations/nv/sparks/2546",
+    "geo": "39.541598,-119.739239",
+    "source": "All the Places 2026-10-31: jiffy_lube_us"
+   },
+   {
+    "address": "581 LOS ALTOS PARKWAY, SPARKS, NV 89436",
+    "status": "confirmed",
+    "wed_hours": "07:30-19:00",
+    "phone": "+1 775-346-5771",
+    "url": "https://www.jiffylube.com/locations/nv/sparks/3432",
+    "geo": "39.585032,-119.734845",
+    "source": "All the Places 2026-10-31: jiffy_lube_us"
+   },
+   {
+    "address": "1055 S ROCK BLVD, SPARKS, NV 89431",
+    "status": "confirmed",
+    "wed_hours": "07:30-18:00",
+    "phone": "+1 775-346-5769",
+    "url": "https://www.jiffylube.com/locations/nv/sparks/3365",
+    "geo": "39.525214,-119.766894",
+    "source": "All the Places 2026-10-31: jiffy_lube_us"
+   },
+   {
+    "address": "55 E PATRIOT BLVD, RENO, NV 89511",
+    "status": "confirmed",
+    "wed_hours": "07:30-19:00",
+    "phone": "+1 775-346-5765",
+    "url": "https://www.jiffylube.com/locations/nv/reno/2942",
+    "geo": "39.452819,-119.776964",
+    "source": "All the Places 2026-10-31: jiffy_lube_us"
+   },
+   {
+    "address": "1305 SULLIVAN LN, SPARKS, NV 89431",
+    "status": "confirmed",
+    "wed_hours": "07:30-18:00",
+    "phone": "+1 775-346-5760",
+    "url": "https://www.jiffylube.com/locations/nv/sparks/2543",
+    "geo": "39.545822,-119.771958",
+    "source": "All the Places 2026-10-31: jiffy_lube_us"
+   },
+   {
+    "address": "6006 S VIRGINIA ST, RENO, NV 89502",
+    "status": "confirmed",
+    "wed_hours": "07:30-19:00",
+    "phone": "+1 775-346-5763",
+    "url": "https://www.jiffylube.com/locations/nv/reno/2547",
+    "geo": "39.471153,-119.785718",
+    "source": "All the Places 2026-10-31: jiffy_lube_us"
+   },
+   {
+    "address": "1230 N MCCARRAN BLVD, RENO, NV 89512",
+    "status": "confirmed",
+    "wed_hours": "07:30-18:00",
+    "phone": "+1 775-346-5767",
+    "url": "https://www.jiffylube.com/locations/nv/reno/3203",
+    "geo": "39.556291,-119.800106",
+    "source": "All the Places 2026-10-31: jiffy_lube_us"
+   },
+   {
+    "address": "695 KEYSTONE AVE, RENO, NV 89503",
+    "status": "confirmed",
+    "wed_hours": "07:30-19:00",
+    "phone": "+1 775-346-5761",
+    "url": "https://www.jiffylube.com/locations/nv/reno/2544",
+    "geo": "39.530650,-119.831480",
+    "source": "All the Places 2026-10-31: jiffy_lube_us"
+   }
+  ]
+ },
+ "Kohl's": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (kohls_us): 3 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "5035 PYRAMID LAKE RD, SPARKS, NV 89436",
+    "status": "confirmed",
+    "wed_hours": "09:00-21:00",
+    "phone": "+1 775-356-9966",
+    "url": "https://www.kohls.com/stores/nv/sparks-975.shtml",
+    "geo": "39.582688,-119.746809",
+    "source": "All the Places 2026-10-31: kohls_us"
+   },
+   {
+    "address": "70 DAMONTE RANCH PKWY, RENO, NV 89521",
+    "status": "confirmed",
+    "wed_hours": "09:00-21:00",
+    "phone": "+1 775-852-4444",
+    "url": "https://www.kohls.com/stores/nv/reno-974.shtml",
+    "geo": "39.417784,-119.755259",
+    "source": "All the Places 2026-10-31: kohls_us"
+   },
+   {
+    "address": "5150 MAE ANNE AVE, #100, RENO, NV 89523",
+    "status": "confirmed",
+    "wed_hours": "09:00-21:00",
+    "phone": "+1 775-787-8100",
+    "url": "https://www.kohls.com/stores/nv/reno-1172.shtml",
+    "geo": "39.531427,-119.866279",
+    "source": "All the Places 2026-10-31: kohls_us"
+   }
+  ]
+ },
+ "Krispy Kreme": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (krispy_kreme_us): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "75 Los Altos Pkwy, Sparks, NV 89436",
+    "status": "confirmed",
+    "wed_hours": "06:00-20:00",
+    "phone": "+1 775-387-3007",
+    "url": "https://site.krispykreme.com/nv/sparks/75-los-altos-pkwy",
+    "geo": "39.583244,-119.742256",
+    "source": "All the Places 2026-10-31: krispy_kreme_us"
+   }
+  ]
+ },
+ "Kwik Trip": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (kwik_trip): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Little Caesars": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (little_caesars_us): 0 in the area (a partial list); OpenStreetMap: 3 in the area",
+  "stores": [
+   {
+    "address": "2880 Northtowne Lane, Reno, NV 89512",
+    "status": "unverified",
+    "wed_hours": "",
+    "phone": "+1-775-356-1001",
+    "url": "https://littlecaesars.com/en-us/store/8763/",
+    "osm_id": "node/2012884736",
+    "geo": "39.555466,-119.781166",
+    "source": "OpenStreetMap"
+   },
+   {
+    "address": "10310 North Mccarran Boulevard, Reno, NV 89503",
+    "status": "unverified",
+    "wed_hours": "10:00-21:30",
+    "phone": "",
+    "url": "https://littlecaesars.com/en-us/store/10563/",
+    "osm_id": "node/4416178794",
+    "geo": "39.531489,-119.863948",
+    "source": "OpenStreetMap"
+   },
+   {
+    "address": "10855 Double R Boulevard, Reno, NV 89521",
+    "status": "unverified",
+    "wed_hours": "10:00-22:00",
+    "phone": "+1-775-852-1653",
+    "url": "https://littlecaesars.com/en-us/store/10356/",
+    "osm_id": "node/9082820331",
+    "geo": "39.425336,-119.750860",
+    "source": "OpenStreetMap"
+   }
+  ]
+ },
+ "Marcus Theatres": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Menchie's": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (menchies): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Mission BBQ": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Olive Garden": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "OpenStreetMap: 2 in the area",
+  "stores": [
+   {
+    "address": "4900 South Virginia Street, Reno, NV 89502",
+    "status": "unverified",
+    "wed_hours": "11:00-22:00",
+    "phone": "",
+    "url": "",
+    "osm_id": "way/32828507",
+    "geo": "39.481960,-119.791039",
+    "source": "OpenStreetMap"
+   },
+   {
+    "address": "1481 East Lincoln Way, Sparks, NV 89434",
+    "status": "unverified",
+    "wed_hours": "",
+    "phone": "",
+    "url": "",
+    "osm_id": "way/545586099",
+    "geo": "39.533960,-119.719820",
+    "source": "OpenStreetMap"
+   }
+  ]
+ },
+ "Outback Steakhouse": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (outback_steakhouse): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "1805 East Lincoln Way, Sparks, NV 89434",
+    "status": "confirmed",
+    "wed_hours": "11:00-21:00",
+    "phone": "+1 775-358-2700",
+    "url": "https://locations.outback.com/nevada/sparks/1805-east-lincoln-way",
+    "geo": "39.532941,-119.714310",
+    "source": "All the Places 2026-10-31: outback_steakhouse"
+   }
+  ]
+ },
+ "Perkins": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (perkins_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Pilot / Flying J": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-10 (pilot_flying_j): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Pizza Ranch": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (pizza_ranch_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Qdoba": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (qdoba): 5 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "6135 S Virginia St, Reno, NV 89502",
+    "status": "confirmed",
+    "wed_hours": "08:00-22:00",
+    "phone": "",
+    "url": "https://locations.qdoba.com/us/nv/reno/6135-s-virginia-st",
+    "geo": "39.469814,-119.786094",
+    "source": "All the Places 2026-10-31: qdoba"
+   },
+   {
+    "address": "151 Disc Drive, Sparks, NV 89436",
+    "status": "confirmed",
+    "wed_hours": "07:00-23:00",
+    "phone": "",
+    "url": "https://locations.qdoba.com/us/nv/sparks/151-disc-drive",
+    "geo": "39.576057,-119.740829",
+    "source": "All the Places 2026-10-31: qdoba"
+   },
+   {
+    "address": "10310 N McCarran Blvd, Reno, NV 89523",
+    "status": "confirmed",
+    "wed_hours": "08:00-22:00",
+    "phone": "",
+    "url": "https://locations.qdoba.com/us/nv/reno/10310-n-mccarran-blvd",
+    "geo": "39.531251,-119.863867",
+    "source": "All the Places 2026-10-31: qdoba"
+   },
+   {
+    "address": "197 Damonte Ranch Pkwy, Reno, NV 89521",
+    "status": "confirmed",
+    "wed_hours": "08:00-22:00",
+    "phone": "",
+    "url": "https://locations.qdoba.com/us/nv/reno/197-damonte-ranch-pkwy",
+    "geo": "39.420867,-119.755024",
+    "source": "All the Places 2026-10-31: qdoba"
+   },
+   {
+    "address": "2838 Vista Blvd, Sparks, NV 89434",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "",
+    "url": "https://locations.qdoba.com/us/nv/sparks/2838-vista-blvd/delivery",
+    "geo": "39.557304,-119.705002",
+    "source": "All the Places 2026-10-31: qdoba"
+   }
+  ]
+ },
+ "Red Lobster": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-17 (red_lobster_us): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "5015 Kietzke LN, Reno, NV 89511",
+    "status": "confirmed",
+    "wed_hours": "11:00-22:00",
+    "phone": "+1 775-827-1203",
+    "url": "https://www.redlobster.com/locations/list/nv/reno/5015-kietzke-ln/",
+    "geo": "39.476212,-119.795602",
+    "source": "All the Places 2026-10-17: red_lobster_us"
+   }
+  ]
+ },
+ "Red Robin": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-17 (red_robin): 2 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "4999 Kietzke Ln, Reno, NV 89509",
+    "status": "confirmed",
+    "wed_hours": "11:00-22:00",
+    "phone": "+1 775-825-7246",
+    "url": "https://www.redrobin.com/location/red-robin-reno",
+    "geo": "39.477215,-119.794321",
+    "source": "All the Places 2026-10-17: red_robin"
+   },
+   {
+    "address": "4712 Galleria Pkwy, Sparks, NV 89436",
+    "status": "confirmed",
+    "wed_hours": "11:00-21:00",
+    "phone": "+1 775-626-9700",
+    "url": "https://www.redrobin.com/location/red-robin-sparks",
+    "geo": "39.577185,-119.739935",
+    "source": "All the Places 2026-10-17: red_robin"
+   }
+  ]
+ },
+ "Ruby Tuesday": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (ruby_tuesday_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Scooter's Coffee": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (scooters_coffee_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Shake Shack": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-17 (shake_shack): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Smashburger": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (smashburger): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Sonic": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (sonic_drivein_us): 3 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "1220 Mc Carran Blvd, Reno, NV 89512",
+    "status": "confirmed",
+    "wed_hours": "07:00-23:00",
+    "phone": "+1 775-786-3962",
+    "url": "https://www.sonicdrivein.com/locations/us/nv/reno/1220-mc-carran-blvd/store-4109/",
+    "geo": "39.555942,-119.793655",
+    "source": "All the Places 2026-10-31: sonic_drivein_us"
+   },
+   {
+    "address": "6250 South Virginia Street, Reno, NV 89511",
+    "status": "confirmed",
+    "wed_hours": "07:00-22:00",
+    "phone": "+1 775-360-6954",
+    "url": "https://www.sonicdrivein.com/locations/us/nv/reno/6250-south-virginia-street/store-6739/",
+    "geo": "39.468944,-119.784738",
+    "source": "All the Places 2026-10-31: sonic_drivein_us"
+   },
+   {
+    "address": "4995 Galleria Parkway, Sparks, NV 89436",
+    "status": "confirmed",
+    "wed_hours": "07:00-22:00",
+    "phone": "+1 775-354-1155",
+    "url": "https://www.sonicdrivein.com/locations/us/nv/sparks/4995-galleria-parkway/store-5591/",
+    "geo": "39.583855,-119.738950",
+    "source": "All the Places 2026-10-31: sonic_drivein_us"
+   }
+  ]
+ },
+ "Sport Clips": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (sport_clips_us): 5 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "131 Disc Drive, Sparks, NV 89436",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "+1 775-626-8855",
+    "url": "https://sportclips.com/us-nv-sparks-nv202",
+    "geo": "39.576300,-119.742080",
+    "source": "All the Places 2026-10-31: sport_clips_us"
+   },
+   {
+    "address": "1565 East Lincoln Way, Sparks, NV 89434",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "+1 775-357-2680",
+    "url": "https://sportclips.com/us-nv-sparks-nv204",
+    "geo": "39.533120,-119.717760",
+    "source": "All the Places 2026-10-31: sport_clips_us"
+   },
+   {
+    "address": "537 South Meadows Parkway, Reno, NV 89521",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "+1 775-852-4000",
+    "url": "https://sportclips.com/us-nv-reno-nv205",
+    "geo": "39.438860,-119.761210",
+    "source": "All the Places 2026-10-31: sport_clips_us"
+   },
+   {
+    "address": "1650 Robb Dr., Reno, NV 89523",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "+1 775-622-9568",
+    "url": "https://sportclips.com/us-nv-reno-nv207",
+    "geo": "39.528370,-119.880160",
+    "source": "All the Places 2026-10-31: sport_clips_us"
+   },
+   {
+    "address": "6015C South Virginia Street, Reno, NV 89502",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "+1 775-851-7717",
+    "url": "https://sportclips.com/us-nv-reno-nv201",
+    "geo": "39.469960,-119.787860",
+    "source": "All the Places 2026-10-31: sport_clips_us"
+   }
+  ]
+ },
+ "Starbucks": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (starbucks_us): 32 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "986 Ambassador Dr, Reno, NV 89523",
+    "status": "confirmed",
+    "wed_hours": "04:30-21:00",
+    "phone": "+1 775-335-6147",
+    "url": "",
+    "geo": "39.518560,-119.887460",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "1630 Robb Dr, Reno, NV 89523",
+    "status": "confirmed",
+    "wed_hours": "06:00-20:00",
+    "phone": "",
+    "url": "",
+    "geo": "39.527900,-119.879940",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "10190 N McCarran Blvd, Peavine Plaza, Reno, NV 89503",
+    "status": "confirmed",
+    "wed_hours": "04:30-20:00",
+    "phone": "+1 775-624-6464",
+    "url": "",
+    "geo": "39.527810,-119.862390",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "282 Los Altos Parkway, Spanish Springs Shopping Center, 106, Sparks, NV 89436",
+    "status": "confirmed",
+    "wed_hours": "04:30-21:00",
+    "phone": "+1 775-354-0620",
+    "url": "",
+    "geo": "39.583980,-119.740460",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "2905 Northtowne Lane, Northtown Home Depot, 100, Reno, NV 89512",
+    "status": "confirmed",
+    "wed_hours": "04:30-20:00",
+    "phone": "+1 775-673-1500",
+    "url": "",
+    "geo": "39.557120,-119.782640",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "690 Keystone Ave, Reno, NV 89503",
+    "status": "confirmed",
+    "wed_hours": "04:30-21:00",
+    "phone": "+1 775-747-7318",
+    "url": "",
+    "geo": "39.530600,-119.830900",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "171 Disc Dr, Sparks Galleria, Sparks, NV 89436",
+    "status": "confirmed",
+    "wed_hours": "04:30-20:00",
+    "phone": "+1 775-626-1199",
+    "url": "",
+    "geo": "39.576210,-119.740260",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "895 W 5th St, Reno, NV 89503",
+    "status": "confirmed",
+    "wed_hours": "04:30-21:00",
+    "phone": "+1 775-899-1071",
+    "url": "",
+    "geo": "39.528910,-119.827870",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "1929 Silverada Blvd, Reno, NV 89512",
+    "status": "confirmed",
+    "wed_hours": "05:00-21:00",
+    "phone": "+1 775-387-2431",
+    "url": "",
+    "geo": "39.545820,-119.784670",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "345 N. Virginia St., Reno, NV 89501",
+    "status": "confirmed",
+    "wed_hours": "06:00-18:00",
+    "phone": "+1 775-586-7000",
+    "url": "",
+    "geo": "39.528920,-119.814280",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "2835 N. McCarran Blvd, #103, Sparks, NV 89431",
+    "status": "confirmed",
+    "wed_hours": "04:30-20:00",
+    "phone": "+1 775-331-8551",
+    "url": "",
+    "geo": "39.555340,-119.752820",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "330 S. Virginia Street, Reno, NV 89501",
+    "status": "confirmed",
+    "wed_hours": "05:00-19:00",
+    "phone": "+1 775-324-7200",
+    "url": "",
+    "geo": "39.522390,-119.811310",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "392 Booth St, Reno, NV 89509",
+    "status": "confirmed",
+    "wed_hours": "04:30-21:00",
+    "phone": "+1 775-309-1404",
+    "url": "",
+    "geo": "39.516600,-119.826170",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "75 Pringle Way, 103A, Reno, NV 89502",
+    "status": "confirmed",
+    "wed_hours": "05:30-22:00",
+    "phone": "+1 775-982-7827",
+    "url": "",
+    "geo": "39.526510,-119.795690",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "1640 Mill St, Reno, NV 89502",
+    "status": "confirmed",
+    "wed_hours": "05:00-19:00",
+    "phone": "+1 775-902-8845",
+    "url": "",
+    "geo": "39.522230,-119.790810",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "2500 East Second Avenue, Reno, NV 89595",
+    "status": "confirmed",
+    "wed_hours": "05:00-19:00",
+    "phone": "+1 775-789-2000",
+    "url": "",
+    "geo": "39.523400,-119.779450",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "1255 Baring Blvd., Sparks, NV 89434",
+    "status": "confirmed",
+    "wed_hours": "06:00-19:00",
+    "phone": "+1 775-359-6800",
+    "url": "",
+    "geo": "39.554720,-119.722330",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "1100 Nugget Ave, Sparks, NV 89431",
+    "status": "confirmed",
+    "wed_hours": "05:00-17:00",
+    "phone": "+1 775-356-4273",
+    "url": "",
+    "geo": "39.533440,-119.757980",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "550 West Plumb Lane, Plumbgate Plaza, I, Reno, NV 89509",
+    "status": "confirmed",
+    "wed_hours": "05:00-20:00",
+    "phone": "+1 775-827-0644",
+    "url": "",
+    "geo": "39.505280,-119.816850",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "683 N McCarran Blvd, Sparks, NV 89431",
+    "status": "confirmed",
+    "wed_hours": "04:30-21:00",
+    "phone": "+1 775-331-9484",
+    "url": "",
+    "geo": "39.540310,-119.734230",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "4798 Caughlin Pkwy, Caughlin Ranch Center, Reno, NV 89519",
+    "status": "confirmed",
+    "wed_hours": "05:00-18:00",
+    "phone": "+1 775-829-4455",
+    "url": "",
+    "geo": "39.484490,-119.852870",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "745 Sparks Blvd., Marina Marketplace, 101, Sparks, NV 89434",
+    "status": "confirmed",
+    "wed_hours": "04:30-19:00",
+    "phone": "+1 775-351-2204",
+    "url": "",
+    "geo": "39.540970,-119.716050",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "1560 S. Stanford Way, Suite A, Sparks, NV 89431",
+    "status": "confirmed",
+    "wed_hours": "04:30-19:00",
+    "phone": "+1 775-356-7087",
+    "url": "",
+    "geo": "39.520650,-119.740720",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "6890 South McCarran Boulevard, Magnolia Village, 100, Reno, NV 89509",
+    "status": "confirmed",
+    "wed_hours": "05:00-19:00",
+    "phone": "+1 775-826-8553",
+    "url": "",
+    "geo": "39.476440,-119.806260",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "4801 Kietzke Lane, Firecreek Crossing, Reno, NV 89502",
+    "status": "confirmed",
+    "wed_hours": "05:00-19:00",
+    "phone": "+1 775-827-1192",
+    "url": "",
+    "geo": "39.480650,-119.793840",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "13961 S Virginia St, Reno, NV 89511",
+    "status": "confirmed",
+    "wed_hours": "04:30-19:30",
+    "phone": "+1 775-851-4449",
+    "url": "",
+    "geo": "39.402550,-119.750720",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "1131 Steamboat Pkwy, Damonte Ranch Town Center, Ste 840, Reno, NV 89521",
+    "status": "confirmed",
+    "wed_hours": "04:30-20:00",
+    "phone": "+1 775-852-9910",
+    "url": "",
+    "geo": "39.423250,-119.738150",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "191 Damonte Ranch Parkway, SouthTowne Crossing, A, Reno, NV 89521",
+    "status": "confirmed",
+    "wed_hours": "04:30-19:30",
+    "phone": "+1 775-851-2233",
+    "url": "",
+    "geo": "39.420290,-119.754740",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "557 S Meadows Pkwy, Reno, NV 89521",
+    "status": "confirmed",
+    "wed_hours": "04:30-20:00",
+    "phone": "+1 775-851-9222",
+    "url": "",
+    "geo": "39.439050,-119.760280",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "9343 Double R Blvd, Reno, NV 89521",
+    "status": "confirmed",
+    "wed_hours": "04:30-21:00",
+    "phone": "+1 775-389-2346",
+    "url": "",
+    "geo": "39.451310,-119.758090",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "8115 S Virginia St, Reno, NV 89511",
+    "status": "confirmed",
+    "wed_hours": "04:30-20:00",
+    "phone": "+1 775-862-0238",
+    "url": "",
+    "geo": "39.453570,-119.778130",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "5280 Longley Ln, Longley Town Centre, Reno, NV 89511",
+    "status": "confirmed",
+    "wed_hours": "04:30-19:00",
+    "phone": "+1 775-852-7179",
+    "url": "",
+    "geo": "39.473620,-119.764810",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   }
+  ]
+ },
+ "Target": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (target_us): 2 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "1550 E Lincoln Way, Sparks, NV 89434",
+    "status": "confirmed",
+    "wed_hours": "08:00-22:00",
+    "phone": "+1 775-332-1003",
+    "url": "https://www.target.com/sl/store/2472",
+    "geo": "39.535435,-119.716892",
+    "source": "All the Places 2026-10-31: target_us"
+   },
+   {
+    "address": "6845 Sierra Center Pkwy, Reno, NV 89511",
+    "status": "confirmed",
+    "wed_hours": "08:00-22:00",
+    "phone": "+1 775-853-8900",
+    "url": "https://www.target.com/sl/store/1363",
+    "geo": "39.463531,-119.780964",
+    "source": "All the Places 2026-10-31: target_us"
+   }
+  ]
+ },
+ "Texas Roadhouse": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (texas_roadhouse): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "150 Damonte Ranch Pkwy., Reno, NV 89521",
+    "status": "confirmed",
+    "wed_hours": "15:00-22:00",
+    "phone": "+1 775-852-6333",
+    "url": "https://texasroadhouse.olo.com/menu/355-reno-snv/",
+    "geo": "39.419060,-119.753145",
+    "source": "All the Places 2026-10-31: texas_roadhouse"
+   }
+  ]
+ },
+ "Tommy's Express Car Wash": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Twin Peaks": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (twin_peaks): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "4905 S Virginia St., Reno, NV 89502",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "+1 775-524-4111",
+    "url": "https://twinpeaksrestaurant.com/locations/reno",
+    "geo": "39.481178,-119.791786",
+    "source": "All the Places 2026-10-31: twin_peaks"
+   }
+  ]
+ },
+ "Village Inn": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (village_inn_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Walgreens": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (walgreens): 6 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "292 LOS ALTOS PKWY, Sparks, NV 89436",
+    "status": "confirmed",
+    "wed_hours": "07:00-22:00",
+    "phone": "+1 775-354-0104",
+    "url": "https://www.walgreens.com/locator/walgreens-292+los+altos+pkwy-sparks-nv-89436/id=9902",
+    "geo": "39.584455,-119.739977",
+    "source": "All the Places 2026-10-31: walgreens"
+   },
+   {
+    "address": "10370 N MCCARRAN BLVD, Reno, NV 89503",
+    "status": "confirmed",
+    "wed_hours": "07:00-22:00",
+    "phone": "+1 775-746-4809",
+    "url": "https://www.walgreens.com/locator/walgreens-10370+n+mccarran+blvd-reno-nv-89503/id=2658",
+    "geo": "39.533128,-119.862585",
+    "source": "All the Places 2026-10-31: walgreens"
+   },
+   {
+    "address": "3495 S VIRGINIA ST, Reno, NV 89502",
+    "status": "confirmed",
+    "wed_hours": "07:00-24:00",
+    "phone": "+1 775-824-0802",
+    "url": "https://www.walgreens.com/locator/walgreens-3495+s+virginia+st-reno-nv-89502/id=4789",
+    "geo": "39.491697,-119.797552",
+    "source": "All the Places 2026-10-31: walgreens"
+   },
+   {
+    "address": "3000 VISTA BLVD, Sparks, NV 89436",
+    "status": "confirmed",
+    "wed_hours": "07:00-22:00",
+    "phone": "+1 775-359-7044",
+    "url": "https://www.walgreens.com/locator/walgreens-3000+vista+blvd-sparks-nv-89436/id=2474",
+    "geo": "39.558924,-119.704793",
+    "source": "All the Places 2026-10-31: walgreens"
+   },
+   {
+    "address": "2299 ODDIE BLVD, Sparks, NV 89431",
+    "status": "confirmed",
+    "wed_hours": "08:00-22:00",
+    "phone": "+1 775-358-4721",
+    "url": "https://www.walgreens.com/locator/walgreens-2299+oddie+blvd-sparks-nv-89431/id=11227",
+    "geo": "39.545097,-119.775552",
+    "source": "All the Places 2026-10-31: walgreens"
+   },
+   {
+    "address": "12645 S VIRGINIA ST, Reno, NV 89511",
+    "status": "confirmed",
+    "wed_hours": "07:00-22:00",
+    "phone": "+1 775-853-9887",
+    "url": "https://www.walgreens.com/locator/walgreens-12645+s+virginia+st-reno-nv-89511/id=2662",
+    "geo": "39.417559,-119.756575",
+    "source": "All the Places 2026-10-31: walgreens"
+   }
+  ]
+ },
+ "Wendy's": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (wendys): 8 in the area (a partial list); OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "440 N Mccarran Blvd, Sparks, NV 89431",
+    "status": "confirmed",
+    "wed_hours": "06:00-01:00",
+    "phone": "+1 775-359-9549",
+    "url": "https://locations.wendys.com/united-states/nv/sparks/440-n-mccarran-blvd/kids-meals.html",
+    "geo": "39.538075,-119.734635",
+    "source": "All the Places 2026-10-31: wendys"
+   },
+   {
+    "address": "130 Salomon Circle, Sparks, NV 89434",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 775-384-6568",
+    "url": "https://locations.wendys.com/united-states/nv/sparks/130-salomon-circle/kids-meals.html",
+    "geo": "39.528149,-119.700127",
+    "source": "All the Places 2026-10-31: wendys"
+   },
+   {
+    "address": "9790 South Virginia Street, Reno, NV 89511",
+    "status": "confirmed",
+    "wed_hours": "06:00-24:00",
+    "phone": "+1 775-852-5734",
+    "url": "https://locations.wendys.com/united-states/nv/reno/9790-south-virginia-street/kids-meals.html",
+    "geo": "39.440972,-119.770208",
+    "source": "All the Places 2026-10-31: wendys"
+   },
+   {
+    "address": "875 W. Fifth Street, Reno, NV 89503",
+    "status": "confirmed",
+    "wed_hours": "06:00-01:00",
+    "phone": "+1 775-323-0802",
+    "url": "https://locations.wendys.com/united-states/nv/reno/875-w-fifth-street/kids-meals.html",
+    "geo": "39.529036,-119.827368",
+    "source": "All the Places 2026-10-31: wendys"
+   },
+   {
+    "address": "805 Kietzke Lane, Reno, NV 89502",
+    "status": "confirmed",
+    "wed_hours": "06:00-24:00",
+    "phone": "+1 775-322-2247",
+    "url": "https://locations.wendys.com/united-states/nv/reno/805-kietzke-lane/kids-meals.html",
+    "geo": "39.518545,-119.789654",
+    "source": "All the Places 2026-10-31: wendys"
+   },
+   {
+    "address": "4997 Longley Lane #4, Reno, NV 89502",
+    "status": "confirmed",
+    "wed_hours": "06:00-24:00",
+    "phone": "+1 775-826-1006",
+    "url": "https://locations.wendys.com/united-states/nv/reno/4997-longley-lane/kids-meals.html",
+    "geo": "39.477508,-119.765436",
+    "source": "All the Places 2026-10-31: wendys"
+   },
+   {
+    "address": "3200 South Virginia, Reno, NV 89502",
+    "status": "confirmed",
+    "wed_hours": "06:30-02:00",
+    "phone": "+1 775-825-6300",
+    "url": "https://locations.wendys.com/united-states/nv/reno/3200-south-virginia/kids-meals.html",
+    "geo": "39.494599,-119.797376",
+    "source": "All the Places 2026-10-31: wendys"
+   },
+   {
+    "address": "2889 Northtowne Lane, Reno, NV 89512",
+    "status": "confirmed",
+    "wed_hours": "06:00-01:00",
+    "phone": "+1 775-358-0668",
+    "url": "https://locations.wendys.com/united-states/nv/reno/2889-northtowne-lane/kids-meals.html",
+    "geo": "39.555829,-119.783117",
+    "source": "All the Places 2026-10-31: wendys"
+   }
+  ]
+ }
+}

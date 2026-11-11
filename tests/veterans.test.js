@@ -200,6 +200,8 @@ test("other days and earlier-year leads are listed under Deals, off the route", 
 const AREAS = [...SCRIPTS["app.js"].matchAll(/\{ id: "([a-z-]+)", dir: "([a-z/-]+)" \}/g)].map((m) => ({ id: m[1], dir: m[2] }));
 const AREA_DATA = Object.fromEntries(AREAS.map((a) => [a.id, {
   deals: JSON.parse(read(DIR + a.dir + "deals.json")), drive: JSON.parse(read(DIR + a.dir + "drive.json")) }]));
+// Areas off Central time (Reston, 10 Nov 2026; Reno-Sparks, the first on Pacific time, 11 Nov 2026).
+const AREA_TZ = { "reston-va": "America/New_York", "reno-sparks": "America/Los_Angeles", "fort-meade": "America/New_York" };
 const kmApart = (a, b) => {
   const p = Math.PI / 180, s = Math.sin((b[0] - a[0]) * p / 2) ** 2 + Math.cos(a[0] * p) * Math.cos(b[0] * p) * Math.sin((b[1] - a[1]) * p / 2) ** 2;
   return 12742 * Math.asin(Math.sqrt(s));
@@ -219,9 +221,38 @@ test("the area picker: Fargo-Moorhead first and the default, and its options mat
     assert.ok(m, `${a.id}: meta.region`);
     assert.equal(m.id, a.id);
     for (const k of ["name", "center", "center_label", "zoom", "wx_name"]) assert.ok(m[k], `${a.id}: meta.region.${k}`);
-    assert.equal(AREA_DATA[a.id].deals.meta.tz, ["reston-va", "fort-meade"].includes(a.id) ? "America/New_York" : "America/Chicago", `${a.id}: time zone`);
+    assert.equal(AREA_DATA[a.id].deals.meta.tz, AREA_TZ[a.id] || "America/Chicago", `${a.id}: time zone`);
     assert.ok(AREA_DATA[a.id].deals.meta.forecast_url, `${a.id}: an NWS forecast link`);
   }
+});
+
+test("each area's day starts at its own local midnight, and its offset and zone name match its time zone", () => {
+  for (const a of AREAS) {
+    const { meta } = AREA_DATA[a.id].deals, start = Date.parse(meta.day_start);
+    const parts = Object.fromEntries(new Intl.DateTimeFormat("en-US", { timeZone: meta.tz, year: "numeric", month: "2-digit",
+      day: "2-digit", hour: "2-digit", minute: "2-digit", hourCycle: "h23", timeZoneName: "short" }).formatToParts(new Date(start)).map((p) => [p.type, p.value]));
+    assert.equal(`${parts.year}-${parts.month}-${parts.day} ${parts.hour}:${parts.minute}`, "2026-11-11 00:00", `${a.id}: day_start is midnight in ${meta.tz}`);
+    const asUtc = Date.UTC(+parts.year, +parts.month - 1, +parts.day, +parts.hour, +parts.minute);
+    assert.equal(meta.tz_offset_min, (asUtc - start) / 60e3, `${a.id}: tz_offset_min matches ${meta.tz}`);
+    for (const o of AREA_DATA[a.id].deals.offers) {
+      if (o.window_text) assert.ok(o.window_text.endsWith(" " + parts.timeZoneName), `${a.id} ${o.id}: window says ${parts.timeZoneName}`);
+    }
+  }
+});
+
+test("Reno-Sparks runs on Pacific time: windows, a ceremony's arrival and the engine's local clock are PST", () => {
+  const { deals } = AREA_DATA["reno-sparks"], by = (id) => deals.offers.find((o) => o.id === id);
+  assert.equal(deals.meta.day_start, "2026-11-11T08:00:00Z");
+  assert.equal(deals.meta.tz_offset_min, -480);
+  assert.equal(by("dennys").start, "2026-11-11T13:00:00Z", "Denny's 5 AM is 13:00 UTC");
+  assert.equal(by("dennys").end, "2026-11-11T20:00:00Z", "and noon is 20:00 UTC");
+  assert.equal(by("reno-parade").arrive_by, "2026-11-11T19:00:00Z", "be at the parade by 11:00 AM PST");
+  assert.equal(by("j-resort-buffet").start, "2026-11-12T00:00:00Z", "J Resort's 4 PM is midnight UTC on the 12th");
+  assert.equal(by("j-resort-buffet").end, "2026-11-12T05:00:00Z", "and 9 PM is 05:00 UTC");
+  // The casinos' players' clubs are a sign-up ahead, and their cards say so.
+  for (const id of ["atlantis-lunch-buffet", "legends-bay-lb-grill"]) assert.match(by(id).advance || "", /free .*Rewards.*21/, `${id}: sign up ahead`);
+  // J Resort and Gold Dust West name current and retired military, not every veteran.
+  for (const id of ["j-resort-buffet", "gold-dust-west"]) assert.ok(!by(id).eligible.includes("veteran"), `${id}: not for every veteran`);
 });
 
 test("every other area: each offer has a store, each store an offer, inside the area's circles and the day", () => {

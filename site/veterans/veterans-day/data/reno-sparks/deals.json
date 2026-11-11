@@ -1,0 +1,4521 @@
+{
+ "meta": {
+  "built_at": "2026-11-11T05:45:29Z",
+  "day": "2026-11-11",
+  "day_start": "2026-11-11T08:00:00Z",
+  "tz": "America/Los_Angeles",
+  "tz_offset_min": -480,
+  "forecast_url": "https://api.weather.gov/gridpoints/REV/45,106/forecast",
+  "sunrise": "2026-11-11T14:38:06Z",
+  "sunset": "2026-11-12T00:48:52Z",
+  "region": {
+   "id": "reno-sparks",
+   "name": "Reno–Sparks",
+   "label": "Reno–Sparks, NV",
+   "center": [
+    39.5251,
+    -119.8126
+   ],
+   "center_label": "downtown Reno",
+   "zoom": 11,
+   "wx_name": "Reno",
+   "transit": "ride RTC Washoe's buses, free for everyone all day on 11 Nov",
+   "areas": [
+    [
+     "Downtown, Midtown and west Reno",
+     39.522,
+     -119.825,
+     6.0
+    ],
+    [
+     "Sparks and the Marina",
+     39.55,
+     -119.74,
+     6.0
+    ],
+    [
+     "South Meadows and South Reno",
+     39.445,
+     -119.775,
+     5.5
+    ]
+   ]
+  }
+ },
+ "offers": [
+  {
+   "id": "applebees",
+   "brand": "Applebee's",
+   "status": "offering",
+   "category": "meal",
+   "offer": "Free full-size entree from a special Veterans Day menu (7 items); some locations add a $5 Bounce Back card",
+   "value": 14,
+   "grade": "A",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 55,
+   "busy": 25,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active",
+    "guard_reserve"
+   ],
+   "guard_reserve": "yes",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "Dine-in only; participating locations",
+   "sources": [
+    {
+     "url": "https://www.fsrmagazine.com/industry-news/applebees-to-thank-service-members-with-free-entrees-on-veterans-day/",
+     "publisher": "Applebee's 2026 release, as carried by FSR magazine",
+     "published": "2026-11-02"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    },
+    {
+     "url": "https://veteran.com/veterans-day-discounts-sales-deals-free-meals/",
+     "publisher": "Veteran.com",
+     "published": "2026-11-06 (updated)"
+    }
+   ],
+   "notes": "Guard/Reserve wording from Stripes; Veteran.com lists veterans only. Hours not specified. Applebee's own 2026 release (19th year, seven entrees, dine-in at participating restaurants); applebees.com refuses automated reads.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "chilis",
+   "brand": "Chili's",
+   "status": "offering",
+   "category": "meal",
+   "offer": "Free entree from a limited Veterans Day menu",
+   "value": 13,
+   "grade": "A",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 50,
+   "busy": 20,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.chilis.com/restaurant-events/veterans-day",
+     "publisher": "Chili's (own page)",
+     "published": "2026 (fine print: valid only on 11/11/2026)"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://veteran.com/veterans-day-discounts-sales-deals-free-meals/",
+     "publisher": "Veteran.com",
+     "published": "2026-11-06 (updated)"
+    }
+   ],
+   "notes": "Select items only; participating locations. Chili's own page: free meal on 11 Nov 2026 at participating restaurants, dine-in, limited menu, no drinks or gratuity.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "olive-garden",
+   "brand": "Olive Garden",
+   "status": "offering",
+   "category": "meal",
+   "offer": "Free entree from a special menu",
+   "value": 14,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 55,
+   "busy": 25,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    }
+   ],
+   "notes": "Veteran.com files Olive Garden under 2025; Military.com and Stripes list it for 2026. Brand's own page not checked. No statement from the company itself for 2026 found (8 Nov 2026): compilers only.",
+   "caution": "Not announced by the company for 2026: call first",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "red-lobster",
+   "brand": "Red Lobster",
+   "status": "offering",
+   "category": "meal",
+   "offer": "Free Veteran's Shrimp & Chips",
+   "value": 14,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 55,
+   "busy": 20,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    }
+   ],
+   "notes": "Veteran.com lists a prior-year entry; Military.com/Stripes show 2026 item named 'Veteran's Shrimp & Chips'. Confirm. No statement from the company itself for 2026 found (8 Nov 2026): compilers only.",
+   "caution": "Not announced by the company for 2026: call first",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "twin-peaks",
+   "brand": "Twin Peaks",
+   "status": "offering",
+   "category": "meal",
+   "offer": "Free entree from a select menu (cheeseburger and fries, chicken tenders and fries, chicken Caesar salad, OG pepperoni flatbread or boneless wings and fries), all day; 20% off all November with ID or uniform",
+   "value": 15,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 50,
+   "busy": 15,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id",
+    "photo_in_uniform"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://news.va.gov/150505/2026-veterans-day-discounts-free-meals-offers/",
+     "publisher": "VA News (VA Office of Digital Media)",
+     "published": "2026-10-26 (verified 22 Oct, updated through 11 Nov)"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://www.restaurantmagazine.com/twin-peaks-honors-veterans-day-free-meals-veterans-active-duty-military/",
+     "publisher": "Restaurant Magazine",
+     "published": "2026-10-30"
+    }
+   ],
+   "notes": "20% off runs the whole month of November.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "buffalo-wild-wings",
+   "brand": "Buffalo Wild Wings",
+   "status": "offering",
+   "category": "meal",
+   "offer": "10 boneless wings + fries",
+   "value": 14,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in_or_to_go",
+   "minutes": 35,
+   "busy": 15,
+   "line": 3,
+   "meal": true,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active",
+    "retired"
+   ],
+   "guard_reserve": "yes",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "Dine-in, GO orders or counter orders; participating locations",
+   "sources": [
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://veteran.com/veterans-day-discounts-sales-deals-free-meals/",
+     "publisher": "Veteran.com",
+     "published": "2026-11-06 (updated)"
+    }
+   ],
+   "notes": "'All past and present service members' (Military.com) - would include Guard/Reserve who served; Stripes says veterans.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "famous-daves",
+   "brand": "Famous Dave's",
+   "status": "offering",
+   "category": "meal",
+   "offer": "Complimentary two-meat lunch combo, dine-in, participating restaurants, proof required",
+   "value": 14,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 45,
+   "busy": 10,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://veteran.com/veterans-day-discounts-sales-deals-free-meals/",
+     "publisher": "Veteran.com",
+     "published": "2026-11-06 (updated)"
+    }
+   ],
+   "notes": "Veteran.com page text says 'Monday, Nov 11' (stale weekday copied from 2024) - date is unreliable; single source.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "dave-busters",
+   "brand": "Dave & Buster's",
+   "status": "offering",
+   "category": "meal",
+   "offer": "Free unlimited game play and/or free dessert with entree purchase, valid ID",
+   "value": 20,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 60,
+   "busy": 10,
+   "line": 3,
+   "meal": false,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    }
+   ],
+   "notes": "",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "games"
+   ]
+  },
+  {
+   "id": "red-robin",
+   "brand": "Red Robin",
+   "status": "offering",
+   "category": "meal",
+   "offer": "Free Red's Big Tavern Burger with bottomless steak fries",
+   "value": 16,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 50,
+   "busy": 20,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://veteran.com/veterans-day-discounts-sales-deals-free-meals/",
+     "publisher": "Veteran.com",
+     "published": "2026-11-06 (updated)"
+    }
+   ],
+   "notes": "",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "outback",
+   "brand": "Outback Steakhouse",
+   "status": "offering",
+   "category": "meal",
+   "offer": "Free Bloomin' Onion + Coca-Cola or 16-oz domestic draft ('Military Mates'); Dine Rewards payers also earn a Hero's Meal for a later visit",
+   "value": 12,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 40,
+   "busy": 15,
+   "line": 3,
+   "meal": false,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://veteran.com/veterans-day-discounts-sales-deals-free-meals/",
+     "publisher": "Veteran.com",
+     "published": "2026-11-06 (updated)"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    }
+   ],
+   "notes": "Military.com: Nov 10-11 free Bloomin' Onion + beverage. Dine Rewards enrollment not needed for the appetizer.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "snack"
+   ],
+   "eat": 0.5
+  },
+  {
+   "id": "dennys",
+   "brand": "Denny's",
+   "status": "offering",
+   "category": "breakfast",
+   "offer": "Free Original Grand Slam",
+   "value": 11,
+   "grade": "B",
+   "start": "2026-11-11T13:00:00Z",
+   "end": "2026-11-11T20:00:00Z",
+   "window_text": "05:00–12:00 PST",
+   "mode": "dine_in",
+   "minutes": 45,
+   "busy": 15,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active",
+    "retired"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "Participating locations",
+   "sources": [
+    {
+     "url": "https://usmilitary.org/veterans-day-discounts/",
+     "publisher": "usmilitary.org",
+     "published": "2026-11-05"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    },
+    {
+     "url": "https://www.legion.org/information-center/news/veterans-day/2026/november/veterans-day-deals-and-discounts",
+     "publisher": "American Legion",
+     "published": "2026-11-05"
+    }
+   ],
+   "notes": "USM cites the VA 2026 list: Wed 11 Nov, 5 a.m. to noon, dine-in only, ID required.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "ihop",
+   "brand": "IHOP",
+   "status": "offering",
+   "category": "breakfast",
+   "offer": "Free Red, White & Blueberry Pancake Combo",
+   "value": 11,
+   "grade": "B",
+   "start": "2026-11-11T15:00:00Z",
+   "end": "2026-11-12T03:00:00Z",
+   "window_text": "07:00–19:00 PST",
+   "mode": "dine_in",
+   "minutes": 45,
+   "busy": 15,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://www.legion.org/information-center/news/veterans-day/2026/november/veterans-day-deals-and-discounts",
+     "publisher": "The American Legion",
+     "published": "2026-11-05"
+    }
+   ],
+   "notes": "Veteran.com page still shows a 'Tuesday' weekday (stale 2025 text) but Military.com and Stripes confirm 11 Nov. Combo = pancakes, eggs, hash browns, bacon/sausage. The American Legion's 2026 list (5 Nov) gives 7 AM–7 PM at participating restaurants; ihop.com refuses automated reads.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "texas-roadhouse",
+   "brand": "Texas Roadhouse",
+   "status": "offering",
+   "category": "quick",
+   "offer": "Free meal voucher handed out 11:00-14:00; redeem for 1 of 10 entrees + sides + drink",
+   "value": 18,
+   "grade": "B",
+   "start": "2026-11-11T19:00:00Z",
+   "end": "2026-11-11T22:00:00Z",
+   "window_text": "11:00–14:00 PST",
+   "mode": "voucher",
+   "minutes": 8,
+   "busy": 25,
+   "line": 15,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id",
+    "va_card",
+    "dd214"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": "2027-05-31",
+   "limits": "Voucher, redeem later through 31 May 2027; offers may vary by location",
+   "sources": [
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://veteran.com/veterans-day-discounts-sales-deals-free-meals/",
+     "publisher": "Veteran.com",
+     "published": "2026-11-06 (updated)"
+    }
+   ],
+   "notes": "Voucher is handed out 11-2 only (not redeemable as a meal on the spot necessarily); a third-party page says vouchers usable from dinner opening on 11 Nov. Texas Roadhouse's own 2026 release not found; 2025 release used the same structure.",
+   "caution": "",
+   "group": null,
+   "ticket": true,
+   "purchase": false,
+   "kinds": []
+  },
+  {
+   "id": "wendys",
+   "brand": "Wendy's",
+   "status": "offering",
+   "category": "quick",
+   "offer": "Free Dave's Single cheeseburger",
+   "value": 6,
+   "grade": "A",
+   "start": "2026-11-11T18:30:00Z",
+   "end": null,
+   "window_text": "from 10:30 PST",
+   "mode": "dine_in_or_to_go",
+   "minutes": 12,
+   "busy": 10,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": true,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "One per person, no purchase needed, no substitutions; identify in-store or at the drive-thru; app/kiosk/mobile/delivery excluded",
+   "sources": [
+    {
+     "url": "https://www.wendys.com/blog/wendysr-square-deal-blog/wendys-honors-veterans-and-active-duty-military-free-daves-single",
+     "publisher": "Wendy's (own blog)",
+     "published": "2026-11-02"
+    },
+    {
+     "url": "https://hip2save.com/deals/veterans-day-free-meals/",
+     "publisher": "Hip2Save",
+     "published": "2026-11-05"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://www.legion.org/information-center/news/veterans-day/2026/november/veterans-day-deals-and-discounts",
+     "publisher": "American Legion",
+     "published": "2026-11-05"
+    }
+   ],
+   "notes": "One 2026 'Military Wallet' page claims a free breakfast combo instead - that is the 2025 offer; four 2026 sources say Dave's Single. Wendy's own newsroom not found. Wendy's sometimes offers varying items; confirm. Wendy's own post: just say you're a veteran or active duty; participating US restaurants; not in a combo; not for digital, delivery or kiosk orders.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "little-caesars",
+   "brand": "Little Caesars",
+   "status": "offering",
+   "category": "quick",
+   "offer": "Free HOT-N-READY Lunch Combo (4 slices Detroit-style + 20-oz Pepsi)",
+   "value": 7,
+   "grade": "B",
+   "start": "2026-11-11T19:00:00Z",
+   "end": "2026-11-11T22:00:00Z",
+   "window_text": "11:00–14:00 PST",
+   "mode": "in_store",
+   "minutes": 8,
+   "busy": 10,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": true,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    },
+    {
+     "url": "https://thekrazycouponlady.com/tips/money/35-veterans-day-freebies-free-oil-change-flu-shot-dinner-dessert",
+     "publisher": "The Krazy Coupon Lady",
+     "published": "2026-11-07 (updated)"
+    }
+   ],
+   "notes": "Military.com: in-store only, 11 a.m.-2 p.m.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "firehouse-subs",
+   "brand": "Firehouse Subs",
+   "status": "offering",
+   "category": "quick",
+   "offer": "Buy any size sub, get a second free",
+   "value": 9,
+   "grade": "A",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "in_store",
+   "minutes": 15,
+   "busy": 10,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": true,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "In-store only; second sub is equal or lesser value presumably",
+   "sources": [
+    {
+     "url": "https://news.firehousesubs.com/posts/firehouse-subs-honors-veterans-and-active-duty-military-with-a-veterans-day-bogo-offer",
+     "publisher": "Firehouse Subs newsroom",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    }
+   ],
+   "notes": "Veteran.com lists as 2025; Military.com (updated 8 Nov 2026) lists it without a year. Stripes also lists. Moderately confident. Firehouse's own post for Wed 11 Nov 2026: buy any sub, get one free, veterans and active duty with military ID, in store, participating restaurants.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": true,
+   "kinds": [
+    "meal"
+   ],
+   "eat": 0.5
+  },
+  {
+   "id": "chipotle",
+   "brand": "Chipotle",
+   "status": "offering",
+   "category": "quick",
+   "offer": "Free chips with guac, queso blanco or salsa with $5+ in-restaurant purchase",
+   "value": 5,
+   "grade": "A",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 15,
+   "busy": 10,
+   "line": 3,
+   "meal": false,
+   "dineIn": true,
+   "snack": true,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "no",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "In-restaurant only; not catering, mobile, online or delivery",
+   "sources": [
+    {
+     "url": "https://newsroom.chipotle.com/veterans-day-2026-offer",
+     "publisher": "Chipotle newsroom (release)",
+     "published": "2026-11-05"
+    },
+    {
+     "url": "https://veteran.com/veterans-day-discounts-sales-deals-free-meals/",
+     "publisher": "Veteran.com",
+     "published": "2026-11-06 (updated)"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    }
+   ],
+   "notes": "Requires a $5 purchase. Chipotle's 2026 release: active duty and veterans only (not spouses), all day, in-restaurant, $5 minimum before tax.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": true,
+   "kinds": [
+    "snack"
+   ],
+   "eat": 0.2
+  },
+  {
+   "id": "qdoba",
+   "brand": "Qdoba",
+   "status": "offering",
+   "category": "quick",
+   "offer": "Free chips and dip, dine-in, no purchase",
+   "value": 5,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 12,
+   "busy": 5,
+   "line": 3,
+   "meal": false,
+   "dineIn": true,
+   "snack": true,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://livingonthecheap.com/veterans-day-freebies-deals/",
+     "publisher": "Living On The Cheap",
+     "published": "2026-11-07 (updated)"
+    },
+    {
+     "url": "https://thekrazycouponlady.com/tips/money/35-veterans-day-freebies-free-oil-change-flu-shot-dinner-dessert",
+     "publisher": "The Krazy Coupon Lady",
+     "published": "2026-11-07 (updated)"
+    }
+   ],
+   "notes": "Living On The Cheap lists it as 2026; Krazy Coupon Lady marks it 'predicted'. Not on Military.com/Stripes lists. Treat as likely but not firm.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "snack"
+   ],
+   "eat": 0.2
+  },
+  {
+   "id": "charleys",
+   "brand": "Charleys Cheesesteaks",
+   "status": "offering",
+   "category": "quick",
+   "offer": "Free regular Gourmet Fry, no purchase needed",
+   "value": 4,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "in_store",
+   "minutes": 8,
+   "busy": 5,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": true,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    }
+   ],
+   "notes": "Single source (Military.com). Location is inside a truck stop. Charleys' own page found is 2025's (free regular Gourmet Fry, in store, participating US stores).",
+   "caution": "Participating stores only",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "snack"
+   ],
+   "eat": 0.2
+  },
+  {
+   "id": "blaze-pizza",
+   "brand": "Blaze Pizza",
+   "status": "offering",
+   "category": "quick",
+   "offer": "Free one-topping pizza",
+   "value": 8,
+   "grade": "A",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": null,
+   "minutes": 20,
+   "busy": 10,
+   "line": 3,
+   "meal": false,
+   "dineIn": true,
+   "snack": true,
+   "eligible": [
+    "veteran"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.manilatimes.net/2026/11/02/tmt-newswire/globenewswire/blaze-pizza-to-offer-free-one-topping-pizza-to-veterans-and-active-duty-military-on-veterans-day/2459600",
+     "publisher": "Blaze Pizza release (GlobeNewswire, carried by The Manila Times)",
+     "published": "2026-11-02"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    }
+   ],
+   "notes": "Blaze's 2026 release: veterans and active duty, participating locations; no hours or ID rule stated.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "starbucks",
+   "brand": "Starbucks",
+   "status": "offering",
+   "category": "coffee",
+   "offer": "Free tall (12 oz) brewed coffee, hot or iced",
+   "value": 3,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in_or_to_go",
+   "minutes": 8,
+   "busy": 5,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active",
+    "spouse"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "yes",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "One per customer per visit; cafe and drive-thru; excludes Cold Brew/Nitro/customizations",
+   "sources": [
+    {
+     "url": "https://about.starbucks.com/stories/2026/starbucks-holiday-2026/",
+     "publisher": "Starbucks (page returned 403 to fetch; seen in search snippet)",
+     "published": "2026"
+    },
+    {
+     "url": "https://veteran.com/veterans-day-discounts-sales-deals-free-meals/",
+     "publisher": "Veteran.com",
+     "published": "2026-11-06 (updated)"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    }
+   ],
+   "notes": "Participating US stores incl. licensed (Target/grocery) locations. Proof not specified; spouses included.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "coffee"
+   ]
+  },
+  {
+   "id": "dunkin",
+   "brand": "Dunkin'",
+   "status": "offering",
+   "category": "coffee",
+   "offer": "Free donut, in-store only, one per guest, while supplies last (not on mobile app orders)",
+   "value": 2,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "in_store",
+   "minutes": 6,
+   "busy": 5,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://livingonthecheap.com/veterans-day-freebies-deals/",
+     "publisher": "Living On The Cheap",
+     "published": "2026-11-07 (updated)"
+    }
+   ],
+   "notes": "USM says no 2026 announcement on Dunkin's own site as of 5 Nov.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "sweet"
+   ]
+  },
+  {
+   "id": "krispy-kreme",
+   "brand": "Krispy Kreme",
+   "status": "offering",
+   "category": "treat",
+   "offer": "Prior year (2025): free doughnut + small coffee; 2026 listed by Stripes, 'predicted' by KCL",
+   "value": 5,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "in_store",
+   "minutes": 8,
+   "busy": 5,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": true,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://thekrazycouponlady.com/tips/money/35-veterans-day-freebies-free-oil-change-flu-shot-dinner-dessert",
+     "publisher": "The Krazy Coupon Lady",
+     "published": "2026-11-07 (updated)"
+    },
+    {
+     "url": "https://usmilitary.org/veterans-day-discounts/",
+     "publisher": "usmilitary.org",
+     "published": "2026-11-05"
+    }
+   ],
+   "notes": "Conflict: Stripes lists as Nov 11 2026 offer; usmilitary.org says no 2026 announcement as of 5 Nov.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "sweet"
+   ]
+  },
+  {
+   "id": "insomnia",
+   "brand": "Insomnia Cookies",
+   "status": "offering",
+   "category": "treat",
+   "offer": "Predicted: one free Deluxe cookie with $5+ in-store purchase",
+   "value": 3,
+   "grade": "C",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": null,
+   "minutes": 8,
+   "busy": 3,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": true,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://thekrazycouponlady.com/tips/money/35-veterans-day-freebies-free-oil-change-flu-shot-dinner-dessert",
+     "publisher": "The Krazy Coupon Lady",
+     "published": "2026-11-07 (updated)"
+    }
+   ],
+   "notes": "",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": true,
+   "kinds": [
+    "sweet"
+   ],
+   "eat": 0.2
+  },
+  {
+   "id": "sonic",
+   "brand": "Sonic",
+   "status": "offering",
+   "category": "treat",
+   "offer": "Half-price shakes, any size and flavor",
+   "value": 3,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "drive_thru",
+   "minutes": 8,
+   "busy": 5,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": true,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id",
+    "va_card",
+    "dd214"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "Needs a purchase; locations not named",
+   "sources": [
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com (restaurants)",
+     "published": "2026-11-08 (updated)"
+    }
+   ],
+   "notes": "One 2026 list (Military.com, 8 Nov).",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": true,
+   "kinds": [
+    "sweet"
+   ],
+   "eat": 0.3
+  },
+  {
+   "id": "great-clips",
+   "brand": "Great Clips",
+   "status": "offering",
+   "category": "service",
+   "offer": "Free haircut or a free-haircut card for a later visit; non-veteran customers that day get a card to give to a veteran",
+   "value": 22,
+   "grade": "A",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "in_store",
+   "minutes": 5,
+   "busy": 5,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": "2026-12-04",
+   "limits": "Card redeemable through 4 Dec 2026",
+   "sources": [
+    {
+     "url": "https://www.greatclips.com/about-us/news-room/vets-day-free-haircuts-2026",
+     "publisher": "Great Clips newsroom (release)",
+     "published": "2026-10-20"
+    },
+    {
+     "url": "https://hip2save.com/deals/veterans-day-free-meals/",
+     "publisher": "Hip2Save",
+     "published": "2026-11-05"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/retailers-veterans-day-military-discounts.html",
+     "publisher": "Military.com retail list",
+     "published": "2026-11-07 (updated)"
+    },
+    {
+     "url": "https://www.legion.org/information-center/news/veterans-day/2026/november/veterans-day-deals-and-discounts",
+     "publisher": "American Legion",
+     "published": "2026-11-05"
+    },
+    {
+     "url": "https://usmilitary.org/veterans-day-discounts/",
+     "publisher": "usmilitary.org",
+     "published": "2026-11-05"
+    }
+   ],
+   "notes": "Great Clips program page describes the annual Nov 11 program; 2026 card deadline of 4 Dec comes from roundups (2025 was 5 Dec). Hours/proof not specified. Salons are franchised; wait times likely long. Great Clips' 2026 release: any US salon; cards redeemable through 4 Dec 2026.",
+   "caution": "",
+   "group": null,
+   "ticket": true,
+   "purchase": false,
+   "kinds": []
+  },
+  {
+   "id": "sport-clips",
+   "brand": "Sport Clips",
+   "status": "offering",
+   "category": "service",
+   "offer": "Free haircut at participating locations",
+   "value": 25,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "in_store",
+   "minutes": 30,
+   "busy": 20,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://hip2save.com/deals/veterans-day-free-meals/",
+     "publisher": "Hip2Save",
+     "published": "2026-11-05"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://usmilitary.org/veterans-day-discounts/",
+     "publisher": "usmilitary.org",
+     "published": "2026-11-05"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/retailers-veterans-day-military-discounts.html",
+     "publisher": "Military.com retail list",
+     "published": "2026-11-07 (updated)"
+    }
+   ],
+   "notes": "Also $2/haircut donation to VFW scholarship through 14 Nov. Franchise: confirm the specific shop.",
+   "caution": "Participating shops only: call first",
+   "group": "haircut",
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "haircut"
+   ]
+  },
+  {
+   "id": "jiffy-lube",
+   "brand": "Jiffy Lube",
+   "status": "offering",
+   "category": "service",
+   "offer": "Some franchisees: 50% off oil change on Nov 11; chain-wide ongoing 25% military discount reported",
+   "value": 20,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "in_store",
+   "minutes": 30,
+   "busy": 15,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active",
+    "retired"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://ccheadliner.com/2026/11/04/jiffy-lube-honors-active-retired-military-with-50-percent-discount-on-all-oil-changes-on-veterans-day/",
+     "publisher": "CC Headliner (one franchisee, Missouri)",
+     "published": "2026-11-04"
+    }
+   ],
+   "notes": "Call ahead.",
+   "caution": "Only some franchise shops take part: call first",
+   "group": null,
+   "ticket": false,
+   "purchase": true,
+   "kinds": [
+    "oil-change"
+   ]
+  },
+  {
+   "id": "target",
+   "brand": "Target",
+   "status": "offering",
+   "category": "shopping",
+   "offer": "20% off one qualifying storewide purchase, 5–11 Nov, in store and online (Target Circle Military Appreciation)",
+   "value": 0,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "in_store",
+   "minutes": 25,
+   "busy": 5,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active",
+    "military_community"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "yes",
+   "kids": null,
+   "proof": [],
+   "advance": "Verify your military status in Target Circle before you shop (members verified before get it automatically)",
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "One qualified purchase",
+   "sources": [
+    {
+     "url": "https://news.va.gov/150505/2026-veterans-day-discounts-free-meals-offers/",
+     "publisher": "VA News (VA Office of Digital Media)",
+     "published": "2026-10-26 (verified 22 Oct, updated through 11 Nov)"
+    },
+    {
+     "url": "https://hip2save.com/deals/veterans-day-free-meals/",
+     "publisher": "Hip2Save",
+     "published": "2026-11-05"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/retailers-veterans-day-military-discounts.html",
+     "publisher": "Military.com retail list",
+     "published": "2026-11-07 (updated)"
+    },
+    {
+     "url": "https://themilitarywallet.com/veterans-day-free-meals-and-discounts/",
+     "publisher": "The Military Wallet",
+     "published": "2026-11-06 (updated)"
+    },
+    {
+     "url": "https://www.fox4news.com/news/veterans-day-2026-deals",
+     "publisher": "FOX 4 Dallas-Fort Worth (FOX Local)",
+     "published": "2026-11-04 (updated 2026-11-05)"
+    }
+   ],
+   "notes": "Families included. Verify online first; the discount loads into Target Circle. VA News says one qualifying storewide purchase; Fox 4 says 20% off storewide. Target's own 2026 page not found.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": true,
+   "kinds": [
+    "shopping"
+   ]
+  },
+  {
+   "id": "kohls",
+   "brand": "Kohl's",
+   "status": "offering",
+   "category": "shopping",
+   "offer": "30% off in store, 10–11 Nov",
+   "value": 0,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "in_store",
+   "minutes": 25,
+   "busy": 5,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active",
+    "family"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "yes",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://news.va.gov/150505/2026-veterans-day-discounts-free-meals-offers/",
+     "publisher": "VA News (VA Office of Digital Media)",
+     "published": "2026-10-26 (verified 22 Oct, updated through 11 Nov)"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/retailers-veterans-day-military-discounts.html",
+     "publisher": "Military.com retail list",
+     "published": "2026-11-07 (updated)"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://usmilitary.org/veterans-day-discounts/",
+     "publisher": "usmilitary.org",
+     "published": "2026-11-05"
+    }
+   ],
+   "notes": "Military Wallet separately says 15% every Monday (ongoing). VA News (26 Oct 2026) lists 30% off in store 10–11 Nov 2026 for military, veterans and families; Kohl's own 2026 page not found.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": true,
+   "kinds": [
+    "shopping"
+   ]
+  },
+  {
+   "id": "walgreens",
+   "brand": "Walgreens",
+   "status": "offering",
+   "category": "shopping",
+   "offer": "20% off eligible regular-priced items in store, 8–11 Nov",
+   "value": 0,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "in_store",
+   "minutes": 15,
+   "busy": 5,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "yes",
+   "kids": null,
+   "proof": [
+    "military_id",
+    "va_card",
+    "dd214"
+   ],
+   "advance": "a free myWalgreens account",
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "In store only; not with other coupons; excludes alcohol, tobacco, gift cards, stamps and more",
+   "sources": [
+    {
+     "url": "https://news.va.gov/150505/2026-veterans-day-discounts-free-meals-offers/",
+     "publisher": "VA News",
+     "published": "2026"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/retailers-veterans-day-military-discounts.html",
+     "publisher": "Military.com (retailers)",
+     "published": "2026"
+    },
+    {
+     "url": "https://themilitarywallet.com/walgreens-military-discount/",
+     "publisher": "The Military Wallet (Walgreens)",
+     "published": "2026"
+    }
+   ],
+   "notes": "Most 2026 lists give 8–11 Nov (one gives a later start). Immediate family included.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": true,
+   "kinds": [
+    "shopping"
+   ]
+  },
+  {
+   "id": "reno-parade",
+   "brand": "Reno Veterans Day Parade and opening ceremony",
+   "status": "offering",
+   "category": "event",
+   "offer": "The City of Reno's Veterans Day Parade: the opening ceremony at 11:11 AM near the Virginia Street Bridge (prayer, national anthem, city proclamation), then the parade north on Virginia Street from Liberty Street to Sixth Street. Free and open to all.",
+   "value": 0,
+   "grade": "B",
+   "start": "2026-11-11T18:45:00Z",
+   "end": "2026-11-11T21:00:00Z",
+   "window_text": "10:45–13:00 PST",
+   "mode": "event",
+   "minutes": 90,
+   "busy": 0,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "public",
+    "veteran",
+    "active",
+    "guard_reserve"
+   ],
+   "guard_reserve": "yes",
+   "spouse": "yes",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "Streets close 5 AM-3 PM: Virginia St from Liberty St to Sixth St, and First St from N Sierra St to University Way. End time not published.",
+   "sources": [
+    {
+     "url": "https://www.kolotv.com/2026/11/03/city-reno-hosting-veterans-day-parade-downtown-reno/",
+     "publisher": "KOLO 8",
+     "published": "2026-11-03"
+    },
+    {
+     "url": "https://foxreno.com/news/local/veterans-day-events-in-northern-nevada-and-the-sierra-parades-and-ceremonies",
+     "publisher": "Fox 11 Reno",
+     "published": "2026-11-10"
+    }
+   ],
+   "notes": "The City of Reno's parade: the opening ceremony at 11:11 AM near the Virginia Street Bridge, just south of First St (prayer, national anthem, city proclamation), then the parade north on Virginia St from Liberty St to Sixth St (KOLO, 3 Nov 2026; Fox 11, 10 Nov 2026). Streets close 5 AM-3 PM: Virginia St from Liberty to Sixth, and First St from N Sierra St to University Way. RTC buses are free all day. End time not published; streamed on the city's YouTube from 11 AM.",
+   "caution": "",
+   "group": null,
+   "worth": 12,
+   "arrive_by": "2026-11-11T19:00:00Z",
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "ceremony"
+   ]
+  },
+  {
+   "id": "sparks-memorial-plaza-observance",
+   "brand": "Veterans Day observance, Nevada Veterans Memorial Plaza",
+   "status": "offering",
+   "category": "event",
+   "offer": "The community Veterans Day observance at the Nevada Veterans Memorial Plaza at the Sparks Marina, 9:00-11:30 AM. Free and open to all.",
+   "value": 0,
+   "grade": "A",
+   "start": "2026-11-11T17:00:00Z",
+   "end": "2026-11-11T19:30:00Z",
+   "window_text": "09:00–11:30 PST",
+   "mode": "event",
+   "minutes": 60,
+   "busy": 0,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "public",
+    "veteran",
+    "active",
+    "guard_reserve"
+   ],
+   "guard_reserve": "yes",
+   "spouse": "yes",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "Program details not published.",
+   "sources": [
+    {
+     "url": "https://nvmp.us/",
+     "publisher": "Nevada Veterans Memorial Plaza",
+     "published": "2026"
+    },
+    {
+     "url": "https://foxreno.com/news/local/veterans-day-events-in-northern-nevada-and-the-sierra-parades-and-ceremonies",
+     "publisher": "Fox 11 Reno",
+     "published": "2026-11-10"
+    }
+   ],
+   "notes": "The Nevada Veterans Memorial Plaza's community observance at the Sparks Marina, 300 Howard Dr, 9:00-11:30 AM (its own events page, nvmp.us). Program details not published.",
+   "caution": "",
+   "group": null,
+   "worth": 12,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "ceremony"
+   ]
+  },
+  {
+   "id": "nevada-museum-of-art",
+   "brand": "Nevada Museum of Art",
+   "status": "offering",
+   "category": "event",
+   "offer": "Free admission for veterans and active-duty service members, 10 AM-6 PM, with the new flag exhibition \"Broad Stripes Bright Stars: Celebrating 250 Years of America's Icons\".",
+   "value": 15,
+   "grade": "B",
+   "start": "2026-11-11T18:00:00Z",
+   "end": "2026-11-12T02:00:00Z",
+   "window_text": "10:00–18:00 PST",
+   "mode": "event",
+   "minutes": 60,
+   "busy": 5,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "no",
+   "kids": null,
+   "proof": [
+    "military_id",
+    "dd214",
+    "va_card",
+    "dl_veteran"
+   ],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "Veterans and active duty only; general admission is $15 for others. The museum's free day for everyone is Saturday 14 Nov.",
+   "sources": [
+    {
+     "url": "https://foxreno.com/news/local/veterans-day-events-in-northern-nevada-and-the-sierra-parades-and-ceremonies",
+     "publisher": "Fox 11 Reno",
+     "published": "2026-11-10"
+    },
+    {
+     "url": "https://www.nevadaart.org/art/exhibitions/broad-stripes-bright-stars-celebrating-250-years-of-americas-icons/",
+     "publisher": "Nevada Museum of Art",
+     "published": "2026"
+    }
+   ],
+   "notes": "Free admission for veterans and active duty, 10 AM-6 PM, with the new flag exhibition \"Broad Stripes Bright Stars\" (Fox 11, 10 Nov 2026, quoting the museum; not on the museum's own site). Not free for other visitors. 160 W Liberty St, two blocks from the parade.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "outing"
+   ]
+  },
+  {
+   "id": "j-resort-buffet",
+   "brand": "J Resort: The Buffet",
+   "status": "offering",
+   "category": "meal",
+   "offer": "A free buffet at The Buffet, 4-9 PM, for current and retired military.",
+   "value": 30,
+   "grade": "A",
+   "start": "2026-11-12T00:00:00Z",
+   "end": "2026-11-12T05:00:00Z",
+   "window_text": "16:00–21:00 PST",
+   "mode": "dine_in",
+   "minutes": 75,
+   "busy": 30,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "active",
+    "guard_reserve",
+    "retired"
+   ],
+   "guard_reserve": "yes",
+   "spouse": "no",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "Current and retired military with a military ID; dine-in only. Friends and family pay; locals get 25% off dining.",
+   "sources": [
+    {
+     "url": "https://www.jresortreno.com/promotions/veterans-day-free-meal-at-the-buffet/",
+     "publisher": "J Resort Reno",
+     "published": "2026"
+    },
+    {
+     "url": "https://mynews4.com/news/local/veterans-day-free-meals-in-northern-nevada-local-offers-and-restaurant-deals",
+     "publisher": "News 4 / Fox 11 Reno",
+     "published": "2026-11-10"
+    }
+   ],
+   "notes": "J Resort's own page: a free buffet for current and retired military, 4-9 PM, military ID required, dine-in only. Veterans who aren't retired aren't named: call first. Friends and family pay (locals get 25% off dining). 345 N Arlington Ave, downtown.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "atlantis-lunch-buffet",
+   "brand": "Atlantis Casino Resort Spa: Toucan Charlie's",
+   "status": "offering",
+   "category": "meal",
+   "offer": "A free lunch buffet at Toucan Charlie's Gourmet Buffet & Grille, 11 AM-3 PM, with a Monarch Rewards card and a military ID, military spouse ID or DD-214.",
+   "value": 25,
+   "grade": "A",
+   "start": "2026-11-11T19:00:00Z",
+   "end": "2026-11-11T23:00:00Z",
+   "window_text": "11:00–15:00 PST",
+   "mode": "dine_in",
+   "minutes": 75,
+   "busy": 30,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active",
+    "guard_reserve",
+    "retired"
+   ],
+   "guard_reserve": "yes",
+   "spouse": "yes",
+   "kids": null,
+   "proof": [
+    "military_id",
+    "dd214"
+   ],
+   "advance": "Atlantis needs its free Monarch Rewards card: join at the Monarch Rewards desk before the buffet (players' clubs generally need you to be 21, with a photo ID)",
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "One free buffet per person for the whole 9-11 Nov promotion, not one a day. A military spouse with a military spouse ID qualifies too.",
+   "sources": [
+    {
+     "url": "https://atlantiscasino.com/more/events/veterans-day",
+     "publisher": "Atlantis Casino Resort Spa",
+     "published": "2026"
+    },
+    {
+     "url": "https://mynews4.com/news/local/veterans-day-free-meals-in-northern-nevada-local-offers-and-restaurant-deals",
+     "publisher": "News 4 / Fox 11 Reno",
+     "published": "2026-11-10"
+    }
+   ],
+   "notes": "Atlantis's own page: a free lunch buffet at Toucan Charlie's, 11 AM-3 PM, 9-11 Nov. Show a Monarch Rewards card and a military ID, military spouse ID or DD-214 at the buffet cashier. One free buffet per person for the whole promotion: if you had it Monday or Tuesday, it's used. Join Monarch Rewards (free) at its desk first; players' clubs generally need you to be 21. 3800 S Virginia St.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "legends-bay-lb-grill",
+   "brand": "Legends Bay Casino: LB Grill",
+   "status": "offering",
+   "category": "meal",
+   "offer": "A free All American Breakfast or Smash Burger at LB Grill, 7 AM-10 PM, for veterans and first responders who are LB Rewards members.",
+   "value": 15,
+   "grade": "A",
+   "start": "2026-11-11T15:00:00Z",
+   "end": "2026-11-12T06:00:00Z",
+   "window_text": "07:00–22:00 PST",
+   "mode": "dine_in",
+   "minutes": 45,
+   "busy": 15,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "no",
+   "kids": null,
+   "proof": [
+    "military_id",
+    "dd214",
+    "va_card",
+    "dl_veteran"
+   ],
+   "advance": "Legends Bay needs its free LB Rewards membership: join at the casino before you order (players' clubs generally need you to be 21, with a photo ID)",
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "LB Rewards members only, with ID. Veterans and first responders; active duty and Guard aren't named.",
+   "sources": [
+    {
+     "url": "https://www.legendsbaycasino.com/promotions",
+     "publisher": "Legends Bay Casino",
+     "published": "2026"
+    },
+    {
+     "url": "https://mynews4.com/news/local/veterans-day-free-meals-in-northern-nevada-local-offers-and-restaurant-deals",
+     "publisher": "News 4 / Fox 11 Reno",
+     "published": "2026-11-10"
+    }
+   ],
+   "notes": "Legends Bay's own page: a free All American Breakfast or Smash Burger at LB Grill, 7 AM-10 PM, for veterans and first responders who are LB Rewards members, with ID. Join LB Rewards (free) at the casino first; players' clubs generally need you to be 21. 100 Legends Bay Dr, Sparks.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "gold-dust-west",
+   "brand": "Gold Dust West",
+   "status": "offering",
+   "category": "meal",
+   "offer": "A free meal for current and retired military, dine-in, with a military ID.",
+   "value": 15,
+   "grade": "A",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 50,
+   "busy": 20,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "active",
+    "guard_reserve",
+    "retired"
+   ],
+   "guard_reserve": "yes",
+   "spouse": "no",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "Current and retired military with a military ID; dine-in only. Hours, restaurant and menu not published.",
+   "sources": [
+    {
+     "url": "https://www.gdwcasino.com/reno/events-promotions/veterans-day-free-meal-reno/",
+     "publisher": "Gold Dust West Reno",
+     "published": "2026"
+    },
+    {
+     "url": "https://mynews4.com/news/local/veterans-day-free-meals-in-northern-nevada-local-offers-and-restaurant-deals",
+     "publisher": "News 4 / Fox 11 Reno",
+     "published": "2026-11-10"
+    }
+   ],
+   "notes": "Gold Dust West's own page: a free meal for current and retired military, dine-in, with a military ID. Veterans who aren't retired aren't named. No hours, restaurant or menu published, so usual meal hours are shown. 444 Vine St.",
+   "caution": "Hours and restaurant not published: call (775) 323-2211 first",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "squeeze-in",
+   "brand": "Squeeze In",
+   "status": "offering",
+   "category": "breakfast",
+   "offer": "A free meal of your choice for veterans.",
+   "value": 18,
+   "grade": "A",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 50,
+   "busy": 25,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "no",
+   "kids": null,
+   "proof": [
+    "military_id",
+    "dd214",
+    "va_card",
+    "dl_veteran"
+   ],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "The post names no stores, hours or proof. Each store's usual Wednesday hours are from Squeeze In's own locations page.",
+   "sources": [
+    {
+     "url": "https://squeezein.com/veterans-eat-free/",
+     "publisher": "Squeeze In",
+     "published": "2026-11-10"
+    },
+    {
+     "url": "https://squeezein.com/locations/",
+     "publisher": "Squeeze In",
+     "published": "2026"
+    }
+   ],
+   "notes": "Squeeze In's own post (10 Nov 2026): a free meal of your choice for veterans on 11 Nov. It doesn't name stores, hours or proof, so bring your ID and call first. Hours are each store's usual Wednesday hours from its own site.",
+   "caution": "Its post names no stores, hours or proof: call yours first",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "in-n-out",
+   "brand": "In-N-Out Burger",
+   "status": "offering",
+   "category": "quick",
+   "offer": "A free meal (a burger, fries and a drink) for veterans, active duty, Reserve and Guard, with proof of service; a Veterans Day decal too.",
+   "value": 10,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 20,
+   "busy": 20,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": true,
+   "eligible": [
+    "veteran",
+    "active",
+    "guard_reserve",
+    "retired"
+   ],
+   "guard_reserve": "yes",
+   "spouse": "no",
+   "kids": null,
+   "proof": [
+    "military_id",
+    "dd214",
+    "va_card",
+    "dl_veteran"
+   ],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "Proof of service. Lists differ on whether the drive-through counts: order inside.",
+   "sources": [
+    {
+     "url": "https://www.newsweek.com/veterans-day-2026-free-meals-deals-discounts-12687407",
+     "publisher": "Newsweek",
+     "published": "2026"
+    },
+    {
+     "url": "https://themilitarywallet.com/veterans-day-free-meals-and-discounts/",
+     "publisher": "The Military Wallet",
+     "published": "2026"
+    }
+   ],
+   "notes": "On 2026 national lists (Newsweek, The Military Wallet): a free burger, fries and drink for veterans, active duty, Reserve and Guard with proof of service, plus a Veterans Day decal. Not announced by In-N-Out itself. Order inside: lists differ on the drive-through.",
+   "caution": "Not announced by the company for 2026: call first",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
+  }
+ ],
+ "places": [
+  {
+   "id": "applebees-693-north-mccarran-blvd",
+   "offer": "applebees",
+   "name": "",
+   "address": "693 North McCarran Blvd., Sparks, NV 89431",
+   "lat": 39.541,
+   "lng": -119.7342,
+   "phone": "+1 775-358-5811",
+   "open": "2026-11-11T19:00:00Z",
+   "close": "2026-11-12T08:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "applebees-4805-kietzke-lane",
+   "offer": "applebees",
+   "name": "",
+   "address": "4805 Kietzke Lane, Reno, NV 89509",
+   "lat": 39.4811,
+   "lng": -119.7936,
+   "phone": "+1 775-825-2800",
+   "open": "2026-11-11T19:00:00Z",
+   "close": "2026-11-12T08:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "chilis-10340-n-mccarran-blvd",
+   "offer": "chilis",
+   "name": "",
+   "address": "10340 N. McCarran Blvd., Reno, NV 89503",
+   "lat": 39.532587,
+   "lng": -119.86389,
+   "phone": "+1 775-787-3388",
+   "open": "2026-11-11T19:00:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": true,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "chilis-5090-smithridge-dr",
+   "offer": "chilis",
+   "name": "",
+   "address": "5090 Smithridge Dr., Reno, NV 89502",
+   "lat": 39.477381,
+   "lng": -119.788778,
+   "phone": "+1 775-829-7775",
+   "open": "2026-11-11T19:00:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": true,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "olive-garden-4900-south-virginia-street",
+   "offer": "olive-garden",
+   "name": "",
+   "address": "4900 South Virginia Street, Reno, NV 89502",
+   "lat": 39.48196,
+   "lng": -119.791039,
+   "phone": "",
+   "open": "2026-11-11T19:00:00Z",
+   "close": "2026-11-12T06:00:00Z",
+   "hoursAssumed": false,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "olive-garden-1481-east-lincoln-way",
+   "offer": "olive-garden",
+   "name": "",
+   "address": "1481 East Lincoln Way, Sparks, NV 89434",
+   "lat": 39.53396,
+   "lng": -119.71982,
+   "phone": "",
+   "open": "2026-11-11T19:00:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "red-lobster-5015-kietzke-ln",
+   "offer": "red-lobster",
+   "name": "",
+   "address": "5015 Kietzke LN, Reno, NV 89511",
+   "lat": 39.476212,
+   "lng": -119.795602,
+   "phone": "+1 775-827-1203",
+   "open": "2026-11-11T19:00:00Z",
+   "close": "2026-11-12T06:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "twin-peaks-4905-s-virginia-st",
+   "offer": "twin-peaks",
+   "name": "",
+   "address": "4905 S Virginia St., Reno, NV 89502",
+   "lat": 39.481178,
+   "lng": -119.791786,
+   "phone": "+1 775-524-4111",
+   "open": "2026-11-11T19:00:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": true,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "buffalo-wild-wings-1560-east-lincoln-way",
+   "offer": "buffalo-wild-wings",
+   "name": "",
+   "address": "1560 East Lincoln Way, Sparks, NV 89434",
+   "lat": 39.533999,
+   "lng": -119.717892,
+   "phone": "+1 775-737-9741",
+   "open": "2026-11-11T19:00:00Z",
+   "close": "2026-11-12T07:45:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "buffalo-wild-wings-4978-s-virginia-st",
+   "offer": "buffalo-wild-wings",
+   "name": "",
+   "address": "4978 S. Virginia St, Reno, NV 89509",
+   "lat": 39.481335,
+   "lng": -119.790004,
+   "phone": "+1 775-221-7121",
+   "open": "2026-11-11T18:00:00Z",
+   "close": "2026-11-12T07:45:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "famous-daves-4925-kietzke-lane",
+   "offer": "famous-daves",
+   "name": "",
+   "address": "4925 Kietzke Lane, Reno, NV 89509",
+   "lat": 39.478409,
+   "lng": -119.795069,
+   "phone": "+1 775-826-7427",
+   "open": "2026-11-11T19:00:00Z",
+   "close": "2026-11-12T04:30:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "dave-busters-13969-south-virginia-street",
+   "offer": "dave-busters",
+   "name": "",
+   "address": "13969 South Virginia Street, Reno, NV 89511",
+   "lat": 39.405039,
+   "lng": -119.748513,
+   "phone": "+1 775-332-5858",
+   "open": "2026-11-11T19:00:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": true,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "red-robin-4999-kietzke-ln",
+   "offer": "red-robin",
+   "name": "",
+   "address": "4999 Kietzke Ln, Reno, NV 89509",
+   "lat": 39.477215,
+   "lng": -119.794321,
+   "phone": "+1 775-825-7246",
+   "open": "2026-11-11T19:00:00Z",
+   "close": "2026-11-12T06:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "red-robin-4712-galleria-pkwy",
+   "offer": "red-robin",
+   "name": "",
+   "address": "4712 Galleria Pkwy, Sparks, NV 89436",
+   "lat": 39.577185,
+   "lng": -119.739935,
+   "phone": "+1 775-626-9700",
+   "open": "2026-11-11T19:00:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "outback-1805-east-lincoln-way",
+   "offer": "outback",
+   "name": "",
+   "address": "1805 East Lincoln Way, Sparks, NV 89434",
+   "lat": 39.532941,
+   "lng": -119.71431,
+   "phone": "+1 775-358-2700",
+   "open": "2026-11-11T19:00:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "dennys-680-n-wells-ave",
+   "offer": "dennys",
+   "name": "",
+   "address": "680 N. Wells Ave., Reno, NV 89512",
+   "lat": 39.535891,
+   "lng": -119.802824,
+   "phone": "+1 775-322-9039",
+   "open": "2026-11-11T08:00:00Z",
+   "close": "2026-11-12T08:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "dennys-1100-e-plumb-lane",
+   "offer": "dennys",
+   "name": "",
+   "address": "1100 E Plumb Lane, Reno, NV 89502",
+   "lat": 39.50532,
+   "lng": -119.784968,
+   "phone": "+1 775-446-8835",
+   "open": "2026-11-11T08:00:00Z",
+   "close": "2026-11-12T08:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "dennys-205-nugget-ave",
+   "offer": "dennys",
+   "name": "",
+   "address": "205 Nugget Ave., Sparks, NV 89431",
+   "lat": 39.532963,
+   "lng": -119.740198,
+   "phone": "+1 775-359-9053",
+   "open": "2026-11-11T08:00:00Z",
+   "close": "2026-11-12T08:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "ihop-4752-galleria-pkwy",
+   "offer": "ihop",
+   "name": "",
+   "address": "4752 Galleria Pkwy, Sparks, NV 89436",
+   "lat": 39.577935,
+   "lng": -119.739868,
+   "phone": "+1 775-626-1060",
+   "open": "2026-11-11T14:00:00Z",
+   "close": "2026-11-12T06:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "ihop-9786-s-virginia-st",
+   "offer": "ihop",
+   "name": "",
+   "address": "9786 S Virginia St, Reno, NV 89511",
+   "lat": 39.441498,
+   "lng": -119.770435,
+   "phone": "+1 775-853-6655",
+   "open": "2026-11-11T14:00:00Z",
+   "close": "2026-11-12T06:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "ihop-1800-s-virginia-st",
+   "offer": "ihop",
+   "name": "",
+   "address": "1800 S Virginia St, Reno, NV 89502",
+   "lat": 39.506405,
+   "lng": -119.803188,
+   "phone": "+1 775-786-5028",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T06:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "ihop-10150-n-mccarran-blvd",
+   "offer": "ihop",
+   "name": "",
+   "address": "10150 N Mccarran Blvd, Reno, NV 89503",
+   "lat": 39.525855,
+   "lng": -119.861587,
+   "phone": "+1 775-787-7700",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T06:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "texas-roadhouse-150-damonte-ranch-pkwy",
+   "offer": "texas-roadhouse",
+   "name": "",
+   "address": "150 Damonte Ranch Pkwy., Reno, NV 89521",
+   "lat": 39.41906,
+   "lng": -119.753145,
+   "phone": "+1 775-852-6333",
+   "open": "2026-11-11T23:00:00Z",
+   "close": "2026-11-12T06:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "wendys-440-n-mccarran-blvd",
+   "offer": "wendys",
+   "name": "",
+   "address": "440 N Mccarran Blvd, Sparks, NV 89431",
+   "lat": 39.538075,
+   "lng": -119.734635,
+   "phone": "+1 775-359-9549",
+   "open": "2026-11-11T14:00:00Z",
+   "close": "2026-11-12T09:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "wendys-130-salomon-circle",
+   "offer": "wendys",
+   "name": "",
+   "address": "130 Salomon Circle, Sparks, NV 89434",
+   "lat": 39.528149,
+   "lng": -119.700127,
+   "phone": "+1 775-384-6568",
+   "open": "2026-11-11T08:00:00Z",
+   "close": "2026-11-12T08:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "wendys-9790-south-virginia-street",
+   "offer": "wendys",
+   "name": "",
+   "address": "9790 South Virginia Street, Reno, NV 89511",
+   "lat": 39.440972,
+   "lng": -119.770208,
+   "phone": "+1 775-852-5734",
+   "open": "2026-11-11T14:00:00Z",
+   "close": "2026-11-12T08:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "wendys-875-w-fifth-street",
+   "offer": "wendys",
+   "name": "",
+   "address": "875 W. Fifth Street, Reno, NV 89503",
+   "lat": 39.529036,
+   "lng": -119.827368,
+   "phone": "+1 775-323-0802",
+   "open": "2026-11-11T14:00:00Z",
+   "close": "2026-11-12T09:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "wendys-805-kietzke-lane",
+   "offer": "wendys",
+   "name": "",
+   "address": "805 Kietzke Lane, Reno, NV 89502",
+   "lat": 39.518545,
+   "lng": -119.789654,
+   "phone": "+1 775-322-2247",
+   "open": "2026-11-11T14:00:00Z",
+   "close": "2026-11-12T08:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "wendys-4997-longley-lane-4",
+   "offer": "wendys",
+   "name": "",
+   "address": "4997 Longley Lane #4, Reno, NV 89502",
+   "lat": 39.477508,
+   "lng": -119.765436,
+   "phone": "+1 775-826-1006",
+   "open": "2026-11-11T14:00:00Z",
+   "close": "2026-11-12T08:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "wendys-3200-south-virginia",
+   "offer": "wendys",
+   "name": "",
+   "address": "3200 South Virginia, Reno, NV 89502",
+   "lat": 39.494599,
+   "lng": -119.797376,
+   "phone": "+1 775-825-6300",
+   "open": "2026-11-11T14:30:00Z",
+   "close": "2026-11-12T10:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "wendys-2889-northtowne-lane",
+   "offer": "wendys",
+   "name": "",
+   "address": "2889 Northtowne Lane, Reno, NV 89512",
+   "lat": 39.555829,
+   "lng": -119.783117,
+   "phone": "+1 775-358-0668",
+   "open": "2026-11-11T14:00:00Z",
+   "close": "2026-11-12T09:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "little-caesars-2880-northtowne-lane",
+   "offer": "little-caesars",
+   "name": "",
+   "address": "2880 Northtowne Lane, Reno, NV 89512",
+   "lat": 39.555466,
+   "lng": -119.781166,
+   "phone": "+1-775-356-1001",
+   "open": "2026-11-11T18:30:00Z",
+   "close": "2026-11-12T05:30:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "little-caesars-10310-north-mccarran-boulevard",
+   "offer": "little-caesars",
+   "name": "",
+   "address": "10310 North Mccarran Boulevard, Reno, NV 89503",
+   "lat": 39.531489,
+   "lng": -119.863948,
+   "phone": "",
+   "open": "2026-11-11T18:00:00Z",
+   "close": "2026-11-12T05:30:00Z",
+   "hoursAssumed": false,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "little-caesars-10855-double-r-boulevard",
+   "offer": "little-caesars",
+   "name": "",
+   "address": "10855 Double R Boulevard, Reno, NV 89521",
+   "lat": 39.425336,
+   "lng": -119.75086,
+   "phone": "+1-775-852-1653",
+   "open": "2026-11-11T18:00:00Z",
+   "close": "2026-11-12T06:00:00Z",
+   "hoursAssumed": false,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "firehouse-subs-593-e-prater-way",
+   "offer": "firehouse-subs",
+   "name": "",
+   "address": "593 E. Prater Way, Sparks, NV 89431",
+   "lat": 39.541576,
+   "lng": -119.736605,
+   "phone": "+1 775-376-8200",
+   "open": "2026-11-11T18:00:00Z",
+   "close": "2026-11-12T06:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "firehouse-subs-199-damonte-ranch-pkwy",
+   "offer": "firehouse-subs",
+   "name": "",
+   "address": "199 Damonte Ranch Pkwy., Unit K, Reno, NV 89521",
+   "lat": 39.42114,
+   "lng": -119.755615,
+   "phone": "+1 775-851-1072",
+   "open": "2026-11-11T18:00:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "firehouse-subs-925-w-5th-st",
+   "offer": "firehouse-subs",
+   "name": "",
+   "address": "925 W. 5th St., Suite #125, Reno, NV 89503",
+   "lat": 39.528705,
+   "lng": -119.828013,
+   "phone": "+1 775-622-1078",
+   "open": "2026-11-11T18:00:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "chipotle-1560-e-lincoln-way",
+   "offer": "chipotle",
+   "name": "",
+   "address": "1560 E Lincoln Way, Sparks, NV 89434",
+   "lat": 39.533989,
+   "lng": -119.718142,
+   "phone": "+1 775-358-0695",
+   "open": "2026-11-11T18:30:00Z",
+   "close": "2026-11-12T06:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "chipotle-13911-s-virginia-st",
+   "offer": "chipotle",
+   "name": "",
+   "address": "13911 S Virginia St, Reno, NV 89511",
+   "lat": 39.405965,
+   "lng": -119.74999,
+   "phone": "+1 775-260-0130",
+   "open": "2026-11-11T18:30:00Z",
+   "close": "2026-11-12T06:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "chipotle-925-w-5th-st",
+   "offer": "chipotle",
+   "name": "",
+   "address": "925 W 5th St, Reno, NV 89503",
+   "lat": 39.529576,
+   "lng": -119.828874,
+   "phone": "+1 775-636-7647",
+   "open": "2026-11-11T18:30:00Z",
+   "close": "2026-11-12T07:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "chipotle-537-s-meadows-pkwy",
+   "offer": "chipotle",
+   "name": "",
+   "address": "537 S Meadows Pkwy, Reno, NV 89521",
+   "lat": 39.438721,
+   "lng": -119.761203,
+   "phone": "+1 775-851-1476",
+   "open": "2026-11-11T18:30:00Z",
+   "close": "2026-11-12T06:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "chipotle-6395-s-mccarran-blvd",
+   "offer": "chipotle",
+   "name": "",
+   "address": "6395 S McCarran Blvd, Reno, NV 89509",
+   "lat": 39.477469,
+   "lng": -119.793162,
+   "phone": "+1 775-825-3862",
+   "open": "2026-11-11T18:30:00Z",
+   "close": "2026-11-12T06:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "chipotle-5144-mae-anne-ave",
+   "offer": "chipotle",
+   "name": "",
+   "address": "5144 Mae Anne Ave, Reno, NV 89523",
+   "lat": 39.532307,
+   "lng": -119.86538,
+   "phone": "+1 775-624-6203",
+   "open": "2026-11-11T18:30:00Z",
+   "close": "2026-11-12T06:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "qdoba-6135-s-virginia-st",
+   "offer": "qdoba",
+   "name": "",
+   "address": "6135 S Virginia St, Reno, NV 89502",
+   "lat": 39.469814,
+   "lng": -119.786094,
+   "phone": "",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T06:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "qdoba-151-disc-drive",
+   "offer": "qdoba",
+   "name": "",
+   "address": "151 Disc Drive, Sparks, NV 89436",
+   "lat": 39.576057,
+   "lng": -119.740829,
+   "phone": "",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T07:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "qdoba-10310-n-mccarran-blvd",
+   "offer": "qdoba",
+   "name": "",
+   "address": "10310 N McCarran Blvd, Reno, NV 89523",
+   "lat": 39.531251,
+   "lng": -119.863867,
+   "phone": "",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T06:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "qdoba-197-damonte-ranch-pkwy",
+   "offer": "qdoba",
+   "name": "",
+   "address": "197 Damonte Ranch Pkwy, Reno, NV 89521",
+   "lat": 39.420867,
+   "lng": -119.755024,
+   "phone": "",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T06:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "qdoba-2838-vista-blvd",
+   "offer": "qdoba",
+   "name": "",
+   "address": "2838 Vista Blvd, Sparks, NV 89434",
+   "lat": 39.557304,
+   "lng": -119.705002,
+   "phone": "",
+   "open": "2026-11-11T18:30:00Z",
+   "close": "2026-11-12T05:30:00Z",
+   "hoursAssumed": true,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "charleys-5615-meadowood-mall-cir",
+   "offer": "charleys",
+   "name": "",
+   "address": "5615 Meadowood Mall Cir, Reno, NV 89502",
+   "lat": 39.474296,
+   "lng": -119.781609,
+   "phone": "+1 775-622-4409",
+   "open": "2026-11-11T18:00:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "blaze-pizza-1370-big-fish-dr",
+   "offer": "blaze-pizza",
+   "name": "",
+   "address": "1370 Big Fish Dr., Suite 110, Sparks, NV 89434",
+   "lat": 39.53174,
+   "lng": -119.71749,
+   "phone": "+1 775-980-0077",
+   "open": "2026-11-11T18:30:00Z",
+   "close": "2026-11-12T06:30:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "blaze-pizza-537-south-meadows-pkwy",
+   "offer": "blaze-pizza",
+   "name": "",
+   "address": "537 South Meadows Pkwy, Suite 160, Reno, NV 89521",
+   "lat": 39.43886,
+   "lng": -119.76121,
+   "phone": "+1 775-293-4042",
+   "open": "2026-11-11T18:30:00Z",
+   "close": "2026-11-12T06:30:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-986-ambassador-dr",
+   "offer": "starbucks",
+   "name": "",
+   "address": "986 Ambassador Dr, Reno, NV 89523",
+   "lat": 39.51856,
+   "lng": -119.88746,
+   "phone": "+1 775-335-6147",
+   "open": "2026-11-11T12:30:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-1630-robb-dr",
+   "offer": "starbucks",
+   "name": "",
+   "address": "1630 Robb Dr, Reno, NV 89523",
+   "lat": 39.5279,
+   "lng": -119.87994,
+   "phone": "",
+   "open": "2026-11-11T14:00:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-10190-n-mccarran-blvd",
+   "offer": "starbucks",
+   "name": "",
+   "address": "10190 N McCarran Blvd, Peavine Plaza, Reno, NV 89503",
+   "lat": 39.52781,
+   "lng": -119.86239,
+   "phone": "+1 775-624-6464",
+   "open": "2026-11-11T12:30:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-282-los-altos-parkway",
+   "offer": "starbucks",
+   "name": "",
+   "address": "282 Los Altos Parkway, Spanish Springs Shopping Center, 106, Sparks, NV 89436",
+   "lat": 39.58398,
+   "lng": -119.74046,
+   "phone": "+1 775-354-0620",
+   "open": "2026-11-11T12:30:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-2905-northtowne-lane",
+   "offer": "starbucks",
+   "name": "",
+   "address": "2905 Northtowne Lane, Northtown Home Depot, 100, Reno, NV 89512",
+   "lat": 39.55712,
+   "lng": -119.78264,
+   "phone": "+1 775-673-1500",
+   "open": "2026-11-11T12:30:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-690-keystone-ave",
+   "offer": "starbucks",
+   "name": "",
+   "address": "690 Keystone Ave, Reno, NV 89503",
+   "lat": 39.5306,
+   "lng": -119.8309,
+   "phone": "+1 775-747-7318",
+   "open": "2026-11-11T12:30:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-171-disc-dr",
+   "offer": "starbucks",
+   "name": "",
+   "address": "171 Disc Dr, Sparks Galleria, Sparks, NV 89436",
+   "lat": 39.57621,
+   "lng": -119.74026,
+   "phone": "+1 775-626-1199",
+   "open": "2026-11-11T12:30:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-895-w-5th-st",
+   "offer": "starbucks",
+   "name": "",
+   "address": "895 W 5th St, Reno, NV 89503",
+   "lat": 39.52891,
+   "lng": -119.82787,
+   "phone": "+1 775-899-1071",
+   "open": "2026-11-11T12:30:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-1929-silverada-blvd",
+   "offer": "starbucks",
+   "name": "",
+   "address": "1929 Silverada Blvd, Reno, NV 89512",
+   "lat": 39.54582,
+   "lng": -119.78467,
+   "phone": "+1 775-387-2431",
+   "open": "2026-11-11T13:00:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-345-n-virginia-st",
+   "offer": "starbucks",
+   "name": "",
+   "address": "345 N. Virginia St., Reno, NV 89501",
+   "lat": 39.52892,
+   "lng": -119.81428,
+   "phone": "+1 775-586-7000",
+   "open": "2026-11-11T14:00:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-2835-n-mccarran-blvd",
+   "offer": "starbucks",
+   "name": "",
+   "address": "2835 N. McCarran Blvd, #103, Sparks, NV 89431",
+   "lat": 39.55534,
+   "lng": -119.75282,
+   "phone": "+1 775-331-8551",
+   "open": "2026-11-11T12:30:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-330-s-virginia-street",
+   "offer": "starbucks",
+   "name": "",
+   "address": "330 S. Virginia Street, Reno, NV 89501",
+   "lat": 39.52239,
+   "lng": -119.81131,
+   "phone": "+1 775-324-7200",
+   "open": "2026-11-11T13:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-392-booth-st",
+   "offer": "starbucks",
+   "name": "",
+   "address": "392 Booth St, Reno, NV 89509",
+   "lat": 39.5166,
+   "lng": -119.82617,
+   "phone": "+1 775-309-1404",
+   "open": "2026-11-11T12:30:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-75-pringle-way",
+   "offer": "starbucks",
+   "name": "",
+   "address": "75 Pringle Way, 103A, Reno, NV 89502",
+   "lat": 39.52651,
+   "lng": -119.79569,
+   "phone": "+1 775-982-7827",
+   "open": "2026-11-11T13:30:00Z",
+   "close": "2026-11-12T06:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-1640-mill-st",
+   "offer": "starbucks",
+   "name": "",
+   "address": "1640 Mill St, Reno, NV 89502",
+   "lat": 39.52223,
+   "lng": -119.79081,
+   "phone": "+1 775-902-8845",
+   "open": "2026-11-11T13:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-2500-east-second-avenue",
+   "offer": "starbucks",
+   "name": "",
+   "address": "2500 East Second Avenue, Reno, NV 89595",
+   "lat": 39.5234,
+   "lng": -119.77945,
+   "phone": "+1 775-789-2000",
+   "open": "2026-11-11T13:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-1255-baring-blvd",
+   "offer": "starbucks",
+   "name": "",
+   "address": "1255 Baring Blvd., Sparks, NV 89434",
+   "lat": 39.55472,
+   "lng": -119.72233,
+   "phone": "+1 775-359-6800",
+   "open": "2026-11-11T14:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-1100-nugget-ave",
+   "offer": "starbucks",
+   "name": "",
+   "address": "1100 Nugget Ave, Sparks, NV 89431",
+   "lat": 39.53344,
+   "lng": -119.75798,
+   "phone": "+1 775-356-4273",
+   "open": "2026-11-11T13:00:00Z",
+   "close": "2026-11-12T01:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-550-west-plumb-lane",
+   "offer": "starbucks",
+   "name": "",
+   "address": "550 West Plumb Lane, Plumbgate Plaza, I, Reno, NV 89509",
+   "lat": 39.50528,
+   "lng": -119.81685,
+   "phone": "+1 775-827-0644",
+   "open": "2026-11-11T13:00:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-683-n-mccarran-blvd",
+   "offer": "starbucks",
+   "name": "",
+   "address": "683 N McCarran Blvd, Sparks, NV 89431",
+   "lat": 39.54031,
+   "lng": -119.73423,
+   "phone": "+1 775-331-9484",
+   "open": "2026-11-11T12:30:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-4798-caughlin-pkwy",
+   "offer": "starbucks",
+   "name": "",
+   "address": "4798 Caughlin Pkwy, Caughlin Ranch Center, Reno, NV 89519",
+   "lat": 39.48449,
+   "lng": -119.85287,
+   "phone": "+1 775-829-4455",
+   "open": "2026-11-11T13:00:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-745-sparks-blvd",
+   "offer": "starbucks",
+   "name": "",
+   "address": "745 Sparks Blvd., Marina Marketplace, 101, Sparks, NV 89434",
+   "lat": 39.54097,
+   "lng": -119.71605,
+   "phone": "+1 775-351-2204",
+   "open": "2026-11-11T12:30:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-1560-s-stanford-way",
+   "offer": "starbucks",
+   "name": "",
+   "address": "1560 S. Stanford Way, Suite A, Sparks, NV 89431",
+   "lat": 39.52065,
+   "lng": -119.74072,
+   "phone": "+1 775-356-7087",
+   "open": "2026-11-11T12:30:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-6890-south-mccarran-boulevard",
+   "offer": "starbucks",
+   "name": "",
+   "address": "6890 South McCarran Boulevard, Magnolia Village, 100, Reno, NV 89509",
+   "lat": 39.47644,
+   "lng": -119.80626,
+   "phone": "+1 775-826-8553",
+   "open": "2026-11-11T13:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-4801-kietzke-lane",
+   "offer": "starbucks",
+   "name": "",
+   "address": "4801 Kietzke Lane, Firecreek Crossing, Reno, NV 89502",
+   "lat": 39.48065,
+   "lng": -119.79384,
+   "phone": "+1 775-827-1192",
+   "open": "2026-11-11T13:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-13961-s-virginia-st",
+   "offer": "starbucks",
+   "name": "",
+   "address": "13961 S Virginia St, Reno, NV 89511",
+   "lat": 39.40255,
+   "lng": -119.75072,
+   "phone": "+1 775-851-4449",
+   "open": "2026-11-11T12:30:00Z",
+   "close": "2026-11-12T03:30:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-1131-steamboat-pkwy",
+   "offer": "starbucks",
+   "name": "",
+   "address": "1131 Steamboat Pkwy, Damonte Ranch Town Center, Ste 840, Reno, NV 89521",
+   "lat": 39.42325,
+   "lng": -119.73815,
+   "phone": "+1 775-852-9910",
+   "open": "2026-11-11T12:30:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-191-damonte-ranch-parkway",
+   "offer": "starbucks",
+   "name": "",
+   "address": "191 Damonte Ranch Parkway, SouthTowne Crossing, A, Reno, NV 89521",
+   "lat": 39.42029,
+   "lng": -119.75474,
+   "phone": "+1 775-851-2233",
+   "open": "2026-11-11T12:30:00Z",
+   "close": "2026-11-12T03:30:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-557-s-meadows-pkwy",
+   "offer": "starbucks",
+   "name": "",
+   "address": "557 S Meadows Pkwy, Reno, NV 89521",
+   "lat": 39.43905,
+   "lng": -119.76028,
+   "phone": "+1 775-851-9222",
+   "open": "2026-11-11T12:30:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-9343-double-r-blvd",
+   "offer": "starbucks",
+   "name": "",
+   "address": "9343 Double R Blvd, Reno, NV 89521",
+   "lat": 39.45131,
+   "lng": -119.75809,
+   "phone": "+1 775-389-2346",
+   "open": "2026-11-11T12:30:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-8115-s-virginia-st",
+   "offer": "starbucks",
+   "name": "",
+   "address": "8115 S Virginia St, Reno, NV 89511",
+   "lat": 39.45357,
+   "lng": -119.77813,
+   "phone": "+1 775-862-0238",
+   "open": "2026-11-11T12:30:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-5280-longley-ln",
+   "offer": "starbucks",
+   "name": "",
+   "address": "5280 Longley Ln, Longley Town Centre, Reno, NV 89511",
+   "lat": 39.47362,
+   "lng": -119.76481,
+   "phone": "+1 775-852-7179",
+   "open": "2026-11-11T12:30:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "dunkin-435-sparks-blvd",
+   "offer": "dunkin",
+   "name": "",
+   "address": "435 Sparks Blvd, Suite #121, Sparks, NV 89434",
+   "lat": 39.53539,
+   "lng": -119.716096,
+   "phone": "+1 520-304-9034",
+   "open": "2026-11-11T12:00:00Z",
+   "close": "2026-11-12T04:45:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "dunkin-path-1",
+   "offer": "dunkin",
+   "name": "",
+   "address": "Path 1, Pennington Student Center, Reno, NV 89512",
+   "lat": 39.540155,
+   "lng": -119.815574,
+   "phone": "",
+   "open": "2026-11-11T14:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": true,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "dunkin-155-damonte-ranch-pkwy",
+   "offer": "dunkin",
+   "name": "",
+   "address": "155 Damonte Ranch Pkwy, Reno, NV 89521",
+   "lat": 39.42262,
+   "lng": -119.7566,
+   "phone": "+1 520-304-9034",
+   "open": "2026-11-11T14:00:00Z",
+   "close": "2026-11-12T01:45:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "dunkin-5260-w-7th-st",
+   "offer": "dunkin",
+   "name": "",
+   "address": "5260 W 7th St, Walmart, Reno, NV 89523",
+   "lat": 39.53515,
+   "lng": -119.867069,
+   "phone": "+1 520-304-9034",
+   "open": "2026-11-11T14:00:00Z",
+   "close": "2026-11-12T03:45:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "krispy-kreme-75-los-altos-pkwy",
+   "offer": "krispy-kreme",
+   "name": "",
+   "address": "75 Los Altos Pkwy, Sparks, NV 89436",
+   "lat": 39.583244,
+   "lng": -119.742256,
+   "phone": "+1 775-387-3007",
+   "open": "2026-11-11T14:00:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "insomnia-935-n-virginia-street",
+   "offer": "insomnia",
+   "name": "",
+   "address": "935 N. Virginia Street, Reno, NV 89503",
+   "lat": 39.536831,
+   "lng": -119.816739,
+   "phone": "+1 775-434-1748",
+   "open": "2026-11-11T19:00:00Z",
+   "close": "2026-11-12T09:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "sonic-1220-mc-carran-blvd",
+   "offer": "sonic",
+   "name": "",
+   "address": "1220 Mc Carran Blvd, Reno, NV 89512",
+   "lat": 39.555942,
+   "lng": -119.793655,
+   "phone": "+1 775-786-3962",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T07:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "sonic-6250-south-virginia-street",
+   "offer": "sonic",
+   "name": "",
+   "address": "6250 South Virginia Street, Reno, NV 89511",
+   "lat": 39.468944,
+   "lng": -119.784738,
+   "phone": "+1 775-360-6954",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T06:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "sonic-4995-galleria-parkway",
+   "offer": "sonic",
+   "name": "",
+   "address": "4995 Galleria Parkway, Sparks, NV 89436",
+   "lat": 39.583855,
+   "lng": -119.73895,
+   "phone": "+1 775-354-1155",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T06:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "great-clips-4751-galleria-pkwy",
+   "offer": "great-clips",
+   "name": "",
+   "address": "4751 Galleria Pkwy, Sparks, NV 89436",
+   "lat": 39.577646,
+   "lng": -119.740613,
+   "phone": "+1 775-870-9815",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "great-clips-748-s-meadow-pkwy",
+   "offer": "great-clips",
+   "name": "",
+   "address": "748 S Meadow Pkwy, Reno, NV 89521",
+   "lat": 39.437382,
+   "lng": -119.757468,
+   "phone": "+1 775-851-8437",
+   "open": "2026-11-11T17:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "great-clips-4809-kietzke-ln",
+   "offer": "great-clips",
+   "name": "",
+   "address": "4809 Kietzke Ln, Reno, NV 89509",
+   "lat": 39.481522,
+   "lng": -119.794512,
+   "phone": "+1 775-827-2211",
+   "open": "2026-11-11T17:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "great-clips-10490-n-mccarran-blvd",
+   "offer": "great-clips",
+   "name": "",
+   "address": "10490 N McCarran Blvd, Reno, NV 89503",
+   "lat": 39.533889,
+   "lng": -119.862648,
+   "phone": "+1 775-870-9891",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "great-clips-1495-e-prater-way",
+   "offer": "great-clips",
+   "name": "",
+   "address": "1495 E Prater Way, Sparks, NV 89431",
+   "lat": 39.541452,
+   "lng": -119.716242,
+   "phone": "+1 775-501-5368",
+   "open": "2026-11-11T17:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "great-clips-6633-south-virginia-st",
+   "offer": "great-clips",
+   "name": "",
+   "address": "6633 South Virginia St., Reno, NV 89511",
+   "lat": 39.465768,
+   "lng": -119.784199,
+   "phone": "+1 775-221-7394",
+   "open": "2026-11-11T17:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "sport-clips-131-disc-drive",
+   "offer": "sport-clips",
+   "name": "",
+   "address": "131 Disc Drive, Sparks, NV 89436",
+   "lat": 39.5763,
+   "lng": -119.74208,
+   "phone": "+1 775-626-8855",
+   "open": "2026-11-11T17:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": true,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "sport-clips-1565-east-lincoln-way",
+   "offer": "sport-clips",
+   "name": "",
+   "address": "1565 East Lincoln Way, Sparks, NV 89434",
+   "lat": 39.53312,
+   "lng": -119.71776,
+   "phone": "+1 775-357-2680",
+   "open": "2026-11-11T17:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": true,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "sport-clips-537-south-meadows-parkway",
+   "offer": "sport-clips",
+   "name": "",
+   "address": "537 South Meadows Parkway, Reno, NV 89521",
+   "lat": 39.43886,
+   "lng": -119.76121,
+   "phone": "+1 775-852-4000",
+   "open": "2026-11-11T17:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": true,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "sport-clips-1650-robb-dr",
+   "offer": "sport-clips",
+   "name": "",
+   "address": "1650 Robb Dr., Reno, NV 89523",
+   "lat": 39.52837,
+   "lng": -119.88016,
+   "phone": "+1 775-622-9568",
+   "open": "2026-11-11T17:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": true,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "sport-clips-6015c-south-virginia-street",
+   "offer": "sport-clips",
+   "name": "",
+   "address": "6015C South Virginia Street, Reno, NV 89502",
+   "lat": 39.46996,
+   "lng": -119.78786,
+   "phone": "+1 775-851-7717",
+   "open": "2026-11-11T17:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": true,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "jiffy-lube-215-e-prater-way",
+   "offer": "jiffy-lube",
+   "name": "",
+   "address": "215 E PRATER WAY, SPARKS, NV 89431",
+   "lat": 39.541598,
+   "lng": -119.739239,
+   "phone": "+1 775-346-5762",
+   "open": "2026-11-11T15:30:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "jiffy-lube-581-los-altos-parkway",
+   "offer": "jiffy-lube",
+   "name": "",
+   "address": "581 LOS ALTOS PARKWAY, SPARKS, NV 89436",
+   "lat": 39.585032,
+   "lng": -119.734845,
+   "phone": "+1 775-346-5771",
+   "open": "2026-11-11T15:30:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "jiffy-lube-1055-s-rock-blvd",
+   "offer": "jiffy-lube",
+   "name": "",
+   "address": "1055 S ROCK BLVD, SPARKS, NV 89431",
+   "lat": 39.525214,
+   "lng": -119.766894,
+   "phone": "+1 775-346-5769",
+   "open": "2026-11-11T15:30:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "jiffy-lube-55-e-patriot-blvd",
+   "offer": "jiffy-lube",
+   "name": "",
+   "address": "55 E PATRIOT BLVD, RENO, NV 89511",
+   "lat": 39.452819,
+   "lng": -119.776964,
+   "phone": "+1 775-346-5765",
+   "open": "2026-11-11T15:30:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "jiffy-lube-1305-sullivan-ln",
+   "offer": "jiffy-lube",
+   "name": "",
+   "address": "1305 SULLIVAN LN, SPARKS, NV 89431",
+   "lat": 39.545822,
+   "lng": -119.771958,
+   "phone": "+1 775-346-5760",
+   "open": "2026-11-11T15:30:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "jiffy-lube-6006-s-virginia-st",
+   "offer": "jiffy-lube",
+   "name": "",
+   "address": "6006 S VIRGINIA ST, RENO, NV 89502",
+   "lat": 39.471153,
+   "lng": -119.785718,
+   "phone": "+1 775-346-5763",
+   "open": "2026-11-11T15:30:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "jiffy-lube-1230-n-mccarran-blvd",
+   "offer": "jiffy-lube",
+   "name": "",
+   "address": "1230 N MCCARRAN BLVD, RENO, NV 89512",
+   "lat": 39.556291,
+   "lng": -119.800106,
+   "phone": "+1 775-346-5767",
+   "open": "2026-11-11T15:30:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "jiffy-lube-695-keystone-ave",
+   "offer": "jiffy-lube",
+   "name": "",
+   "address": "695 KEYSTONE AVE, RENO, NV 89503",
+   "lat": 39.53065,
+   "lng": -119.83148,
+   "phone": "+1 775-346-5761",
+   "open": "2026-11-11T15:30:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "target-1550-e-lincoln-way",
+   "offer": "target",
+   "name": "",
+   "address": "1550 E Lincoln Way, Sparks, NV 89434",
+   "lat": 39.535435,
+   "lng": -119.716892,
+   "phone": "+1 775-332-1003",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T06:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "target-6845-sierra-center-pkwy",
+   "offer": "target",
+   "name": "",
+   "address": "6845 Sierra Center Pkwy, Reno, NV 89511",
+   "lat": 39.463531,
+   "lng": -119.780964,
+   "phone": "+1 775-853-8900",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T06:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "kohls-5035-pyramid-lake-rd",
+   "offer": "kohls",
+   "name": "",
+   "address": "5035 PYRAMID LAKE RD, SPARKS, NV 89436",
+   "lat": 39.582688,
+   "lng": -119.746809,
+   "phone": "+1 775-356-9966",
+   "open": "2026-11-11T17:00:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "kohls-70-damonte-ranch-pkwy",
+   "offer": "kohls",
+   "name": "",
+   "address": "70 DAMONTE RANCH PKWY, RENO, NV 89521",
+   "lat": 39.417784,
+   "lng": -119.755259,
+   "phone": "+1 775-852-4444",
+   "open": "2026-11-11T17:00:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "kohls-5150-mae-anne-ave",
+   "offer": "kohls",
+   "name": "",
+   "address": "5150 MAE ANNE AVE, #100, RENO, NV 89523",
+   "lat": 39.531427,
+   "lng": -119.866279,
+   "phone": "+1 775-787-8100",
+   "open": "2026-11-11T17:00:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "walgreens-292-los-altos-pkwy",
+   "offer": "walgreens",
+   "name": "",
+   "address": "292 LOS ALTOS PKWY, Sparks, NV 89436",
+   "lat": 39.584455,
+   "lng": -119.739977,
+   "phone": "+1 775-354-0104",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T06:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "walgreens-10370-n-mccarran-blvd",
+   "offer": "walgreens",
+   "name": "",
+   "address": "10370 N MCCARRAN BLVD, Reno, NV 89503",
+   "lat": 39.533128,
+   "lng": -119.862585,
+   "phone": "+1 775-746-4809",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T06:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "walgreens-3495-s-virginia-st",
+   "offer": "walgreens",
+   "name": "",
+   "address": "3495 S VIRGINIA ST, Reno, NV 89502",
+   "lat": 39.491697,
+   "lng": -119.797552,
+   "phone": "+1 775-824-0802",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T08:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "walgreens-3000-vista-blvd",
+   "offer": "walgreens",
+   "name": "",
+   "address": "3000 VISTA BLVD, Sparks, NV 89436",
+   "lat": 39.558924,
+   "lng": -119.704793,
+   "phone": "+1 775-359-7044",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T06:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "walgreens-2299-oddie-blvd",
+   "offer": "walgreens",
+   "name": "",
+   "address": "2299 ODDIE BLVD, Sparks, NV 89431",
+   "lat": 39.545097,
+   "lng": -119.775552,
+   "phone": "+1 775-358-4721",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T06:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "walgreens-12645-s-virginia-st",
+   "offer": "walgreens",
+   "name": "",
+   "address": "12645 S VIRGINIA ST, Reno, NV 89511",
+   "lat": 39.417559,
+   "lng": -119.756575,
+   "phone": "+1 775-853-9887",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T06:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "reno-parade-virginia-street-bridge",
+   "offer": "reno-parade",
+   "name": "",
+   "address": "Virginia Street Bridge, N Virginia St at the Truckee River, Reno, NV 89501",
+   "lat": 39.525072,
+   "lng": -119.81263,
+   "phone": "",
+   "open": "2026-11-11T18:45:00Z",
+   "close": "2026-11-11T21:00:00Z",
+   "hoursAssumed": false,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "sparks-memorial-plaza-observance-300-howard-dr",
+   "offer": "sparks-memorial-plaza-observance",
+   "name": "",
+   "address": "300 Howard Dr, Sparks, NV 89434",
+   "lat": 39.535045,
+   "lng": -119.731718,
+   "phone": "",
+   "open": "2026-11-11T17:00:00Z",
+   "close": "2026-11-11T19:30:00Z",
+   "hoursAssumed": false,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "nevada-museum-of-art-160-w-liberty-st",
+   "offer": "nevada-museum-of-art",
+   "name": "",
+   "address": "160 W Liberty St, Reno, NV 89501",
+   "lat": 39.520828,
+   "lng": -119.813362,
+   "phone": "(775) 329-3333",
+   "open": "2026-11-11T18:00:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": false,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "j-resort-buffet-345-n-arlington-ave",
+   "offer": "j-resort-buffet",
+   "name": "",
+   "address": "345 N Arlington Ave, Reno, NV 89501",
+   "lat": 39.52825,
+   "lng": -119.819271,
+   "phone": "",
+   "open": "2026-11-12T00:00:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "atlantis-lunch-buffet-3800-s-virginia-st",
+   "offer": "atlantis-lunch-buffet",
+   "name": "",
+   "address": "3800 S Virginia St, Reno, NV 89502",
+   "lat": 39.488906,
+   "lng": -119.793466,
+   "phone": "(775) 825-4700",
+   "open": "2026-11-11T19:00:00Z",
+   "close": "2026-11-11T23:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "legends-bay-lb-grill-100-legends-bay-dr",
+   "offer": "legends-bay-lb-grill",
+   "name": "",
+   "address": "100 Legends Bay Dr, Sparks, NV 89434",
+   "lat": 39.532143,
+   "lng": -119.722452,
+   "phone": "(775) 473-8000",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T06:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "gold-dust-west-444-vine-st",
+   "offer": "gold-dust-west",
+   "name": "",
+   "address": "444 Vine St, Reno, NV 89503",
+   "lat": 39.528912,
+   "lng": -119.824675,
+   "phone": "(775) 323-2211",
+   "open": "2026-11-11T19:00:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": true,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "squeeze-in-5020-las-brisas-blvd",
+   "offer": "squeeze-in",
+   "name": "",
+   "address": "5020 Las Brisas Blvd, Reno, NV 89523",
+   "lat": 39.540092,
+   "lng": -119.863037,
+   "phone": "(775) 787-2700",
+   "open": "2026-11-11T15:30:00Z",
+   "close": "2026-11-11T22:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "squeeze-in-2020-red-dr",
+   "offer": "squeeze-in",
+   "name": "",
+   "address": "2020 Red Dr, Ste 6, Reno, NV 89502",
+   "lat": 39.503747,
+   "lng": -119.798965,
+   "phone": "(775) 971-4341",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-11T22:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "squeeze-in-25-foothill-rd",
+   "offer": "squeeze-in",
+   "name": "",
+   "address": "25 Foothill Rd, Ste 3, Reno, NV 89511",
+   "lat": 39.439785,
+   "lng": -119.770734,
+   "phone": "(775) 853-6090",
+   "open": "2026-11-11T15:30:00Z",
+   "close": "2026-11-11T22:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "squeeze-in-4670-sparks-blvd",
+   "offer": "squeeze-in",
+   "name": "",
+   "address": "4670 Sparks Blvd, Ste 110, Sparks, NV 89436",
+   "lat": 39.577551,
+   "lng": -119.723454,
+   "phone": "(775) 626-0100",
+   "open": "2026-11-11T15:30:00Z",
+   "close": "2026-11-11T22:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "in-n-out-280-pyramid-way",
+   "offer": "in-n-out",
+   "name": "",
+   "address": "280 Pyramid Way, Sparks, NV 89431",
+   "lat": 39.53557,
+   "lng": -119.75259,
+   "phone": "",
+   "open": "2026-11-11T18:30:00Z",
+   "close": "2026-11-12T05:30:00Z",
+   "hoursAssumed": true,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "in-n-out-8215-s-virginia-st",
+   "offer": "in-n-out",
+   "name": "",
+   "address": "8215 S. Virginia St., Reno, NV 89511",
+   "lat": 39.45201,
+   "lng": -119.77732,
+   "phone": "",
+   "open": "2026-11-11T18:30:00Z",
+   "close": "2026-11-12T05:30:00Z",
+   "hoursAssumed": true,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "in-n-out-915-w-5th-street",
+   "offer": "in-n-out",
+   "name": "",
+   "address": "915 W. 5th Street, Reno, NV 89503",
+   "lat": 39.52879,
+   "lng": -119.82805,
+   "phone": "",
+   "open": "2026-11-11T18:30:00Z",
+   "close": "2026-11-12T05:30:00Z",
+   "hoursAssumed": true,
+   "verified": "confirmed",
+   "pin": "geo"
+  }
+ ],
+ "other": [
+  {
+   "id": "rtc-washoe-free-rides",
+   "day": "Wed 11 Nov, all day",
+   "at": null,
+   "name": "RTC Washoe: free rides for everyone",
+   "where": "Every RTC service in Reno, Sparks and Washoe County: RTC RIDE buses, RTC ACCESS and RTC FlexRIDE",
+   "offer": "No fare and no pass needed on any RTC service all day on 11 Nov, for every rider. ACCESS and FlexRIDE eligibility and booking rules still apply. RTC's offices are closed.",
+   "grade": "A",
+   "note": "Downtown streets close 5 AM-3 PM for the parade, so the bus is the easy way in. Plan trips at rtcwashoe.com or in the Transit app.",
+   "sources": [
+    {
+     "url": "https://rtcwashoe.com/rtc-honors-veterans-day-with-free-rides-on-all-services-nov-11/",
+     "publisher": "RTC Washoe",
+     "published": "2026-11-09"
+    }
+   ]
+  },
+  {
+   "id": "casino-fandango-buffet",
+   "day": "Wed 11 Nov, 11:00 AM-7:00 PM PST",
+   "at": null,
+   "name": "Casino Fandango, Carson City: free buffet for veterans",
+   "where": "3800 S Carson St, Carson City, NV (about 30 miles south of Reno)",
+   "offer": "A free buffet at Ti Amo Italian Grille for veterans and first responders who are CF Rewards members, with ID. Others pay $30.99 plus tax and tip.",
+   "grade": "A",
+   "note": "Needs Casino Fandango's free CF Rewards membership (players' clubs generally need you to be 21, with a photo ID).",
+   "sources": [
+    {
+     "url": "https://www.casinofandango.com/promotions",
+     "publisher": "Casino Fandango",
+     "published": "2026"
+    },
+    {
+     "url": "https://mynews4.com/news/local/veterans-day-free-meals-in-northern-nevada-local-offers-and-restaurant-deals",
+     "publisher": "News 4 / Fox 11 Reno",
+     "published": "2026-11-10"
+    }
+   ]
+  },
+  {
+   "id": "virginia-city-parade",
+   "day": "Wed 11 Nov, 11:00 AM-noon PST",
+   "at": "2026-11-11T19:00:00Z",
+   "name": "Virginia City Veterans Day Parade",
+   "where": "C Street, Virginia City, NV (about 25 miles southeast of Reno)",
+   "offer": "Veterans Day parade on C Street, on the official tourism calendar.",
+   "grade": "B",
+   "note": null,
+   "sources": [
+    {
+     "url": "https://foxreno.com/news/local/veterans-day-events-in-northern-nevada-and-the-sierra-parades-and-ceremonies",
+     "publisher": "Fox 11 Reno",
+     "published": "2026-11-10"
+    }
+   ]
+  },
+  {
+   "id": "fallon-veterans-breakfast",
+   "day": "Wed 11 Nov, 8:00-11:00 AM PST",
+   "at": "2026-11-11T16:00:00Z",
+   "name": "Fallon: free veterans breakfast and opening ceremonies",
+   "where": "Fallon Convention Center, 100 Campus Way, Fallon, NV (about 60 miles east of Reno)",
+   "offer": "A free breakfast for the first 300 veterans, opening with ceremonies; hosted by the Fallon Chamber of Commerce and New Millennium. Not advertised for guests.",
+   "grade": "B",
+   "note": null,
+   "sources": [
+    {
+     "url": "https://foxreno.com/news/local/veterans-day-events-in-northern-nevada-and-the-sierra-parades-and-ceremonies",
+     "publisher": "Fox 11 Reno",
+     "published": "2026-11-10"
+    }
+   ]
+  },
+  {
+   "id": "truckee-ceremony-lunch",
+   "day": "Wed 11 Nov, 11:00 AM PST",
+   "at": "2026-11-11T19:00:00Z",
+   "name": "Truckee: Eagle Plaza ceremony and veterans lunch",
+   "where": "Eagle Plaza, Donner Pass Rd and Spring St, Truckee, CA (about 32 miles west on I-80); lunch at Veterans Hall, 10214 High St",
+   "offer": "The Town of Truckee's outdoor ceremony at 11:00 (a veteran speaker, music, a student essay winner), then a free lunch for veterans and families at Veterans Hall, hosted by American Legion Post 439.",
+   "grade": "B",
+   "note": "Outdoors at about 5,800 feet: dress for the weather, and check I-80 over the Sierra before you go.",
+   "sources": [
+    {
+     "url": "https://foxreno.com/news/local/veterans-day-events-in-northern-nevada-and-the-sierra-parades-and-ceremonies",
+     "publisher": "Fox 11 Reno",
+     "published": "2026-11-10"
+    }
+   ]
+  },
+  {
+   "id": "south-lake-tahoe-ceremony",
+   "day": "Wed 11 Nov, 11:00 AM PST",
+   "at": "2026-11-11T19:00:00Z",
+   "name": "South Lake Tahoe: American Legion Hall ceremony",
+   "where": "American Legion Hall, 2748 Lake Tahoe Blvd, South Lake Tahoe, CA (about 60 miles south)",
+   "offer": "A Veterans Day ceremony with a county proclamation honoring veterans; the public is invited.",
+   "grade": "B",
+   "note": null,
+   "sources": [
+    {
+     "url": "https://foxreno.com/news/local/veterans-day-events-in-northern-nevada-and-the-sierra-parades-and-ceremonies",
+     "publisher": "Fox 11 Reno",
+     "published": "2026-11-10"
+    }
+   ]
+  },
+  {
+   "id": "nps-fee-free-day",
+   "day": "Wed 11 Nov",
+   "at": null,
+   "name": "National parks: fee-free day for US residents",
+   "where": "Every National Park Service site that charges entrance; the nearest are hours from Reno (Lassen Volcanic, Yosemite)",
+   "offer": "Entrance fees are waived on Veterans Day for US citizens and residents (new for 2026: nonresidents pay). Camping, reservations and other fees still apply.",
+   "grade": "A",
+   "note": "Veterans and Gold Star families also get a free lifetime Military Pass for federal recreation sites, good any day.",
+   "sources": [
+    {
+     "url": "https://www.nps.gov/planyourvisit/fee-free-parks.htm",
+     "publisher": "National Park Service",
+     "published": "2026"
+    }
+   ]
+  },
+  {
+   "id": "nevada-museum-of-art-free-saturday",
+   "day": "Sat 14 Nov, 10:00 AM-6:00 PM PST",
+   "at": null,
+   "name": "Nevada Museum of Art: free for everyone (Hands ON! Second Saturday)",
+   "where": "160 W Liberty St, Reno",
+   "offer": "Free admission for all visitors, with hands-on art projects and quill-and-ink activities 10 AM-4 PM. On Veterans Day itself admission is free only for veterans and active duty.",
+   "grade": "B",
+   "note": null,
+   "sources": [
+    {
+     "url": "https://foxreno.com/news/local/veterans-day-events-in-northern-nevada-and-the-sierra-parades-and-ceremonies",
+     "publisher": "Fox 11 Reno",
+     "published": "2026-11-10"
+    }
+   ]
+  }
+ ],
+ "leads": [
+  {
+   "name": "Peppermill Reno (Cafe Milano)",
+   "area": "2707 S Virginia St, Reno",
+   "q": "Peppermill Reno Veterans Day Cafe Milano",
+   "offer": "In 2025: one free item from Cafe Milano's comfort menu for veterans, 9 AM-2 PM, with a military or VA ID. No 2026 offer found; the 2025 page is gone.",
+   "last_seen": "2025",
+   "source": {
+    "url": "https://www.peppermillreno.com/",
+    "publisher": "Peppermill Reno",
+    "published": null
+   }
+  },
+  {
+   "name": "Western Village (Primo)",
+   "area": "815 E Nichols Blvd, Sparks",
+   "q": "Western Village Sparks Veterans Day Primo pizza",
+   "offer": "In 2025: a free pizza slice and soda at Primo, 11 AM-1 PM (News 4's 2025 list). No 2026 offer found.",
+   "last_seen": "2025",
+   "source": {
+    "url": "https://mynews4.com/news/local/veterans-day-2025-freebies-and-deals-across-reno-sparks-to-say-thank-you",
+    "publisher": "News 4 (2025)",
+    "published": null
+   }
+  },
+  {
+   "name": "Grand Sierra Resort",
+   "area": "2500 E 2nd St, Reno",
+   "q": "Grand Sierra Resort Veterans Day",
+   "offer": "Its Veterans Day page still shows 2024 (\"Monday, November 11\"): 50% off the Grand Buffet, 35% off at the spa, a free hour of bowling, a free slot tournament entry. No 2026 lineup found.",
+   "last_seen": "2024",
+   "source": {
+    "url": "https://www.grandsierraresort.com/veterans-day-at-gsr",
+    "publisher": "Grand Sierra Resort (2024 page)",
+    "published": null
+   }
+  },
+  {
+   "name": "Nugget Casino Resort",
+   "area": "1100 Nugget Ave, Sparks",
+   "q": "Nugget Casino Resort Sparks Veterans Day",
+   "offer": "No 2026 Veterans Day offer found.",
+   "last_seen": "",
+   "source": null
+  },
+  {
+   "name": "Eldorado, Silver Legacy and Circus Circus",
+   "area": "Downtown Reno",
+   "q": "Eldorado Silver Legacy Circus Circus Reno Veterans Day",
+   "offer": "The only offer found was a free buffet in 2017. Nothing for 2026.",
+   "last_seen": "2017",
+   "source": null
+  },
+  {
+   "name": "Marked Studios: free veteran tattoos",
+   "area": "Reno",
+   "q": "Marked Studios Reno Veterans Day tattoos",
+   "offer": "Its 13th annual Veterans Day event in 2025: free tattoos for veterans, active-duty and retired military with a DD-214 or military ID, doors 8 AM. No 2026 announcement found.",
+   "last_seen": "2025",
+   "source": {
+    "url": "https://www.2news.com/news/local/northern-nevada-businesses-and-events-honor-veterans-with-free-meals-services-and-parade/article_d0210c8a-299c-4dba-a530-5c396d44b771.html",
+    "publisher": "2 News Nevada (8 Nov 2025)",
+    "published": null
+   }
+  },
+  {
+   "name": "Black Bear Diner (Reno and Sparks)",
+   "area": "2323 S Virginia St, Reno, (775) 827-5570; 235 N McCarran Blvd, Sparks, (775) 356-1138",
+   "q": "Black Bear Diner Reno Sparks Veterans Day",
+   "offer": "Each diner sets its own Veterans Day policy; nothing found for 2026 at these two stores (the addresses and phones are from its own store list).",
+   "last_seen": "",
+   "source": {
+    "url": "https://blackbeardiner.com/",
+    "publisher": "Black Bear Diner",
+    "published": null
+   }
+  },
+  {
+   "name": "Chick-fil-A (Reno and Sparks)",
+   "area": "Reno and Sparks",
+   "q": "Chick-fil-A Reno Sparks Veterans Day",
+   "offer": "A free sandwich or 8-count nuggets at some Reno stores in 2025 (News 4's 2025 list). Owners choose; no 2026 word for these stores.",
+   "last_seen": "2025",
+   "source": {
+    "url": "https://mynews4.com/news/local/veterans-day-2025-freebies-and-deals-across-reno-sparks-to-say-thank-you",
+    "publisher": "News 4 (2025)",
+    "published": null
+   }
+  },
+  {
+   "name": "Jiffy Lube (Northern Nevada)",
+   "area": "Reno and Sparks",
+   "q": "Jiffy Lube Reno Veterans Day free oil change",
+   "offer": "Participating Northern Nevada stores gave a free conventional oil change in 2025 (2 News, 8 Nov 2025). No 2026 word.",
+   "last_seen": "2025",
+   "source": {
+    "url": "https://www.2news.com/news/local/northern-nevada-businesses-and-events-honor-veterans-with-free-meals-services-and-parade/article_d0210c8a-299c-4dba-a530-5c396d44b771.html",
+    "publisher": "2 News Nevada (8 Nov 2025)",
+    "published": null
+   }
+  },
+  {
+   "name": "AUSA Westmoreland Chapter Veterans Day dinner",
+   "area": "Atlantis Casino Resort Spa, Reno",
+   "q": "AUSA Westmoreland Chapter Veterans Day dinner 2026",
+   "offer": "Fri 13 Nov, ticketed; speaker retired Air Force Lt. Col. Tony Grady (This Is Reno; not checked).",
+   "last_seen": "2026",
+   "source": {
+    "url": "https://ausa-westmoreland.org/dinner",
+    "publisher": "AUSA Westmoreland Chapter",
+    "published": null
+   }
+  },
+  {
+   "name": "Dragon Lights Reno: free tickets via VetTix",
+   "area": "Reno",
+   "q": "Dragon Lights Reno veterans tickets VetTix",
+   "offer": "50 free tickets each night for veterans and first responders, first come, first served, through VetTix (KOLO, 5 Nov 2026). The story gives no dates, times or venue.",
+   "last_seen": "2026",
+   "source": {
+    "url": "https://www.kolotv.com/2026/11/05/dragon-lights-donates-tickets-veterans-first-responders/",
+    "publisher": "KOLO 8 (5 Nov 2026)",
+    "published": null
+   }
+  },
+  {
+   "name": "National Automobile Museum",
+   "area": "10 S Lake St, Reno",
+   "q": "National Automobile Museum Reno military discount",
+   "offer": "No Veterans Day offer found; a standing military discount (sources differ on the price).",
+   "last_seen": "",
+   "source": null
+  }
+ ]
+}
