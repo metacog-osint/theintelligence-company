@@ -1040,18 +1040,27 @@
  },
  "Mission BBQ": {
   "presence": "yes",
-  "basis_url": "https://www.alltheplaces.xyz/",
-  "basis": "OpenStreetMap: 1 in the area",
+  "basis_url": "https://mission-bbq.com/locations-and-menu/herndon-va/",
+  "basis": "OpenStreetMap: 1 in the area (Sterling); Mission BBQ's own pages, read 11 Nov 2026: Sterling and Herndon (no All the Places spider)",
   "stores": [
    {
     "address": "45979 Denizen Plaza, Sterling, VA 20165",
-    "status": "unverified",
-    "wed_hours": "",
-    "phone": "",
-    "url": "",
+    "status": "confirmed",
+    "wed_hours": "11:00-21:00",
+    "phone": "(571) 363-3233",
+    "url": "https://mission-bbq.com/locations-and-menu/sterling-va/",
     "osm_id": "way/45065394",
     "geo": "39.035326,-77.409197",
-    "source": "OpenStreetMap"
+    "source": "Mission BBQ (its own page, read 11 Nov 2026); pin from OpenStreetMap"
+   },
+   {
+    "address": "2403 Centreville Rd, Ste 34B, Herndon, VA 20171",
+    "status": "confirmed",
+    "wed_hours": "11:00-21:00",
+    "phone": "(703) 936-2078",
+    "url": "https://mission-bbq.com/locations-and-menu/herndon-va/",
+    "geo": "38.951941,-77.409507",
+    "source": "Mission BBQ (its own page, read 11 Nov 2026); pin from the Census geocoder"
    }
   ]
  },

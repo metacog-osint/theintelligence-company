@@ -101,6 +101,18 @@ has one, on 11 Nov 2026 (10-11 PM CST on 10 Nov).
   brunch from about 9 AM on "most weekday holidays", not confirmed for 11 Nov, so the window starts at 11. Reston's
   phone is (703) 988-7333 on its page (the first pass had 480-0870).
 
+- **Mission BBQ Herndon** (from an attached report, 11 Nov about 11:05 PM CST on 10 Nov): OpenStreetMap had only
+  Sterling, so the Herndon store was missing. Both now from Mission BBQ's own pages: 2403 Centreville Rd, Ste 34B,
+  Herndon, (703) 936-2078, and 45979 Denizen Plaza, Sterling, (571) 363-3233; Wednesday 11 AM-9 PM at both. Herndon's
+  pin is the Census geocoder's. 49 deals at 200 stops.
+- **Checked against the attached report and left out:** Rack Room Shoes, Food Lion, Tractor Supply and the Exchange
+  (retail, no store lookups done; the Exchange is on post), AutoNation (year-round), Morton's (no offer), McCormick &
+  Schmick's (8 Nov, and its Reston restaurant closed in 2021), In-N-Out (none in Virginia), Lake Anne Brew House's
+  bingo (a regular event; already a lead), Reston Community Center (open, no program), and Patch's unplaced 14 Nov
+  ceremony. Already in the planner: Chick-fil-A, Great Clips, Shake Shack, Starbucks (spouses included), Wendy's,
+  Chipotle, Dunkin', Circle K, Sport Clips, Chili's (Sterling only; Reston closed), Outback, Red Robin, Bonefish, Red
+  Lobster, Applebee's, Denny's, Buffalo Wild Wings, Kohl's, Target, Walgreens, the 5K, Herndon and the NPS fee-free day.
+
 ## Store lookups fixed (11 Nov 2026)
 All the Places has no Bar Louie spider (run 2026-10-31), so Bar Louie is OpenStreetMap only; Carrabba's spider is
 `carrabbas_italian_grill` (its list has no store in the circles: nearest Woodbridge and Germantown, MD);
