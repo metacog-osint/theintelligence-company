@@ -203,7 +203,7 @@ have friends in the Rosedale, Plymouth, and Maple Grove areas of the Twin Cities
   B 22, C 2); Fargo-Moorhead unchanged at 69 deals, 168 stops. After the 10 Nov re-check: Fargo-Moorhead 71 deals at
   171 stops (A 20, B 26, C 25), Bismarck-Mandan 33 at 49 (A 11, B 17, C 5), Twin Cities 34 at 181 (A 10, B 23, C 1).
 
-## Reston & Northern Virginia (fourth area, 10 Nov 2026 night)
+## Reston & Northern Virginia (fourth area; live since about 10:35 PM CST 10 Nov 2026 from `fe2187a`, approved; not pushed)
 10 Nov 2026: a fourth area for a colleague in Reston, VA. The first pass (research, REGIONS, CURATE, the store
 script, the picker and the test change) was made in Antigravity (Gemini) that evening, which stopped before building.
 Claude checked it against the sources the same night, corrected it and built it. Research and every correction:
