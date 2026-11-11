@@ -49,6 +49,22 @@ test("before 10:30 it sends you to breakfast first, because breakfast closes and
   assert.equal(opts[0].step.c.offer.id, "breakfast");
 });
 
+test("an area on Pacific time (Reno-Sparks, UTC-8; 11 Nov 2026) plans the same day as Central, two hours later in UTC", () => {
+  // The same town and clock times, with every time two hours later in UTC and the area's offset -480.
+  const SHIFT = 120 * MIN, pacific = town();
+  for (const p of pacific.places) { p.open += SHIFT; p.close += SHIFT; }
+  for (const o of pacific.offers) for (const k of ["start", "end", "arriveBy"]) if (o[k]) o[k] += SHIFT;
+  pacific.tzOffsetMin = -480;
+  for (const [h, m] of [[7, 0], [8, 0], [10, 15], [11, 45], [17, 30]]) {
+    const central = E.nextOptions(E.prepare(town(), profile(), state(), NO_REPORTS, at(h, m), home));
+    const west = E.nextOptions(E.prepare(pacific, profile({ dayEnd: at(21) + SHIFT }), state(), NO_REPORTS, at(h, m) + SHIFT, home));
+    assert.deepEqual(west.map((o) => o.step.c.offer.id), central.map((o) => o.step.c.offer.id), `${h}:${m} local`);
+    assert.deepEqual(west.map((o) => Math.round(o.total * 1000)), central.map((o) => Math.round(o.total * 1000)), `${h}:${m} local: scores`);
+  }
+  assert.equal(E.localMinutes({ tzOffsetMin: -480 }, Date.UTC(2026, 10, 11, 16, 0)), 8 * 60, "16:00 UTC is 8 AM PST");
+  assert.equal(E.localMinutes({ tzOffsetMin: -480 }, Date.UTC(2026, 10, 11, 8, 0)), 0, "08:00 UTC is midnight PST");
+});
+
 test("a deal you can't reach before it ends is left out", () => {
   const ctx = E.prepare(town(), profile(), state(), NO_REPORTS, at(10, 25), home);
   const ids = E.nextOptions(ctx).map((o) => o.step.c.offer.id);
