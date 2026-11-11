@@ -39,10 +39,15 @@
    "day": "Wed 11 Nov",
    "name": "DC Prime Steaks: free 9-oz Top Sirloin for veterans",
    "where": "20120 Lakeview Center Plaza, Ashburn, VA 20147 (just west of Sterling on Route 7)",
-   "offer": "Complimentary 9-ounce Top Sirloin entree for veterans and active-duty military dining in on Wednesday, 11 Nov.",
-   "grade": "B",
-   "note": "Dine-in with military ID. Address not checked: call first.",
+   "offer": "A free 9-oz Top Sirloin for veterans dining in on Wednesday, 11 Nov (veterans only: the restaurant's post doesn't name active duty).",
+   "grade": "A",
+   "note": "Dine-in only; bring ID showing veteran status; tax and tip not included. Opens at 4 PM. It expects to be fully booked: reserve, (703) 840-2099. Outside the route circles (Broadlands, Ashburn).",
    "sources": [
+    {
+     "url": "https://dcprimesteaks.com/2026/10/celebrate-veterans-day-with-a-complimentary-steak-at-dc-prime/",
+     "publisher": "DC Prime Steaks",
+     "published": "2026-10-29"
+    },
     {
      "url": "https://wtop.com/local/2026/11/deals-and-freebies-for-veterans-day/",
      "publisher": "WTOP",
@@ -68,13 +73,18 @@
   },
   {
    "id": "udvar-hazy-center",
-   "day": "Every day, 10:00 AM–5:30 PM",
+   "day": "Wed 11 Nov, 10:00 AM-5:30 PM",
    "name": "Smithsonian National Air and Space Museum Steven F. Udvar-Hazy Center",
    "where": "14390 Air and Space Museum Pkwy, Chantilly, VA 20151 (10 minutes south of Reston/Herndon via Route 28)",
-   "offer": "Free museum admission every day (Space Shuttle Discovery, SR-71 Blackbird, Enola Gay and hundreds of military aircraft). Active-duty military and veterans receive military discounts at the Airbus IMAX Theater.",
+   "offer": "Free admission every day. On 11 Nov, veterans and active-duty military get free parking (usually $15 before 4 PM) and $2 off each daytime IMAX ticket with a valid military ID; free docent tours from 10:30 AM, and the museum's Shake Shack takes 20% off shakes for current and former military.",
    "grade": "A",
-   "note": "Admission is free; parking is paid (check the museum's page for the late-afternoon rate).",
+   "note": "Outside the route circles (Chantilly, off Route 28).",
    "sources": [
+    {
+     "url": "https://airandspace.si.edu/newsroom/press-releases/national-air-and-space-museum-offers-specials-active-and-retired-military",
+     "publisher": "Smithsonian National Air and Space Museum",
+     "published": "2026-11-02"
+    },
     {
      "url": "https://airandspace.si.edu/visit/udvar-hazy-center",
      "publisher": "Smithsonian National Air and Space Museum",
@@ -151,6 +161,101 @@
      "published": "2026-11-05"
     }
    ]
+  },
+  {
+   "id": "metro-veterans-day-2026",
+   "day": "Wed 11 Nov",
+   "name": "Metro on Veterans Day: free parking at Metro garages and lots",
+   "where": "Silver Line garages: Wiehle-Reston East, Reston Town Center, Herndon, Innovation Center and the rest of Metro's own garages and lots",
+   "offer": "Parking at Metro-owned garages and lots is free for everyone on the federal holiday. Rail runs a weekend schedule, 5 AM to midnight; buses run Saturday service; regular fares.",
+   "grade": "A",
+   "note": "Fairfax Connector runs Saturday service on most routes (FFXnow).",
+   "sources": [
+    {
+     "url": "https://www.wmata.com/events/veterans-day-2026.html",
+     "publisher": "WMATA",
+     "published": "2026"
+    },
+    {
+     "url": "https://www.ffxnow.com/2026/11/10/veterans-day-to-close-fairfax-county-government-but-not-schools/",
+     "publisher": "FFXnow",
+     "published": "2026-11-10"
+    }
+   ]
+  },
+  {
+   "id": "great-falls-freedom-memorial",
+   "day": "Wed 11 Nov, 11:00 AM",
+   "name": "Great Falls Freedom Memorial Veterans Day ceremony",
+   "where": "Behind Great Falls Library, 9830 Georgetown Pike, Great Falls, VA (parking in the library lot)",
+   "offer": "The memorial's annual ceremony, open to all; speaker Bob Newhall, a long-time board member and Vietnam War veteran. Bring a chair to sit.",
+   "grade": "A",
+   "note": "In rain it moves to the Grange. End time not published. Just outside the route circles.",
+   "sources": [
+    {
+     "url": "https://www.gffreedom.org/2026/10/26/2026-veterans-day-ceremony/",
+     "publisher": "Great Falls Freedom Memorial",
+     "published": "2026-10-26"
+    },
+    {
+     "url": "https://www.ffxnow.com/2026/11/10/veterans-day-to-close-fairfax-county-government-but-not-schools/",
+     "publisher": "FFXnow",
+     "published": "2026-11-10"
+    }
+   ]
+  },
+  {
+   "id": "fcpa-veterans-day-2026",
+   "day": "Wed 11 Nov",
+   "name": "Fairfax County Park Authority: free rec centers and Lake Fairfax camping",
+   "where": "County rec centers (nearest Reston: Cub Run in Chantilly, Spring Hill in McLean); Lake Fairfax Park, 1400 Lake Fairfax Dr, Reston",
+   "offer": "Active-duty service members, veterans and their families get free access to the county's rec centers and free camping at Lake Fairfax Park. (The free wagon rides at Frying Pan Farm Park are on the route.)",
+   "grade": "B",
+   "note": "From FFXnow; the Park Authority's own 2026 notice wasn't found, so call the center or park first. Rec centers keep regular hours on the holiday (Park Authority holiday-hours page).",
+   "sources": [
+    {
+     "url": "https://www.ffxnow.com/2026/11/10/veterans-day-to-close-fairfax-county-government-but-not-schools/",
+     "publisher": "FFXnow",
+     "published": "2026-11-10"
+    },
+    {
+     "url": "https://www.fairfaxcounty.gov/parks/holiday-hours",
+     "publisher": "Fairfax County Park Authority",
+     "published": "undated"
+    }
+   ]
+  },
+  {
+   "id": "army-museum-fort-belvoir",
+   "day": "Wed 11 Nov",
+   "name": "National Museum of the United States Army",
+   "where": "1775 Liberty Dr, Fort Belvoir, VA (about 40 minutes south of Reston)",
+   "offer": "Free admission for everyone all day, with a veterans' discount in the museum store; a greeting-card station, hands-on history talks (World War I soldiers, the Army's telephone operators) and a Tiny Troops story time.",
+   "grade": "B",
+   "note": "Times not published in the source.",
+   "sources": [
+    {
+     "url": "https://www.ffxnow.com/2026/11/10/veterans-day-to-close-fairfax-county-government-but-not-schools/",
+     "publisher": "FFXnow",
+     "published": "2026-11-10"
+    }
+   ]
+  },
+  {
+   "id": "springfield-post-176",
+   "day": "Wed 11 Nov, 11:00 AM",
+   "name": "Springfield Veterans Day ceremony (American Legion Post 176)",
+   "where": "6520 Amherst Ave, Springfield, VA",
+   "offer": "American Legion Post 176's Veterans Day ceremony.",
+   "grade": "B",
+   "note": "End time not published.",
+   "sources": [
+    {
+     "url": "https://www.ffxnow.com/2026/11/10/veterans-day-to-close-fairfax-county-government-but-not-schools/",
+     "publisher": "FFXnow",
+     "published": "2026-11-10"
+    }
+   ]
   }
  ],
  "leads": [
@@ -185,6 +290,14 @@
    "offer": "No Veterans Day offer found for 2026; call (703) 435-5467.",
    "last_seen": "unknown",
    "src": "jimmys"
+  },
+  {
+   "name": "Crafthouse Reston",
+   "area": "1888 Explorer St, Reston (Reston Station)",
+   "q": "Crafthouse Reston Veterans Day 2026",
+   "offer": "Last year a free meal from a special menu, noon to 8 PM, for veterans and active duty (Patch). No 2026 word found by 11 Nov: call first.",
+   "last_seen": "2025",
+   "src": "crafthouse"
   }
  ],
  "lead_sources": {
@@ -203,6 +316,10 @@
   "jimmys": {
    "url": "https://www.jimmystavern.com/",
    "publisher": "Jimmy's Old Town Tavern"
+  },
+  "crafthouse": {
+   "url": "https://patch.com/virginia/reston/free-meal-veterans-active-duty-military-offered-reston",
+   "publisher": "Reston Patch (2025)"
   }
  }
 }

@@ -1,6 +1,6 @@
 {
  "meta": {
-  "built_at": "2026-11-11T04:29:59Z",
+  "built_at": "2026-11-11T04:54:45Z",
   "day": "2026-11-11",
   "day_start": "2026-11-11T05:00:00Z",
   "tz": "America/New_York",
@@ -2208,6 +2208,7 @@
    "group": null,
    "worth": 12,
    "arrive_by": "2026-11-11T12:45:00Z",
+   "cost_text": "$35 to run; free to watch",
    "ticket": false,
    "purchase": true,
    "kinds": [
@@ -2438,8 +2439,8 @@
    "value": 14,
    "grade": "A",
    "start": "2026-11-11T16:00:00Z",
-   "end": "2026-11-12T02:00:00Z",
-   "window_text": "11:00–21:00 EST",
+   "end": "2026-11-12T03:00:00Z",
+   "window_text": "11:00–22:00 EST",
    "mode": "dine_in",
    "minutes": 55,
    "busy": 20,
@@ -2468,7 +2469,7 @@
     {
      "url": "https://www.wearefoundingfarmers.com/a-time-to-serve-our-veterans/",
      "publisher": "Founding Farmers",
-     "published": "2026"
+     "published": "2026-10-29"
     },
     {
      "url": "https://wtop.com/local/2026/11/deals-and-freebies-for-veterans-day/",
@@ -2476,13 +2477,273 @@
      "published": "2026-11-09"
     }
    ],
-   "notes": "50% off brunch, lunch or dinner (not breakfast) for active-duty, retired military and veterans: food only, dine-in only, not to go. Bring a valid ID or DD-214, or wear your uniform. Reston Station (1904 Reston Metro Plaza) and Tysons (1800 Tysons Blvd); its page doesn't say every location takes part, so reserve or call first.",
+   "notes": "50% off brunch, lunch or dinner (not breakfast) for active-duty, retired military and veterans: food only, dine-in only, not to go. Bring a valid ID or DD-214, or wear your uniform. Reston Station (1904 Reston Metro Plaza) and Tysons (1800 Tysons Blvd), lunch and dinner 11 AM-10 PM; brunch may start about 9 AM on the holiday. Its page doesn't list the locations taking part, so reserve or call first.",
    "caution": "",
    "group": null,
    "ticket": false,
    "purchase": true,
    "kinds": [
     "meal"
+   ]
+  },
+  {
+   "id": "silver-diner",
+   "brand": "Silver Diner",
+   "status": "offering",
+   "category": "meal",
+   "offer": "25% off an entree for veterans and active-duty military.",
+   "value": 4,
+   "grade": "B",
+   "start": "2026-11-11T12:00:00Z",
+   "end": "2026-11-12T04:00:00Z",
+   "window_text": "07:00–23:00 EST",
+   "mode": "in_store",
+   "minutes": 50,
+   "busy": 15,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "no",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "25% off one entree. Bring a valid military ID. Stars and Stripes says all locations in DC, Maryland, Virginia and New Jersey; neither list says whether it is dine-in only.",
+   "sources": [
+    {
+     "url": "https://wtop.com/local/2026/11/deals-and-freebies-for-veterans-day/",
+     "publisher": "WTOP",
+     "published": "2026-11-09"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    }
+   ],
+   "notes": "25% off an entree for veterans and active-duty military with a valid military ID, at all its DC, Maryland and Virginia stores (WTOP, 9 Nov; Stars and Stripes, 6 Nov). Not on Silver Diner's own site.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": true,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "melting-pot-reston",
+   "brand": "The Melting Pot",
+   "status": "offering",
+   "category": "meal",
+   "offer": "Free 4-course fondue meal for a veteran when another guest buys one.",
+   "value": 40,
+   "grade": "A",
+   "start": "2026-11-11T22:00:00Z",
+   "end": "2026-11-12T02:00:00Z",
+   "window_text": "17:00–21:00 EST",
+   "mode": "dine_in",
+   "minutes": 90,
+   "busy": 10,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "no",
+   "kids": null,
+   "proof": [
+    "military_id",
+    "dd214",
+    "va_card",
+    "dl_veteran"
+   ],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "A free 4-course fondue meal for a veteran with proof of service when another meal is bought. 11 Nov only, dine-in only, DC-area locations. Not for family members; not with other offers; excludes the Bigger Night Out. Space is limited: reserve. Opens 5 PM; last seating 9 PM.",
+   "sources": [
+    {
+     "url": "https://www.meltingpot.com/reston-va/melting-pot-events.aspx",
+     "publisher": "The Melting Pot Reston",
+     "published": "2026"
+    },
+    {
+     "url": "https://wtop.com/local/2026/11/deals-and-freebies-for-veterans-day/",
+     "publisher": "WTOP",
+     "published": "2026-11-09"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    }
+   ],
+   "notes": "The Reston restaurant's own page: a free 4-course fondue meal for a veteran with proof of service when another guest buys one, 11 Nov only, dine-in. Not for family members. Space is limited: reserve, (703) 435-1277. Opens 5 PM; last seating 9 PM.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": true,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "grace-for-vets",
+   "brand": "Grace for Vets free car wash",
+   "status": "offering",
+   "category": "service",
+   "offer": "Free car wash for veterans and active duty.",
+   "value": 12,
+   "grade": "A",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "in_store",
+   "minutes": 15,
+   "busy": 15,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "no",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "A free wash for veterans and active-duty personnel on 11 Nov at participating washes. Grace for Vets doesn't say what proof to bring: carry a military or veteran ID. Hours not published for the day: call the wash.",
+   "sources": [
+    {
+     "url": "https://www.graceforvets.com/find-a-participating-wash",
+     "publisher": "Grace for Vets",
+     "published": "undated (every Veterans Day)"
+    },
+    {
+     "url": "https://wtop.com/local/2026/11/deals-and-freebies-for-veterans-day/",
+     "publisher": "WTOP",
+     "published": "2026-11-09"
+    }
+   ],
+   "notes": "Grace for Vets: a free car wash for veterans and active duty every 11 Nov at participating washes; near Reston, all are Flagship Carwash sites on its list. Proof isn't stated: bring a military or veteran ID.",
+   "caution": "Participating washes only, hours not published for the day: call first",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "car-wash"
+   ]
+  },
+  {
+   "id": "paisanos-pizza",
+   "brand": "Paisano's Pizza",
+   "status": "offering",
+   "category": "quick",
+   "offer": "Free large one-topping pizza for veterans and active-duty military, at all 40 stores in Virginia, Maryland and DC.",
+   "value": 16,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "in_store",
+   "minutes": 15,
+   "busy": 15,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": true,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "no",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "In-store, with proof of service: a US Uniformed Services ID (active or retired), a veterans organization card, or your uniform.",
+   "sources": [
+    {
+     "url": "https://www.foodnetwork.com/fn-dish/news/veterans-day-food-deals-roundup-2026",
+     "publisher": "Food Network",
+     "published": "2026-11-09"
+    }
+   ],
+   "notes": "A free large one-topping pizza for veterans and active duty at all 40 Paisano's in Virginia, Maryland and DC (Food Network, 9 Nov 2026). In-store, with a US Uniformed Services ID (active or retired), a veterans organization card or your uniform. Not on Paisano's own site.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "frying-pan-wagon-rides",
+   "brand": "Frying Pan Farm Park: free wagon rides",
+   "status": "offering",
+   "category": "event",
+   "offer": "Free wagon rides for active-duty service members, veterans and their families, from the Fairfax County Park Authority.",
+   "value": 0,
+   "grade": "B",
+   "start": "2026-11-11T15:00:00Z",
+   "end": "2026-11-11T20:00:00Z",
+   "window_text": "10:00–15:00 EST",
+   "mode": "event",
+   "minutes": 45,
+   "busy": 10,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active",
+    "guard_reserve"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "yes",
+   "kids": true,
+   "proof": [],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "Wagon rides 10 AM-3 PM, free for active-duty service members, veterans and their families (FFXnow). The Park Authority's own 2026 notice wasn't found; bring a military or veteran ID.",
+   "sources": [
+    {
+     "url": "https://www.ffxnow.com/2026/11/10/veterans-day-to-close-fairfax-county-government-but-not-schools/",
+     "publisher": "FFXnow",
+     "published": "2026-11-10"
+    }
+   ],
+   "notes": "The Fairfax County Park Authority's free wagon rides for active-duty service members, veterans and their families, 10 AM-3 PM (FFXnow, 10 Nov 2026). 2709 West Ox Rd, Herndon; (703) 437-9101.",
+   "caution": "",
+   "group": null,
+   "worth": 8,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "outing"
    ]
   },
   {
@@ -5000,11 +5261,11 @@
    "address": "1904 Reston Metro Plaza, Reston, VA 20190",
    "lat": 38.948976,
    "lng": -77.338276,
-   "phone": "(703) 480-0870",
+   "phone": "(703) 988-7333",
    "open": "2026-11-11T16:00:00Z",
-   "close": "2026-11-12T02:00:00Z",
-   "hoursAssumed": true,
-   "verified": "unverified",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
    "pin": "geo"
   },
   {
@@ -5016,8 +5277,302 @@
    "lng": -77.222568,
    "phone": "(703) 442-8783",
    "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "silver-diner-11951-killingsworth-ave",
+   "offer": "silver-diner",
+   "name": "",
+   "address": "11951 Killingsworth Ave, Reston, VA 20194",
+   "lat": 38.96666,
+   "lng": -77.35866,
+   "phone": "(703) 742-0801",
+   "open": "2026-11-11T12:00:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "silver-diner-12250-fair-lakes-pkwy",
+   "offer": "silver-diner",
+   "name": "",
+   "address": "12250 Fair Lakes Pkwy, Fairfax, VA 22033",
+   "lat": 38.85983,
+   "lng": -77.37058,
+   "phone": "(703) 359-5999",
+   "open": "2026-11-11T12:00:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "silver-diner-8101-fletcher-ave",
+   "offer": "silver-diner",
+   "name": "",
+   "address": "8101 Fletcher Ave, McLean, VA 22102",
+   "lat": 38.91683,
+   "lng": -77.2261,
+   "phone": "(703) 821-5666",
+   "open": "2026-11-11T12:00:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "silver-diner-8150-porter-rd",
+   "offer": "silver-diner",
+   "name": "",
+   "address": "8150 Porter Rd, Falls Church, VA 22042",
+   "lat": 38.87283,
+   "lng": -77.22634,
+   "phone": "(703) 204-0812",
+   "open": "2026-11-11T12:00:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "silver-diner-20530-heron-overlook-plaza",
+   "offer": "silver-diner",
+   "name": "",
+   "address": "20530 Heron Overlook Plaza, Ashburn, VA 20147",
+   "lat": 39.04894,
+   "lng": -77.45018,
+   "phone": "(703) 468-9293",
+   "open": "2026-11-11T12:00:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "melting-pot-reston-11730-plaza-america-dr",
+   "offer": "melting-pot-reston",
+   "name": "",
+   "address": "11730 Plaza America Dr, Ste 100, Reston, VA 20190",
+   "lat": 38.95338,
+   "lng": -77.35009,
+   "phone": "(703) 435-1277",
+   "open": "2026-11-11T22:00:00Z",
    "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "grace-for-vets-632-grant-st",
+   "offer": "grace-for-vets",
+   "name": "",
+   "address": "632 Grant St, Herndon, VA",
+   "lat": 38.96757,
+   "lng": -77.37828,
+   "phone": "",
+   "open": "2026-11-11T13:00:00Z",
+   "close": "2026-11-12T01:00:00Z",
    "hoursAssumed": true,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "grace-for-vets-2501-centreville-rd",
+   "offer": "grace-for-vets",
+   "name": "",
+   "address": "2501 Centreville Rd, Herndon, VA",
+   "lat": 38.94918,
+   "lng": -77.41044,
+   "phone": "(571) 800-1440",
+   "open": "2026-11-11T13:00:00Z",
+   "close": "2026-11-12T01:00:00Z",
+   "hoursAssumed": true,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "grace-for-vets-45215-towlern-pl",
+   "offer": "grace-for-vets",
+   "name": "",
+   "address": "45215 Towlern Pl, Sterling, VA",
+   "lat": 39.009666,
+   "lng": -77.436268,
+   "phone": "",
+   "open": "2026-11-11T13:00:00Z",
+   "close": "2026-11-12T01:00:00Z",
+   "hoursAssumed": true,
+   "verified": "confirmed",
+   "pin": "census"
+  },
+  {
+   "id": "grace-for-vets-540-maple-ave-w",
+   "offer": "grace-for-vets",
+   "name": "",
+   "address": "540 Maple Ave W, Vienna, VA",
+   "lat": 38.89354,
+   "lng": -77.27452,
+   "phone": "",
+   "open": "2026-11-11T13:00:00Z",
+   "close": "2026-11-12T01:00:00Z",
+   "hoursAssumed": true,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "grace-for-vets-10874-fairfax-blvd",
+   "offer": "grace-for-vets",
+   "name": "",
+   "address": "10874 Fairfax Blvd, Fairfax, VA",
+   "lat": 38.854019,
+   "lng": -77.318951,
+   "phone": "",
+   "open": "2026-11-11T13:00:00Z",
+   "close": "2026-11-12T01:00:00Z",
+   "hoursAssumed": true,
+   "verified": "confirmed",
+   "pin": "census"
+  },
+  {
+   "id": "grace-for-vets-20395-broad-overlook-dr",
+   "offer": "grace-for-vets",
+   "name": "",
+   "address": "20395 Broad Overlook Dr, Ashburn, VA",
+   "lat": 39.05137,
+   "lng": -77.4504,
+   "phone": "(703) 858-0020",
+   "open": "2026-11-11T13:00:00Z",
+   "close": "2026-11-12T01:00:00Z",
+   "hoursAssumed": true,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "grace-for-vets-43985-pipeline-plaza",
+   "offer": "grace-for-vets",
+   "name": "",
+   "address": "43985 Pipeline Plaza, Ashburn, VA",
+   "lat": 39.021482,
+   "lng": -77.478094,
+   "phone": "",
+   "open": "2026-11-11T13:00:00Z",
+   "close": "2026-11-12T01:00:00Z",
+   "hoursAssumed": true,
+   "verified": "confirmed",
+   "pin": "census"
+  },
+  {
+   "id": "paisanos-pizza-12056-n-shore-dr",
+   "offer": "paisanos-pizza",
+   "name": "",
+   "address": "12056 N Shore Dr, Reston, VA 20190",
+   "lat": 38.959219,
+   "lng": -77.331772,
+   "phone": "(703) 707-1000",
+   "open": "2026-11-11T15:30:00Z",
+   "close": "2026-11-12T02:30:00Z",
+   "hoursAssumed": true,
+   "verified": "confirmed",
+   "pin": "census"
+  },
+  {
+   "id": "paisanos-pizza-1141-elden-st",
+   "offer": "paisanos-pizza",
+   "name": "",
+   "address": "1141 Elden St, Herndon, VA 20170",
+   "lat": 38.964389,
+   "lng": -77.397871,
+   "phone": "(703) 796-6800",
+   "open": "2026-11-11T15:30:00Z",
+   "close": "2026-11-12T02:30:00Z",
+   "hoursAssumed": true,
+   "verified": "confirmed",
+   "pin": "census"
+  },
+  {
+   "id": "paisanos-pizza-312-maple-ave-w",
+   "offer": "paisanos-pizza",
+   "name": "",
+   "address": "312 Maple Ave W, Vienna, VA 22180",
+   "lat": 38.8976,
+   "lng": -77.26962,
+   "phone": "(703) 281-7800",
+   "open": "2026-11-11T15:30:00Z",
+   "close": "2026-11-12T02:30:00Z",
+   "hoursAssumed": true,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "paisanos-pizza-8603-westwood-center-dr",
+   "offer": "paisanos-pizza",
+   "name": "",
+   "address": "8603 Westwood Center Dr, Vienna, VA 22182",
+   "lat": 38.92903,
+   "lng": -77.24456,
+   "phone": "(703) 714-9900",
+   "open": "2026-11-11T15:30:00Z",
+   "close": "2026-11-12T02:30:00Z",
+   "hoursAssumed": true,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "paisanos-pizza-10330-main-st",
+   "offer": "paisanos-pizza",
+   "name": "",
+   "address": "10330 Main St, Fairfax, VA 22030",
+   "lat": 38.8464,
+   "lng": -77.30339,
+   "phone": "(703) 273-9900",
+   "open": "2026-11-11T15:30:00Z",
+   "close": "2026-11-12T02:30:00Z",
+   "hoursAssumed": true,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "paisanos-pizza-12595-fair-lakes-circle",
+   "offer": "paisanos-pizza",
+   "name": "",
+   "address": "12595 Fair Lakes Circle, Fairfax, VA 22033",
+   "lat": 38.858166,
+   "lng": -77.383378,
+   "phone": "(703) 266-1400",
+   "open": "2026-11-11T15:30:00Z",
+   "close": "2026-11-12T02:30:00Z",
+   "hoursAssumed": true,
+   "verified": "confirmed",
+   "pin": "census"
+  },
+  {
+   "id": "paisanos-pizza-44260-ice-rink-plaza",
+   "offer": "paisanos-pizza",
+   "name": "",
+   "address": "44260 Ice Rink Plaza, Ashburn, VA 20147",
+   "lat": 39.019803,
+   "lng": -77.46961,
+   "phone": "(571) 223-0000",
+   "open": "2026-11-11T15:30:00Z",
+   "close": "2026-11-12T02:30:00Z",
+   "hoursAssumed": true,
+   "verified": "confirmed",
+   "pin": "census"
+  },
+  {
+   "id": "frying-pan-wagon-rides-2709-west-ox-rd",
+   "offer": "frying-pan-wagon-rides",
+   "name": "",
+   "address": "2709 West Ox Rd, Herndon, VA 20171",
+   "lat": 38.93779,
+   "lng": -77.40851,
+   "phone": "(703) 437-9101",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-11T20:00:00Z",
+   "hoursAssumed": false,
    "verified": "unverified",
    "pin": "geo"
   },
@@ -5077,10 +5632,15 @@
    "at": null,
    "name": "DC Prime Steaks: free 9-oz Top Sirloin for veterans",
    "where": "20120 Lakeview Center Plaza, Ashburn, VA 20147 (just west of Sterling on Route 7)",
-   "offer": "Complimentary 9-ounce Top Sirloin entree for veterans and active-duty military dining in on Wednesday, 11 Nov.",
-   "grade": "B",
-   "note": "Dine-in with military ID. Address not checked: call first.",
+   "offer": "A free 9-oz Top Sirloin for veterans dining in on Wednesday, 11 Nov (veterans only: the restaurant's post doesn't name active duty).",
+   "grade": "A",
+   "note": "Dine-in only; bring ID showing veteran status; tax and tip not included. Opens at 4 PM. It expects to be fully booked: reserve, (703) 840-2099. Outside the route circles (Broadlands, Ashburn).",
    "sources": [
+    {
+     "url": "https://dcprimesteaks.com/2026/10/celebrate-veterans-day-with-a-complimentary-steak-at-dc-prime/",
+     "publisher": "DC Prime Steaks",
+     "published": "2026-10-29"
+    },
     {
      "url": "https://wtop.com/local/2026/11/deals-and-freebies-for-veterans-day/",
      "publisher": "WTOP",
@@ -5107,14 +5667,19 @@
   },
   {
    "id": "udvar-hazy-center",
-   "day": "Every day, 10:00 AM–5:30 PM",
+   "day": "Wed 11 Nov, 10:00 AM-5:30 PM",
    "at": null,
    "name": "Smithsonian National Air and Space Museum Steven F. Udvar-Hazy Center",
    "where": "14390 Air and Space Museum Pkwy, Chantilly, VA 20151 (10 minutes south of Reston/Herndon via Route 28)",
-   "offer": "Free museum admission every day (Space Shuttle Discovery, SR-71 Blackbird, Enola Gay and hundreds of military aircraft). Active-duty military and veterans receive military discounts at the Airbus IMAX Theater.",
+   "offer": "Free admission every day. On 11 Nov, veterans and active-duty military get free parking (usually $15 before 4 PM) and $2 off each daytime IMAX ticket with a valid military ID; free docent tours from 10:30 AM, and the museum's Shake Shack takes 20% off shakes for current and former military.",
    "grade": "A",
-   "note": "Admission is free; parking is paid (check the museum's page for the late-afternoon rate).",
+   "note": "Outside the route circles (Chantilly, off Route 28).",
    "sources": [
+    {
+     "url": "https://airandspace.si.edu/newsroom/press-releases/national-air-and-space-museum-offers-specials-active-and-retired-military",
+     "publisher": "Smithsonian National Air and Space Museum",
+     "published": "2026-11-02"
+    },
     {
      "url": "https://airandspace.si.edu/visit/udvar-hazy-center",
      "publisher": "Smithsonian National Air and Space Museum",
@@ -5194,6 +5759,106 @@
      "published": "2026-11-05"
     }
    ]
+  },
+  {
+   "id": "metro-veterans-day-2026",
+   "day": "Wed 11 Nov",
+   "at": null,
+   "name": "Metro on Veterans Day: free parking at Metro garages and lots",
+   "where": "Silver Line garages: Wiehle-Reston East, Reston Town Center, Herndon, Innovation Center and the rest of Metro's own garages and lots",
+   "offer": "Parking at Metro-owned garages and lots is free for everyone on the federal holiday. Rail runs a weekend schedule, 5 AM to midnight; buses run Saturday service; regular fares.",
+   "grade": "A",
+   "note": "Fairfax Connector runs Saturday service on most routes (FFXnow).",
+   "sources": [
+    {
+     "url": "https://www.wmata.com/events/veterans-day-2026.html",
+     "publisher": "WMATA",
+     "published": "2026"
+    },
+    {
+     "url": "https://www.ffxnow.com/2026/11/10/veterans-day-to-close-fairfax-county-government-but-not-schools/",
+     "publisher": "FFXnow",
+     "published": "2026-11-10"
+    }
+   ]
+  },
+  {
+   "id": "great-falls-freedom-memorial",
+   "day": "Wed 11 Nov, 11:00 AM",
+   "at": null,
+   "name": "Great Falls Freedom Memorial Veterans Day ceremony",
+   "where": "Behind Great Falls Library, 9830 Georgetown Pike, Great Falls, VA (parking in the library lot)",
+   "offer": "The memorial's annual ceremony, open to all; speaker Bob Newhall, a long-time board member and Vietnam War veteran. Bring a chair to sit.",
+   "grade": "A",
+   "note": "In rain it moves to the Grange. End time not published. Just outside the route circles.",
+   "sources": [
+    {
+     "url": "https://www.gffreedom.org/2026/10/26/2026-veterans-day-ceremony/",
+     "publisher": "Great Falls Freedom Memorial",
+     "published": "2026-10-26"
+    },
+    {
+     "url": "https://www.ffxnow.com/2026/11/10/veterans-day-to-close-fairfax-county-government-but-not-schools/",
+     "publisher": "FFXnow",
+     "published": "2026-11-10"
+    }
+   ]
+  },
+  {
+   "id": "fcpa-veterans-day-2026",
+   "day": "Wed 11 Nov",
+   "at": null,
+   "name": "Fairfax County Park Authority: free rec centers and Lake Fairfax camping",
+   "where": "County rec centers (nearest Reston: Cub Run in Chantilly, Spring Hill in McLean); Lake Fairfax Park, 1400 Lake Fairfax Dr, Reston",
+   "offer": "Active-duty service members, veterans and their families get free access to the county's rec centers and free camping at Lake Fairfax Park. (The free wagon rides at Frying Pan Farm Park are on the route.)",
+   "grade": "B",
+   "note": "From FFXnow; the Park Authority's own 2026 notice wasn't found, so call the center or park first. Rec centers keep regular hours on the holiday (Park Authority holiday-hours page).",
+   "sources": [
+    {
+     "url": "https://www.ffxnow.com/2026/11/10/veterans-day-to-close-fairfax-county-government-but-not-schools/",
+     "publisher": "FFXnow",
+     "published": "2026-11-10"
+    },
+    {
+     "url": "https://www.fairfaxcounty.gov/parks/holiday-hours",
+     "publisher": "Fairfax County Park Authority",
+     "published": "undated"
+    }
+   ]
+  },
+  {
+   "id": "army-museum-fort-belvoir",
+   "day": "Wed 11 Nov",
+   "at": null,
+   "name": "National Museum of the United States Army",
+   "where": "1775 Liberty Dr, Fort Belvoir, VA (about 40 minutes south of Reston)",
+   "offer": "Free admission for everyone all day, with a veterans' discount in the museum store; a greeting-card station, hands-on history talks (World War I soldiers, the Army's telephone operators) and a Tiny Troops story time.",
+   "grade": "B",
+   "note": "Times not published in the source.",
+   "sources": [
+    {
+     "url": "https://www.ffxnow.com/2026/11/10/veterans-day-to-close-fairfax-county-government-but-not-schools/",
+     "publisher": "FFXnow",
+     "published": "2026-11-10"
+    }
+   ]
+  },
+  {
+   "id": "springfield-post-176",
+   "day": "Wed 11 Nov, 11:00 AM",
+   "at": null,
+   "name": "Springfield Veterans Day ceremony (American Legion Post 176)",
+   "where": "6520 Amherst Ave, Springfield, VA",
+   "offer": "American Legion Post 176's Veterans Day ceremony.",
+   "grade": "B",
+   "note": "End time not published.",
+   "sources": [
+    {
+     "url": "https://www.ffxnow.com/2026/11/10/veterans-day-to-close-fairfax-county-government-but-not-schools/",
+     "publisher": "FFXnow",
+     "published": "2026-11-10"
+    }
+   ]
   }
  ],
  "leads": [
@@ -5242,6 +5907,18 @@
    "source": {
     "url": "https://www.jimmystavern.com/",
     "publisher": "Jimmy's Old Town Tavern",
+    "published": null
+   }
+  },
+  {
+   "name": "Crafthouse Reston",
+   "area": "1888 Explorer St, Reston (Reston Station)",
+   "q": "Crafthouse Reston Veterans Day 2026",
+   "offer": "Last year a free meal from a special menu, noon to 8 PM, for veterans and active duty (Patch). No 2026 word found by 11 Nov: call first.",
+   "last_seen": "2025",
+   "source": {
+    "url": "https://patch.com/virginia/reston/free-meal-veterans-active-duty-military-offered-reston",
+    "publisher": "Reston Patch (2025)",
     "published": null
    }
   }

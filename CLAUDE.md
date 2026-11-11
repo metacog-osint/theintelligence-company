@@ -173,7 +173,9 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
 - **Reston & Northern Virginia (10 Nov 2026 evening; a fourth area for a colleague):** `reston-va`,
   `?area=reston-va`, the first area on Eastern time (`tz`, `tz_offset_min`, `tz_abbr`, `day_start` in REGIONS). First
   pass made in Antigravity (Gemini), which stopped before building; checked, corrected and built by Claude the same
-  night (44 deals at 178 stops; live since about 10:35 PM CST from `fe2187a`, approved; not pushed). Details and the corrections in `veterans-day/README.md` ("Reston & Northern
+  night (44 deals at 178 stops; live since about 10:35 PM CST from `fe2187a`, approved; pushed with `870fb2b`).
+  11 Nov 2026 about midnight: Silver Diner, The Melting Pot, Grace for Vets, Paisano's and Frying Pan Farm Park's
+  wagon rides added (49 at 199), and each area's own search examples; see `HANDOFF.md` for whether it is live. Details and the corrections in `veterans-day/README.md` ("Reston & Northern
   Virginia") and `research/reston-va/notes.md`. Antigravity also deployed two unnoted commits that evening,
   `59c4f9e` and `3373f4f` (start presets, smart search, quick-add, Stop 1 controls; live, checked 10 Nov). `59c4f9e`
   called an engine function that didn't exist, which blanked the live Deals tab; fixed the same night, and a test now

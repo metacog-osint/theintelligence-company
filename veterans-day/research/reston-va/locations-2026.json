@@ -24,7 +24,7 @@
  "Bar Louie": {
   "presence": "yes",
   "basis_url": "https://www.alltheplaces.xyz/",
-  "basis": "All the Places download failed (bar_louie); OpenStreetMap: 1 in the area",
+  "basis": "No All the Places spider for Bar Louie; OpenStreetMap: 1 in the area",
   "stores": [
    {
     "address": "20586 Easthampton Plaza, Ashburn, VA 20147",
@@ -156,7 +156,7 @@
  "Carrabba's Italian Grill": {
   "presence": "no",
   "basis_url": "https://www.alltheplaces.xyz/",
-  "basis": "All the Places download failed (carrabbas); OpenStreetMap: 0 in the area",
+  "basis": "All the Places run 2026-10-31 (carrabbas_italian_grill): 0 in the area (nearest Woodbridge and Germantown, MD); OpenStreetMap: 0 in the area",
   "stores": []
  },
  "Casey's": {
@@ -992,7 +992,7 @@
  "Krispy Kreme": {
   "presence": "no",
   "basis_url": "https://www.alltheplaces.xyz/",
-  "basis": "All the Places download failed (krispy_kreme_us); OpenStreetMap: 0 in the area",
+  "basis": "All the Places run 2026-10-31 (krispy_kreme_us): 0 in the area (nearest Manassas and Alexandria); OpenStreetMap: 0 in the area",
   "stores": []
  },
  "Kwik Trip": {

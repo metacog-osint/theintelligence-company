@@ -97,7 +97,9 @@
   const fmt = (ms) => T.format(new Date(ms), { date: false });
   const fmtNZ = (ms) => T.format(new Date(ms), { date: false, zoneName: false });
   const money = (v) => "$" + Math.round(v);
-  const worthText = (o) => (o.value > 0 ? "about " + money(o.value) : o.category === "shopping" ? "a discount" : "free");
+  // cost_text (from CURATE's show) says what a deal costs when "free" would mislead: the 5K is $35 to run, free to
+  // watch (11 Nov 2026). It changes only the words; the engine still scores the offer by value and worth.
+  const worthText = (o) => (o.cost_text ? o.cost_text : o.value > 0 ? "about " + money(o.value) : o.category === "shopping" ? "a discount" : "free");
   // "7 min", "1 h 5 min": no-break spaces keep a duration on one line; rounding first avoids "1 h 60 min".
   const mins = (m) => {
     if (m < 1) return "under a minute";
@@ -1287,6 +1289,14 @@
       ["38.8543,-77.3106", "Fairfax, VA"]
     ]
   };
+  // Example text in the Deals search box and the Route quick-add box, from each area's own deals and streets (the publisher,
+  // 11 Nov 2026: every area showed Fargo's). tests/veterans.test.js checks each word finds something in its area.
+  const AREA_EXAMPLES = {
+    "fargo-moorhead": { deals: ["Hornbacher's", "13th Ave", "Moorhead"], route: ["Hornbacher's", "Perkins", "13th Ave"] },
+    "bismarck-mandan": { deals: ["Perkins", "Expressway", "Mandan"], route: ["Perkins", "Olive Garden", "Century Ave"] },
+    "twin-cities": { deals: ["Caribou", "Lexington Ave", "Maple Grove"], route: ["Caribou", "Perkins", "Wayzata Blvd"] },
+    "reston-va": { deals: ["Chick-fil-A", "Leesburg Pike", "Herndon"], route: ["Chick-fil-A", "Wawa", "Sunset Hills"] }
+  };
   const AREA_ALIASES = {
     "new-salem": "bismarck-mandan",
     "new-salem-bismarck": "bismarck-mandan",
@@ -1353,6 +1363,11 @@
     document.title = "Veterans Day 2026 in " + AREA.name + " · The Intelligence Company";
     document.querySelectorAll(".area-name").forEach((el) => { el.textContent = AREA.name; });
     $("#drive-safe-transit").textContent = AREA.transit ? ", or " + AREA.transit : "";
+    const ex = AREA_EXAMPLES[areaId];
+    if (ex) {
+      $("#q").placeholder = "Search deals, streets or cities: " + ex.deals.join(", ") + "…";
+      if ($("#route-q")) $("#route-q").placeholder = "+ Quick-add a deal or place to your route (e.g. " + ex.route.join(", ") + ")…";
+    }
   }
 
   async function main() {

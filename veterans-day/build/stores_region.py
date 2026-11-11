@@ -56,9 +56,10 @@ SPIDERS = {
     "Pilot / Flying J": ("pilot_flying_j", "2026-10-10-13-32-41"),
     "Chick-fil-A": ("chick_fil_a", LATEST), "Sheetz": ("sheetz", LATEST), "Wawa": ("wawa", LATEST),
     "California Pizza Kitchen": ("california_pizza_kitchen", LATEST), "Bonefish Grill": ("bonefish_grill", LATEST),
-    "Carrabba's Italian Grill": ("carrabbas", LATEST), "Fogo de Chão": ("fogo_de_chao", LATEST),
-    "Bar Louie": ("bar_louie", LATEST),
+    "Carrabba's Italian Grill": ("carrabbas_italian_grill", LATEST), "Fogo de Chão": ("fogo_de_chao", LATEST),
 }
+# No All the Places spider for Bar Louie (run 2026-10-31 checked 11 Nov 2026): OpenStreetMap only. Carrabba's spider is
+# carrabbas_italian_grill, not carrabbas; krispy_kreme_us was right (its 10 Nov download failed once).
 # Every chain's OpenStreetMap name or brand, as a regex (POSIX-safe: Overpass runs the combined one too).
 OSM = {
     "Applebee's": r"^Applebee'?s", "Chili's": r"^Chili'?s( Grill.*)?$", "Twin Peaks": r"^Twin Peaks",
