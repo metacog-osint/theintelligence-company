@@ -175,7 +175,12 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   pass made in Antigravity (Gemini), which stopped before building; checked, corrected and built by Claude the same
   night (44 deals at 178 stops; live since about 10:35 PM CST from `fe2187a`, approved; pushed with `870fb2b`).
   11 Nov 2026 about midnight: Silver Diner, The Melting Pot, Grace for Vets, Paisano's and Frying Pan Farm Park's
-  wagon rides added (49 at 199), and each area's own search examples; see `HANDOFF.md` for whether it is live. Details and the corrections in `veterans-day/README.md` ("Reston & Northern
+  wagon rides added (49 at 199), and each area's own search examples; see `HANDOFF.md` for whether it is live.
+  Practice marks made in the preview now clear when the day starts. **Never tap Got it, Turned away, They ran out or
+  the line report with `?now=` set inside the day on `localhost:5055`/`5056`:** those origins are allowed by the
+  report Worker, so it records a real report (it happened once, 11 Nov 2026; the row was deleted).
+- **Never deploy from `[local path]`** (branch `veterans-day`, 8 Nov): Antigravity did on 10 Nov and its 46
+  files most likely replaced the live hub for a while. `GEMINI.md` points Gemini at this file and `HANDOFF.md`. Details and the corrections in `veterans-day/README.md` ("Reston & Northern
   Virginia") and `research/reston-va/notes.md`. Antigravity also deployed two unnoted commits that evening,
   `59c4f9e` and `3373f4f` (start presets, smart search, quick-add, Stop 1 controls; live, checked 10 Nov). `59c4f9e`
   called an engine function that didn't exist, which blanked the live Deals tab; fixed the same night, and a test now

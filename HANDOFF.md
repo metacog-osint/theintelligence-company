@@ -1,11 +1,36 @@
-# Hub handoff: where things stand (10 Nov 2026, about 11:00 PM CST: Reston's WTOP deals and page fixes built and tested, not committed; 10:35 PM: Veterans Day Reston area and the Deals-tab fix live from fe2187a, pushed with 870fb2b; 5:30 PM: Antigravity's two commits live; 1:45 PM: Hornbacher's and Post 2 list live from d1d897c)
+# Hub handoff: where things stand (10 Nov 2026, about 11:15 PM CST: Reston's WTOP deals and page fixes live from fd2e434, pushed; Mission BBQ Herndon and the Antigravity review not committed; 10:35 PM: Veterans Day Reston area and the Deals-tab fix live from fe2187a, pushed with 870fb2b; 5:30 PM: Antigravity's two commits live; 1:45 PM: Hornbacher's and Post 2 list live from d1d897c)
 
 Read with `CLAUDE.md` (the project's notes). Times are Central (CST since 1 Nov). Each commit, push and deploy needs
 Tom's yes.
 
 ## Veterans Day planner: Reston's WTOP deals and page fixes, 10 Nov 2026 about 11:00 PM CST ("Finish the Reston work")
-**Built and tested, not committed or deployed** (Tom held batch 1, the page fixes, to ship with the deals). GitHub's
-site-checks run 42960407365 on `870fb2b` passed (both jobs; `master` = `origin/master` before this work).
+**Live** since about 11:00 PM CST from `fd2e434` ("Commit, deploy and push"; pushed; site-checks run 42962816380
+passed). Checked live: `app.js`, `index.html` and Reston's `deals.json` and `drive.json` match the commit. GitHub's
+site-checks run 42960407365 on `870fb2b` passed too.
+- **Second batch (Tom: Mission BBQ "Commit, deploy, push"; preview bug "Fix it, then deploy"; GEMINI.md "Replace and
+  commit it"):** Mission BBQ's Herndon store (2403 Centreville Rd; OpenStreetMap had only Sterling), both from Mission
+  BBQ's own pages, 11 AM-9 PM: 49 deals at 200 stops, `drive.json` rebuilt. Practice marks from the preview clear when
+  the day starts (`clearPreviewMarks` in `app.js`; 99 planner tests). `GEMINI.md` is now a pointer to these notes.
+- **My mistake, fixed:** testing that fix in the preview with `?now=` on the day, Claude tapped "Got it", and since
+  `localhost:5055` is an allowed origin it sent a real report ("worked", Sheetz 13840 McLearen Rd, 05:08 UTC). It was
+  the only row in `reports`; deleted with Tom's yes about 11:25 PM CST (`DELETE FROM reports WHERE id = 1`).
+- **Review of Antigravity's work (asked; fixes wait for his yes):**
+  - `59c4f9e` and `3373f4f`, read line by line: apart from `E.driveMinutes` (fixed in `fe2187a`), no crash found. Behaviour
+    changes to know: a service deal that needs an appointment (Fix It Forward) is now left out of routes unless marked
+    "Signed up ahead" or pinned (it used to be kept at half weight); "Go here next", a branch switch and the "Build
+    into route" select all lock the deal in as a Must do that stays until removed; breakfast and deals ending by
+    11:00 get 1.35x before 10:30; `firebase.json` makes every `.json` on the site and everything under the planner
+    `no-cache` (vendor files included). Each deal card builds a 30-minute schedule select for every location (about
+    35 options each), so Starbucks-sized cards carry hundreds of options; fine at phone size in the preview.
+  - **Preview marks carry into the day (real, in `master`):** "Got it", "Turned away" and "Skip" made in preview are
+    saved in `S.done`, `S.away`, `S.strikes` and `S.last` with the simulated Wednesday time and nothing clears them,
+    so a deal someone practised on tonight shows as already got on the day, and `S.last` can set their position to
+    that stop for two hours. Antigravity fixed this only in the stale worktree (below). Fix offered to the publisher.
+  - **Stale worktree deploy:** `[local path]` (branch `veterans-day` at `32ffe9f`, 8 Nov) holds
+    Antigravity's first-chat edits uncommitted (preview-mark clearing, Undo cleanup, share buttons, a link-preview
+    image, Fargo phone numbers and grades). Its `site/` has exactly 46 files, the number its chat says it deployed,
+    so the live hub was most likely the 8 Nov version for a while on 10 Nov afternoon (files edited until 4:22 PM)
+    until its 5:30 PM deploy from this checkout. Exact time not verified. Never deploy from that folder.
 - **Page fixes (every area):** the Deals search and Route quick-add example text is each area's own (`AREA_EXAMPLES`
   in `app.js`; Fargo-Moorhead's said "Mandan", which finds nothing there); the 5K card reads "$35 to run; free to
   watch" (`cost_text`; value and worth unchanged).

@@ -245,6 +245,16 @@ Claude checked it against the sources the same night, corrected it and built it.
   `app.js`, tested so every word finds something in its area; Fargo's said "Mandan", which found nothing there), and
   an offer's `cost_text` replaces "free" where that misleads: the 5K reads "$35 to run; free to watch" (its value and
   worth for the engine are unchanged).
+- **Practice marks clear when the day starts (every area; approved, 11 Nov):** "Got it", "Turned away", "They ran
+  out" and "Skip" tapped in the preview were saved with the preview's clock and hid those deals on the day (and
+  `S.last` could set the start point). The preview clock always sits on the half hour of the day, so `clearPreviewMarks`
+  in `app.js` drops any `done`, `away`, `strikes` or `last` stamped exactly there once the area's day is live, on every
+  render, which also covers phones that saved marks before the fix; "Not today" vetoes stay. Tested in
+  `veterans.test.js` and in the preview with `?now=`. **Testing warning:** `localhost:5055` and `:5056` are on the
+  report Worker's allowed origins, so a tap with `?now=` set inside the day sends a real report. Don't tap the report
+  buttons in live mode locally (on 11 Nov a test "worked" at Sheetz went in and was deleted, approved).
+- **Mission BBQ Herndon** (11 Nov, from an attached report): OpenStreetMap had only Sterling; both stores now from
+  Mission BBQ's own pages (11 AM-9 PM). 49 deals at 200 stops.
 - **Store lookups:** All the Places has no Bar Louie spider; Carrabba's is `carrabbas_italian_grill`; Krispy Kreme's
   name was right (one failed download). None of the three changes the stores.
 - **Fixed the same night (every area):** Antigravity's `59c4f9e` (live since about 5:30 PM) called `E.driveMinutes`,

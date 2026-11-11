@@ -320,3 +320,30 @@ test("the 5K says what it costs: $35 to run, free to watch, and still scores as 
   assert.equal(run.purchase, true);
   assert.match(SCRIPTS["app.js"], /const worthText = \(o\) => \(o\.cost_text \? o\.cost_text :/);
 });
+
+test("practice marks from the preview clear once the day is live; real marks and 'Not today' stay (11 Nov 2026)", async () => {
+  const vm = await import("node:vm");
+  const src = SCRIPTS["app.js"];
+  const stamp = /\n {2}function previewStamp\(t\) \{.*\}\n/.exec(src), clear = /\n {2}function clearPreviewMarks\(\) \{[\s\S]*?\n {2}\}\n/.exec(src);
+  assert.ok(stamp && clear, "previewStamp and clearPreviewMarks in app.js");
+  assert.match(src, /function renderAll\(\) \{\n\s*clearPreviewMarks\(\);/, "checked on every render, so it runs as the day starts");
+  const MIN = 60e3, H = 60 * MIN, dayStart = Date.parse("2026-11-11T05:00:00Z"), live = dayStart + 8 * H + 12345;
+  const S = {
+    done: { a: { r: "worked", t: dayStart + 8 * H }, b: { r: "worked", t: live } },
+    away: { "p-a": dayStart + 9 * H + 30 * MIN, "p-b": live },
+    strikes: { c: { n: 1, until: dayStart + 10 * H + 45 * MIN }, d: { n: 1, until: live + 45 * MIN } },
+    vetoed: { e: true }, last: { lat: 1, lng: 2, t: dayStart + 8 * H }
+  };
+  const box = { S, dayStart, MIN, modeNow: "preview", saved: 0 };
+  vm.createContext(box);
+  vm.runInContext("function mode() { return modeNow; } function save() { saved++; } function $() { return null; }" + stamp[0] + clear[0], box);
+  assert.equal(vm.runInContext("clearPreviewMarks()", box), 0, "nothing clears during the preview");
+  box.modeNow = "live";
+  assert.equal(vm.runInContext("clearPreviewMarks()", box), 4);
+  assert.deepEqual(Object.keys(S.done), ["b"]);
+  assert.deepEqual(Object.keys(S.away), ["p-b"]);
+  assert.deepEqual(Object.keys(S.strikes), ["d"]);
+  assert.equal(S.last, null);
+  assert.deepEqual(S.vetoed, { e: true }, "'Not today' stays");
+  assert.equal(box.saved, 1);
+});

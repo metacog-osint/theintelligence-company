@@ -144,6 +144,21 @@
     return "live";
   }
   function now() { return mode() === "preview" ? localMs(S.previewMin) : realNow(); }
+  // Practice marks (11 Nov 2026): "Got it", "Turned away" and "Skip" tapped in the preview were saved with the
+  // preview's clock and hid those deals on the day. The preview clock is always on the half hour of the day, so once
+  // the day is live any mark stamped exactly there is dropped (a real tap landing on it to the millisecond is a
+  // one-in-millions chance), which also clears marks phones saved before this fix. "Not today" choices stay.
+  function previewStamp(t) { return typeof t === "number" && t > 0 && (t - dayStart) % (30 * MIN) === 0; }
+  function clearPreviewMarks() {
+    if (mode() === "preview") return 0;
+    let n = 0;
+    Object.keys(S.done).forEach((id) => { if (S.done[id] && previewStamp(S.done[id].t)) { delete S.done[id]; n++; } });
+    Object.keys(S.away).forEach((p) => { if (previewStamp(S.away[p])) { delete S.away[p]; n++; } });
+    Object.keys(S.strikes).forEach((id) => { const s = S.strikes[id]; if (s && previewStamp(s.until - 45 * MIN)) { delete S.strikes[id]; n++; } });
+    if (S.last && previewStamp(S.last.t)) { S.last = null; n++; }
+    if (n) { save(); if ($("#toast")) toast("Cleared your practice marks from the preview. Every deal is back."); }
+    return n;
+  }
   // When the route starts: now, or a later time you picked to leave.
   function leaveAt() { const t = now(); return S.leaveMin === null || S.leaveMin === undefined ? t : Math.max(t, localMs(S.leaveMin)); }
 
@@ -505,7 +520,7 @@
     card.append(h("p", { class: "links" }, line,
       h("button", { type: "button", class: "btn btn-quiet btn-small", onclick: () => record(c, "out") }, "They ran out"),
       focus ? h("button", { type: "button", class: "btn btn-quiet btn-small", onclick: () => { focus = null; renderAll(); } }, "Back to the suggestion") : null));
-    if (mode() === "preview") card.append(h("p", { class: "note" }, "Preview: what you mark now stays on this phone and isn't shared."));
+    if (mode() === "preview") card.append(h("p", { class: "note" }, "Preview: what you mark now is practice. It stays on this phone, isn't shared, and clears when the day starts."));
     announce((focus ? "Your pick: " : "Next stop: ") + o.brand + ", " + whyBits(s)[0]);
   }
 
@@ -1159,6 +1174,7 @@
     return ["route", "map", "deals", "me"].includes(t) ? t : "route"; // old links to #next and #plan land on the route
   }
   function renderAll() {
+    clearPreviewMarks();
     renderClock();
     const tab = currentTab();
     if (tab === "map" && lastTab !== "map") fitRoute = true;
