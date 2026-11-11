@@ -60,19 +60,21 @@ def full(src, dst):
     return rows, snaps
 
 
-def step_lng(lat):
-    return 0.0072 / math.cos(math.radians(lat))  # the same 800 m east-west as STEP_LAT north-south
+def step_lng(lat, k=1.0):
+    return k * 0.0072 / math.cos(math.radians(lat))  # the same 800 m east-west as STEP_LAT north-south
 
 
-def area_grid(areas):
-    """Points about every 800 m inside the area's circles, each widened by 1 km."""
+def area_grid(areas, grid_km=0.8):
+    """Points about every 800 m (or `grid_km` in REGIONS) inside the area's circles, each widened by 1 km. Denver's
+    metro (11 Nov 2026) uses 1.1 km, which halves its grid and drive.json; a position joins its nearest points."""
+    k = grid_km / 0.8
     pts = []
     for name, clat, clng, r in areas:
         r += 1.0
         dlat = r / 111.2
         lat = clat - dlat
         while lat <= clat + dlat:
-            st = step_lng(lat)
+            st = step_lng(lat, k)
             dlng = dlat / math.cos(math.radians(lat))
             # snap to a shared lattice so overlapping circles share points
             lng = math.floor((clng - dlng) / st) * st
@@ -80,12 +82,12 @@ def area_grid(areas):
                 if B.km(lat, lng, clat, clng) <= r:
                     pts.append((round(lat, 5), round(lng, 5)))
                 lng += st
-            lat += STEP_LAT
+            lat += STEP_LAT * k
     seen, out = set(), []
     for p in pts:
-        k = (round(p[0] / STEP_LAT), round(p[1] / step_lng(p[0])))
-        if k not in seen:
-            seen.add(k); out.append(p)
+        key = (round(p[0] / (STEP_LAT * k)), round(p[1] / step_lng(p[0], k)))
+        if key not in seen:
+            seen.add(key); out.append(p)
     return out
 
 
@@ -95,7 +97,7 @@ def main(region=B.DEFAULT_REGION):
     places = [(p["lat"], p["lng"]) for p in deals["places"]]
     areas = (deals["meta"].get("region") or {}).get("areas")
     if areas:
-        grid = area_grid(areas)
+        grid = area_grid(areas, B.REGIONS[region].get("grid_km", 0.8))
     else:
         # Fargo-Moorhead, as first built: the stores' extent with a margin.
         lats = [p[0] for p in places]; lngs = [p[1] for p in places]

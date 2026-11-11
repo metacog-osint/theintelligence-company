@@ -58,6 +58,38 @@ SPIDERS = {
     "California Pizza Kitchen": ("california_pizza_kitchen", LATEST), "Bonefish Grill": ("bonefish_grill", LATEST),
     "Carrabba's Italian Grill": ("carrabbas_italian_grill", LATEST), "Fogo de Chão": ("fogo_de_chao", LATEST),
     "In-N-Out Burger": ("innout", LATEST),
+    # Colorado chains (11 Nov 2026). Yard House and Cheddar's failed the 24 and 31 Oct runs.
+    "P.F. Chang's": ("pf_changs", LATEST),
+    "Bubba's 33": ("bubbas33_us", LATEST),
+    "Old Chicago": ("old_chicago_us", LATEST),
+    "Perry's Steakhouse & Grille": ("perrys_steakhouse_and_grille_us", LATEST),
+    "Eddie Merlot's": ("eddie_merlots_us", LATEST),
+    "Main Event": ("main_event", LATEST),
+    "Hopdoddy": ("hopdoddy_burger_bar_us", LATEST),
+    "Snarf's Sandwiches": ("snarfs_us", LATEST),
+    "Whataburger": ("whataburger", LATEST),
+    "Wienerschnitzel": ("wienerschnitzel_us", LATEST),
+    "Dickey's Barbecue Pit": ("dickeys_barbecue_pit", LATEST),
+    "Teriyaki Madness": ("teriyaki_madness_us", LATEST),
+    "Torchy's Tacos": ("torchys_tacos_us", LATEST),
+    "Taziki's Mediterranean Cafe": ("tazikis_us", LATEST),
+    "Dog Haus": ("dog_haus_us", LATEST),
+    "MOD Pizza": ("mod_pizza", LATEST),
+    "Taco John's": ("taco_johns_us", LATEST),
+    "Keke's Breakfast Cafe": ("keke", LATEST),
+    "Einstein Bros. Bagels": ("einstein_bros_us", LATEST),
+    "Paris Baguette": ("paris_baguette_us", LATEST),
+    "Smoothie King": ("smoothie_king_ky_us_tt", LATEST),
+    "TCBY": ("tcby", LATEST),
+    "Strickland Brothers 10 Minute Oil Change": ("strickland_brothers_us", LATEST),
+    "Black Bear Diner": ("black_bear_diner_us", LATEST),
+    "Parry's Pizzeria & Taphouse": ("parrys_pizzeria_and_bar_us", LATEST),
+    "Kona Grill": ("kona_grill_us", LATEST),
+    "Benihana": ("benihana", LATEST),
+    "Rodizio Grill": ("rodizio_grill_us", LATEST),
+    "Saltgrass Steak House": ("saltgrass_steak_house_us", LATEST),
+    "Bass Pro Shops / Cabela's": [("bass_pro_shops", LATEST), ("cabelas_us", LATEST)],
+    "Yard House": ("yard_house", "2026-10-17-13-32-31"), "Cheddar's Scratch Kitchen": ("cheddars_scratch_kitchen", "2026-10-17-13-32-31"),
 }
 # No All the Places spider for Bar Louie (run 2026-10-31 checked 11 Nov 2026): OpenStreetMap only. Carrabba's spider is
 # carrabbas_italian_grill, not carrabbas; krispy_kreme_us was right (its 10 Nov download failed once).
@@ -87,6 +119,31 @@ OSM = {
     "California Pizza Kitchen": r"^California Pizza Kitchen", "Bonefish Grill": r"^Bonefish Grill",
     "Carrabba's Italian Grill": r"^Carrabba'?s", "Fogo de Chão": r"^Fogo de Ch", "Bar Louie": r"^Bar Louie",
     "In-N-Out Burger": r"^In-N-Out",
+    # Colorado chains (11 Nov 2026): those without a spider, and a check on the rest.
+    "Bombshells": r"^Bombshells",
+    "Lazy Dog": r"^Lazy Dog",
+    "Good Times Burgers & Frozen Custard": r"^Good Times",
+    "Capriotti's": r"^Capriotti'?s",
+    "Ziggi's Coffee": r"^Ziggi'?s",
+    "Cobblestone Car Wash": r"^Cobblestone",
+    "Grease Monkey": r"^Grease Monkey",
+    "Floyd's 99 Barbershop": r"^Floyd'?s 99",
+    "Chicken Salad Chick": r"^Chicken Salad Chick",
+    "Le Peep": r"^Le Peep",
+    "LaMar's Donuts": r"^LaMar'?s",
+    "BJ's Restaurant & Brewhouse": r"^BJ'?s Restaurant",
+    "Bad Daddy's Burger Bar": r"^Bad Daddy'?s",
+    "Snarfburger": r"^Snarf ?burger",
+    "Kona Grill": r"^Kona Grill",
+    "Rodizio Grill": r"^Rodizio",
+    "Saltgrass Steak House": r"^Saltgrass",
+    "Bass Pro Shops / Cabela's": r"^(Bass Pro|Cabela'?s)",
+    "Yard House": r"^Yard House",
+    "Cheddar's Scratch Kitchen": r"^Cheddar'?s",
+    "Perry's Steakhouse & Grille": r"^Perry'?s Steak",
+    "Parry's Pizzeria & Taphouse": r"^Parry'?s",
+    "Main Event": r"^Main Event",
+    "Black Bear Diner": r"^Black Bear Diner",
 }
 FUEL_OK = {"Circle K / Holiday", "Casey's", "Kwik Trip", "Pilot / Flying J", "Sheetz", "Wawa"}
 # All the Places lists known to miss whole regions (checked 10 Nov 2026): OpenStreetMap fills them in.
@@ -175,7 +232,7 @@ def located(features, states):
         g = f.get("geometry") or {}
         if g.get("type") == "Point":
             out.append((g["coordinates"][1], g["coordinates"][0], p))
-        elif (p.get("addr:state") or "").upper()[:2] in states or (p.get("addr:state") or "") in ("North Dakota", "Minnesota", "Virginia", "Nevada"):
+        elif (p.get("addr:state") or "").upper()[:2] in states or (p.get("addr:state") or "") in ("North Dakota", "Minnesota", "Virginia", "Nevada", "Maryland", "Colorado"):
             street = p.get("addr:street_address") or " ".join(x for x in (p.get("addr:housenumber"), p.get("addr:street")) if x)
             if street:
                 todo.append((str(i), street, p.get("addr:city") or "", (p.get("addr:state") or "")[:2].upper(), (p.get("addr:postcode") or "")[:5]))
@@ -231,18 +288,18 @@ def main(region, cache):
     out, covers = {}, {}
     for loc in locs:
         stores, basis = [], []
-        if loc in SPIDERS:
-            spider, run = SPIDERS[loc]
+        # A chain under two names has two spiders (Bass Pro Shops and Cabela's, 11 Nov 2026): a list of (spider, run).
+        for spider, run in ((SPIDERS[loc] if isinstance(SPIDERS[loc], list) else [SPIDERS[loc]]) if loc in SPIDERS else []):
             n = 0
             feats = atp_features(cache, spider, run)
             if feats is None:
                 basis.append(f"All the Places download failed ({spider})")
                 covers[loc] = 0  # let OpenStreetMap fill in
                 out[loc] = {"presence": "no", "basis_url": "https://www.alltheplaces.xyz/", "basis": "; ".join(basis), "stores": stores}
-                continue
+                break
             pts = located(feats, reg["states"])
             # Does the chain's own list cover this area? (Wendy's has no Twin Cities store in it.)
-            covers[loc] = 0 if loc in PARTIAL else sum(1 for lat, lng, _ in pts if inside(lat, lng))
+            covers[loc] = covers.get(loc, 0) + (0 if loc in PARTIAL else sum(1 for lat, lng, _ in pts if inside(lat, lng)))
             for lat, lng, p in pts:
                 if not inside(lat, lng):
                     continue
@@ -256,6 +313,8 @@ def main(region, cache):
                                "phone": p.get("phone") or "", "url": p.get("website") or "",
                                "geo": f"{lat:.6f},{lng:.6f}", "source": f"All the Places {run[:10]}: {spider}"})
             basis.append(f"All the Places run {run[:10]} ({spider}): {n} in the area" + (" (a partial list)" if loc in PARTIAL else ""))
+        if loc in out and out[loc]["presence"] == "no" and not stores:
+            continue  # a failed download, recorded above
         out[loc] = {"presence": "yes" if stores else "no", "basis_url": "https://www.alltheplaces.xyz/", "basis": "; ".join(basis), "stores": stores}
     # OpenStreetMap for the rest, merged so a station both lists (Circle K / Holiday) isn't counted twice.
     want = [l for l in locs if l in OSM]

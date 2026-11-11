@@ -200,9 +200,10 @@ test("other days and earlier-year leads are listed under Deals, off the route", 
 const AREAS = [...SCRIPTS["app.js"].matchAll(/\{ id: "([a-z-]+)", dir: "([a-z/-]+)" \}/g)].map((m) => ({ id: m[1], dir: m[2] }));
 const AREA_DATA = Object.fromEntries(AREAS.map((a) => [a.id, {
   deals: JSON.parse(read(DIR + a.dir + "deals.json")), drive: JSON.parse(read(DIR + a.dir + "drive.json")) }]));
-// Areas off Central time (Reston, 10 Nov 2026; Reno-Sparks, the first on Pacific time, and Colorado Springs, the first on
-// Mountain time, 11 Nov 2026).
-const AREA_TZ = { "reston-va": "America/New_York", "reno-sparks": "America/Los_Angeles", "colorado-springs": "America/Denver" };
+// Areas off Central time (Reston, 10 Nov 2026; Reno-Sparks, the first on Pacific time, 11 Nov 2026; Fort Meade, Denver
+// and Colorado Springs, 11 Nov 2026).
+const AREA_TZ = { "reston-va": "America/New_York", "reno-sparks": "America/Los_Angeles", "fort-meade": "America/New_York", "denver": "America/Denver",
+  "colorado-springs": "America/Denver" };
 const kmApart = (a, b) => {
   const p = Math.PI / 180, s = Math.sin((b[0] - a[0]) * p / 2) ** 2 + Math.cos(a[0] * p) * Math.cos(b[0] * p) * Math.sin((b[1] - a[1]) * p / 2) ** 2;
   return 12742 * Math.asin(Math.sqrt(s));
@@ -265,6 +266,28 @@ test("Colorado Springs runs on Mountain time: its day starts at 07:00 UTC and it
   assert.equal(by("texas-roadhouse").end, "2026-11-11T21:00:00Z", "and 2 PM is 21:00 UTC");
   // Monument, Palmer Lake and Falcon are in the area, so their aliases open it.
   for (const k of ["springs", "cos", "monument", "falcon", "fort-carson", "peterson", "usafa"]) assert.match(SCRIPTS["app.js"], new RegExp(`"${k}": "colorado-springs"`), k);
+});
+
+test("Denver metro runs on Mountain time, and a chain with many stores keeps them spread out", () => {
+  const { deals } = AREA_DATA.denver, by = (id) => deals.offers.find((o) => o.id === id);
+  assert.equal(deals.meta.day_start, "2026-11-11T07:00:00Z");
+  assert.equal(deals.meta.tz_offset_min, -420);
+  assert.equal(by("dennys").start, "2026-11-11T12:00:00Z", "Denny's 5 AM is 12:00 UTC");
+  assert.equal(by("texas-roadhouse").start, "2026-11-11T18:00:00Z", "Texas Roadhouse's 11 AM is 18:00 UTC");
+  // The engine checks every stop at every step, so a big metro keeps a chain's stores 6 km apart, or 8 km for a deal
+  // that needs a purchase (11 Nov 2026).
+  const placesOf = (id) => deals.places.filter((p) => p.offer === id);
+  for (const [id, gap] of [["starbucks", 6], ["circle-k", 6], ["chipotle", 8]]) {
+    const ps = placesOf(id);
+    assert.ok(ps.length >= 6, `${id}: still a store in most of the area`);
+    for (let i = 0; i < ps.length; i++) for (let j = i + 1; j < ps.length; j++) {
+      assert.ok(kmApart([ps[i].lat, ps[i].lng], [ps[j].lat, ps[j].lng]) >= gap, `${id}: ${ps[i].address} and ${ps[j].address} ${gap} km apart`);
+    }
+  }
+  assert.ok(deals.places.length <= 420, `Denver: ${deals.places.length} stops, at most 420 for phone speed`);
+  // Colorado's Jiffy Lube franchisee gives the oil change free; elsewhere it's a discount.
+  assert.equal(by("jiffy-lube").purchase, false);
+  assert.equal(AREA_DATA["reston-va"].deals.offers.find((o) => o.id === "jiffy-lube")?.purchase ?? true, true);
 });
 
 test("every other area: each offer has a store, each store an offer, inside the area's circles and the day", () => {
