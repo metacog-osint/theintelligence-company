@@ -1,6 +1,6 @@
 {
  "meta": {
-  "built_at": "2026-11-11T05:45:29Z",
+  "built_at": "2026-11-11T06:15:25Z",
   "day": "2026-11-11",
   "day_start": "2026-11-11T08:00:00Z",
   "tz": "America/Los_Angeles",
@@ -1844,7 +1844,7 @@
    "category": "event",
    "offer": "The City of Reno's Veterans Day Parade: the opening ceremony at 11:11 AM near the Virginia Street Bridge (prayer, national anthem, city proclamation), then the parade north on Virginia Street from Liberty Street to Sixth Street. Free and open to all.",
    "value": 0,
-   "grade": "B",
+   "grade": "A",
    "start": "2026-11-11T18:45:00Z",
    "end": "2026-11-11T21:00:00Z",
    "window_text": "10:45–13:00 PST",
@@ -1871,6 +1871,11 @@
    "limits": "Streets close 5 AM-3 PM: Virginia St from Liberty St to Sixth St, and First St from N Sierra St to University Way. End time not published.",
    "sources": [
     {
+     "url": "https://www.reno.gov/community/media-center/newsroom/index.php?rz=newsDetails&id=892",
+     "publisher": "City of Reno",
+     "published": "2026-11-03"
+    },
+    {
      "url": "https://www.kolotv.com/2026/11/03/city-reno-hosting-veterans-day-parade-downtown-reno/",
      "publisher": "KOLO 8",
      "published": "2026-11-03"
@@ -1881,7 +1886,7 @@
      "published": "2026-11-10"
     }
    ],
-   "notes": "The City of Reno's parade: the opening ceremony at 11:11 AM near the Virginia Street Bridge, just south of First St (prayer, national anthem, city proclamation), then the parade north on Virginia St from Liberty St to Sixth St (KOLO, 3 Nov 2026; Fox 11, 10 Nov 2026). Streets close 5 AM-3 PM: Virginia St from Liberty to Sixth, and First St from N Sierra St to University Way. RTC buses are free all day. End time not published; streamed on the city's YouTube from 11 AM.",
+   "notes": "The City of Reno's own release (3 Nov 2026): the opening ceremony at 11:11 AM near the Virginia Street Bridge, just south of First St (prayer, national anthem, city proclamation), then the parade north on Virginia St from Liberty St to Sixth St; spectators gather along the route. Grand marshal: retired Maj. Gen. Ron Bath. Streets close 5 AM-3 PM: Virginia St from Liberty to Sixth, and First St from N Sierra St to University Way. RTC buses are free all day. End time not published; streamed on the city's YouTube from 11 AM.",
    "caution": "",
    "group": null,
    "worth": 12,
@@ -1991,10 +1996,15 @@
      "url": "https://www.nevadaart.org/art/exhibitions/broad-stripes-bright-stars-celebrating-250-years-of-americas-icons/",
      "publisher": "Nevada Museum of Art",
      "published": "2026"
+    },
+    {
+     "url": "https://www.nevadaart.org/visit/plan-your-visit/",
+     "publisher": "Nevada Museum of Art",
+     "published": "2026"
     }
    ],
-   "notes": "Free admission for veterans and active duty, 10 AM-6 PM, with the new flag exhibition \"Broad Stripes Bright Stars\" (Fox 11, 10 Nov 2026, quoting the museum; not on the museum's own site). Not free for other visitors. 160 W Liberty St, two blocks from the parade.",
-   "caution": "",
+   "notes": "Free admission for veterans and active duty, 10 AM-6 PM, with the new flag exhibition \"Broad Stripes Bright Stars\" (Fox 11, 10 Nov 2026, quoting the museum). Not on the museum's own site, whose visit page says it closes on national holidays, so call first. General admission is $15 for other visitors. 160 W Liberty St, two blocks from the parade.",
+   "caution": "Its own visit page says it closes on national holidays: call (775) 329-3333 first",
    "group": null,
    "ticket": false,
    "purchase": false,
@@ -2332,6 +2342,112 @@
    "purchase": false,
    "kinds": [
     "meal"
+   ]
+  },
+  {
+   "id": "bjs-pizookie",
+   "brand": "BJ's Restaurant & Brewhouse",
+   "status": "offering",
+   "category": "treat",
+   "offer": "A free Chocolate Chunk Pizookie (BJ's deep-dish cookie sundae) for veterans and active-duty military, dine-in.",
+   "value": 9,
+   "grade": "B",
+   "start": "2026-11-11T19:00:00Z",
+   "end": "2026-11-12T08:00:00Z",
+   "window_text": "11:00–24:00 PST",
+   "mode": "dine_in",
+   "minutes": 40,
+   "busy": 15,
+   "line": 3,
+   "meal": false,
+   "dineIn": true,
+   "snack": true,
+   "eligible": [
+    "veteran",
+    "active",
+    "retired"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "no",
+   "kids": null,
+   "proof": [
+    "military_id",
+    "dd214",
+    "va_card",
+    "dl_veteran"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "Dine-in, with a military ID or proof of service. Lists also give a coupon for a free appetizer on a later visit; they differ on its terms and end date (14 or 31 Dec).",
+   "sources": [
+    {
+     "url": "https://www.fox5ny.com/news/veterans-day-2026-deals",
+     "publisher": "Fox 5 New York",
+     "published": "2026-11-04"
+    }
+   ],
+   "notes": "On 2026 national lists (Fox 5 New York, 4 Nov 2026): a free Chocolate Chunk Pizookie for current and former military, dine-in, with a military ID; lists add a coupon for a free appetizer on a later visit. Not on BJ's own site as far as could be found. 425 Sparks Blvd, Sparks; address, phone and hours from directories.",
+   "caution": "Not announced by the company for 2026: call first",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "sweet"
+   ]
+  },
+  {
+   "id": "retro-radio-dolls",
+   "brand": "Retro Radio Dolls Veterans Day Show, Reno Public Market",
+   "status": "offering",
+   "category": "event",
+   "offer": "A Veterans Day tribute show by the Retro Radio Dolls (vintage harmonies, patriotic songs and swing-era classics) that recognizes veterans and their families, 5-7 PM.",
+   "value": 0,
+   "grade": "A",
+   "start": "2026-11-12T01:00:00Z",
+   "end": "2026-11-12T03:00:00Z",
+   "window_text": "17:00–19:00 PST",
+   "mode": "event",
+   "minutes": 60,
+   "busy": 0,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "public",
+    "veteran",
+    "active",
+    "guard_reserve"
+   ],
+   "guard_reserve": "yes",
+   "spouse": "yes",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "Admission isn't stated on the market's page, which takes RSVPs.",
+   "sources": [
+    {
+     "url": "https://www.renopublicmarket.com/events/retro-radio-dolls-veterans-day-show",
+     "publisher": "Reno Public Market",
+     "published": "2026"
+    },
+    {
+     "url": "https://thisisreno.com/2026/11/upcoming-reno-activities-guide/",
+     "publisher": "This Is Reno",
+     "published": "2026-11-09"
+    }
+   ],
+   "notes": "Reno Public Market's own event page: the Retro Radio Dolls' Veterans Day tribute (vintage harmonies, patriotic songs, swing-era classics) that recognizes veterans and their families, 5-7 PM. RSVP on the page; admission not stated. 299 E Plumb Ln, Reno.",
+   "caution": "Admission not stated: RSVP on the market's page or call first",
+   "group": null,
+   "worth": 6,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "outing"
    ]
   }
  ],
@@ -4239,6 +4355,34 @@
    "hoursAssumed": true,
    "verified": "confirmed",
    "pin": "geo"
+  },
+  {
+   "id": "bjs-pizookie-425-sparks-blvd",
+   "offer": "bjs-pizookie",
+   "name": "",
+   "address": "425 Sparks Blvd, Sparks, NV 89434",
+   "lat": 39.534225,
+   "lng": -119.716189,
+   "phone": "(775) 398-3550",
+   "open": "2026-11-11T19:00:00Z",
+   "close": "2026-11-12T08:00:00Z",
+   "hoursAssumed": false,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "retro-radio-dolls-299-e-plumb-ln",
+   "offer": "retro-radio-dolls",
+   "name": "",
+   "address": "299 E Plumb Ln, Reno, NV 89502",
+   "lat": 39.506906,
+   "lng": -119.802187,
+   "phone": "",
+   "open": "2026-11-12T01:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "unverified",
+   "pin": "geo"
   }
  ],
  "other": [
@@ -4389,7 +4533,7 @@
    "name": "Peppermill Reno (Cafe Milano)",
    "area": "2707 S Virginia St, Reno",
    "q": "Peppermill Reno Veterans Day Cafe Milano",
-   "offer": "In 2025: one free item from Cafe Milano's comfort menu for veterans, 9 AM-2 PM, with a military or VA ID. No 2026 offer found; the 2025 page is gone.",
+   "offer": "In 2025: one free item from Cafe Milano's comfort menu for veterans, 9 AM-2 PM, with a military or VA ID. No 2026 offer: the 2025 page is gone, and its own calendar shows only gaming promotions and lounge music on 11 Nov 2026.",
    "last_seen": "2025",
    "source": {
     "url": "https://www.peppermillreno.com/",
@@ -4401,7 +4545,7 @@
    "name": "Western Village (Primo)",
    "area": "815 E Nichols Blvd, Sparks",
    "q": "Western Village Sparks Veterans Day Primo pizza",
-   "offer": "In 2025: a free pizza slice and soda at Primo, 11 AM-1 PM (News 4's 2025 list). No 2026 offer found.",
+   "offer": "In 2025: a free pizza slice and soda at Primo, 11 AM-1 PM (News 4's 2025 list). No 2026 offer: its own calendar shows nothing on 11 Nov 2026.",
    "last_seen": "2025",
    "source": {
     "url": "https://mynews4.com/news/local/veterans-day-2025-freebies-and-deals-across-reno-sparks-to-say-thank-you",
@@ -4413,7 +4557,7 @@
    "name": "Grand Sierra Resort",
    "area": "2500 E 2nd St, Reno",
    "q": "Grand Sierra Resort Veterans Day",
-   "offer": "Its Veterans Day page still shows 2024 (\"Monday, November 11\"): 50% off the Grand Buffet, 35% off at the spa, a free hour of bowling, a free slot tournament entry. No 2026 lineup found.",
+   "offer": "Its Veterans Day page still shows 2024 (\"Monday, November 11\"): 50% off the Grand Buffet, 35% off at the spa, a free hour of bowling, a free slot tournament entry. No 2026 lineup found; the page was unchanged when read again on 11 Nov 2026.",
    "last_seen": "2024",
    "source": {
     "url": "https://www.grandsierraresort.com/veterans-day-at-gsr",
@@ -4425,9 +4569,13 @@
    "name": "Nugget Casino Resort",
    "area": "1100 Nugget Ave, Sparks",
    "q": "Nugget Casino Resort Sparks Veterans Day",
-   "offer": "No 2026 Veterans Day offer found.",
+   "offer": "No 2026 Veterans Day offer: its own promotions and events list (11 Nov 2026) has none.",
    "last_seen": "",
-   "source": null
+   "source": {
+    "url": "https://www.nuggetcasinoresort.com/promotions/",
+    "publisher": "Nugget Casino Resort",
+    "published": null
+   }
   },
   {
    "name": "Eldorado, Silver Legacy and Circus Circus",
@@ -4441,11 +4589,11 @@
    "name": "Marked Studios: free veteran tattoos",
    "area": "Reno",
    "q": "Marked Studios Reno Veterans Day tattoos",
-   "offer": "Its 13th annual Veterans Day event in 2025: free tattoos for veterans, active-duty and retired military with a DD-214 or military ID, doors 8 AM. No 2026 announcement found.",
+   "offer": "Its 13th annual Veterans Day event in 2025: free tattoos for veterans, active-duty and retired military with a DD-214 or military ID, doors 8 AM. No 2026 announcement on its site; its Instagram post of 10 Nov 2026 can't be read without signing in. Open Tuesday-Saturday from 10 AM; text (775) 209-1612.",
    "last_seen": "2025",
    "source": {
-    "url": "https://www.2news.com/news/local/northern-nevada-businesses-and-events-honor-veterans-with-free-meals-services-and-parade/article_d0210c8a-299c-4dba-a530-5c396d44b771.html",
-    "publisher": "2 News Nevada (8 Nov 2025)",
+    "url": "https://www.markedstudios.com/",
+    "publisher": "Marked Studios",
     "published": null
    }
   },
@@ -4453,8 +4601,8 @@
    "name": "Black Bear Diner (Reno and Sparks)",
    "area": "2323 S Virginia St, Reno, (775) 827-5570; 235 N McCarran Blvd, Sparks, (775) 356-1138",
    "q": "Black Bear Diner Reno Sparks Veterans Day",
-   "offer": "Each diner sets its own Veterans Day policy; nothing found for 2026 at these two stores (the addresses and phones are from its own store list).",
-   "last_seen": "",
+   "offer": "Each diner sets its own Veterans Day policy. Neither store's own page mentions Veterans Day (11 Nov 2026); both open 6:30 AM-9 PM on Wednesdays. A free breakfast was on News 4's 2024 Reno-Sparks list.",
+   "last_seen": "2024",
    "source": {
     "url": "https://blackbeardiner.com/",
     "publisher": "Black Bear Diner",
@@ -4489,7 +4637,7 @@
    "name": "AUSA Westmoreland Chapter Veterans Day dinner",
    "area": "Atlantis Casino Resort Spa, Reno",
    "q": "AUSA Westmoreland Chapter Veterans Day dinner 2026",
-   "offer": "Fri 13 Nov, ticketed; speaker retired Air Force Lt. Col. Tony Grady (This Is Reno; not checked).",
+   "offer": "Fri 13 Nov 2026: bar 5:30 PM, dinner 6:30, speaker retired Air Force Lt. Col. Tony Grady at 7:30; $65. Its own page says registration has closed, with no payment at the door.",
    "last_seen": "2026",
    "source": {
     "url": "https://ausa-westmoreland.org/dinner",
@@ -4516,6 +4664,18 @@
    "offer": "No Veterans Day offer found; a standing military discount (sources differ on the price).",
    "last_seen": "",
    "source": null
+  },
+  {
+   "name": "Maverik (Reno and Sparks stores)",
+   "area": "Reno and Sparks",
+   "q": "Maverik Veterans Day free coffee",
+   "offer": "On Veterans Day 2024: a free Bean-to-Cup coffee, up to a large, for veterans and active-duty military at every store (its own release). No 2026 release in its newsroom (11 Nov 2026).",
+   "last_seen": "2024",
+   "source": {
+    "url": "https://maverik.com/articles/maverik-and-kum-and-go-honor-veterans-day-with-free-coffee",
+    "publisher": "Maverik (31 Oct 2024)",
+    "published": null
+   }
   }
  ]
 }
