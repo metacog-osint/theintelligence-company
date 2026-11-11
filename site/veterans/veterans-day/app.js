@@ -21,7 +21,8 @@
     { id: "fargo-moorhead", dir: "data/" },
     { id: "bismarck-mandan", dir: "data/bismarck-mandan/" },
     { id: "twin-cities", dir: "data/twin-cities/" },
-    { id: "reston-va", dir: "data/reston-va/" }
+    { id: "reston-va", dir: "data/reston-va/" },
+    { id: "reno-sparks", dir: "data/reno-sparks/" }
   ];
   const DEFAULT_AREA = "fargo-moorhead";
   const AWAY_KM = 15; // further than this from the area's nearest start point, your location is somewhere else
@@ -1303,6 +1304,15 @@
       ["39.0150,-77.4250", "Sterling / Dulles, VA"],
       ["38.9187,-77.2225", "Tysons, VA"],
       ["38.8543,-77.3106", "Fairfax, VA"]
+    ],
+    "reno-sparks": [
+      ["", "Start from town…"],
+      ["39.5251,-119.8126", "Downtown Reno, NV"],
+      ["39.5146,-119.8060", "Midtown Reno, NV"],
+      ["39.5401,-119.8630", "Northwest Reno, NV"],
+      ["39.5350,-119.7560", "Sparks (Victorian Square), NV"],
+      ["39.5321,-119.7225", "Sparks Marina and Legends, NV"],
+      ["39.4398,-119.7707", "South Reno (South Meadows), NV"]
     ]
   };
   // Example text in the Deals search box and the Route quick-add box, from each area's own deals and streets (the publisher,
@@ -1311,7 +1321,8 @@
     "fargo-moorhead": { deals: ["Hornbacher's", "13th Ave", "Moorhead"], route: ["Hornbacher's", "Perkins", "13th Ave"] },
     "bismarck-mandan": { deals: ["Perkins", "Expressway", "Mandan"], route: ["Perkins", "Olive Garden", "Century Ave"] },
     "twin-cities": { deals: ["Caribou", "Lexington Ave", "Maple Grove"], route: ["Caribou", "Perkins", "Wayzata Blvd"] },
-    "reston-va": { deals: ["Chick-fil-A", "Leesburg Pike", "Herndon"], route: ["Chick-fil-A", "Wawa", "Sunset Hills"] }
+    "reston-va": { deals: ["Chick-fil-A", "Leesburg Pike", "Herndon"], route: ["Chick-fil-A", "Wawa", "Sunset Hills"] },
+    "reno-sparks": { deals: ["Squeeze In", "Kietzke", "Sparks"], route: ["Squeeze In", "In-N-Out", "McCarran"] }
   };
   const AREA_ALIASES = {
     "new-salem": "bismarck-mandan",
@@ -1327,7 +1338,11 @@
     "herndon": "reston-va",
     "tysons": "reston-va",
     "fairfax": "reston-va",
-    "nova": "reston-va"
+    "nova": "reston-va",
+    "reno": "reno-sparks",
+    "sparks": "reno-sparks",
+    "reno-nv": "reno-sparks",
+    "washoe": "reno-sparks"
   };
   function pickArea() {
     const raw = new URLSearchParams(location.search).get("area") || new URLSearchParams(location.search).get("sector");
