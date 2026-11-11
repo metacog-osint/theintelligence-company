@@ -1,4 +1,4 @@
-# Hub handoff: where things stand (11 Nov 2026, 3:15 AM CST: Veterans Day planner live with Reno–Sparks, Fort Meade and Denver from `acef121`; Colorado Springs on `master` `cf59c04` but not live, and Firebase needs `firebase login --reauth` before the next deploy. 10 Nov 2026, about 11:10 PM CST: practice-mark fix, Mission BBQ Herndon and GEMINI.md live from ae0d44d, pushed; 11:00 PM: Reston's WTOP deals and page fixes live from fd2e434, pushed; 10:35 PM: Veterans Day Reston area and the Deals-tab fix live from fe2187a, pushed with 870fb2b; 5:30 PM: Antigravity's two commits live; 1:45 PM: Hornbacher's and Post 2 list live from d1d897c)
+# Hub handoff: where things stand (11 Nov 2026, 6:30 AM CST: every Veterans Day area live from master `00a542f`, Colorado Springs included (the publisher re-signed in to Firebase and deployed). 3:15 AM CST: Veterans Day planner live with Reno–Sparks, Fort Meade and Denver from `acef121`; Colorado Springs on `master` `cf59c04` but not live, and Firebase needs `firebase login --reauth` before the next deploy. 10 Nov 2026, about 11:10 PM CST: practice-mark fix, Mission BBQ Herndon and GEMINI.md live from ae0d44d, pushed; 11:00 PM: Reston's WTOP deals and page fixes live from fd2e434, pushed; 10:35 PM: Veterans Day Reston area and the Deals-tab fix live from fe2187a, pushed with 870fb2b; 5:30 PM: Antigravity's two commits live; 1:45 PM: Hornbacher's and Post 2 list live from d1d897c)
 
 Read with `CLAUDE.md` (the project's notes). Times are Central (CST since 1 Nov). Each commit, push and deploy needs
 Tom's yes.
@@ -6,9 +6,11 @@ Tom's yes.
 ## Veterans Day planner: Colorado Springs, Monument & Falcon, CO, night of 10-11 Nov 2026 ("complete all work without requesting my yes or permission")
 Built in `[local path]` (branch `vetday-colorado-springs`); merged into `master` here
 (fast-forward to `195cf6d`, 104 planner and site tests pass) and pushed about 12:25 AM CST 11 Nov.
-- **Not deployed yet.** `firebase deploy --only hosting:hub --project context-484804` from this checkout was refused by
-  the side session's permission check (auto mode, "Production Deploy"), so the live site has no `colorado-springs`
-  files (checked 12:27 AM CST). The next hub deploy from this checkout publishes it; nothing else is needed.
+- **Live.** The side session's own deploy was refused by its permission check (auto mode, "Production Deploy"), and
+  the coordinator's later deploy failed on an expired Firebase sign-in. the publisher re-signed in and deployed master before
+  6:29 AM CST. Checked live at 6:29 AM CST: `app.js`, `engine.js`, `roads.js`, `index.html`, `app.css`, every area's
+  `deals.json` and the Springs `drive.json` match master `00a542f` (CR stripped); the Springs page shows 71 of 71 deals,
+  the NWS forecast and an 18-stop Optimal route, with no console errors.
 - 71 deals at 280 stops (A 16, B 52, C 3), `?area=colorado-springs` (aliases `cos`, `springs`, `monument`, `falcon`,
   `fort-carson`, `peterson`, `usafa`), Mountain time, live mode from 5 AM CST. Eight circles (the whole city plus
   Monument, Palmer Lake and Falcon).
@@ -40,8 +42,8 @@ checkout and pushes; the area sessions build in their own worktrees (`[local pat
 `hub-fort-meade`) and never deploy. the publisher's own session adding Colorado was told the same rules.
 - **Final state, checked 3:12 AM CST 11 Nov:** both areas live with their phase 2 from merge `bf47b69` (deployed about
   12:20 AM CST, pushed); the live site is Denver's later deploy `acef121`, which keeps them. Live Reno–Sparks and Fort
-  Meade data, `app.js`, `engine.js` and `index.html` match `acef121`. `master` is at `cf59c04` (Colorado Springs on
-  top, not live).
+  Meade data, `app.js`, `engine.js` and `index.html` match `acef121`. `master` was then at `cf59c04` (Colorado Springs on
+  top); live since Tom's deploy before 6:29 AM CST.
   - **Reno–Sparks:** 42 deals at 138 stops (A 15, B 26, C 1), 8 other-day items, 13 leads.
   - **Fort Meade:** 42 deals at 127 stops (A 9, B 30, C 3), 15 other-day items.
 - **Phase 2** was done by two sessions started outside this one ("Veterans Day Reno–Sparks Phase 2 research", "Fort
@@ -51,7 +53,7 @@ checkout and pushes; the area sessions build in their own worktrees (`[local pat
   holidays), BJ's Pizookie (B) and the Retro Radio Dolls show at Reno Public Market 5-7 PM (A); Dickey's out (Carson
   City only). Fort Meade: the Greene Turtle's store list (three, call first), Showroom Shine Gambrills (C, an undated
   offer), the counties' own closure notices; no 2026 local roundup or post event found.
-- **Firebase sign-in expired** after about 12:20 AM CST: the Colorado coordinator's deploy of `cf59c04` failed with
+- **Firebase sign-in expired** after about 12:20 AM CST (Tom re-signed in and deployed before 6:29 AM CST): the Colorado coordinator's deploy of `cf59c04` failed with
   "Your credentials are no longer valid". Tom runs `firebase login --reauth`, then
   `firebase deploy --only hosting:hub --project context-484804` here, which also publishes Colorado Springs.
 - **Reno–Sparks: first live** about 12:00 AM CST 11 Nov from `ea1e106` (Reno `8dd2b76` plus a test fix), pushed. 40
