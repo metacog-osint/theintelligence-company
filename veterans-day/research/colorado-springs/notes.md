@@ -49,8 +49,8 @@ Springs (Chapel Hills), the east side on Powers Blvd by Peterson SFB, Fort Carso
   Air Force basketball, the UCCS Cops & Vets Mile Walk (11 AM; no 2026 location), American Legion Post 38 in Fountain
   (11 AM, 0.3 km outside the South circle), The Classical Academy assembly, Jenkins MS bench dedication, District 11 and
   12 school programs, Woodland Park and the Teller County dinner.
-- Bass Pro breakfast 9-11 AM (Mile High on the Cheap, 10 Nov): left here only if the shared Bass Pro chain entry doesn't
-  route the Interquest store (see the README).
+- Bass Pro's free breakfast (Mile High on the Cheap, 10 Nov) is routed through the shared Colorado chain entry at 13012
+  Bass Pro Dr (Interquest circle), so it isn't repeated here.
 - U.S. Olympic & Paralympic Museum: **closed Wednesdays**; 20% off for veterans all November (its own post, 5 Nov
   2026), so from Thu 12 Nov.
 

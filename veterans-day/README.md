@@ -373,6 +373,39 @@ instruction to research, build and deploy without asking. Research, corrections 
   stops (Sport Clips, Cobblestone, Wings, Good Times...), Deals lists 101 of 101, the Map draws the route by road, no
   sideways scroll, no console errors apart from the report Worker refusing that port. 103 planner tests pass.
 
+## Colorado Springs, Monument & Falcon, CO (eighth area, the second on Mountain time; built 11 Nov 2026 about 11:50 PM-1 AM CST on branch `vetday-colorado-springs`)
+10 Nov 2026: Colorado Springs with both bases' sides, plus Monument, Palmer Lake and Falcon, from his research
+report, built overnight under his instruction to research, build and deploy without asking. Research, corrections and
+judgment calls: `research/colorado-springs/notes.md`.
+- **Area** `colorado-springs`, "Colorado Springs, Monument & Falcon, CO", `?area=colorado-springs` (aliases `springs`,
+  `cos`, `colorado-springs-co`, `monument`, `falcon`, `fort-carson`, `peterson`, `usafa`). Eight circles: Downtown and
+  central 6 km, North Springs and the Academy side 6, East side and Peterson SFB 6, South side and Fort Carson 6,
+  Monument and Palmer Lake 5, Falcon 4, and two added so the whole city is covered: Northgate, Polaris Pointe and
+  Interquest 4 (Nana's Dim Sum, Main Event, Cheddar's, Bass Pro) and the Powers corridor and Stetson Hills 5. Start
+  presets: downtown, North Springs (Chapel Hills), Powers Blvd by Peterson SFB, Fort Carson Gate 1, Monument, Falcon.
+  Drive table: 1,069 of 1,163 grid points at 800 m, 1.7 MB (Denver's is 2.5 MB at 1.1 km).
+- **Mountain time** like Denver (`day_start` 07:00 UTC). No transit line on the bar cards: Mountain Metro announced
+  nothing for 11 Nov, so `transit=None`.
+- **Totals (11 Nov 2026):** 70 deals at 279 stops (A 15, B 52, C 3), under the 300 the engine was timed for (Optimal 67
+  ms, Maximize stops 109 ms in Node, against Reston's 91 and 76); 15 other-day and region-wide items; 14 leads. Stores:
+  275 at 66 chains from All the Places and OpenStreetMap, with the shared Colorado chains (`ffba0e3`).
+- **Local on the route:** the Memorial Park wreath-laying and observance at 11 (B; Gazette 10 Nov, KRDO 1 Sep;
+  `arrive_by` 11:00), Tri-Lakes Post 9-11 at the Crawford Memorial in Palmer Lake at 10 (B), Pikes Peak State College's
+  wreath-laying at 11 (A; public access not stated, so a caution), Texas T-Bone and Famous Dave's free Georgia Chopped
+  Pork Sandwich (B; FOX21 9 Nov; the national Famous Dave's entry `drop`s that store so it isn't routed twice), Nana's
+  Dim Sum's free meal up to $70 (B; FOX21 10 Nov; routed at lunch).
+- **Under Deals:** Pikes Peak Highway free for active and retired military (A; the city's 2026 page, not every
+  veteran), Colorado state parks, NPS and Forest Service fee-free days, Salute from the Springs' 1,111 flags (no 2026
+  flag site to pin), the USAFA Planetarium (base pass), UCCS, Fountain's Legion post, schools, Woodland Park and Teller
+  County, and the Olympic & Paralympic Museum's November 20% (closed Wednesdays). Leads: Red Leg, Jack Quinn's, Lost
+  Friend, Phantom Canyon, The Melting Pot, the WWII Aviation museum and other attractions (earlier years or nothing).
+- **Corrections to the report:** Pikes Peak Highway names active and retired military; Red Leg's Tribute Wall,
+  Phantom Canyon's Thursday deal, Jack Quinn's pint and The Melting Pot's 30% are earlier years; the Space Foundation
+  Discovery Center is closed until January 2027; the In Their Honor parade was Saturday 7 Nov.
+- Checked in a preview on port 5064 at 375 px: `?area=cos` opens the area, the NWS forecast loads, Deals lists 70 of
+  70, Optimal builds 12 stops, no sideways scroll, no console errors apart from the report Worker refusing that port's
+  origin. 104 planner and site tests pass.
+
 ## Optimal (engine v1.4, app v1.3; live since about 12:15 PM CST 10 Nov 2026 from `0b12a0d`, approved; not pushed)
 10 Nov 2026: the Maximize routes "can include redundant types of locations on the same route in the same time
 frame e.g. multiple free coffee grabs within a short window of time ... most users won't want to do that. So the

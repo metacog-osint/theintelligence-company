@@ -257,13 +257,18 @@ test("Reno-Sparks runs on Pacific time: windows, a ceremony's arrival and the en
   for (const id of ["j-resort-buffet", "gold-dust-west"]) assert.ok(!by(id).eligible.includes("veteran"), `${id}: not for every veteran`);
 });
 
-test("Colorado Springs runs on Mountain time: its day starts at 07:00 UTC and its windows are MST", () => {
+test("Colorado Springs runs on Mountain time: its day starts at 07:00 UTC, and its windows and ceremonies are MST", () => {
   const { deals } = AREA_DATA["colorado-springs"], by = (id) => deals.offers.find((o) => o.id === id);
   assert.equal(deals.meta.day_start, "2026-11-11T07:00:00Z");
   assert.equal(deals.meta.tz_offset_min, -420);
   assert.equal(by("ihop").start, "2026-11-11T14:00:00Z", "IHOP's 7 AM is 14:00 UTC");
   assert.equal(by("texas-roadhouse").start, "2026-11-11T18:00:00Z", "Texas Roadhouse's 11 AM is 18:00 UTC");
   assert.equal(by("texas-roadhouse").end, "2026-11-11T21:00:00Z", "and 2 PM is 21:00 UTC");
+  assert.equal(by("memorial-park-wreath").arrive_by, "2026-11-11T18:00:00Z", "be at Memorial Park by 11:00 AM MST");
+  assert.equal(by("tri-lakes-palmer-lake").arrive_by, "2026-11-11T17:00:00Z", "and at Palmer Lake by 10:00 AM MST");
+  // Famous Dave's Springs store has its own offer (FOX21), so the national one doesn't route it a second time.
+  assert.ok(!deals.places.some((p) => p.offer === "famous-daves" && /5245 N Academy/.test(p.address)), "Famous Dave's not twice");
+  assert.ok(deals.places.length <= 300, `Colorado Springs: ${deals.places.length} stops, at most 300 for phone speed`);
   // Monument, Palmer Lake and Falcon are in the area, so their aliases open it.
   for (const k of ["springs", "cos", "monument", "falcon", "fort-carson", "peterson", "usafa"]) assert.match(SCRIPTS["app.js"], new RegExp(`"${k}": "colorado-springs"`), k);
 });

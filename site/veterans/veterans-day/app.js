@@ -1360,7 +1360,7 @@
     "reno-sparks": { deals: ["Squeeze In", "Kietzke", "Sparks"], route: ["Squeeze In", "In-N-Out", "McCarran"] },
     "fort-meade": { deals: ["Mission BBQ", "Baltimore Ave", "Columbia"], route: ["Mission BBQ", "Wawa", "Arundel Mills"] },
     "denver": { deals: ["Wings Over", "Colfax", "Aurora"], route: ["Golden Corral", "Wings Over", "Colfax"] },
-    "colorado-springs": { deals: ["Texas Roadhouse", "Academy Blvd", "Monument"], route: ["Texas Roadhouse", "Starbucks", "Powers Blvd"] }
+    "colorado-springs": { deals: ["Golden Corral", "Academy Blvd", "Monument"], route: ["Golden Corral", "Starbucks", "Powers Blvd"] }
   };
   const AREA_ALIASES = {
     "new-salem": "bismarck-mandan",
