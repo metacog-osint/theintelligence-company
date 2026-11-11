@@ -339,7 +339,7 @@ call: `research/fort-meade/notes.md`.
   tests pass on the branch, 102 after merging master's Reno–Sparks area. Checked in a preview on port 5057 (not an allowed report origin) at 375 px: `?area=meade` opens and
   saves the area; 41 of 41 deals; 12-stop Optimal route; the Map draws it by road; no sideways scroll.
 
-## Denver metro, CO (seventh area, the first on Mountain time; built 11 Nov 2026 about midnight-2 AM CST on branch `vetday-denver`)
+## Denver metro, CO (seventh area, the first on Mountain time; built 10-11 Nov 2026 on branch `vetday-denver`; live since about 12:18 AM CST 11 Nov from `24edc10`, pushed)
 10 Nov 2026: Denver metro ("metro spread") from his research report, built overnight while he slept under his
 instruction to research, build and deploy without asking. Research, corrections and judgment calls:
 `research/denver/notes.md`.
