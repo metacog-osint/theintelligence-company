@@ -22,7 +22,8 @@
     { id: "bismarck-mandan", dir: "data/bismarck-mandan/" },
     { id: "twin-cities", dir: "data/twin-cities/" },
     { id: "reston-va", dir: "data/reston-va/" },
-    { id: "reno-sparks", dir: "data/reno-sparks/" }
+    { id: "reno-sparks", dir: "data/reno-sparks/" },
+    { id: "denver", dir: "data/denver/" }
   ];
   const DEFAULT_AREA = "fargo-moorhead";
   const AWAY_KM = 15; // further than this from the area's nearest start point, your location is somewhere else
@@ -1313,6 +1314,20 @@
       ["39.5350,-119.7560", "Sparks (Victorian Square), NV"],
       ["39.5321,-119.7225", "Sparks Marina and Legends, NV"],
       ["39.4398,-119.7707", "South Reno (South Meadows), NV"]
+    ],
+    "denver": [
+      ["", "Start from town…"],
+      ["39.7392,-104.9903", "Downtown Denver, CO"],
+      ["39.7170,-104.9530", "Cherry Creek, CO"],
+      ["39.7294,-104.8319", "Aurora (Anschutz), CO"],
+      ["39.7100,-104.7800", "Aurora near Buckley SFB, CO"],
+      ["39.7110,-105.0810", "Lakewood (Belmar), CO"],
+      ["39.6133,-105.0166", "Littleton, CO"],
+      ["39.5480,-104.9690", "Highlands Ranch, CO"],
+      ["39.5620,-104.8800", "Lone Tree (Park Meadows), CO"],
+      ["39.8367,-105.0372", "Westminster, CO"],
+      ["39.8680,-104.9720", "Thornton, CO"],
+      ["39.9205,-105.0867", "Broomfield, CO"]
     ]
   };
   // Example text in the Deals search box and the Route quick-add box, from each area's own deals and streets (the publisher,
@@ -1322,7 +1337,8 @@
     "bismarck-mandan": { deals: ["Perkins", "Expressway", "Mandan"], route: ["Perkins", "Olive Garden", "Century Ave"] },
     "twin-cities": { deals: ["Caribou", "Lexington Ave", "Maple Grove"], route: ["Caribou", "Perkins", "Wayzata Blvd"] },
     "reston-va": { deals: ["Chick-fil-A", "Leesburg Pike", "Herndon"], route: ["Chick-fil-A", "Wawa", "Sunset Hills"] },
-    "reno-sparks": { deals: ["Squeeze In", "Kietzke", "Sparks"], route: ["Squeeze In", "In-N-Out", "McCarran"] }
+    "reno-sparks": { deals: ["Squeeze In", "Kietzke", "Sparks"], route: ["Squeeze In", "In-N-Out", "McCarran"] },
+    "denver": { deals: ["Wings Over", "Colfax", "Aurora"], route: ["Golden Corral", "Wings Over", "Colfax"] }
   };
   const AREA_ALIASES = {
     "new-salem": "bismarck-mandan",
@@ -1342,7 +1358,18 @@
     "reno": "reno-sparks",
     "sparks": "reno-sparks",
     "reno-nv": "reno-sparks",
-    "washoe": "reno-sparks"
+    "washoe": "reno-sparks",
+    "aurora": "denver",
+    "buckley": "denver",
+    "lakewood": "denver",
+    "littleton": "denver",
+    "lone-tree": "denver",
+    "highlands-ranch": "denver",
+    "centennial": "denver",
+    "westminster": "denver",
+    "thornton": "denver",
+    "broomfield": "denver",
+    "denver-co": "denver"
   };
   function pickArea() {
     const raw = new URLSearchParams(location.search).get("area") || new URLSearchParams(location.search).get("sector");

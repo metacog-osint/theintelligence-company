@@ -1,0 +1,622 @@
+[
+ {
+  "name": "Westminster Veterans Day Ceremony",
+  "kind": "event",
+  "address": "6001 W 104th Ave, Westminster, CO 80031",
+  "phone": "303-658-2192",
+  "geo": "39.885747,-105.062735",
+  "wednesday_hours": "10:00-11:00",
+  "status_2026": "confirmed",
+  "est_value_usd": 0,
+  "dates": "2026-11-11",
+  "hours_local": "10:00-11:00",
+  "mode": "event",
+  "eligible": [
+   "public",
+   "veteran",
+   "active",
+   "guard_reserve"
+  ],
+  "eligibility_quote": "Veterans Day Ceremony, Wednesday, November 11, 2026, 10:00 AM to 11:00 AM (City of Westminster calendar).",
+  "guard_reserve": "yes",
+  "spouse_or_guest": "yes",
+  "proof": [],
+  "limits": "Free. City administrative offices are closed. Parking is not described.",
+  "offer": "The City of Westminster's Veterans Day ceremony at the Armed Forces Tribute Garden, 10-11 AM. The Denver Gazette lists a flag presentation, live music, a keynote speaker, the reading of new brick honorees' names and free coffee.",
+  "grade": "A",
+  "sources": [
+   {
+    "url": "https://www.westminsterco.gov/Calendar.aspx",
+    "publisher": "City of Westminster (Parks, Recreation and Libraries calendar)",
+    "published": "2026",
+    "accessed": "2026-11-11"
+   },
+   {
+    "url": "https://www.denvergazette.com/2026/11/10/veterans-day-events-deals-and-closures-in-denver/",
+    "publisher": "Denver Gazette",
+    "published": "2026-11-10",
+    "accessed": "2026-11-11"
+   }
+  ],
+  "notes": "The city's own calendar gives 10:00-11:00 AM at 6001 W 104th Ave. The Denver Gazette prints 6601 W 104th Ave, a typo: the city's Tribute Garden page and OpenStreetMap both put the garden at 6001. The 2025 and 2024 ceremonies were also at 10 AM. The phone is the Parks, Recreation and Libraries office from the city's Tribute Garden page. Gazette details (music, keynote, coffee) are B-level.",
+  "arrive_by": "10:00"
+ },
+ {
+  "name": "Wings Over the Rockies Air & Space Museum",
+  "kind": "attraction",
+  "address": "7711 E Academy Blvd, Denver, CO 80230",
+  "phone": "",
+  "geo": "39.721052,-104.895466",
+  "wednesday_hours": "10:00-17:00",
+  "status_2026": "confirmed",
+  "est_value_usd": null,
+  "dates": "2026-11-11",
+  "hours_local": "10:00-17:00",
+  "mode": "event",
+  "eligible": [
+   "veteran",
+   "active"
+  ],
+  "eligibility_quote": "Veterans enjoy free admission! Valid military ID at check-in; no advance ticket.",
+  "guard_reserve": "not stated",
+  "spouse_or_guest": "no",
+  "proof": [
+   "military_id"
+  ],
+  "limits": "Family and guests buy tickets online in advance. Guard, Reserve and retirees are not named; the page says veterans and active duty.",
+  "offer": "Free museum admission for veterans and active-duty military, 10 AM-5 PM, with a military ID at check-in and no advance ticket.",
+  "grade": "A",
+  "sources": [
+   {
+    "url": "https://wingsmuseum.org/",
+    "publisher": "Wings Over the Rockies Air & Space Museum",
+    "published": "2026",
+    "accessed": "2026-11-11"
+   }
+  ],
+  "notes": "From the museum's own homepage Veterans Day banner, read 11 Nov. The page gives no street address and no general phone; the address is the museum's own as listed by the City of Aurora and matches the OpenStreetMap pin. Adult ticket price not published, so est_value_usd is null. The $20 Aurora Veterans Salute is held here on Thu 12 Nov (see extras)."
+ },
+ {
+  "name": "Blue Island Oyster Bar",
+  "kind": "business",
+  "address": "2625 E 2nd Ave, Denver, CO 80206",
+  "phone": "",
+  "geo": "39.719619,-104.956597",
+  "wednesday_hours": "11:30-21:00",
+  "status_2026": "confirmed",
+  "est_value_usd": 40,
+  "dates": "2026-11-11",
+  "hours_local": "11:30-21:00",
+  "mode": "dine_in",
+  "eligible": [
+   "veteran",
+   "active"
+  ],
+  "eligibility_quote": "On Wednesday, November 11, veterans can receive a complimentary entree of their choice, valued up to $40, along with a nonalcoholic beverage.",
+  "guard_reserve": "not stated",
+  "spouse_or_guest": "no",
+  "proof": [
+   "military_id"
+  ],
+  "limits": "Entree up to $40 plus a nonalcoholic drink (no mocktails). Dine-in, select Veterans Day menu, one per person; tip and tax extra.",
+  "offer": "A free entree (up to $40) and a nonalcoholic drink for veterans on 11 Nov at both Cherry Creek (11:30 AM-9 PM) and Lone Tree (11 AM-9 PM).",
+  "grade": "B",
+  "sources": [
+   {
+    "url": "https://cherrycreeknorth.com/event/veterans-day-at-blue-island-oyster-bar-seafood-cherry-creek/",
+    "publisher": "Cherry Creek North (business district)",
+    "published": "2026",
+    "accessed": "2026-11-11"
+   },
+   {
+    "url": "https://www.milehighonthecheap.com/veterans-day-deals-freebies-denver/",
+    "publisher": "Mile High on the Cheap",
+    "published": "2026-11-10",
+    "accessed": "2026-11-11"
+   },
+   {
+    "url": "https://www.denvergazette.com/2026/11/10/veterans-day-events-deals-and-closures-in-denver/",
+    "publisher": "Denver Gazette",
+    "published": "2026-11-10",
+    "accessed": "2026-11-11"
+   },
+   {
+    "url": "https://do303.com/events/2026/11/11/veterans-day-at-blue-island-oyster-bar-seafood-lone-tree-tickets",
+    "publisher": "Do303",
+    "published": "2026",
+    "accessed": "2026-11-11"
+   }
+  ],
+  "notes": "Shucking Good Hospitality. Blue Island's own page was not found, so B: Mile High on the Cheap and the Gazette (both 10 Nov 2026) and the Cherry Creek North district listing carry it. Cherry Creek 11:30-9 is from that listing; Lone Tree 11-9 and the addresses come from event listings via search results, not the restaurant. An older Westword item showed 11:30-10 PM, so confirm closing time. The Cherry Creek pin is the OpenStreetMap node for the restaurant (OSM files it at 200 Columbine St, the 2nd Ave corner); the listing address is 2625 E 2nd Ave.",
+  "stores": [
+   {
+    "address": "2625 E 2nd Ave, Denver, CO 80206",
+    "geo": "39.719619,-104.956597",
+    "phone": "",
+    "wed_hours": "11:30-21:00",
+    "status": "unconfirmed",
+    "url": "https://cherrycreeknorth.com/event/veterans-day-at-blue-island-oyster-bar-seafood-cherry-creek/"
+   },
+   {
+    "address": "10008 Commons St, Lone Tree, CO 80124",
+    "geo": "39.534676,-104.881644",
+    "phone": "",
+    "wed_hours": "11:00-21:00",
+    "status": "unconfirmed",
+    "url": "https://do303.com/events/2026/11/11/veterans-day-at-blue-island-oyster-bar-seafood-lone-tree-tickets"
+   }
+  ]
+ },
+ {
+  "name": "Ash and Agave",
+  "kind": "business",
+  "address": "3000 E 1st Ave, Denver, CO 80206",
+  "phone": "",
+  "geo": "39.716614,-104.952496",
+  "wednesday_hours": "",
+  "status_2026": "confirmed",
+  "est_value_usd": 35,
+  "dates": "2026-11-11",
+  "hours_local": "",
+  "mode": "dine_in",
+  "eligible": [
+   "veteran",
+   "active"
+  ],
+  "eligibility_quote": "Veterans get a free entree (up to $35) and a non-alcoholic beverage on Nov. 11.",
+  "guard_reserve": "not stated",
+  "spouse_or_guest": "no",
+  "proof": [
+   "military_id"
+  ],
+  "limits": "Entree up to $35 plus a nonalcoholic drink (no mocktails per KOOL 105). Dine-in; hours not published.",
+  "offer": "A free entree (up to $35) and a nonalcoholic drink for veterans at Ash and Agave, Cherry Creek Shopping Center (lower level near Neiman Marcus).",
+  "grade": "B",
+  "sources": [
+   {
+    "url": "https://www.milehighonthecheap.com/veterans-day-deals-freebies-denver/",
+    "publisher": "Mile High on the Cheap",
+    "published": "2026-11-10",
+    "accessed": "2026-11-11"
+   },
+   {
+    "url": "https://www.denvergazette.com/2026/11/10/veterans-day-events-deals-and-closures-in-denver/",
+    "publisher": "Denver Gazette",
+    "published": "2026-11-10",
+    "accessed": "2026-11-11"
+   }
+  ],
+  "notes": "Shucking Good Hospitality's Mexican restaurant (opened spring 2026) in the old California Pizza Kitchen space. Hours not published anywhere, so hours_local is blank. The pin is the Cherry Creek Shopping Center node, not the restaurant (not mapped in OSM). No restaurant page found."
+ },
+ {
+  "name": "Thirsty Lion",
+  "kind": "business",
+  "address": "1605 Wynkoop St, Denver, CO 80202",
+  "phone": "303-623-0316",
+  "geo": "39.752297,-105.000870",
+  "wednesday_hours": "11:00-22:00",
+  "status_2026": "confirmed",
+  "est_value_usd": null,
+  "dates": "2026-11-11",
+  "hours_local": "11:00-22:00",
+  "mode": "dine_in",
+  "eligible": [
+   "veteran",
+   "active"
+  ],
+  "eligibility_quote": "Those who have served can get a free entree.",
+  "guard_reserve": "not stated",
+  "spouse_or_guest": "no",
+  "proof": [
+   "military_id"
+  ],
+  "limits": "One entree from a short list (cheeseburger, spicy fried chicken sandwich, French dip, fish and chips, Tuscan Romano chicken or Southwest smoked chicken salad, per Westword). In-store.",
+  "offer": "A free entree for veterans and active duty at Thirsty Lion, Union Station (open 11 AM-10 PM Wednesdays).",
+  "grade": "B",
+  "sources": [
+   {
+    "url": "https://www.denvergazette.com/2026/11/10/veterans-day-events-deals-and-closures-in-denver/",
+    "publisher": "Denver Gazette",
+    "published": "2026-11-10",
+    "accessed": "2026-11-11"
+   },
+   {
+    "url": "https://www.westword.com/food-drink/denver-veterans-day-restaurant-dining-deals-40960725/",
+    "publisher": "Westword",
+    "published": "2026-11-10",
+    "accessed": "2026-11-11"
+   },
+   {
+    "url": "https://www.thirstylionrestaurant.com/locations-1",
+    "publisher": "Thirsty Lion (location page: hours and phone only)",
+    "published": "2026",
+    "accessed": "2026-11-11"
+   }
+  ],
+  "notes": "The offer is in the Gazette (10 Nov 2026); the entree list is Westword's via a search result, since Westword blocked a direct read. The restaurant's own page gives hours and phone but no Veterans Day text."
+ },
+ {
+  "name": "Salt Water Social",
+  "kind": "business",
+  "address": "201 Columbine St, Denver, CO 80206",
+  "phone": "",
+  "geo": "39.720102,-104.957228",
+  "wednesday_hours": "",
+  "status_2026": "confirmed",
+  "est_value_usd": null,
+  "dates": "2026-11-11",
+  "hours_local": "",
+  "mode": "dine_in",
+  "eligible": [
+   "veteran",
+   "active",
+   "guard_reserve",
+   "gold_star"
+  ],
+  "eligibility_quote": "One complimentary entree from select options with the purchase of a starter.",
+  "guard_reserve": "yes",
+  "spouse_or_guest": "no",
+  "proof": [
+   "military_id"
+  ],
+  "limits": "Dine-in only; tax and gratuity not included; cannot be combined. Select entrees: Berkshire Pork Chop, Mermaid Surf & Turf, Fish & Chips, Seared Ahi Tuna. Runs 9-11 Nov.",
+  "offer": "A free select entree with the purchase of a starter, for veterans, active duty, reservists and Gold Star families, through 11 Nov.",
+  "grade": "A",
+  "sources": [
+   {
+    "url": "https://saltwatersocial.com/happenings/veterans-day-denver/",
+    "publisher": "Salt Water Social",
+    "published": "2026",
+    "accessed": "2026-11-11"
+   }
+  ],
+  "notes": "Own page, read 11 Nov: Nov 9-11, 2026, valid ID or proof of employment/service. The page gives no hours, phone or address; 201 Columbine St is from Mile High on the Cheap. The pin is the OpenStreetMap address node for that building (the restaurant is not mapped). Entree prices not checked, so est_value_usd is null.",
+  "purchase_needed": true
+ },
+ {
+  "name": "Denver Chophouse & Brewery",
+  "kind": "business",
+  "address": "1735 19th St, Denver, CO 80202",
+  "phone": "",
+  "geo": "39.755509,-104.996855",
+  "wednesday_hours": "",
+  "status_2026": "unconfirmed",
+  "est_value_usd": null,
+  "dates": "2026-11-11",
+  "hours_local": "",
+  "mode": "dine_in",
+  "eligible": [
+   "veteran",
+   "active"
+  ],
+  "eligibility_quote": "Denver Chophouse and Brewery will take 25% off the entire meal (Westword, 10 Nov 2026, relayed by a search result).",
+  "guard_reserve": "not stated",
+  "spouse_or_guest": "no",
+  "proof": [
+   "military_id"
+  ],
+  "limits": "25% off the entire meal. Westword's general terms: veterans and active duty with a military ID, in-store, regular business hours.",
+  "offer": "25% off the entire meal for veterans and active duty at Denver Chophouse & Brewery, LoDo.",
+  "grade": "B",
+  "sources": [
+   {
+    "url": "https://www.westword.com/food-drink/denver-veterans-day-restaurant-dining-deals-40960725/",
+    "publisher": "Westword",
+    "published": "2026-11-10",
+    "accessed": "2026-11-11"
+   }
+  ],
+  "notes": "Westword blocked a direct read (HTTP 403); the 25% and the date come from a search-result summary of the page. Not on Mile High on the Cheap or the Gazette. The restaurant's own page was not checked. Hours not published. The pin is the OpenStreetMap address node for 1735 19th St (One Wynkoop Plaza), not the restaurant, and the address itself is from the lead report."
+ },
+ {
+  "name": "Henry's Tavern",
+  "kind": "business",
+  "address": "500 16th St, Suite 184B, Denver, CO 80202",
+  "phone": "720-399-8466",
+  "geo": "39.744288,-104.991348",
+  "wednesday_hours": "",
+  "status_2026": "unconfirmed",
+  "est_value_usd": null,
+  "dates": "2026-11-11",
+  "hours_local": "",
+  "mode": "dine_in",
+  "eligible": [
+   "veteran",
+   "active"
+  ],
+  "eligibility_quote": "Henry's Tavern will take 25% off the entire meal (Westword, 10 Nov 2026, relayed by a search result).",
+  "guard_reserve": "not stated",
+  "spouse_or_guest": "no",
+  "proof": [
+   "military_id"
+  ],
+  "limits": "25% off the entire meal. Westword's general terms: veterans and active duty with a military ID, in-store, regular business hours.",
+  "offer": "25% off the entire meal for veterans and active duty at Henry's Tavern, Denver Pavilions on the 16th Street Mall.",
+  "grade": "B",
+  "sources": [
+   {
+    "url": "https://www.westword.com/food-drink/denver-veterans-day-restaurant-dining-deals-40960725/",
+    "publisher": "Westword",
+    "published": "2026-11-10",
+    "accessed": "2026-11-11"
+   }
+  ],
+  "notes": "Same single-source caveat as Denver Chophouse (Westword, 403 on direct read). The address and phone are from search listings; OSM has the restaurant at 500 16th St. Hours not published."
+ },
+ {
+  "name": "ViewHouse Eatery Bar & Rooftop (Ballpark)",
+  "kind": "business",
+  "address": "2015 Market St, Denver, CO 80205",
+  "phone": "",
+  "geo": "39.754016,-104.993257",
+  "wednesday_hours": "",
+  "status_2026": "unconfirmed",
+  "est_value_usd": null,
+  "dates": "2026-11-11",
+  "hours_local": "",
+  "mode": "dine_in",
+  "eligible": [
+   "veteran",
+   "active"
+  ],
+  "eligibility_quote": "Veterans get 20% off on Nov. 11; see restaurant for complete details (Mile High on the Cheap).",
+  "guard_reserve": "not stated",
+  "spouse_or_guest": "no",
+  "proof": [
+   "military_id"
+  ],
+  "limits": "20% off the dine-in bill; cannot be combined with other offers, including happy hour (ViewHouse's 2025 page).",
+  "offer": "20% off for veterans and active duty at ViewHouse; only the Ballpark location (2015 Market St) is named in a 2026 list.",
+  "grade": "B",
+  "sources": [
+   {
+    "url": "https://www.milehighonthecheap.com/veterans-day-deals-freebies-denver/",
+    "publisher": "Mile High on the Cheap",
+    "published": "2026-11-10",
+    "accessed": "2026-11-11"
+   },
+   {
+    "url": "https://www.westword.com/food-drink/denver-veterans-day-restaurant-dining-deals-40960725/",
+    "publisher": "Westword",
+    "published": "2026-11-10",
+    "accessed": "2026-11-11"
+   },
+   {
+    "url": "https://www.viewhouse.com/events/veterans-day",
+    "publisher": "ViewHouse (2025 page, via search result)",
+    "published": "2025",
+    "accessed": "2026-11-11"
+   }
+  ],
+  "notes": "Mile High on the Cheap (read, 10 Nov 2026) says only see restaurant for details and names no location; Westword (via search) names the Ballpark one. ViewHouse's own Veterans Day page is dated 11 Nov 2025 and says all locations; it blocked a direct read. ViewHouse also has Centennial and Littleton stores; none was verified for 2026. Hours not published. Call first."
+ },
+ {
+  "name": "Tamayo",
+  "kind": "business",
+  "address": "1400 Larimer St, Denver, CO 80202",
+  "phone": "",
+  "geo": "39.747336,-104.999586",
+  "wednesday_hours": "",
+  "status_2026": "confirmed",
+  "est_value_usd": null,
+  "dates": "2026-11-11",
+  "hours_local": "",
+  "mode": "dine_in",
+  "eligible": [
+   "veteran",
+   "active"
+  ],
+  "eligibility_quote": "Veterans get 10% off the total bill on Nov. 11. Weekday happy hour runs 2-5 p.m.",
+  "guard_reserve": "not stated",
+  "spouse_or_guest": "no",
+  "proof": [
+   "military_id"
+  ],
+  "limits": "10% off the total bill.",
+  "offer": "10% off the total bill for veterans at Tamayo by Chef Richard Sandoval, Larimer Square, on 11 Nov.",
+  "grade": "B",
+  "sources": [
+   {
+    "url": "https://www.milehighonthecheap.com/veterans-day-deals-freebies-denver/",
+    "publisher": "Mile High on the Cheap",
+    "published": "2026-11-10",
+    "accessed": "2026-11-11"
+   }
+  ],
+  "notes": "One 2026 source, read directly. An older Westword item (year not shown) said 15%, so 10% is the 2026 figure. No restaurant page found. Hours not published."
+ },
+ {
+  "name": "The Rendezvous at Heather Gardens",
+  "kind": "business",
+  "address": "2888 S Heather Gardens Way, Aurora, CO 80014",
+  "phone": "720-282-3443",
+  "geo": "39.663303,-104.831357",
+  "wednesday_hours": "17:00-20:00",
+  "status_2026": "confirmed",
+  "est_value_usd": null,
+  "dates": "2026-11-11",
+  "hours_local": "17:00-20:00",
+  "mode": "dine_in",
+  "eligible": [
+   "veteran"
+  ],
+  "eligibility_quote": "Veterans pay $8 for breakfast-for-dinner, 5-8 p.m. Other guests pay $11-$16. Reservations required.",
+  "guard_reserve": "not stated",
+  "spouse_or_guest": "yes",
+  "proof": [],
+  "limits": "Reservations required (720-282-3443). Veterans pay $8 (a discounted price, not free); other guests pay $11-$16.",
+  "offer": "An $8 breakfast-for-dinner for veterans, 5-8 PM, at the Rendezvous restaurant in the Heather Gardens community center, Aurora. Reservations required.",
+  "grade": "B",
+  "sources": [
+   {
+    "url": "https://www.kool105.com/2026/11/10/veterans-day-deals-in-metro-denver/",
+    "publisher": "KOOL 105",
+    "published": "2026-11-10",
+    "accessed": "2026-11-11"
+   }
+  ],
+  "notes": "Single source: KOOL 105, 10 Nov 2026, read directly. No Heather Gardens page or other outlet found carrying it. The restaurant sits in a 55+ community; whether non-residents are welcome is not stated, so call. The pin is the Heather Gardens Community Center node.",
+  "purchase_needed": true
+ },
+ {
+  "name": "Westminster Golf: Legacy Ridge",
+  "kind": "outing",
+  "address": "10801 Legacy Ridge Pkwy, Westminster, CO 80031",
+  "phone": "303-438-8997",
+  "geo": "39.892432,-105.022337",
+  "wednesday_hours": "",
+  "status_2026": "unconfirmed",
+  "est_value_usd": null,
+  "dates": "2026-11-11",
+  "hours_local": "",
+  "mode": "event",
+  "eligible": [
+   "veteran",
+   "active"
+  ],
+  "eligibility_quote": "One free round for veterans and active military with valid ID. Cart costs extra. (KOOL 105)",
+  "guard_reserve": "not stated",
+  "spouse_or_guest": "no",
+  "proof": [
+   "military_id"
+  ],
+  "limits": "Green fee only; cart extra. KOOL says Legacy Ridge or Walnut Creek. The City of Westminster's golf pages found do not mention it.",
+  "offer": "One free round of golf at Legacy Ridge or Walnut Creek for veterans and active military, per KOOL 105. Not found on the City of Westminster's golf pages.",
+  "grade": "B",
+  "sources": [
+   {
+    "url": "https://www.kool105.com/2026/11/10/veterans-day-deals-in-metro-denver/",
+    "publisher": "KOOL 105",
+    "published": "2026-11-10",
+    "accessed": "2026-11-11"
+   }
+  ],
+  "notes": "KOOL 105 (10 Nov 2026) only. City golf pages in search results show no Veterans Day free round (only a 2025 resident free day and PGA HOPE). Tee-time availability and hours unknown. Walnut Creek (10555 W Westmoor Dr, 80021) is 1.1 km outside circle 6. The phone is the Legacy Ridge shop from a search result. Call first."
+ },
+ {
+  "name": "The Melting Pot",
+  "kind": "business",
+  "address": "2707 W Main St, Littleton, CO 80120",
+  "phone": "303-794-5666",
+  "geo": "39.613729,-105.020398",
+  "wednesday_hours": "11:00-22:00",
+  "status_2026": "confirmed",
+  "est_value_usd": 60,
+  "dates": "2026-11-11",
+  "hours_local": "11:00-22:00",
+  "mode": "dine_in",
+  "eligible": [
+   "veteran",
+   "active"
+  ],
+  "eligibility_quote": "Veterans get a complimentary four-course meal with purchase of another regular-price four-course meal. Military ID required.",
+  "guard_reserve": "not stated",
+  "spouse_or_guest": "no",
+  "proof": [
+   "military_id"
+  ],
+  "limits": "A second regular-price four-course meal must be bought; not combinable; tax, gratuity and a 3% heart-of-house service charge extra",
+  "offer": "A free four-course fondue meal for a veteran when a second diner buys a regular-price four-course meal, at The Melting Pot, Littleton.",
+  "grade": "A",
+  "sources": [
+   {
+    "url": "https://meltingpot.com/littleton-co/melting-pot-events.aspx",
+    "publisher": "The Melting Pot Littleton",
+    "published": "2026 (undated; terms say Nov. 11, 2026)",
+    "accessed": "2026-11-11"
+   },
+   {
+    "url": "https://www.kool105.com/2026/11/10/veterans-day-deals-in-metro-denver/",
+    "publisher": "KOOL 105",
+    "published": "2026-11-10",
+    "accessed": "2026-11-11"
+   }
+  ],
+  "notes": "Graded B, not A: the restaurant's own Littleton page (read 11 Nov) has address, phone (303) 794-5666 and regular hours (Wednesday 11am-10pm) but no Veterans Day offer and no holiday-hours entry for it. The offer is from KOOL 105 (10 Nov 2026) only. Hours are the regular Wednesday hours, not a holiday notice. 3% service charge not verified. Call first. Grade A: the restaurant's own events page carries the 2026 terms (chain research, 11 Nov 2026).",
+  "purchase_needed": true
+ },
+ {
+  "name": "STK Steakhouse",
+  "kind": "business",
+  "address": "1550 Market St, Denver, CO 80202",
+  "phone": "",
+  "geo": "39.749541,-104.998411",
+  "wednesday_hours": "",
+  "status_2026": "confirmed",
+  "est_value_usd": null,
+  "dates": "2026-11-11",
+  "hours_local": "",
+  "mode": "dine_in",
+  "eligible": [
+   "veteran",
+   "active",
+   "guard_reserve",
+   "gold_star"
+  ],
+  "eligibility_quote": "Order any starter and choose one of four STK signatures at no charge. Valid November 9-11, 2026.",
+  "guard_reserve": "yes",
+  "spouse_or_guest": "no",
+  "proof": [
+   "military_id"
+  ],
+  "limits": "Dine-in only; tax and gratuity not included; cannot be combined. Four entrees: Steak Frites, Maple Rubbed Salmon, Free Range Chicken, Mushroom & Truffle Tagliatelle. Reservations recommended. Gold Star family members each get one entree per starter bought.",
+  "offer": "A free entree (Steak Frites, salmon, chicken or tagliatelle) with the purchase of any starter, for veterans, active duty, reservists and Gold Star families, through 11 Nov.",
+  "grade": "A",
+  "sources": [
+   {
+    "url": "https://stksteakhouse.com/happenings/veterans-day/",
+    "publisher": "STK Steakhouse",
+    "published": "2026",
+    "accessed": "2026-11-11"
+   },
+   {
+    "url": "https://www.milehighonthecheap.com/veterans-day-deals-freebies-denver/",
+    "publisher": "Mile High on the Cheap",
+    "published": "2026-11-10",
+    "accessed": "2026-11-11"
+   }
+  ],
+  "notes": "STK's own page, read 11 Nov: Valid November 9-11, 2026, at participating U.S. locations (not Las Vegas); Denver is only a link to its location page and is not named as participating. Mile High on the Cheap (10 Nov 2026) lists STK at 1550 Market St with the offer; STK's Denver location page returned 404, so no hours or phone. Mile High lists first responders as eligible; STK's page does not. The pin is the STK Denver node in OpenStreetMap.",
+  "purchase_needed": true
+ },
+ {
+  "name": "Oliver's Italian",
+  "kind": "restaurant",
+  "address": "4950 S Yosemite St, Greenwood Village, CO 80111",
+  "phone": "",
+  "geo": "39.624584,-104.883400",
+  "wednesday_hours": "11:00-21:00",
+  "status_2026": "confirmed",
+  "est_value_usd": 35,
+  "dates": "2026-11-11",
+  "hours_local": "11:00-21:00",
+  "mode": "dine_in",
+  "eligible": [
+   "veteran"
+  ],
+  "eligibility_quote": "A free entree (up to $35) and a nonalcoholic drink for veterans.",
+  "guard_reserve": "unknown",
+  "spouse_or_guest": "no",
+  "proof": [
+   "military_id"
+  ],
+  "limits": "Entree up to $35; dine-in.",
+  "offer": "A free entree (up to $35) and a nonalcoholic drink for veterans; Shucking Good Hospitality.",
+  "grade": "B",
+  "sources": [
+   {
+    "url": "https://www.milehighonthecheap.com/veterans-day-deals-freebies-denver/",
+    "publisher": "Mile High on the Cheap",
+    "published": "2026-11-10",
+    "accessed": "2026-11-11"
+   },
+   {
+    "url": "https://www.denvergazette.com/2026/11/10/veterans-day-events-deals-and-closures-in-denver/",
+    "publisher": "Denver Gazette",
+    "published": "2026-11-10",
+    "accessed": "2026-11-11"
+   }
+  ],
+  "notes": "Mile High on the Cheap and the Gazette, both 10 Nov 2026. Regular hours per OpenTable are Mon-Thu 11 AM-9 PM (not a holiday notice). Cheap stretch: circle 5 radius 5.0 to 6.7 km reaches it, and also picks up the Parry's stores at Greenwood Village and Highlands Ranch at about 6 km. Routable since the Lone Tree circle was widened to 6.8 km (11 Nov 2026)."
+ }
+]

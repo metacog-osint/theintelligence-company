@@ -3761,5 +3761,2262 @@
       }
     ],
     "notes": "Valid 10–11 Nov 2026."
+  },
+  {
+    "brand": "P.F. Chang's",
+    "scope": "national",
+    "status_2026": "offering",
+    "offer": "Free lunch special from a select Veterans Day menu, 11 a.m.-3 p.m.",
+    "est_value_usd": 14,
+    "dates": "2026-11-11",
+    "hours_local": "11:00-15:00",
+    "mode": "dine_in",
+    "voucher_use_by": null,
+    "eligible": [
+      "veteran",
+      "active"
+    ],
+    "eligibility_quote": "Free lunch special, 11 a.m.-3 p.m., per P.F. Chang's Facebook page (Deseret News)",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "no",
+    "kids": null,
+    "proof": [
+      "military_id",
+      "va_card",
+      "dd214"
+    ],
+    "advance_signup": null,
+    "participating_locations_only": true,
+    "limits": "Dine-in, select menu, one per person, proof of service, participating locations",
+    "grade": "B",
+    "sources": [
+      {
+        "url": "https://www.deseret.com/lifestyle/2026/11/10/veterans-day-2026-where-to-get-free-meals-discounts/",
+        "publisher": "Deseret News",
+        "published": "2026-11-10",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.scrippsnews.com/us-news/military/veterans-day-2026-restaurants-offering-free-meals-and-deals",
+        "publisher": "Scripps News",
+        "published": "2026 (undated)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.milehighonthecheap.com/veterans-day-deals-freebies-denver/",
+        "publisher": "Mile High on the Cheap",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      }
+    ],
+    "notes": "Deseret News cites P.F. Chang's own Facebook post; the chain's website had no readable 2026 page. Scripps says current and former military. Same 11 a.m.-3 p.m. dine-in lunch as in 2025."
+  },
+  {
+    "brand": "Bubba's 33",
+    "scope": "national",
+    "status_2026": "offering",
+    "offer": "Free lunch entree from a select Veterans Day menu, opening to 4 p.m., or a voucher for a free meal on a later visit instead",
+    "est_value_usd": 14,
+    "dates": "2026-11-11",
+    "hours_local": "open-16:00",
+    "mode": "dine_in",
+    "voucher_use_by": null,
+    "eligible": [
+      "veteran",
+      "active",
+      "retiree"
+    ],
+    "eligibility_quote": "Veterans and active-duty military, until 4 p.m. (Military.com)",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "no",
+    "kids": null,
+    "proof": [
+      "military_id",
+      "va_card",
+      "dd214"
+    ],
+    "advance_signup": null,
+    "participating_locations_only": true,
+    "limits": "Dine-in, select menu, one per person",
+    "grade": "B",
+    "sources": [
+      {
+        "url": "https://www.milehighonthecheap.com/veterans-day-deals-freebies-denver/",
+        "publisher": "Mile High on the Cheap",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+        "publisher": "Military.com",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.legion.org/information-center/news/veterans-day/2026/november/veterans-day-deals-and-discounts",
+        "publisher": "American Legion",
+        "published": "2026-11-05",
+        "accessed": "2026-11-11"
+      }
+    ],
+    "notes": "Chain's own 2026 page not found. American Legion lists active, former or retired military; select entrees; no stacking. Locations: 2270 S. Parker Rd., Aurora; 5807 Constitution Ave., Colorado Springs. A voucher for a future visit can be taken in place of the meal."
+  },
+  {
+    "brand": "Bombshells",
+    "scope": "regional",
+    "status_2026": "offering",
+    "offer": "Free appetizer, entree and dessert; family members dining with the veteran get 20% off their food",
+    "est_value_usd": 32,
+    "dates": "2026-11-11",
+    "hours_local": "unknown",
+    "mode": "dine_in",
+    "voucher_use_by": null,
+    "eligible": [
+      "veteran",
+      "active"
+    ],
+    "eligibility_quote": "Veterans and active-duty; family members get 20% off (Mile High on the Cheap)",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "yes",
+    "kids": null,
+    "proof": [
+      "military_id",
+      "va_card",
+      "dd214"
+    ],
+    "advance_signup": null,
+    "participating_locations_only": true,
+    "limits": "Dine-in; soft drinks and alcohol excluded; one per person",
+    "grade": "B",
+    "sources": [
+      {
+        "url": "https://www.milehighonthecheap.com/veterans-day-deals-freebies-denver/",
+        "publisher": "Mile High on the Cheap",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+        "publisher": "Military.com",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.kool105.com/2026/11/10/veterans-day-deals-in-metro-denver/",
+        "publisher": "KOOL 105",
+        "published": "2026-11-10",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.legion.org/information-center/news/veterans-day/2026/november/veterans-day-deals-and-discounts",
+        "publisher": "American Legion",
+        "published": "2026-11-05",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.livenowfox.com/news/veterans-day-2026-deals",
+        "publisher": "LiveNOW from FOX",
+        "published": "2026-11-04 (updated 2026-11-05)",
+        "accessed": "2026-11-11"
+      }
+    ],
+    "notes": "Only Colorado location: 1400 Arapahoe St., Denver. Family discount is 20% off, not free. Sources conflict on active duty: Mile High on the Cheap, Military.com and American Legion give the free meal to veterans and active duty; LiveNOW from FOX says veterans eat free and active-duty members get 20% off. Accepted proof per LiveNOW: military ID, current LES, veterans organization card or DD-214."
+  },
+  {
+    "brand": "Old Chicago",
+    "scope": "regional",
+    "status_2026": "offering",
+    "offer": "Free entree from a select Veterans Day menu",
+    "est_value_usd": 15,
+    "dates": "2026-11-11",
+    "hours_local": "store hours",
+    "mode": "dine_in",
+    "voucher_use_by": null,
+    "eligible": [
+      "veteran",
+      "active"
+    ],
+    "eligibility_quote": "Free meal from a select Veterans Day menu for veterans and active-duty military; dine-in, all day (American Legion)",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "no",
+    "kids": null,
+    "proof": [
+      "military_id",
+      "va_card",
+      "dd214"
+    ],
+    "advance_signup": null,
+    "participating_locations_only": true,
+    "limits": "Dine-in, select menu, participating locations, proof of service",
+    "grade": "B",
+    "sources": [
+      {
+        "url": "https://www.milehighonthecheap.com/veterans-day-deals-freebies-denver/",
+        "publisher": "Mile High on the Cheap",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://kygo.com/veterans-day-2026-deals-in-colorado-free-food-and-discounts-on-nov-11/",
+        "publisher": "98.5 KYGO",
+        "published": "2026-11-09 (updated 2026-11-10)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.kool105.com/2026/11/10/veterans-day-deals-in-metro-denver/",
+        "publisher": "KOOL 105",
+        "published": "2026-11-10",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.legion.org/information-center/news/veterans-day/2026/november/veterans-day-deals-and-discounts",
+        "publisher": "American Legion",
+        "published": "2026-11-05",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.foodnetwork.com/fn-dish/news/veterans-day-food-deals-roundup-2026",
+        "publisher": "Food Network",
+        "published": "2026-11-09",
+        "accessed": "2026-11-11"
+      }
+    ],
+    "notes": "American Legion and Food Network list it as dine-in, all day, for veterans and active duty. In 2024 Old Chicago required a non-water beverage purchase; 2026 sources do not mention one, so a drink purchase may still be asked. Colorado-born chain with several Denver-metro and Colorado Springs restaurants; call ahead to confirm participation."
+  },
+  {
+    "brand": "Lazy Dog",
+    "scope": "national",
+    "status_2026": "offering",
+    "offer": "Free Fireside Favorites entree (six choices) plus a personal dessert and a soda",
+    "est_value_usd": 26,
+    "dates": "2026-11-11",
+    "hours_local": "unknown",
+    "mode": "dine_in",
+    "voucher_use_by": null,
+    "eligible": [
+      "veteran",
+      "active",
+      "retiree",
+      "guard_reserve"
+    ],
+    "eligibility_quote": "Active-duty, veterans, retirees, and Reserve/National Guard (Military.com)",
+    "guard_reserve": "yes",
+    "spouse_or_guest": "no",
+    "kids": null,
+    "proof": [
+      "military_id",
+      "va_card",
+      "dd214"
+    ],
+    "advance_signup": null,
+    "participating_locations_only": true,
+    "limits": "Dine-in, one per person, proof of service",
+    "grade": "B",
+    "sources": [
+      {
+        "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+        "publisher": "Military.com",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.livenowfox.com/news/veterans-day-2026-deals",
+        "publisher": "LiveNOW from FOX",
+        "published": "2026-11-04 (updated 2026-11-05)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://themilitarywallet.com/veterans-day-free-meals/",
+        "publisher": "The Military Wallet",
+        "published": "2026 (updated)",
+        "accessed": "2026-11-11"
+      }
+    ],
+    "notes": "Chain's own 2026 page not found in search. Denver-metro restaurants include Westminster, Lone Tree and Centennial; one in Colorado Springs. Call ahead."
+  },
+  {
+    "brand": "Yard House",
+    "scope": "national",
+    "status_2026": "offering",
+    "offer": "Free appetizer",
+    "est_value_usd": 14,
+    "dates": "2026-11-11",
+    "hours_local": "unknown",
+    "mode": "dine_in",
+    "voucher_use_by": null,
+    "eligible": [
+      "veteran",
+      "active"
+    ],
+    "eligibility_quote": "Free appetizer for veterans and active-duty military; dine-in only (Military.com)",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "no",
+    "kids": null,
+    "proof": [
+      "military_id",
+      "va_card",
+      "dd214"
+    ],
+    "advance_signup": null,
+    "participating_locations_only": true,
+    "limits": "Dine-in only; show military ID to the server; no purchase required",
+    "grade": "A",
+    "sources": [
+      {
+        "url": "https://www.yardhouse.com/events/veterans-day-deals",
+        "publisher": "Yard House",
+        "published": "2026 (undated; offer dated 11/11/2026)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+        "publisher": "Military.com",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.kool105.com/2026/11/10/veterans-day-deals-in-metro-denver/",
+        "publisher": "KOOL 105",
+        "published": "2026-11-10",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://themilitarywallet.com/veterans-day-free-meals/",
+        "publisher": "The Military Wallet",
+        "published": "2026 (updated)",
+        "accessed": "2026-11-11"
+      }
+    ],
+    "notes": "Chain page: one complimentary appetizer per person, dine-in only, no purchase necessary. Denver-metro restaurants: Denver Pavilions (downtown), Colorado Mills (Lakewood), Park Meadows (Lone Tree)."
+  },
+  {
+    "brand": "Perry's Steakhouse & Grille",
+    "scope": "national",
+    "status_2026": "offering",
+    "offer": "Free dinner-cut pork chop when a paying guest orders a full-price dinner entree (half off if dining alone or with other veterans), or a $39 three-course Military Menu",
+    "est_value_usd": 42,
+    "dates": "2026-11-11",
+    "hours_local": "16:00-close",
+    "mode": "dine_in",
+    "voucher_use_by": null,
+    "eligible": [
+      "veteran",
+      "active"
+    ],
+    "eligibility_quote": "U.S. active or former military with a military ID or official record of service, plus a reservation",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "no",
+    "kids": null,
+    "proof": [
+      "military_id",
+      "dd214"
+    ],
+    "advance_signup": "Reservation required",
+    "participating_locations_only": true,
+    "limits": "Reservation required; dine-in only; a guest must buy a full-price dinner entree; not combinable with the $39 menu; not for private dining",
+    "grade": "A",
+    "sources": [
+      {
+        "url": "https://perryssteakhouse.com/specials/veterans-day/",
+        "publisher": "Perry's Steakhouse & Grille",
+        "published": "2026 (undated)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.kool105.com/2026/11/10/veterans-day-deals-in-metro-denver/",
+        "publisher": "KOOL 105",
+        "published": "2026-11-10",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.milehighonthecheap.com/veterans-day-deals-freebies-denver/",
+        "publisher": "Mile High on the Cheap",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      }
+    ],
+    "notes": "Only Colorado location: 8433 Park Meadows Center Dr., Lone Tree. The chain's page does not list participating locations; Denver-area outlets list Lone Tree. The $39 menu is all day per Mile High on the Cheap; the chop offer starts at 4 p.m."
+  },
+  {
+    "brand": "Eddie Merlot's",
+    "scope": "national",
+    "status_2026": "offering",
+    "offer": "Free Eddie's Prime Cheeseburger and chips",
+    "est_value_usd": 18,
+    "dates": "2026-11-11",
+    "hours_local": "unknown",
+    "mode": "dine_in",
+    "voucher_use_by": null,
+    "eligible": [
+      "veteran",
+      "active"
+    ],
+    "eligibility_quote": "Veterans and active-duty military; show proof of service to your server (Military.com)",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "no",
+    "kids": null,
+    "proof": [
+      "military_id",
+      "va_card",
+      "dd214"
+    ],
+    "advance_signup": null,
+    "participating_locations_only": true,
+    "limits": "Dine-in only, while supplies last",
+    "grade": "B",
+    "sources": [
+      {
+        "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+        "publisher": "Military.com",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.foodnetwork.com/fn-dish/news/veterans-day-food-deals-roundup-2026",
+        "publisher": "Food Network",
+        "published": "2026-11-09",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.legion.org/information-center/news/veterans-day/2026/november/veterans-day-deals-and-discounts",
+        "publisher": "American Legion",
+        "published": "2026-11-05",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.milehighonthecheap.com/veterans-day-deals-freebies-denver/",
+        "publisher": "Mile High on the Cheap",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      }
+    ],
+    "notes": "Food Network and American Legion say chips. Only Colorado location: 10110 E. Dry Creek Rd., Englewood."
+  },
+  {
+    "brand": "Bad Daddy's Burger Bar",
+    "scope": "national",
+    "status_2026": "offering",
+    "offer": "Free All-American burger with cheese and a classic side, 11 a.m.-4 p.m.",
+    "est_value_usd": 15,
+    "dates": "2026-11-11",
+    "hours_local": "11:00-16:00",
+    "mode": "dine_in",
+    "voucher_use_by": null,
+    "eligible": [
+      "veteran",
+      "active"
+    ],
+    "eligibility_quote": "Veterans and active-duty; dine-in only with military ID (Military.com)",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "no",
+    "kids": null,
+    "proof": [
+      "military_id"
+    ],
+    "advance_signup": null,
+    "participating_locations_only": true,
+    "limits": "Dine-in only; not for online or third-party orders; gratuity not included",
+    "grade": "B",
+    "sources": [
+      {
+        "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+        "publisher": "Military.com",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.foodnetwork.com/fn-dish/news/veterans-day-food-deals-roundup-2026",
+        "publisher": "Food Network",
+        "published": "2026-11-09",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.milehighonthecheap.com/veterans-day-deals-freebies-denver/",
+        "publisher": "Mile High on the Cheap",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.kool105.com/2026/11/10/veterans-day-deals-in-metro-denver/",
+        "publisher": "KOOL 105",
+        "published": "2026-11-10",
+        "accessed": "2026-11-11"
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "brand": "Main Event",
+    "scope": "national",
+    "status_2026": "offering",
+    "offer": "Free double cheeseburger and fries plus a 30-minute game card",
+    "est_value_usd": 28,
+    "dates": "2026-11-11",
+    "hours_local": "store hours",
+    "mode": "dine_in",
+    "voucher_use_by": null,
+    "eligible": [
+      "veteran",
+      "active"
+    ],
+    "eligibility_quote": "Veterans and active-duty military; fine print requires a valid active or retired Military ID",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "no",
+    "kids": null,
+    "proof": [
+      "military_id"
+    ],
+    "advance_signup": null,
+    "participating_locations_only": true,
+    "limits": "Dine-in only; one per ID per day; timecard not valid on crane, instant-prize, VR or photobooth games and earns no prize points; not for events or group bookings",
+    "grade": "A",
+    "sources": [
+      {
+        "url": "https://www.mainevent.com/specials/veterans-day",
+        "publisher": "Main Event",
+        "published": "2026 (undated; offer valid 11/11/26)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+        "publisher": "Military.com",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.milehighonthecheap.com/veterans-day-deals-freebies-denver/",
+        "publisher": "Mile High on the Cheap",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.kool105.com/2026/11/10/veterans-day-deals-in-metro-denver/",
+        "publisher": "KOOL 105",
+        "published": "2026-11-10",
+        "accessed": "2026-11-11"
+      }
+    ],
+    "notes": "Chain fine print asks for an active or retired military ID; veterans with only a DD-214, VA card or veteran driver's license should call ahead. Main Event also gives 10% off year-round with military ID. Colorado locations: Highlands Ranch, Thornton, Colorado Springs (and Windsor)."
+  },
+  {
+    "brand": "Hopdoddy",
+    "scope": "national",
+    "status_2026": "offering",
+    "offer": "Free Classic Burger (with or without cheese)",
+    "est_value_usd": 13,
+    "dates": "2026-11-11",
+    "hours_local": "unknown",
+    "mode": "dine_in",
+    "voucher_use_by": null,
+    "eligible": [
+      "veteran",
+      "active"
+    ],
+    "eligibility_quote": "Veterans and active-duty military; dine-in only (Military.com)",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "no",
+    "kids": null,
+    "proof": [
+      "military_id",
+      "va_card",
+      "dd214"
+    ],
+    "advance_signup": null,
+    "participating_locations_only": true,
+    "limits": "Dine-in only, proof of service",
+    "grade": "B",
+    "sources": [
+      {
+        "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+        "publisher": "Military.com",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://themilitarywallet.com/veterans-day-free-meals/",
+        "publisher": "The Military Wallet",
+        "published": "2026 (updated)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.legion.org/information-center/news/veterans-day/2026/november/veterans-day-deals-and-discounts",
+        "publisher": "American Legion",
+        "published": "2026-11-05",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.milehighonthecheap.com/veterans-day-deals-freebies-denver/",
+        "publisher": "Mile High on the Cheap",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.kool105.com/2026/11/10/veterans-day-deals-in-metro-denver/",
+        "publisher": "KOOL 105",
+        "published": "2026-11-10",
+        "accessed": "2026-11-11"
+      }
+    ],
+    "notes": "Both Colorado locations are in Denver: Union Station and 9th & Colorado."
+  },
+  {
+    "brand": "Good Times Burgers & Frozen Custard",
+    "scope": "regional",
+    "status_2026": "offering",
+    "offer": "Free Deluxe Cheeseburger Combo",
+    "est_value_usd": 11,
+    "dates": "2026-11-11",
+    "hours_local": "unknown",
+    "mode": "in_store",
+    "voucher_use_by": null,
+    "eligible": [
+      "veteran",
+      "active"
+    ],
+    "eligibility_quote": "Free Deluxe Cheeseburger Combo with valid military ID; in-store or drive-thru (Military.com)",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "no",
+    "kids": null,
+    "proof": [
+      "military_id"
+    ],
+    "advance_signup": null,
+    "participating_locations_only": true,
+    "limits": "In-store or drive-thru; not through delivery apps",
+    "grade": "B",
+    "sources": [
+      {
+        "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+        "publisher": "Military.com",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.foodnetwork.com/fn-dish/news/veterans-day-food-deals-roundup-2026",
+        "publisher": "Food Network",
+        "published": "2026-11-09",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.milehighonthecheap.com/veterans-day-deals-freebies-denver/",
+        "publisher": "Mile High on the Cheap",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      }
+    ],
+    "notes": "Colorado-based chain with many Denver-metro and Colorado Springs drive-thrus."
+  },
+  {
+    "brand": "Snarf's Sandwiches",
+    "scope": "regional",
+    "status_2026": "offering",
+    "offer": "Free 7-inch regular sandwich",
+    "est_value_usd": 10,
+    "dates": "2026-11-11",
+    "hours_local": "unknown",
+    "mode": "in_store",
+    "voucher_use_by": null,
+    "eligible": [
+      "veteran",
+      "active"
+    ],
+    "eligibility_quote": "Veterans and military personnel; one per person; in-store only (Military.com)",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "no",
+    "kids": null,
+    "proof": [
+      "military_id",
+      "va_card",
+      "dd214"
+    ],
+    "advance_signup": null,
+    "participating_locations_only": true,
+    "limits": "In-store only, one per person, not combinable",
+    "grade": "B",
+    "sources": [
+      {
+        "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+        "publisher": "Military.com",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.milehighonthecheap.com/veterans-day-deals-freebies-denver/",
+        "publisher": "Mile High on the Cheap",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://kygo.com/veterans-day-2026-deals-in-colorado-free-food-and-discounts-on-nov-11/",
+        "publisher": "98.5 KYGO",
+        "published": "2026-11-09 (updated 2026-11-10)",
+        "accessed": "2026-11-11"
+      }
+    ],
+    "notes": "About 35 Colorado shops, mostly Denver metro, Boulder and Northern Colorado; check the locator for a Colorado Springs shop."
+  },
+  {
+    "brand": "Snarfburger",
+    "scope": "regional",
+    "status_2026": "offering",
+    "offer": "Free Snarfburger Double",
+    "est_value_usd": 11,
+    "dates": "2026-11-11",
+    "hours_local": "unknown",
+    "mode": "in_store",
+    "voucher_use_by": null,
+    "eligible": [
+      "veteran",
+      "active"
+    ],
+    "eligibility_quote": "Veterans and active military (Mile High on the Cheap)",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "no",
+    "kids": null,
+    "proof": [
+      "military_id",
+      "va_card",
+      "dd214"
+    ],
+    "advance_signup": null,
+    "participating_locations_only": true,
+    "limits": "One per person, proof of service",
+    "grade": "B",
+    "sources": [
+      {
+        "url": "https://www.milehighonthecheap.com/veterans-day-deals-freebies-denver/",
+        "publisher": "Mile High on the Cheap",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://kygo.com/veterans-day-2026-deals-in-colorado-free-food-and-discounts-on-nov-11/",
+        "publisher": "98.5 KYGO",
+        "published": "2026-11-09 (updated 2026-11-10)",
+        "accessed": "2026-11-11"
+      }
+    ],
+    "notes": "Two Denver locations plus Boulder. Offer differs from Snarf's Sandwiches (burger, not sandwich)."
+  },
+  {
+    "brand": "Whataburger",
+    "scope": "national",
+    "status_2026": "offering",
+    "offer": "Free taquito (sausage, bacon or potato), opening to 11 a.m.",
+    "est_value_usd": 4,
+    "dates": "2026-11-11",
+    "hours_local": "open-11:00",
+    "mode": "in_store",
+    "voucher_use_by": null,
+    "eligible": [
+      "veteran",
+      "active"
+    ],
+    "eligibility_quote": "Active-duty and veterans (Mile High on the Cheap)",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "no",
+    "kids": null,
+    "proof": [
+      "military_id",
+      "va_card",
+      "dd214"
+    ],
+    "advance_signup": null,
+    "participating_locations_only": true,
+    "limits": "Breakfast hours only, one per person",
+    "grade": "B",
+    "sources": [
+      {
+        "url": "https://www.milehighonthecheap.com/veterans-day-deals-freebies-denver/",
+        "publisher": "Mile High on the Cheap",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      }
+    ],
+    "notes": "Single 2026 source (Mile High on the Cheap); no chain announcement found. In 2025 Whataburger ran free taquitos every Tuesday from Veterans Day through Dec. 30, in-restaurant only, one per guest, during breakfast hours; Whataburger also gives veterans a free 16-oz coffee in its dining rooms year-round. About 10 Colorado locations, several in Colorado Springs."
+  },
+  {
+    "brand": "Wienerschnitzel",
+    "scope": "national",
+    "status_2026": "offering",
+    "offer": "Free chili dog, small fries and small soda",
+    "est_value_usd": 7,
+    "dates": "2026-11-11",
+    "hours_local": "unknown",
+    "mode": "in_store",
+    "voucher_use_by": null,
+    "eligible": [
+      "veteran",
+      "active"
+    ],
+    "eligibility_quote": "Valid military ID or proof of service required (Military.com)",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "no",
+    "kids": null,
+    "proof": [
+      "military_id",
+      "uniform"
+    ],
+    "advance_signup": null,
+    "participating_locations_only": true,
+    "limits": "Participating locations, one per person",
+    "grade": "B",
+    "sources": [
+      {
+        "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+        "publisher": "Military.com",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.deseret.com/lifestyle/2026/11/10/veterans-day-2026-where-to-get-free-meals-discounts/",
+        "publisher": "Deseret News",
+        "published": "2026-11-10",
+        "accessed": "2026-11-11"
+      }
+    ],
+    "notes": "Past years' fine print: one per guest, cheese extra, Southern Lemonades, floats and shakes excluded."
+  },
+  {
+    "brand": "Dickey's Barbecue Pit",
+    "scope": "national",
+    "status_2026": "offering",
+    "offer": "Free pulled pork sandwich",
+    "est_value_usd": 9,
+    "dates": "2026-11-11",
+    "hours_local": "unknown",
+    "mode": "in_store",
+    "voucher_use_by": null,
+    "eligible": [
+      "veteran",
+      "active"
+    ],
+    "eligibility_quote": "Dine-in or carryout with valid military ID; one per guest per day (Military.com)",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "no",
+    "kids": null,
+    "proof": [
+      "military_id"
+    ],
+    "advance_signup": null,
+    "participating_locations_only": true,
+    "limits": "Dine-in or carryout; one per guest per day",
+    "grade": "B",
+    "sources": [
+      {
+        "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+        "publisher": "Military.com",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.livenowfox.com/news/veterans-day-2026-deals",
+        "publisher": "LiveNOW from FOX",
+        "published": "2026-11-04 (updated 2026-11-05)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.milehighonthecheap.com/veterans-day-deals-freebies-denver/",
+        "publisher": "Mile High on the Cheap",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "brand": "Teriyaki Madness",
+    "scope": "national",
+    "status_2026": "offering",
+    "offer": "Free junior or regular bowl",
+    "est_value_usd": 12,
+    "dates": "2026-11-11",
+    "hours_local": "unknown",
+    "mode": "in_store",
+    "voucher_use_by": null,
+    "eligible": [
+      "veteran",
+      "active"
+    ],
+    "eligibility_quote": "Active-duty and veterans; visit in uniform or show military ID; in-shop only (Military.com)",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "no",
+    "kids": null,
+    "proof": [
+      "military_id",
+      "uniform"
+    ],
+    "advance_signup": null,
+    "participating_locations_only": true,
+    "limits": "In-shop only, not online or in the app; one bowl per person",
+    "grade": "A",
+    "sources": [
+      {
+        "url": "https://teriyakimadness.com/veterans-day/",
+        "publisher": "Teriyaki Madness",
+        "published": "2026 (undated; offer dated 11/11/2026)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+        "publisher": "Military.com",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.milehighonthecheap.com/veterans-day-deals-freebies-denver/",
+        "publisher": "Mile High on the Cheap",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      }
+    ],
+    "notes": "Denver-founded chain. Chain page lists Colorado shops at Denver (8080 E. Union Ave.), Greenwood Village, Highlands Ranch, Littleton, Parker, Colorado Springs (7895 Silicon Heights and 534 Garden of the Gods Rd.), plus Northern Colorado."
+  },
+  {
+    "brand": "Torchy's Tacos",
+    "scope": "national",
+    "status_2026": "offering",
+    "offer": "Free taco and a 22-oz fountain drink",
+    "est_value_usd": 8,
+    "dates": "2026-11-11",
+    "hours_local": "unknown",
+    "mode": "in_store",
+    "voucher_use_by": null,
+    "eligible": [
+      "veteran",
+      "active"
+    ],
+    "eligibility_quote": "In-store only, with military ID or proof of service (Military.com)",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "no",
+    "kids": null,
+    "proof": [
+      "military_id",
+      "va_card",
+      "dd214"
+    ],
+    "advance_signup": null,
+    "participating_locations_only": true,
+    "limits": "In-store only",
+    "grade": "B",
+    "sources": [
+      {
+        "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+        "publisher": "Military.com",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.legion.org/information-center/news/veterans-day/2026/november/veterans-day-deals-and-discounts",
+        "publisher": "American Legion",
+        "published": "2026-11-05",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.milehighonthecheap.com/veterans-day-deals-freebies-denver/",
+        "publisher": "Mile High on the Cheap",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "brand": "Taziki's Mediterranean Cafe",
+    "scope": "national",
+    "status_2026": "offering",
+    "offer": "Free grilled chicken gyro (Gyros of Heroes)",
+    "est_value_usd": 12,
+    "dates": "2026-11-11",
+    "hours_local": "unknown",
+    "mode": "dine_in",
+    "voucher_use_by": null,
+    "eligible": [
+      "veteran",
+      "active"
+    ],
+    "eligibility_quote": "Veterans get a free Grilled Chicken Gyro; dine-in at participating locations (Military.com)",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "no",
+    "kids": null,
+    "proof": [
+      "military_id",
+      "va_card",
+      "dd214"
+    ],
+    "advance_signup": null,
+    "participating_locations_only": true,
+    "limits": "Dine-in, participating locations",
+    "grade": "B",
+    "sources": [
+      {
+        "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+        "publisher": "Military.com",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.foodnetwork.com/fn-dish/news/veterans-day-food-deals-roundup-2026",
+        "publisher": "Food Network",
+        "published": "2026-11-09",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.milehighonthecheap.com/veterans-day-deals-freebies-denver/",
+        "publisher": "Mile High on the Cheap",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.kool105.com/2026/11/10/veterans-day-deals-in-metro-denver/",
+        "publisher": "KOOL 105",
+        "published": "2026-11-10",
+        "accessed": "2026-11-11"
+      }
+    ],
+    "notes": "Colorado locations: Denver and Highlands Ranch. Military.com says the gyro comes with chips and a side; other lists say the gyro only."
+  },
+  {
+    "brand": "Dog Haus",
+    "scope": "national",
+    "status_2026": "offering",
+    "offer": "Free entree of choice",
+    "est_value_usd": 12,
+    "dates": "2026-11-11",
+    "hours_local": "unknown",
+    "mode": "dine_in",
+    "voucher_use_by": null,
+    "eligible": [
+      "veteran"
+    ],
+    "eligibility_quote": "Veterans get any entree free; dine-in only; one per veteran (Military.com)",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "no",
+    "kids": null,
+    "proof": [
+      "military_id",
+      "dd214",
+      "va_card",
+      "veteran_dl"
+    ],
+    "advance_signup": null,
+    "participating_locations_only": true,
+    "limits": "Dine-in only; one per veteran; not through the Haus Rewards app",
+    "grade": "B",
+    "sources": [
+      {
+        "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+        "publisher": "Military.com",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.foodnetwork.com/fn-dish/news/veterans-day-food-deals-roundup-2026",
+        "publisher": "Food Network",
+        "published": "2026-11-09",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.milehighonthecheap.com/veterans-day-deals-freebies-denver/",
+        "publisher": "Mile High on the Cheap",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.kool105.com/2026/11/10/veterans-day-deals-in-metro-denver/",
+        "publisher": "KOOL 105",
+        "published": "2026-11-10",
+        "accessed": "2026-11-11"
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "brand": "Capriotti's",
+    "scope": "national",
+    "status_2026": "offering",
+    "offer": "Free small sub with any purchase",
+    "est_value_usd": 10,
+    "dates": "2026-11-11",
+    "hours_local": "unknown",
+    "mode": "in_store",
+    "voucher_use_by": null,
+    "eligible": [
+      "veteran",
+      "active"
+    ],
+    "eligibility_quote": "Free small sub with any purchase, in-shop, with valid military ID (Military.com)",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "no",
+    "kids": null,
+    "proof": [
+      "military_id"
+    ],
+    "advance_signup": null,
+    "participating_locations_only": true,
+    "limits": "In-shop; any purchase required (Military.com, Food Network, KOOL 105)",
+    "grade": "B",
+    "sources": [
+      {
+        "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+        "publisher": "Military.com",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.foodnetwork.com/fn-dish/news/veterans-day-food-deals-roundup-2026",
+        "publisher": "Food Network",
+        "published": "2026-11-09",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.kool105.com/2026/11/10/veterans-day-deals-in-metro-denver/",
+        "publisher": "KOOL 105",
+        "published": "2026-11-10",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.milehighonthecheap.com/veterans-day-deals-freebies-denver/",
+        "publisher": "Mile High on the Cheap",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      }
+    ],
+    "notes": "Colorado locations: Castle Rock, Colorado Springs (2), Greenwood Village, Highlands Ranch, Parker."
+  },
+  {
+    "brand": "MOD Pizza",
+    "scope": "national",
+    "status_2026": "offering",
+    "offer": "50% off a regular-size pizza or salad",
+    "est_value_usd": 6,
+    "dates": "2026-11-11",
+    "hours_local": "unknown",
+    "mode": "in_store",
+    "voucher_use_by": null,
+    "eligible": [
+      "veteran",
+      "active",
+      "spouse"
+    ],
+    "eligibility_quote": "Veterans, active-duty, and their spouses (Mile High on the Cheap)",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "yes",
+    "kids": null,
+    "proof": [
+      "military_id",
+      "va_card",
+      "dd214"
+    ],
+    "advance_signup": null,
+    "participating_locations_only": true,
+    "limits": "Half off, not free",
+    "grade": "B",
+    "sources": [
+      {
+        "url": "https://www.milehighonthecheap.com/veterans-day-deals-freebies-denver/",
+        "publisher": "Mile High on the Cheap",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.kool105.com/2026/11/10/veterans-day-deals-in-metro-denver/",
+        "publisher": "KOOL 105",
+        "published": "2026-11-10",
+        "accessed": "2026-11-11"
+      }
+    ],
+    "notes": "No chain announcement found for 2026; the same 50%-off offer ran in 2025 (in-restaurant only, one per person). Check that the local MOD is still open before going."
+  },
+  {
+    "brand": "Taco John's",
+    "scope": "regional",
+    "status_2026": "offering",
+    "offer": "Free small beef crispy or softshell taco combo for TJ Rewards members",
+    "est_value_usd": 8,
+    "dates": "2026-11-11",
+    "hours_local": "unknown",
+    "mode": "in_store",
+    "voucher_use_by": null,
+    "eligible": [
+      "veteran",
+      "active",
+      "retiree"
+    ],
+    "eligibility_quote": "Active-duty, retired, and veteran military; TJ Rewards members only (Mile High on the Cheap)",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "no",
+    "kids": null,
+    "proof": [
+      "military_id",
+      "app"
+    ],
+    "advance_signup": "TJ Rewards membership",
+    "participating_locations_only": true,
+    "limits": null,
+    "grade": "B",
+    "sources": [
+      {
+        "url": "https://www.milehighonthecheap.com/veterans-day-deals-freebies-denver/",
+        "publisher": "Mile High on the Cheap",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      }
+    ],
+    "notes": "Only Denver-metro location is Westminster; others in Berthoud, Fort Collins, Greeley. Sources differ on how to redeem: Mile High on the Cheap says rewards members only; Money Talks News says through the Taco John's app; another list says in-store and drive-thru with proof of service. The loyalty program is called Bigger Bolder Rewards in some listings."
+  },
+  {
+    "brand": "Keke's Breakfast Cafe",
+    "scope": "national",
+    "status_2026": "offering",
+    "offer": "Free Two Egg Classic Combo, 7 a.m.-2:30 p.m.",
+    "est_value_usd": 11,
+    "dates": "2026-11-11",
+    "hours_local": "07:00-14:30",
+    "mode": "dine_in",
+    "voucher_use_by": null,
+    "eligible": [
+      "veteran",
+      "active"
+    ],
+    "eligibility_quote": "Active-duty and veterans; dine-in only; one per guest; no purchase required (Military.com)",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "no",
+    "kids": null,
+    "proof": [
+      "military_id",
+      "va_card",
+      "dd214"
+    ],
+    "advance_signup": null,
+    "participating_locations_only": true,
+    "limits": "Dine-in only, one per guest; beverages and substitutions excluded",
+    "grade": "B",
+    "sources": [
+      {
+        "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+        "publisher": "Military.com",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.livenowfox.com/news/veterans-day-2026-deals",
+        "publisher": "LiveNOW from FOX",
+        "published": "2026-11-04 (updated 2026-11-05)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.milehighonthecheap.com/veterans-day-deals-freebies-denver/",
+        "publisher": "Mile High on the Cheap",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.kool105.com/2026/11/10/veterans-day-deals-in-metro-denver/",
+        "publisher": "KOOL 105",
+        "published": "2026-11-10",
+        "accessed": "2026-11-11"
+      }
+    ],
+    "notes": "Only Colorado location: 1164 Sergeant Jon Stiles Dr., Highlands Ranch."
+  },
+  {
+    "brand": "Einstein Bros. Bagels",
+    "scope": "national",
+    "status_2026": "offering",
+    "offer": "Free any-size hot or iced coffee and a bagel with shmear",
+    "est_value_usd": 7,
+    "dates": "2026-11-11",
+    "hours_local": "store hours",
+    "mode": "in_store",
+    "voucher_use_by": null,
+    "eligible": [
+      "veteran",
+      "active"
+    ],
+    "eligibility_quote": "Veterans and active-duty (Mile High on the Cheap)",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "no",
+    "kids": null,
+    "proof": [
+      "military_id",
+      "va_card",
+      "dd214"
+    ],
+    "advance_signup": null,
+    "participating_locations_only": true,
+    "limits": "In-bakery only; mention the offer when ordering; specialty drinks excluded",
+    "grade": "B",
+    "sources": [
+      {
+        "url": "https://www.livenowfox.com/news/veterans-day-2026-deals",
+        "publisher": "LiveNOW from FOX",
+        "published": "2026-11-04 (updated 2026-11-05)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.milehighonthecheap.com/veterans-day-deals-freebies-denver/",
+        "publisher": "Mile High on the Cheap",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+        "publisher": "Military.com",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      }
+    ],
+    "notes": "LiveNOW from FOX and Mile High on the Cheap list any-size hot or iced coffee plus any bagel with any shmear, all day, bakery-only, no loyalty membership needed. Military.com lists only free coffee with any purchase; the coffee-plus-bagel version has two sources."
+  },
+  {
+    "brand": "Ziggi's Coffee",
+    "scope": "regional",
+    "status_2026": "offering",
+    "offer": "Free small drink of choice",
+    "est_value_usd": 5,
+    "dates": "2026-11-11",
+    "hours_local": "unknown",
+    "mode": "in_store",
+    "voucher_use_by": null,
+    "eligible": [
+      "veteran",
+      "active"
+    ],
+    "eligibility_quote": "Veterans and active-duty (Mile High on the Cheap)",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "no",
+    "kids": null,
+    "proof": [
+      "military_id",
+      "va_card",
+      "dd214"
+    ],
+    "advance_signup": null,
+    "participating_locations_only": true,
+    "limits": null,
+    "grade": "B",
+    "sources": [
+      {
+        "url": "https://www.milehighonthecheap.com/veterans-day-deals-freebies-denver/",
+        "publisher": "Mile High on the Cheap",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.kool105.com/2026/11/10/veterans-day-deals-in-metro-denver/",
+        "publisher": "KOOL 105",
+        "published": "2026-11-10",
+        "accessed": "2026-11-11"
+      }
+    ],
+    "notes": "Colorado-born drive-thru coffee chain. No chain announcement found for 2026; past years gave a free 16-oz drink, one per customer, with proof of service."
+  },
+  {
+    "brand": "Paris Baguette",
+    "scope": "national",
+    "status_2026": "offering",
+    "offer": "Free medium hot or iced coffee with any purchase, for PB Rewards members",
+    "est_value_usd": 4,
+    "dates": "2026-11-11",
+    "hours_local": "unknown",
+    "mode": "in_store",
+    "voucher_use_by": null,
+    "eligible": [
+      "veteran",
+      "active",
+      "spouse"
+    ],
+    "eligibility_quote": "Veterans, active-duty, and their families; PB Rewards members only (Mile High on the Cheap)",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "yes",
+    "kids": null,
+    "proof": [
+      "military_id",
+      "app"
+    ],
+    "advance_signup": "PB Rewards membership",
+    "participating_locations_only": true,
+    "limits": "Any purchase required",
+    "grade": "B",
+    "sources": [
+      {
+        "url": "https://www.milehighonthecheap.com/veterans-day-deals-freebies-denver/",
+        "publisher": "Mile High on the Cheap",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.kool105.com/2026/11/10/veterans-day-deals-in-metro-denver/",
+        "publisher": "KOOL 105",
+        "published": "2026-11-10",
+        "accessed": "2026-11-11"
+      }
+    ],
+    "notes": "KOOL 105 lists 10601 E. Garden Dr., Suite 105, Aurora, and says to call to confirm. No chain announcement found."
+  },
+  {
+    "brand": "Smoothie King",
+    "scope": "national",
+    "status_2026": "offering",
+    "offer": "Free 20-oz smoothie (three choices), noon-3 p.m.",
+    "est_value_usd": 7,
+    "dates": "2026-11-11",
+    "hours_local": "12:00-15:00",
+    "mode": "in_store",
+    "voucher_use_by": null,
+    "eligible": [
+      "veteran",
+      "active"
+    ],
+    "eligibility_quote": "Active-duty and veterans with valid military ID (Food Network)",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "no",
+    "kids": null,
+    "proof": [
+      "military_id"
+    ],
+    "advance_signup": null,
+    "participating_locations_only": true,
+    "limits": "Choice of Strawberry X-Treme, Blueberry Heaven or Vanilla Slim-N-Trim",
+    "grade": "B",
+    "sources": [
+      {
+        "url": "https://www.foodnetwork.com/fn-dish/news/veterans-day-food-deals-roundup-2026",
+        "publisher": "Food Network",
+        "published": "2026-11-09",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.milehighonthecheap.com/veterans-day-deals-freebies-denver/",
+        "publisher": "Mile High on the Cheap",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://kygo.com/veterans-day-2026-deals-in-colorado-free-food-and-discounts-on-nov-11/",
+        "publisher": "98.5 KYGO",
+        "published": "2026-11-09 (updated 2026-11-10)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.livenowfox.com/news/veterans-day-2026-deals",
+        "publisher": "LiveNOW from FOX",
+        "published": "2026-11-04 (updated 2026-11-05)",
+        "accessed": "2026-11-11"
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "brand": "TCBY",
+    "scope": "national",
+    "status_2026": "offering",
+    "offer": "First 6 oz of frozen yogurt and toppings free",
+    "est_value_usd": 4,
+    "dates": "2026-11-11",
+    "hours_local": "unknown",
+    "mode": "in_store",
+    "voucher_use_by": null,
+    "eligible": [
+      "veteran",
+      "active"
+    ],
+    "eligibility_quote": "Vets and active military; valid ID required (Military.com)",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "no",
+    "kids": null,
+    "proof": [
+      "military_id",
+      "va_card",
+      "dd214"
+    ],
+    "advance_signup": null,
+    "participating_locations_only": true,
+    "limits": "Customer pays for anything over 6 oz",
+    "grade": "B",
+    "sources": [
+      {
+        "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+        "publisher": "Military.com",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://themilitarywallet.com/veterans-day-free-meals/",
+        "publisher": "The Military Wallet",
+        "published": "2026 (updated)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.legion.org/information-center/news/veterans-day/2026/november/veterans-day-deals-and-discounts",
+        "publisher": "American Legion",
+        "published": "2026-11-05",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.milehighonthecheap.com/veterans-day-deals-freebies-denver/",
+        "publisher": "Mile High on the Cheap",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "brand": "LaMar's Donuts",
+    "scope": "regional",
+    "status_2026": "offering",
+    "offer": "Free donut with a hole (specialty donuts excluded); all customers get buy-one-get-one half dozen",
+    "est_value_usd": 2,
+    "dates": "2026-11-11",
+    "hours_local": "unknown",
+    "mode": "in_store",
+    "voucher_use_by": null,
+    "eligible": [
+      "veteran",
+      "active"
+    ],
+    "eligibility_quote": "Veterans and active military (Mile High on the Cheap)",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "no",
+    "kids": null,
+    "proof": [
+      "military_id",
+      "va_card",
+      "dd214"
+    ],
+    "advance_signup": null,
+    "participating_locations_only": true,
+    "limits": "Specialty donuts excluded",
+    "grade": "B",
+    "sources": [
+      {
+        "url": "https://www.milehighonthecheap.com/veterans-day-deals-freebies-denver/",
+        "publisher": "Mile High on the Cheap",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      }
+    ],
+    "notes": "Single 2026 source (Mile High on the Cheap); no chain announcement found. Past years also included a small coffee, which the 2026 listing does not mention."
+  },
+  {
+    "brand": "Le Peep",
+    "scope": "regional",
+    "status_2026": "offering",
+    "offer": "20% off the meal",
+    "est_value_usd": 3,
+    "dates": "2026-11-11",
+    "hours_local": "unknown",
+    "mode": "dine_in",
+    "voucher_use_by": null,
+    "eligible": [
+      "veteran",
+      "active"
+    ],
+    "eligibility_quote": "All veterans and active military (Mile High on the Cheap)",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "no",
+    "kids": null,
+    "proof": [
+      "military_id",
+      "va_card",
+      "dd214"
+    ],
+    "advance_signup": null,
+    "participating_locations_only": true,
+    "limits": "Discount, not free",
+    "grade": "B",
+    "sources": [
+      {
+        "url": "https://www.milehighonthecheap.com/veterans-day-deals-freebies-denver/",
+        "publisher": "Mile High on the Cheap",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      }
+    ],
+    "notes": "Colorado breakfast chain. Single 2026 source (Mile High on the Cheap); no chain announcement found."
+  },
+  {
+    "brand": "Parry's Pizzeria & Taphouse",
+    "scope": "regional",
+    "status_2026": "offering",
+    "offer": "Free entree (large chicken Caesar, 9-inch two-topping pizza, The Burger, Italian sandwich or 10 boneless wings) plus a fountain drink, 11 a.m.-3 p.m.",
+    "est_value_usd": 16,
+    "dates": "2026-11-11",
+    "hours_local": "11:00-15:00",
+    "mode": "dine_in",
+    "voucher_use_by": null,
+    "eligible": [
+      "veteran",
+      "active"
+    ],
+    "eligibility_quote": "Veterans and military members dining in",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "no",
+    "kids": null,
+    "proof": [
+      "military_id",
+      "va_card",
+      "dd214"
+    ],
+    "advance_signup": null,
+    "participating_locations_only": true,
+    "limits": "Dine-in only; Sliceria & Taps stores offer a smaller menu (no wings)",
+    "grade": "A",
+    "sources": [
+      {
+        "url": "https://parryspizza.com/events/parrys-veterans-day-2026/",
+        "publisher": "Parry's Pizzeria & Taphouse",
+        "published": "2026 (undated)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.kool105.com/2026/11/10/veterans-day-deals-in-metro-denver/",
+        "publisher": "KOOL 105",
+        "published": "2026-11-10",
+        "accessed": "2026-11-11"
+      }
+    ],
+    "notes": "Event page lists Arvada, Castle Rock, Centennial, Greenwood Village, Highlands Ranch, Northglenn, Parker, Sheridan, and North, East and South Colorado Springs. Proof of service not stated; bring it."
+  },
+  {
+    "brand": "In-N-Out Burger",
+    "scope": "national",
+    "status_2026": "offering",
+    "offer": "Free burger, fries and drink, plus a Veterans Day decal",
+    "est_value_usd": 9,
+    "dates": "2026-11-11",
+    "hours_local": "unknown",
+    "mode": "in_store",
+    "voucher_use_by": null,
+    "eligible": [
+      "veteran",
+      "active",
+      "guard_reserve"
+    ],
+    "eligibility_quote": "Veterans, active-duty, Reserve, and National Guard get a complimentary meal (Military.com)",
+    "guard_reserve": "yes",
+    "spouse_or_guest": "no",
+    "kids": null,
+    "proof": [
+      "military_id",
+      "va_card",
+      "dd214"
+    ],
+    "advance_signup": null,
+    "participating_locations_only": true,
+    "limits": null,
+    "grade": "B",
+    "sources": [
+      {
+        "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+        "publisher": "Military.com",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.livenowfox.com/news/veterans-day-2026-deals",
+        "publisher": "LiveNOW from FOX",
+        "published": "2026-11-04 (updated 2026-11-05)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://themilitarywallet.com/veterans-day-free-meals/",
+        "publisher": "The Military Wallet",
+        "published": "2026 (updated)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.milehighonthecheap.com/veterans-day-deals-freebies-denver/",
+        "publisher": "Mile High on the Cheap",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      }
+    ],
+    "notes": "All locations per LiveNOW from FOX. Current and former military also get a special-edition Veterans Day decal."
+  },
+  {
+    "brand": "Bass Pro Shops / Cabela's",
+    "scope": "national",
+    "status_2026": "offering",
+    "offer": "Free Veterans Appreciation Breakfast from 9 a.m., plus a raffle",
+    "est_value_usd": 8,
+    "dates": "2026-11-11",
+    "hours_local": "09:00-10:00",
+    "mode": "event",
+    "voucher_use_by": null,
+    "eligible": [
+      "veteran",
+      "active"
+    ],
+    "eligibility_quote": "Free Veterans Appreciation Breakfast, 9-11 a.m. (Mile High on the Cheap)",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "no",
+    "kids": null,
+    "proof": [
+      "military_id",
+      "va_card",
+      "dd214"
+    ],
+    "advance_signup": null,
+    "participating_locations_only": true,
+    "limits": "While supplies last",
+    "grade": "B",
+    "sources": [
+      {
+        "url": "https://www.milehighonthecheap.com/veterans-day-deals-freebies-denver/",
+        "publisher": "Mile High on the Cheap",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.denvergazette.com/2026/11/10/veterans-day-events-deals-and-closures-in-denver/",
+        "publisher": "Denver Gazette",
+        "published": "2026-11-10",
+        "accessed": "2026-11-11"
+      }
+    ],
+    "notes": "Chain's own 2026 event page not found. Denver Gazette lists 9-10 a.m. plus 10% off in-store for service members; Mile High on the Cheap lists 9-11 a.m. and a raffle for a Land of the Free merchandise collection. Colorado stores: Bass Pro Denver (7970 Northfield Blvd.), Cabela's Thornton (14050 Lincoln St.), Cabela's Lone Tree (10670 Cabela Dr.), Bass Pro Colorado Springs, Loveland. Sources differ on end time (10 or 11 a.m.); arrive at 9."
+  },
+  {
+    "brand": "Cobblestone Car Wash",
+    "scope": "regional",
+    "status_2026": "offering",
+    "offer": "Free Polish & Shine wash (free full-service wash at the Sheridan full-service site)",
+    "est_value_usd": 20,
+    "dates": "2026-11-11",
+    "hours_local": "unknown",
+    "mode": "in_store",
+    "voucher_use_by": null,
+    "eligible": [
+      "veteran",
+      "active"
+    ],
+    "eligibility_quote": "Any past or present military (Mile High on the Cheap)",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "no",
+    "kids": null,
+    "proof": [
+      "military_id",
+      "va_card",
+      "dd214"
+    ],
+    "advance_signup": null,
+    "participating_locations_only": true,
+    "limits": "Weather permitting",
+    "grade": "B",
+    "sources": [
+      {
+        "url": "https://www.milehighonthecheap.com/veterans-day-deals-freebies-denver/",
+        "publisher": "Mile High on the Cheap",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.kool105.com/2026/11/10/veterans-day-deals-in-metro-denver/",
+        "publisher": "KOOL 105",
+        "published": "2026-11-10",
+        "accessed": "2026-11-11"
+      }
+    ],
+    "notes": "About 20 Colorado sites. Sheridan location (Santa Fe Dr. and Oxford Ave.) offers full service. No 2026 release from parent Spotless Brands found; it ran a free Veterans Day wash across its brands in 2025."
+  },
+  {
+    "brand": "Strickland Brothers 10 Minute Oil Change",
+    "scope": "national",
+    "status_2026": "offering",
+    "offer": "$40 off any oil change package",
+    "est_value_usd": 40,
+    "dates": "2026-11-11/2026-11-12",
+    "hours_local": "unknown",
+    "mode": "in_store",
+    "voucher_use_by": null,
+    "eligible": [
+      "veteran",
+      "active"
+    ],
+    "eligibility_quote": "Active military and veterans (Mile High on the Cheap)",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "no",
+    "kids": null,
+    "proof": [
+      "military_id",
+      "va_card",
+      "dd214"
+    ],
+    "advance_signup": null,
+    "participating_locations_only": true,
+    "limits": "Discount on a paid oil change",
+    "grade": "B",
+    "sources": [
+      {
+        "url": "https://www.milehighonthecheap.com/veterans-day-deals-freebies-denver/",
+        "publisher": "Mile High on the Cheap",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      }
+    ],
+    "notes": "Listed location: 15610 E. 6th Ave., Aurora, near Buckley SFB. Single 2026 source (Mile High on the Cheap)."
+  },
+  {
+    "brand": "Grease Monkey",
+    "scope": "national",
+    "status_2026": "offering",
+    "offer": "$25 standard oil change (code WEVD25) or 25% off a premium oil change (code WEVDP5)",
+    "est_value_usd": 25,
+    "dates": "2026-11-11/2026-11-25",
+    "hours_local": "unknown",
+    "mode": "in_store",
+    "voucher_use_by": null,
+    "eligible": [
+      "veteran",
+      "active"
+    ],
+    "eligibility_quote": "Veterans coupon from the chain's veterans page",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "no",
+    "kids": null,
+    "proof": [
+      "military_id",
+      "va_card",
+      "dd214"
+    ],
+    "advance_signup": "Get the coupon by text or email from greasemonkey.com/veterans",
+    "participating_locations_only": true,
+    "limits": "Coupon code; discount on a paid oil change",
+    "grade": "A",
+    "sources": [
+      {
+        "url": "https://www.greasemonkey.com/veterans/",
+        "publisher": "Grease Monkey",
+        "published": "2026 (undated)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.milehighonthecheap.com/veterans-day-deals-freebies-denver/",
+        "publisher": "Mile High on the Cheap",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      }
+    ],
+    "notes": "Chain page shows both coupons with 'Redeem By: 11/25/26'; Mile High on the Cheap says through Nov. 21. Eligibility and proof are not spelled out on the page; bring proof of service. Participating locations not listed."
+  },
+  {
+    "brand": "Floyd's 99 Barbershop",
+    "scope": "regional",
+    "status_2026": "offering",
+    "offer": "$10 off a haircut",
+    "est_value_usd": 10,
+    "dates": "2026-11-01/2026-11-11",
+    "hours_local": "unknown",
+    "mode": "in_store",
+    "voucher_use_by": null,
+    "eligible": [
+      "veteran",
+      "active"
+    ],
+    "eligibility_quote": "Active-duty and veterans (Mile High on the Cheap)",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "no",
+    "kids": null,
+    "proof": [
+      "military_id",
+      "va_card",
+      "dd214"
+    ],
+    "advance_signup": null,
+    "participating_locations_only": true,
+    "limits": "Discount on a paid haircut",
+    "grade": "B",
+    "sources": [
+      {
+        "url": "https://www.milehighonthecheap.com/veterans-day-deals-freebies-denver/",
+        "publisher": "Mile High on the Cheap",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://kygo.com/veterans-day-2026-deals-in-colorado-free-food-and-discounts-on-nov-11/",
+        "publisher": "98.5 KYGO",
+        "published": "2026-11-09 (updated 2026-11-10)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.kool105.com/2026/11/10/veterans-day-deals-in-metro-denver/",
+        "publisher": "KOOL 105",
+        "published": "2026-11-10",
+        "accessed": "2026-11-11"
+      }
+    ],
+    "notes": "30+ Colorado shops; participating shops only (KOOL 105). No chain announcement found."
+  },
+  {
+    "brand": "BJ's Restaurant & Brewhouse",
+    "scope": "national",
+    "status_2026": "offering",
+    "offer": "Free Chocolate Chunk Pizookie with dine-in on Nov. 11; then a free appetizer with purchase of a regular-price entree Nov. 12-Dec. 14",
+    "est_value_usd": 9,
+    "dates": "2026-11-11",
+    "hours_local": "unknown",
+    "mode": "dine_in",
+    "voucher_use_by": "2026-12-14",
+    "eligible": [
+      "veteran",
+      "active"
+    ],
+    "eligibility_quote": "Current and former military get a free Chocolate Chunk Pizookie for dine-in at any location (Food Network)",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "no",
+    "kids": null,
+    "proof": [
+      "military_id",
+      "va_card",
+      "dd214"
+    ],
+    "advance_signup": null,
+    "participating_locations_only": true,
+    "limits": "Pizookie dine-in, no purchase stated; the later appetizer needs a regular-price entree",
+    "grade": "B",
+    "sources": [
+      {
+        "url": "https://www.foodnetwork.com/fn-dish/news/veterans-day-food-deals-roundup-2026",
+        "publisher": "Food Network",
+        "published": "2026-11-09",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.livenowfox.com/news/veterans-day-2026-deals",
+        "publisher": "LiveNOW from FOX",
+        "published": "2026-11-04 (updated 2026-11-05)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+        "publisher": "Military.com",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      }
+    ],
+    "notes": "Sources conflict on the follow-up appetizer: Food Network and LiveNOW from FOX say Nov. 12-Dec. 14 with a regular-price entree purchase; Military.com says a coupon good Nov. 12-Dec. 31 with no minimum. BJ's also has Denver-metro restaurants."
+  },
+  {
+    "brand": "Black Bear Diner",
+    "scope": "national",
+    "status_2026": "no_2026_info",
+    "offer": "Last year: free chicken-fried steak meal, dine-in, with military ID (Colorado Springs locations)",
+    "est_value_usd": 18,
+    "dates": null,
+    "hours_local": "unknown",
+    "mode": "dine_in",
+    "voucher_use_by": null,
+    "eligible": [
+      "veteran",
+      "active"
+    ],
+    "eligibility_quote": "Past-year offer per VETEFITS; Black Bear offers vary by franchise",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "no",
+    "kids": null,
+    "proof": [
+      "military_id"
+    ],
+    "advance_signup": null,
+    "participating_locations_only": true,
+    "limits": null,
+    "grade": "C",
+    "sources": [
+      {
+        "url": "https://vetefits.com/veterans-day-meals/",
+        "publisher": "VETEFITS",
+        "published": "2026 (checked 2026-11-09)",
+        "accessed": "2026-11-11"
+      }
+    ],
+    "notes": "No 2026 offer found from the chain or any 2026 list; VETEFITS marks its listing as a past-year offer. Black Bear Diner offers vary by franchise; call the N. Academy Blvd. or Garden of the Gods Rd. diner before going."
+  },
+  {
+    "brand": "Cheddar's Scratch Kitchen",
+    "scope": "national",
+    "status_2026": "offering",
+    "offer": "Free appetizer or dessert",
+    "est_value_usd": 9,
+    "dates": "2026-11-11",
+    "hours_local": "unknown",
+    "mode": "dine_in",
+    "voucher_use_by": null,
+    "eligible": [
+      "veteran",
+      "active"
+    ],
+    "eligibility_quote": "Free appetizer or dessert for veterans and active-duty military on Nov. 11; no purchase necessary (American Legion)",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "no",
+    "kids": null,
+    "proof": [
+      "military_id",
+      "va_card",
+      "dd214"
+    ],
+    "advance_signup": null,
+    "participating_locations_only": true,
+    "limits": "Dine-in; one per person",
+    "grade": "B",
+    "sources": [
+      {
+        "url": "https://www.legion.org/information-center/news/veterans-day/2026/november/veterans-day-deals-and-discounts",
+        "publisher": "American Legion",
+        "published": "2026-11-05",
+        "accessed": "2026-11-11"
+      }
+    ],
+    "notes": "Single 2026 source; same offer as 2025. Cheddar's also has Denver-metro restaurants."
+  },
+  {
+    "brand": "Chicken Salad Chick",
+    "scope": "national",
+    "status_2026": "offering",
+    "offer": "50% off a Chick Meal (scoop or sandwich, up to two sides and a regular fountain drink)",
+    "est_value_usd": 6,
+    "dates": "2026-11-11",
+    "hours_local": "unknown",
+    "mode": "in_store",
+    "voucher_use_by": null,
+    "eligible": [
+      "veteran",
+      "active"
+    ],
+    "eligibility_quote": "Veterans and active-duty; show a military ID or wear your uniform (The Military Wallet)",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "no",
+    "kids": null,
+    "proof": [
+      "military_id",
+      "uniform"
+    ],
+    "advance_signup": null,
+    "participating_locations_only": true,
+    "limits": "Half off, not free",
+    "grade": "B",
+    "sources": [
+      {
+        "url": "https://themilitarywallet.com/veterans-day-free-meals/",
+        "publisher": "The Military Wallet",
+        "published": "2026 (updated)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.legion.org/information-center/news/veterans-day/2026/november/veterans-day-deals-and-discounts",
+        "publisher": "American Legion",
+        "published": "2026-11-05",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.milehighonthecheap.com/veterans-day-deals-freebies-denver/",
+        "publisher": "Mile High on the Cheap",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      }
+    ],
+    "notes": "Change from past years: 2025 was a free meal; 2026 lists say 50% off. About 8 Colorado locations, including two in Colorado Springs."
+  },
+  {
+    "brand": "Kona Grill",
+    "scope": "national",
+    "status_2026": "offering",
+    "offer": "Free entree with purchase of any starter",
+    "est_value_usd": 25,
+    "dates": "2026-11-09/2026-11-11",
+    "hours_local": "unknown",
+    "mode": "dine_in",
+    "voucher_use_by": null,
+    "eligible": [
+      "veteran",
+      "active",
+      "guard_reserve"
+    ],
+    "eligibility_quote": "Veterans, active-duty, and Gold Star Families; dine-in only (Military.com)",
+    "guard_reserve": "yes",
+    "spouse_or_guest": "no",
+    "kids": null,
+    "proof": [
+      "military_id",
+      "va_card",
+      "dd214"
+    ],
+    "advance_signup": null,
+    "participating_locations_only": true,
+    "limits": "Dine-in; starter purchase required",
+    "grade": "B",
+    "sources": [
+      {
+        "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+        "publisher": "Military.com",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://themilitarywallet.com/veterans-day-free-meals/",
+        "publisher": "The Military Wallet",
+        "published": "2026 (updated)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.legion.org/information-center/news/veterans-day/2026/november/veterans-day-deals-and-discounts",
+        "publisher": "American Legion",
+        "published": "2026-11-05",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.milehighonthecheap.com/veterans-day-deals-freebies-denver/",
+        "publisher": "Mile High on the Cheap",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      }
+    ],
+    "notes": "Only Colorado location: 3000 E. 1st Ave., Cherry Creek. Reservists, first responders and Gold Star families also eligible."
+  },
+  {
+    "brand": "Benihana",
+    "scope": "national",
+    "status_2026": "offering",
+    "offer": "Free five-course hibachi chicken, steak or salmon entree with purchase of an appetizer",
+    "est_value_usd": 30,
+    "dates": "2026-11-09/2026-11-11",
+    "hours_local": "unknown",
+    "mode": "dine_in",
+    "voucher_use_by": null,
+    "eligible": [
+      "veteran",
+      "active"
+    ],
+    "eligibility_quote": "Active military, veterans, and Gold Star Families; dine-in only (Military.com)",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "no",
+    "kids": null,
+    "proof": [
+      "military_id",
+      "va_card"
+    ],
+    "advance_signup": null,
+    "participating_locations_only": true,
+    "limits": "Dine-in; appetizer purchase required",
+    "grade": "B",
+    "sources": [
+      {
+        "url": "https://www.foodnetwork.com/fn-dish/news/veterans-day-food-deals-roundup-2026",
+        "publisher": "Food Network",
+        "published": "2026-11-09",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+        "publisher": "Military.com",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.milehighonthecheap.com/veterans-day-deals-freebies-denver/",
+        "publisher": "Mile High on the Cheap",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      }
+    ],
+    "notes": "Colorado locations: Denver and Broomfield. Gold Star families and first responders also eligible. Food Network: military ID or veteran ID required; appetizer or starter purchase required. The chain page cited in earlier research (benihana.com/happenings/veterans-day-complimentary-entree/) returned 404."
+  },
+  {
+    "brand": "Rodizio Grill",
+    "scope": "regional",
+    "status_2026": "offering",
+    "offer": "Veteran eats free with purchase of one Full Rodizio adult lunch or dinner",
+    "est_value_usd": 40,
+    "dates": "2026-11-09/2026-11-12",
+    "hours_local": "unknown",
+    "mode": "dine_in",
+    "voucher_use_by": null,
+    "eligible": [
+      "veteran"
+    ],
+    "eligibility_quote": "All Veterans who come in ... will eat free",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "no",
+    "kids": null,
+    "proof": [
+      "military_id",
+      "va_card",
+      "dd214"
+    ],
+    "advance_signup": null,
+    "participating_locations_only": true,
+    "limits": "One paid adult Full Rodizio required; proof of service",
+    "grade": "A",
+    "sources": [
+      {
+        "url": "https://www.rodiziogrill.com/denver/events-and-specials.aspx",
+        "publisher": "Rodizio Grill Denver",
+        "published": "2026 (undated)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.kool105.com/2026/11/10/veterans-day-deals-in-metro-denver/",
+        "publisher": "KOOL 105",
+        "published": "2026-11-10",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.milehighonthecheap.com/veterans-day-deals-freebies-denver/",
+        "publisher": "Mile High on the Cheap",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      }
+    ],
+    "notes": "Denver location only. Page gives Mon. Nov. 9-Thu. Nov. 12 without a year; weekdays match 2026."
+  },
+  {
+    "brand": "Saltgrass Steak House",
+    "scope": "national",
+    "status_2026": "offering",
+    "offer": "20% off the meal for the veteran and up to four guests",
+    "est_value_usd": 10,
+    "dates": "2026-11-11",
+    "hours_local": "unknown",
+    "mode": "dine_in",
+    "voucher_use_by": null,
+    "eligible": [
+      "veteran",
+      "active"
+    ],
+    "eligibility_quote": "Veterans and up to four guests get 20% off, dine-in (Military.com)",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "yes",
+    "kids": null,
+    "proof": [
+      "military_id"
+    ],
+    "advance_signup": null,
+    "participating_locations_only": true,
+    "limits": "Dine-in; discount, not free; alcohol and retail excluded",
+    "grade": "B",
+    "sources": [
+      {
+        "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+        "publisher": "Military.com",
+        "published": "2026-11-10 (updated)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://themilitarywallet.com/veterans-day-free-meals/",
+        "publisher": "The Military Wallet",
+        "published": "2026 (updated)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.kool105.com/2026/11/10/veterans-day-deals-in-metro-denver/",
+        "publisher": "KOOL 105",
+        "published": "2026-11-10",
+        "accessed": "2026-11-11"
+      }
+    ],
+    "notes": "Denver-metro location: Westminster."
   }
 ]
