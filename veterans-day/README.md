@@ -215,7 +215,7 @@ Claude checked it against the sources the same night, corrected it and built it.
   (05:00 UTC), and `local_iso` takes the area's day start, so windows read "EST" and the engine's mealtimes use the
   area's offset (`meta.tz_offset_min`). Clock times on the page come from the shared time module, so a phone shows its
   own zone. The area test now reads each area's own `day_start` and zone.
-- **Totals:** 44 deals at 178 stops (A 16, B 27, C 1); drive table from Reston Town Center's grid. Local on the
+- **Totals:** 44 deals at 178 stops (A 16, B 27, C 1) on 10 Nov; 49 at 199 (A 18, B 30, C 1) since 11 Nov; drive table from Reston Town Center's grid. Local on the
   route: the RTC Run for Valor 5K (A; $35 to run, so a purchase deal, Off by default), Herndon's ceremony at 11:00 (A),
   Fairfax Post 177's at 10:30 (A), The Kensington Reston 2-4 PM (A, RSVP or call first: a senior-living community),
   Chick-fil-A Metro DC's free entree at its 10 participating stores here (A), Founding Farmers' 50% off brunch, lunch
@@ -231,8 +231,22 @@ Claude checked it against the sources the same night, corrected it and built it.
   read "0 in the area", and the first pass's `except BaseException` also caught Ctrl-C); a town given only in
   `addr:full` is used (Fogo de Chão Tysons was dropped for it); campus Chick-fil-A counters are skipped. The download
   cache `.atp-cache/` (about 90 MB) is in `.gitignore`.
-- **Not added (the publisher's call):** WTOP's 9 Nov list also has Silver Diner, The Greene Turtle, The Melting Pot, Grace for
-  Vets, Hard Rock Cafe DC and Pastis; each needs store lookups.
+- **Added 11 Nov 2026 about midnight CST** (WTOP's list, loose ends, an attached report; now 49 deals at 199
+  stops, A 18, B 30, C 1): Silver Diner 25% off an entree (B, five stores from its locator), The Melting Pot Reston's
+  free fondue meal with a second one bought (A, its own page; 5-9 PM), Grace for Vets' free car wash at seven Flagship
+  Carwash sites (A, its own list), Paisano's free large pizza (B, Food Network; seven stores from its locator) and
+  Frying Pan Farm Park's free wagon rides 10-3 (B, FFXnow; a new kind, `outing`). Extras: DC Prime to A, Udvar-Hazy's
+  free parking for veterans, Metro's free parking, the Great Falls Freedom Memorial ceremony, the Park Authority's
+  rec centers and Lake Fairfax camping, the Army museum, Springfield Post 176; Crafthouse Reston as a lead. The Greene
+  Turtle is out (no store in the circles; Dulles Town Center closed). Founding Farmers' hours are now its own
+  (11 AM-10 PM). Local stores can carry `"status": "confirmed"` and a `url` when they come from the business's own
+  locator, so the page doesn't call them "from directories". Details: `research/reston-va/notes.md`.
+- **Page fixes, 11 Nov:** the Deals search and Route quick-add example text is each area's own (`AREA_EXAMPLES` in
+  `app.js`, tested so every word finds something in its area; Fargo's said "Mandan", which found nothing there), and
+  an offer's `cost_text` replaces "free" where that misleads: the 5K reads "$35 to run; free to watch" (its value and
+  worth for the engine are unchanged).
+- **Store lookups:** All the Places has no Bar Louie spider; Carrabba's is `carrabbas_italian_grill`; Krispy Kreme's
+  name was right (one failed download). None of the three changes the stores.
 - **Fixed the same night (every area):** Antigravity's `59c4f9e` (live since about 5:30 PM) called `E.driveMinutes`,
   which the engine never had, so every deal card and the Route tab's quick-add search threw and the Deals tab was
   blank. `placeDriveInfo` in `app.js` now reads the route's drive table (`ctx.fromPos`, seconds from you to each

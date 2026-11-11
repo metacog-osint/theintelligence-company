@@ -109,7 +109,7 @@ test("Plan for: Optimal is the first button and the default (10 Nov 2026)", () =
 
 test("every offer in every area says what kind of stop it is; tickets for later have no kind", () => {
   const KNOWN = new Set(["meal", "snack", "coffee", "sweet", "bar", "haircut", "car-wash", "oil-change", "shopping",
-    "ceremony", "memorial", "flag", "games"]);
+    "ceremony", "memorial", "flag", "games", "outing"]);
   for (const [area, { deals }] of Object.entries(AREA_DATA)) {
     for (const o of deals.offers) {
       assert.ok(Array.isArray(o.kinds), `${area} ${o.id}: kinds`);
@@ -289,4 +289,34 @@ test("the page names the area where it used to say Fargo-Moorhead, and keeps the
 test("closed or absent stores stay out (Smashburger closed Oct 2026, per the publisher; no metro Hy-Vee, Red Robin, Golden Corral, Hooters, Famous Dave's)", () => {
   const ids = new Set(DEALS.offers.map((o) => o.id));
   for (const id of ["smashburger", "hy-vee", "red-robin", "golden-corral", "hooters", "famous-daves"]) assert.ok(!ids.has(id), id);
+});
+
+test("each area's search examples are its own: every word finds a deal or store in that area (11 Nov 2026)", () => {
+  const block = /const AREA_EXAMPLES = (\{[\s\S]*?\n {2}\});/.exec(SCRIPTS["app.js"]);
+  assert.ok(block, "AREA_EXAMPLES in app.js");
+  const ex = JSON.parse(block[1].replace(/\b(deals|route):/g, '"$1":'));
+  assert.deepEqual(Object.keys(ex).sort(), AREAS.map((a) => a.id).sort(), "one entry per area");
+  // The same folding as normSearch in app.js.
+  const norm = (s) => String(s || "").toLowerCase().replace(/['’`.\-&/]/g, "").replace(/\s+/g, " ").trim();
+  for (const a of AREAS) {
+    const { deals } = AREA_DATA[a.id];
+    const byId = new Map(deals.offers.map((o) => [o.id, o]));
+    const hays = deals.places.map((p) => norm(byId.get(p.offer).brand + " " + byId.get(p.offer).offer + " " + p.address));
+    for (const word of ex[a.id].deals.concat(ex[a.id].route)) {
+      const q = norm(word).split(" ");
+      assert.ok(hays.some((hay) => q.every((t) => hay.includes(t))), `${a.id}: "${word}" finds nothing there`);
+    }
+  }
+  assert.match(SCRIPTS["app.js"], /\$\("#q"\)\.placeholder = /, "set on load");
+  assert.match(SCRIPTS["app.js"], /\$\("#route-q"\)\.placeholder = /, "set on load");
+});
+
+test("the 5K says what it costs: $35 to run, free to watch, and still scores as before (11 Nov 2026)", () => {
+  const run = AREA_DATA["reston-va"].deals.offers.find((o) => o.id === "rtc-run-for-valor");
+  assert.ok(run, "the RTC Run for Valor 5K is in Reston's data");
+  assert.equal(run.cost_text, "$35 to run; free to watch");
+  assert.equal(run.value, 0);
+  assert.equal(run.worth, 12);
+  assert.equal(run.purchase, true);
+  assert.match(SCRIPTS["app.js"], /const worthText = \(o\) => \(o\.cost_text \? o\.cost_text :/);
 });

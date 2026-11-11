@@ -210,7 +210,7 @@
     "status_2026": "confirmed",
     "est_value_usd": 14,
     "dates": "2026-11-11",
-    "hours_local": "11:00-21:00",
+    "hours_local": "11:00-22:00",
     "mode": "dine_in",
     "eligible": [
       "veteran",
@@ -232,22 +232,26 @@
     "stores": [
       {
         "address": "1904 Reston Metro Plaza, Reston, VA 20190",
-        "phone": "(703) 480-0870",
-        "wed_hours": "",
-        "geo": "38.948976,-77.338276"
+        "phone": "(703) 988-7333",
+        "wed_hours": "11:00-22:00",
+        "geo": "38.948976,-77.338276",
+        "status": "confirmed",
+        "url": "https://wearefoundingfarmers.com/location/reston/"
       },
       {
         "address": "1800 Tysons Blvd, Tysons, VA 22102",
         "phone": "(703) 442-8783",
-        "wed_hours": "",
-        "geo": "38.922530,-77.222568"
+        "wed_hours": "11:00-22:00",
+        "geo": "38.922530,-77.222568",
+        "status": "confirmed",
+        "url": "https://wearefoundingfarmers.com/location/tysons/"
       }
     ],
     "sources": [
       {
         "url": "https://www.wearefoundingfarmers.com/a-time-to-serve-our-veterans/",
         "publisher": "Founding Farmers",
-        "published": "2026",
+        "published": "2026-10-29",
         "accessed": "2026-11-10"
       },
       {
@@ -257,7 +261,7 @@
         "accessed": "2026-11-10"
       }
     ],
-    "notes": "Reston Station (1904 Reston Metro Plaza) and Tysons (1800 Tysons Blvd). Its page doesn't say every location takes part; reserve or call first. Store hours not checked."
+    "notes": "Reston Station (1904 Reston Metro Plaza) and Tysons (1800 Tysons Blvd). The offer page (29 Oct 2026) says the full lunch and dinner menus are available at all locations. Wednesday lunch and dinner 11 AM-10 PM at both (their location pages, read 11 Nov 2026); both list brunch from about 9 AM on 'most weekday holidays', which may or may not include 11 Nov, so the window starts at 11:00. Reserve or call first."
   },
   {
     "name": "Ted's Bulletin",
@@ -307,5 +311,367 @@
       }
     ],
     "notes": "Reston Town Center, 11948 Market St (open as of September 2026). From lists, not Ted's own page."
+  },
+  {
+    "name": "Silver Diner",
+    "kind": "business",
+    "status_2026": "announced",
+    "est_value_usd": 4,
+    "dates": "2026-11-11",
+    "hours_local": "07:00-23:00",
+    "mode": "in_store",
+    "eligible": [
+      "veteran",
+      "active"
+    ],
+    "eligibility_quote": "",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "no",
+    "proof": [
+      "military_id"
+    ],
+    "participating_locations_only": false,
+    "limits": "25% off one entree. Bring a valid military ID. Stars and Stripes says all locations in DC, Maryland, Virginia and New Jersey; neither list says whether it is dine-in only.",
+    "offer": "25% off an entree for veterans and active-duty military.",
+    "grade": "B",
+    "stores": [
+      {
+        "address": "11951 Killingsworth Ave, Reston, VA 20194",
+        "phone": "(703) 742-0801",
+        "wed_hours": "07:00-23:00",
+        "geo": "38.966660,-77.358660",
+        "status": "confirmed",
+        "url": "https://locations.silverdiner.com/va/reston/restaurant-103.html"
+      },
+      {
+        "address": "12250 Fair Lakes Pkwy, Fairfax, VA 22033",
+        "phone": "(703) 359-5999",
+        "wed_hours": "07:00-23:00",
+        "geo": "38.859830,-77.370580",
+        "status": "confirmed",
+        "url": "https://locations.silverdiner.com/va/fairfax/restaurant-121.html"
+      },
+      {
+        "address": "8101 Fletcher Ave, McLean, VA 22102",
+        "phone": "(703) 821-5666",
+        "wed_hours": "07:00-23:00",
+        "geo": "38.916830,-77.226100",
+        "status": "confirmed",
+        "url": "https://locations.silverdiner.com/va/mclean/restaurant-110.html"
+      },
+      {
+        "address": "8150 Porter Rd, Falls Church, VA 22042",
+        "phone": "(703) 204-0812",
+        "wed_hours": "07:00-23:00",
+        "geo": "38.872830,-77.226340",
+        "status": "confirmed",
+        "url": "https://locations.silverdiner.com/va/fallschurch/restaurant-127.html"
+      },
+      {
+        "address": "20530 Heron Overlook Plaza, Ashburn, VA 20147",
+        "phone": "(703) 468-9293",
+        "wed_hours": "07:00-23:00",
+        "geo": "39.048940,-77.450180",
+        "status": "confirmed",
+        "url": "https://locations.silverdiner.com/va/ashburn/restaurant-112.html"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://wtop.com/local/2026/11/deals-and-freebies-for-veterans-day/",
+        "publisher": "WTOP",
+        "published": "2026-11-09",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+        "publisher": "Stars and Stripes",
+        "published": "2026-11-06",
+        "accessed": "2026-11-11"
+      }
+    ],
+    "notes": "Not on Silver Diner's own site (its promotions page lists other offers; read 11 Nov 2026). Stores, phones and Wednesday hours from its own locator; pins from OpenStreetMap."
+  },
+  {
+    "name": "The Melting Pot",
+    "kind": "business",
+    "status_2026": "confirmed",
+    "est_value_usd": 40,
+    "dates": "2026-11-11",
+    "hours_local": "17:00-21:00",
+    "mode": "dine_in",
+    "eligible": [
+      "veteran"
+    ],
+    "eligibility_quote": "",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "no",
+    "proof": [
+      "military_id",
+      "dd214",
+      "va_card",
+      "dl_veteran"
+    ],
+    "participating_locations_only": false,
+    "limits": "A free 4-course fondue meal for a veteran with proof of service when another meal is bought. 11 Nov only, dine-in only, DC-area locations. Not for family members; not with other offers; excludes the Bigger Night Out. Space is limited: reserve. Opens 5 PM; last seating 9 PM.",
+    "offer": "Free 4-course fondue meal for a veteran when another guest buys one.",
+    "grade": "A",
+    "stores": [
+      {
+        "address": "11730 Plaza America Dr, Ste 100, Reston, VA 20190",
+        "phone": "(703) 435-1277",
+        "wed_hours": "17:00-21:00",
+        "geo": "38.953380,-77.350090",
+        "status": "confirmed",
+        "url": "https://www.meltingpot.com/reston-va/"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.meltingpot.com/reston-va/melting-pot-events.aspx",
+        "publisher": "The Melting Pot Reston",
+        "published": "2026",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://wtop.com/local/2026/11/deals-and-freebies-for-veterans-day/",
+        "publisher": "WTOP",
+        "published": "2026-11-09",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+        "publisher": "Stars and Stripes",
+        "published": "2026-11-06",
+        "accessed": "2026-11-11"
+      }
+    ],
+    "notes": "The Reston restaurant's own events page (read 11 Nov 2026). Stars and Stripes also names active duty and says other regions run a different offer on 11-12 Nov; the Reston page is used. The value is an estimate."
+  },
+  {
+    "name": "Grace for Vets free car wash (Flagship Carwash)",
+    "kind": "business",
+    "status_2026": "confirmed",
+    "est_value_usd": 12,
+    "dates": "2026-11-11",
+    "hours_local": "",
+    "mode": "in_store",
+    "eligible": [
+      "veteran",
+      "active"
+    ],
+    "eligibility_quote": "",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "no",
+    "proof": [],
+    "participating_locations_only": true,
+    "limits": "A free wash for veterans and active-duty personnel on 11 Nov at participating washes. Grace for Vets doesn't say what proof to bring: carry a military or veteran ID. Hours not published for the day: call the wash.",
+    "offer": "Free car wash for veterans and active duty.",
+    "grade": "A",
+    "stores": [
+      {
+        "address": "632 Grant St, Herndon, VA",
+        "phone": "",
+        "wed_hours": "",
+        "geo": "38.967570,-77.378280",
+        "status": "confirmed",
+        "url": "https://www.graceforvets.com/find-a-participating-wash"
+      },
+      {
+        "address": "2501 Centreville Rd, Herndon, VA",
+        "phone": "(571) 800-1440",
+        "wed_hours": "",
+        "geo": "38.949180,-77.410440",
+        "status": "confirmed",
+        "url": "https://www.graceforvets.com/find-a-participating-wash"
+      },
+      {
+        "address": "45215 Towlern Pl, Sterling, VA",
+        "phone": "",
+        "wed_hours": "",
+        "status": "confirmed",
+        "url": "https://www.graceforvets.com/find-a-participating-wash"
+      },
+      {
+        "address": "540 Maple Ave W, Vienna, VA",
+        "phone": "",
+        "wed_hours": "",
+        "geo": "38.893540,-77.274520",
+        "status": "confirmed",
+        "url": "https://www.graceforvets.com/find-a-participating-wash"
+      },
+      {
+        "address": "10874 Fairfax Blvd, Fairfax, VA",
+        "phone": "",
+        "wed_hours": "",
+        "status": "confirmed",
+        "url": "https://www.graceforvets.com/find-a-participating-wash"
+      },
+      {
+        "address": "20395 Broad Overlook Dr, Ashburn, VA",
+        "phone": "(703) 858-0020",
+        "wed_hours": "",
+        "geo": "39.051370,-77.450400",
+        "status": "confirmed",
+        "url": "https://www.graceforvets.com/find-a-participating-wash"
+      },
+      {
+        "address": "6814 Old Dominion Dr, McLean, VA",
+        "phone": "",
+        "wed_hours": "",
+        "status": "confirmed",
+        "url": "https://www.graceforvets.com/find-a-participating-wash"
+      },
+      {
+        "address": "43985 Pipeline Plaza, Ashburn, VA",
+        "phone": "",
+        "wed_hours": "",
+        "status": "confirmed",
+        "url": "https://www.graceforvets.com/find-a-participating-wash"
+      },
+      {
+        "address": "43324 Junction Plaza, Ashburn, VA",
+        "phone": "",
+        "wed_hours": "",
+        "status": "confirmed",
+        "url": "https://www.graceforvets.com/find-a-participating-wash"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.graceforvets.com/find-a-participating-wash",
+        "publisher": "Grace for Vets",
+        "published": "undated (every Veterans Day)",
+        "accessed": "2026-11-11"
+      },
+      {
+        "url": "https://wtop.com/local/2026/11/deals-and-freebies-for-veterans-day/",
+        "publisher": "WTOP",
+        "published": "2026-11-09",
+        "accessed": "2026-11-11"
+      }
+    ],
+    "notes": "Grace for Vets' participating list (read 11 Nov 2026) names these Flagship Carwash sites; the build keeps those inside the circles. Pins from OpenStreetMap where it has the wash (its 2501 pin is tagged McNair Farms Dr, the corner of Centreville Rd), else the Census geocoder. Hours are Flagship's usual 8 AM-8 PM from OpenStreetMap's tags for other Flagship washes, not published for the day."
+  },
+  {
+    "name": "Paisano's Pizza",
+    "kind": "business",
+    "status_2026": "announced",
+    "est_value_usd": 16,
+    "dates": "2026-11-11",
+    "hours_local": "",
+    "mode": "in_store",
+    "eligible": [
+      "veteran",
+      "active"
+    ],
+    "eligibility_quote": "",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "no",
+    "proof": [
+      "military_id"
+    ],
+    "participating_locations_only": false,
+    "limits": "In-store, with proof of service: a US Uniformed Services ID (active or retired), a veterans organization card, or your uniform.",
+    "offer": "Free large one-topping pizza for veterans and active-duty military, at all 40 stores in Virginia, Maryland and DC.",
+    "grade": "B",
+    "stores": [
+      {
+        "address": "12056 N Shore Dr, Reston, VA 20190",
+        "phone": "(703) 707-1000",
+        "wed_hours": "",
+        "status": "confirmed",
+        "url": "https://www.paisanospizza.com/locations"
+      },
+      {
+        "address": "1141 Elden St, Herndon, VA 20170",
+        "phone": "(703) 796-6800",
+        "wed_hours": "",
+        "status": "confirmed",
+        "url": "https://www.paisanospizza.com/locations"
+      },
+      {
+        "address": "312 Maple Ave W, Vienna, VA 22180",
+        "phone": "(703) 281-7800",
+        "wed_hours": "",
+        "geo": "38.897600,-77.269620",
+        "status": "confirmed",
+        "url": "https://www.paisanospizza.com/locations"
+      },
+      {
+        "address": "8603 Westwood Center Dr, Vienna, VA 22182",
+        "phone": "(703) 714-9900",
+        "wed_hours": "",
+        "geo": "38.929030,-77.244560",
+        "status": "confirmed",
+        "url": "https://www.paisanospizza.com/locations"
+      },
+      {
+        "address": "10330 Main St, Fairfax, VA 22030",
+        "phone": "(703) 273-9900",
+        "wed_hours": "",
+        "geo": "38.846400,-77.303390",
+        "status": "confirmed",
+        "url": "https://www.paisanospizza.com/locations"
+      },
+      {
+        "address": "12595 Fair Lakes Circle, Fairfax, VA 22033",
+        "phone": "(703) 266-1400",
+        "wed_hours": "",
+        "status": "confirmed",
+        "url": "https://www.paisanospizza.com/locations"
+      },
+      {
+        "address": "44260 Ice Rink Plaza, Ashburn, VA 20147",
+        "phone": "(571) 223-0000",
+        "wed_hours": "",
+        "status": "confirmed",
+        "url": "https://www.paisanospizza.com/locations"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.foodnetwork.com/fn-dish/news/veterans-day-food-deals-roundup-2026",
+        "publisher": "Food Network",
+        "published": "2026-11-09",
+        "accessed": "2026-11-11"
+      }
+    ],
+    "notes": "From Food Network's 9 Nov 2026 roundup; not on Paisano's own site (read 11 Nov 2026), and not on WTOP's list. Stores and phones from Paisano's own locator; hours not published (usual pizza-shop hours assumed). Pins from OpenStreetMap where it has the store, else the Census geocoder."
+  },
+  {
+    "name": "Frying Pan Farm Park: free wagon rides",
+    "kind": "event",
+    "address": "2709 West Ox Rd, Herndon, VA 20171",
+    "phone": "(703) 437-9101",
+    "geo": "38.937790,-77.408510",
+    "wednesday_hours": "10:00-15:00",
+    "status_2026": "confirmed",
+    "est_value_usd": 0,
+    "dates": "2026-11-11",
+    "hours_local": "10:00-15:00",
+    "mode": "event",
+    "eligible": [
+      "veteran",
+      "active",
+      "guard_reserve"
+    ],
+    "eligibility_quote": "",
+    "guard_reserve": "unclear",
+    "spouse_or_guest": "yes",
+    "kids": true,
+    "proof": [],
+    "limits": "Wagon rides 10 AM-3 PM, free for active-duty service members, veterans and their families (FFXnow). The Park Authority's own 2026 notice wasn't found; bring a military or veteran ID.",
+    "offer": "Free wagon rides for active-duty service members, veterans and their families, from the Fairfax County Park Authority.",
+    "grade": "B",
+    "sources": [
+      {
+        "url": "https://www.ffxnow.com/2026/11/10/veterans-day-to-close-fairfax-county-government-but-not-schools/",
+        "publisher": "FFXnow",
+        "published": "2026-11-10",
+        "accessed": "2026-11-11"
+      }
+    ],
+    "notes": "FFXnow, 10 Nov 2026. Address and phone from the Park Authority's park pages; pin at the farm area (OpenStreetMap)."
   }
 ]

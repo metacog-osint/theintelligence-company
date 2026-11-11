@@ -1,7 +1,23 @@
-# Hub handoff: where things stand (10 Nov 2026, about 10:35 PM CST: Veterans Day Reston area and the Deals-tab fix live from fe2187a, not pushed; 5:30 PM: Antigravity's two commits live, not noted until now; 1:45 PM: Hornbacher's and Post 2 list live from d1d897c)
+# Hub handoff: where things stand (10 Nov 2026, about 11:00 PM CST: Reston's WTOP deals and page fixes built and tested, not committed; 10:35 PM: Veterans Day Reston area and the Deals-tab fix live from fe2187a, pushed with 870fb2b; 5:30 PM: Antigravity's two commits live; 1:45 PM: Hornbacher's and Post 2 list live from d1d897c)
 
 Read with `CLAUDE.md` (the project's notes). Times are Central (CST since 1 Nov). Each commit, push and deploy needs
 Tom's yes.
+
+## Veterans Day planner: Reston's WTOP deals and page fixes, 10 Nov 2026 about 11:00 PM CST ("Finish the Reston work")
+**Built and tested, not committed or deployed** (Tom held batch 1, the page fixes, to ship with the deals). GitHub's
+site-checks run 42960407365 on `870fb2b` passed (both jobs; `master` = `origin/master` before this work).
+- **Page fixes (every area):** the Deals search and Route quick-add example text is each area's own (`AREA_EXAMPLES`
+  in `app.js`; Fargo-Moorhead's said "Mandan", which finds nothing there); the 5K card reads "$35 to run; free to
+  watch" (`cost_text`; value and worth unchanged).
+- **Reston:** 49 deals at 199 stops (A 18, B 30, C 1): Silver Diner (B), The Melting Pot Reston (A), Grace for Vets at
+  seven Flagship washes (A), Paisano's (B, from an attached report), Frying Pan Farm Park's free wagon rides (B).
+  Extras: DC Prime to A, Udvar-Hazy free parking, Metro free parking, Great Falls Freedom Memorial, Park Authority
+  perks, Army museum, Springfield Post 176; Crafthouse a lead. Greene Turtle out (no store in the circles).
+  `drive.json` rebuilt. 98 planner tests pass; checked in `hub-main` at phone size (49 deals, Optimal 17 stops).
+- **Loose ends:** spider names fixed (Bar Louie has none, Carrabba's is `carrabbas_italian_grill`, Krispy Kreme was
+  right; no store changes); DC Prime's address confirmed from its own post; Founding Farmers' Wednesday hours are
+  11 AM-10 PM at both (its pages); Udvar-Hazy parking is $15 before 4 PM, free for veterans and active duty on 11 Nov.
+- Details: `veterans-day/README.md` ("Reston & Northern Virginia") and `research/reston-va/notes.md`.
 
 ## Veterans Day planner: Reston & Northern Virginia, 10 Nov 2026 night (a fourth area for a colleague in Reston; "Yes, finish it")
 **Live** since about 10:35 PM CST from `fe2187a` ("Commit and deploy"; not pushed: `master` is ahead of
