@@ -1,6 +1,6 @@
 {
  "meta": {
-  "built_at": "2026-11-11T05:52:08Z",
+  "built_at": "2026-11-11T06:12:01Z",
   "day": "2026-11-11",
   "day_start": "2026-11-11T05:00:00Z",
   "tz": "America/New_York",
@@ -2178,10 +2178,15 @@
      "url": "https://dealybee.com/guides/veterans-day-free-meals",
      "publisher": "Dealybee (DC, Maryland & Virginia list)",
      "published": "2026-11-09"
+    },
+    {
+     "url": "https://www.thegreeneturtle.com/locations/",
+     "publisher": "The Greene Turtle (its store list)",
+     "published": "undated"
     }
    ],
-   "notes": "A free dine-in meal up to $15 for veterans (WTOP, 9 Nov 2026); not on the Greene Turtle's own site. Lists say select locations. Addresses from directories: Columbia (8872 McGaw Rd) and Arundel Mills (7556 Teague Rd).",
-   "caution": "Select locations, and addresses from directories: call first",
+   "notes": "A free dine-in meal up to $15 for veterans (WTOP, 9 Nov 2026); not on the Greene Turtle's own site, and lists say select locations. Its three restaurants here, from its own store list: Columbia (8872 McGaw Rd), Arundel Mills (7556 Teague Rd) and Gambrills at Waugh Chapel (1407 S Main Chapel Way).",
+   "caution": "Select locations: call first",
    "group": null,
    "ticket": false,
    "purchase": false,
@@ -2329,13 +2334,66 @@
      "published": "2026-11-09"
     }
    ],
-   "notes": "One 2026 deal list (Dealybee, 9 Nov) carries it: free for the first 20 with a valid military ID, then 50% off; drinks not included. No post from KPOT was found. 351 Montrose Ave, Laurel, (240) 280-2840; address and hours from directories.",
+   "notes": "One 2026 deal list (Dealybee, 9 Nov) carries it, linked to KPOT Fairfax's page, so Laurel's part isn't confirmed: free for the first 20 with a valid military ID, then 50% off; drinks not included. No post from KPOT was found. 351 Montrose Ave, Laurel, (240) 280-2840; address and hours from directories.",
    "caution": "Only one unconfirmed 2026 listing: call first",
    "group": null,
    "ticket": false,
    "purchase": true,
    "kinds": [
     "meal"
+   ]
+  },
+  {
+   "id": "showroom-shine",
+   "brand": "Showroom Shine Car Wash",
+   "status": "offering",
+   "category": "service",
+   "offer": "Last year: a free wash on 11 Nov for veterans (active and retired service members with a valid ID) at all its washes",
+   "value": 12,
+   "grade": "C",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "in_store",
+   "minutes": 15,
+   "busy": 15,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "no",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "Last year's terms: a free wash for active and retired service members with a valid ID (the page's text says veterans). No 2026 word found: call (240) 341-3177 first.",
+   "sources": [
+    {
+     "url": "https://www.showroomshinecarwash.com/veterans-day-free-wash",
+     "publisher": "Showroom Shine (its Veterans Day page, last updated 26 Sep 2025)",
+     "published": "2025"
+    },
+    {
+     "url": "https://www.wbaltv.com/article/free-car-wash-veterans-day-gambrills-glen-burnie/69395027",
+     "publisher": "WBAL-TV",
+     "published": "2025-11-11"
+    }
+   ],
+   "notes": "Showroom Shine's own Veterans Day page (last updated September 2025; WBAL reported the day on 11 Nov 2025): veterans wash free at all its washes on November 11th, for active and retired service members with a valid ID. Nothing posted for 2026 was found. 735 McKnew Rd, Gambrills; hours not published.",
+   "caution": "Last year's offer, no 2026 word: call (240) 341-3177 first",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "car-wash"
    ]
   }
  ],
@@ -4024,28 +4082,42 @@
    "id": "greene-turtle-8872-mcgaw-rd",
    "offer": "greene-turtle",
    "name": "",
-   "address": "8872 McGaw Rd, Columbia, MD 21045",
+   "address": "8872 McGaw Rd, Suite C, Columbia, MD 21045",
    "lat": 39.188255,
    "lng": -76.818838,
    "phone": "(410) 312-5255",
    "open": "2026-11-11T16:00:00Z",
-   "close": "2026-11-12T02:00:00Z",
-   "hoursAssumed": true,
-   "verified": "unverified",
+   "close": "2026-11-12T06:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
    "pin": "geo"
   },
   {
    "id": "greene-turtle-7556-teague-rd",
    "offer": "greene-turtle",
    "name": "",
-   "address": "7556 Teague Rd, Ste 100, Hanover, MD 21076",
+   "address": "7556 Teague Rd, Hanover, MD 21076",
    "lat": 39.154306,
    "lng": -76.719848,
-   "phone": "",
+   "phone": "(410) 799-5001",
    "open": "2026-11-11T16:00:00Z",
-   "close": "2026-11-12T02:00:00Z",
-   "hoursAssumed": true,
-   "verified": "unverified",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "greene-turtle-1407-s-main-chapel-way",
+   "offer": "greene-turtle",
+   "name": "",
+   "address": "1407 S Main Chapel Way, Ste 115, Gambrills, MD 21054",
+   "lat": 39.033089,
+   "lng": -76.686765,
+   "phone": "(410) 702-9896",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
    "pin": "geo"
   },
   {
@@ -4088,6 +4160,20 @@
    "close": "2026-11-12T04:00:00Z",
    "hoursAssumed": false,
    "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "showroom-shine-735-mcknew-rd",
+   "offer": "showroom-shine",
+   "name": "",
+   "address": "735 McKnew Rd, Gambrills, MD 21054",
+   "lat": 39.053423,
+   "lng": -76.659349,
+   "phone": "(240) 341-3177",
+   "open": "2026-11-11T14:00:00Z",
+   "close": "2026-11-12T00:00:00Z",
+   "hoursAssumed": true,
+   "verified": "confirmed",
    "pin": "geo"
   }
  ],
@@ -4277,11 +4363,16 @@
    "day": "Wed 11 Nov, until 4:00 PM",
    "at": null,
    "name": "Bubba's 33: free lunch (Glen Burnie, outside the area)",
-   "where": "Glen Burnie (street address not confirmed)",
-   "offer": "A free lunch from select entrees until 4 PM for active, former or retired military with proof of service.",
-   "grade": "B",
-   "note": "Bubba's 33 is Texas Roadhouse's sister chain; the nearest store is in Glen Burnie, outside the circles. Call first.",
+   "where": "7305 Ritchie Hwy, Glen Burnie, about 8 km east of Arundel Mills (outside the circles)",
+   "offer": "Veterans eat free: a free lunch from select entrees until 4 PM for active, former or retired military. ID may be requested; not with other offers.",
+   "grade": "A",
+   "note": "Bubba's 33 (Texas Roadhouse's sister chain) carries the offer on its own home page for Wednesday, 11 Nov. Street address from OpenStreetMap and MapQuest (the chain's store page didn't load here).",
    "sources": [
+    {
+     "url": "https://www.bubbas33.com/",
+     "publisher": "Bubba's 33",
+     "published": "2026"
+    },
     {
      "url": "https://www.legion.org/information-center/news/veterans-day/2026/november/veterans-day-deals-and-discounts",
      "publisher": "The American Legion",
@@ -4325,13 +4416,13 @@
   },
   {
    "id": "national-cryptologic-museum",
-   "day": "Usually Tue-Sat 10 AM-4 PM; 11 Nov not confirmed",
+   "day": "Closed on federal holidays, so expect it closed Wed 11 Nov",
    "at": null,
-   "name": "National Cryptologic Museum (always free)",
+   "name": "National Cryptologic Museum (always free; closed on federal holidays)",
    "where": "8290 Colony Seven Rd, Annapolis Junction (beside Fort Meade)",
    "offer": "NSA's museum of codes and code-breaking; admission is always free.",
    "grade": "C",
-   "note": "Not a Veterans Day offer, and NSA's museum pages reportedly say it closes on federal holidays (nsa.gov couldn't be read here): call (301) 688-5849 before going.",
+   "note": "Not a Veterans Day offer. NSA's own museum pages say it's closed on Sundays and federal holidays (read through search results on 11 Nov 2026; nsa.gov refuses automated reads here). Its pages differ on the other days' hours: call (301) 688-5849 before a later visit.",
    "sources": [
     {
      "url": "https://www.nsa.gov/museum/",
@@ -4345,11 +4436,26 @@
    "day": "Wed 11 Nov",
    "at": null,
    "name": "What's closed and open",
-   "where": "Anne Arundel, Prince George's and Howard counties",
-   "offer": "Federal offices are closed and there's no mail delivery. Anne Arundel County: county offices closed; public schools and libraries open; curbside trash and recycling on the normal schedule. Prince George's County (most of Laurel): county offices, public schools and libraries closed; trash collected. Howard County: the County Council's offices are closed; its full 2026 notice wasn't found (in 2024 its offices, courts, 50+ centers, animal shelter, Robinson Nature Center and historic sites closed while parks stayed open). MARC runs full service on all three lines; Metrorail runs its weekend schedule, 5 AM-midnight.",
+   "where": "Anne Arundel, Howard and Prince George's counties and the City of Laurel",
+   "offer": "Federal offices are closed and there's no mail delivery. Anne Arundel County: county offices closed; public schools and libraries open; curbside trash and recycling on the normal schedule; only county bus routes 201, 202 (Arundel Mills-Odenton), 203 and the BWI Express run, and Call-N-Ride is closed. Howard County: county offices, 50+ centers, the animal shelter, local courts and county historic sites (except the B&O Ellicott City Station Museum) are closed; county parks, Robinson Nature Center, the North Laurel, Gary J. Arthur and Roger Carter community centers and Alpha Ridge Landfill are open; RTA buses run their regular weekday schedule; every Howard County Library System branch is closed. Prince George's County (most of Laurel): county offices, public schools and libraries closed; trash collected; county buses run except route P78. City of Laurel: city and passport offices closed; Wednesday trash, recycling and compost pickup moves to Thursday 12 Nov, and there's no bulky-item or yard-debris pickup on 11 Nov. MARC runs full service on all three lines; Metrorail runs its weekend schedule, 5 AM-midnight.",
    "grade": "B",
-   "note": "Howard County libraries and schools weren't confirmed for 2026: check before going.",
+   "note": "Howard County public schools weren't confirmed for 2026: check before going. Howard County's notice names two different days for trash pickup, so check before setting bins out.",
    "sources": [
+    {
+     "url": "https://www.howardcountymd.gov/News110926",
+     "publisher": "Howard County Government",
+     "published": "2026-11-09"
+    },
+    {
+     "url": "https://www.hclibrary.org/blog/closings/",
+     "publisher": "Howard County Library System",
+     "published": "2026"
+    },
+    {
+     "url": "https://www.cityoflaurel.org/AlertCenter.aspx?AID=CityPassport-Offices-CLOSED-Wed-Nov-11th-262",
+     "publisher": "City of Laurel",
+     "published": "2026-11-10"
+    },
     {
      "url": "https://wtop.com/local/2026/11/whats-open-and-closed-in-the-dc-region-on-veterans-day-2026/",
      "publisher": "WTOP",
@@ -4363,18 +4469,5 @@
    ]
   }
  ],
- "leads": [
-  {
-   "name": "Joe's Crab Shack (Severn / Arundel Mills)",
-   "area": "Severn",
-   "q": "Joe's Crab Shack Arundel Mills Hanover MD",
-   "offer": "Dealybee's 9 Nov 2026 list: 20% off the meal for veterans dining in, parties up to 4, with a military ID. No store address was found in the area (Joe's locator page is gone; OpenStreetMap has only Halethorpe).",
-   "last_seen": "2026 (one list, no address)",
-   "source": {
-    "url": "https://dealybee.com/guides/veterans-day-free-meals",
-    "publisher": "Dealybee (DC, Maryland & Virginia list, 9 Nov 2026)",
-    "published": null
-   }
-  }
- ]
+ "leads": []
 }

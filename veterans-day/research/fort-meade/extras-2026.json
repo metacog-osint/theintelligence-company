@@ -131,11 +131,12 @@
    "id": "bubbas-33-glen-burnie",
    "day": "Wed 11 Nov, until 4:00 PM",
    "name": "Bubba's 33: free lunch (Glen Burnie, outside the area)",
-   "where": "Glen Burnie (street address not confirmed)",
-   "offer": "A free lunch from select entrees until 4 PM for active, former or retired military with proof of service.",
-   "grade": "B",
-   "note": "Bubba's 33 is Texas Roadhouse's sister chain; the nearest store is in Glen Burnie, outside the circles. Call first.",
+   "where": "7305 Ritchie Hwy, Glen Burnie, about 8 km east of Arundel Mills (outside the circles)",
+   "offer": "Veterans eat free: a free lunch from select entrees until 4 PM for active, former or retired military. ID may be requested; not with other offers.",
+   "grade": "A",
+   "note": "Bubba's 33 (Texas Roadhouse's sister chain) carries the offer on its own home page for Wednesday, 11 Nov. Street address from OpenStreetMap and MapQuest (the chain's store page didn't load here).",
    "sources": [
+    {"url": "https://www.bubbas33.com/", "publisher": "Bubba's 33", "published": "2026"},
     {"url": "https://www.legion.org/information-center/news/veterans-day/2026/november/veterans-day-deals-and-discounts", "publisher": "The American Legion", "published": "2026-11-05"}
    ]
   },
@@ -165,12 +166,12 @@
   },
   {
    "id": "national-cryptologic-museum",
-   "day": "Usually Tue-Sat 10 AM-4 PM; 11 Nov not confirmed",
-   "name": "National Cryptologic Museum (always free)",
+   "day": "Closed on federal holidays, so expect it closed Wed 11 Nov",
+   "name": "National Cryptologic Museum (always free; closed on federal holidays)",
    "where": "8290 Colony Seven Rd, Annapolis Junction (beside Fort Meade)",
    "offer": "NSA's museum of codes and code-breaking; admission is always free.",
    "grade": "C",
-   "note": "Not a Veterans Day offer, and NSA's museum pages reportedly say it closes on federal holidays (nsa.gov couldn't be read here): call (301) 688-5849 before going.",
+   "note": "Not a Veterans Day offer. NSA's own museum pages say it's closed on Sundays and federal holidays (read through search results on 11 Nov 2026; nsa.gov refuses automated reads here). Its pages differ on the other days' hours: call (301) 688-5849 before a later visit.",
    "sources": [
     {"url": "https://www.nsa.gov/museum/", "publisher": "National Security Agency", "published": "undated"}
    ]
@@ -179,26 +180,20 @@
    "id": "closures",
    "day": "Wed 11 Nov",
    "name": "What's closed and open",
-   "where": "Anne Arundel, Prince George's and Howard counties",
-   "offer": "Federal offices are closed and there's no mail delivery. Anne Arundel County: county offices closed; public schools and libraries open; curbside trash and recycling on the normal schedule. Prince George's County (most of Laurel): county offices, public schools and libraries closed; trash collected. Howard County: the County Council's offices are closed; its full 2026 notice wasn't found (in 2024 its offices, courts, 50+ centers, animal shelter, Robinson Nature Center and historic sites closed while parks stayed open). MARC runs full service on all three lines; Metrorail runs its weekend schedule, 5 AM-midnight.",
+   "where": "Anne Arundel, Howard and Prince George's counties and the City of Laurel",
+   "offer": "Federal offices are closed and there's no mail delivery. Anne Arundel County: county offices closed; public schools and libraries open; curbside trash and recycling on the normal schedule; only county bus routes 201, 202 (Arundel Mills-Odenton), 203 and the BWI Express run, and Call-N-Ride is closed. Howard County: county offices, 50+ centers, the animal shelter, local courts and county historic sites (except the B&O Ellicott City Station Museum) are closed; county parks, Robinson Nature Center, the North Laurel, Gary J. Arthur and Roger Carter community centers and Alpha Ridge Landfill are open; RTA buses run their regular weekday schedule; every Howard County Library System branch is closed. Prince George's County (most of Laurel): county offices, public schools and libraries closed; trash collected; county buses run except route P78. City of Laurel: city and passport offices closed; Wednesday trash, recycling and compost pickup moves to Thursday 12 Nov, and there's no bulky-item or yard-debris pickup on 11 Nov. MARC runs full service on all three lines; Metrorail runs its weekend schedule, 5 AM-midnight.",
    "grade": "B",
-   "note": "Howard County libraries and schools weren't confirmed for 2026: check before going.",
+   "note": "Howard County public schools weren't confirmed for 2026: check before going. Howard County's notice names two different days for trash pickup, so check before setting bins out.",
    "sources": [
+    {"url": "https://www.howardcountymd.gov/News110926", "publisher": "Howard County Government", "published": "2026-11-09"},
+    {"url": "https://www.hclibrary.org/blog/closings/", "publisher": "Howard County Library System", "published": "2026"},
+    {"url": "https://www.cityoflaurel.org/AlertCenter.aspx?AID=CityPassport-Offices-CLOSED-Wed-Nov-11th-262", "publisher": "City of Laurel", "published": "2026-11-10"},
     {"url": "https://wtop.com/local/2026/11/whats-open-and-closed-in-the-dc-region-on-veterans-day-2026/", "publisher": "WTOP", "published": "2026-11-10"},
     {"url": "https://www.aacounty.org/news-events/events/holiday-calendar/veterans-day", "publisher": "Anne Arundel County", "published": "2026"}
    ]
   }
  ],
- "leads": [
-  {
-   "name": "Joe's Crab Shack (Severn / Arundel Mills)",
-   "area": "Severn",
-   "q": "Joe's Crab Shack Arundel Mills Hanover MD",
-   "offer": "Dealybee's 9 Nov 2026 list: 20% off the meal for veterans dining in, parties up to 4, with a military ID. No store address was found in the area (Joe's locator page is gone; OpenStreetMap has only Halethorpe).",
-   "last_seen": "2026 (one list, no address)",
-   "src": "dealybee"
-  }
- ],
+ "leads": [],
  "lead_sources": {
   "dealybee": {"url": "https://dealybee.com/guides/veterans-day-free-meals", "publisher": "Dealybee (DC, Maryland & Virginia list, 9 Nov 2026)"}
  }
