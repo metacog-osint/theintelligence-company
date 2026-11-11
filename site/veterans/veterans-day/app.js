@@ -23,6 +23,8 @@
     { id: "twin-cities", dir: "data/twin-cities/" },
     { id: "reston-va", dir: "data/reston-va/" },
     { id: "reno-sparks", dir: "data/reno-sparks/" },
+    { id: "fort-meade", dir: "data/fort-meade/" },
+    { id: "denver", dir: "data/denver/" },
     { id: "colorado-springs", dir: "data/colorado-springs/" }
   ];
   const DEFAULT_AREA = "fargo-moorhead";
@@ -1315,6 +1317,29 @@
       ["39.5321,-119.7225", "Sparks Marina and Legends, NV"],
       ["39.4398,-119.7707", "South Reno (South Meadows), NV"]
     ],
+    "fort-meade": [
+      ["", "Start from town…"],
+      ["39.0840,-76.7000", "Odenton, MD"],
+      ["39.1080,-76.7430", "Fort Meade (on post), MD"],
+      ["39.0360,-76.6800", "Gambrills / Crofton (Waugh Chapel), MD"],
+      ["39.1560,-76.7240", "Hanover / Arundel Mills, MD"],
+      ["39.0990,-76.8480", "Laurel, MD"],
+      ["39.2150,-76.8600", "Columbia, MD"]
+    ],
+    "denver": [
+      ["", "Start from town…"],
+      ["39.7392,-104.9903", "Downtown Denver, CO"],
+      ["39.7170,-104.9530", "Cherry Creek, CO"],
+      ["39.7294,-104.8319", "Aurora (Anschutz), CO"],
+      ["39.7100,-104.7800", "Aurora near Buckley SFB, CO"],
+      ["39.7110,-105.0810", "Lakewood (Belmar), CO"],
+      ["39.6133,-105.0166", "Littleton, CO"],
+      ["39.5480,-104.9690", "Highlands Ranch, CO"],
+      ["39.5620,-104.8800", "Lone Tree (Park Meadows), CO"],
+      ["39.8367,-105.0372", "Westminster, CO"],
+      ["39.8680,-104.9720", "Thornton, CO"],
+      ["39.9205,-105.0867", "Broomfield, CO"]
+    ],
     "colorado-springs": [
       ["", "Start from town…"],
       ["38.8339,-104.8214", "Downtown Colorado Springs, CO"],
@@ -1333,6 +1358,8 @@
     "twin-cities": { deals: ["Caribou", "Lexington Ave", "Maple Grove"], route: ["Caribou", "Perkins", "Wayzata Blvd"] },
     "reston-va": { deals: ["Chick-fil-A", "Leesburg Pike", "Herndon"], route: ["Chick-fil-A", "Wawa", "Sunset Hills"] },
     "reno-sparks": { deals: ["Squeeze In", "Kietzke", "Sparks"], route: ["Squeeze In", "In-N-Out", "McCarran"] },
+    "fort-meade": { deals: ["Mission BBQ", "Baltimore Ave", "Columbia"], route: ["Mission BBQ", "Wawa", "Arundel Mills"] },
+    "denver": { deals: ["Wings Over", "Colfax", "Aurora"], route: ["Golden Corral", "Wings Over", "Colfax"] },
     "colorado-springs": { deals: ["Texas Roadhouse", "Academy Blvd", "Monument"], route: ["Texas Roadhouse", "Starbucks", "Powers Blvd"] }
   };
   const AREA_ALIASES = {
@@ -1354,6 +1381,25 @@
     "sparks": "reno-sparks",
     "reno-nv": "reno-sparks",
     "washoe": "reno-sparks",
+    "meade": "fort-meade",
+    "ft-meade": "fort-meade",
+    "fort-meade-md": "fort-meade",
+    "odenton": "fort-meade",
+    "laurel": "fort-meade",
+    "columbia": "fort-meade",
+    "gambrills": "fort-meade",
+    "severn": "fort-meade",
+    "aurora": "denver",
+    "buckley": "denver",
+    "lakewood": "denver",
+    "littleton": "denver",
+    "lone-tree": "denver",
+    "highlands-ranch": "denver",
+    "centennial": "denver",
+    "westminster": "denver",
+    "thornton": "denver",
+    "broomfield": "denver",
+    "denver-co": "denver",
     "springs": "colorado-springs",
     "cos": "colorado-springs",
     "colorado-springs-co": "colorado-springs",

@@ -302,6 +302,77 @@ was opened at its own source the same night and graded; research, corrections an
   Deals lists 40 of 40 with Pacific windows shown in the viewer's zone, the Map draws, no sideways scroll, no console
   errors apart from the report Worker refusing that port's origin. 102 planner tests pass.
 
+## Fort Meade, MD (built 11 Nov 2026 about 1 AM CST on branch `vetday-fort-meade`; the coordinating session merges and deploys it)
+10 Nov 2026 night: an area for colleagues at Fort Meade, on Veterans Day itself. Built from a Claude research report (`Downloads\Veterans Day 2026 Near Fort Meade_ Deals, Freebies, Events and Closures.md`, 10 Nov about 11 PM CST)
+and the coordinating session's leads, each read at its own source on 11 Nov 2026. Every check, correction and judgment
+call: `research/fort-meade/notes.md`.
+- **Area** `fort-meade`, "Fort Meade: Odenton, Laurel, Columbia, MD", `?area=fort-meade` (aliases `meade`, `ft-meade`,
+  `fort-meade-md`, `odenton`, `laurel`, `columbia`, `gambrills`, `severn`). Eastern time, like Reston (`tz`,
+  `tz_offset_min` -300, `tz_abbr`, `day_start` 05:00 UTC). Circles: Fort Meade and Odenton 6 km, Gambrills and Crofton
+  4.5, Severn/Hanover/Arundel Mills 4.5, Laurel 5, Columbia 6. Drive times start from Odenton; start presets for
+  Odenton, Fort Meade (on post), Waugh Chapel, Arundel Mills, Laurel and Columbia. Drive table: 770 of 806 grid points.
+- **Totals:** 41 deals at 125 stops (A 9, B 30, C 2); 15 items under "Other days and places"; 1 lead.
+- **Local on the route:** Chick-fil-A Metro DC's free entree at its one participating store here, Laurel (13600
+  Baltimore Ave; A, its own list; the other nine Chick-fil-A stores in the circles aren't on it and are dropped), Silver
+  Diner Elkridge (B), Grace for Vets at Flagship Carwash, Severn (A, its own list), The Greene Turtle's free dine-in meal
+  up to $15 (B, WTOP 9 Nov; two stores from directories, call first), Main Event Columbia (B: its own page has no year;
+  American Legion 5 Nov), All American Steakhouse Odenton and KPOT Laurel (C, one 2026 list, call first). No 2026
+  ceremony was found inside the circles; Crownsville, the WWII Memorial and Annapolis (all 11:00) are under Deals.
+- **On post:** stores whose address reads "Fort Meade, MD" need installation access, so they stay off the route
+  (`on_post` in REGIONS; the Exchange food court's Charleys, Qdoba and Starbucks, Dunkin' on Mapes Rd, a second Qdoba).
+  The Exchange's 6-12 Nov sale and 11 Nov challenge coins, the commissary's 9-5 holiday hours and MWR's holiday hours
+  (DFMWR's 17 Aug 2026 sheet: bowling noon-4, Gaffney 8-noon, Murphy Field House 24/7 for registered users, the rest
+  closed) are under Deals.
+- **Bar line transit:** MDOT MTA's free rides on 11 Nov for veterans, active duty, Guard and Reserve (service alert
+  29401, 9 Nov) with a DoD ID, VA ID or MVA Veteran designation (no DD-214).
+- **Stores fixed from the chains' own pages:** Mission BBQ's three (Gambrills, Laurel, Columbia; 11 AM-9 PM), Golden
+  Corral's house number (7047 Arundel Mills Blvd). `stores_region.py` accepts "Maryland"; `split_addr` reads MD.
+- **Corrections to the research report** (details in the notes): MTA doesn't take a DD-214; Red Robin has no Gambrills store
+  (Columbia only); Bob Evans has none in Gambrills or Laurel (Columbia only); Outback has Laurel too; Red Lobster
+  Arundel Mills is on the chain's own list; Great Clips has two salons in the circles, not many; Mission BBQ and Shake
+  Shack stay B (no 2026 company post); Silver Diner Elkridge is inside the area; Robinson Nature Center isn't
+  confirmed open; Prince George's County (most of Laurel) closes offices, schools and libraries; MWR's 2026 hours exist;
+  Col. Joshua Patton has commanded the garrison since 15 Oct 2026; the Cryptologic Museum's holiday opening is
+  unconfirmed (not routed); the Greene Turtle has a Veterans Day meal this year; Grace for Vets has a Severn wash.
+- **Testing:** the new worktree checked files out with CRLF (system `core.autocrlf=true`), which breaks the
+  practice-marks test's regex; converting the working files to LF (git's stored form) fixed it. 99 planner and site
+  tests pass on the branch, 102 after merging master's Reno–Sparks area. Checked in a preview on port 5057 (not an allowed report origin) at 375 px: `?area=meade` opens and
+  saves the area; 41 of 41 deals; 12-stop Optimal route; the Map draws it by road; no sideways scroll.
+
+## Denver metro, CO (seventh area, the first on Mountain time; built 11 Nov 2026 about midnight-2 AM CST on branch `vetday-denver`)
+10 Nov 2026: Denver metro ("metro spread") from his research report, built overnight while he slept under his
+instruction to research, build and deploy without asking. Research, corrections and judgment calls:
+`research/denver/notes.md`.
+- **Area** `denver`, "Denver metro, CO", `?area=denver` (aliases `aurora`, `buckley`, `lakewood`, `littleton`,
+  `lone-tree`, `highlands-ranch`, `centennial`, `westminster`, `thornton`, `broomfield`, `denver-co`). Six circles:
+  Downtown, Capitol Hill, Cherry Creek and Lowry 8 km; Aurora and Buckley SFB 7; Lakewood and Belmar 6; Littleton and
+  Highlands Ranch 6; Lone Tree, Centennial and Park Meadows 6.8; Westminster, Thornton and Broomfield 8.3. Drive times
+  start from downtown Denver. Eleven start presets. Mountain time: `tz` America/Denver, -420, MST, `day_start` 07:00
+  UTC. No transit line: RTD gives free rides to active duty and youth only.
+- **Size.** 725 chain stores sit in the circles, so REGIONS `thin=(6, 6.0, 8.0)`: a chain with more than 6 stores here
+  keeps stores 6 km apart (8 km for a deal that needs a purchase), nearest the circles' middles first. `grid_km=1.1`
+  spaces the drive table's start points 1.1 km apart (911 of 930 kept; drive.json 2.4 MB). Totals: 101 deals at 397
+  stops (A 20, B 79, C 2); `planDay` about 116 ms at 7 AM in node against Reston's 78 ms. Other areas are unchanged.
+- **Colorado chains** (shared with Colorado Springs, commit `ffba0e3` on `vetday-co-chains`): 47 chains' 2026 offers
+  from the coordinating session's research, appended to `national-2026.json`, each limited by `only` to the area(s)
+  with stores. Stores come from All the Places (31 Oct; Yard House and Cheddar's 17 Oct) and OpenStreetMap. Bass Pro
+  Shops and Cabela's are one chain with two spiders (a list in SPIDERS). `in_area` in CURATE gives one area its own
+  fields: Colorado's Jiffy Lube franchisee gives a free oil change. Rodizio's offer is downtown only (`drop`).
+  Whataburger, Wienerschnitzel, Bombshells, Benihana, Pilot and Tommy's Express have no store in the circles.
+- **Local on the route** (15 entries): Westminster's ceremony at the Armed Forces Tribute Garden 10-11 AM (A, the
+  city's calendar; `arrive_by` 10:00), Wings Over the Rockies free for veterans 10-5 (A), Salt Water Social and STK
+  (A, a starter bought), The Melting Pot Littleton (A, a second meal bought), Shucking Good's Blue Island (Cherry Creek
+  and Lone Tree), Ash and Agave and Oliver's Italian (B), Thirsty Lion (B), the Rendezvous at Heather Gardens (B),
+  discounts at Denver Chophouse, Henry's, ViewHouse and Tamayo (B, purchase), Legacy Ridge golf (B, call first).
+- **Under Deals:** free meters in Denver, state parks free, NPS, the zoo's free day (timed tickets, likely gone),
+  closures, golf and Bonfire Burritos just outside, Holidaily, Emagine Parker, Cherokee Ranch, the Red Rocks car show,
+  Parker and Castle Rock fireworks, Aurora's Veterans Salute (Thu), the Denver parade (Sat), VETEFITS (Sat); 3 leads.
+- **Corrections to the report:** Westminster's ceremony is 10-11 AM at 6001 W 104th Ave (the report: time TBA, 6601);
+  the zoo's day is for everyone with a timed ticket; Rodizio is downtown only; the fireworks are July 4 shows moved.
+- Checked in a preview on port 5059 at 375 px with `?area=lakewood&now=` 8 AM MST: Denver loads, Optimal builds 15
+  stops (Sport Clips, Cobblestone, Wings, Good Times...), Deals lists 101 of 101, the Map draws the route by road, no
+  sideways scroll, no console errors apart from the report Worker refusing that port. 103 planner tests pass.
+
 ## Optimal (engine v1.4, app v1.3; live since about 12:15 PM CST 10 Nov 2026 from `0b12a0d`, approved; not pushed)
 10 Nov 2026: the Maximize routes "can include redundant types of locations on the same route in the same time
 frame e.g. multiple free coffee grabs within a short window of time ... most users won't want to do that. So the
@@ -349,7 +420,7 @@ python -I veterans-day/build/drive_matrix.py [area ...]   # only when stores cha
 python -I veterans-day/build/stores_region.py <area> <cache folder>   # new areas only: chain stores -> research/<area>/locations-2026.json
 cd tests && node --test --no-warnings veterans.test.js veterans-engine.test.js veterans-roads.test.js site.test.js
 ```
-Area ids: `fargo-moorhead`, `bismarck-mandan`, `twin-cities`, `reston-va`, `reno-sparks` (REGIONS in `build_data.py`). Rebuild Fargo-Moorhead's
+Area ids: `fargo-moorhead`, `bismarck-mandan`, `twin-cities`, `reston-va`, `reno-sparks`, `fort-meade` (REGIONS in `build_data.py`). Rebuild Fargo-Moorhead's
 `drive.json` only when its stores change; the drive table must follow every change to an area's store list.
 
 `tests/veterans-map.test.js` (the Map in a browser) needs Playwright: see `tests/README.md`.
