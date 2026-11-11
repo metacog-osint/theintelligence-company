@@ -131,18 +131,68 @@ CURATE = [
     dict(id="pizza-ranch", src="national", name="Pizza Ranch", loc="Pizza Ranch", osm="pizzaranch", category="meal", minutes=45, busy=15, meal=True, dineIn=True,
          elsewhere=dict(offer="Last year: each Pizza Ranch chose a free Veterans Day buffet for veterans or a Veterans Week discount. Nothing found for 2026 at these stores")),
     # Chains with a 2026 offer and no Fargo-Moorhead store (other areas only; added 9 Nov 2026 with the area picker).
-    dict(id="red-robin", src="national", name="Red Robin", loc="Red Robin", osm=None, category="meal", minutes=50, busy=20, meal=True, dineIn=True, only=("bismarck-mandan", "twin-cities", "reston-va", "reno-sparks", "fort-meade")),
-    dict(id="outback", src="national", name="Outback Steakhouse", loc="Outback Steakhouse", osm=None, category="meal", minutes=40, busy=15, meal=False, dineIn=True, eat=0.5, kinds=["snack"], only=("bismarck-mandan", "twin-cities", "reston-va", "reno-sparks", "fort-meade")),
-    dict(id="golden-corral", src="national", name="Golden Corral", loc="Golden Corral", osm=None, category="meal", minutes=55, busy=25, meal=True, dineIn=True, only=("bismarck-mandan", "twin-cities", "reston-va", "reno-sparks", "fort-meade")),
-    dict(id="smashburger", src="national", name="Smashburger", loc="Smashburger", osm=None, category="quick", minutes=20, busy=10, meal=False, dineIn=True, eat=0.6, caution="Lists differ (a free burger, or 25% off): ask first", only=("bismarck-mandan", "twin-cities", "reston-va", "reno-sparks", "fort-meade")),
+    dict(id="red-robin", src="national", name="Red Robin", loc="Red Robin", osm=None, category="meal", minutes=50, busy=20, meal=True, dineIn=True, only=("bismarck-mandan", "twin-cities", "reston-va", "reno-sparks", "fort-meade", "denver", "colorado-springs")),
+    dict(id="outback", src="national", name="Outback Steakhouse", loc="Outback Steakhouse", osm=None, category="meal", minutes=40, busy=15, meal=False, dineIn=True, eat=0.5, kinds=["snack"], only=("bismarck-mandan", "twin-cities", "reston-va", "reno-sparks", "fort-meade", "denver", "colorado-springs")),
+    dict(id="golden-corral", src="national", name="Golden Corral", loc="Golden Corral", osm=None, category="meal", minutes=55, busy=25, meal=True, dineIn=True, only=("bismarck-mandan", "twin-cities", "reston-va", "reno-sparks", "fort-meade", "denver", "colorado-springs")),
+    dict(id="smashburger", src="national", name="Smashburger", loc="Smashburger", osm=None, category="quick", minutes=20, busy=10, meal=False, dineIn=True, eat=0.6, caution="Lists differ (a free burger, or 25% off): ask first", only=("bismarck-mandan", "twin-cities", "reston-va", "reno-sparks", "fort-meade", "denver", "colorado-springs")),
     dict(id="hy-vee", src="national", name="Hy-Vee", loc="Hy-Vee", osm=None, category="breakfast", minutes=35, busy=15, meal=True, dineIn=True, window=("06:00", "10:00"), caution="Stores with hot food service only", only=("bismarck-mandan", "twin-cities")),
-    dict(id="cpk", src="national", name="California Pizza Kitchen", loc="California Pizza Kitchen", osm=None, category="meal", minutes=50, busy=15, meal=True, dineIn=True, only=("reston-va", "reno-sparks", "fort-meade")),
-    dict(id="bonefish-grill", src="national", name="Bonefish Grill", loc="Bonefish Grill", osm=None, category="meal", minutes=40, busy=15, meal=False, dineIn=True, eat=0.5, kinds=["snack"], only=("reston-va", "reno-sparks", "fort-meade")),
-    dict(id="carrabbas", src="national", name="Carrabba's Italian Grill", loc="Carrabba's Italian Grill", osm=None, category="meal", minutes=45, busy=15, meal=False, dineIn=True, eat=0.5, kinds=["snack"], only=("reston-va", "reno-sparks", "fort-meade")),
-    dict(id="fogo-de-chao", src="national", name="Fogo de Chão", loc="Fogo de Chão", osm=None, category="meal", minutes=65, busy=15, meal=True, dineIn=True, purchase=True, only=("reston-va", "reno-sparks", "fort-meade")),
-    dict(id="bar-louie", src="national", name="Bar Louie", loc="Bar Louie", osm=None, category="meal", minutes=45, busy=15, meal=True, dineIn=True, kinds=["bar", "meal"], only=("reston-va", "reno-sparks", "fort-meade")),
+    dict(id="cpk", src="national", name="California Pizza Kitchen", loc="California Pizza Kitchen", osm=None, category="meal", minutes=50, busy=15, meal=True, dineIn=True, only=("reston-va", "reno-sparks", "fort-meade", "denver", "colorado-springs")),
+    dict(id="bonefish-grill", src="national", name="Bonefish Grill", loc="Bonefish Grill", osm=None, category="meal", minutes=40, busy=15, meal=False, dineIn=True, eat=0.5, kinds=["snack"], only=("reston-va", "reno-sparks", "fort-meade", "denver", "colorado-springs")),
+    dict(id="carrabbas", src="national", name="Carrabba's Italian Grill", loc="Carrabba's Italian Grill", osm=None, category="meal", minutes=45, busy=15, meal=False, dineIn=True, eat=0.5, kinds=["snack"], only=("reston-va", "reno-sparks", "fort-meade", "denver", "colorado-springs")),
+    dict(id="fogo-de-chao", src="national", name="Fogo de Chão", loc="Fogo de Chão", osm=None, category="meal", minutes=65, busy=15, meal=True, dineIn=True, purchase=True, only=("reston-va", "reno-sparks", "fort-meade", "denver", "colorado-springs")),
+    dict(id="bar-louie", src="national", name="Bar Louie", loc="Bar Louie", osm=None, category="meal", minutes=45, busy=15, meal=True, dineIn=True, kinds=["bar", "meal"], only=("reston-va", "reno-sparks", "fort-meade", "denver", "colorado-springs")),
     dict(id="sheetz", src="national", name="Sheetz", loc="Sheetz", osm=None, category="quick", minutes=8, busy=5, meal=False, dineIn=False, hours=("00:00", "24:00"), kinds=["meal", "car-wash"], only=("reston-va", "fort-meade")),
     dict(id="wawa", src="national", name="Wawa", loc="Wawa", osm=None, category="coffee", minutes=6, busy=3, meal=False, dineIn=False, hours=("00:00", "24:00"), only=("reston-va", "fort-meade")),
+    # Colorado chains (11 Nov 2026, for the Denver metro and Colorado Springs areas): 2026 offers checked in
+    # research/colorado-chains-notes.md; `only` is where each has stores. The Melting Pot is a local entry in each area
+    # (one store each, different offers).
+    dict(id="pf-changs", src="national", name="P.F. Chang's", loc="P.F. Chang's", osm=None, category="meal", minutes=60, busy=20, meal=True, dineIn=True, window=("11:00", "15:00"), only=("denver",)),
+    dict(id="bubbas-33", src="national", name="Bubba's 33", loc="Bubba's 33", osm=None, category="meal", minutes=55, busy=20, meal=True, dineIn=True, window=("11:00", "16:00"), only=("denver", "colorado-springs")),
+    dict(id="bombshells", src="national", name="Bombshells", loc="Bombshells", osm=None, category="meal", minutes=60, busy=20, meal=True, dineIn=True, only=("denver",)),
+    dict(id="old-chicago", src="national", name="Old Chicago", loc="Old Chicago", osm=None, category="meal", minutes=55, busy=20, meal=True, dineIn=True, only=("denver", "colorado-springs")),
+    dict(id="lazy-dog", src="national", name="Lazy Dog", loc="Lazy Dog", osm=None, category="meal", minutes=60, busy=20, meal=True, dineIn=True, only=("denver", "colorado-springs")),
+    dict(id="yard-house", src="national", name="Yard House", loc="Yard House", osm=None, category="meal", minutes=40, busy=15, meal=False, dineIn=True, eat=0.5, kinds=["snack"], only=("denver",)),
+    dict(id="perrys-steakhouse", src="national", name="Perry's Steakhouse & Grille", loc="Perry's Steakhouse & Grille", osm=None, category="meal", minutes=90, busy=15, meal=True, dineIn=True, purchase=True, window=("16:00", None), only=("denver",)),
+    dict(id="eddie-merlots", src="national", name="Eddie Merlot's", loc="Eddie Merlot's", osm=None, category="meal", minutes=50, busy=15, meal=True, dineIn=True, only=("denver",)),
+    dict(id="bad-daddys", src="national", name="Bad Daddy's Burger Bar", loc="Bad Daddy's Burger Bar", osm=None, category="meal", minutes=50, busy=20, meal=True, dineIn=True, window=("11:00", "16:00"), only=("denver",)),
+    dict(id="main-event", src="national", name="Main Event", loc="Main Event", osm=None, category="meal", minutes=75, busy=20, meal=True, dineIn=True, kinds=["meal", "games"], only=("denver", "colorado-springs")),
+    dict(id="hopdoddy", src="national", name="Hopdoddy", loc="Hopdoddy", osm=None, category="meal", minutes=40, busy=15, meal=True, dineIn=True, only=("denver",)),
+    dict(id="good-times", src="national", name="Good Times Burgers & Frozen Custard", loc="Good Times Burgers & Frozen Custard", osm=None, category="quick", minutes=15, busy=10, meal=True, dineIn=True, only=("denver", "colorado-springs")),
+    dict(id="snarfs", src="national", name="Snarf's Sandwiches", loc="Snarf's Sandwiches", osm=None, category="quick", minutes=20, busy=10, meal=True, dineIn=True, only=("denver",)),
+    dict(id="snarfburger", src="national", name="Snarfburger", loc="Snarfburger", osm=None, category="quick", minutes=20, busy=10, meal=True, dineIn=True, only=("denver",)),
+    dict(id="whataburger", src="national", name="Whataburger", loc="Whataburger", osm=None, category="quick", minutes=10, busy=10, meal=False, dineIn=False, eat=0.4, window=("05:00", "11:00"), only=("denver", "colorado-springs")),
+    dict(id="wienerschnitzel", src="national", name="Wienerschnitzel", loc="Wienerschnitzel", osm=None, category="quick", minutes=12, busy=8, meal=False, dineIn=True, eat=0.6, only=("denver", "colorado-springs")),
+    dict(id="dickeys", src="national", name="Dickey's Barbecue Pit", loc="Dickey's Barbecue Pit", osm=None, category="quick", minutes=15, busy=10, meal=True, dineIn=True, only=("denver", "colorado-springs")),
+    dict(id="teriyaki-madness", src="national", name="Teriyaki Madness", loc="Teriyaki Madness", osm=None, category="quick", minutes=15, busy=10, meal=True, dineIn=True, only=("denver", "colorado-springs")),
+    dict(id="torchys", src="national", name="Torchy's Tacos", loc="Torchy's Tacos", osm=None, category="quick", minutes=15, busy=10, meal=False, dineIn=True, eat=0.5, only=("denver", "colorado-springs")),
+    dict(id="tazikis", src="national", name="Taziki's Mediterranean Cafe", loc="Taziki's Mediterranean Cafe", osm=None, category="quick", minutes=20, busy=10, meal=True, dineIn=True, only=("denver",)),
+    dict(id="dog-haus", src="national", name="Dog Haus", loc="Dog Haus", osm=None, category="quick", minutes=20, busy=10, meal=True, dineIn=True, only=("denver",)),
+    dict(id="capriottis", src="national", name="Capriotti's", loc="Capriotti's", osm=None, category="quick", minutes=15, busy=5, meal=True, dineIn=True, purchase=True, only=("denver", "colorado-springs")),
+    dict(id="mod-pizza", src="national", name="MOD Pizza", loc="MOD Pizza", osm=None, category="quick", minutes=15, busy=5, meal=True, dineIn=True, purchase=True, only=("denver", "colorado-springs")),
+    dict(id="taco-johns", src="national", name="Taco John's", loc="Taco John's", osm=None, category="quick", minutes=10, busy=5, meal=True, dineIn=True, only=("denver",)),
+    dict(id="kekes", src="national", name="Keke's Breakfast Cafe", loc="Keke's Breakfast Cafe", osm=None, category="breakfast", minutes=50, busy=20, meal=True, dineIn=True, window=("07:00", "14:30"), only=("denver",)),
+    dict(id="einstein-bros", src="national", name="Einstein Bros. Bagels", loc="Einstein Bros. Bagels", osm=None, category="coffee", minutes=8, busy=5, meal=False, dineIn=False, kinds=["coffee", "snack"], only=("denver", "colorado-springs")),
+    dict(id="ziggis", src="national", name="Ziggi's Coffee", loc="Ziggi's Coffee", osm=None, category="coffee", minutes=6, busy=5, meal=False, dineIn=False, only=("denver", "colorado-springs")),
+    dict(id="paris-baguette", src="national", name="Paris Baguette", loc="Paris Baguette", osm=None, category="coffee", minutes=6, busy=3, meal=False, dineIn=False, purchase=True, only=("denver",)),
+    dict(id="smoothie-king", src="national", name="Smoothie King", loc="Smoothie King", osm=None, category="treat", minutes=8, busy=5, meal=False, dineIn=False, window=("12:00", "15:00"), only=("denver",)),
+    dict(id="tcby", src="national", name="TCBY", loc="TCBY", osm=None, category="treat", minutes=8, busy=3, meal=False, dineIn=False, only=("denver",)),
+    dict(id="lamars", src="national", name="LaMar's Donuts", loc="LaMar's Donuts", osm=None, category="treat", minutes=6, busy=5, meal=False, dineIn=False, kinds=["sweet"], only=("denver",)),
+    dict(id="le-peep", src="national", name="Le Peep", loc="Le Peep", osm=None, category="breakfast", minutes=45, busy=15, meal=True, dineIn=True, purchase=True, only=("denver",)),
+    dict(id="parrys", src="national", name="Parry's Pizzeria & Taphouse", loc="Parry's Pizzeria & Taphouse", osm=None, category="meal", minutes=50, busy=20, meal=True, dineIn=True, window=("11:00", "15:00"), only=("denver", "colorado-springs")),
+    dict(id="in-n-out", src="national", name="In-N-Out Burger", loc="In-N-Out Burger", osm=None, category="quick", minutes=20, busy=20, meal=True, dineIn=True, caution=NO_COMPANY_WORD, only=("denver", "colorado-springs")),
+    dict(id="bass-pro-cabelas", src="national", name="Bass Pro Shops / Cabela's", loc="Bass Pro Shops / Cabela's", osm=None, category="breakfast", minutes=45, busy=20, meal=True, dineIn=True, window=("09:00", "10:00"), caution="Lists differ on when it ends (10 or 11 AM): go at 9", only=("denver", "colorado-springs")),
+    dict(id="cobblestone", src="national", name="Cobblestone Car Wash", loc="Cobblestone Car Wash", osm=None, category="service", minutes=15, busy=15, meal=False, dineIn=False, kinds=["car-wash"], only=("denver",)),
+    dict(id="strickland-brothers", src="national", name="Strickland Brothers 10 Minute Oil Change", loc="Strickland Brothers 10 Minute Oil Change", osm=None, category="service", minutes=25, busy=15, meal=False, dineIn=False, purchase=True, kinds=["oil-change"], only=("denver",)),
+    dict(id="grease-monkey", src="national", name="Grease Monkey", loc="Grease Monkey", osm=None, category="service", minutes=30, busy=15, meal=False, dineIn=False, purchase=True, kinds=["oil-change"], only=("denver", "colorado-springs")),
+    dict(id="floyds", src="national", name="Floyd's 99 Barbershop", loc="Floyd's 99 Barbershop", osm=None, category="service", minutes=30, busy=20, meal=False, dineIn=False, purchase=True, group="haircut", only=("denver", "colorado-springs")),
+    dict(id="kona-grill", src="national", name="Kona Grill", loc="Kona Grill", osm=None, category="meal", minutes=70, busy=15, meal=True, dineIn=True, purchase=True, only=("denver",)),
+    dict(id="benihana", src="national", name="Benihana", loc="Benihana", osm=None, category="meal", minutes=75, busy=15, meal=True, dineIn=True, purchase=True, only=("denver",)),
+    dict(id="rodizio-grill", src="national", name="Rodizio Grill", loc="Rodizio Grill", osm=None, category="meal", minutes=90, busy=15, meal=True, dineIn=True, purchase=True, only=("denver",)),
+    dict(id="saltgrass", src="national", name="Saltgrass Steak House", loc="Saltgrass Steak House", osm=None, category="meal", minutes=60, busy=15, meal=True, dineIn=True, purchase=True, only=("denver",)),
+    dict(id="bjs", src="national", name="BJ's Restaurant & Brewhouse", loc="BJ's Restaurant & Brewhouse", osm=None, category="treat", minutes=30, busy=10, meal=False, dineIn=True, kinds=["sweet"], only=("colorado-springs",)),
+    dict(id="black-bear-diner", src="national", name="Black Bear Diner", loc="Black Bear Diner", osm=None, category="meal", minutes=50, busy=20, meal=True, dineIn=True, only=("colorado-springs",)),
+    dict(id="cheddars", src="national", name="Cheddar's Scratch Kitchen", loc="Cheddar's Scratch Kitchen", osm=None, category="meal", minutes=40, busy=15, meal=False, dineIn=True, eat=0.5, kinds=["snack"], only=("colorado-springs",)),
+    dict(id="chicken-salad-chick", src="national", name="Chicken Salad Chick", loc="Chicken Salad Chick", osm=None, category="quick", minutes=15, busy=5, meal=True, dineIn=True, purchase=True, only=("colorado-springs",)),
     # Breakfast
     dict(id="dennys", src="national", name="Denny's", loc="Denny's", osm="dennys", category="breakfast", minutes=45, busy=15, meal=True, dineIn=True),
     # IHOP: 7 AM-7 PM per the American Legion's 2026 list (5 Nov); ihop.com wasn't readable.
@@ -197,7 +247,10 @@ CURATE = [
     dict(id="great-clips", src="national", name="Great Clips", loc="Great Clips", osm="greatclips", category="service", minutes=5, busy=5, line=3, meal=False, dineIn=False, ticket=True),
     dict(id="sport-clips", group="haircut", src="national", name="Sport Clips", loc="Sport Clips", osm="sportclips", category="service", minutes=30, busy=20, meal=False, dineIn=False, caution="Participating shops only: call first", fm=dict(caution="Participating shops only, and this address isn't confirmed: call first")),
     dict(id="tommys-express", src="national", name="Tommy's Express Car Wash", loc="Tommy's Express Car Wash", osm="tommys", category="service", minutes=12, busy=10, meal=False, dineIn=False),
-    dict(id="jiffy-lube", src="national", name="Jiffy Lube", loc="Jiffy Lube", osm="jiffylube", category="service", minutes=30, busy=15, meal=False, dineIn=False, value=20, purchase=True, caution="Only some franchise shops take part: call first"),
+    dict(id="jiffy-lube", src="national", name="Jiffy Lube", loc="Jiffy Lube", osm="jiffylube", category="service", minutes=30, busy=15, meal=False, dineIn=False, value=20, purchase=True, caution="Only some franchise shops take part: call first",
+         # Colorado: Griffin Fast Lube's shops give the oil change free (research/colorado-chains-notes.md).
+         in_area={"denver": dict(value=50, purchase=False, caution="Griffin Fast Lube's participating shops only, and extra fees may apply: call first", show=dict(grade="B", offer="A free conventional oil change (up to 5 quarts) for veterans and active military with proof of service, at Griffin Fast Lube's participating Jiffy Lube shops", notes="Colorado's Jiffy Lube franchisee, Griffin Fast Lube, gives a free conventional oil change on 11 Nov at participating shops (Mile High on the Cheap and KOOL 105, 10 Nov 2026; the shop lists are at jiffylubegfl.com). Fees may apply for 4x4s, shop supplies, extra oil and special filters; tax not included. Participation varies by shop: call first.")),
+                  "colorado-springs": dict(value=50, purchase=False, caution="Griffin Fast Lube's participating shops only, and extra fees may apply: call first", show=dict(grade="B", offer="A free conventional oil change (up to 5 quarts) for veterans and active military with proof of service, at Griffin Fast Lube's participating Jiffy Lube shops", notes="Colorado's Jiffy Lube franchisee, Griffin Fast Lube, gives a free conventional oil change on 11 Nov at participating shops (Mile High on the Cheap and KOOL 105, 10 Nov 2026; the shop lists are at jiffylubegfl.com). Fees may apply for 4x4s, shop supplies, extra oil and special filters; tax not included. Participation varies by shop: call first."))}),
     # Shopping (no dollar value: what you save depends on what you buy, so they're listed, not routed, unless pinned)
     dict(id="target", src="national", name="Target", loc="Target", osm="target", category="shopping", minutes=25, busy=5, meal=False, dineIn=False, value=0, purchase=True),
     dict(id="kohls", src="national", name="Kohl's", loc="Kohl's", osm="kohls", category="shopping", minutes=25, busy=5, meal=False, dineIn=False, value=0, purchase=True),
@@ -375,6 +428,11 @@ def curate_for(region):
         away = cur.pop("elsewhere", None)
         if away and region != DEFAULT_REGION:
             cur["override"] = away
+        # One area's own terms for a national chain (Colorado's Jiffy Lube franchisee, 11 Nov 2026): CURATE fields, and
+        # `show` for the page's text.
+        mine = (cur.pop("in_area", None) or {}).get(region)
+        if mine:
+            cur.update(mine)
         out.append(cur)
     return out + [dict(c) for c in LOCAL.get(region, [])]
 
@@ -501,7 +559,7 @@ def census_batch(rows):
 
 def split_addr(a):
     a = re.sub(r"\s*\(.*?\)", "", a)
-    m = re.match(r"(.+?),\s*([A-Za-z .]+),\s*(ND|MN|VA|MD)\s*(\d{5})?", a)
+    m = re.match(r"(.+?),\s*([A-Za-z .]+),\s*(ND|MN|VA|MD|NV|CO)\s*(\d{5})?", a)
     if not m:
         return None
     street = re.sub(r"\s*(Suite|Ste|Unit|#)\s*[\w-]+", "", m.group(1), flags=re.I).strip()
