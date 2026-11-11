@@ -339,6 +339,40 @@ call: `research/fort-meade/notes.md`.
   tests pass on the branch, 102 after merging master's Reno–Sparks area. Checked in a preview on port 5057 (not an allowed report origin) at 375 px: `?area=meade` opens and
   saves the area; 41 of 41 deals; 12-stop Optimal route; the Map draws it by road; no sideways scroll.
 
+## Denver metro, CO (seventh area, the first on Mountain time; built 11 Nov 2026 about midnight-2 AM CST on branch `vetday-denver`)
+10 Nov 2026: Denver metro ("metro spread") from his research report, built overnight while he slept under his
+instruction to research, build and deploy without asking. Research, corrections and judgment calls:
+`research/denver/notes.md`.
+- **Area** `denver`, "Denver metro, CO", `?area=denver` (aliases `aurora`, `buckley`, `lakewood`, `littleton`,
+  `lone-tree`, `highlands-ranch`, `centennial`, `westminster`, `thornton`, `broomfield`, `denver-co`). Six circles:
+  Downtown, Capitol Hill, Cherry Creek and Lowry 8 km; Aurora and Buckley SFB 7; Lakewood and Belmar 6; Littleton and
+  Highlands Ranch 6; Lone Tree, Centennial and Park Meadows 6.8; Westminster, Thornton and Broomfield 8.3. Drive times
+  start from downtown Denver. Eleven start presets. Mountain time: `tz` America/Denver, -420, MST, `day_start` 07:00
+  UTC. No transit line: RTD gives free rides to active duty and youth only.
+- **Size.** 725 chain stores sit in the circles, so REGIONS `thin=(6, 6.0, 8.0)`: a chain with more than 6 stores here
+  keeps stores 6 km apart (8 km for a deal that needs a purchase), nearest the circles' middles first. `grid_km=1.1`
+  spaces the drive table's start points 1.1 km apart (911 of 930 kept; drive.json 2.4 MB). Totals: 101 deals at 397
+  stops (A 20, B 79, C 2); `planDay` about 116 ms at 7 AM in node against Reston's 78 ms. Other areas are unchanged.
+- **Colorado chains** (shared with Colorado Springs, commit `ffba0e3` on `vetday-co-chains`): 47 chains' 2026 offers
+  from the coordinating session's research, appended to `national-2026.json`, each limited by `only` to the area(s)
+  with stores. Stores come from All the Places (31 Oct; Yard House and Cheddar's 17 Oct) and OpenStreetMap. Bass Pro
+  Shops and Cabela's are one chain with two spiders (a list in SPIDERS). `in_area` in CURATE gives one area its own
+  fields: Colorado's Jiffy Lube franchisee gives a free oil change. Rodizio's offer is downtown only (`drop`).
+  Whataburger, Wienerschnitzel, Bombshells, Benihana, Pilot and Tommy's Express have no store in the circles.
+- **Local on the route** (15 entries): Westminster's ceremony at the Armed Forces Tribute Garden 10-11 AM (A, the
+  city's calendar; `arrive_by` 10:00), Wings Over the Rockies free for veterans 10-5 (A), Salt Water Social and STK
+  (A, a starter bought), The Melting Pot Littleton (A, a second meal bought), Shucking Good's Blue Island (Cherry Creek
+  and Lone Tree), Ash and Agave and Oliver's Italian (B), Thirsty Lion (B), the Rendezvous at Heather Gardens (B),
+  discounts at Denver Chophouse, Henry's, ViewHouse and Tamayo (B, purchase), Legacy Ridge golf (B, call first).
+- **Under Deals:** free meters in Denver, state parks free, NPS, the zoo's free day (timed tickets, likely gone),
+  closures, golf and Bonfire Burritos just outside, Holidaily, Emagine Parker, Cherokee Ranch, the Red Rocks car show,
+  Parker and Castle Rock fireworks, Aurora's Veterans Salute (Thu), the Denver parade (Sat), VETEFITS (Sat); 3 leads.
+- **Corrections to the report:** Westminster's ceremony is 10-11 AM at 6001 W 104th Ave (the report: time TBA, 6601);
+  the zoo's day is for everyone with a timed ticket; Rodizio is downtown only; the fireworks are July 4 shows moved.
+- Checked in a preview on port 5059 at 375 px with `?area=lakewood&now=` 8 AM MST: Denver loads, Optimal builds 15
+  stops (Sport Clips, Cobblestone, Wings, Good Times...), Deals lists 101 of 101, the Map draws the route by road, no
+  sideways scroll, no console errors apart from the report Worker refusing that port. 103 planner tests pass.
+
 ## Optimal (engine v1.4, app v1.3; live since about 12:15 PM CST 10 Nov 2026 from `0b12a0d`, approved; not pushed)
 10 Nov 2026: the Maximize routes "can include redundant types of locations on the same route in the same time
 frame e.g. multiple free coffee grabs within a short window of time ... most users won't want to do that. So the

@@ -23,7 +23,8 @@
     { id: "twin-cities", dir: "data/twin-cities/" },
     { id: "reston-va", dir: "data/reston-va/" },
     { id: "reno-sparks", dir: "data/reno-sparks/" },
-    { id: "fort-meade", dir: "data/fort-meade/" }
+    { id: "fort-meade", dir: "data/fort-meade/" },
+    { id: "denver", dir: "data/denver/" }
   ];
   const DEFAULT_AREA = "fargo-moorhead";
   const AWAY_KM = 15; // further than this from the area's nearest start point, your location is somewhere else
@@ -1323,6 +1324,20 @@
       ["39.1560,-76.7240", "Hanover / Arundel Mills, MD"],
       ["39.0990,-76.8480", "Laurel, MD"],
       ["39.2150,-76.8600", "Columbia, MD"]
+    ],
+    "denver": [
+      ["", "Start from town…"],
+      ["39.7392,-104.9903", "Downtown Denver, CO"],
+      ["39.7170,-104.9530", "Cherry Creek, CO"],
+      ["39.7294,-104.8319", "Aurora (Anschutz), CO"],
+      ["39.7100,-104.7800", "Aurora near Buckley SFB, CO"],
+      ["39.7110,-105.0810", "Lakewood (Belmar), CO"],
+      ["39.6133,-105.0166", "Littleton, CO"],
+      ["39.5480,-104.9690", "Highlands Ranch, CO"],
+      ["39.5620,-104.8800", "Lone Tree (Park Meadows), CO"],
+      ["39.8367,-105.0372", "Westminster, CO"],
+      ["39.8680,-104.9720", "Thornton, CO"],
+      ["39.9205,-105.0867", "Broomfield, CO"]
     ]
   };
   // Example text in the Deals search box and the Route quick-add box, from each area's own deals and streets (the publisher,
@@ -1333,7 +1348,8 @@
     "twin-cities": { deals: ["Caribou", "Lexington Ave", "Maple Grove"], route: ["Caribou", "Perkins", "Wayzata Blvd"] },
     "reston-va": { deals: ["Chick-fil-A", "Leesburg Pike", "Herndon"], route: ["Chick-fil-A", "Wawa", "Sunset Hills"] },
     "reno-sparks": { deals: ["Squeeze In", "Kietzke", "Sparks"], route: ["Squeeze In", "In-N-Out", "McCarran"] },
-    "fort-meade": { deals: ["Mission BBQ", "Baltimore Ave", "Columbia"], route: ["Mission BBQ", "Wawa", "Arundel Mills"] }
+    "fort-meade": { deals: ["Mission BBQ", "Baltimore Ave", "Columbia"], route: ["Mission BBQ", "Wawa", "Arundel Mills"] },
+    "denver": { deals: ["Wings Over", "Colfax", "Aurora"], route: ["Golden Corral", "Wings Over", "Colfax"] }
   };
   const AREA_ALIASES = {
     "new-salem": "bismarck-mandan",
@@ -1361,7 +1377,18 @@
     "laurel": "fort-meade",
     "columbia": "fort-meade",
     "gambrills": "fort-meade",
-    "severn": "fort-meade"
+    "severn": "fort-meade",
+    "aurora": "denver",
+    "buckley": "denver",
+    "lakewood": "denver",
+    "littleton": "denver",
+    "lone-tree": "denver",
+    "highlands-ranch": "denver",
+    "centennial": "denver",
+    "westminster": "denver",
+    "thornton": "denver",
+    "broomfield": "denver",
+    "denver-co": "denver"
   };
   function pickArea() {
     const raw = new URLSearchParams(location.search).get("area") || new URLSearchParams(location.search).get("sector");

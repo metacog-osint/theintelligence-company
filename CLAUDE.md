@@ -179,6 +179,7 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   Practice marks made in the preview now clear when the day starts. **Never tap Got it, Turned away, They ran out or
   the line report with `?now=` set inside the day on `localhost:5055`/`5056`:** those origins are allowed by the
   report Worker, so it records a real report (it happened once, 11 Nov 2026; the row was deleted).
+- **Denver metro, CO (11 Nov 2026 overnight, the publisher asleep; his instruction covered research, build, merge and deploy):** `denver`, the first area on Mountain time, 101 deals at 397 stops. A big metro thins a chain's stores (`thin` in REGIONS) and spaces the drive grid (`grid_km`); the Colorado chains (shared with Colorado Springs) are commit `ffba0e3`. Details in `veterans-day/README.md` ("Denver metro, CO") and `research/denver/notes.md`; live status in `HANDOFF.md`.
 - **Never deploy from `D:\Projects\tic-vetday`** (branch `veterans-day`, 8 Nov): Antigravity did on 10 Nov and its 46
   files most likely replaced the live hub for a while. `GEMINI.md` points Gemini at this file and `HANDOFF.md`. Details and the corrections in `veterans-day/README.md` ("Reston & Northern
   Virginia") and `research/reston-va/notes.md`. Antigravity also deployed two unnoted commits that evening,
