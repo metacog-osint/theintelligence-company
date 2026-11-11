@@ -277,19 +277,22 @@ was opened at its own source the same night and graded; research, corrections an
   `meta.tz_offset_min`, and the report Worker has no day window. Tests: every area's `day_start` is local midnight in
   its own zone with a matching offset and zone name on its windows; Reno's Denny's, J Resort and parade times in UTC;
   and the engine plans a Pacific copy of its test town exactly as the Central one, two hours later in UTC.
-- **Totals (11 Nov 2026):** 40 deals at 136 stops (A 13, B 26, C 1); 8 other-day and region-wide items; 12 leads.
+- **Totals (11 Nov 2026, after phase 2):** 42 deals at 138 stops (A 15, B 26, C 1); 8 other-day and region-wide
+  items; 13 leads. Phase 1 had 40 at 136 (A 13, B 26, C 1) and 12 leads.
 - **Local on the route:** J Resort's buffet 4-9 PM (A; current and retired military only), Atlantis's lunch buffet at
   Toucan Charlie's 11-3 (A; one per person for 9-11 Nov; Monarch Rewards), Legends Bay's LB Grill breakfast or burger
   7 AM-10 PM (A; veterans; LB Rewards), Gold Dust West (A; current and retired military; hours not published, call
   first), Squeeze In's free meal (A; its post names no stores, so all four here with call first), In-N-Out (B; on 2026
-  national lists only, call first), the Reno parade (B; 11:11 opening at the Virginia Street Bridge, `arrive_by` 11:00),
-  the Sparks Marina observance 9-11:30 (A, the plaza's own site), the Nevada Museum of Art free for veterans and
-  active duty 10-6 (B). The players' clubs use the sign-up-ahead handling (`advance_signup`).
+  national lists only, call first), the Reno parade (A since phase 2, the City of Reno's own release of 3 Nov 2026;
+  11:11 opening at the Virginia Street Bridge, `arrive_by` 11:00), the Sparks Marina observance 9-11:30 (A, the plaza's
+  own site), the Nevada Museum of Art free for veterans and active duty 10-6 (B; call first, since its own visit page
+  says it closes on national holidays), BJ's free Pizookie in Sparks (B, call first) and the Retro Radio Dolls'
+  Veterans Day show at Reno Public Market 5-7 PM (A, the market's own page; admission not stated). The players' clubs use the sign-up-ahead handling (`advance_signup`).
 - **Under Deals:** RTC Washoe's free rides for everyone all day (A; also the bar cards' transit line), Casino Fandango in
   Carson City (A), Virginia City, Fallon, Truckee and South Lake Tahoe events (B), NPS fee-free (A), the museum's free
   Saturday. Leads: Peppermill, Western Village, Grand Sierra (its page is 2024's), the Nugget, the Caesars downtown
-  casinos, Marked Studios, Black Bear Diner, Chick-fil-A, Jiffy Lube, the AUSA dinner, Dragon Lights, the Automobile
-  Museum.
+  casinos, Marked Studios, Black Bear Diner, Chick-fil-A, Jiffy Lube, the AUSA dinner (registration closed), Dragon
+  Lights, the Automobile Museum, Maverik (free coffee in 2024).
 - **Stores:** 125 at 32 chains from All the Places and OpenStreetMap, using the main checkout's `.atp-cache`. In-N-Out
   added (`innout`). `stores_region.py` now reads a street given only in `addr:full` (Twin Peaks Reno was dropped for
   it); other areas weren't re-run. Golden Corral, Smashburger, Cracker Barrel, Circle K, Freddy's have no store here;
@@ -301,6 +304,13 @@ was opened at its own source the same night and graded; research, corrections an
 - Checked in a preview on port 5058 at 375 px: the area loads from `?area=reno`, Optimal builds 14 stops at 8 AM PST,
   Deals lists 40 of 40 with Pacific windows shown in the viewer's zone, the Map draws, no sideways scroll, no console
   errors apart from the report Worker refusing that port's origin. 102 planner tests pass.
+- **Phase 2 (11 Nov 2026, about midnight CST, the evening of 10 Nov in Reno):** a wider pass of local news, city,
+  county and state pages, casino pages, posts and the open items, with This Is Reno, reno.gov and Instagram read in
+  Chrome. The City of Reno's own release raised the parade to A; the museum's own visit page (closed on national
+  holidays) added "call first"; BJ's (Sparks) and the Reno Public Market show were added; Dickey's (its only Nevada
+  store is in Carson City) and Lazy Dog (none here) were left out; Maverik became a lead. Nothing on the 11th had
+  ended (Reno's day hadn't begun); UNR's flag retirement and the VA canteen breakfast were Tuesday 10 Nov. Drive
+  table rebuilt (520 of 563 grid points); 102 tests pass; checked on port 5058. Details: the notes' "Phase 2".
 
 ## Fort Meade, MD (built 11 Nov 2026 about 1 AM CST on branch `vetday-fort-meade`; the coordinating session merges and deploys it)
 10 Nov 2026 night: an area for colleagues at Fort Meade, on Veterans Day itself. Built from a Claude research report (`Downloads\Veterans Day 2026 Near Fort Meade_ Deals, Freebies, Events and Closures.md`, 10 Nov about 11 PM CST)
