@@ -173,7 +173,7 @@ def located(features, states):
         g = f.get("geometry") or {}
         if g.get("type") == "Point":
             out.append((g["coordinates"][1], g["coordinates"][0], p))
-        elif (p.get("addr:state") or "").upper()[:2] in states or (p.get("addr:state") or "") in ("North Dakota", "Minnesota", "Virginia"):
+        elif (p.get("addr:state") or "").upper()[:2] in states or (p.get("addr:state") or "") in ("North Dakota", "Minnesota", "Virginia", "Maryland"):
             street = p.get("addr:street_address") or " ".join(x for x in (p.get("addr:housenumber"), p.get("addr:street")) if x)
             if street:
                 todo.append((str(i), street, p.get("addr:city") or "", (p.get("addr:state") or "")[:2].upper(), (p.get("addr:postcode") or "")[:5]))

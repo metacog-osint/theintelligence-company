@@ -1,0 +1,1626 @@
+{
+ "7 Brew": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (7_brew_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Applebee's": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (applebees): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "2408 Brandermill Blvd., Waugh Chapel Shopping Center, Gambrills, MD 21054",
+    "status": "confirmed",
+    "wed_hours": "11:30-23:00",
+    "phone": "+1 410-451-6080",
+    "url": "https://restaurants.applebees.com/en-us/md/gambrills/2408-brandermill-blvd.-96052",
+    "geo": "39.036752,-76.680514",
+    "source": "All the Places 2026-10-31: applebees"
+   }
+  ]
+ },
+ "Bar Louie": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Biggby Coffee": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (biggby_coffee_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Blaze Pizza": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-24 (blaze_pizza): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "14708 Baltimore Ave, Suite 112, Laurel, MD 20707",
+    "status": "confirmed",
+    "wed_hours": "10:30-22:00",
+    "phone": "+1 301-392-2328",
+    "url": "https://locations.blazepizza.com/us/md/laurel/blazepizza-1037",
+    "geo": "39.093970,-76.857760",
+    "source": "All the Places 2026-10-24: blaze_pizza"
+   }
+  ]
+ },
+ "Bob Evans": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (bob_evans_us): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "8325 Benson Dr, Columbia, MD 21045",
+    "status": "confirmed",
+    "wed_hours": "06:30-21:00",
+    "phone": "+1 410-290-0004",
+    "url": "https://www.bobevans.com/locations/columbia",
+    "geo": "39.186080,-76.800510",
+    "source": "All the Places 2026-10-31: bob_evans_us"
+   }
+  ]
+ },
+ "Bonefish Grill": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (bonefish_grill): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "2381 Brandermill Blvd, Gambrills, MD 21054",
+    "status": "confirmed",
+    "wed_hours": "11:00-22:00",
+    "phone": "+1 410-451-5890",
+    "url": "https://locations.bonefishgrill.com/maryland/gambrills/2381-brandermill-blvd",
+    "geo": "39.031639,-76.684947",
+    "source": "All the Places 2026-10-31: bonefish_grill"
+   }
+  ]
+ },
+ "Buca di Beppo": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (buca_di_beppo_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Buffalo Wild Wings": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (buffalo_wild_wings_us): 4 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "6191 Columbia Crossing Cir., Columbia, MD 21045",
+    "status": "confirmed",
+    "wed_hours": "11:00-22:45",
+    "phone": "+1 443-546-4383",
+    "url": "",
+    "geo": "39.195842,-76.815098",
+    "source": "All the Places 2026-10-31: buffalo_wild_wings_us"
+   },
+   {
+    "address": "7000 Arundel Mills Circle, Room R003, Hanover, MD 21076",
+    "status": "confirmed",
+    "wed_hours": "11:00-23:45",
+    "phone": "+1 410-379-0333",
+    "url": "",
+    "geo": "39.157465,-76.724804",
+    "source": "All the Places 2026-10-31: buffalo_wild_wings_us"
+   },
+   {
+    "address": "14724 Baltimore Avenue, Unit 12, Laurel, MD 20707",
+    "status": "confirmed",
+    "wed_hours": "11:00-22:45",
+    "phone": "+1 240-456-0382",
+    "url": "",
+    "geo": "39.094878,-76.856987",
+    "source": "All the Places 2026-10-31: buffalo_wild_wings_us"
+   },
+   {
+    "address": "696 Maryland Route 3 N, Gambrills, MD 21054",
+    "status": "confirmed",
+    "wed_hours": "10:00-00:45",
+    "phone": "+1 443-836-6963",
+    "url": "",
+    "geo": "39.054115,-76.658914",
+    "source": "All the Places 2026-10-31: buffalo_wild_wings_us"
+   }
+  ]
+ },
+ "California Pizza Kitchen": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (california_pizza_kitchen): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Caribou Coffee": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (caribou_coffee_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Carrabba's Italian Grill": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (carrabbas_italian_grill): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Casey's": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Charleys Cheesesteaks": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-17 (charleys_philly_steaks): 4 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "2799 Rose St, Fort Meade, MD 20755",
+    "status": "confirmed",
+    "wed_hours": "10:30-19:00",
+    "phone": "+1 410-305-4003",
+    "url": "https://www.charleys.com/locations/fort-meade-ii/",
+    "geo": "39.107461,-76.737742",
+    "source": "All the Places 2026-10-17: charleys_philly_steaks"
+   },
+   {
+    "address": "10300 Little Patuxent Parkway, Space #1365, Columbia, MD 21044",
+    "status": "confirmed",
+    "wed_hours": "10:00-20:00",
+    "phone": "+1 410-715-8588",
+    "url": "https://www.charleys.com/locations/mall-in-columbia/",
+    "geo": "39.214638,-76.861023",
+    "source": "All the Places 2026-10-17: charleys_philly_steaks"
+   },
+   {
+    "address": "3351 Corridor Marketplace, Laurel, MD 20724",
+    "status": "confirmed",
+    "wed_hours": "11:00-22:00",
+    "phone": "+1 240-965-6314",
+    "url": "https://www.charleys.com/locations/corridor-marketplace-md/",
+    "geo": "39.098103,-76.809662",
+    "source": "All the Places 2026-10-17: charleys_philly_steaks"
+   },
+   {
+    "address": "14619 Baltimore Ave, Laurel, MD 20707",
+    "status": "confirmed",
+    "wed_hours": "10:00-22:00",
+    "phone": "+1 240-280-2306",
+    "url": "https://www.charleys.com/locations/boulevard-shops/",
+    "geo": "39.090355,-76.857029",
+    "source": "All the Places 2026-10-17: charleys_philly_steaks"
+   }
+  ]
+ },
+ "Chick-fil-A": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (chick_fil_a): 10 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "7055 Arundel Mills Cir, Hanover, MD 21076",
+    "status": "confirmed",
+    "wed_hours": "06:00-22:00",
+    "phone": "+1 410-799-2812",
+    "url": "https://www.chick-fil-a.com/locations/md/arundel-mills",
+    "geo": "39.153213,-76.727079",
+    "source": "All the Places 2026-10-31: chick_fil_a"
+   },
+   {
+    "address": "3366 Corridor Market Place, Laurel, MD 20724",
+    "status": "confirmed",
+    "wed_hours": "06:00-22:00",
+    "phone": "+1 301-483-6466",
+    "url": "https://www.chick-fil-a.com/locations/md/corridor-market-place",
+    "geo": "39.097628,-76.807738",
+    "source": "All the Places 2026-10-31: chick_fil_a"
+   },
+   {
+    "address": "13600 Baltimore Ave Ste 600, Laurel, MD 20707",
+    "status": "confirmed",
+    "wed_hours": "06:00-22:00",
+    "phone": "+1 301-483-6441",
+    "url": "https://www.chick-fil-a.com/locations/md/laurel",
+    "geo": "39.077698,-76.869107",
+    "source": "All the Places 2026-10-31: chick_fil_a"
+   },
+   {
+    "address": "2615 Brandermill Blvd, Gambrills, MD 21054",
+    "status": "confirmed",
+    "wed_hours": "06:00-22:00",
+    "phone": "+1 410-451-7166",
+    "url": "https://www.chick-fil-a.com/locations/md/waugh-chapel",
+    "geo": "39.037494,-76.678726",
+    "source": "All the Places 2026-10-31: chick_fil_a"
+   },
+   {
+    "address": "2691 Carver Rd, Gambrills, MD 21054",
+    "status": "confirmed",
+    "wed_hours": "06:00-22:00",
+    "phone": "+1 410-721-2105",
+    "url": "https://www.chick-fil-a.com/locations/md/crofton",
+    "geo": "39.022810,-76.692894",
+    "source": "All the Places 2026-10-31: chick_fil_a"
+   },
+   {
+    "address": "10300 Little Patuxent Pkwy Ste 1335, Columbia, MD 21044",
+    "status": "confirmed",
+    "wed_hours": "08:00-20:00",
+    "phone": "+1 410-730-9953",
+    "url": "https://www.chick-fil-a.com/locations/md/columbia-mall-md",
+    "geo": "39.214651,-76.860679",
+    "source": "All the Places 2026-10-31: chick_fil_a"
+   },
+   {
+    "address": "10975 Johns Hopkins Rd, Laurel, MD 20723",
+    "status": "confirmed",
+    "wed_hours": "06:00-22:00",
+    "phone": "+1 301-497-4497",
+    "url": "https://www.chick-fil-a.com/locations/md/johns-hopkins-road",
+    "geo": "39.158674,-76.893994",
+    "source": "All the Places 2026-10-31: chick_fil_a"
+   },
+   {
+    "address": "4905 Executive Park Dr, Columbia, MD 21045",
+    "status": "confirmed",
+    "wed_hours": "06:00-22:00",
+    "phone": "+1 410-992-0204",
+    "url": "https://www.chick-fil-a.com/locations/md/executive-park-drive",
+    "geo": "39.235143,-76.814728",
+    "source": "All the Places 2026-10-31: chick_fil_a"
+   },
+   {
+    "address": "6375 Dobbin Rd, Columbia, MD 21045",
+    "status": "confirmed",
+    "wed_hours": "06:30-22:00",
+    "phone": "+1 410-715-1103",
+    "url": "https://www.chick-fil-a.com/locations/md/dobbin-center",
+    "geo": "39.197612,-76.818517",
+    "source": "All the Places 2026-10-31: chick_fil_a"
+   },
+   {
+    "address": "9081 Snowden River Pkwy, Columbia, MD 21046",
+    "status": "confirmed",
+    "wed_hours": "06:30-22:00",
+    "phone": "+1 667-200-5240",
+    "url": "https://www.chick-fil-a.com/locations/md/snowden-river-pkwy",
+    "geo": "39.180964,-76.822592",
+    "source": "All the Places 2026-10-31: chick_fil_a"
+   }
+  ]
+ },
+ "Chili's": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (chilis): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Chipotle": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (chipotle): 9 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "14930 Silver Trail Ln, Laurel, MD 20707",
+    "status": "confirmed",
+    "wed_hours": "10:45-22:00",
+    "phone": "+1 240-713-5630",
+    "url": "https://locations.chipotle.com/md/laurel/14930-silver-trail-ln",
+    "geo": "39.083402,-76.889928",
+    "source": "All the Places 2026-10-31: chipotle"
+   },
+   {
+    "address": "14354 Baltimore Ave, Laurel, MD 20707",
+    "status": "confirmed",
+    "wed_hours": "10:00-23:00",
+    "phone": "+1 301-604-2241",
+    "url": "https://locations.chipotle.com/md/laurel/14354-baltimore-ave",
+    "geo": "39.085207,-76.862348",
+    "source": "All the Places 2026-10-31: chipotle"
+   },
+   {
+    "address": "3353 Corridor Marketplace, Laurel, MD 20724",
+    "status": "confirmed",
+    "wed_hours": "10:00-23:00",
+    "phone": "+1 240-241-5017",
+    "url": "https://locations.chipotle.com/md/laurel/3353-corridor-marketplace",
+    "geo": "39.097931,-76.808990",
+    "source": "All the Places 2026-10-31: chipotle"
+   },
+   {
+    "address": "7049 Arundel Mills Cir, Hanover, MD 21076",
+    "status": "confirmed",
+    "wed_hours": "10:00-23:00",
+    "phone": "+1 410-796-5028",
+    "url": "https://locations.chipotle.com/md/hanover/7049-arundel-mills-cir",
+    "geo": "39.153289,-76.724588",
+    "source": "All the Places 2026-10-31: chipotle"
+   },
+   {
+    "address": "2503 Brandermill Blvd, Gambrills, MD 21054",
+    "status": "confirmed",
+    "wed_hours": "10:45-23:00",
+    "phone": "+1 410-451-4161",
+    "url": "https://locations.chipotle.com/md/gambrills/2503-brandermill-blvd",
+    "geo": "39.038055,-76.680117",
+    "source": "All the Places 2026-10-31: chipotle"
+   },
+   {
+    "address": "5715 Richards Valley Rd, Ellicott City, MD 21043",
+    "status": "confirmed",
+    "wed_hours": "10:45-22:00",
+    "phone": "+1 667-280-4262",
+    "url": "https://locations.chipotle.com/md/ellicott-city/5715-richards-valley-rd",
+    "geo": "39.214523,-76.802758",
+    "source": "All the Places 2026-10-31: chipotle"
+   },
+   {
+    "address": "9851 Broken Land Pkwy, Columbia, MD 21046",
+    "status": "confirmed",
+    "wed_hours": "10:45-23:00",
+    "phone": "+1 667-678-2099",
+    "url": "https://locations.chipotle.com/md/columbia/9851-broken-land-pkwy",
+    "geo": "39.183611,-76.850203",
+    "source": "All the Places 2026-10-31: chipotle"
+   },
+   {
+    "address": "10300 Little Patuxent Pkwy, Columbia, MD 21044",
+    "status": "confirmed",
+    "wed_hours": "10:00-20:00",
+    "phone": "+1 410-997-1083",
+    "url": "https://locations.chipotle.com/md/columbia/10300-little-patuxent-pkwy",
+    "geo": "39.215765,-76.861454",
+    "source": "All the Places 2026-10-31: chipotle"
+   },
+   {
+    "address": "6181 Old Dobbin Ln, Columbia, MD 21045",
+    "status": "confirmed",
+    "wed_hours": "10:00-23:00",
+    "phone": "+1 410-872-8688",
+    "url": "https://locations.chipotle.com/md/columbia/6181-old-dobbin-ln",
+    "geo": "39.200760,-76.812962",
+    "source": "All the Places 2026-10-31: chipotle"
+   }
+  ]
+ },
+ "Circle K / Holiday": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (circle_k): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "6251 Columbia Crossing Cir, Columbia, MD 21045",
+    "status": "confirmed",
+    "wed_hours": "06:00-23:00",
+    "phone": "+1 410-312-0028",
+    "url": "",
+    "geo": "39.199524,-76.814655",
+    "source": "All the Places 2026-10-31: circle_k"
+   }
+  ]
+ },
+ "Cracker Barrel": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Dave & Buster's": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (dave_and_busters): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "7000 Arundel Mills Cir, Hanover, MD 21076",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "+1 443-755-0113",
+    "url": "https://www.daveandbusters.com/us/en/about/locations/hanover-arundel-mills",
+    "geo": "39.157555,-76.724731",
+    "source": "All the Places 2026-10-31: dave_and_busters"
+   }
+  ]
+ },
+ "Denny's": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (dennys_us): 2 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "1365 Mellon Rd, Hanover, MD 21076",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 410-850-4888",
+    "url": "https://locations.dennys.com/md/hanover/246955",
+    "geo": "39.160559,-76.711893",
+    "source": "All the Places 2026-10-31: dennys_us"
+   },
+   {
+    "address": "314 Washington Blvd, Laurel, MD 20707",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 301-725-9393",
+    "url": "https://locations.dennys.com/md/laurel/247406",
+    "geo": "39.101507,-76.845658",
+    "source": "All the Places 2026-10-31: dennys_us"
+   }
+  ]
+ },
+ "Dunkin'": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (dunkin_us): 26 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "696 Maryland 3, Gambrills, MD 21054",
+    "status": "confirmed",
+    "wed_hours": "05:00-18:45",
+    "phone": "+1 410-697-3113",
+    "url": "https://www.dunkindonuts.com/locations/us/md/gambrills/696-maryland-3/store-363169/",
+    "geo": "39.054115,-76.658914",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "8743 Piney Orchard Pkwy, Piney Orchard Marketplace, Odenton, MD 21113",
+    "status": "confirmed",
+    "wed_hours": "04:00-21:15",
+    "phone": "+1 410-695-2223",
+    "url": "https://www.dunkindonuts.com/locations/us/md/odenton/8743-piney-orchard-pkwy/store-340682/",
+    "geo": "39.066238,-76.717582",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "1614 Annapolis Rd, Odenton, MD 21113",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "+1 410-674-3800",
+    "url": "https://www.dunkindonuts.com/locations/us/md/odenton/1614-annapolis-rd/store-339568/",
+    "geo": "39.104823,-76.721908",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "319 Washington Boulevard, Laurel, MD 20707",
+    "status": "confirmed",
+    "wed_hours": "04:30-17:45",
+    "phone": "+1 301-604-1580",
+    "url": "https://www.dunkindonuts.com/locations/us/md/laurel/319-washington-boulevard/store-357219/",
+    "geo": "39.101491,-76.846677",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "12613 Laurel Bowie Rd, Laurel, MD 20708",
+    "status": "confirmed",
+    "wed_hours": "04:00-20:45",
+    "phone": "+1 240-280-8099",
+    "url": "https://www.dunkindonuts.com/locations/us/md/laurel/12613-laurel-bowie-rd/store-352018/",
+    "geo": "39.063707,-76.839242",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "3503 Laurel Fort Meade Rd, Laurel, MD 20724",
+    "status": "confirmed",
+    "wed_hours": "04:30-17:45",
+    "phone": "+1 301-725-7030",
+    "url": "https://www.dunkindonuts.com/locations/us/md/laurel/3503-laurel-fort-meade-rd/store-349150/",
+    "geo": "39.100535,-76.822464",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "7530 Montpelier Rd, Montpelier Retail Ctr, Laurel, MD 20723",
+    "status": "confirmed",
+    "wed_hours": "05:00-17:45",
+    "phone": "+1 301-498-2444",
+    "url": "https://www.dunkindonuts.com/locations/us/md/laurel/7530-montpelier-rd/store-345682/",
+    "geo": "39.159980,-76.891496",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "14903 Baltimore Ave, Laurel, MD 20707",
+    "status": "confirmed",
+    "wed_hours": "04:30-19:45",
+    "phone": "+1 301-617-4965",
+    "url": "https://www.dunkindonuts.com/locations/us/md/laurel/14903-baltimore-ave/store-302911/",
+    "geo": "39.094753,-76.852953",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "1741 Dorsey Rd, Suite 101, Hanover, MD 21076",
+    "status": "confirmed",
+    "wed_hours": "04:30-18:45",
+    "phone": "+1 410-796-6169",
+    "url": "https://www.dunkindonuts.com/locations/us/md/hanover/1741-dorsey-rd/store-357092/",
+    "geo": "39.175464,-76.741004",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "7657 Arundel Mills Blvd, Hanover, MD 21076",
+    "status": "confirmed",
+    "wed_hours": "05:00-21:45",
+    "phone": "+1 410-799-5100",
+    "url": "https://www.dunkindonuts.com/locations/us/md/hanover/7657-arundel-mills-blvd/store-352491/",
+    "geo": "39.152192,-76.727081",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "2733 Annapolis Rd, Unit A, Hanover, MD 21076",
+    "status": "confirmed",
+    "wed_hours": "05:30-20:45",
+    "phone": "+1 443-661-4645",
+    "url": "https://www.dunkindonuts.com/locations/us/md/hanover/2733-annapolis-rd/store-351503/",
+    "geo": "39.136228,-76.749659",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "1348 Ashton Rd., Hanover, MD 21076",
+    "status": "confirmed",
+    "wed_hours": "04:30-20:45",
+    "phone": "+1 410-850-5322",
+    "url": "https://www.dunkindonuts.com/locations/us/md/hanover/1348-ashton-rd/store-340175/",
+    "geo": "39.158612,-76.709636",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "BWI Airport, BWI Airport Rd, Glen Burnie, MD 21061",
+    "status": "confirmed",
+    "wed_hours": "05:00-21:45",
+    "phone": "",
+    "url": "https://www.dunkindonuts.com/locations/us/md/glen-burnie/bwi-airport/store-349240/",
+    "geo": "39.176571,-76.669548",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "1051 State Route 3 N, Gambrills, MD 21054",
+    "status": "confirmed",
+    "wed_hours": "05:00-19:45",
+    "phone": "+1 410-721-4104",
+    "url": "https://www.dunkindonuts.com/locations/us/md/gambrills/1051-state-route-3-n/store-343781/",
+    "geo": "39.027763,-76.686711",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "8375 Mapes Road, Fort Meade, MD 20755",
+    "status": "confirmed",
+    "wed_hours": "06:00-18:45",
+    "phone": "+1 410-674-7948",
+    "url": "https://www.dunkindonuts.com/locations/us/md/fort-meade/8375-mapes-road/store-353834/",
+    "geo": "39.098032,-76.754230",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "6001 University Boulevard, Columbia Corporate Park 100, Ellicott City, MD 21043",
+    "status": "confirmed",
+    "wed_hours": "04:30-20:45",
+    "phone": "+1 410-465-5882",
+    "url": "https://www.dunkindonuts.com/locations/us/md/ellicott-city/6001-university-boulevard/store-359724/",
+    "geo": "39.209641,-76.798049",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "6010 Meadowridge Center Dr, Elkridge, MD 21075",
+    "status": "confirmed",
+    "wed_hours": "04:30-19:45",
+    "phone": "+1 410-799-2888",
+    "url": "https://www.dunkindonuts.com/locations/us/md/elkridge/6010-meadowridge-center-dr/store-354683/",
+    "geo": "39.209849,-76.782831",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "1200 Route 3, Crofton, MD 21114",
+    "status": "confirmed",
+    "wed_hours": "04:30-20:45",
+    "phone": "+1 410-721-4750",
+    "url": "https://www.dunkindonuts.com/locations/us/md/crofton/1200-route-3/store-306186/",
+    "geo": "39.009207,-76.698809",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "9200 Old Annapolis Rd, Columbia, MD 21045",
+    "status": "confirmed",
+    "wed_hours": "05:00-19:45",
+    "phone": "+1 410-740-6661",
+    "url": "https://www.dunkindonuts.com/locations/us/md/columbia/9200-old-annapolis-rd/store-362437/",
+    "geo": "39.235228,-76.830354",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "10300 Little Patuxent Pkwy, Columbia, MD 21044",
+    "status": "confirmed",
+    "wed_hours": "09:00-19:45",
+    "phone": "+1 443-812-2823",
+    "url": "https://www.dunkindonuts.com/locations/us/md/columbia/10300-little-patuxent-pkwy/store-359999/",
+    "geo": "39.214755,-76.860229",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "7185 Columbia Gateway Dr, Suite F, Columbia, MD 21046",
+    "status": "confirmed",
+    "wed_hours": "05:00-13:45",
+    "phone": "+1 443-542-2015",
+    "url": "https://www.dunkindonuts.com/locations/us/md/columbia/7185-columbia-gateway-dr/store-358822/",
+    "geo": "39.183132,-76.804798",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "5880 Robert Oliver Place, Columbia, MD 21045",
+    "status": "confirmed",
+    "wed_hours": "05:00-18:45",
+    "phone": "+1 410-715-1389",
+    "url": "https://www.dunkindonuts.com/locations/us/md/columbia/5880-robert-oliver-place/store-357632/",
+    "geo": "39.210087,-76.846770",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "10430 Shaker Dr, Ste 100, Columbia, MD 21046",
+    "status": "confirmed",
+    "wed_hours": "04:30-18:45",
+    "phone": "+1 410-992-6989",
+    "url": "https://www.dunkindonuts.com/locations/us/md/columbia/10430-shaker-dr/store-350880/",
+    "geo": "39.185149,-76.870849",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "7106 Minstrel Way, Columbia, MD 21045",
+    "status": "confirmed",
+    "wed_hours": "05:00-19:45",
+    "phone": "+1 410-381-5779",
+    "url": "https://www.dunkindonuts.com/locations/us/md/columbia/7106-minstrel-way/store-330177/",
+    "geo": "39.177789,-76.843420",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "5485 Harpers Farm Rd, Columbia, MD 21044",
+    "status": "confirmed",
+    "wed_hours": "05:00-17:45",
+    "phone": "+1 410-997-2297",
+    "url": "https://www.dunkindonuts.com/locations/us/md/columbia/5485-harpers-farm-rd/store-310447/",
+    "geo": "39.222116,-76.889499",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "7050 Friendship Road, BWI Airport Post Security, Baltimore, MD 21240",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "",
+    "url": "https://www.dunkindonuts.com/locations/us/md/baltimore/7050-friendship-road/store-366765/",
+    "geo": "39.179226,-76.671754",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   }
+  ]
+ },
+ "Famous Dave's": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (famous_daves_us): 2 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "6201 Columbia Crossing Circle, Columbia, MD 21045",
+    "status": "confirmed",
+    "wed_hours": "11:00-21:00",
+    "phone": "+1 410-290-0091",
+    "url": "https://www.famousdaves.com/Locations/columbia",
+    "geo": "39.196169,-76.815388",
+    "source": "All the Places 2026-10-31: famous_daves_us"
+   },
+   {
+    "address": "14140 Baltimore Avenue, Laurel, MD 20707",
+    "status": "confirmed",
+    "wed_hours": "11:00-21:00",
+    "phone": "+1 301-483-3500",
+    "url": "https://www.famousdaves.com/Locations/laurel",
+    "geo": "39.083860,-76.863049",
+    "source": "All the Places 2026-10-31: famous_daves_us"
+   }
+  ]
+ },
+ "Fazoli's": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (fazolis_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Firehouse Subs": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (firehouse_subs): 2 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "2622 Brandermill Boulevard, Gambrills, MD 21054",
+    "status": "confirmed",
+    "wed_hours": "10:00-21:00",
+    "phone": "+1 443-292-4111",
+    "url": "https://www.firehousesubs.com/store-locator/store/4Bb0hPFfm3kiUFIGrjHL2a",
+    "geo": "39.038913,-76.678790",
+    "source": "All the Places 2026-10-31: firehouse_subs"
+   },
+   {
+    "address": "901 Washington Blvd., Laurel, MD 20707",
+    "status": "confirmed",
+    "wed_hours": "10:00-21:00",
+    "phone": "+1 301-725-5679",
+    "url": "https://www.firehousesubs.com/store-locator/store/ANDUR26dTCvlJwRCkCl7w6",
+    "geo": "39.096984,-76.851791",
+    "source": "All the Places 2026-10-31: firehouse_subs"
+   }
+  ]
+ },
+ "Fogo de Chão": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (fogo_de_chao): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Freddy's Frozen Custard & Steakburgers": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (freddys_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Golden Corral": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (golden_corral): 1 in the area; OpenStreetMap: 0 in the area; house number, phone and Wednesday hours from Golden Corral's own store page (read 11 Nov 2026)",
+  "stores": [
+   {
+    "address": "7047 Arundel Mills Blvd, Hanover, MD 21076",
+    "status": "confirmed",
+    "wed_hours": "11:00-22:00",
+    "phone": "(410) 799-0959",
+    "url": "https://www.goldencorral.com/locations/location-detail/2498/golden-corral-arundel-mills-blvd/",
+    "geo": "39.153515,-76.723586",
+    "source": "All the Places 2026-10-31: golden_corral"
+   }
+  ]
+ },
+ "Granite City Food & Brewery": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Great Clips": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (great_clips): 2 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "8769 Piney Orchard Pkwy, Odenton, MD 21113",
+    "status": "confirmed",
+    "wed_hours": "09:00-20:00",
+    "phone": "+1 410-695-1700",
+    "url": "https://salons.greatclips.com/us/md/odenton/8769-piney-orchard-pkwy",
+    "geo": "39.065658,-76.719094",
+    "source": "All the Places 2026-10-31: great_clips"
+   },
+   {
+    "address": "4725 Dorsey Hall Dr, Ellicott City, MD 21042",
+    "status": "confirmed",
+    "wed_hours": "09:00-20:00",
+    "phone": "+1 410-997-0009",
+    "url": "https://salons.greatclips.com/us/md/ellicott-city/4725-dorsey-hall-dr",
+    "geo": "39.242852,-76.842510",
+    "source": "All the Places 2026-10-31: great_clips"
+   }
+  ]
+ },
+ "Hooters": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (hooters): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "14707-A Baltimore Avenue, Laurel, MD",
+    "status": "confirmed",
+    "wed_hours": "11:00-24:00",
+    "phone": "+1 301-362-5668",
+    "url": "https://www.hooters.com/locations/1145-laurel",
+    "geo": "39.091892,-76.855163",
+    "source": "All the Places 2026-10-31: hooters"
+   }
+  ]
+ },
+ "IHOP": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (ihop): 3 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "15004 Baltimore Ave, Laurel, MD 20707",
+    "status": "confirmed",
+    "wed_hours": "07:00-22:00",
+    "phone": "+1 240-786-3767",
+    "url": "https://restaurants.ihop.com/md/laurel/breakfast-15004-baltimore-ave-551",
+    "geo": "39.096451,-76.851066",
+    "source": "All the Places 2026-10-31: ihop"
+   },
+   {
+    "address": "889 Md Route 3 N, Gambrills, MD 21054",
+    "status": "confirmed",
+    "wed_hours": "07:00-22:00",
+    "phone": "+1 410-774-0268",
+    "url": "https://restaurants.ihop.com/md/gambrills/breakfast-889-md-route-3-n-3460",
+    "geo": "39.039483,-76.673044",
+    "source": "All the Places 2026-10-31: ihop"
+   },
+   {
+    "address": "8825 Centre Park Dr, Columbia, MD 21045",
+    "status": "confirmed",
+    "wed_hours": "07:00-22:00",
+    "phone": "+1 443-393-2130",
+    "url": "https://restaurants.ihop.com/md/columbia/breakfast-8825-centre-park-dr-2148",
+    "geo": "39.227737,-76.815675",
+    "source": "All the Places 2026-10-31: ihop"
+   }
+  ]
+ },
+ "Insomnia Cookies": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (insomnia_cookies): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Jiffy Lube": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (jiffy_lube_us): 4 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "301 2ND ST, LAUREL, MD 20707",
+    "status": "confirmed",
+    "wed_hours": "07:30-19:00",
+    "phone": "+1 301-498-5823",
+    "url": "https://www.jiffylube.com/locations/md/laurel/49",
+    "geo": "39.101805,-76.844923",
+    "source": "All the Places 2026-10-31: jiffy_lube_us"
+   },
+   {
+    "address": "1110 STATE ROUTE 3 N, GAMBRILLS, MD 21054",
+    "status": "confirmed",
+    "wed_hours": "07:30-19:00",
+    "phone": "+1 410-721-4416",
+    "url": "https://www.jiffylube.com/locations/md/gambrills/721",
+    "geo": "39.024595,-76.691634",
+    "source": "All the Places 2026-10-31: jiffy_lube_us"
+   },
+   {
+    "address": "2610 ANNAPOLIS RD, SEVERN, MD 21144",
+    "status": "confirmed",
+    "wed_hours": "08:00-19:00",
+    "phone": "+1 410-551-4002",
+    "url": "https://www.jiffylube.com/locations/md/severn/315",
+    "geo": "39.129267,-76.737167",
+    "source": "All the Places 2026-10-31: jiffy_lube_us"
+   },
+   {
+    "address": "6405 DOBBIN CENTER WAY, COLUMBIA, MD 21045",
+    "status": "confirmed",
+    "wed_hours": "08:00-19:00",
+    "phone": "+1 410-992-0333",
+    "url": "https://www.jiffylube.com/locations/md/columbia/152",
+    "geo": "39.197098,-76.821366",
+    "source": "All the Places 2026-10-31: jiffy_lube_us"
+   }
+  ]
+ },
+ "Kohl's": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (kohls_us): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "3323 CORRIDOR MARKETPLACE, LAUREL, MD 20724",
+    "status": "confirmed",
+    "wed_hours": "09:00-21:00",
+    "phone": "+1 301-617-9102",
+    "url": "https://www.kohls.com/stores/md/laurel-266.shtml",
+    "geo": "39.095365,-76.806318",
+    "source": "All the Places 2026-10-31: kohls_us"
+   }
+  ]
+ },
+ "Krispy Kreme": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (krispy_kreme_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Kwik Trip": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (kwik_trip): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Little Caesars": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (little_caesars_us): 3 in the area (a partial list); OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "1127 ANNAPOLIS ROAD, ODENTON, MD 21113",
+    "status": "confirmed",
+    "wed_hours": "10:00-22:00",
+    "phone": "+1 410-674-4500",
+    "url": "https://littlecaesars.com/en-us/store/2522",
+    "geo": "39.081181,-76.691803",
+    "source": "All the Places 2026-10-31: little_caesars_us"
+   },
+   {
+    "address": "8775 CLOUDLEAP CT, COLUMBIA, MD 21045",
+    "status": "confirmed",
+    "wed_hours": "11:00-21:30",
+    "phone": "+1 410-730-2100",
+    "url": "https://littlecaesars.com/en-us/store/10043",
+    "geo": "39.207405,-76.816273",
+    "source": "All the Places 2026-10-31: little_caesars_us"
+   },
+   {
+    "address": "3431 FORT MEADE RD, LAUREL, MD 20724",
+    "status": "confirmed",
+    "wed_hours": "10:00-23:00",
+    "phone": "+1 301-776-2689",
+    "url": "https://littlecaesars.com/en-us/store/9910",
+    "geo": "39.098629,-76.812158",
+    "source": "All the Places 2026-10-31: little_caesars_us"
+   }
+  ]
+ },
+ "Marcus Theatres": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Menchie's": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (menchies): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Mission BBQ": {
+  "presence": "yes",
+  "basis_url": "https://mission-bbq.com/locations-and-menu/maryland-locations/",
+  "basis": "OpenStreetMap: 3 in the area; all three confirmed on Mission BBQ's own store pages, 11 Nov 2026 (Wednesday 11 AM-9 PM; Veterans Day isn't one of its eight closed holidays)",
+  "stores": [
+   {
+    "address": "14712 Baltimore Ave, Ste 101, Laurel, MD 20707",
+    "status": "confirmed",
+    "wed_hours": "11:00-21:00",
+    "phone": "(240) 360-0050",
+    "url": "https://mission-bbq.com/locations-and-menu/laurel-md/",
+    "osm_id": "node/10250069950",
+    "geo": "39.093223,-76.856593",
+    "source": "Mission BBQ's own store page (read 11 Nov 2026); pin from OpenStreetMap"
+   },
+   {
+    "address": "6270 Columbia Crossing Cir, Columbia, MD 21045",
+    "status": "confirmed",
+    "wed_hours": "11:00-21:00",
+    "phone": "(443) 832-6180",
+    "url": "https://mission-bbq.com/locations-and-menu/columbia-md/",
+    "osm_id": "way/146254430",
+    "geo": "39.199029,-76.813390",
+    "source": "Mission BBQ's own store page (read 11 Nov 2026); pin from OpenStreetMap"
+   },
+   {
+    "address": "2503 Evergreen Rd, Gambrills, MD 21054",
+    "status": "confirmed",
+    "wed_hours": "11:00-21:00",
+    "phone": "(410) 697-1002",
+    "url": "https://mission-bbq.com/locations-and-menu/gambrills-md/",
+    "osm_id": "way/793912955",
+    "geo": "39.030155,-76.686846",
+    "source": "Mission BBQ's own store page (read 11 Nov 2026); pin from OpenStreetMap"
+   }
+  ]
+ },
+ "Olive Garden": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "OpenStreetMap: 1 in the area",
+  "stores": [
+   {
+    "address": "7061 Arundel Mills Circle, Hanover, 21076",
+    "status": "unverified",
+    "wed_hours": "",
+    "phone": "+1-410-796-2750",
+    "url": "",
+    "osm_id": "way/167048935",
+    "geo": "39.154538,-76.729176",
+    "source": "OpenStreetMap"
+   }
+  ]
+ },
+ "Outback Steakhouse": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (outback_steakhouse): 2 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "14718 Baltimore Avenue, Laurel, MD 20707",
+    "status": "confirmed",
+    "wed_hours": "11:00-22:00",
+    "phone": "+1 301-317-8401",
+    "url": "https://locations.outback.com/maryland/laurel/14718-baltimore-avenue",
+    "geo": "39.093365,-76.855832",
+    "source": "All the Places 2026-10-31: outback_steakhouse"
+   },
+   {
+    "address": "2507 Evergreen Road, Gambrills, MD 21054",
+    "status": "confirmed",
+    "wed_hours": "11:00-22:00",
+    "phone": "+1 410-774-9227",
+    "url": "https://locations.outback.com/maryland/gambrills/2507-evergreen-road",
+    "geo": "39.030000,-76.687227",
+    "source": "All the Places 2026-10-31: outback_steakhouse"
+   }
+  ]
+ },
+ "Perkins": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (perkins_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Pilot / Flying J": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-10 (pilot_flying_j): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Pizza Ranch": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (pizza_ranch_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Qdoba": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (qdoba): 6 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "2799 Rose St, Fort Meade, MD 20755",
+    "status": "confirmed",
+    "wed_hours": "10:30-19:00",
+    "phone": "",
+    "url": "https://locations.qdoba.com/us/md/fort-meade/2799-rose-st",
+    "geo": "39.107762,-76.737930",
+    "source": "All the Places 2026-10-31: qdoba"
+   },
+   {
+    "address": "6476 Dobbin Center Way, Columbia, MD 21045",
+    "status": "confirmed",
+    "wed_hours": "07:00-22:00",
+    "phone": "",
+    "url": "https://locations.qdoba.com/us/md/columbia/6476-dobbin-center-way",
+    "geo": "39.199208,-76.819599",
+    "source": "All the Places 2026-10-31: qdoba"
+   },
+   {
+    "address": "1404 S Main Chapel Way, Gambrills, MD 21054",
+    "status": "confirmed",
+    "wed_hours": "07:00-22:00",
+    "phone": "",
+    "url": "https://locations.qdoba.com/us/md/gambrills/1404-s-main-chapel-way",
+    "geo": "39.033155,-76.685676",
+    "source": "All the Places 2026-10-31: qdoba"
+   },
+   {
+    "address": "7050 Friendship Rd, Baltimore, MD 21240",
+    "status": "confirmed",
+    "wed_hours": "10:00-19:00",
+    "phone": "",
+    "url": "https://locations.qdoba.com/us/md/baltimore/7050-friendship-rd",
+    "geo": "39.179621,-76.670971",
+    "source": "All the Places 2026-10-31: qdoba"
+   },
+   {
+    "address": "A/B Terminal, Baltimore, MD 21240",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "",
+    "url": "https://locations.qdoba.com/us/md/baltimore/a/b-terminal/takeout",
+    "geo": "39.170452,-76.682922",
+    "source": "All the Places 2026-10-31: qdoba"
+   },
+   {
+    "address": "Fort Meade, Fort Meade, MD 20755",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "",
+    "url": "https://locations.qdoba.com/us/md/fort-meade/fort-meade/takeout",
+    "geo": "39.097893,-76.729178",
+    "source": "All the Places 2026-10-31: qdoba"
+   }
+  ]
+ },
+ "Red Lobster": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-17 (red_lobster_us): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "7063 Arundel Mills BLVD, Hanover, MD 21076",
+    "status": "confirmed",
+    "wed_hours": "11:00-22:00",
+    "phone": "+1 410-796-2390",
+    "url": "https://www.redlobster.com/locations/list/md/hanover/7063-arundel-mills-blvd/",
+    "geo": "39.154308,-76.728808",
+    "source": "All the Places 2026-10-17: red_lobster_us"
+   }
+  ]
+ },
+ "Red Robin": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-17 (red_robin): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "8640 Snowden River Pkwy, Columbia, MD 21045",
+    "status": "confirmed",
+    "wed_hours": "11:00-21:30",
+    "phone": "+1 410-312-0214",
+    "url": "https://www.redrobin.com/location/red-robin-columbia-crossing",
+    "geo": "39.196987,-76.809247",
+    "source": "All the Places 2026-10-17: red_robin"
+   }
+  ]
+ },
+ "Ruby Tuesday": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (ruby_tuesday_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Scooter's Coffee": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (scooters_coffee_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Shake Shack": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-17 (shake_shack): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "10300 Little Patuxent Pkwy, Columbia, MD 21044",
+    "status": "confirmed",
+    "wed_hours": "10:00-23:00",
+    "phone": "+1 443-545-7863",
+    "url": "https://shakeshack.com/location/mall-in-columbia-md",
+    "geo": "39.215704,-76.861481",
+    "source": "All the Places 2026-10-17: shake_shack"
+   }
+  ]
+ },
+ "Sheetz": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (sheetz): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Smashburger": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (smashburger): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Sonic": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (sonic_drivein_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Sport Clips": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (sport_clips_us): 2 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "1404 South Main Chapel Way, Gambrills, MD 21054",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "+1 410-721-8959",
+    "url": "https://sportclips.com/us-md-gambrills-md121",
+    "geo": "39.033010,-76.685530",
+    "source": "All the Places 2026-10-31: sport_clips_us"
+   },
+   {
+    "address": "6476 Dobbin Center Way, Columbia, MD 21045",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "+1 443-542-2420",
+    "url": "https://sportclips.com/us-md-columbia-md108",
+    "geo": "39.199220,-76.819770",
+    "source": "All the Places 2026-10-31: sport_clips_us"
+   }
+  ]
+ },
+ "Starbucks": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (starbucks_us): 17 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "7000 Arundel Mills Circle, Hanover, MD 21076",
+    "status": "confirmed",
+    "wed_hours": "09:30-20:00",
+    "phone": "",
+    "url": "",
+    "geo": "39.157550,-76.724760",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "BWI Airport, Baltimore, MD 21240",
+    "status": "confirmed",
+    "wed_hours": "05:30-22:00",
+    "phone": "+1 410-691-2308",
+    "url": "",
+    "geo": "39.179120,-76.670140",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "Third floor Terminal Bldg, Baltimore, MD 21240",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 410-684-3913",
+    "url": "",
+    "geo": "39.177460,-76.670360",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "7680 Arundel Mills Blvd, Hanover, MD 21076",
+    "status": "confirmed",
+    "wed_hours": "05:00-21:00",
+    "phone": "+1 410-796-0936",
+    "url": "",
+    "geo": "39.153250,-76.728340",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "7698 Dorchester Blvd., The Shops at Arundel Preserve, Suite 207, Hanover, MD 21076",
+    "status": "confirmed",
+    "wed_hours": "05:00-20:00",
+    "phone": "+1 410-799-4126",
+    "url": "",
+    "geo": "39.154650,-76.742490",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "5715 Richards Valley Rd, Ellicott City, MD 21043",
+    "status": "confirmed",
+    "wed_hours": "05:00-21:00",
+    "phone": "+1 410-750-2651",
+    "url": "",
+    "geo": "39.214390,-76.802920",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "6365 Dobbin Rd, Columbia Crossing, Columbia, MD 21045",
+    "status": "confirmed",
+    "wed_hours": "05:00-19:30",
+    "phone": "+1 410-772-5305",
+    "url": "",
+    "geo": "39.197620,-76.819230",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "7090 Deepage Drive, Suite E, Columbia, MD 21045",
+    "status": "confirmed",
+    "wed_hours": "05:00-20:00",
+    "phone": "+1 410-381-0821",
+    "url": "",
+    "geo": "39.176150,-76.839190",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "2799 Rose St, Fort Meade, MD 20755",
+    "status": "confirmed",
+    "wed_hours": "08:00-18:00",
+    "phone": "+1 410-874-7086",
+    "url": "",
+    "geo": "39.107320,-76.737880",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "5400 Lynx Ln, Columbia, MD 21044",
+    "status": "confirmed",
+    "wed_hours": "05:00-21:00",
+    "phone": "+1 202-945-2179",
+    "url": "",
+    "geo": "39.221190,-76.875120",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "3355 Corridor Marketplace, Laurel, MD 20724",
+    "status": "confirmed",
+    "wed_hours": "04:30-21:00",
+    "phone": "+1 240-565-2501",
+    "url": "",
+    "geo": "39.097850,-76.808140",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "1161 Annapolis Rd, Odenton, MD 21113",
+    "status": "confirmed",
+    "wed_hours": "05:00-21:00",
+    "phone": "+1 443-430-2734",
+    "url": "",
+    "geo": "39.080560,-76.688390",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "5755 Cedar Lane, Columbia, MD 21044",
+    "status": "confirmed",
+    "wed_hours": "06:00-20:00",
+    "phone": "+1 410-740-7890",
+    "url": "",
+    "geo": "39.214290,-76.885720",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "10985 Johns Hopkins Rd, Laurel, MD 20723",
+    "status": "confirmed",
+    "wed_hours": "04:30-20:00",
+    "phone": "+1 301-490-3399",
+    "url": "",
+    "geo": "39.159170,-76.894130",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "2389 Brandermill Blvd, Gambrills, MD 21054",
+    "status": "confirmed",
+    "wed_hours": "04:30-21:00",
+    "phone": "+1 410-721-0520",
+    "url": "",
+    "geo": "39.033600,-76.682710",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "14060 Baltimore Ave, Laurel, MD 20707",
+    "status": "confirmed",
+    "wed_hours": "05:00-21:00",
+    "phone": "+1 301-362-1813",
+    "url": "",
+    "geo": "39.083000,-76.864750",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "14940 Silver Trail Lane, Laurel, MD 20707",
+    "status": "confirmed",
+    "wed_hours": "05:00-20:00",
+    "phone": "+1 240-709-2996",
+    "url": "",
+    "geo": "39.083490,-76.889110",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   }
+  ]
+ },
+ "Target": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (target_us): 3 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "2384 BRANDERMILL BLVD, Gambrills, MD 21054",
+    "status": "confirmed",
+    "wed_hours": "07:00-23:00",
+    "phone": "+1 443-302-6278",
+    "url": "https://www.target.com/sl/store/2631",
+    "geo": "39.034100,-76.684000",
+    "source": "All the Places 2026-10-31: target_us"
+   },
+   {
+    "address": "6111 Dobbin Rd, Columbia, MD 21045",
+    "status": "confirmed",
+    "wed_hours": "07:00-23:00",
+    "phone": "+1 410-290-1123",
+    "url": "https://www.target.com/sl/store/1044",
+    "geo": "39.196971,-76.813483",
+    "source": "All the Places 2026-10-31: target_us"
+   },
+   {
+    "address": "3343 Corridor Marketplace, Laurel, MD 20724",
+    "status": "confirmed",
+    "wed_hours": "07:00-23:00",
+    "phone": "+1 301-483-0934",
+    "url": "https://www.target.com/sl/store/1007",
+    "geo": "39.096991,-76.809663",
+    "source": "All the Places 2026-10-31: target_us"
+   }
+  ]
+ },
+ "Texas Roadhouse": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (texas_roadhouse): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "8820 Stanford Blvd., Columbia, MD 21045",
+    "status": "confirmed",
+    "wed_hours": "12:00-22:00",
+    "phone": "+1 410-872-1140",
+    "url": "https://texasroadhouse.olo.com/menu/529-columbiamd/",
+    "geo": "39.188816,-76.815286",
+    "source": "All the Places 2026-10-31: texas_roadhouse"
+   }
+  ]
+ },
+ "Tommy's Express Car Wash": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Twin Peaks": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (twin_peaks): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Village Inn": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (village_inn_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Walgreens": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (walgreens): 3 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "600 WASHINGTON BLVD S, Laurel, MD 20707",
+    "status": "confirmed",
+    "wed_hours": "07:00-23:00",
+    "phone": "+1 301-725-0236",
+    "url": "https://www.walgreens.com/locator/walgreens-600+washington+blvd+s-laurel-md-20707/id=15185",
+    "geo": "39.098779,-76.848396",
+    "source": "All the Places 2026-10-31: walgreens"
+   },
+   {
+    "address": "2633 BRANDERMILL BLVD, Gambrills, MD 21054",
+    "status": "confirmed",
+    "wed_hours": "08:00-21:00",
+    "phone": "+1 410-451-9448",
+    "url": "https://www.walgreens.com/locator/walgreens-2633+brandermill+blvd-gambrills-md-21054/id=18951",
+    "geo": "39.039965,-76.677865",
+    "source": "All the Places 2026-10-31: walgreens"
+   },
+   {
+    "address": "5585 TWIN KNOLLS RD, Columbia, MD 21045",
+    "status": "confirmed",
+    "wed_hours": "07:00-22:00",
+    "phone": "+1 410-730-2789",
+    "url": "https://www.walgreens.com/locator/walgreens-5585+twin+knolls+rd-columbia-md-21045/id=11949",
+    "geo": "39.219977,-76.839372",
+    "source": "All the Places 2026-10-31: walgreens"
+   }
+  ]
+ },
+ "Wawa": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (wawa): 4 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "14910 silver trl ln, laurel, MD 20707",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "",
+    "url": "https://www.wawa.com/locations/8546",
+    "geo": "39.082980,-76.889214",
+    "source": "All the Places 2026-10-31: wawa"
+   },
+   {
+    "address": "9600 fort meade rd, laurel, MD 20707",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "",
+    "url": "https://www.wawa.com/locations/8515",
+    "geo": "39.097390,-76.841470",
+    "source": "All the Places 2026-10-31: wawa"
+   },
+   {
+    "address": "701 annapolis rd, gambrills, MD 21054",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "",
+    "url": "https://www.wawa.com/locations/0595",
+    "geo": "39.056566,-76.656624",
+    "source": "All the Places 2026-10-31: wawa"
+   },
+   {
+    "address": "7710 milestone pkwy, hanover, MD 21076",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "",
+    "url": "https://www.wawa.com/locations/8525",
+    "geo": "39.154200,-76.743470",
+    "source": "All the Places 2026-10-31: wawa"
+   }
+  ]
+ },
+ "Wendy's": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (wendys): 0 in the area (a partial list); OpenStreetMap: 7 in the area",
+  "stores": [
+   {
+    "address": "8850 Gorman Road, Laurel, MD 20723",
+    "status": "unverified",
+    "wed_hours": "",
+    "phone": "+1 301-362-1528",
+    "url": "https://locations.wendys.com/united-states/md/laurel/8850-gorman-road",
+    "osm_id": "node/4437726090",
+    "geo": "39.131575,-76.819411",
+    "source": "OpenStreetMap"
+   },
+   {
+    "address": "9150 Old Annapolis Road, Columbia, MD 21045",
+    "status": "unverified",
+    "wed_hours": "06:30-02:00",
+    "phone": "+1 443-545-5464",
+    "url": "https://locations.wendys.com/united-states/md/columbia/9150-rt-108",
+    "osm_id": "way/104859507",
+    "geo": "39.234551,-76.830027",
+    "source": "OpenStreetMap"
+   },
+   {
+    "address": "3563 Russett Green East, Laurel, MD 20724",
+    "status": "unverified",
+    "wed_hours": "10:00-22:00",
+    "phone": "+1-301-362-6885",
+    "url": "https://www.crabandchickenlaurel.com/",
+    "osm_id": "way/115791884",
+    "geo": "39.098964,-76.805105",
+    "source": "OpenStreetMap"
+   },
+   {
+    "address": "6355 Dobbin Road, Columbia, MD 21045",
+    "status": "unverified",
+    "wed_hours": "",
+    "phone": "+1 443-542-0750",
+    "url": "https://locations.wendys.com/united-states/md/columbia/6355-dobbin-road",
+    "osm_id": "way/136036617",
+    "geo": "39.197344,-76.819596",
+    "source": "OpenStreetMap"
+   },
+   {
+    "address": "7057 Arundel Mills Boulevard, Hanover, MD 21076",
+    "status": "unverified",
+    "wed_hours": "",
+    "phone": "+1 410-799-8336",
+    "url": "https://locations.wendys.com/united-states/md/hanover/7057-arundel-mills-blvd",
+    "osm_id": "way/166775897",
+    "geo": "39.153240,-76.727695",
+    "source": "OpenStreetMap"
+   },
+   {
+    "address": "14050 Baltimore Avenue, Laurel, MD 20707",
+    "status": "unverified",
+    "wed_hours": "",
+    "phone": "+1 301-725-4931",
+    "url": "https://locations.wendys.com/united-states/md/laurel/14050-baltimore-blvd",
+    "osm_id": "way/235170160",
+    "geo": "39.082797,-76.863794",
+    "source": "OpenStreetMap"
+   },
+   {
+    "address": "1064 Md Route 3 North, Gambrills, MD 21054",
+    "status": "unverified",
+    "wed_hours": "",
+    "phone": "+1 410-721-4165",
+    "url": "https://locations.wendys.com/united-states/md/gambrills/1064-md-route-3-n",
+    "osm_id": "way/526881619",
+    "geo": "39.026900,-76.689055",
+    "source": "OpenStreetMap"
+   }
+  ]
+ }
+}

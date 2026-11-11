@@ -1,0 +1,4380 @@
+{
+ "meta": {
+  "built_at": "2026-11-11T05:43:59Z",
+  "day": "2026-11-11",
+  "day_start": "2026-11-11T05:00:00Z",
+  "tz": "America/New_York",
+  "tz_offset_min": -300,
+  "forecast_url": "https://api.weather.gov/gridpoints/LWX/106,82/forecast",
+  "sunrise": "2026-11-11T11:44:55Z",
+  "sunset": "2026-11-11T21:57:27Z",
+  "region": {
+   "id": "fort-meade",
+   "name": "Fort Meade, Odenton, Laurel and Columbia",
+   "label": "Fort Meade: Odenton, Laurel, Columbia, MD",
+   "center": [
+    39.084,
+    -76.7
+   ],
+   "center_label": "Odenton, by Fort Meade",
+   "zoom": 11,
+   "wx_name": "Fort Meade",
+   "transit": "ride MTA's MARC trains, buses or Light Rail, free on 11 Nov for veterans, active duty, Guard and Reserve with a DoD or VA ID or a Maryland license marked Veteran",
+   "areas": [
+    [
+     "Fort Meade and Odenton",
+     39.095,
+     -76.725,
+     6.0
+    ],
+    [
+     "Gambrills and Crofton",
+     39.045,
+     -76.675,
+     4.5
+    ],
+    [
+     "Severn, Hanover and Arundel Mills",
+     39.16,
+     -76.715,
+     4.5
+    ],
+    [
+     "Laurel",
+     39.1,
+     -76.855,
+     5.0
+    ],
+    [
+     "Columbia",
+     39.2,
+     -76.85,
+     6.0
+    ]
+   ]
+  }
+ },
+ "offers": [
+  {
+   "id": "applebees",
+   "brand": "Applebee's",
+   "status": "offering",
+   "category": "meal",
+   "offer": "Free full-size entree from a special Veterans Day menu (7 items); some locations add a $5 Bounce Back card",
+   "value": 14,
+   "grade": "A",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 55,
+   "busy": 25,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active",
+    "guard_reserve"
+   ],
+   "guard_reserve": "yes",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "Dine-in only; participating locations",
+   "sources": [
+    {
+     "url": "https://www.fsrmagazine.com/industry-news/applebees-to-thank-service-members-with-free-entrees-on-veterans-day/",
+     "publisher": "Applebee's 2026 release, as carried by FSR magazine",
+     "published": "2026-11-02"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    },
+    {
+     "url": "https://veteran.com/veterans-day-discounts-sales-deals-free-meals/",
+     "publisher": "Veteran.com",
+     "published": "2026-11-06 (updated)"
+    }
+   ],
+   "notes": "Guard/Reserve wording from Stripes; Veteran.com lists veterans only. Hours not specified. Applebee's own 2026 release (19th year, seven entrees, dine-in at participating restaurants); applebees.com refuses automated reads.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "olive-garden",
+   "brand": "Olive Garden",
+   "status": "offering",
+   "category": "meal",
+   "offer": "Free entree from a special menu",
+   "value": 14,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 55,
+   "busy": 25,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    }
+   ],
+   "notes": "Veteran.com files Olive Garden under 2025; Military.com and Stripes list it for 2026. Brand's own page not checked. No statement from the company itself for 2026 found (8 Nov 2026): compilers only.",
+   "caution": "Not announced by the company for 2026: call first",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "red-lobster",
+   "brand": "Red Lobster",
+   "status": "offering",
+   "category": "meal",
+   "offer": "Free Veteran's Shrimp & Chips",
+   "value": 14,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 55,
+   "busy": 20,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    }
+   ],
+   "notes": "Veteran.com lists a prior-year entry; Military.com/Stripes show 2026 item named 'Veteran's Shrimp & Chips'. Confirm. No statement from the company itself for 2026 found (8 Nov 2026): compilers only.",
+   "caution": "Not announced by the company for 2026: call first",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "buffalo-wild-wings",
+   "brand": "Buffalo Wild Wings",
+   "status": "offering",
+   "category": "meal",
+   "offer": "10 boneless wings + fries",
+   "value": 14,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in_or_to_go",
+   "minutes": 35,
+   "busy": 15,
+   "line": 3,
+   "meal": true,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active",
+    "retired"
+   ],
+   "guard_reserve": "yes",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "Dine-in, GO orders or counter orders; participating locations",
+   "sources": [
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://veteran.com/veterans-day-discounts-sales-deals-free-meals/",
+     "publisher": "Veteran.com",
+     "published": "2026-11-06 (updated)"
+    }
+   ],
+   "notes": "'All past and present service members' (Military.com) - would include Guard/Reserve who served; Stripes says veterans.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "famous-daves",
+   "brand": "Famous Dave's",
+   "status": "offering",
+   "category": "meal",
+   "offer": "Complimentary two-meat lunch combo, dine-in, participating restaurants, proof required",
+   "value": 14,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 45,
+   "busy": 10,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://veteran.com/veterans-day-discounts-sales-deals-free-meals/",
+     "publisher": "Veteran.com",
+     "published": "2026-11-06 (updated)"
+    }
+   ],
+   "notes": "Veteran.com page text says 'Monday, Nov 11' (stale weekday copied from 2024) - date is unreliable; single source.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "hooters",
+   "brand": "Hooters",
+   "status": "offering",
+   "category": "meal",
+   "offer": "Free meal from Veterans Day menu with beverage purchase, dine-in",
+   "value": 14,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 45,
+   "busy": 10,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    },
+    {
+     "url": "https://veteran.com/veterans-day-discounts-sales-deals-free-meals/",
+     "publisher": "Veteran.com",
+     "published": "2026-11-06 (updated)"
+    }
+   ],
+   "notes": "Veteran.com page weekday error ('Tuesday').",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "bob-evans",
+   "brand": "Bob Evans",
+   "status": "offering",
+   "category": "meal",
+   "offer": "Free item from Veterans Day menu, dine-in",
+   "value": 0,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 45,
+   "busy": 10,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    }
+   ],
+   "notes": "",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "dave-busters",
+   "brand": "Dave & Buster's",
+   "status": "offering",
+   "category": "meal",
+   "offer": "Free unlimited game play and/or free dessert with entree purchase, valid ID",
+   "value": 20,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 60,
+   "busy": 10,
+   "line": 3,
+   "meal": false,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    }
+   ],
+   "notes": "",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "games"
+   ]
+  },
+  {
+   "id": "red-robin",
+   "brand": "Red Robin",
+   "status": "offering",
+   "category": "meal",
+   "offer": "Free Red's Big Tavern Burger with bottomless steak fries",
+   "value": 16,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 50,
+   "busy": 20,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://veteran.com/veterans-day-discounts-sales-deals-free-meals/",
+     "publisher": "Veteran.com",
+     "published": "2026-11-06 (updated)"
+    }
+   ],
+   "notes": "",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "outback",
+   "brand": "Outback Steakhouse",
+   "status": "offering",
+   "category": "meal",
+   "offer": "Free Bloomin' Onion + Coca-Cola or 16-oz domestic draft ('Military Mates'); Dine Rewards payers also earn a Hero's Meal for a later visit",
+   "value": 12,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 40,
+   "busy": 15,
+   "line": 3,
+   "meal": false,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://veteran.com/veterans-day-discounts-sales-deals-free-meals/",
+     "publisher": "Veteran.com",
+     "published": "2026-11-06 (updated)"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    }
+   ],
+   "notes": "Military.com: Nov 10-11 free Bloomin' Onion + beverage. Dine Rewards enrollment not needed for the appetizer.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "snack"
+   ],
+   "eat": 0.5
+  },
+  {
+   "id": "golden-corral",
+   "brand": "Golden Corral",
+   "status": "offering",
+   "category": "meal",
+   "offer": "Free 'thank you' dinner buffet + beverage at Military Appreciation Night",
+   "value": 17,
+   "grade": "B",
+   "start": "2026-11-11T21:00:00Z",
+   "end": null,
+   "window_text": "from 16:00 EST",
+   "mode": "dine_in",
+   "minutes": 55,
+   "busy": 25,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active",
+    "retired",
+    "guard_reserve"
+   ],
+   "guard_reserve": "yes",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://veteran.com/veterans-day-discounts-sales-deals-free-meals/",
+     "publisher": "Veteran.com",
+     "published": "2026-11-06 (updated)"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    }
+   ],
+   "notes": "Some locations may not require proof (Stripes).",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "bonefish-grill",
+   "brand": "Bonefish Grill",
+   "status": "offering",
+   "category": "meal",
+   "offer": "Free order of Bang Bang Shrimp and a non-alcoholic drink",
+   "value": 14,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 40,
+   "busy": 15,
+   "line": 3,
+   "meal": false,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active",
+    "guard_reserve"
+   ],
+   "guard_reserve": "yes",
+   "spouse": "no",
+   "kids": null,
+   "proof": [
+    "military_id",
+    "va_card",
+    "dd214"
+   ],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "Dine-in only; bring military ID.",
+   "sources": [
+    {
+     "url": "https://wtop.com/local/2026/11/deals-and-freebies-for-veterans-day/",
+     "publisher": "WTOP",
+     "published": "2026-11-09"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-10 (updated)"
+    }
+   ],
+   "notes": "From WTOP's and Military.com's 2026 lists; Bonefish's own 2026 post wasn't read.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "snack"
+   ],
+   "eat": 0.5
+  },
+  {
+   "id": "wawa",
+   "brand": "Wawa",
+   "status": "offering",
+   "category": "coffee",
+   "offer": "Free hot coffee of any size, all day",
+   "value": 3,
+   "grade": "A",
+   "start": "2026-11-11T05:00:00Z",
+   "end": "2026-11-12T05:00:00Z",
+   "window_text": "00:00–24:00 EST",
+   "mode": "in_store",
+   "minutes": 6,
+   "busy": 3,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active",
+    "guard_reserve",
+    "spouse"
+   ],
+   "guard_reserve": "yes",
+   "spouse": "yes",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "Any size hot coffee; family members included.",
+   "sources": [
+    {
+     "url": "https://www.convenience.org/Media/Daily/2026/November/6/4-Convenience-Retailers-Honor-Veterans_Ops",
+     "publisher": "NACS Daily (Wawa 2026 announcement)",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://news.va.gov/150505/2026-veterans-day-discounts-free-meals-offers/",
+     "publisher": "VA News",
+     "published": "2026"
+    }
+   ],
+   "notes": "Open 24 hours. Family members included; no ID required.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "coffee"
+   ]
+  },
+  {
+   "id": "dennys",
+   "brand": "Denny's",
+   "status": "offering",
+   "category": "breakfast",
+   "offer": "Free Original Grand Slam",
+   "value": 11,
+   "grade": "B",
+   "start": "2026-11-11T10:00:00Z",
+   "end": "2026-11-11T17:00:00Z",
+   "window_text": "05:00–12:00 EST",
+   "mode": "dine_in",
+   "minutes": 45,
+   "busy": 15,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active",
+    "retired"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "Participating locations",
+   "sources": [
+    {
+     "url": "https://usmilitary.org/veterans-day-discounts/",
+     "publisher": "usmilitary.org",
+     "published": "2026-11-05"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    },
+    {
+     "url": "https://www.legion.org/information-center/news/veterans-day/2026/november/veterans-day-deals-and-discounts",
+     "publisher": "American Legion",
+     "published": "2026-11-05"
+    }
+   ],
+   "notes": "USM cites the VA 2026 list: Wed 11 Nov, 5 a.m. to noon, dine-in only, ID required.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "ihop",
+   "brand": "IHOP",
+   "status": "offering",
+   "category": "breakfast",
+   "offer": "Free Red, White & Blueberry Pancake Combo",
+   "value": 11,
+   "grade": "B",
+   "start": "2026-11-11T12:00:00Z",
+   "end": "2026-11-12T00:00:00Z",
+   "window_text": "07:00–19:00 EST",
+   "mode": "dine_in",
+   "minutes": 45,
+   "busy": 15,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://www.legion.org/information-center/news/veterans-day/2026/november/veterans-day-deals-and-discounts",
+     "publisher": "The American Legion",
+     "published": "2026-11-05"
+    }
+   ],
+   "notes": "Veteran.com page still shows a 'Tuesday' weekday (stale 2025 text) but Military.com and Stripes confirm 11 Nov. Combo = pancakes, eggs, hash browns, bacon/sausage. The American Legion's 2026 list (5 Nov) gives 7 AM–7 PM at participating restaurants; ihop.com refuses automated reads.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "texas-roadhouse",
+   "brand": "Texas Roadhouse",
+   "status": "offering",
+   "category": "quick",
+   "offer": "Free meal voucher handed out 11:00-14:00; redeem for 1 of 10 entrees + sides + drink",
+   "value": 18,
+   "grade": "B",
+   "start": "2026-11-11T16:00:00Z",
+   "end": "2026-11-11T19:00:00Z",
+   "window_text": "11:00–14:00 EST",
+   "mode": "voucher",
+   "minutes": 8,
+   "busy": 25,
+   "line": 15,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id",
+    "va_card",
+    "dd214"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": "2027-05-31",
+   "limits": "Voucher, redeem later through 31 May 2027; offers may vary by location",
+   "sources": [
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://veteran.com/veterans-day-discounts-sales-deals-free-meals/",
+     "publisher": "Veteran.com",
+     "published": "2026-11-06 (updated)"
+    }
+   ],
+   "notes": "Voucher is handed out 11-2 only (not redeemable as a meal on the spot necessarily); a third-party page says vouchers usable from dinner opening on 11 Nov. Texas Roadhouse's own 2026 release not found; 2025 release used the same structure.",
+   "caution": "",
+   "group": null,
+   "ticket": true,
+   "purchase": false,
+   "kinds": []
+  },
+  {
+   "id": "wendys",
+   "brand": "Wendy's",
+   "status": "offering",
+   "category": "quick",
+   "offer": "Free Dave's Single cheeseburger",
+   "value": 6,
+   "grade": "A",
+   "start": "2026-11-11T15:30:00Z",
+   "end": null,
+   "window_text": "from 10:30 EST",
+   "mode": "dine_in_or_to_go",
+   "minutes": 12,
+   "busy": 10,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": true,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "One per person, no purchase needed, no substitutions; identify in-store or at the drive-thru; app/kiosk/mobile/delivery excluded",
+   "sources": [
+    {
+     "url": "https://www.wendys.com/blog/wendysr-square-deal-blog/wendys-honors-veterans-and-active-duty-military-free-daves-single",
+     "publisher": "Wendy's (own blog)",
+     "published": "2026-11-02"
+    },
+    {
+     "url": "https://hip2save.com/deals/veterans-day-free-meals/",
+     "publisher": "Hip2Save",
+     "published": "2026-11-05"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://www.legion.org/information-center/news/veterans-day/2026/november/veterans-day-deals-and-discounts",
+     "publisher": "American Legion",
+     "published": "2026-11-05"
+    }
+   ],
+   "notes": "One 2026 'Military Wallet' page claims a free breakfast combo instead - that is the 2025 offer; four 2026 sources say Dave's Single. Wendy's own newsroom not found. Wendy's sometimes offers varying items; confirm. Wendy's own post: just say you're a veteran or active duty; participating US restaurants; not in a combo; not for digital, delivery or kiosk orders.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "little-caesars",
+   "brand": "Little Caesars",
+   "status": "offering",
+   "category": "quick",
+   "offer": "Free HOT-N-READY Lunch Combo (4 slices Detroit-style + 20-oz Pepsi)",
+   "value": 7,
+   "grade": "B",
+   "start": "2026-11-11T16:00:00Z",
+   "end": "2026-11-11T19:00:00Z",
+   "window_text": "11:00–14:00 EST",
+   "mode": "in_store",
+   "minutes": 8,
+   "busy": 10,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": true,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    },
+    {
+     "url": "https://thekrazycouponlady.com/tips/money/35-veterans-day-freebies-free-oil-change-flu-shot-dinner-dessert",
+     "publisher": "The Krazy Coupon Lady",
+     "published": "2026-11-07 (updated)"
+    }
+   ],
+   "notes": "Military.com: in-store only, 11 a.m.-2 p.m.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "firehouse-subs",
+   "brand": "Firehouse Subs",
+   "status": "offering",
+   "category": "quick",
+   "offer": "Buy any size sub, get a second free",
+   "value": 9,
+   "grade": "A",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "in_store",
+   "minutes": 15,
+   "busy": 10,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": true,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "In-store only; second sub is equal or lesser value presumably",
+   "sources": [
+    {
+     "url": "https://news.firehousesubs.com/posts/firehouse-subs-honors-veterans-and-active-duty-military-with-a-veterans-day-bogo-offer",
+     "publisher": "Firehouse Subs newsroom",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    }
+   ],
+   "notes": "Veteran.com lists as 2025; Military.com (updated 8 Nov 2026) lists it without a year. Stripes also lists. Moderately confident. Firehouse's own post for Wed 11 Nov 2026: buy any sub, get one free, veterans and active duty with military ID, in store, participating restaurants.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": true,
+   "kinds": [
+    "meal"
+   ],
+   "eat": 0.5
+  },
+  {
+   "id": "chipotle",
+   "brand": "Chipotle",
+   "status": "offering",
+   "category": "quick",
+   "offer": "Free chips with guac, queso blanco or salsa with $5+ in-restaurant purchase",
+   "value": 5,
+   "grade": "A",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 15,
+   "busy": 10,
+   "line": 3,
+   "meal": false,
+   "dineIn": true,
+   "snack": true,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "no",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "In-restaurant only; not catering, mobile, online or delivery",
+   "sources": [
+    {
+     "url": "https://newsroom.chipotle.com/veterans-day-2026-offer",
+     "publisher": "Chipotle newsroom (release)",
+     "published": "2026-11-05"
+    },
+    {
+     "url": "https://veteran.com/veterans-day-discounts-sales-deals-free-meals/",
+     "publisher": "Veteran.com",
+     "published": "2026-11-06 (updated)"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    }
+   ],
+   "notes": "Requires a $5 purchase. Chipotle's 2026 release: active duty and veterans only (not spouses), all day, in-restaurant, $5 minimum before tax.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": true,
+   "kinds": [
+    "snack"
+   ],
+   "eat": 0.2
+  },
+  {
+   "id": "qdoba",
+   "brand": "Qdoba",
+   "status": "offering",
+   "category": "quick",
+   "offer": "Free chips and dip, dine-in, no purchase",
+   "value": 5,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 12,
+   "busy": 5,
+   "line": 3,
+   "meal": false,
+   "dineIn": true,
+   "snack": true,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://livingonthecheap.com/veterans-day-freebies-deals/",
+     "publisher": "Living On The Cheap",
+     "published": "2026-11-07 (updated)"
+    },
+    {
+     "url": "https://thekrazycouponlady.com/tips/money/35-veterans-day-freebies-free-oil-change-flu-shot-dinner-dessert",
+     "publisher": "The Krazy Coupon Lady",
+     "published": "2026-11-07 (updated)"
+    }
+   ],
+   "notes": "Living On The Cheap lists it as 2026; Krazy Coupon Lady marks it 'predicted'. Not on Military.com/Stripes lists. Treat as likely but not firm.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "snack"
+   ],
+   "eat": 0.2
+  },
+  {
+   "id": "charleys",
+   "brand": "Charleys Cheesesteaks",
+   "status": "offering",
+   "category": "quick",
+   "offer": "Free regular Gourmet Fry, no purchase needed",
+   "value": 4,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "in_store",
+   "minutes": 8,
+   "busy": 5,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": true,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    }
+   ],
+   "notes": "Single source (Military.com). Location is inside a truck stop. Charleys' own page found is 2025's (free regular Gourmet Fry, in store, participating US stores).",
+   "caution": "Participating stores only",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "snack"
+   ],
+   "eat": 0.2
+  },
+  {
+   "id": "mission-bbq",
+   "brand": "Mission BBQ",
+   "status": "offering",
+   "category": "quick",
+   "offer": "Free sandwich",
+   "value": 11,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 20,
+   "busy": 10,
+   "line": 3,
+   "meal": false,
+   "dineIn": true,
+   "snack": true,
+   "eligible": [
+    "veteran"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    }
+   ],
+   "notes": "",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "shake-shack",
+   "brand": "Shake Shack",
+   "status": "offering",
+   "category": "quick",
+   "offer": "Free ShackBurger with ID/proof, participating",
+   "value": 8,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 20,
+   "busy": 10,
+   "line": 3,
+   "meal": false,
+   "dineIn": true,
+   "snack": true,
+   "eligible": [
+    "veteran"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    }
+   ],
+   "notes": "",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "blaze-pizza",
+   "brand": "Blaze Pizza",
+   "status": "offering",
+   "category": "quick",
+   "offer": "Free one-topping pizza",
+   "value": 8,
+   "grade": "A",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": null,
+   "minutes": 20,
+   "busy": 10,
+   "line": 3,
+   "meal": false,
+   "dineIn": true,
+   "snack": true,
+   "eligible": [
+    "veteran"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.manilatimes.net/2026/11/02/tmt-newswire/globenewswire/blaze-pizza-to-offer-free-one-topping-pizza-to-veterans-and-active-duty-military-on-veterans-day/2459600",
+     "publisher": "Blaze Pizza release (GlobeNewswire, carried by The Manila Times)",
+     "published": "2026-11-02"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    }
+   ],
+   "notes": "Blaze's 2026 release: veterans and active duty, participating locations; no hours or ID rule stated.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "starbucks",
+   "brand": "Starbucks",
+   "status": "offering",
+   "category": "coffee",
+   "offer": "Free tall (12 oz) brewed coffee, hot or iced",
+   "value": 3,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in_or_to_go",
+   "minutes": 8,
+   "busy": 5,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active",
+    "spouse"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "yes",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "One per customer per visit; cafe and drive-thru; excludes Cold Brew/Nitro/customizations",
+   "sources": [
+    {
+     "url": "https://about.starbucks.com/stories/2026/starbucks-holiday-2026/",
+     "publisher": "Starbucks (page returned 403 to fetch; seen in search snippet)",
+     "published": "2026"
+    },
+    {
+     "url": "https://veteran.com/veterans-day-discounts-sales-deals-free-meals/",
+     "publisher": "Veteran.com",
+     "published": "2026-11-06 (updated)"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    }
+   ],
+   "notes": "Participating US stores incl. licensed (Target/grocery) locations. Proof not specified; spouses included.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "coffee"
+   ]
+  },
+  {
+   "id": "circle-k",
+   "brand": "Circle K",
+   "status": "offering",
+   "category": "coffee",
+   "offer": "Free medium hot or iced coffee, no purchase",
+   "value": 3,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "to_go",
+   "minutes": 6,
+   "busy": 3,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://thekrazycouponlady.com/tips/money/35-veterans-day-freebies-free-oil-change-flu-shot-dinner-dessert",
+     "publisher": "The Krazy Coupon Lady",
+     "published": "2026-11-07 (updated)"
+    },
+    {
+     "url": "https://livingonthecheap.com/veterans-day-freebies-deals/",
+     "publisher": "Living On The Cheap",
+     "published": "2026-11-07 (updated)"
+    }
+   ],
+   "notes": "Veteran.com lists as 2025; Stripes/KCL/LOC list for 2026.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "coffee"
+   ]
+  },
+  {
+   "id": "dunkin",
+   "brand": "Dunkin'",
+   "status": "offering",
+   "category": "coffee",
+   "offer": "Free donut, in-store only, one per guest, while supplies last (not on mobile app orders)",
+   "value": 2,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "in_store",
+   "minutes": 6,
+   "busy": 5,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html",
+     "publisher": "Military.com",
+     "published": "2026-11-08 (updated)"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://livingonthecheap.com/veterans-day-freebies-deals/",
+     "publisher": "Living On The Cheap",
+     "published": "2026-11-07 (updated)"
+    }
+   ],
+   "notes": "USM says no 2026 announcement on Dunkin's own site as of 5 Nov.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "sweet"
+   ]
+  },
+  {
+   "id": "great-clips",
+   "brand": "Great Clips",
+   "status": "offering",
+   "category": "service",
+   "offer": "Free haircut or a free-haircut card for a later visit; non-veteran customers that day get a card to give to a veteran",
+   "value": 22,
+   "grade": "A",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "in_store",
+   "minutes": 5,
+   "busy": 5,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": "2026-12-04",
+   "limits": "Card redeemable through 4 Dec 2026",
+   "sources": [
+    {
+     "url": "https://www.greatclips.com/about-us/news-room/vets-day-free-haircuts-2026",
+     "publisher": "Great Clips newsroom (release)",
+     "published": "2026-10-20"
+    },
+    {
+     "url": "https://hip2save.com/deals/veterans-day-free-meals/",
+     "publisher": "Hip2Save",
+     "published": "2026-11-05"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/retailers-veterans-day-military-discounts.html",
+     "publisher": "Military.com retail list",
+     "published": "2026-11-07 (updated)"
+    },
+    {
+     "url": "https://www.legion.org/information-center/news/veterans-day/2026/november/veterans-day-deals-and-discounts",
+     "publisher": "American Legion",
+     "published": "2026-11-05"
+    },
+    {
+     "url": "https://usmilitary.org/veterans-day-discounts/",
+     "publisher": "usmilitary.org",
+     "published": "2026-11-05"
+    }
+   ],
+   "notes": "Great Clips program page describes the annual Nov 11 program; 2026 card deadline of 4 Dec comes from roundups (2025 was 5 Dec). Hours/proof not specified. Salons are franchised; wait times likely long. Great Clips' 2026 release: any US salon; cards redeemable through 4 Dec 2026.",
+   "caution": "",
+   "group": null,
+   "ticket": true,
+   "purchase": false,
+   "kinds": []
+  },
+  {
+   "id": "sport-clips",
+   "brand": "Sport Clips",
+   "status": "offering",
+   "category": "service",
+   "offer": "Free haircut at participating locations",
+   "value": 25,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "in_store",
+   "minutes": 30,
+   "busy": 20,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://hip2save.com/deals/veterans-day-free-meals/",
+     "publisher": "Hip2Save",
+     "published": "2026-11-05"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://usmilitary.org/veterans-day-discounts/",
+     "publisher": "usmilitary.org",
+     "published": "2026-11-05"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/retailers-veterans-day-military-discounts.html",
+     "publisher": "Military.com retail list",
+     "published": "2026-11-07 (updated)"
+    }
+   ],
+   "notes": "Also $2/haircut donation to VFW scholarship through 14 Nov. Franchise: confirm the specific shop.",
+   "caution": "Participating shops only: call first",
+   "group": "haircut",
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "haircut"
+   ]
+  },
+  {
+   "id": "jiffy-lube",
+   "brand": "Jiffy Lube",
+   "status": "offering",
+   "category": "service",
+   "offer": "Some franchisees: 50% off oil change on Nov 11; chain-wide ongoing 25% military discount reported",
+   "value": 20,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "in_store",
+   "minutes": 30,
+   "busy": 15,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active",
+    "retired"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "unclear",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://ccheadliner.com/2026/11/04/jiffy-lube-honors-active-retired-military-with-50-percent-discount-on-all-oil-changes-on-veterans-day/",
+     "publisher": "CC Headliner (one franchisee, Missouri)",
+     "published": "2026-11-04"
+    }
+   ],
+   "notes": "Call ahead.",
+   "caution": "Only some franchise shops take part: call first",
+   "group": null,
+   "ticket": false,
+   "purchase": true,
+   "kinds": [
+    "oil-change"
+   ]
+  },
+  {
+   "id": "target",
+   "brand": "Target",
+   "status": "offering",
+   "category": "shopping",
+   "offer": "20% off one qualifying storewide purchase, 5–11 Nov, in store and online (Target Circle Military Appreciation)",
+   "value": 0,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "in_store",
+   "minutes": 25,
+   "busy": 5,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active",
+    "military_community"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "yes",
+   "kids": null,
+   "proof": [],
+   "advance": "Verify your military status in Target Circle before you shop (members verified before get it automatically)",
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "One qualified purchase",
+   "sources": [
+    {
+     "url": "https://news.va.gov/150505/2026-veterans-day-discounts-free-meals-offers/",
+     "publisher": "VA News (VA Office of Digital Media)",
+     "published": "2026-10-26 (verified 22 Oct, updated through 11 Nov)"
+    },
+    {
+     "url": "https://hip2save.com/deals/veterans-day-free-meals/",
+     "publisher": "Hip2Save",
+     "published": "2026-11-05"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/retailers-veterans-day-military-discounts.html",
+     "publisher": "Military.com retail list",
+     "published": "2026-11-07 (updated)"
+    },
+    {
+     "url": "https://themilitarywallet.com/veterans-day-free-meals-and-discounts/",
+     "publisher": "The Military Wallet",
+     "published": "2026-11-06 (updated)"
+    },
+    {
+     "url": "https://www.fox4news.com/news/veterans-day-2026-deals",
+     "publisher": "FOX 4 Dallas-Fort Worth (FOX Local)",
+     "published": "2026-11-04 (updated 2026-11-05)"
+    }
+   ],
+   "notes": "Families included. Verify online first; the discount loads into Target Circle. VA News says one qualifying storewide purchase; Fox 4 says 20% off storewide. Target's own 2026 page not found.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": true,
+   "kinds": [
+    "shopping"
+   ]
+  },
+  {
+   "id": "kohls",
+   "brand": "Kohl's",
+   "status": "offering",
+   "category": "shopping",
+   "offer": "30% off in store, 10–11 Nov",
+   "value": 0,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "in_store",
+   "minutes": 25,
+   "busy": 5,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active",
+    "family"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "yes",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "",
+   "sources": [
+    {
+     "url": "https://news.va.gov/150505/2026-veterans-day-discounts-free-meals-offers/",
+     "publisher": "VA News (VA Office of Digital Media)",
+     "published": "2026-10-26 (verified 22 Oct, updated through 11 Nov)"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/retailers-veterans-day-military-discounts.html",
+     "publisher": "Military.com retail list",
+     "published": "2026-11-07 (updated)"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    },
+    {
+     "url": "https://usmilitary.org/veterans-day-discounts/",
+     "publisher": "usmilitary.org",
+     "published": "2026-11-05"
+    }
+   ],
+   "notes": "Military Wallet separately says 15% every Monday (ongoing). VA News (26 Oct 2026) lists 30% off in store 10–11 Nov 2026 for military, veterans and families; Kohl's own 2026 page not found.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": true,
+   "kinds": [
+    "shopping"
+   ]
+  },
+  {
+   "id": "walgreens",
+   "brand": "Walgreens",
+   "status": "offering",
+   "category": "shopping",
+   "offer": "20% off eligible regular-priced items in store, 8–11 Nov",
+   "value": 0,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "in_store",
+   "minutes": 15,
+   "busy": 5,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "yes",
+   "kids": null,
+   "proof": [
+    "military_id",
+    "va_card",
+    "dd214"
+   ],
+   "advance": "a free myWalgreens account",
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "In store only; not with other coupons; excludes alcohol, tobacco, gift cards, stamps and more",
+   "sources": [
+    {
+     "url": "https://news.va.gov/150505/2026-veterans-day-discounts-free-meals-offers/",
+     "publisher": "VA News",
+     "published": "2026"
+    },
+    {
+     "url": "https://www.military.com/veterans-day/retailers-veterans-day-military-discounts.html",
+     "publisher": "Military.com (retailers)",
+     "published": "2026"
+    },
+    {
+     "url": "https://themilitarywallet.com/walgreens-military-discount/",
+     "publisher": "The Military Wallet (Walgreens)",
+     "published": "2026"
+    }
+   ],
+   "notes": "Most 2026 lists give 8–11 Nov (one gives a later start). Immediate family included.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": true,
+   "kinds": [
+    "shopping"
+   ]
+  },
+  {
+   "id": "chick-fil-a-metro-dc",
+   "brand": "Chick-fil-A",
+   "status": "offering",
+   "category": "quick",
+   "offer": "Free entree, open to close: a Chicken Biscuit, Egg White Grill or 4-count Chick-n-Minis until 10:30 AM; a Chicken Sandwich, Spicy Chicken Sandwich or 8-count Nuggets (regular or grilled) after.",
+   "value": 9,
+   "grade": "A",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in_or_to_go",
+   "minutes": 15,
+   "busy": 12,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": true,
+   "eligible": [
+    "veteran",
+    "guard_reserve"
+   ],
+   "guard_reserve": "yes",
+   "spouse": "no",
+   "kids": null,
+   "proof": [
+    "military_id",
+    "va_card",
+    "dd214",
+    "dl_veteran"
+   ],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "Proof of service required (DoD ID, a driver's license marked Veteran, VA ID or DD-214). Dine-in preferred; not valid for mobile orders, Chick-fil-A Delivery or third-party delivery.",
+   "sources": [
+    {
+     "url": "https://cfametrodc.com/",
+     "publisher": "Chick-fil-A Metro DC",
+     "published": "2026"
+    },
+    {
+     "url": "https://www.chick-fil-a.com/locations/md/laurel",
+     "publisher": "Chick-fil-A (the Laurel restaurant's page, via All the Places 2026-10-31)",
+     "published": "2026"
+    }
+   ],
+   "notes": "Chick-fil-A Metro DC's offer (cfametrodc.com, read 11 Nov 2026), open to close: a Chicken Biscuit, Egg White Grill or 4-count Chick-n-Minis until 10:30 AM; a Chicken Sandwich, Spicy Chicken Sandwich or 8-count Nuggets after. Proof of service required; not for mobile or delivery orders. Near Fort Meade its participating list names only the Laurel restaurant (13600 Baltimore Ave); other Chick-fil-A stores here have other owners and aren't on it, so ask before counting on one.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "silver-diner",
+   "brand": "Silver Diner",
+   "status": "offering",
+   "category": "meal",
+   "offer": "25% off an entree for veterans and active-duty military.",
+   "value": 4,
+   "grade": "B",
+   "start": "2026-11-11T12:00:00Z",
+   "end": "2026-11-12T04:00:00Z",
+   "window_text": "07:00–23:00 EST",
+   "mode": "in_store",
+   "minutes": 50,
+   "busy": 15,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "no",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "25% off one entree. Bring a valid military ID. Stars and Stripes says all locations in DC, Maryland, Virginia and New Jersey; neither list says whether it is dine-in only.",
+   "sources": [
+    {
+     "url": "https://wtop.com/local/2026/11/deals-and-freebies-for-veterans-day/",
+     "publisher": "WTOP",
+     "published": "2026-11-09"
+    },
+    {
+     "url": "https://www.stripes.com/veterans/2026-11-06/veterans-day-2026-deals-discounts-23362467.html",
+     "publisher": "Stars and Stripes",
+     "published": "2026-11-06"
+    }
+   ],
+   "notes": "25% off an entree for veterans and active-duty military with a valid military ID, at all its DC, Maryland and Virginia stores (WTOP, 9 Nov; Stars and Stripes, 6 Nov). Not on Silver Diner's own site. The one here is in Elkridge, at the Columbia edge of the area.",
+   "caution": "",
+   "group": null,
+   "ticket": false,
+   "purchase": true,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "grace-for-vets",
+   "brand": "Grace for Vets free car wash",
+   "status": "offering",
+   "category": "service",
+   "offer": "Free car wash for veterans and active duty.",
+   "value": 12,
+   "grade": "A",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "in_store",
+   "minutes": 15,
+   "busy": 15,
+   "line": 3,
+   "meal": false,
+   "dineIn": false,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "no",
+   "kids": null,
+   "proof": [],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "A free wash for veterans and active-duty personnel on 11 Nov at participating washes. Grace for Vets doesn't say what proof to bring: carry a military or veteran ID. Hours not published for the day: call the wash.",
+   "sources": [
+    {
+     "url": "https://www.graceforvets.com/find-a-participating-wash/",
+     "publisher": "Grace for Vets",
+     "published": "undated (every Veterans Day)"
+    }
+   ],
+   "notes": "Grace for Vets: a free car wash for veterans and active duty every 11 Nov at participating washes. In this area its list has one: Flagship Carwash, 771 Donaldson Ave, Severn. Proof isn't stated: bring a military or veteran ID.",
+   "caution": "Participating washes only, hours not published for the day: call first",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "car-wash"
+   ]
+  },
+  {
+   "id": "greene-turtle",
+   "brand": "The Greene Turtle",
+   "status": "offering",
+   "category": "meal",
+   "offer": "Free dine-in meal up to $15 for veterans.",
+   "value": 15,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 55,
+   "busy": 20,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "no",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "Dine-in, a meal up to $15. Bring a military or veteran ID. Lists say select locations: call first.",
+   "sources": [
+    {
+     "url": "https://wtop.com/local/2026/11/deals-and-freebies-for-veterans-day/",
+     "publisher": "WTOP",
+     "published": "2026-11-09"
+    },
+    {
+     "url": "https://dealybee.com/guides/veterans-day-free-meals",
+     "publisher": "Dealybee (DC, Maryland & Virginia list)",
+     "published": "2026-11-09"
+    }
+   ],
+   "notes": "A free dine-in meal up to $15 for veterans (WTOP, 9 Nov 2026); not on the Greene Turtle's own site. Lists say select locations. Addresses from directories: Columbia (8872 McGaw Rd) and Arundel Mills (7556 Teague Rd).",
+   "caution": "Select locations, and addresses from directories: call first",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "main-event",
+   "brand": "Main Event",
+   "status": "offering",
+   "category": "meal",
+   "offer": "Free double cheeseburger with fries and 30 minutes of game play for veterans and active duty.",
+   "value": 22,
+   "grade": "B",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 60,
+   "busy": 15,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "no",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": true,
+   "voucher_use_by": null,
+   "limits": "Bring a military ID or proof of service. Participating centers; the Columbia page carries the offer but doesn't say Columbia takes part.",
+   "sources": [
+    {
+     "url": "https://www.mainevent.com/locations/maryland/columbia/",
+     "publisher": "Main Event (Columbia page)",
+     "published": "undated"
+    },
+    {
+     "url": "https://www.legion.org/information-center/news/veterans-day/2026/november/veterans-day-deals-and-discounts",
+     "publisher": "The American Legion",
+     "published": "2026-11-05"
+    }
+   ],
+   "notes": "A free double cheeseburger with fries and 30 minutes of game play for veterans and active duty with ID, on Main Event's Columbia page (no year shown) and the American Legion's 5 Nov 2026 list. In the Mall in Columbia; hours not read.",
+   "caution": "Participating centers only: call first",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal",
+    "games"
+   ]
+  },
+  {
+   "id": "all-american-steakhouse",
+   "brand": "All American Steakhouse",
+   "status": "offering",
+   "category": "meal",
+   "offer": "Reported for 2026 (unconfirmed): one free sandwich or burger of your choice with fries",
+   "value": 14,
+   "grade": "C",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 50,
+   "busy": 15,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "no",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "Veterans only, with a valid ID; mention the promotion. No substitution for the fries.",
+   "sources": [
+    {
+     "url": "https://dealybee.com/guides/veterans-day-free-meals",
+     "publisher": "Dealybee (DC, Maryland & Virginia list)",
+     "published": "2026-11-09"
+    }
+   ],
+   "notes": "One 2026 deal list (Dealybee, 9 Nov) carries it for the Odenton restaurant; no post from the restaurant was found. Veterans only, with a valid ID; mention the promotion. 1502 Annapolis Rd, (410) 305-0505; address from directories.",
+   "caution": "Only one unconfirmed 2026 listing: call first",
+   "group": null,
+   "ticket": false,
+   "purchase": false,
+   "kinds": [
+    "meal"
+   ]
+  },
+  {
+   "id": "kpot-laurel",
+   "brand": "KPOT Korean BBQ & Hot Pot",
+   "status": "offering",
+   "category": "meal",
+   "offer": "Reported for 2026 (unconfirmed): free for the first 20 with a military ID, then 50% off",
+   "value": 17,
+   "grade": "C",
+   "start": null,
+   "end": null,
+   "window_text": "",
+   "mode": "dine_in",
+   "minutes": 75,
+   "busy": 15,
+   "line": 3,
+   "meal": true,
+   "dineIn": true,
+   "snack": false,
+   "eligible": [
+    "veteran",
+    "active"
+   ],
+   "guard_reserve": "unclear",
+   "spouse": "no",
+   "kids": null,
+   "proof": [
+    "military_id"
+   ],
+   "advance": null,
+   "participating": false,
+   "voucher_use_by": null,
+   "limits": "Valid military ID; drinks not included. Free only for the first 20; 50% off after that.",
+   "sources": [
+    {
+     "url": "https://dealybee.com/guides/veterans-day-free-meals",
+     "publisher": "Dealybee (DC, Maryland & Virginia list)",
+     "published": "2026-11-09"
+    }
+   ],
+   "notes": "One 2026 deal list (Dealybee, 9 Nov) carries it: free for the first 20 with a valid military ID, then 50% off; drinks not included. No post from KPOT was found. 351 Montrose Ave, Laurel, (240) 280-2840; address and hours from directories.",
+   "caution": "Only one unconfirmed 2026 listing: call first",
+   "group": null,
+   "ticket": false,
+   "purchase": true,
+   "kinds": [
+    "meal"
+   ]
+  }
+ ],
+ "places": [
+  {
+   "id": "applebees-2408-brandermill-blvd",
+   "offer": "applebees",
+   "name": "",
+   "address": "2408 Brandermill Blvd., Waugh Chapel Shopping Center, Gambrills, MD 21054",
+   "lat": 39.036752,
+   "lng": -76.680514,
+   "phone": "+1 410-451-6080",
+   "open": "2026-11-11T16:30:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "olive-garden-7061-arundel-mills-circle",
+   "offer": "olive-garden",
+   "name": "",
+   "address": "7061 Arundel Mills Circle, Hanover, 21076",
+   "lat": 39.154538,
+   "lng": -76.729176,
+   "phone": "+1-410-796-2750",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "red-lobster-7063-arundel-mills-blvd",
+   "offer": "red-lobster",
+   "name": "",
+   "address": "7063 Arundel Mills BLVD, Hanover, MD 21076",
+   "lat": 39.154308,
+   "lng": -76.728808,
+   "phone": "+1 410-796-2390",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "buffalo-wild-wings-6191-columbia-crossing-cir",
+   "offer": "buffalo-wild-wings",
+   "name": "",
+   "address": "6191 Columbia Crossing Cir., Columbia, MD 21045",
+   "lat": 39.195842,
+   "lng": -76.815098,
+   "phone": "+1 443-546-4383",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T03:45:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "buffalo-wild-wings-7000-arundel-mills-circle",
+   "offer": "buffalo-wild-wings",
+   "name": "",
+   "address": "7000 Arundel Mills Circle, Room R003, Hanover, MD 21076",
+   "lat": 39.157465,
+   "lng": -76.724804,
+   "phone": "+1 410-379-0333",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T04:45:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "buffalo-wild-wings-14724-baltimore-avenue",
+   "offer": "buffalo-wild-wings",
+   "name": "",
+   "address": "14724 Baltimore Avenue, Unit 12, Laurel, MD 20707",
+   "lat": 39.094878,
+   "lng": -76.856987,
+   "phone": "+1 240-456-0382",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T03:45:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "buffalo-wild-wings-696-maryland-route-3-n",
+   "offer": "buffalo-wild-wings",
+   "name": "",
+   "address": "696 Maryland Route 3 N, Gambrills, MD 21054",
+   "lat": 39.054115,
+   "lng": -76.658914,
+   "phone": "+1 443-836-6963",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T05:45:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "famous-daves-6201-columbia-crossing-circle",
+   "offer": "famous-daves",
+   "name": "",
+   "address": "6201 Columbia Crossing Circle, Columbia, MD 21045",
+   "lat": 39.196169,
+   "lng": -76.815388,
+   "phone": "+1 410-290-0091",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "famous-daves-14140-baltimore-avenue",
+   "offer": "famous-daves",
+   "name": "",
+   "address": "14140 Baltimore Avenue, Laurel, MD 20707",
+   "lat": 39.08386,
+   "lng": -76.863049,
+   "phone": "+1 301-483-3500",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "hooters-14707-a-baltimore-avenue",
+   "offer": "hooters",
+   "name": "",
+   "address": "14707-A Baltimore Avenue, Laurel, MD",
+   "lat": 39.091892,
+   "lng": -76.855163,
+   "phone": "+1 301-362-5668",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "bob-evans-8325-benson-dr",
+   "offer": "bob-evans",
+   "name": "",
+   "address": "8325 Benson Dr, Columbia, MD 21045",
+   "lat": 39.18608,
+   "lng": -76.80051,
+   "phone": "+1 410-290-0004",
+   "open": "2026-11-11T11:30:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "dave-busters-7000-arundel-mills-cir",
+   "offer": "dave-busters",
+   "name": "",
+   "address": "7000 Arundel Mills Cir, Hanover, MD 21076",
+   "lat": 39.157555,
+   "lng": -76.724731,
+   "phone": "+1 443-755-0113",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": true,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "red-robin-8640-snowden-river-pkwy",
+   "offer": "red-robin",
+   "name": "",
+   "address": "8640 Snowden River Pkwy, Columbia, MD 21045",
+   "lat": 39.196987,
+   "lng": -76.809247,
+   "phone": "+1 410-312-0214",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T02:30:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "outback-14718-baltimore-avenue",
+   "offer": "outback",
+   "name": "",
+   "address": "14718 Baltimore Avenue, Laurel, MD 20707",
+   "lat": 39.093365,
+   "lng": -76.855832,
+   "phone": "+1 301-317-8401",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "outback-2507-evergreen-road",
+   "offer": "outback",
+   "name": "",
+   "address": "2507 Evergreen Road, Gambrills, MD 21054",
+   "lat": 39.03,
+   "lng": -76.687227,
+   "phone": "+1 410-774-9227",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "golden-corral-7047-arundel-mills-blvd",
+   "offer": "golden-corral",
+   "name": "",
+   "address": "7047 Arundel Mills Blvd, Hanover, MD 21076",
+   "lat": 39.153515,
+   "lng": -76.723586,
+   "phone": "(410) 799-0959",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "bonefish-grill-2381-brandermill-blvd",
+   "offer": "bonefish-grill",
+   "name": "",
+   "address": "2381 Brandermill Blvd, Gambrills, MD 21054",
+   "lat": 39.031639,
+   "lng": -76.684947,
+   "phone": "+1 410-451-5890",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "wawa-14910-silver-trl-ln",
+   "offer": "wawa",
+   "name": "",
+   "address": "14910 silver trl ln, laurel, MD 20707",
+   "lat": 39.08298,
+   "lng": -76.889214,
+   "phone": "",
+   "open": "2026-11-11T05:00:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "wawa-9600-fort-meade-rd",
+   "offer": "wawa",
+   "name": "",
+   "address": "9600 fort meade rd, laurel, MD 20707",
+   "lat": 39.09739,
+   "lng": -76.84147,
+   "phone": "",
+   "open": "2026-11-11T05:00:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "wawa-701-annapolis-rd",
+   "offer": "wawa",
+   "name": "",
+   "address": "701 annapolis rd, gambrills, MD 21054",
+   "lat": 39.056566,
+   "lng": -76.656624,
+   "phone": "",
+   "open": "2026-11-11T05:00:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "wawa-7710-milestone-pkwy",
+   "offer": "wawa",
+   "name": "",
+   "address": "7710 milestone pkwy, hanover, MD 21076",
+   "lat": 39.1542,
+   "lng": -76.74347,
+   "phone": "",
+   "open": "2026-11-11T05:00:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "dennys-1365-mellon-rd",
+   "offer": "dennys",
+   "name": "",
+   "address": "1365 Mellon Rd, Hanover, MD 21076",
+   "lat": 39.160559,
+   "lng": -76.711893,
+   "phone": "+1 410-850-4888",
+   "open": "2026-11-11T05:00:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "dennys-314-washington-blvd",
+   "offer": "dennys",
+   "name": "",
+   "address": "314 Washington Blvd, Laurel, MD 20707",
+   "lat": 39.101507,
+   "lng": -76.845658,
+   "phone": "+1 301-725-9393",
+   "open": "2026-11-11T05:00:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "ihop-15004-baltimore-ave",
+   "offer": "ihop",
+   "name": "",
+   "address": "15004 Baltimore Ave, Laurel, MD 20707",
+   "lat": 39.096451,
+   "lng": -76.851066,
+   "phone": "+1 240-786-3767",
+   "open": "2026-11-11T12:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "ihop-889-md-route-3-n",
+   "offer": "ihop",
+   "name": "",
+   "address": "889 Md Route 3 N, Gambrills, MD 21054",
+   "lat": 39.039483,
+   "lng": -76.673044,
+   "phone": "+1 410-774-0268",
+   "open": "2026-11-11T12:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "ihop-8825-centre-park-dr",
+   "offer": "ihop",
+   "name": "",
+   "address": "8825 Centre Park Dr, Columbia, MD 21045",
+   "lat": 39.227737,
+   "lng": -76.815675,
+   "phone": "+1 443-393-2130",
+   "open": "2026-11-11T12:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "texas-roadhouse-8820-stanford-blvd",
+   "offer": "texas-roadhouse",
+   "name": "",
+   "address": "8820 Stanford Blvd., Columbia, MD 21045",
+   "lat": 39.188816,
+   "lng": -76.815286,
+   "phone": "+1 410-872-1140",
+   "open": "2026-11-11T17:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "wendys-8850-gorman-road",
+   "offer": "wendys",
+   "name": "",
+   "address": "8850 Gorman Road, Laurel, MD 20723",
+   "lat": 39.131575,
+   "lng": -76.819411,
+   "phone": "+1 301-362-1528",
+   "open": "2026-11-11T15:30:00Z",
+   "close": "2026-11-12T02:30:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "wendys-9150-old-annapolis-road",
+   "offer": "wendys",
+   "name": "",
+   "address": "9150 Old Annapolis Road, Columbia, MD 21045",
+   "lat": 39.234551,
+   "lng": -76.830027,
+   "phone": "+1 443-545-5464",
+   "open": "2026-11-11T11:30:00Z",
+   "close": "2026-11-12T07:00:00Z",
+   "hoursAssumed": false,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "wendys-3563-russett-green-east",
+   "offer": "wendys",
+   "name": "",
+   "address": "3563 Russett Green East, Laurel, MD 20724",
+   "lat": 39.098964,
+   "lng": -76.805105,
+   "phone": "+1-301-362-6885",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "wendys-6355-dobbin-road",
+   "offer": "wendys",
+   "name": "",
+   "address": "6355 Dobbin Road, Columbia, MD 21045",
+   "lat": 39.197344,
+   "lng": -76.819596,
+   "phone": "+1 443-542-0750",
+   "open": "2026-11-11T15:30:00Z",
+   "close": "2026-11-12T02:30:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "wendys-7057-arundel-mills-boulevard",
+   "offer": "wendys",
+   "name": "",
+   "address": "7057 Arundel Mills Boulevard, Hanover, MD 21076",
+   "lat": 39.15324,
+   "lng": -76.727695,
+   "phone": "+1 410-799-8336",
+   "open": "2026-11-11T15:30:00Z",
+   "close": "2026-11-12T02:30:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "wendys-14050-baltimore-avenue",
+   "offer": "wendys",
+   "name": "",
+   "address": "14050 Baltimore Avenue, Laurel, MD 20707",
+   "lat": 39.082797,
+   "lng": -76.863794,
+   "phone": "+1 301-725-4931",
+   "open": "2026-11-11T15:30:00Z",
+   "close": "2026-11-12T02:30:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "wendys-1064-md-route-3-north",
+   "offer": "wendys",
+   "name": "",
+   "address": "1064 Md Route 3 North, Gambrills, MD 21054",
+   "lat": 39.0269,
+   "lng": -76.689055,
+   "phone": "+1 410-721-4165",
+   "open": "2026-11-11T15:30:00Z",
+   "close": "2026-11-12T02:30:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "little-caesars-1127-annapolis-road",
+   "offer": "little-caesars",
+   "name": "",
+   "address": "1127 ANNAPOLIS ROAD, ODENTON, MD 21113",
+   "lat": 39.081181,
+   "lng": -76.691803,
+   "phone": "+1 410-674-4500",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "little-caesars-8775-cloudleap-ct",
+   "offer": "little-caesars",
+   "name": "",
+   "address": "8775 CLOUDLEAP CT, COLUMBIA, MD 21045",
+   "lat": 39.207405,
+   "lng": -76.816273,
+   "phone": "+1 410-730-2100",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T02:30:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "little-caesars-3431-fort-meade-rd",
+   "offer": "little-caesars",
+   "name": "",
+   "address": "3431 FORT MEADE RD, LAUREL, MD 20724",
+   "lat": 39.098629,
+   "lng": -76.812158,
+   "phone": "+1 301-776-2689",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "firehouse-subs-2622-brandermill-boulevard",
+   "offer": "firehouse-subs",
+   "name": "",
+   "address": "2622 Brandermill Boulevard, Gambrills, MD 21054",
+   "lat": 39.038913,
+   "lng": -76.67879,
+   "phone": "+1 443-292-4111",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "firehouse-subs-901-washington-blvd",
+   "offer": "firehouse-subs",
+   "name": "",
+   "address": "901 Washington Blvd., Laurel, MD 20707",
+   "lat": 39.096984,
+   "lng": -76.851791,
+   "phone": "+1 301-725-5679",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "chipotle-14930-silver-trail-ln",
+   "offer": "chipotle",
+   "name": "",
+   "address": "14930 Silver Trail Ln, Laurel, MD 20707",
+   "lat": 39.083402,
+   "lng": -76.889928,
+   "phone": "+1 240-713-5630",
+   "open": "2026-11-11T15:45:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "chipotle-14354-baltimore-ave",
+   "offer": "chipotle",
+   "name": "",
+   "address": "14354 Baltimore Ave, Laurel, MD 20707",
+   "lat": 39.085207,
+   "lng": -76.862348,
+   "phone": "+1 301-604-2241",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "chipotle-3353-corridor-marketplace",
+   "offer": "chipotle",
+   "name": "",
+   "address": "3353 Corridor Marketplace, Laurel, MD 20724",
+   "lat": 39.097931,
+   "lng": -76.80899,
+   "phone": "+1 240-241-5017",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "chipotle-7049-arundel-mills-cir",
+   "offer": "chipotle",
+   "name": "",
+   "address": "7049 Arundel Mills Cir, Hanover, MD 21076",
+   "lat": 39.153289,
+   "lng": -76.724588,
+   "phone": "+1 410-796-5028",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "chipotle-2503-brandermill-blvd",
+   "offer": "chipotle",
+   "name": "",
+   "address": "2503 Brandermill Blvd, Gambrills, MD 21054",
+   "lat": 39.038055,
+   "lng": -76.680117,
+   "phone": "+1 410-451-4161",
+   "open": "2026-11-11T15:45:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "chipotle-5715-richards-valley-rd",
+   "offer": "chipotle",
+   "name": "",
+   "address": "5715 Richards Valley Rd, Ellicott City, MD 21043",
+   "lat": 39.214523,
+   "lng": -76.802758,
+   "phone": "+1 667-280-4262",
+   "open": "2026-11-11T15:45:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "chipotle-9851-broken-land-pkwy",
+   "offer": "chipotle",
+   "name": "",
+   "address": "9851 Broken Land Pkwy, Columbia, MD 21046",
+   "lat": 39.183611,
+   "lng": -76.850203,
+   "phone": "+1 667-678-2099",
+   "open": "2026-11-11T15:45:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "chipotle-10300-little-patuxent-pkwy",
+   "offer": "chipotle",
+   "name": "",
+   "address": "10300 Little Patuxent Pkwy, Columbia, MD 21044",
+   "lat": 39.215765,
+   "lng": -76.861454,
+   "phone": "+1 410-997-1083",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T01:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "chipotle-6181-old-dobbin-ln",
+   "offer": "chipotle",
+   "name": "",
+   "address": "6181 Old Dobbin Ln, Columbia, MD 21045",
+   "lat": 39.20076,
+   "lng": -76.812962,
+   "phone": "+1 410-872-8688",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "qdoba-6476-dobbin-center-way",
+   "offer": "qdoba",
+   "name": "",
+   "address": "6476 Dobbin Center Way, Columbia, MD 21045",
+   "lat": 39.199208,
+   "lng": -76.819599,
+   "phone": "",
+   "open": "2026-11-11T12:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "qdoba-1404-s-main-chapel-way",
+   "offer": "qdoba",
+   "name": "",
+   "address": "1404 S Main Chapel Way, Gambrills, MD 21054",
+   "lat": 39.033155,
+   "lng": -76.685676,
+   "phone": "",
+   "open": "2026-11-11T12:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "qdoba-7050-friendship-rd",
+   "offer": "qdoba",
+   "name": "",
+   "address": "7050 Friendship Rd, Baltimore, MD 21240",
+   "lat": 39.179621,
+   "lng": -76.670971,
+   "phone": "",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T00:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "qdoba-a-b-terminal",
+   "offer": "qdoba",
+   "name": "",
+   "address": "A/B Terminal, Baltimore, MD 21240",
+   "lat": 39.170452,
+   "lng": -76.682922,
+   "phone": "",
+   "open": "2026-11-11T15:30:00Z",
+   "close": "2026-11-12T02:30:00Z",
+   "hoursAssumed": true,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "charleys-10300-little-patuxent-parkway",
+   "offer": "charleys",
+   "name": "",
+   "address": "10300 Little Patuxent Parkway, Space #1365, Columbia, MD 21044",
+   "lat": 39.214638,
+   "lng": -76.861023,
+   "phone": "+1 410-715-8588",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T01:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "charleys-3351-corridor-marketplace",
+   "offer": "charleys",
+   "name": "",
+   "address": "3351 Corridor Marketplace, Laurel, MD 20724",
+   "lat": 39.098103,
+   "lng": -76.809662,
+   "phone": "+1 240-965-6314",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "charleys-14619-baltimore-ave",
+   "offer": "charleys",
+   "name": "",
+   "address": "14619 Baltimore Ave, Laurel, MD 20707",
+   "lat": 39.090355,
+   "lng": -76.857029,
+   "phone": "+1 240-280-2306",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "mission-bbq-14712-baltimore-ave",
+   "offer": "mission-bbq",
+   "name": "",
+   "address": "14712 Baltimore Ave, Ste 101, Laurel, MD 20707",
+   "lat": 39.093223,
+   "lng": -76.856593,
+   "phone": "(240) 360-0050",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "mission-bbq-6270-columbia-crossing-cir",
+   "offer": "mission-bbq",
+   "name": "",
+   "address": "6270 Columbia Crossing Cir, Columbia, MD 21045",
+   "lat": 39.199029,
+   "lng": -76.81339,
+   "phone": "(443) 832-6180",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "mission-bbq-2503-evergreen-rd",
+   "offer": "mission-bbq",
+   "name": "",
+   "address": "2503 Evergreen Rd, Gambrills, MD 21054",
+   "lat": 39.030155,
+   "lng": -76.686846,
+   "phone": "(410) 697-1002",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "shake-shack-10300-little-patuxent-pkwy",
+   "offer": "shake-shack",
+   "name": "",
+   "address": "10300 Little Patuxent Pkwy, Columbia, MD 21044",
+   "lat": 39.215704,
+   "lng": -76.861481,
+   "phone": "+1 443-545-7863",
+   "open": "2026-11-11T15:00:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "blaze-pizza-14708-baltimore-ave",
+   "offer": "blaze-pizza",
+   "name": "",
+   "address": "14708 Baltimore Ave, Suite 112, Laurel, MD 20707",
+   "lat": 39.09397,
+   "lng": -76.85776,
+   "phone": "+1 301-392-2328",
+   "open": "2026-11-11T15:30:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-7000-arundel-mills-circle",
+   "offer": "starbucks",
+   "name": "",
+   "address": "7000 Arundel Mills Circle, Hanover, MD 21076",
+   "lat": 39.15755,
+   "lng": -76.72476,
+   "phone": "",
+   "open": "2026-11-11T14:30:00Z",
+   "close": "2026-11-12T01:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-bwi-airport",
+   "offer": "starbucks",
+   "name": "",
+   "address": "BWI Airport, Baltimore, MD 21240",
+   "lat": 39.17912,
+   "lng": -76.67014,
+   "phone": "+1 410-691-2308",
+   "open": "2026-11-11T10:30:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-third-floor-terminal-bldg",
+   "offer": "starbucks",
+   "name": "",
+   "address": "Third floor Terminal Bldg, Baltimore, MD 21240",
+   "lat": 39.17746,
+   "lng": -76.67036,
+   "phone": "+1 410-684-3913",
+   "open": "2026-11-11T05:00:00Z",
+   "close": "2026-11-12T05:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-7680-arundel-mills-blvd",
+   "offer": "starbucks",
+   "name": "",
+   "address": "7680 Arundel Mills Blvd, Hanover, MD 21076",
+   "lat": 39.15325,
+   "lng": -76.72834,
+   "phone": "+1 410-796-0936",
+   "open": "2026-11-11T10:00:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-7698-dorchester-blvd",
+   "offer": "starbucks",
+   "name": "",
+   "address": "7698 Dorchester Blvd., The Shops at Arundel Preserve, Suite 207, Hanover, MD 21076",
+   "lat": 39.15465,
+   "lng": -76.74249,
+   "phone": "+1 410-799-4126",
+   "open": "2026-11-11T10:00:00Z",
+   "close": "2026-11-12T01:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-5715-richards-valley-rd",
+   "offer": "starbucks",
+   "name": "",
+   "address": "5715 Richards Valley Rd, Ellicott City, MD 21043",
+   "lat": 39.21439,
+   "lng": -76.80292,
+   "phone": "+1 410-750-2651",
+   "open": "2026-11-11T10:00:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-6365-dobbin-rd",
+   "offer": "starbucks",
+   "name": "",
+   "address": "6365 Dobbin Rd, Columbia Crossing, Columbia, MD 21045",
+   "lat": 39.19762,
+   "lng": -76.81923,
+   "phone": "+1 410-772-5305",
+   "open": "2026-11-11T10:00:00Z",
+   "close": "2026-11-12T00:30:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-7090-deepage-drive",
+   "offer": "starbucks",
+   "name": "",
+   "address": "7090 Deepage Drive, Suite E, Columbia, MD 21045",
+   "lat": 39.17615,
+   "lng": -76.83919,
+   "phone": "+1 410-381-0821",
+   "open": "2026-11-11T10:00:00Z",
+   "close": "2026-11-12T01:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-5400-lynx-ln",
+   "offer": "starbucks",
+   "name": "",
+   "address": "5400 Lynx Ln, Columbia, MD 21044",
+   "lat": 39.22119,
+   "lng": -76.87512,
+   "phone": "+1 202-945-2179",
+   "open": "2026-11-11T10:00:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-3355-corridor-marketplace",
+   "offer": "starbucks",
+   "name": "",
+   "address": "3355 Corridor Marketplace, Laurel, MD 20724",
+   "lat": 39.09785,
+   "lng": -76.80814,
+   "phone": "+1 240-565-2501",
+   "open": "2026-11-11T09:30:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-1161-annapolis-rd",
+   "offer": "starbucks",
+   "name": "",
+   "address": "1161 Annapolis Rd, Odenton, MD 21113",
+   "lat": 39.08056,
+   "lng": -76.68839,
+   "phone": "+1 443-430-2734",
+   "open": "2026-11-11T10:00:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-5755-cedar-lane",
+   "offer": "starbucks",
+   "name": "",
+   "address": "5755 Cedar Lane, Columbia, MD 21044",
+   "lat": 39.21429,
+   "lng": -76.88572,
+   "phone": "+1 410-740-7890",
+   "open": "2026-11-11T11:00:00Z",
+   "close": "2026-11-12T01:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-10985-johns-hopkins-rd",
+   "offer": "starbucks",
+   "name": "",
+   "address": "10985 Johns Hopkins Rd, Laurel, MD 20723",
+   "lat": 39.15917,
+   "lng": -76.89413,
+   "phone": "+1 301-490-3399",
+   "open": "2026-11-11T09:30:00Z",
+   "close": "2026-11-12T01:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-2389-brandermill-blvd",
+   "offer": "starbucks",
+   "name": "",
+   "address": "2389 Brandermill Blvd, Gambrills, MD 21054",
+   "lat": 39.0336,
+   "lng": -76.68271,
+   "phone": "+1 410-721-0520",
+   "open": "2026-11-11T09:30:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-14060-baltimore-ave",
+   "offer": "starbucks",
+   "name": "",
+   "address": "14060 Baltimore Ave, Laurel, MD 20707",
+   "lat": 39.083,
+   "lng": -76.86475,
+   "phone": "+1 301-362-1813",
+   "open": "2026-11-11T10:00:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "starbucks-14940-silver-trail-lane",
+   "offer": "starbucks",
+   "name": "",
+   "address": "14940 Silver Trail Lane, Laurel, MD 20707",
+   "lat": 39.08349,
+   "lng": -76.88911,
+   "phone": "+1 240-709-2996",
+   "open": "2026-11-11T10:00:00Z",
+   "close": "2026-11-12T01:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "circle-k-6251-columbia-crossing-cir",
+   "offer": "circle-k",
+   "name": "",
+   "address": "6251 Columbia Crossing Cir, Columbia, MD 21045",
+   "lat": 39.199524,
+   "lng": -76.814655,
+   "phone": "+1 410-312-0028",
+   "open": "2026-11-11T11:00:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "dunkin-696-maryland-3",
+   "offer": "dunkin",
+   "name": "",
+   "address": "696 Maryland 3, Gambrills, MD 21054",
+   "lat": 39.054115,
+   "lng": -76.658914,
+   "phone": "+1 410-697-3113",
+   "open": "2026-11-11T10:00:00Z",
+   "close": "2026-11-11T23:45:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "dunkin-8743-piney-orchard-pkwy",
+   "offer": "dunkin",
+   "name": "",
+   "address": "8743 Piney Orchard Pkwy, Piney Orchard Marketplace, Odenton, MD 21113",
+   "lat": 39.066238,
+   "lng": -76.717582,
+   "phone": "+1 410-695-2223",
+   "open": "2026-11-11T09:00:00Z",
+   "close": "2026-11-12T02:15:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "dunkin-1614-annapolis-rd",
+   "offer": "dunkin",
+   "name": "",
+   "address": "1614 Annapolis Rd, Odenton, MD 21113",
+   "lat": 39.104823,
+   "lng": -76.721908,
+   "phone": "+1 410-674-3800",
+   "open": "2026-11-11T11:00:00Z",
+   "close": "2026-11-12T00:00:00Z",
+   "hoursAssumed": true,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "dunkin-319-washington-boulevard",
+   "offer": "dunkin",
+   "name": "",
+   "address": "319 Washington Boulevard, Laurel, MD 20707",
+   "lat": 39.101491,
+   "lng": -76.846677,
+   "phone": "+1 301-604-1580",
+   "open": "2026-11-11T09:30:00Z",
+   "close": "2026-11-11T22:45:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "dunkin-12613-laurel-bowie-rd",
+   "offer": "dunkin",
+   "name": "",
+   "address": "12613 Laurel Bowie Rd, Laurel, MD 20708",
+   "lat": 39.063707,
+   "lng": -76.839242,
+   "phone": "+1 240-280-8099",
+   "open": "2026-11-11T09:00:00Z",
+   "close": "2026-11-12T01:45:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "dunkin-3503-laurel-fort-meade-rd",
+   "offer": "dunkin",
+   "name": "",
+   "address": "3503 Laurel Fort Meade Rd, Laurel, MD 20724",
+   "lat": 39.100535,
+   "lng": -76.822464,
+   "phone": "+1 301-725-7030",
+   "open": "2026-11-11T09:30:00Z",
+   "close": "2026-11-11T22:45:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "dunkin-7530-montpelier-rd",
+   "offer": "dunkin",
+   "name": "",
+   "address": "7530 Montpelier Rd, Montpelier Retail Ctr, Laurel, MD 20723",
+   "lat": 39.15998,
+   "lng": -76.891496,
+   "phone": "+1 301-498-2444",
+   "open": "2026-11-11T10:00:00Z",
+   "close": "2026-11-11T22:45:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "dunkin-14903-baltimore-ave",
+   "offer": "dunkin",
+   "name": "",
+   "address": "14903 Baltimore Ave, Laurel, MD 20707",
+   "lat": 39.094753,
+   "lng": -76.852953,
+   "phone": "+1 301-617-4965",
+   "open": "2026-11-11T09:30:00Z",
+   "close": "2026-11-12T00:45:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "dunkin-1741-dorsey-rd",
+   "offer": "dunkin",
+   "name": "",
+   "address": "1741 Dorsey Rd, Suite 101, Hanover, MD 21076",
+   "lat": 39.175464,
+   "lng": -76.741004,
+   "phone": "+1 410-796-6169",
+   "open": "2026-11-11T09:30:00Z",
+   "close": "2026-11-11T23:45:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "dunkin-7657-arundel-mills-blvd",
+   "offer": "dunkin",
+   "name": "",
+   "address": "7657 Arundel Mills Blvd, Hanover, MD 21076",
+   "lat": 39.152192,
+   "lng": -76.727081,
+   "phone": "+1 410-799-5100",
+   "open": "2026-11-11T10:00:00Z",
+   "close": "2026-11-12T02:45:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "dunkin-2733-annapolis-rd",
+   "offer": "dunkin",
+   "name": "",
+   "address": "2733 Annapolis Rd, Unit A, Hanover, MD 21076",
+   "lat": 39.136228,
+   "lng": -76.749659,
+   "phone": "+1 443-661-4645",
+   "open": "2026-11-11T10:30:00Z",
+   "close": "2026-11-12T01:45:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "dunkin-1348-ashton-rd",
+   "offer": "dunkin",
+   "name": "",
+   "address": "1348 Ashton Rd., Hanover, MD 21076",
+   "lat": 39.158612,
+   "lng": -76.709636,
+   "phone": "+1 410-850-5322",
+   "open": "2026-11-11T09:30:00Z",
+   "close": "2026-11-12T01:45:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "dunkin-bwi-airport",
+   "offer": "dunkin",
+   "name": "",
+   "address": "BWI Airport, BWI Airport Rd, Glen Burnie, MD 21061",
+   "lat": 39.176571,
+   "lng": -76.669548,
+   "phone": "",
+   "open": "2026-11-11T10:00:00Z",
+   "close": "2026-11-12T02:45:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "dunkin-1051-state-route-3-n",
+   "offer": "dunkin",
+   "name": "",
+   "address": "1051 State Route 3 N, Gambrills, MD 21054",
+   "lat": 39.027763,
+   "lng": -76.686711,
+   "phone": "+1 410-721-4104",
+   "open": "2026-11-11T10:00:00Z",
+   "close": "2026-11-12T00:45:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "dunkin-6001-university-boulevard",
+   "offer": "dunkin",
+   "name": "",
+   "address": "6001 University Boulevard, Columbia Corporate Park 100, Ellicott City, MD 21043",
+   "lat": 39.209641,
+   "lng": -76.798049,
+   "phone": "+1 410-465-5882",
+   "open": "2026-11-11T09:30:00Z",
+   "close": "2026-11-12T01:45:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "dunkin-6010-meadowridge-center-dr",
+   "offer": "dunkin",
+   "name": "",
+   "address": "6010 Meadowridge Center Dr, Elkridge, MD 21075",
+   "lat": 39.209849,
+   "lng": -76.782831,
+   "phone": "+1 410-799-2888",
+   "open": "2026-11-11T09:30:00Z",
+   "close": "2026-11-12T00:45:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "dunkin-1200-route-3",
+   "offer": "dunkin",
+   "name": "",
+   "address": "1200 Route 3, Crofton, MD 21114",
+   "lat": 39.009207,
+   "lng": -76.698809,
+   "phone": "+1 410-721-4750",
+   "open": "2026-11-11T09:30:00Z",
+   "close": "2026-11-12T01:45:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "dunkin-9200-old-annapolis-rd",
+   "offer": "dunkin",
+   "name": "",
+   "address": "9200 Old Annapolis Rd, Columbia, MD 21045",
+   "lat": 39.235228,
+   "lng": -76.830354,
+   "phone": "+1 410-740-6661",
+   "open": "2026-11-11T10:00:00Z",
+   "close": "2026-11-12T00:45:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "dunkin-10300-little-patuxent-pkwy",
+   "offer": "dunkin",
+   "name": "",
+   "address": "10300 Little Patuxent Pkwy, Columbia, MD 21044",
+   "lat": 39.214755,
+   "lng": -76.860229,
+   "phone": "+1 443-812-2823",
+   "open": "2026-11-11T14:00:00Z",
+   "close": "2026-11-12T00:45:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "dunkin-7185-columbia-gateway-dr",
+   "offer": "dunkin",
+   "name": "",
+   "address": "7185 Columbia Gateway Dr, Suite F, Columbia, MD 21046",
+   "lat": 39.183132,
+   "lng": -76.804798,
+   "phone": "+1 443-542-2015",
+   "open": "2026-11-11T10:00:00Z",
+   "close": "2026-11-11T18:45:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "dunkin-5880-robert-oliver-place",
+   "offer": "dunkin",
+   "name": "",
+   "address": "5880 Robert Oliver Place, Columbia, MD 21045",
+   "lat": 39.210087,
+   "lng": -76.84677,
+   "phone": "+1 410-715-1389",
+   "open": "2026-11-11T10:00:00Z",
+   "close": "2026-11-11T23:45:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "dunkin-10430-shaker-dr",
+   "offer": "dunkin",
+   "name": "",
+   "address": "10430 Shaker Dr, Ste 100, Columbia, MD 21046",
+   "lat": 39.185149,
+   "lng": -76.870849,
+   "phone": "+1 410-992-6989",
+   "open": "2026-11-11T09:30:00Z",
+   "close": "2026-11-11T23:45:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "dunkin-7106-minstrel-way",
+   "offer": "dunkin",
+   "name": "",
+   "address": "7106 Minstrel Way, Columbia, MD 21045",
+   "lat": 39.177789,
+   "lng": -76.84342,
+   "phone": "+1 410-381-5779",
+   "open": "2026-11-11T10:00:00Z",
+   "close": "2026-11-12T00:45:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "dunkin-5485-harpers-farm-rd",
+   "offer": "dunkin",
+   "name": "",
+   "address": "5485 Harpers Farm Rd, Columbia, MD 21044",
+   "lat": 39.222116,
+   "lng": -76.889499,
+   "phone": "+1 410-997-2297",
+   "open": "2026-11-11T10:00:00Z",
+   "close": "2026-11-11T22:45:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "dunkin-7050-friendship-road",
+   "offer": "dunkin",
+   "name": "",
+   "address": "7050 Friendship Road, BWI Airport Post Security, Baltimore, MD 21240",
+   "lat": 39.179226,
+   "lng": -76.671754,
+   "phone": "",
+   "open": "2026-11-11T11:00:00Z",
+   "close": "2026-11-12T00:00:00Z",
+   "hoursAssumed": true,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "great-clips-8769-piney-orchard-pkwy",
+   "offer": "great-clips",
+   "name": "",
+   "address": "8769 Piney Orchard Pkwy, Odenton, MD 21113",
+   "lat": 39.065658,
+   "lng": -76.719094,
+   "phone": "+1 410-695-1700",
+   "open": "2026-11-11T14:00:00Z",
+   "close": "2026-11-12T01:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "great-clips-4725-dorsey-hall-dr",
+   "offer": "great-clips",
+   "name": "",
+   "address": "4725 Dorsey Hall Dr, Ellicott City, MD 21042",
+   "lat": 39.242852,
+   "lng": -76.84251,
+   "phone": "+1 410-997-0009",
+   "open": "2026-11-11T14:00:00Z",
+   "close": "2026-11-12T01:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "sport-clips-1404-south-main-chapel-way",
+   "offer": "sport-clips",
+   "name": "",
+   "address": "1404 South Main Chapel Way, Gambrills, MD 21054",
+   "lat": 39.03301,
+   "lng": -76.68553,
+   "phone": "+1 410-721-8959",
+   "open": "2026-11-11T14:00:00Z",
+   "close": "2026-11-12T00:00:00Z",
+   "hoursAssumed": true,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "sport-clips-6476-dobbin-center-way",
+   "offer": "sport-clips",
+   "name": "",
+   "address": "6476 Dobbin Center Way, Columbia, MD 21045",
+   "lat": 39.19922,
+   "lng": -76.81977,
+   "phone": "+1 443-542-2420",
+   "open": "2026-11-11T14:00:00Z",
+   "close": "2026-11-12T00:00:00Z",
+   "hoursAssumed": true,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "jiffy-lube-301-2nd-st",
+   "offer": "jiffy-lube",
+   "name": "",
+   "address": "301 2ND ST, LAUREL, MD 20707",
+   "lat": 39.101805,
+   "lng": -76.844923,
+   "phone": "+1 301-498-5823",
+   "open": "2026-11-11T12:30:00Z",
+   "close": "2026-11-12T00:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "jiffy-lube-1110-state-route-3-n",
+   "offer": "jiffy-lube",
+   "name": "",
+   "address": "1110 STATE ROUTE 3 N, GAMBRILLS, MD 21054",
+   "lat": 39.024595,
+   "lng": -76.691634,
+   "phone": "+1 410-721-4416",
+   "open": "2026-11-11T12:30:00Z",
+   "close": "2026-11-12T00:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "jiffy-lube-2610-annapolis-rd",
+   "offer": "jiffy-lube",
+   "name": "",
+   "address": "2610 ANNAPOLIS RD, SEVERN, MD 21144",
+   "lat": 39.129267,
+   "lng": -76.737167,
+   "phone": "+1 410-551-4002",
+   "open": "2026-11-11T13:00:00Z",
+   "close": "2026-11-12T00:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "jiffy-lube-6405-dobbin-center-way",
+   "offer": "jiffy-lube",
+   "name": "",
+   "address": "6405 DOBBIN CENTER WAY, COLUMBIA, MD 21045",
+   "lat": 39.197098,
+   "lng": -76.821366,
+   "phone": "+1 410-992-0333",
+   "open": "2026-11-11T13:00:00Z",
+   "close": "2026-11-12T00:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "target-2384-brandermill-blvd",
+   "offer": "target",
+   "name": "",
+   "address": "2384 BRANDERMILL BLVD, Gambrills, MD 21054",
+   "lat": 39.0341,
+   "lng": -76.684,
+   "phone": "+1 443-302-6278",
+   "open": "2026-11-11T12:00:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "target-6111-dobbin-rd",
+   "offer": "target",
+   "name": "",
+   "address": "6111 Dobbin Rd, Columbia, MD 21045",
+   "lat": 39.196971,
+   "lng": -76.813483,
+   "phone": "+1 410-290-1123",
+   "open": "2026-11-11T12:00:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "target-3343-corridor-marketplace",
+   "offer": "target",
+   "name": "",
+   "address": "3343 Corridor Marketplace, Laurel, MD 20724",
+   "lat": 39.096991,
+   "lng": -76.809663,
+   "phone": "+1 301-483-0934",
+   "open": "2026-11-11T12:00:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "kohls-3323-corridor-marketplace",
+   "offer": "kohls",
+   "name": "",
+   "address": "3323 CORRIDOR MARKETPLACE, LAUREL, MD 20724",
+   "lat": 39.095365,
+   "lng": -76.806318,
+   "phone": "+1 301-617-9102",
+   "open": "2026-11-11T14:00:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "walgreens-600-washington-blvd-s",
+   "offer": "walgreens",
+   "name": "",
+   "address": "600 WASHINGTON BLVD S, Laurel, MD 20707",
+   "lat": 39.098779,
+   "lng": -76.848396,
+   "phone": "+1 301-725-0236",
+   "open": "2026-11-11T12:00:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "walgreens-2633-brandermill-blvd",
+   "offer": "walgreens",
+   "name": "",
+   "address": "2633 BRANDERMILL BLVD, Gambrills, MD 21054",
+   "lat": 39.039965,
+   "lng": -76.677865,
+   "phone": "+1 410-451-9448",
+   "open": "2026-11-11T13:00:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "walgreens-5585-twin-knolls-rd",
+   "offer": "walgreens",
+   "name": "",
+   "address": "5585 TWIN KNOLLS RD, Columbia, MD 21045",
+   "lat": 39.219977,
+   "lng": -76.839372,
+   "phone": "+1 410-730-2789",
+   "open": "2026-11-11T12:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "chick-fil-a-metro-dc-13600-baltimore-ave-ste-600",
+   "offer": "chick-fil-a-metro-dc",
+   "name": "",
+   "address": "13600 Baltimore Ave Ste 600, Laurel, MD 20707",
+   "lat": 39.077698,
+   "lng": -76.869107,
+   "phone": "+1 301-483-6441",
+   "open": "2026-11-11T11:00:00Z",
+   "close": "2026-11-12T03:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "silver-diner-8250-gateway-overlook-dr",
+   "offer": "silver-diner",
+   "name": "",
+   "address": "8250 Gateway Overlook Dr, Elkridge, MD 21075",
+   "lat": 39.183814,
+   "lng": -76.795374,
+   "phone": "(443) 733-5213",
+   "open": "2026-11-11T12:00:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "grace-for-vets-771-donaldson-ave",
+   "offer": "grace-for-vets",
+   "name": "",
+   "address": "771 Donaldson Ave, Severn, MD 21144",
+   "lat": 39.135142,
+   "lng": -76.678219,
+   "phone": "",
+   "open": "2026-11-11T13:00:00Z",
+   "close": "2026-11-12T01:00:00Z",
+   "hoursAssumed": true,
+   "verified": "confirmed",
+   "pin": "geo"
+  },
+  {
+   "id": "greene-turtle-8872-mcgaw-rd",
+   "offer": "greene-turtle",
+   "name": "",
+   "address": "8872 McGaw Rd, Columbia, MD 21045",
+   "lat": 39.188255,
+   "lng": -76.818838,
+   "phone": "(410) 312-5255",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "greene-turtle-7556-teague-rd",
+   "offer": "greene-turtle",
+   "name": "",
+   "address": "7556 Teague Rd, Ste 100, Hanover, MD 21076",
+   "lat": 39.154306,
+   "lng": -76.719848,
+   "phone": "",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "main-event-10300-little-patuxent-pkwy",
+   "offer": "main-event",
+   "name": "",
+   "address": "10300 Little Patuxent Pkwy, Columbia, MD 21044",
+   "lat": 39.214623,
+   "lng": -76.862201,
+   "phone": "",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "all-american-steakhouse-1502-annapolis-rd",
+   "offer": "all-american-steakhouse",
+   "name": "",
+   "address": "1502 Annapolis Rd, Odenton, MD 21113",
+   "lat": 39.097378,
+   "lng": -76.719305,
+   "phone": "(410) 305-0505",
+   "open": "2026-11-11T16:00:00Z",
+   "close": "2026-11-12T02:00:00Z",
+   "hoursAssumed": true,
+   "verified": "unverified",
+   "pin": "geo"
+  },
+  {
+   "id": "kpot-laurel-351-montrose-ave",
+   "offer": "kpot-laurel",
+   "name": "",
+   "address": "351 Montrose Ave, Laurel, MD 20707",
+   "lat": 39.097259,
+   "lng": -76.854105,
+   "phone": "(240) 280-2840",
+   "open": "2026-11-11T17:00:00Z",
+   "close": "2026-11-12T04:00:00Z",
+   "hoursAssumed": false,
+   "verified": "unverified",
+   "pin": "geo"
+  }
+ ],
+ "other": [
+  {
+   "id": "mta-free-rides",
+   "day": "Wed 11 Nov, all day",
+   "at": null,
+   "name": "MDOT MTA: free rides on MARC, Local Bus, Metro Subway, Light Rail, Commuter Bus and Mobility",
+   "where": "All MTA service, including MARC's Odenton, BWI, Savage/Jessup and Laurel stations",
+   "offer": "Free rides for all US military veterans, active-duty military and members of the National Guard and Reserves. Regular schedules.",
+   "grade": "A",
+   "note": "Show one of three IDs: a DoD-issued ID (Armed Forces, Uniformed Services or Military Retiree), a VA-issued ID, or an MVA driver's license or state ID with the Veteran designation. A DD-214 is not on MTA's list. Metro (WMATA) and county buses are separate.",
+   "sources": [
+    {
+     "url": "https://www.mta.maryland.gov/service-alerts/29401",
+     "publisher": "MDOT MTA service alert 29401",
+     "published": "2026-11-09"
+    }
+   ]
+  },
+  {
+   "id": "fort-meade-exchange",
+   "day": "Sale Fri 6 to Thu 12 Nov; challenge coins Wed 11 Nov",
+   "at": null,
+   "name": "Fort Meade Main Exchange: Veterans Day sale and challenge coins (installation access needed)",
+   "where": "2799 Rose St, Fort Meade (on post: you need installation access and Exchange shopping privileges)",
+   "offer": "The Exchange's Veterans Day sale on electronics, clothing, shoes and more, 6-12 Nov, with extra savings on select items for MILITARY STAR cardholders. Challenge coins on 11 Nov, while supplies last, for shoppers with in-store benefits (active duty, military retirees and service-connected disabled veterans).",
+   "grade": "B",
+   "note": "Not routed: it's on post. A 2020 garrison post about STAR-card fuel and coffee perks is not repeated for 2026. The food court's Charleys, Qdoba and Starbucks are left off the route for the same reason.",
+   "sources": [
+    {
+     "url": "https://publicaffairs-sme.com/ExchangePost/2026/11/04/2026-veterans-day-retail-deals-and-discounts/",
+     "publisher": "Military.com, reposted by the Exchange Post",
+     "published": "2026-11-04"
+    },
+    {
+     "url": "https://patch.com/maryland/across-md/veterans-day-2026-free-meals-discounts-deals-maryland",
+     "publisher": "Patch",
+     "published": "2026-11-10"
+    }
+   ]
+  },
+  {
+   "id": "fort-meade-commissary",
+   "day": "Wed 11 Nov, 9:00 AM-5:00 PM",
+   "at": null,
+   "name": "Fort Meade Commissary: holiday hours",
+   "where": "Bldg. 2786 MacArthur Rd, Fort Meade (on post)",
+   "offer": "Open 9 AM-5 PM on Veterans Day (usually 8 AM-9 PM on weekdays). Authorized patrons include veterans with any service-connected disability, Purple Heart recipients, former POWs and designated primary family caregivers.",
+   "grade": "A",
+   "note": "Installation access needed.",
+   "sources": [
+    {
+     "url": "https://corp.commissaries.com/shopping/store-locations/fort-meade",
+     "publisher": "Defense Commissary Agency (Fort Meade store page)",
+     "published": "2026"
+    }
+   ]
+  },
+  {
+   "id": "fort-meade-mwr-hours",
+   "day": "Wed 11 Nov",
+   "at": null,
+   "name": "Fort Meade MWR: Veterans Day hours",
+   "where": "Fort Meade (on post)",
+   "offer": "Bowling Center noon-4 PM; Gaffney Fitness Center 8 AM-noon; Murphy Field House 24/7 for registered users. Closed: Club Meade, Arts & Crafts, Auto Skills, the library, Java Cafe, Leisure Travel, Outdoor Recreation's office, the Pet Care Center, Army Community Service and every CYS program.",
+   "grade": "A",
+   "note": "From DFMWR's holiday-hours sheet, dated 17 Aug 2026. No 2026 installation Veterans Day ceremony was found (garrison site and news, 11 Nov).",
+   "sources": [
+    {
+     "url": "https://meade.armymwr.com/happenings/veterans-day-holiday-hours",
+     "publisher": "Fort Meade FMWR",
+     "published": "2026-10-26"
+    }
+   ]
+  },
+  {
+   "id": "crownsville-veterans-cemetery",
+   "day": "Wed 11 Nov, 11:00 AM EST",
+   "at": "2026-11-11T16:00:00Z",
+   "name": "Crownsville Veterans Cemetery ceremony",
+   "where": "1122 Sunrise Beach Rd, Crownsville (about 20 minutes east of Odenton)",
+   "offer": "The state's Veterans Day ceremony at the cemetery. Veterans, military families and community members are invited.",
+   "grade": "B",
+   "note": "",
+   "sources": [
+    {
+     "url": "https://patch.com/maryland/across-md/12-ways-observe-veterans-day-2026-maryland-parades-ceremonies-celebrations",
+     "publisher": "Patch",
+     "published": "2026-11-05"
+    }
+   ]
+  },
+  {
+   "id": "maryland-wwii-memorial",
+   "day": "Wed 11 Nov, 11:00 AM EST",
+   "at": "2026-11-11T16:00:00Z",
+   "name": "Maryland World War II Memorial ceremony",
+   "where": "1920 Governor Ritchie Hwy, Annapolis (about 25 minutes east)",
+   "offer": "A Veterans Day ceremony hosted by the Maryland Department of Veterans and Military Families.",
+   "grade": "B",
+   "note": "Patch doesn't say whether it's open to the public.",
+   "sources": [
+    {
+     "url": "https://patch.com/maryland/across-md/12-ways-observe-veterans-day-2026-maryland-parades-ceremonies-celebrations",
+     "publisher": "Patch",
+     "published": "2026-11-05"
+    }
+   ]
+  },
+  {
+   "id": "annapolis-fra-ceremony",
+   "day": "Wed 11 Nov, 11:00 AM EST",
+   "at": "2026-11-11T16:00:00Z",
+   "name": "Annapolis Veterans Day ceremony (Fleet Reserve Association)",
+   "where": "Memorial Circle, downtown Annapolis; in bad weather, the Fleet Reserve Club, 100 Compromise St",
+   "offer": "The Fleet Reserve Association's Veterans Day ceremony.",
+   "grade": "B",
+   "note": "",
+   "sources": [
+    {
+     "url": "https://patch.com/maryland/across-md/12-ways-observe-veterans-day-2026-maryland-parades-ceremonies-celebrations",
+     "publisher": "Patch",
+     "published": "2026-11-05"
+    }
+   ]
+  },
+  {
+   "id": "arlington-national-cemetery-observance",
+   "day": "Wed 11 Nov, 11:00 AM EST (musical prelude 10:30)",
+   "at": "2026-11-11T16:00:00Z",
+   "name": "National Veterans Day Observance at Arlington National Cemetery",
+   "where": "Memorial Amphitheater, Arlington National Cemetery, Arlington, VA (MARC to Union Station, free for veterans on 11 Nov, then Metro)",
+   "offer": "The national observance: a wreath-laying at the Tomb of the Unknown Soldier at 11:00, then the observance in the Memorial Amphitheater. Free and open to the public.",
+   "grade": "A",
+   "note": "Expect security screening at the Welcome Center; allow extra time. Metro isn't part of MTA's free rides and runs a weekend schedule (5 AM-midnight) on 11 Nov.",
+   "sources": [
+    {
+     "url": "https://patch.com/virginia/across-va/11-ways-observe-veterans-day-2026-virginia-parades-ceremonies-celebrations",
+     "publisher": "Patch",
+     "published": "2026-11-05"
+    },
+    {
+     "url": "https://wtop.com/local/2026/11/whats-open-and-closed-in-the-dc-region-on-veterans-day-2026/",
+     "publisher": "WTOP",
+     "published": "2026-11-10"
+    }
+   ]
+  },
+  {
+   "id": "laurel-appreciation-breakfast",
+   "day": "Sat 14 Nov, 10:00 AM-noon",
+   "at": null,
+   "name": "Laurel Veterans Day Appreciation Breakfast",
+   "where": "Laurel Multiservice Center, 204 Fort Meade Rd, Laurel",
+   "offer": "The City of Laurel's third annual breakfast honoring veterans and military families, hosted by Mayor Keith R. Sydnor.",
+   "grade": "B",
+   "note": "Patch doesn't mention an RSVP; the city's November newsletter has details.",
+   "sources": [
+    {
+     "url": "https://patch.com/maryland/bowie/veterans-day-2026-ceremonies-events-prince-georges-co",
+     "publisher": "Patch",
+     "published": "2026-11-10"
+    }
+   ]
+  },
+  {
+   "id": "army-field-band-quartet",
+   "day": "Wed 18 Nov, 6:00-7:00 PM",
+   "at": null,
+   "name": "US Army Field Band Saxophone Quartet: Veterans Day concert",
+   "where": "Bain 50+ Center, 5470 Ruth Keeton Way, Columbia",
+   "offer": "A Howard County concert honoring veterans; light refreshments.",
+   "grade": "B",
+   "note": "Registration required (through Howard County).",
+   "sources": [
+    {
+     "url": "https://patch.com/maryland/columbia/veterans-day-2026-ceremonies-events-howard-county",
+     "publisher": "Patch",
+     "published": "2026-11-10"
+    }
+   ]
+  },
+  {
+   "id": "bubbas-33-glen-burnie",
+   "day": "Wed 11 Nov, until 4:00 PM",
+   "at": null,
+   "name": "Bubba's 33: free lunch (Glen Burnie, outside the area)",
+   "where": "Glen Burnie (street address not confirmed)",
+   "offer": "A free lunch from select entrees until 4 PM for active, former or retired military with proof of service.",
+   "grade": "B",
+   "note": "Bubba's 33 is Texas Roadhouse's sister chain; the nearest store is in Glen Burnie, outside the circles. Call first.",
+   "sources": [
+    {
+     "url": "https://www.legion.org/information-center/news/veterans-day/2026/november/veterans-day-deals-and-discounts",
+     "publisher": "The American Legion",
+     "published": "2026-11-05"
+    }
+   ]
+  },
+  {
+   "id": "maryland-state-parks",
+   "day": "Every day",
+   "at": null,
+   "name": "Maryland State Parks: free day-use entry for veterans",
+   "where": "Every Maryland state park day-use area (Patapsco Valley, Sandy Point and others)",
+   "offer": "Day-use entrance charges are waived for all US veterans, residents or not. Active-duty military and Maryland National Guard members get the same by showing their military ID at the gate.",
+   "grade": "A",
+   "note": "For the veteran or card holder only, not others in the car, unless the park charges per vehicle (then the vehicle fee is waived). Other facility charges still apply.",
+   "sources": [
+    {
+     "url": "https://dnr.maryland.gov/Publiclands/Pages/oc.aspx",
+     "publisher": "Maryland DNR (Service Charges for Maryland State Parks)",
+     "published": "standing policy"
+    }
+   ]
+  },
+  {
+   "id": "nps-fee-free-day",
+   "day": "Wed 11 Nov",
+   "at": null,
+   "name": "National Park Service: fee-free day",
+   "where": "Every National Park Service site that charges entry, such as Fort McHenry in Baltimore",
+   "offer": "Entrance fees are waived at National Park Service sites on Veterans Day.",
+   "grade": "B",
+   "note": "Veterans and Gold Star families can also get a free lifetime Interagency Military Pass.",
+   "sources": [
+    {
+     "url": "https://patch.com/maryland/across-md/veterans-day-2026-free-meals-discounts-deals-maryland",
+     "publisher": "Patch",
+     "published": "2026-11-10"
+    }
+   ]
+  },
+  {
+   "id": "national-cryptologic-museum",
+   "day": "Usually Tue-Sat 10 AM-4 PM; 11 Nov not confirmed",
+   "at": null,
+   "name": "National Cryptologic Museum (always free)",
+   "where": "8290 Colony Seven Rd, Annapolis Junction (beside Fort Meade)",
+   "offer": "NSA's museum of codes and code-breaking; admission is always free.",
+   "grade": "C",
+   "note": "Not a Veterans Day offer, and NSA's museum pages reportedly say it closes on federal holidays (nsa.gov couldn't be read here): call (301) 688-5849 before going.",
+   "sources": [
+    {
+     "url": "https://www.nsa.gov/museum/",
+     "publisher": "National Security Agency",
+     "published": "undated"
+    }
+   ]
+  },
+  {
+   "id": "closures",
+   "day": "Wed 11 Nov",
+   "at": null,
+   "name": "What's closed and open",
+   "where": "Anne Arundel, Prince George's and Howard counties",
+   "offer": "Federal offices are closed and there's no mail delivery. Anne Arundel County: county offices closed; public schools and libraries open; curbside trash and recycling on the normal schedule. Prince George's County (most of Laurel): county offices, public schools and libraries closed; trash collected. Howard County: the County Council's offices are closed; its full 2026 notice wasn't found (in 2024 its offices, courts, 50+ centers, animal shelter, Robinson Nature Center and historic sites closed while parks stayed open). MARC runs full service on all three lines; Metrorail runs its weekend schedule, 5 AM-midnight.",
+   "grade": "B",
+   "note": "Howard County libraries and schools weren't confirmed for 2026: check before going.",
+   "sources": [
+    {
+     "url": "https://wtop.com/local/2026/11/whats-open-and-closed-in-the-dc-region-on-veterans-day-2026/",
+     "publisher": "WTOP",
+     "published": "2026-11-10"
+    },
+    {
+     "url": "https://www.aacounty.org/news-events/events/holiday-calendar/veterans-day",
+     "publisher": "Anne Arundel County",
+     "published": "2026"
+    }
+   ]
+  }
+ ],
+ "leads": [
+  {
+   "name": "Joe's Crab Shack (Severn / Arundel Mills)",
+   "area": "Severn",
+   "q": "Joe's Crab Shack Arundel Mills Hanover MD",
+   "offer": "Dealybee's 9 Nov 2026 list: 20% off the meal for veterans dining in, parties up to 4, with a military ID. No store address was found in the area (Joe's locator page is gone; OpenStreetMap has only Halethorpe).",
+   "last_seen": "2026 (one list, no address)",
+   "source": {
+    "url": "https://dealybee.com/guides/veterans-day-free-meals",
+    "publisher": "Dealybee (DC, Maryland & Virginia list, 9 Nov 2026)",
+    "published": null
+   }
+  }
+ ]
+}

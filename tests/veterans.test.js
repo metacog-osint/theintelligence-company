@@ -219,7 +219,7 @@ test("the area picker: Fargo-Moorhead first and the default, and its options mat
     assert.ok(m, `${a.id}: meta.region`);
     assert.equal(m.id, a.id);
     for (const k of ["name", "center", "center_label", "zoom", "wx_name"]) assert.ok(m[k], `${a.id}: meta.region.${k}`);
-    assert.equal(AREA_DATA[a.id].deals.meta.tz, a.id === "reston-va" ? "America/New_York" : "America/Chicago", `${a.id}: time zone`);
+    assert.equal(AREA_DATA[a.id].deals.meta.tz, ["reston-va", "fort-meade"].includes(a.id) ? "America/New_York" : "America/Chicago", `${a.id}: time zone`);
     assert.ok(AREA_DATA[a.id].deals.meta.forecast_url, `${a.id}: an NWS forecast link`);
   }
 });
