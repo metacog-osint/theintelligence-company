@@ -74,6 +74,22 @@ REGIONS = {
         nws=(39.5296, -119.8138), wx_name="Reno",
         # RTC Washoe: every service free for every rider all day on 11 Nov (its own release, 9 Nov 2026).
         transit="ride RTC Washoe's buses, free for everyone all day on 11 Nov"),
+    # Fort Meade, MD (10 Nov 2026 night: colleagues at Fort Meade; research/fort-meade/notes.md). Eastern time.
+    # Odenton, Gambrills and Crofton, Severn/Hanover/Arundel Mills, Laurel and Columbia around the post.
+    "fort-meade": dict(
+        name="Fort Meade, Odenton, Laurel and Columbia", label="Fort Meade: Odenton, Laurel, Columbia, MD",
+        out="fort-meade", research="fort-meade", bbox=None, states=("MD",),
+        tz="America/New_York", tz_offset_min=-300, tz_abbr="EST",
+        day_start=datetime(2026, 11, 11, 5, 0, tzinfo=timezone.utc),
+        areas=[("Fort Meade and Odenton", 39.095, -76.725, 6.0), ("Gambrills and Crofton", 39.045, -76.675, 4.5),
+               ("Severn, Hanover and Arundel Mills", 39.160, -76.715, 4.5), ("Laurel", 39.100, -76.855, 5.0),
+               ("Columbia", 39.200, -76.850, 6.0)],
+        center=(39.0840, -76.7000), center_label="Odenton, by Fort Meade", zoom=11,
+        nws=(39.1000, -76.7400), wx_name="Fort Meade",
+        # Stores on the installation need base access, so they stay off the route (the Exchange is under Deals).
+        on_post=r"\bFort Meade, (MD|Fort Meade)\b",
+        # MDOT MTA's service alert 29401 (9 Nov 2026): free rides on 11 Nov for veterans, active duty, Guard and Reserve.
+        transit="ride MTA's MARC trains, buses or Light Rail, free on 11 Nov for veterans, active duty, Guard and Reserve with a DoD or VA ID or a Maryland license marked Veteran"),
     # The first Mountain area (11 Nov 2026, the "metro spread"): research/denver/notes.md.
     "denver": dict(
         name="Denver metro", label="Denver metro, CO",
@@ -135,18 +151,18 @@ CURATE = [
     dict(id="pizza-ranch", src="national", name="Pizza Ranch", loc="Pizza Ranch", osm="pizzaranch", category="meal", minutes=45, busy=15, meal=True, dineIn=True,
          elsewhere=dict(offer="Last year: each Pizza Ranch chose a free Veterans Day buffet for veterans or a Veterans Week discount. Nothing found for 2026 at these stores")),
     # Chains with a 2026 offer and no Fargo-Moorhead store (other areas only; added 9 Nov 2026 with the area picker).
-    dict(id="red-robin", src="national", name="Red Robin", loc="Red Robin", osm=None, category="meal", minutes=50, busy=20, meal=True, dineIn=True, only=("bismarck-mandan", "twin-cities", "reston-va", "reno-sparks", "denver", "colorado-springs")),
-    dict(id="outback", src="national", name="Outback Steakhouse", loc="Outback Steakhouse", osm=None, category="meal", minutes=40, busy=15, meal=False, dineIn=True, eat=0.5, kinds=["snack"], only=("bismarck-mandan", "twin-cities", "reston-va", "reno-sparks", "denver", "colorado-springs")),
-    dict(id="golden-corral", src="national", name="Golden Corral", loc="Golden Corral", osm=None, category="meal", minutes=55, busy=25, meal=True, dineIn=True, only=("bismarck-mandan", "twin-cities", "reston-va", "reno-sparks", "denver", "colorado-springs")),
-    dict(id="smashburger", src="national", name="Smashburger", loc="Smashburger", osm=None, category="quick", minutes=20, busy=10, meal=False, dineIn=True, eat=0.6, caution="Lists differ (a free burger, or 25% off): ask first", only=("bismarck-mandan", "twin-cities", "reston-va", "reno-sparks", "denver", "colorado-springs")),
+    dict(id="red-robin", src="national", name="Red Robin", loc="Red Robin", osm=None, category="meal", minutes=50, busy=20, meal=True, dineIn=True, only=("bismarck-mandan", "twin-cities", "reston-va", "reno-sparks", "fort-meade", "denver", "colorado-springs")),
+    dict(id="outback", src="national", name="Outback Steakhouse", loc="Outback Steakhouse", osm=None, category="meal", minutes=40, busy=15, meal=False, dineIn=True, eat=0.5, kinds=["snack"], only=("bismarck-mandan", "twin-cities", "reston-va", "reno-sparks", "fort-meade", "denver", "colorado-springs")),
+    dict(id="golden-corral", src="national", name="Golden Corral", loc="Golden Corral", osm=None, category="meal", minutes=55, busy=25, meal=True, dineIn=True, only=("bismarck-mandan", "twin-cities", "reston-va", "reno-sparks", "fort-meade", "denver", "colorado-springs")),
+    dict(id="smashburger", src="national", name="Smashburger", loc="Smashburger", osm=None, category="quick", minutes=20, busy=10, meal=False, dineIn=True, eat=0.6, caution="Lists differ (a free burger, or 25% off): ask first", only=("bismarck-mandan", "twin-cities", "reston-va", "reno-sparks", "fort-meade", "denver", "colorado-springs")),
     dict(id="hy-vee", src="national", name="Hy-Vee", loc="Hy-Vee", osm=None, category="breakfast", minutes=35, busy=15, meal=True, dineIn=True, window=("06:00", "10:00"), caution="Stores with hot food service only", only=("bismarck-mandan", "twin-cities")),
-    dict(id="cpk", src="national", name="California Pizza Kitchen", loc="California Pizza Kitchen", osm=None, category="meal", minutes=50, busy=15, meal=True, dineIn=True, only=("reston-va", "reno-sparks", "denver", "colorado-springs")),
-    dict(id="bonefish-grill", src="national", name="Bonefish Grill", loc="Bonefish Grill", osm=None, category="meal", minutes=40, busy=15, meal=False, dineIn=True, eat=0.5, kinds=["snack"], only=("reston-va", "reno-sparks", "denver", "colorado-springs")),
-    dict(id="carrabbas", src="national", name="Carrabba's Italian Grill", loc="Carrabba's Italian Grill", osm=None, category="meal", minutes=45, busy=15, meal=False, dineIn=True, eat=0.5, kinds=["snack"], only=("reston-va", "reno-sparks", "denver", "colorado-springs")),
-    dict(id="fogo-de-chao", src="national", name="Fogo de Chão", loc="Fogo de Chão", osm=None, category="meal", minutes=65, busy=15, meal=True, dineIn=True, purchase=True, only=("reston-va", "reno-sparks", "denver", "colorado-springs")),
-    dict(id="bar-louie", src="national", name="Bar Louie", loc="Bar Louie", osm=None, category="meal", minutes=45, busy=15, meal=True, dineIn=True, kinds=["bar", "meal"], only=("reston-va", "reno-sparks", "denver", "colorado-springs")),
-    dict(id="sheetz", src="national", name="Sheetz", loc="Sheetz", osm=None, category="quick", minutes=8, busy=5, meal=False, dineIn=False, hours=("00:00", "24:00"), kinds=["meal", "car-wash"], only=("reston-va",)),
-    dict(id="wawa", src="national", name="Wawa", loc="Wawa", osm=None, category="coffee", minutes=6, busy=3, meal=False, dineIn=False, hours=("00:00", "24:00"), only=("reston-va",)),
+    dict(id="cpk", src="national", name="California Pizza Kitchen", loc="California Pizza Kitchen", osm=None, category="meal", minutes=50, busy=15, meal=True, dineIn=True, only=("reston-va", "reno-sparks", "fort-meade", "denver", "colorado-springs")),
+    dict(id="bonefish-grill", src="national", name="Bonefish Grill", loc="Bonefish Grill", osm=None, category="meal", minutes=40, busy=15, meal=False, dineIn=True, eat=0.5, kinds=["snack"], only=("reston-va", "reno-sparks", "fort-meade", "denver", "colorado-springs")),
+    dict(id="carrabbas", src="national", name="Carrabba's Italian Grill", loc="Carrabba's Italian Grill", osm=None, category="meal", minutes=45, busy=15, meal=False, dineIn=True, eat=0.5, kinds=["snack"], only=("reston-va", "reno-sparks", "fort-meade", "denver", "colorado-springs")),
+    dict(id="fogo-de-chao", src="national", name="Fogo de Chão", loc="Fogo de Chão", osm=None, category="meal", minutes=65, busy=15, meal=True, dineIn=True, purchase=True, only=("reston-va", "reno-sparks", "fort-meade", "denver", "colorado-springs")),
+    dict(id="bar-louie", src="national", name="Bar Louie", loc="Bar Louie", osm=None, category="meal", minutes=45, busy=15, meal=True, dineIn=True, kinds=["bar", "meal"], only=("reston-va", "reno-sparks", "fort-meade", "denver", "colorado-springs")),
+    dict(id="sheetz", src="national", name="Sheetz", loc="Sheetz", osm=None, category="quick", minutes=8, busy=5, meal=False, dineIn=False, hours=("00:00", "24:00"), kinds=["meal", "car-wash"], only=("reston-va", "fort-meade")),
+    dict(id="wawa", src="national", name="Wawa", loc="Wawa", osm=None, category="coffee", minutes=6, busy=3, meal=False, dineIn=False, hours=("00:00", "24:00"), only=("reston-va", "fort-meade")),
     # Colorado chains (11 Nov 2026, for the Denver metro and Colorado Springs areas): 2026 offers checked in
     # research/colorado-chains-notes.md; `only` is where each has stores. The Melting Pot is a local entry in each area
     # (one store each, different offers).
@@ -364,6 +380,19 @@ LOCAL = {
         dict(id="squeeze-in", src="local", name="Squeeze In", osm=None, category="breakfast", minutes=50, busy=25, meal=True, dineIn=True, caution="Its post names no stores, hours or proof: call yours first", show=dict(notes="Squeeze In's own post (10 Nov 2026): a free meal of your choice for veterans on 11 Nov. It doesn't name stores, hours or proof, so bring your ID and call first. Hours are each store's usual Wednesday hours from its own site.")),
         dict(id="in-n-out", src="local", name="In-N-Out Burger", loc="In-N-Out Burger", osm=None, category="quick", minutes=20, busy=20, meal=True, dineIn=True, caution=NO_COMPANY_WORD, show=dict(notes="On 2026 national lists (Newsweek, The Military Wallet): a free burger, fries and drink for veterans, active duty, Reserve and Guard with proof of service, plus a Veterans Day decal. Not announced by In-N-Out itself. Order inside: lists differ on the drive-through.")),
     ],
+    # Fort Meade, MD (checked 11 Nov 2026 from the research report and the coordinating session's leads; every source and
+    # correction in research/fort-meade/notes.md). No 2026 ceremony was found inside the circles, so the ceremonies are
+    # under Deals (extras). Chick-fil-A, Silver Diner and Grace for Vets reuse Reston's offer ids: the same offers.
+    "fort-meade": [
+        # Chick-fil-A Metro DC's list names only "Laurel" here (13600 Baltimore Ave); the other nine stores aren't on it.
+        dict(id="chick-fil-a-metro-dc", src="local", name="Chick-fil-A (Metro DC)", loc="Chick-fil-A", osm=None, category="quick", minutes=15, busy=12, meal=False, dineIn=False, drop=["7055 Arundel Mills", "3366 Corridor", "2615 Brandermill", "2691 Carver", "10300 Little Patuxent", "10975 Johns Hopkins", "4905 Executive Park", "6375 Dobbin", "9081 Snowden"], show=dict(notes="Chick-fil-A Metro DC's offer (cfametrodc.com, read 11 Nov 2026), open to close: a Chicken Biscuit, Egg White Grill or 4-count Chick-n-Minis until 10:30 AM; a Chicken Sandwich, Spicy Chicken Sandwich or 8-count Nuggets after. Proof of service required; not for mobile or delivery orders. Near Fort Meade its participating list names only the Laurel restaurant (13600 Baltimore Ave); other Chick-fil-A stores here have other owners and aren't on it, so ask before counting on one.")),
+        dict(id="silver-diner", src="local", name="Silver Diner", osm=None, category="meal", minutes=50, busy=15, meal=True, dineIn=True, purchase=True, show=dict(notes="25% off an entree for veterans and active-duty military with a valid military ID, at all its DC, Maryland and Virginia stores (WTOP, 9 Nov; Stars and Stripes, 6 Nov). Not on Silver Diner's own site. The one here is in Elkridge, at the Columbia edge of the area.")),
+        dict(id="grace-for-vets", src="local", name="Grace for Vets", osm=None, category="service", minutes=15, busy=15, meal=False, dineIn=False, hours=("08:00", "20:00"), kinds=["car-wash"], caution="Participating washes only, hours not published for the day: call first", show=dict(notes="Grace for Vets: a free car wash for veterans and active duty every 11 Nov at participating washes. In this area its list has one: Flagship Carwash, 771 Donaldson Ave, Severn. Proof isn't stated: bring a military or veteran ID.")),
+        dict(id="greene-turtle", src="local", name="The Greene Turtle", osm=None, category="meal", minutes=55, busy=20, meal=True, dineIn=True, caution="Select locations, and addresses from directories: call first", show=dict(notes="A free dine-in meal up to $15 for veterans (WTOP, 9 Nov 2026); not on the Greene Turtle's own site. Lists say select locations. Addresses from directories: Columbia (8872 McGaw Rd) and Arundel Mills (7556 Teague Rd).")),
+        dict(id="main-event", src="local", name="Main Event", osm=None, category="meal", minutes=60, busy=15, meal=True, dineIn=True, kinds=["meal", "games"], caution="Participating centers only: call first", show=dict(notes="A free double cheeseburger with fries and 30 minutes of game play for veterans and active duty with ID, on Main Event's Columbia page (no year shown) and the American Legion's 5 Nov 2026 list. In the Mall in Columbia; hours not read.")),
+        dict(id="all-american-steakhouse", src="local", name="All American Steakhouse", osm=None, category="meal", minutes=50, busy=15, meal=True, dineIn=True, caution=ONE_REPORT, show=dict(notes="One 2026 deal list (Dealybee, 9 Nov) carries it for the Odenton restaurant; no post from the restaurant was found. Veterans only, with a valid ID; mention the promotion. 1502 Annapolis Rd, (410) 305-0505; address from directories.")),
+        dict(id="kpot-laurel", src="local", name="KPOT Korean BBQ", osm=None, category="meal", minutes=75, busy=15, meal=True, dineIn=True, purchase=True, caution=ONE_REPORT, show=dict(notes="One 2026 deal list (Dealybee, 9 Nov) carries it: free for the first 20 with a valid military ID, then 50% off; drinks not included. No post from KPOT was found. 351 Montrose Ave, Laurel, (240) 280-2840; address and hours from directories.")),
+    ],
     # Denver metro (11 Nov 2026, the "metro spread"; every offer checked at its own source that night:
     # research/denver/notes.md). Discounts on a meal you buy are purchase deals (Off by default).
     "denver": [
@@ -569,7 +598,7 @@ def census_batch(rows):
 
 def split_addr(a):
     a = re.sub(r"\s*\(.*?\)", "", a)
-    m = re.match(r"(.+?),\s*([A-Za-z .]+),\s*(ND|MN|VA|NV|CO)\s*(\d{5})?", a)
+    m = re.match(r"(.+?),\s*([A-Za-z .]+),\s*(ND|MN|VA|MD|NV|CO)\s*(\d{5})?", a)
     if not m:
         return None
     street = re.sub(r"\s*(Suite|Ste|Unit|#)\s*[\w-]+", "", m.group(1), flags=re.I).strip()
@@ -633,6 +662,9 @@ def main(region=DEFAULT_REGION):
             for s in L.get("stores", []):
                 if any(d in (s.get("address") or "") for d in cur.get("drop", [])):
                     report.append(f"  dropped: {cur['id']} {s.get('address')}")
+                    continue
+                if reg.get("on_post") and re.search(reg["on_post"], s.get("address") or ""):
+                    report.append(f"  on post (installation access): {cur['id']} {s.get('address')}")
                     continue
                 if s.get("status") == "closed":
                     report.append(f"  closed: {cur['id']} {s.get('address')}")
