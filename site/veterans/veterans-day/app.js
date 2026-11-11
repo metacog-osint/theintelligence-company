@@ -22,7 +22,8 @@
     { id: "bismarck-mandan", dir: "data/bismarck-mandan/" },
     { id: "twin-cities", dir: "data/twin-cities/" },
     { id: "reston-va", dir: "data/reston-va/" },
-    { id: "reno-sparks", dir: "data/reno-sparks/" }
+    { id: "reno-sparks", dir: "data/reno-sparks/" },
+    { id: "colorado-springs", dir: "data/colorado-springs/" }
   ];
   const DEFAULT_AREA = "fargo-moorhead";
   const AWAY_KM = 15; // further than this from the area's nearest start point, your location is somewhere else
@@ -1313,6 +1314,15 @@
       ["39.5350,-119.7560", "Sparks (Victorian Square), NV"],
       ["39.5321,-119.7225", "Sparks Marina and Legends, NV"],
       ["39.4398,-119.7707", "South Reno (South Meadows), NV"]
+    ],
+    "colorado-springs": [
+      ["", "Start from town…"],
+      ["38.8339,-104.8214", "Downtown Colorado Springs, CO"],
+      ["38.9475,-104.7955", "North Springs (Chapel Hills), CO"],
+      ["38.8397,-104.7224", "East side, Powers Blvd (Peterson SFB), CO"],
+      ["38.7384,-104.8043", "South side, Fort Carson Gate 1, CO"],
+      ["39.0917,-104.8727", "Monument, CO"],
+      ["38.9333,-104.6086", "Falcon, CO"]
     ]
   };
   // Example text in the Deals search box and the Route quick-add box, from each area's own deals and streets (the publisher,
@@ -1322,7 +1332,8 @@
     "bismarck-mandan": { deals: ["Perkins", "Expressway", "Mandan"], route: ["Perkins", "Olive Garden", "Century Ave"] },
     "twin-cities": { deals: ["Caribou", "Lexington Ave", "Maple Grove"], route: ["Caribou", "Perkins", "Wayzata Blvd"] },
     "reston-va": { deals: ["Chick-fil-A", "Leesburg Pike", "Herndon"], route: ["Chick-fil-A", "Wawa", "Sunset Hills"] },
-    "reno-sparks": { deals: ["Squeeze In", "Kietzke", "Sparks"], route: ["Squeeze In", "In-N-Out", "McCarran"] }
+    "reno-sparks": { deals: ["Squeeze In", "Kietzke", "Sparks"], route: ["Squeeze In", "In-N-Out", "McCarran"] },
+    "colorado-springs": { deals: ["Texas Roadhouse", "Academy Blvd", "Monument"], route: ["Texas Roadhouse", "Starbucks", "Powers Blvd"] }
   };
   const AREA_ALIASES = {
     "new-salem": "bismarck-mandan",
@@ -1342,7 +1353,15 @@
     "reno": "reno-sparks",
     "sparks": "reno-sparks",
     "reno-nv": "reno-sparks",
-    "washoe": "reno-sparks"
+    "washoe": "reno-sparks",
+    "springs": "colorado-springs",
+    "cos": "colorado-springs",
+    "colorado-springs-co": "colorado-springs",
+    "monument": "colorado-springs",
+    "falcon": "colorado-springs",
+    "fort-carson": "colorado-springs",
+    "peterson": "colorado-springs",
+    "usafa": "colorado-springs"
   };
   function pickArea() {
     const raw = new URLSearchParams(location.search).get("area") || new URLSearchParams(location.search).get("sector");

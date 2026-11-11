@@ -1,0 +1,193 @@
+[
+ {
+  "name": "Wreath-Laying Ceremony and Observance, Memorial Park",
+  "kind": "event",
+  "address": "Memorial Park (monuments garden), 1605 E Pikes Peak Ave, Colorado Springs, CO 80909",
+  "phone": "",
+  "geo": "38.832988,-104.797601",
+  "wednesday_hours": "11:00-12:00",
+  "status_2026": "confirmed",
+  "est_value_usd": 0,
+  "dates": "2026-11-11",
+  "hours_local": "11:00-12:00",
+  "mode": "event",
+  "eligible": [
+   "public",
+   "veteran",
+   "active",
+   "guard_reserve"
+  ],
+  "eligibility_quote": "Attendees are encouraged to bring their own chairs; rain or shine (The Gazette, 10 Nov 2026).",
+  "guard_reserve": "yes",
+  "spouse_or_guest": "yes",
+  "proof": [],
+  "limits": "Lasts about an hour. Bring a chair. Held rain or shine. The exact spot inside the park is the monuments garden (KRDO); the pin is at the park's Pikes Peak Ave edge.",
+  "offer": "The Pikes Peak Veterans Council and Special Forces Association Chapter 4-24 hold the public Veterans Day wreath-laying and observance at 11 AM, with Mayor Yemi Mobolade and others speaking. Free and open to all.",
+  "grade": "B",
+  "sources": [
+   {
+    "url": "https://gazette.com/2026/11/10/veterans-day-events-scheduled-across-colorado-springs-area/",
+    "publisher": "The Gazette",
+    "published": "2026-11-10",
+    "accessed": "2026-11-11"
+   },
+   {
+    "url": "https://krdo.com/news/2026/09/01/colorado-springs-veterans-day-rosie-riveter/",
+    "publisher": "KRDO",
+    "published": "2026-09-01",
+    "accessed": "2026-11-11"
+   }
+  ],
+  "notes": "Organizers, time, speakers and about an hour from The Gazette (10 Nov 2026); \"monuments garden at Memorial Park\" and the Pikes Peak Veterans Council as host from KRDO (1 Sep 2026). No Veterans Council or city page for 2026 was found (the city's closures page, 9 Nov 2026, doesn't mention the ceremony), so grade B. The street address is the park's, from the lead report; the Census geocoder puts it on the park's Pikes Peak Ave side. The 2025 ceremony was also at 11 AM in Memorial Park."
+ },
+ {
+  "name": "Tri-Lakes Post 9-11 Veterans Day memorial, Crawford Memorial, Palmer Lake",
+  "kind": "event",
+  "address": "William J. Crawford Memorial, Palmer Lake Regional Recreation Area, Palmer Lake, CO 80133",
+  "phone": "",
+  "geo": "39.125476,-104.909647",
+  "wednesday_hours": "10:00-11:00",
+  "status_2026": "confirmed",
+  "est_value_usd": 0,
+  "dates": "2026-11-11",
+  "hours_local": "10:00-11:00",
+  "mode": "event",
+  "eligible": [
+   "public",
+   "veteran",
+   "active",
+   "guard_reserve"
+  ],
+  "eligibility_quote": "Tri-Lakes Post 9-11 Veterans Day memorial, 10 a.m., Crawford Memorial, Palmer Lake (The Gazette, 10 Nov 2026).",
+  "guard_reserve": "yes",
+  "spouse_or_guest": "yes",
+  "proof": [],
+  "limits": "End time, street address and who may attend are not published; The Gazette lists it among the area's public events. The pin is OpenStreetMap's William J. Crawford Memorial.",
+  "offer": "American Legion Tri-Lakes Post 9-11's Veterans Day memorial at the Crawford Memorial in Palmer Lake, 10 AM. Free.",
+  "grade": "B",
+  "sources": [
+   {
+    "url": "https://gazette.com/2026/11/10/veterans-day-events-scheduled-across-colorado-springs-area/",
+    "publisher": "The Gazette",
+    "published": "2026-11-10",
+    "accessed": "2026-11-11"
+   }
+  ],
+  "notes": "Only The Gazette (10 Nov 2026) carries it; the post's own page wasn't found. The memorial is the MSG William J. Crawford memorial at the Palmer Lake Regional Recreation Area (the Colorado Run for the Fallen starts at its flagpole; the post held a ceremony there in March 2021, per The Gazette). The 11 AM end is an assumption for planning. Palmer Lake is about 25 miles north of downtown Colorado Springs."
+ },
+ {
+  "name": "Pikes Peak State College Veterans Day wreath-laying, Centennial Campus",
+  "kind": "event",
+  "address": "Veterans Memorial Courtyard, Centennial Campus, 5675 S Academy Blvd, Colorado Springs, CO 80906",
+  "phone": "719-502-4100",
+  "geo": "38.765381,-104.784796",
+  "wednesday_hours": "11:00-12:00",
+  "status_2026": "confirmed",
+  "est_value_usd": 0,
+  "dates": "2026-11-11",
+  "hours_local": "11:00-12:00",
+  "mode": "event",
+  "eligible": [
+   "veteran",
+   "active",
+   "guard_reserve"
+  ],
+  "eligibility_quote": "Wreath Laying Ceremony, November 11, 11:00 a.m., Centennial Campus Veterans Memorial Courtyard.",
+  "guard_reserve": "yes",
+  "spouse_or_guest": "unclear",
+  "proof": [],
+  "limits": "The college's page doesn't say whether the public may attend; ask its Military & Veteran Programs office, mvp@pikespeak.edu or 719-502-4100. End time not published.",
+  "offer": "Pikes Peak State College's 11 AM wreath-laying ceremony at the Centennial Campus Veterans Memorial Courtyard, part of its Veterans Week (9-13 Nov). Free.",
+  "grade": "A",
+  "sources": [
+   {
+    "url": "https://www.pikespeak.edu/admissions/military/mvp_get-involved/veterans-day.php",
+    "publisher": "Pikes Peak State College",
+    "published": "2026",
+    "accessed": "2026-11-11"
+   },
+   {
+    "url": "https://gazette.com/2026/11/10/veterans-day-events-scheduled-across-colorado-springs-area/",
+    "publisher": "The Gazette",
+    "published": "2026-11-10",
+    "accessed": "2026-11-11"
+   }
+  ],
+  "notes": "The college's own page is titled its 2026 Veterans Day Celebration (read 11 Nov 2026); it also runs a Field of Flags at every campus, 6-16 Nov. The Gazette (10 Nov 2026) lists the same ceremony. The pin is the campus address (Census geocoder); the courtyard's exact spot wasn't found. The noon end is an assumption."
+ },
+ {
+  "name": "Texas T-Bone Steakhouse and Famous Dave's BBQ",
+  "kind": "business",
+  "address": "5245 N Academy Blvd, Colorado Springs, CO 80918",
+  "phone": "(719) 434-4771",
+  "geo": "38.906483,-104.780090",
+  "wednesday_hours": "11:00-21:00",
+  "status_2026": "confirmed",
+  "est_value_usd": 12,
+  "dates": "2026-11-11",
+  "hours_local": "11:00-21:00",
+  "mode": "dine_in",
+  "eligible": [
+   "active",
+   "guard_reserve",
+   "retired"
+  ],
+  "eligibility_quote": "Free Georgia Chopped Pork Sandwich for military on Nov. 11; show identification (FOX21, 9 Nov 2026).",
+  "guard_reserve": "unclear",
+  "spouse_or_guest": "no",
+  "proof": [
+   "military_id"
+  ],
+  "limits": "FOX21's page was blocked here, so the wording is from its feed and a search excerpt: active-duty, inactive and retired military, show ID, dine-in or takeout. Which ID counts isn't stated. Hours are from OpenTable and AAA listings, not the restaurant.",
+  "offer": "A free Georgia Chopped Pork Sandwich for active-duty, inactive and retired military on 11 Nov, dine-in or takeout, with ID.",
+  "grade": "B",
+  "sources": [
+   {
+    "url": "https://www.fox21news.com/living-local/texas-t-bone-and-famous-daves-honors-veterans-with-free-food-on-nov-11/",
+    "publisher": "FOX21 News",
+    "published": "2026-11-09",
+    "accessed": "2026-11-11"
+   }
+  ],
+  "notes": "A dual-branded Texas T-Bone Steakhouse and Famous Dave's at 5245 N Academy Blvd, a local operator of the national brand (Famous Dave's ran a national Georgia Chopped Pork Sandwich offer in 2025, so this is likely the same item). Published 9 Nov 2026 per FOX21's own feed. The restaurant's own site and Facebook weren't found. Veterans who aren't retired, Guard or Reserve aren't named: call first. The value is an estimate."
+ },
+ {
+  "name": "Nana's Dim Sum & Dumplings",
+  "kind": "business",
+  "address": "1895 Democracy Point, Suite 120, Colorado Springs, CO 80921",
+  "phone": "720-908-7867",
+  "geo": "38.989610,-104.793660",
+  "wednesday_hours": "11:00-14:30, 16:00-21:30",
+  "status_2026": "confirmed",
+  "est_value_usd": 30,
+  "dates": "2026-11-11",
+  "hours_local": "11:00-14:30",
+  "mode": "dine_in",
+  "eligible": [
+   "veteran",
+   "retired"
+  ],
+  "eligibility_quote": "inviting all veterans to enjoy a complimentary dine-in meal (FOX21)",
+  "guard_reserve": "unclear",
+  "spouse_or_guest": "no",
+  "proof": [
+   "military_id",
+   "va_card",
+   "dl_veteran",
+   "dd214"
+  ],
+  "participating_locations_only": true,
+  "limits": "Dine-in only, up to $70 of food per veteran, with a military or veteran ID. Participating locations; this is its only Colorado Springs store.",
+  "offer": "A free dine-in meal for every veteran on Veterans Day, up to $70 of food each, with a military or veteran ID.",
+  "grade": "B",
+  "sources": [
+   {
+    "url": "https://www.fox21news.com/living-local/nanas-dim-sum-dumplings-offers-complimentary-meal-on-veterans-day/",
+    "publisher": "FOX21 News (Living Local)",
+    "published": "2026-11-10",
+    "accessed": "2026-11-11"
+   }
+  ],
+  "notes": "FOX21's page returns 403 to the fetch tools; the date and opening lines were read from its feed (fox21news.com/feed/?s=nana), the $70 limit and ID from a search excerpt. Suite 120 per most listings (one Gazette column says 102). Its only Springs store, in Polaris Pointe on the city's far north side (Northgate circle, added for it and for the city's north end). Pin: US Census geocoder. The planner routes the lunch window; dinner 4-9:30 PM also counts."
+ }
+]

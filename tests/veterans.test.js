@@ -200,8 +200,9 @@ test("other days and earlier-year leads are listed under Deals, off the route", 
 const AREAS = [...SCRIPTS["app.js"].matchAll(/\{ id: "([a-z-]+)", dir: "([a-z/-]+)" \}/g)].map((m) => ({ id: m[1], dir: m[2] }));
 const AREA_DATA = Object.fromEntries(AREAS.map((a) => [a.id, {
   deals: JSON.parse(read(DIR + a.dir + "deals.json")), drive: JSON.parse(read(DIR + a.dir + "drive.json")) }]));
-// Areas off Central time (Reston, 10 Nov 2026; Reno-Sparks, the first on Pacific time, 11 Nov 2026).
-const AREA_TZ = { "reston-va": "America/New_York", "reno-sparks": "America/Los_Angeles" };
+// Areas off Central time (Reston, 10 Nov 2026; Reno-Sparks, the first on Pacific time, and Colorado Springs, the first on
+// Mountain time, 11 Nov 2026).
+const AREA_TZ = { "reston-va": "America/New_York", "reno-sparks": "America/Los_Angeles", "colorado-springs": "America/Denver" };
 const kmApart = (a, b) => {
   const p = Math.PI / 180, s = Math.sin((b[0] - a[0]) * p / 2) ** 2 + Math.cos(a[0] * p) * Math.cos(b[0] * p) * Math.sin((b[1] - a[1]) * p / 2) ** 2;
   return 12742 * Math.asin(Math.sqrt(s));
@@ -253,6 +254,17 @@ test("Reno-Sparks runs on Pacific time: windows, a ceremony's arrival and the en
   for (const id of ["atlantis-lunch-buffet", "legends-bay-lb-grill"]) assert.match(by(id).advance || "", /free .*Rewards.*21/, `${id}: sign up ahead`);
   // J Resort and Gold Dust West name current and retired military, not every veteran.
   for (const id of ["j-resort-buffet", "gold-dust-west"]) assert.ok(!by(id).eligible.includes("veteran"), `${id}: not for every veteran`);
+});
+
+test("Colorado Springs runs on Mountain time: its day starts at 07:00 UTC and its windows are MST", () => {
+  const { deals } = AREA_DATA["colorado-springs"], by = (id) => deals.offers.find((o) => o.id === id);
+  assert.equal(deals.meta.day_start, "2026-11-11T07:00:00Z");
+  assert.equal(deals.meta.tz_offset_min, -420);
+  assert.equal(by("ihop").start, "2026-11-11T14:00:00Z", "IHOP's 7 AM is 14:00 UTC");
+  assert.equal(by("texas-roadhouse").start, "2026-11-11T18:00:00Z", "Texas Roadhouse's 11 AM is 18:00 UTC");
+  assert.equal(by("texas-roadhouse").end, "2026-11-11T21:00:00Z", "and 2 PM is 21:00 UTC");
+  // Monument, Palmer Lake and Falcon are in the area, so their aliases open it.
+  for (const k of ["springs", "cos", "monument", "falcon", "fort-carson", "peterson", "usafa"]) assert.match(SCRIPTS["app.js"], new RegExp(`"${k}": "colorado-springs"`), k);
 });
 
 test("every other area: each offer has a store, each store an offer, inside the area's circles and the day", () => {

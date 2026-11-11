@@ -1,0 +1,2121 @@
+{
+ "7 Brew": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (7_brew_us): 0 in the area; OpenStreetMap: 1 in the area",
+  "stores": [
+   {
+    "address": "3806 Maizeland Road, Colorado Springs, CO 80909",
+    "status": "unverified",
+    "wed_hours": "",
+    "phone": "+1-719-937-7450",
+    "url": "https://7brew.com/location/colorado-colorado-springs-000226",
+    "osm_id": "way/1315438243",
+    "geo": "38.868153,-104.756681",
+    "source": "OpenStreetMap"
+   }
+  ]
+ },
+ "Applebee's": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (applebees): 2 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "3708 East Galley, Colorado Springs, CO 80909",
+    "status": "confirmed",
+    "wed_hours": "11:00-24:00",
+    "phone": "+1 719-574-5111",
+    "url": "https://restaurants.applebees.com/en-us/co/coloradosprings/3708-east-galley-84053",
+    "geo": "38.847480,-104.759194",
+    "source": "All the Places 2026-10-31: applebees"
+   },
+   {
+    "address": "7625 Goddard Street, Colorado Springs, CO 80920",
+    "status": "confirmed",
+    "wed_hours": "11:00-24:00",
+    "phone": "+1 719-535-2799",
+    "url": "https://restaurants.applebees.com/en-us/co/coloradosprings/7625-goddard-street-84047",
+    "geo": "38.941272,-104.799834",
+    "source": "All the Places 2026-10-31: applebees"
+   }
+  ]
+ },
+ "Biggby Coffee": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (biggby_coffee_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Blaze Pizza": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-24 (blaze_pizza): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Bob Evans": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (bob_evans_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Buca di Beppo": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (buca_di_beppo_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Buffalo Wild Wings": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (buffalo_wild_wings_us): 4 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "3005 New Center Point, Colorado Springs, CO 80922",
+    "status": "confirmed",
+    "wed_hours": "11:00-23:45",
+    "phone": "+1 719-249-2300",
+    "url": "",
+    "geo": "38.875355,-104.719161",
+    "source": "All the Places 2026-10-31: buffalo_wild_wings_us"
+   },
+   {
+    "address": "373 E FILLMORE ST, Colorado Springs, CO 80907",
+    "status": "confirmed",
+    "wed_hours": "10:30-23:45",
+    "phone": "+1 719-465-0106",
+    "url": "",
+    "geo": "38.873823,-104.815320",
+    "source": "All the Places 2026-10-31: buffalo_wild_wings_us"
+   },
+   {
+    "address": "2905 Geyser Drive, Colorado Springs, CO 80906",
+    "status": "confirmed",
+    "wed_hours": "11:00-00:45",
+    "phone": "+1 719-219-1500",
+    "url": "",
+    "geo": "38.790727,-104.796296",
+    "source": "All the Places 2026-10-31: buffalo_wild_wings_us"
+   },
+   {
+    "address": "7425 North Academy Blvd., Colorado Springs, CO 80920",
+    "status": "confirmed",
+    "wed_hours": "11:00-23:45",
+    "phone": "+1 719-594-9464",
+    "url": "",
+    "geo": "38.938004,-104.797025",
+    "source": "All the Places 2026-10-31: buffalo_wild_wings_us"
+   }
+  ]
+ },
+ "Caribou Coffee": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (caribou_coffee_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Casey's": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Charleys Cheesesteaks": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-17 (charleys_philly_steaks): 3 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "1030 E Stewart Ave, Peterson AFB, CO 80914",
+    "status": "confirmed",
+    "wed_hours": "10:30-18:00",
+    "phone": "+1 719-325-5151",
+    "url": "https://www.charleys.com/locations/peterson-afb/",
+    "geo": "38.812720,-104.678753",
+    "source": "All the Places 2026-10-17: charleys_philly_steaks"
+   },
+   {
+    "address": "6110 Martinez St, Fort Carson, CO 80913",
+    "status": "confirmed",
+    "wed_hours": "11:00-19:00",
+    "phone": "+1 719-576-5661",
+    "url": "https://www.charleys.com/locations/menu-fortcarson/",
+    "geo": "38.737479,-104.795489",
+    "source": "All the Places 2026-10-17: charleys_philly_steaks"
+   },
+   {
+    "address": "Fort Carson Charley's 6110 Martinez St, Fort Carson, CO 80913",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "+1 719-576-5661",
+    "url": "https://www.charleys.com/locations/fort-carson/",
+    "geo": "38.737500,-104.795000",
+    "source": "All the Places 2026-10-17: charleys_philly_steaks"
+   }
+  ]
+ },
+ "Chili's": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (chilis): 3 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "1706 E Cheyenne Mountain Blvd, Colorado Springs, CO 80906",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "+1 719-576-0440",
+    "url": "https://www.chilis.com/locations/us/colorado/colorado-springs/s-colorado-springs",
+    "geo": "38.795044,-104.802046",
+    "source": "All the Places 2026-10-31: chilis"
+   },
+   {
+    "address": "5807 N Academy Blvd., Colorado Springs, CO 80918",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "+1 719-260-1788",
+    "url": "https://www.chilis.com/locations/us/colorado/colorado-springs/colorado-springs",
+    "geo": "38.915278,-104.786789",
+    "source": "All the Places 2026-10-31: chilis"
+   },
+   {
+    "address": "2890 New Center Pt, Colorado Springs, CO 80922",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "+1 719-638-6200",
+    "url": "https://www.chilis.com/locations/us/colorado/colorado-springs/powers",
+    "geo": "38.872687,-104.719031",
+    "source": "All the Places 2026-10-31: chilis"
+   }
+  ]
+ },
+ "Chipotle": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (chipotle): 10 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "7565 Falcon Market Pl, Falcon, CO 80831",
+    "status": "confirmed",
+    "wed_hours": "10:45-22:00",
+    "phone": "+1 719-719-2087",
+    "url": "https://locations.chipotle.com/co/falcon/7565-falcon-market-pl",
+    "geo": "38.941898,-104.608460",
+    "source": "All the Places 2026-10-31: chipotle"
+   },
+   {
+    "address": "7351 Central Rail Point, Colorado Springs, CO 80915",
+    "status": "confirmed",
+    "wed_hours": "10:45-22:00",
+    "phone": "+1 719-357-4574",
+    "url": "https://locations.chipotle.com/co/colorado-springs/7351-central-rail-point",
+    "geo": "38.842792,-104.693148",
+    "source": "All the Places 2026-10-31: chipotle"
+   },
+   {
+    "address": "2130 Southgate Rd, Colorado Springs, CO 80906",
+    "status": "confirmed",
+    "wed_hours": "10:45-23:00",
+    "phone": "+1 719-634-7199",
+    "url": "https://locations.chipotle.com/co/colorado-springs/2130-southgate-rd",
+    "geo": "38.801807,-104.819145",
+    "source": "All the Places 2026-10-31: chipotle"
+   },
+   {
+    "address": "3026 New Center Pt, Colorado Springs, CO 80922",
+    "status": "confirmed",
+    "wed_hours": "10:45-23:00",
+    "phone": "+1 719-572-6699",
+    "url": "https://locations.chipotle.com/co/colorado-springs/3026-new-center-pt",
+    "geo": "38.877091,-104.718772",
+    "source": "All the Places 2026-10-31: chipotle"
+   },
+   {
+    "address": "895 N Academy Blvd, Colorado Springs, CO 80909",
+    "status": "confirmed",
+    "wed_hours": "10:45-23:00",
+    "phone": "+1 719-572-1727",
+    "url": "https://locations.chipotle.com/co/colorado-springs/895-n-academy-blvd",
+    "geo": "38.845449,-104.756573",
+    "source": "All the Places 2026-10-31: chipotle"
+   },
+   {
+    "address": "5102 N Nevada Ave, Colorado Springs, CO 80918",
+    "status": "confirmed",
+    "wed_hours": "10:45-22:00",
+    "phone": "+1 719-219-0509",
+    "url": "https://locations.chipotle.com/co/colorado-springs/5102-n-nevada-ave",
+    "geo": "38.902533,-104.818107",
+    "source": "All the Places 2026-10-31: chipotle"
+   },
+   {
+    "address": "7818 N Academy Blvd, Colorado Springs, CO 80920",
+    "status": "confirmed",
+    "wed_hours": "10:45-23:00",
+    "phone": "+1 719-531-6800",
+    "url": "https://locations.chipotle.com/co/colorado-springs/7818-n-academy-blvd",
+    "geo": "38.946364,-104.802298",
+    "source": "All the Places 2026-10-31: chipotle"
+   },
+   {
+    "address": "17 S Tejon St, Colorado Springs, CO 80903",
+    "status": "confirmed",
+    "wed_hours": "10:00-21:00",
+    "phone": "+1 719-632-4311",
+    "url": "https://locations.chipotle.com/co/colorado-springs/17-s-tejon-st",
+    "geo": "38.833101,-104.823101",
+    "source": "All the Places 2026-10-31: chipotle"
+   },
+   {
+    "address": "5079 N Academy Blvd, Colorado Springs, CO 80918",
+    "status": "confirmed",
+    "wed_hours": "10:45-23:00",
+    "phone": "+1 719-532-0900",
+    "url": "https://locations.chipotle.com/co/colorado-springs/5079-n-academy-blvd",
+    "geo": "38.904332,-104.774169",
+    "source": "All the Places 2026-10-31: chipotle"
+   },
+   {
+    "address": "1370 Garden Of The Gods Rd, Colorado Springs, CO 80907",
+    "status": "confirmed",
+    "wed_hours": "10:45-22:00",
+    "phone": "+1 719-264-9749",
+    "url": "https://locations.chipotle.com/co/colorado-springs/1370-garden-of-the-gods-rd",
+    "geo": "38.897057,-104.852643",
+    "source": "All the Places 2026-10-31: chipotle"
+   }
+  ]
+ },
+ "Circle K / Holiday": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (circle_k): 26 in the area; OpenStreetMap: 3 in the area",
+  "stores": [
+   {
+    "address": "3211 Centennial Blvd, Colorado Springs, CO 80907",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 719-755-0896",
+    "url": "",
+    "geo": "38.876900,-104.846030",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "435 W Garden Of The Gods Rd, Colorado Springs, CO 80907",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 719-594-0090",
+    "url": "",
+    "geo": "38.896428,-104.827873",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "6560 S Academy Blvd, Colorado Springs, CO 80906",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 719-538-0681",
+    "url": "",
+    "geo": "38.767599,-104.816509",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "120 S Rockrimmon Blvd, Colorado Springs, CO 80919",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 719-535-0351",
+    "url": "",
+    "geo": "38.915008,-104.826199",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "7055 Commerce Center Dr, Colorado Springs, CO 80919",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 719-590-6683",
+    "url": "",
+    "geo": "38.933358,-104.814670",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "1204 E Pikes Peak Ave, Colorado Springs, CO 80909",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 719-471-1943",
+    "url": "",
+    "geo": "38.833641,-104.803355",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "2890 S Circle Dr, Colorado Springs, CO 80906",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 719-576-7604",
+    "url": "",
+    "geo": "38.796701,-104.796007",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "1949 E Fountain Blvd, Colorado Springs, CO 80910",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 719-755-0956",
+    "url": "",
+    "geo": "38.816740,-104.791530",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "7805 N Academy Blvd, Colorado Springs, CO 80920",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 719-522-9674",
+    "url": "",
+    "geo": "38.944968,-104.799931",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "1715 Monterey Rd, Colorado Springs, CO 80910",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 719-755-0953",
+    "url": "",
+    "geo": "38.805738,-104.779290",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "3290 Austin Bluffs Pkwy, Colorado Springs, CO 80918",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 719-590-1442",
+    "url": "",
+    "geo": "38.890910,-104.767132",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "1225 Academy Park Loop, Colorado Springs, CO 80910",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 719-596-6898",
+    "url": "",
+    "geo": "38.815312,-104.760526",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "210 N Academy Blvd, Colorado Springs, CO 80909",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 719-380-1521",
+    "url": "",
+    "geo": "38.835378,-104.757954",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "3770 Citadel Dr N, Colorado Springs, CO 80909",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 719-530-7159",
+    "url": "",
+    "geo": "38.846250,-104.758080",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "3464 Research Pkwy, Colorado Springs, CO 80920",
+    "status": "confirmed",
+    "wed_hours": "05:00-23:00",
+    "phone": "+1 719-282-6278",
+    "url": "",
+    "geo": "38.957324,-104.766908",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "1740 Jet Wing Dr, Colorado Springs, CO 80916",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 719-597-4428",
+    "url": "",
+    "geo": "38.808430,-104.742010",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "1801 Main St, Colorado Springs, CO 80911",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 719-390-3344",
+    "url": "",
+    "geo": "38.766823,-104.738832",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "4805 Barnes Rd, Colorado Springs, CO 80917",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 719-596-1367",
+    "url": "",
+    "geo": "38.896599,-104.737868",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "1120 Aeroplaza Dr, Colorado Springs, CO 80916",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 719-755-0996",
+    "url": "",
+    "geo": "38.817000,-104.731220",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "7480 Austin Bluffs Pkwy, Colorado Springs, CO 80923",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 719-266-9163",
+    "url": "",
+    "geo": "38.939199,-104.740419",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "5553 Austin Bluffs Pkwy, Colorado Springs, CO 80918",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 719-260-9524",
+    "url": "",
+    "geo": "38.915528,-104.733611",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "5670 Palmer Park Blvd, Colorado Springs, CO 80915",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 719-572-1006",
+    "url": "",
+    "geo": "38.857570,-104.722736",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "5885 Constitution Ave, Colorado Springs, CO 80915",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 719-638-6823",
+    "url": "",
+    "geo": "38.871565,-104.718356",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "6135 N Carefree Cir, Colorado Springs, CO 80922",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 719-574-0555",
+    "url": "",
+    "geo": "38.885323,-104.712243",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "613 Meadowbrook Pkwy, Colorado Springs, CO 80915",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 719-573-0576",
+    "url": "",
+    "geo": "38.844275,-104.691307",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "6970 Meridian Sol Dr, Peyton, CO 80831",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 719-495-3945",
+    "url": "",
+    "geo": "38.931570,-104.609800",
+    "source": "All the Places 2026-10-31: circle_k"
+   },
+   {
+    "address": "2455 Arlington Drive, Colorado Springs, 80910",
+    "status": "unverified",
+    "wed_hours": "",
+    "phone": "",
+    "url": "",
+    "osm_id": "way/191650940",
+    "geo": "38.808003,-104.779438",
+    "source": "OpenStreetMap"
+   },
+   {
+    "address": "4314 East Fountain Boulevard, Colorado Springs, 80916",
+    "status": "unverified",
+    "wed_hours": "",
+    "phone": "",
+    "url": "",
+    "osm_id": "way/200129157",
+    "geo": "38.812173,-104.747638",
+    "source": "OpenStreetMap"
+   },
+   {
+    "address": "2715 West Colorado Avenue, Colorado Springs, CO 80904",
+    "status": "unverified",
+    "wed_hours": "",
+    "phone": "",
+    "url": "https://www.circlek.com/store-locator/US/colorado-springs/2715-w-colorado-ave/2740675",
+    "osm_id": "way/799236105",
+    "geo": "38.849229,-104.866651",
+    "source": "OpenStreetMap"
+   }
+  ]
+ },
+ "Cracker Barrel": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "OpenStreetMap: 1 in the area",
+  "stores": [
+   {
+    "address": "8355 Razorback Road, Colorado Springs, CO 80920",
+    "status": "unverified",
+    "wed_hours": "07:00-21:00",
+    "phone": "+1-719-260-7721",
+    "url": "https://www.crackerbarrel.com/Locations/States/co/colorado-springs/227",
+    "osm_id": "way/208620629",
+    "geo": "38.951320,-104.803077",
+    "source": "OpenStreetMap"
+   }
+  ]
+ },
+ "Dave & Buster's": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (dave_and_busters): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "9279 Highland Ridge Heights, Colorado Springs, CO 80920",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "+1 719-418-8911",
+    "url": "https://www.daveandbusters.com/us/en/about/locations/colorado-springs",
+    "geo": "38.965240,-104.788628",
+    "source": "All the Places 2026-10-31: dave_and_busters"
+   }
+  ]
+ },
+ "Denny's": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (dennys_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Dunkin'": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (dunkin_us): 9 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "8035 Meridian Park Drive, Peyton, CO 80831",
+    "status": "confirmed",
+    "wed_hours": "05:00-18:45",
+    "phone": "+1 719-257-7975",
+    "url": "https://www.dunkindonuts.com/locations/us/co/peyton/8035-meridian-park-drive/store-363940/",
+    "geo": "38.948889,-104.608410",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "980 O'Connell Blvd, Fort Carson, CO 80913",
+    "status": "confirmed",
+    "wed_hours": "06:00-12:45",
+    "phone": "+1 719-785-4823",
+    "url": "https://www.dunkindonuts.com/locations/us/co/fort-carson/980-o'connell-blvd/store-356358/",
+    "geo": "38.754180,-104.787150",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "5940 Ellis St, Fort Carson, CO 80913",
+    "status": "confirmed",
+    "wed_hours": "06:00-16:45",
+    "phone": "+1 719-800-5055",
+    "url": "https://www.dunkindonuts.com/locations/us/co/fort-carson/5940-ellis-st/store-355505/",
+    "geo": "38.745600,-104.801509",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "4425 Buckingham Drive, Colorado Springs, CO 80907",
+    "status": "confirmed",
+    "wed_hours": "04:00-18:45",
+    "phone": "+1 719-895-4296",
+    "url": "https://www.dunkindonuts.com/locations/us/co/colorado-springs/4425-buckingham-drive/store-363939/",
+    "geo": "38.896322,-104.847225",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "106 East Fillmore Street, Colorado Springs, CO 80907",
+    "status": "confirmed",
+    "wed_hours": "04:00-18:45",
+    "phone": "+1 719-985-3408",
+    "url": "https://www.dunkindonuts.com/locations/us/co/colorado-springs/106-east-fillmore-street/store-363586/",
+    "geo": "38.874608,-104.820684",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "2905 Hancock Expy, Colorado Springs, CO 80916",
+    "status": "confirmed",
+    "wed_hours": "04:00-18:45",
+    "phone": "+1 719-666-6720",
+    "url": "https://www.dunkindonuts.com/locations/us/co/colorado-springs/2905-hancock-expy/store-359575/",
+    "geo": "38.789431,-104.755896",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "1609 S Nevada Ave, Colorado Springs, CO 80905",
+    "status": "confirmed",
+    "wed_hours": "04:00-18:45",
+    "phone": "+1 719-247-1332",
+    "url": "https://www.dunkindonuts.com/locations/us/co/colorado-springs/1609-s-nevada-ave/store-357831/",
+    "geo": "38.811043,-104.821966",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "3230 Austin Bluffs Pkwy, Colorado Springs, CO 80918",
+    "status": "confirmed",
+    "wed_hours": "04:00-18:45",
+    "phone": "+1 719-344-9835",
+    "url": "https://www.dunkindonuts.com/locations/us/co/colorado-springs/3230-austin-bluffs-pkwy/store-353090/",
+    "geo": "38.890791,-104.767797",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   },
+   {
+    "address": "201 N. Circle Dr, Colorado Springs, CO 80909",
+    "status": "confirmed",
+    "wed_hours": "04:00-18:45",
+    "phone": "+1 719-634-7877",
+    "url": "https://www.dunkindonuts.com/locations/us/co/colorado-springs/201-n--circle-dr/store-300744/",
+    "geo": "38.836053,-104.775533",
+    "source": "All the Places 2026-10-31: dunkin_us"
+   }
+  ]
+ },
+ "Famous Dave's": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (famous_daves_us): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "5245 N Academy Blvd, Colorado Springs, CO 80918",
+    "status": "confirmed",
+    "wed_hours": "11:00-21:00",
+    "phone": "+1 719-434-4771",
+    "url": "https://www.famousdaves.com/Locations/colorado-springs",
+    "geo": "38.907361,-104.779500",
+    "source": "All the Places 2026-10-31: famous_daves_us"
+   }
+  ]
+ },
+ "Fazoli's": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (fazolis_us): 2 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "3607 Austin Bluffs Parkway, Colorado Springs, CO 80918",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "+1 719-535-0369",
+    "url": "https://fazolis.com/stores/co-colorado-springs-3607-austin-bluffs-parkway-80918/",
+    "geo": "38.890431,-104.760670",
+    "source": "All the Places 2026-10-31: fazolis_us"
+   },
+   {
+    "address": "1790 East Cheyenne Mountain Boulevard, Colorado Springs, CO 80906",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "+1 719-579-7522",
+    "url": "https://fazolis.com/stores/co-colorado-springs-1790-east-cheyenne-mountain-boulevard-80906/",
+    "geo": "38.795077,-104.802798",
+    "source": "All the Places 2026-10-31: fazolis_us"
+   }
+  ]
+ },
+ "Firehouse Subs": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (firehouse_subs): 3 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "7875 Silicon Heights, Colorado Springs, CO 80922",
+    "status": "confirmed",
+    "wed_hours": "10:00-21:00",
+    "phone": "+1 719-500-8999",
+    "url": "https://www.firehousesubs.com/store-locator/store/05346db8-e4eb-4d9a-a1fd-5fa7100c9248",
+    "geo": "38.868921,-104.682014",
+    "source": "All the Places 2026-10-31: firehouse_subs"
+   },
+   {
+    "address": "11694 Bent Grass Mkt Vw, Ste 100, Peyton, CO 80831",
+    "status": "confirmed",
+    "wed_hours": "10:00-21:00",
+    "phone": "+1 719-358-5187",
+    "url": "https://www.firehousesubs.com/store-locator/store/256fdcb9-8340-4607-b573-76bd7dfe1318",
+    "geo": "38.949471,-104.609642",
+    "source": "All the Places 2026-10-31: firehouse_subs"
+   },
+   {
+    "address": "7543 N. Academy Blvd., Colorado Springs, CO 80920",
+    "status": "confirmed",
+    "wed_hours": "10:00-21:00",
+    "phone": "+1 719-500-8998",
+    "url": "https://www.firehousesubs.com/store-locator/store/YovCMfxpB1oQyjVdBmfZsR",
+    "geo": "38.940107,-104.798110",
+    "source": "All the Places 2026-10-31: firehouse_subs"
+   }
+  ]
+ },
+ "Freddy's Frozen Custard & Steakburgers": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (freddys_us): 4 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "15778 Jackson Creek Pkwy, Monument, CO 80132",
+    "status": "confirmed",
+    "wed_hours": "10:30-22:00",
+    "phone": "+1 719-488-5918",
+    "url": "https://www.freddys.com/location/monument-co",
+    "geo": "39.063323,-104.849065",
+    "source": "All the Places 2026-10-31: freddys_us"
+   },
+   {
+    "address": "4445 Venetucci Blvd., Colorado Springs, CO 80906",
+    "status": "confirmed",
+    "wed_hours": "10:30-22:00",
+    "phone": "+1 719-576-3368",
+    "url": "https://www.freddys.com/location/co-springs-fountain-venetucci-s-academy-co",
+    "geo": "38.768344,-104.784228",
+    "source": "All the Places 2026-10-31: freddys_us"
+   },
+   {
+    "address": "7578 Silicon Heights, Colorado Springs, CO 80939",
+    "status": "confirmed",
+    "wed_hours": "10:30-22:00",
+    "phone": "+1 719-645-8863",
+    "url": "https://www.freddys.com/location/sandhill",
+    "geo": "38.868427,-104.679053",
+    "source": "All the Places 2026-10-31: freddys_us"
+   },
+   {
+    "address": "7575 Falcon Marketplace, Falcon, CO 80831",
+    "status": "confirmed",
+    "wed_hours": "10:30-22:00",
+    "phone": "+1 719-698-2012",
+    "url": "https://www.freddys.com/location/falcon",
+    "geo": "38.942404,-104.608593",
+    "source": "All the Places 2026-10-31: freddys_us"
+   }
+  ]
+ },
+ "Granite City Food & Brewery": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Great Clips": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (great_clips): 10 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "11605 Meridian Market View, Falcon, CO 80831",
+    "status": "confirmed",
+    "wed_hours": "09:00-19:00",
+    "phone": "+1 719-886-4300",
+    "url": "https://salons.greatclips.com/us/co/falcon/11605-meridian-market-view",
+    "geo": "38.938746,-104.609967",
+    "source": "All the Places 2026-10-31: great_clips"
+   },
+   {
+    "address": "6957 Austin Bluffs Pkwy, Colorado Springs, CO 80923",
+    "status": "confirmed",
+    "wed_hours": "09:00-19:00",
+    "phone": "+1 719-599-3663",
+    "url": "https://salons.greatclips.com/us/co/colorado-springs/6957-austin-bluffs-pkwy",
+    "geo": "38.932793,-104.740685",
+    "source": "All the Places 2026-10-31: great_clips"
+   },
+   {
+    "address": "2850 S Academy Blvd, Colorado Springs, CO 80916",
+    "status": "confirmed",
+    "wed_hours": "09:00-19:00",
+    "phone": "+1 719-630-1940",
+    "url": "https://salons.greatclips.com/us/co/colorado-springs/2850-s-academy-blvd",
+    "geo": "38.791153,-104.760143",
+    "source": "All the Places 2026-10-31: great_clips"
+   },
+   {
+    "address": "8838 N Union Blvd, Colorado Springs, CO 80920",
+    "status": "confirmed",
+    "wed_hours": "09:00-19:00",
+    "phone": "+1 719-282-6002",
+    "url": "https://salons.greatclips.com/us/co/colorado-springs/8838-n-union-blvd",
+    "geo": "38.959604,-104.765929",
+    "source": "All the Places 2026-10-31: great_clips"
+   },
+   {
+    "address": "6554 S Academy Blvd, Colorado Springs, CO 80906",
+    "status": "confirmed",
+    "wed_hours": "09:00-19:00",
+    "phone": "+1 719-576-2222",
+    "url": "https://salons.greatclips.com/us/co/colorado-springs/6554-s-academy-blvd",
+    "geo": "38.766816,-104.816201",
+    "source": "All the Places 2026-10-31: great_clips"
+   },
+   {
+    "address": "815 Village Center Dr, Colorado Springs, CO 80919",
+    "status": "confirmed",
+    "wed_hours": "09:00-19:00",
+    "phone": "+1 719-593-9500",
+    "url": "https://salons.greatclips.com/us/co/colorado-springs/815-village-center-dr",
+    "geo": "38.923140,-104.843511",
+    "source": "All the Places 2026-10-31: great_clips"
+   },
+   {
+    "address": "2880 N Powers Blvd, Colorado Springs, CO 80922",
+    "status": "confirmed",
+    "wed_hours": "09:00-19:00",
+    "phone": "+1 719-573-6666",
+    "url": "https://salons.greatclips.com/us/co/colorado-springs/2880-n-powers-blvd",
+    "geo": "38.873344,-104.722208",
+    "source": "All the Places 2026-10-31: great_clips"
+   },
+   {
+    "address": "1734 W Uintah St, Colorado Springs, CO 80904",
+    "status": "confirmed",
+    "wed_hours": "09:00-19:00",
+    "phone": "+1 719-577-4064",
+    "url": "https://salons.greatclips.com/us/co/colorado-springs/1734-w-uintah-st",
+    "geo": "38.848298,-104.847313",
+    "source": "All the Places 2026-10-31: great_clips"
+   },
+   {
+    "address": "3624 Austin Bluffs Pkwy, Colorado Springs, CO 80918",
+    "status": "confirmed",
+    "wed_hours": "09:00-19:00",
+    "phone": "+1 719-528-5822",
+    "url": "https://salons.greatclips.com/us/co/colorado-springs/3624-austin-bluffs-pkwy",
+    "geo": "38.892747,-104.760780",
+    "source": "All the Places 2026-10-31: great_clips"
+   },
+   {
+    "address": "7935 Constitution Ave, Colorado Springs, CO 80951",
+    "status": "confirmed",
+    "wed_hours": "09:00-19:00",
+    "phone": "+1 719-559-4600",
+    "url": "https://salons.greatclips.com/us/co/colorado-springs/7935-constitution-ave",
+    "geo": "38.867106,-104.678510",
+    "source": "All the Places 2026-10-31: great_clips"
+   }
+  ]
+ },
+ "Hooters": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (hooters): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "IHOP": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (ihop): 5 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "6005 Constitution Ave, Colorado Springs, CO 80915",
+    "status": "confirmed",
+    "wed_hours": "06:00-22:00",
+    "phone": "+1 719-574-7777",
+    "url": "https://restaurants.ihop.com/co/coloradosprings/breakfast-6005-constitution-ave-3500",
+    "geo": "38.870893,-104.716627",
+    "source": "All the Places 2026-10-31: ihop"
+   },
+   {
+    "address": "512 N Chelton Rd, Colorado Springs, CO 80909",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 719-632-5098",
+    "url": "https://restaurants.ihop.com/co/coloradosprings/breakfast-512-n-chelton-rd-1811",
+    "geo": "38.840565,-104.766964",
+    "source": "All the Places 2026-10-31: ihop"
+   },
+   {
+    "address": "2290 Southgate Rd, Colorado Springs, CO 80906",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 719-635-0777",
+    "url": "https://restaurants.ihop.com/co/coloradosprings/breakfast-2290-southgate-rd-1827",
+    "geo": "38.798521,-104.818115",
+    "source": "All the Places 2026-10-31: ihop"
+   },
+   {
+    "address": "8065 N Academy Blvd, Colorado Springs, CO 80920",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 719-264-0469",
+    "url": "https://restaurants.ihop.com/co/coloradosprings/breakfast-8065-n-academy-blvd-1820",
+    "geo": "38.948239,-104.802646",
+    "source": "All the Places 2026-10-31: ihop"
+   },
+   {
+    "address": "3090 N. Chestnut St, Colorado Springs, CO 80907",
+    "status": "confirmed",
+    "wed_hours": "00:00-24:00",
+    "phone": "+1 719-632-2404",
+    "url": "https://restaurants.ihop.com/co/coloradosprings/breakfast-3090-n.-chestnut-st-3574",
+    "geo": "38.876799,-104.837760",
+    "source": "All the Places 2026-10-31: ihop"
+   }
+  ]
+ },
+ "Insomnia Cookies": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (insomnia_cookies): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "4239 N Nevada Avenue Ste 113, Colorado Springs, CO 80907",
+    "status": "confirmed",
+    "wed_hours": "11:00-01:00",
+    "phone": "+1 719-455-2077",
+    "url": "",
+    "geo": "38.893315,-104.818262",
+    "source": "All the Places 2026-10-31: insomnia_cookies"
+   }
+  ]
+ },
+ "Jiffy Lube": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (jiffy_lube_us): 10 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "4470 CENTENNIAL BLVD, COLORADO SPRINGS, CO 80907",
+    "status": "confirmed",
+    "wed_hours": "07:30-19:00",
+    "phone": "+1 719-212-2563",
+    "url": "https://www.jiffylube.com/locations/co/colorado-springs/2767",
+    "geo": "38.896264,-104.851536",
+    "source": "All the Places 2026-10-31: jiffy_lube_us"
+   },
+   {
+    "address": "3003 N NEVADA AVE, COLORADO SPRINGS, CO 80907",
+    "status": "confirmed",
+    "wed_hours": "07:30-19:00",
+    "phone": "+1 719-849-6689",
+    "url": "https://www.jiffylube.com/locations/co/colorado-springs/2475",
+    "geo": "38.874619,-104.819103",
+    "source": "All the Places 2026-10-31: jiffy_lube_us"
+   },
+   {
+    "address": "1540 BRIARGATE BLVD, COLORADO SPRINGS, CO 80920",
+    "status": "confirmed",
+    "wed_hours": "07:30-19:00",
+    "phone": "+1 719-414-7409",
+    "url": "https://www.jiffylube.com/locations/co/colorado-springs/459",
+    "geo": "38.945852,-104.799579",
+    "source": "All the Places 2026-10-31: jiffy_lube_us"
+   },
+   {
+    "address": "201 S NEVADA AVE, COLORADO SPRINGS, CO 80903",
+    "status": "confirmed",
+    "wed_hours": "07:30-19:00",
+    "phone": "+1 719-628-7617",
+    "url": "https://www.jiffylube.com/locations/co/colorado-springs/2470",
+    "geo": "38.829971,-104.821032",
+    "source": "All the Places 2026-10-31: jiffy_lube_us"
+   },
+   {
+    "address": "4075 N ACADEMY BLVD, COLORADO SPRINGS, CO 80918",
+    "status": "confirmed",
+    "wed_hours": "07:30-18:00",
+    "phone": "+1 719-417-9339",
+    "url": "https://www.jiffylube.com/locations/co/colorado-springs/242",
+    "geo": "38.891440,-104.756232",
+    "source": "All the Places 2026-10-31: jiffy_lube_us"
+   },
+   {
+    "address": "1005 N ACADEMY BLVD, COLORADO SPRINGS, CO 80909",
+    "status": "confirmed",
+    "wed_hours": "07:30-18:00",
+    "phone": "+1 719-427-5479",
+    "url": "https://www.jiffylube.com/locations/co/colorado-springs/2472",
+    "geo": "38.847788,-104.756934",
+    "source": "All the Places 2026-10-31: jiffy_lube_us"
+   },
+   {
+    "address": "2310 S ACADEMY BLVD, COLORADO SPRINGS, CO 80916",
+    "status": "confirmed",
+    "wed_hours": "07:30-19:00",
+    "phone": "+1 719-631-2033",
+    "url": "https://www.jiffylube.com/locations/co/colorado-springs/2474",
+    "geo": "38.798774,-104.758026",
+    "source": "All the Places 2026-10-31: jiffy_lube_us"
+   },
+   {
+    "address": "3020 N POWERS BLVD, COLORADO SPRINGS, CO 80922",
+    "status": "confirmed",
+    "wed_hours": "07:30-19:00",
+    "phone": "+1 719-625-2349",
+    "url": "https://www.jiffylube.com/locations/co/colorado-springs/2678",
+    "geo": "38.875617,-104.720764",
+    "source": "All the Places 2026-10-31: jiffy_lube_us"
+   },
+   {
+    "address": "6630 CAMDEN BLVD, FOUNTAIN, CO 80817",
+    "status": "confirmed",
+    "wed_hours": "07:30-19:00",
+    "phone": "+1 719-427-6795",
+    "url": "https://www.jiffylube.com/locations/co/fountain/3219",
+    "geo": "38.743049,-104.737951",
+    "source": "All the Places 2026-10-31: jiffy_lube_us"
+   },
+   {
+    "address": "7535 MCLAUGHLIN RD, PEYTON, CO 80831",
+    "status": "confirmed",
+    "wed_hours": "07:30-18:00",
+    "phone": "+1 719-824-4160",
+    "url": "https://www.jiffylube.com/locations/co/peyton/3225",
+    "geo": "38.939954,-104.602166",
+    "source": "All the Places 2026-10-31: jiffy_lube_us"
+   }
+  ]
+ },
+ "Kohl's": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (kohls_us): 4 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "15866 JACKSON CREEK PKWY, MONUMENT, CO 80132",
+    "status": "confirmed",
+    "wed_hours": "09:00-20:00",
+    "phone": "+1 719-488-4531",
+    "url": "https://www.kohls.com/stores/co/monument-1064.shtml",
+    "geo": "39.063925,-104.850628",
+    "source": "All the Places 2026-10-31: kohls_us"
+   },
+   {
+    "address": "3110 N POWERS BLVD, COLORADO SPRINGS, CO 80922",
+    "status": "confirmed",
+    "wed_hours": "09:00-22:00",
+    "phone": "+1 719-637-0214",
+    "url": "https://www.kohls.com/stores/co/coloradosprings-462.shtml",
+    "geo": "38.876292,-104.722381",
+    "source": "All the Places 2026-10-31: kohls_us"
+   },
+   {
+    "address": "4910 N NEVADA AVE, COLORADO SPRINGS, CO 80918",
+    "status": "confirmed",
+    "wed_hours": "09:00-21:00",
+    "phone": "+1 719-531-5099",
+    "url": "https://www.kohls.com/stores/co/coloradosprings-1319.shtml",
+    "geo": "38.902537,-104.821203",
+    "source": "All the Places 2026-10-31: kohls_us"
+   },
+   {
+    "address": "2725 JANITELL RD, COLORADO SPRINGS, CO 80906",
+    "status": "confirmed",
+    "wed_hours": "09:00-21:00",
+    "phone": "+1 719-527-0610",
+    "url": "https://www.kohls.com/stores/co/coloradosprings-687.shtml",
+    "geo": "38.794806,-104.786553",
+    "source": "All the Places 2026-10-31: kohls_us"
+   }
+  ]
+ },
+ "Krispy Kreme": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (krispy_kreme_us): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "5790 South Carefree Circle, Colorado Springs, CO 80917",
+    "status": "confirmed",
+    "wed_hours": "05:30-22:00",
+    "phone": "+1 719-259-6543",
+    "url": "https://site.krispykreme.com/co/colorado-springs/5790-south-carefree-circle",
+    "geo": "38.877481,-104.721711",
+    "source": "All the Places 2026-10-31: krispy_kreme_us"
+   }
+  ]
+ },
+ "Kwik Trip": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (kwik_trip): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Little Caesars": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (little_caesars_us): 0 in the area (a partial list); OpenStreetMap: 4 in the area",
+  "stores": [
+   {
+    "address": "716 Cheyenne Meadows Road, Colorado Springs, CO 80906",
+    "status": "unverified",
+    "wed_hours": "",
+    "phone": "+1-719-576-3634",
+    "url": "https://littlecaesars.com/en-us/store/8693/",
+    "osm_id": "node/7128960009",
+    "geo": "38.777147,-104.814892",
+    "source": "OpenStreetMap"
+   },
+   {
+    "address": "1877 South Academy Boulevard, Colorado Springs, CO 80916",
+    "status": "unverified",
+    "wed_hours": "10:30-22:00",
+    "phone": "+1-719-380-9682",
+    "url": "https://littlecaesars.com/en-us/store/9082/",
+    "osm_id": "node/9506346808",
+    "geo": "38.805373,-104.756433",
+    "source": "OpenStreetMap"
+   },
+   {
+    "address": "4535 Austin Bluffs Parkway, Colorado Springs, 80918",
+    "status": "unverified",
+    "wed_hours": "10:30-22:00",
+    "phone": "+1 719-591-5900",
+    "url": "https://littlecaesars.com/en-us/store/7603/",
+    "osm_id": "way/191532197",
+    "geo": "38.896179,-104.748046",
+    "source": "OpenStreetMap"
+   },
+   {
+    "address": "3502 Hartsel Drive, Colorado Springs, CO 80920",
+    "status": "unverified",
+    "wed_hours": "",
+    "phone": "",
+    "url": "https://littlecaesars.com/en-us/store/7760/",
+    "osm_id": "way/798994302",
+    "geo": "38.938761,-104.762155",
+    "source": "OpenStreetMap"
+   }
+  ]
+ },
+ "Marcus Theatres": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Menchie's": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (menchies): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Mission BBQ": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Olive Garden": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "OpenStreetMap: 2 in the area",
+  "stores": [
+   {
+    "address": "7815 North Academy Boulevard, Colorado Springs, CO 80920",
+    "status": "unverified",
+    "wed_hours": "11:00-22:00",
+    "phone": "+1-719-260-6677",
+    "url": "https://www.olivegarden.com/locations/co/colorado-springs/north-colorado-springs-chapel-hills-mall/1263",
+    "osm_id": "way/208620527",
+    "geo": "38.946380,-104.800610",
+    "source": "OpenStreetMap"
+   },
+   {
+    "address": "513 North Academy Boulevard, Colorado Springs, CO 80909",
+    "status": "unverified",
+    "wed_hours": "11:00-22:00",
+    "phone": "+1-719-591-1210",
+    "url": "https://www.olivegarden.com/locations/co/colorado-springs/south-colorado-springs-citadel-crossing-mall/1247",
+    "osm_id": "way/229637770",
+    "geo": "38.841583,-104.756602",
+    "source": "OpenStreetMap"
+   }
+  ]
+ },
+ "Perkins": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (perkins_us): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "3295 East Platte Avenue, Colorado Springs, CO 80909",
+    "status": "confirmed",
+    "wed_hours": "06:00-24:00",
+    "phone": "+1 719-633-8962",
+    "url": "https://perkinsrestaurants.com/location/perkins-restaurant-bakery-fran-2654-292686",
+    "geo": "38.839238,-104.767497",
+    "source": "All the Places 2026-10-31: perkins_us"
+   }
+  ]
+ },
+ "Pilot / Flying J": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-10 (pilot_flying_j): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Pizza Ranch": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (pizza_ranch_us): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "3958 North Academy Boulevard, Colorado Springs, CO 80917",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "+1 719-413-5310",
+    "url": "https://pizzaranch.com/locations/co/colorado-springs/3958-north-academy-boulevard",
+    "geo": "38.889259,-104.759959",
+    "source": "All the Places 2026-10-31: pizza_ranch_us"
+   }
+  ]
+ },
+ "Qdoba": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (qdoba): 9 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "536 W Garden of the Gods Rd, Colorado Springs, CO 80907",
+    "status": "confirmed",
+    "wed_hours": "10:30-21:00",
+    "phone": "",
+    "url": "https://locations.qdoba.com/us/co/colorado-springs/536-w-garden-of-the-gods-rd",
+    "geo": "38.897162,-104.833608",
+    "source": "All the Places 2026-10-31: qdoba"
+   },
+   {
+    "address": "16010 Old Forest Point, Monument, CO 80132",
+    "status": "confirmed",
+    "wed_hours": "10:30-21:00",
+    "phone": "",
+    "url": "https://locations.qdoba.com/us/co/monument/16010-old-forest-point",
+    "geo": "39.066352,-104.849134",
+    "source": "All the Places 2026-10-31: qdoba"
+   },
+   {
+    "address": "1804 Prussman Blvd, Fort Carson, CO 80913",
+    "status": "confirmed",
+    "wed_hours": "07:00-20:00",
+    "phone": "",
+    "url": "https://locations.qdoba.com/us/co/fort-carson/1804-prussman-blvd",
+    "geo": "38.740251,-104.786066",
+    "source": "All the Places 2026-10-31: qdoba"
+   },
+   {
+    "address": "4451 Venetucci Blvd, Fountain, CO 80906",
+    "status": "confirmed",
+    "wed_hours": "10:30-21:00",
+    "phone": "",
+    "url": "https://locations.qdoba.com/us/co/fountain/4451-venetucci-blvd",
+    "geo": "38.767851,-104.784074",
+    "source": "All the Places 2026-10-31: qdoba"
+   },
+   {
+    "address": "3670 Austin Bluffs Pkwy, Colorado Springs, CO 80918",
+    "status": "confirmed",
+    "wed_hours": "10:30-21:00",
+    "phone": "",
+    "url": "https://locations.qdoba.com/us/co/colorado-springs/3670-austin-bluffs-pkwy",
+    "geo": "38.891138,-104.759299",
+    "source": "All the Places 2026-10-31: qdoba"
+   },
+   {
+    "address": "3709 Bloomington St, Colorado Springs, CO 80918",
+    "status": "confirmed",
+    "wed_hours": "10:30-21:00",
+    "phone": "",
+    "url": "https://locations.qdoba.com/us/co/colorado-springs/3709-bloomington-st",
+    "geo": "38.885922,-104.716474",
+    "source": "All the Places 2026-10-31: qdoba"
+   },
+   {
+    "address": "1916 Southgate Rd, Colorado Springs, CO 80906",
+    "status": "confirmed",
+    "wed_hours": "10:30-21:00",
+    "phone": "",
+    "url": "https://locations.qdoba.com/us/co/colorado-springs/1916-southgate-rd",
+    "geo": "38.804536,-104.819702",
+    "source": "All the Places 2026-10-31: qdoba"
+   },
+   {
+    "address": "1605 Briargate Pkwy, Colorado Springs, CO 80920",
+    "status": "confirmed",
+    "wed_hours": "10:30-21:00",
+    "phone": "",
+    "url": "https://locations.qdoba.com/us/co/colorado-springs/1605-briargate-pkwy",
+    "geo": "38.963832,-104.796058",
+    "source": "All the Places 2026-10-31: qdoba"
+   },
+   {
+    "address": "1420 Austin Bluffs Pkwy, Colorado Springs, CO 80918",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "",
+    "url": "https://locations.qdoba.com/us/co/colorado-springs/1420-austin-bluffs-pkwy/takeout",
+    "geo": "38.892893,-104.799189",
+    "source": "All the Places 2026-10-31: qdoba"
+   }
+  ]
+ },
+ "Red Lobster": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-17 (red_lobster_us): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "3510 New Center PT, Colorado Springs, CO 80922",
+    "status": "confirmed",
+    "wed_hours": "11:00-22:00",
+    "phone": "+1 719-596-9057",
+    "url": "https://www.redlobster.com/locations/list/co/colorado-springs/3510-new-center-pt/",
+    "geo": "38.882243,-104.718910",
+    "source": "All the Places 2026-10-17: red_lobster_us"
+   }
+  ]
+ },
+ "Ruby Tuesday": {
+  "presence": "no",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (ruby_tuesday_us): 0 in the area; OpenStreetMap: 0 in the area",
+  "stores": []
+ },
+ "Scooter's Coffee": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (scooters_coffee_us): 2 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "312 S 8th St, Colorado Springs, CO 80905",
+    "status": "confirmed",
+    "wed_hours": "05:00-20:00",
+    "phone": "+1 719-308-2923",
+    "url": "",
+    "geo": "38.830176,-104.840809",
+    "source": "All the Places 2026-10-31: scooters_coffee_us"
+   },
+   {
+    "address": "1049 Space Center Dr, Colorado Springs, CO 80915",
+    "status": "confirmed",
+    "wed_hours": "05:00-19:00",
+    "phone": "+1 719-413-6402",
+    "url": "",
+    "geo": "38.847304,-104.722444",
+    "source": "All the Places 2026-10-31: scooters_coffee_us"
+   }
+  ]
+ },
+ "Shake Shack": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-17 (shake_shack): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "7465 N. Academy Blvd, Colorado Springs, CO 80920",
+    "status": "confirmed",
+    "wed_hours": "10:00-23:00",
+    "phone": "+1 719-792-3793",
+    "url": "https://shakeshack.com/location/n-academy-blvd-co",
+    "geo": "38.939021,-104.797451",
+    "source": "All the Places 2026-10-17: shake_shack"
+   }
+  ]
+ },
+ "Sonic": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (sonic_drivein_us): 6 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "310 Main Street, Security, CO 80911",
+    "status": "confirmed",
+    "wed_hours": "08:00-23:00",
+    "phone": "+1 719-391-1466",
+    "url": "https://www.sonicdrivein.com/locations/us/co/security/310-main-street/store-2978/",
+    "geo": "38.753464,-104.741234",
+    "source": "All the Places 2026-10-31: sonic_drivein_us"
+   },
+   {
+    "address": "606 North Chelton, Colorado Springs, CO 80909",
+    "status": "confirmed",
+    "wed_hours": "07:00-24:00",
+    "phone": "+1 719-577-4844",
+    "url": "https://www.sonicdrivein.com/locations/us/co/colorado-springs/606-north-chelton/store-3251/",
+    "geo": "38.841505,-104.766940",
+    "source": "All the Places 2026-10-31: sonic_drivein_us"
+   },
+   {
+    "address": "2302 S. Academy Blvd, Colorado Springs, CO 80916",
+    "status": "confirmed",
+    "wed_hours": "07:00-01:00",
+    "phone": "+1 719-637-3272",
+    "url": "https://www.sonicdrivein.com/locations/us/co/colorado-springs/2302-s.-academy-blvd/store-3782/",
+    "geo": "38.800441,-104.758055",
+    "source": "All the Places 2026-10-31: sonic_drivein_us"
+   },
+   {
+    "address": "6065 Constitution Avenue, Colorado Springs, CO 80915",
+    "status": "confirmed",
+    "wed_hours": "06:00-01:00",
+    "phone": "+1 719-638-4508",
+    "url": "https://www.sonicdrivein.com/locations/us/co/colorado-springs/6065-constitution-avenue/store-4051/",
+    "geo": "38.870178,-104.715169",
+    "source": "All the Places 2026-10-31: sonic_drivein_us"
+   },
+   {
+    "address": "5955 N Academy Blvd., Colorado Springs, CO 80918",
+    "status": "confirmed",
+    "wed_hours": "07:00-01:00",
+    "phone": "+1 719-599-5744",
+    "url": "https://www.sonicdrivein.com/locations/us/co/colorado-springs/5955-n-academy-blvd./store-6224/",
+    "geo": "38.917676,-104.786187",
+    "source": "All the Places 2026-10-31: sonic_drivein_us"
+   },
+   {
+    "address": "7610 Midnight Road, Falcon, CO 80831",
+    "status": "confirmed",
+    "wed_hours": "07:00-24:00",
+    "phone": "+1 719-495-6771",
+    "url": "https://www.sonicdrivein.com/locations/us/co/falcon/7610-midnight-road/store-4735/",
+    "geo": "38.942460,-104.604123",
+    "source": "All the Places 2026-10-31: sonic_drivein_us"
+   }
+  ]
+ },
+ "Sport Clips": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (sport_clips_us): 6 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "16064 Jackson Creek Parkway, Monument, CO 80132",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "+1 719-488-3595",
+    "url": "https://sportclips.com/us-co-monument-co203",
+    "geo": "39.066300,-104.850330",
+    "source": "All the Places 2026-10-31: sport_clips_us"
+   },
+   {
+    "address": "7639 Mclaughlin Road, Falcon, CO 80831",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "+1 719-494-8340",
+    "url": "https://sportclips.com/us-co-falcon-co205",
+    "geo": "38.941920,-104.602520",
+    "source": "All the Places 2026-10-31: sport_clips_us"
+   },
+   {
+    "address": "3560 East Woodmen Road, Colorado Springs, CO 80920",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "+1 719-264-8444",
+    "url": "https://sportclips.com/us-co-coloradosprings-co201",
+    "geo": "38.938150,-104.760570",
+    "source": "All the Places 2026-10-31: sport_clips_us"
+   },
+   {
+    "address": "3736 Bloomington Avenue, Colorado Springs, CO 80922",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "+1 719-591-4889",
+    "url": "https://sportclips.com/us-co-coloradosprings-co202",
+    "geo": "38.886350,-104.718420",
+    "source": "All the Places 2026-10-31: sport_clips_us"
+   },
+   {
+    "address": "4108 Austin Bluffs Pkwy, Colorado Springs, CO 80918",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "+1 719-593-1340",
+    "url": "https://sportclips.com/us-co-coloradosprings-co209",
+    "geo": "38.891840,-104.755880",
+    "source": "All the Places 2026-10-31: sport_clips_us"
+   },
+   {
+    "address": "4465 Venetucci Boulevard, Colorado Springs, CO 80906",
+    "status": "confirmed",
+    "wed_hours": "",
+    "phone": "+1 719-576-3582",
+    "url": "https://sportclips.com/us-co-coloradosprings-co206",
+    "geo": "38.767250,-104.784370",
+    "source": "All the Places 2026-10-31: sport_clips_us"
+   }
+  ]
+ },
+ "Starbucks": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (starbucks_us): 21 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "541 W Highway 105, People's National Bank, Monument, CO 80132",
+    "status": "confirmed",
+    "wed_hours": "05:00-19:30",
+    "phone": "+1 719-488-8872",
+    "url": "",
+    "geo": "39.096400,-104.866060",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "1605 Briargate Parkway, The Shops at Briargate, D400, Colorado Springs, CO 80920",
+    "status": "confirmed",
+    "wed_hours": "05:00-20:30",
+    "phone": "+1 719-594-9405",
+    "url": "",
+    "geo": "38.964280,-104.795870",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "1762 Briargate Blvd, Colorado Springs, CO 80920",
+    "status": "confirmed",
+    "wed_hours": "05:00-19:30",
+    "phone": "+1 719-266-0530",
+    "url": "",
+    "geo": "38.945390,-104.793960",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "6815 N. Academy, N/A, Colorado Springs, CO 80918",
+    "status": "confirmed",
+    "wed_hours": "04:30-19:30",
+    "phone": "+1 719-260-9870",
+    "url": "",
+    "geo": "38.930700,-104.793880",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "3560 East Woodmen Rd, Woodman Plaza, #100, Colorado Springs, CO 80920",
+    "status": "confirmed",
+    "wed_hours": "04:30-20:00",
+    "phone": "+1 719-593-5967",
+    "url": "",
+    "geo": "38.938110,-104.760700",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "6905 Austin Bluffs Pkwy, Colorado Springs, CO 80923",
+    "status": "confirmed",
+    "wed_hours": "04:30-19:30",
+    "phone": "+1 719-302-5610",
+    "url": "",
+    "geo": "38.933360,-104.740520",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "4825 Academy Blvd N, Colorado Springs, CO 80918",
+    "status": "confirmed",
+    "wed_hours": "04:30-19:30",
+    "phone": "+1 719-593-1481",
+    "url": "",
+    "geo": "38.902270,-104.768680",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "3239 Centennial Boulevard, Colorado Springs, CO 80907",
+    "status": "confirmed",
+    "wed_hours": "05:00-19:30",
+    "phone": "+1 719-755-0652",
+    "url": "",
+    "geo": "38.877680,-104.846220",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "4296 Austin Bluffs Pkwy, Colorado Springs, CO 80918",
+    "status": "confirmed",
+    "wed_hours": "04:30-19:00",
+    "phone": "+1 719-265-9291",
+    "url": "",
+    "geo": "38.894310,-104.751370",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "6110 Martinez St, Fort Carson, CO 80913",
+    "status": "confirmed",
+    "wed_hours": "08:00-17:00",
+    "phone": "+1 719-576-5661",
+    "url": "",
+    "geo": "38.740360,-104.797580",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "4465 Venetucci Blvd, Suite 100, Colorado Springs, CO 80906",
+    "status": "confirmed",
+    "wed_hours": "05:00-20:00",
+    "phone": "+1 719-433-8828",
+    "url": "",
+    "geo": "38.767250,-104.784300",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "2960 South Academy Blvd., 150, Colorado Springs, CO 80916",
+    "status": "confirmed",
+    "wed_hours": "04:30-20:30",
+    "phone": "+1 719-390-6430",
+    "url": "",
+    "geo": "38.789770,-104.758620",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "735 Cheyenne Meadows Rd, Colorado Springs, CO 80906",
+    "status": "confirmed",
+    "wed_hours": "04:30-20:00",
+    "phone": "+1 719-579-0697",
+    "url": "",
+    "geo": "38.775560,-104.813610",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "1040 East Stewart Avenue, Colorado Springs, CO 80914",
+    "status": "confirmed",
+    "wed_hours": "06:30-17:30",
+    "phone": "+1 719-596-7270",
+    "url": "",
+    "geo": "38.812560,-104.678750",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "1760 E. Cheyenne Mountain Blvd., Colorado Springs, CO 80906",
+    "status": "confirmed",
+    "wed_hours": "05:00-20:30",
+    "phone": "+1 719-475-0466",
+    "url": "",
+    "geo": "38.795320,-104.802370",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "515 N Murray Blvd, Colorado Springs, CO 80915",
+    "status": "confirmed",
+    "wed_hours": "05:00-21:00",
+    "phone": "+1 719-824-2519",
+    "url": "",
+    "geo": "38.840440,-104.747640",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "405 N Union Blvd, Colorado Springs, CO 80909",
+    "status": "confirmed",
+    "wed_hours": "05:00-20:00",
+    "phone": "+1 719-367-6372",
+    "url": "",
+    "geo": "38.839010,-104.793890",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "5710 Palmer Park Blvd, Colorado Springs, CO 80915",
+    "status": "confirmed",
+    "wed_hours": "04:30-19:30",
+    "phone": "+1 719-355-9921",
+    "url": "",
+    "geo": "38.857660,-104.722120",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "2457 Marksheffel, Colorado Springs, CO 80951",
+    "status": "confirmed",
+    "wed_hours": "04:30-19:30",
+    "phone": "+1 719-638-1447",
+    "url": "",
+    "geo": "38.866860,-104.681960",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "3976 Pony Tracks Drive, Colorado Springs, CO 80922",
+    "status": "confirmed",
+    "wed_hours": "04:30-20:00",
+    "phone": "+1 719-755-0881",
+    "url": "",
+    "geo": "38.886200,-104.701900",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   },
+   {
+    "address": "170 W Fillmore St, Colorado Springs, CO 80907",
+    "status": "confirmed",
+    "wed_hours": "05:00-20:00",
+    "phone": "+1 719-433-8319",
+    "url": "",
+    "geo": "38.875230,-104.826040",
+    "source": "All the Places 2026-10-31: starbucks_us"
+   }
+  ]
+ },
+ "Target": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (target_us): 3 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "3810 Bloomington St, Colorado Springs, CO 80922",
+    "status": "confirmed",
+    "wed_hours": "07:00-23:00",
+    "phone": "+1 719-574-4351",
+    "url": "https://www.target.com/sl/store/1501",
+    "geo": "38.888207,-104.717715",
+    "source": "All the Places 2026-10-31: target_us"
+   },
+   {
+    "address": "1630 E Cheyenne Mountain Blvd, Colorado Springs, CO 80906",
+    "status": "confirmed",
+    "wed_hours": "08:00-22:00",
+    "phone": "+1 719-540-2366",
+    "url": "https://www.target.com/sl/store/739",
+    "geo": "38.792999,-104.801542",
+    "source": "All the Places 2026-10-31: target_us"
+   },
+   {
+    "address": "5240 N Academy Blvd, Colorado Springs, CO 80918",
+    "status": "confirmed",
+    "wed_hours": "08:00-22:00",
+    "phone": "+1 719-594-9600",
+    "url": "https://www.target.com/sl/store/154",
+    "geo": "38.905204,-104.780070",
+    "source": "All the Places 2026-10-31: target_us"
+   }
+  ]
+ },
+ "Texas Roadhouse": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (texas_roadhouse): 3 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "3120 N. Powers Boulevard, Colorado Springs, CO 80922",
+    "status": "confirmed",
+    "wed_hours": "15:00-22:00",
+    "phone": "+1 719-638-8050",
+    "url": "https://texasroadhouse.olo.com/menu/48-colorado-springs1co/",
+    "geo": "38.876730,-104.720832",
+    "source": "All the Places 2026-10-31: texas_roadhouse"
+   },
+   {
+    "address": "595 S. 8th Street, Colorado Springs, CO 80905",
+    "status": "confirmed",
+    "wed_hours": "15:00-21:45",
+    "phone": "+1 719-473-9711",
+    "url": "https://texasroadhouse.olo.com/menu/129-colorado-springs2co/",
+    "geo": "38.826039,-104.839123",
+    "source": "All the Places 2026-10-31: texas_roadhouse"
+   },
+   {
+    "address": "16196 Jackson Creek Pkwy., Monument, CO 80132",
+    "status": "confirmed",
+    "wed_hours": "15:30-22:00",
+    "phone": "+1 719-481-9980",
+    "url": "https://texasroadhouse.olo.com/menu/306-monumentco/",
+    "geo": "39.066612,-104.855632",
+    "source": "All the Places 2026-10-31: texas_roadhouse"
+   }
+  ]
+ },
+ "Tommy's Express Car Wash": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "OpenStreetMap: 1 in the area",
+  "stores": [
+   {
+    "address": "4089 Tutt Boulevard, Colorado Springs, CO 80922",
+    "status": "unverified",
+    "wed_hours": "07:00-19:00",
+    "phone": "+1 719-401-6930",
+    "url": "https://tommys-express.com/locations/co30/",
+    "osm_id": "way/1359424150",
+    "geo": "38.890726,-104.714127",
+    "source": "OpenStreetMap"
+   }
+  ]
+ },
+ "Twin Peaks": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (twin_peaks): 0 in the area; OpenStreetMap: 1 in the area",
+  "stores": [
+   {
+    "address": "9249 Highland Ridge Heights, Colorado Springs, CO 80920",
+    "status": "unverified",
+    "wed_hours": "11:00-19:00",
+    "phone": "+1-719-418-1181",
+    "url": "https://twinpeakshairsalon.glossgenius.com/",
+    "osm_id": "node/13375612078",
+    "geo": "38.964533,-104.785517",
+    "source": "OpenStreetMap"
+   }
+  ]
+ },
+ "Village Inn": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (village_inn_us): 1 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "535 Garden of the Gods Rd., Colorado Springs, CO 80907",
+    "status": "confirmed",
+    "wed_hours": "06:00-21:00",
+    "phone": "+1 719-598-5331",
+    "url": "https://www.villageinn.com/Locations/Detail/6ba13c71-c9dc-43d8-8726-2d083f5d0b22",
+    "geo": "38.896619,-104.833028",
+    "source": "All the Places 2026-10-31: village_inn_us"
+   }
+  ]
+ },
+ "Walgreens": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (walgreens): 14 in the area; OpenStreetMap: 0 in the area",
+  "stores": [
+   {
+    "address": "6075 BARNES RD, Colorado Springs, CO 80922",
+    "status": "confirmed",
+    "wed_hours": "07:00-23:00",
+    "phone": "+1 719-219-2793",
+    "url": "https://www.walgreens.com/locator/walgreens-6075+barnes+rd-colorado+springs-co-80922/id=7142",
+    "geo": "38.893781,-104.714949",
+    "source": "All the Places 2026-10-31: walgreens"
+   },
+   {
+    "address": "3480 N ACADEMY BLVD, Colorado Springs, CO 80917",
+    "status": "confirmed",
+    "wed_hours": "07:00-23:00",
+    "phone": "+1 719-380-9438",
+    "url": "https://www.walgreens.com/locator/walgreens-3480+n+academy+blvd-colorado+springs-co-80917/id=3586",
+    "geo": "38.881764,-104.757594",
+    "source": "All the Places 2026-10-31: walgreens"
+   },
+   {
+    "address": "7392 MCLAUGHLIN RD, Falcon, CO 80831",
+    "status": "confirmed",
+    "wed_hours": "07:00-23:00",
+    "phone": "+1 719-219-1252",
+    "url": "https://www.walgreens.com/locator/walgreens-7392+mclaughlin+rd-falcon-co-80831/id=9199",
+    "geo": "38.940085,-104.605232",
+    "source": "All the Places 2026-10-31: walgreens"
+   },
+   {
+    "address": "15 N UNION BLVD, Colorado Springs, CO 80909",
+    "status": "confirmed",
+    "wed_hours": "08:30-17:30",
+    "phone": "+1 719-452-4356",
+    "url": "https://www.walgreens.com/locator/walgreens+specialty+pharmacy-15+n+union+blvd-colorado+springs-co-80909/id=16531",
+    "geo": "38.833549,-104.794199",
+    "source": "All the Places 2026-10-31: walgreens"
+   },
+   {
+    "address": "2785 DUBLIN BLVD, Colorado Springs, CO 80918",
+    "status": "confirmed",
+    "wed_hours": "07:00-22:00",
+    "phone": "+1 719-593-8940",
+    "url": "https://www.walgreens.com/locator/walgreens-2785+dublin+blvd-colorado+springs-co-80918/id=3583",
+    "geo": "38.925426,-104.776038",
+    "source": "All the Places 2026-10-31: walgreens"
+   },
+   {
+    "address": "920 N CIRCLE DR, Colorado Springs, CO 80909",
+    "status": "confirmed",
+    "wed_hours": "07:00-22:00",
+    "phone": "+1 719-473-9090",
+    "url": "https://www.walgreens.com/locator/walgreens-920+n+circle+dr-colorado+springs-co-80909/id=4043",
+    "geo": "38.846603,-104.776464",
+    "source": "All the Places 2026-10-31: walgreens"
+   },
+   {
+    "address": "625 N 19TH ST, Colorado Springs, CO 80904",
+    "status": "confirmed",
+    "wed_hours": "07:00-22:00",
+    "phone": "+1 719-473-8834",
+    "url": "https://www.walgreens.com/locator/walgreens-625+n+19th+st-colorado+springs-co-80904/id=7777",
+    "geo": "38.848717,-104.849496",
+    "source": "All the Places 2026-10-31: walgreens"
+   },
+   {
+    "address": "6011 RANGEWOOD DR, Colorado Springs, CO 80918",
+    "status": "confirmed",
+    "wed_hours": "07:00-23:00",
+    "phone": "+1 719-593-7119",
+    "url": "https://www.walgreens.com/locator/walgreens-6011+rangewood+dr-colorado+springs-co-80918/id=5621",
+    "geo": "38.920850,-104.739171",
+    "source": "All the Places 2026-10-31: walgreens"
+   },
+   {
+    "address": "265 W HIGHWAY 105, Monument, CO 80132",
+    "status": "confirmed",
+    "wed_hours": "07:00-22:00",
+    "phone": "+1 719-219-1288",
+    "url": "https://www.walgreens.com/locator/walgreens-265+w+highway+105-monument-co-80132/id=12769",
+    "geo": "39.093104,-104.864622",
+    "source": "All the Places 2026-10-31: walgreens"
+   },
+   {
+    "address": "4315 CENTENNIAL BLVD, Colorado Springs, CO 80907",
+    "status": "confirmed",
+    "wed_hours": "07:00-22:00",
+    "phone": "+1 719-264-1400",
+    "url": "https://www.walgreens.com/locator/walgreens-4315+centennial+blvd-colorado+springs-co-80907/id=11864",
+    "geo": "38.893823,-104.849966",
+    "source": "All the Places 2026-10-31: walgreens"
+   },
+   {
+    "address": "8705 LEXINGTON DR, Colorado Springs, CO 80920",
+    "status": "confirmed",
+    "wed_hours": "07:00-23:00",
+    "phone": "+1 719-282-7797",
+    "url": "https://www.walgreens.com/locator/walgreens-8705+lexington+dr-colorado+springs-co-80920/id=5262",
+    "geo": "38.957474,-104.768835",
+    "source": "All the Places 2026-10-31: walgreens"
+   },
+   {
+    "address": "7390 RANGEWOOD DR, Colorado Springs, CO 80918",
+    "status": "confirmed",
+    "wed_hours": "07:00-22:00",
+    "phone": "+1 719-219-1471",
+    "url": "https://www.walgreens.com/locator/walgreens-7390+rangewood+dr-colorado+springs-co-80918/id=9768",
+    "geo": "38.937489,-104.757243",
+    "source": "All the Places 2026-10-31: walgreens"
+   },
+   {
+    "address": "2921 N NEVADA AVE, Colorado Springs, CO 80907",
+    "status": "confirmed",
+    "wed_hours": "07:00-23:00",
+    "phone": "+1 719-471-3440",
+    "url": "https://www.walgreens.com/locator/walgreens-2921+n+nevada+ave-colorado+springs-co-80907/id=3584",
+    "geo": "38.873931,-104.818921",
+    "source": "All the Places 2026-10-31: walgreens"
+   },
+   {
+    "address": "1855 SOUTHGATE RD, Colorado Springs, CO 80906",
+    "status": "confirmed",
+    "wed_hours": "07:00-23:00",
+    "phone": "+1 719-473-7300",
+    "url": "https://www.walgreens.com/locator/walgreens-1855+southgate+rd-colorado+springs-co-80906/id=9767",
+    "geo": "38.806529,-104.820888",
+    "source": "All the Places 2026-10-31: walgreens"
+   }
+  ]
+ },
+ "Wendy's": {
+  "presence": "yes",
+  "basis_url": "https://www.alltheplaces.xyz/",
+  "basis": "All the Places run 2026-10-31 (wendys): 9 in the area (a partial list); OpenStreetMap: 4 in the area",
+  "stores": [
+   {
+    "address": "7525 Mclaughlin Rd., Peyton, CO 80831",
+    "status": "confirmed",
+    "wed_hours": "07:00-24:00",
+    "phone": "+1 719-495-6864",
+    "url": "https://locations.wendys.com/united-states/co/peyton/7525-mclaughlin-rd/kids-meals.html",
+    "geo": "38.940326,-104.602718",
+    "source": "All the Places 2026-10-31: wendys"
+   },
+   {
+    "address": "8080 N. Academy Blvd., Colorado Springs, CO 80920",
+    "status": "confirmed",
+    "wed_hours": "06:30-24:00",
+    "phone": "+1 719-598-8805",
+    "url": "https://locations.wendys.com/united-states/co/colorado-springs/8080-n-academy-blvd/kids-meals.html",
+    "geo": "38.948034,-104.803820",
+    "source": "All the Places 2026-10-31: wendys"
+   },
+   {
+    "address": "705 Garden Of The Gods, Colorado Springs, CO 80907",
+    "status": "confirmed",
+    "wed_hours": "06:30-24:00",
+    "phone": "+1 719-594-6080",
+    "url": "https://locations.wendys.com/united-states/co/colorado-springs/705-garden-of-the-gods/kids-meals.html",
+    "geo": "38.896457,-104.836051",
+    "source": "All the Places 2026-10-31: wendys"
+   },
+   {
+    "address": "5810 Palmer Park Blvd, Colorado Springs, CO 80915",
+    "status": "confirmed",
+    "wed_hours": "06:30-01:30",
+    "phone": "+1 719-573-8695",
+    "url": "https://locations.wendys.com/united-states/co/colorado-springs/5810-palmer-park-blvd/kids-meals.html",
+    "geo": "38.857707,-104.719530",
+    "source": "All the Places 2026-10-31: wendys"
+   },
+   {
+    "address": "3506 Hartsel Dr, Colorado Springs, CO 80920",
+    "status": "confirmed",
+    "wed_hours": "09:00-23:30",
+    "phone": "+1 719-593-2244",
+    "url": "https://locations.wendys.com/united-states/co/colorado-springs/3506-hartsel-dr/kids-meals.html",
+    "geo": "38.938694,-104.757867",
+    "source": "All the Places 2026-10-31: wendys"
+   },
+   {
+    "address": "2818 E. Platte Ave., Colorado Springs, CO 80909",
+    "status": "confirmed",
+    "wed_hours": "07:00-23:00",
+    "phone": "+1 719-635-1088",
+    "url": "https://locations.wendys.com/united-states/co/colorado-springs/2818-e-platte-ave/kids-meals.html",
+    "geo": "38.840128,-104.775190",
+    "source": "All the Places 2026-10-31: wendys"
+   },
+   {
+    "address": "2515 Montebello Drive West, Colorado Springs, CO 80918",
+    "status": "confirmed",
+    "wed_hours": "09:00-23:30",
+    "phone": "+1 719-260-1881",
+    "url": "https://locations.wendys.com/united-states/co/colorado-springs/2515-montebello-drive-west/kids-meals.html",
+    "geo": "38.907207,-104.781081",
+    "source": "All the Places 2026-10-31: wendys"
+   },
+   {
+    "address": "1910 S Academy, Colorado Springs, CO 80916",
+    "status": "confirmed",
+    "wed_hours": "06:30-01:30",
+    "phone": "+1 719-596-4646",
+    "url": "https://locations.wendys.com/united-states/co/colorado-springs/1910-s-academy/kids-meals.html",
+    "geo": "38.804496,-104.758144",
+    "source": "All the Places 2026-10-31: wendys"
+   },
+   {
+    "address": "1541 S. Nevada Ave., Colorado Springs, CO 80905",
+    "status": "confirmed",
+    "wed_hours": "09:00-22:30",
+    "phone": "+1 719-473-8393",
+    "url": "https://locations.wendys.com/united-states/co/colorado-springs/1541-s-nevada-ave/kids-meals.html",
+    "geo": "38.811746,-104.821904",
+    "source": "All the Places 2026-10-31: wendys"
+   },
+   {
+    "address": "1104 East Fillmore Street, Colorado Springs, CO 80907",
+    "status": "unverified",
+    "wed_hours": "",
+    "phone": "",
+    "url": "",
+    "osm_id": "node/12793584619",
+    "geo": "38.874317,-104.806445",
+    "source": "OpenStreetMap"
+   },
+   {
+    "address": "222 North Wahsatch Avenue, Colorado Springs, CO 80903",
+    "status": "unverified",
+    "wed_hours": "",
+    "phone": "+1 719-633-7357",
+    "url": "https://locations.wendys.com/united-states/co/colorado-springs/222-n-wahsatch-ave",
+    "osm_id": "way/198876317",
+    "geo": "38.837417,-104.818283",
+    "source": "OpenStreetMap"
+   },
+   {
+    "address": "3704 North Academy Boulevard, Colorado Springs, CO 80917",
+    "status": "unverified",
+    "wed_hours": "",
+    "phone": "+1 719-591-0760",
+    "url": "https://locations.wendys.com/united-states/co/colorado-springs/3704-north-academy-blvd",
+    "osm_id": "way/199610825",
+    "geo": "38.885901,-104.757486",
+    "source": "OpenStreetMap"
+   },
+   {
+    "address": "1245 North Academy Boulevard, Colorado Springs, CO 80909",
+    "status": "unverified",
+    "wed_hours": "",
+    "phone": "+1 719-596-1286",
+    "url": "https://locations.wendys.com/united-states/co/colorado-spgs/1245-north-academy-blvd",
+    "osm_id": "way/202771523",
+    "geo": "38.850806,-104.756952",
+    "source": "OpenStreetMap"
+   }
+  ]
+ }
+}
