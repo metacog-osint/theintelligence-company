@@ -263,6 +263,43 @@ Claude checked it against the sources the same night, corrected it and built it.
   place, no parking) and falls back to a straight-line estimate. `veterans.test.js` checks every `E.` name `app.js`
   uses exists in the engine.
 
+## Fort Meade, MD (fifth area, built 11 Nov 2026 about 1 AM CST on branch `vetday-fort-meade`; the coordinating session merges and deploys it)
+10 Nov 2026 night: an area for colleagues at Fort Meade, on Veterans Day itself. Built from a Claude research report (`Downloads\Veterans Day 2026 Near Fort Meade_ Deals, Freebies, Events and Closures.md`, 10 Nov about 11 PM CST)
+and the coordinating session's leads, each read at its own source on 11 Nov 2026. Every check, correction and judgment
+call: `research/fort-meade/notes.md`.
+- **Area** `fort-meade`, "Fort Meade: Odenton, Laurel, Columbia, MD", `?area=fort-meade` (aliases `meade`, `ft-meade`,
+  `fort-meade-md`, `odenton`, `laurel`, `columbia`, `gambrills`, `severn`). Eastern time, like Reston (`tz`,
+  `tz_offset_min` -300, `tz_abbr`, `day_start` 05:00 UTC). Circles: Fort Meade and Odenton 6 km, Gambrills and Crofton
+  4.5, Severn/Hanover/Arundel Mills 4.5, Laurel 5, Columbia 6. Drive times start from Odenton; start presets for
+  Odenton, Fort Meade (on post), Waugh Chapel, Arundel Mills, Laurel and Columbia. Drive table: 770 of 806 grid points.
+- **Totals:** 41 deals at 125 stops (A 9, B 30, C 2); 15 items under "Other days and places"; 1 lead.
+- **Local on the route:** Chick-fil-A Metro DC's free entree at its one participating store here, Laurel (13600
+  Baltimore Ave; A, its own list; the other nine Chick-fil-A stores in the circles aren't on it and are dropped), Silver
+  Diner Elkridge (B), Grace for Vets at Flagship Carwash, Severn (A, its own list), The Greene Turtle's free dine-in meal
+  up to $15 (B, WTOP 9 Nov; two stores from directories, call first), Main Event Columbia (B: its own page has no year;
+  American Legion 5 Nov), All American Steakhouse Odenton and KPOT Laurel (C, one 2026 list, call first). No 2026
+  ceremony was found inside the circles; Crownsville, the WWII Memorial and Annapolis (all 11:00) are under Deals.
+- **On post:** stores whose address reads "Fort Meade, MD" need installation access, so they stay off the route
+  (`on_post` in REGIONS; the Exchange food court's Charleys, Qdoba and Starbucks, Dunkin' on Mapes Rd, a second Qdoba).
+  The Exchange's 6-12 Nov sale and 11 Nov challenge coins, the commissary's 9-5 holiday hours and MWR's holiday hours
+  (DFMWR's 17 Aug 2026 sheet: bowling noon-4, Gaffney 8-noon, Murphy Field House 24/7 for registered users, the rest
+  closed) are under Deals.
+- **Bar line transit:** MDOT MTA's free rides on 11 Nov for veterans, active duty, Guard and Reserve (service alert
+  29401, 9 Nov) with a DoD ID, VA ID or MVA Veteran designation (no DD-214).
+- **Stores fixed from the chains' own pages:** Mission BBQ's three (Gambrills, Laurel, Columbia; 11 AM-9 PM), Golden
+  Corral's house number (7047 Arundel Mills Blvd). `stores_region.py` accepts "Maryland"; `split_addr` reads MD.
+- **Corrections to the research report** (details in the notes): MTA doesn't take a DD-214; Red Robin has no Gambrills store
+  (Columbia only); Bob Evans has none in Gambrills or Laurel (Columbia only); Outback has Laurel too; Red Lobster
+  Arundel Mills is on the chain's own list; Great Clips has two salons in the circles, not many; Mission BBQ and Shake
+  Shack stay B (no 2026 company post); Silver Diner Elkridge is inside the area; Robinson Nature Center isn't
+  confirmed open; Prince George's County (most of Laurel) closes offices, schools and libraries; MWR's 2026 hours exist;
+  Col. Joshua Patton has commanded the garrison since 15 Oct 2026; the Cryptologic Museum's holiday opening is
+  unconfirmed (not routed); the Greene Turtle has a Veterans Day meal this year; Grace for Vets has a Severn wash.
+- **Testing:** the new worktree checked files out with CRLF (system `core.autocrlf=true`), which breaks the
+  practice-marks test's regex; converting the working files to LF (git's stored form) fixed it. 99 planner and site
+  tests pass. Checked in a preview on port 5057 (not an allowed report origin) at 375 px: `?area=meade` opens and
+  saves the area; 41 of 41 deals; 12-stop Optimal route; the Map draws it by road; no sideways scroll.
+
 ## Optimal (engine v1.4, app v1.3; live since about 12:15 PM CST 10 Nov 2026 from `0b12a0d`, approved; not pushed)
 10 Nov 2026: the Maximize routes "can include redundant types of locations on the same route in the same time
 frame e.g. multiple free coffee grabs within a short window of time ... most users won't want to do that. So the
@@ -305,12 +342,12 @@ count; Optimal is its own button, first, and the default.
 From the repo root (Windows: `python`, not `python3`):
 
 ```
-python -I veterans-day/build/build_data.py [area ...]     # research -> each area's deals.json (default: all four)
+python -I veterans-day/build/build_data.py [area ...]     # research -> each area's deals.json (default: all five)
 python -I veterans-day/build/drive_matrix.py [area ...]   # only when stores change: OSRM tables -> drive.json (~2 min each)
 python -I veterans-day/build/stores_region.py <area> <cache folder>   # new areas only: chain stores -> research/<area>/locations-2026.json
 cd tests && node --test --no-warnings veterans.test.js veterans-engine.test.js veterans-roads.test.js site.test.js
 ```
-Area ids: `fargo-moorhead`, `bismarck-mandan`, `twin-cities`, `reston-va` (REGIONS in `build_data.py`). Rebuild Fargo-Moorhead's
+Area ids: `fargo-moorhead`, `bismarck-mandan`, `twin-cities`, `reston-va`, `fort-meade` (REGIONS in `build_data.py`). Rebuild Fargo-Moorhead's
 `drive.json` only when its stores change; the drive table must follow every change to an area's store list.
 
 `tests/veterans-map.test.js` (the Map in a browser) needs Playwright: see `tests/README.md`.
