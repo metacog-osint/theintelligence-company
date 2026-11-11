@@ -1,6 +1,6 @@
 {
  "meta": {
-  "built_at": "2026-11-11T05:41:05Z",
+  "built_at": "2026-11-11T05:45:29Z",
   "day": "2026-11-11",
   "day_start": "2026-11-11T08:00:00Z",
   "tz": "America/Los_Angeles",
@@ -4451,11 +4451,15 @@
   },
   {
    "name": "Black Bear Diner (Reno and Sparks)",
-   "area": "Reno and Sparks",
+   "area": "2323 S Virginia St, Reno, (775) 827-5570; 235 N McCarran Blvd, Sparks, (775) 356-1138",
    "q": "Black Bear Diner Reno Sparks Veterans Day",
-   "offer": "Each diner sets its own Veterans Day policy; no 2026 offer found for these stores.",
+   "offer": "Each diner sets its own Veterans Day policy; nothing found for 2026 at these two stores (the addresses and phones are from its own store list).",
    "last_seen": "",
-   "source": null
+   "source": {
+    "url": "https://blackbeardiner.com/",
+    "publisher": "Black Bear Diner",
+    "published": null
+   }
   },
   {
    "name": "Chick-fil-A (Reno and Sparks)",
@@ -4490,6 +4494,18 @@
    "source": {
     "url": "https://ausa-westmoreland.org/dinner",
     "publisher": "AUSA Westmoreland Chapter",
+    "published": null
+   }
+  },
+  {
+   "name": "Dragon Lights Reno: free tickets via VetTix",
+   "area": "Reno",
+   "q": "Dragon Lights Reno veterans tickets VetTix",
+   "offer": "50 free tickets each night for veterans and first responders, first come, first served, through VetTix (KOLO, 5 Nov 2026). The story gives no dates, times or venue.",
+   "last_seen": "2026",
+   "source": {
+    "url": "https://www.kolotv.com/2026/11/05/dragon-lights-donates-tickets-veterans-first-responders/",
+    "publisher": "KOLO 8 (5 Nov 2026)",
     "published": null
    }
   },
