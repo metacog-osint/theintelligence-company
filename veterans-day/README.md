@@ -263,7 +263,46 @@ Claude checked it against the sources the same night, corrected it and built it.
   place, no parking) and falls back to a straight-line estimate. `veterans.test.js` checks every `E.` name `app.js`
   uses exists in the engine.
 
-## Fort Meade, MD (fifth area, built 11 Nov 2026 about 1 AM CST on branch `vetday-fort-meade`; the coordinating session merges and deploys it)
+## Reno–Sparks (sixth area, the first on Pacific time; built 11 Nov 2026 on branch `vetday-reno-sparks`)
+10 Nov 2026: an area for colleagues in Reno and Sparks, NV, from his research report of that evening. Every offer
+was opened at its own source the same night and graded; research, corrections and the judgment calls made without
+`research/reno-sparks/notes.md`.
+- **Area** `reno-sparks`, "Reno–Sparks, NV", `?area=reno-sparks` (aliases `reno`, `sparks`, `reno-nv`, `washoe`).
+  Circles: Downtown, Midtown and west Reno 6 km, Sparks and the Marina 6, South Meadows and South Reno 5.5. Drive
+  times start from downtown Reno (the Virginia Street Bridge). Start presets: downtown, Midtown, Northwest Reno,
+  Sparks (Victorian Square), Sparks Marina and Legends, South Reno. Drive table 520 of 563 grid points.
+- **Pacific time.** REGIONS: `tz` America/Los_Angeles, `tz_offset_min` -480, `tz_abbr` PST, `day_start` 08:00 UTC
+  (2 AM CST). Nothing in the app or engine assumed Central beyond the engine's default offset when a file has none:
+  the preview cutoff and practice-mark stamps are relative to the area's day start, mealtimes use
+  `meta.tz_offset_min`, and the report Worker has no day window. Tests: every area's `day_start` is local midnight in
+  its own zone with a matching offset and zone name on its windows; Reno's Denny's, J Resort and parade times in UTC;
+  and the engine plans a Pacific copy of its test town exactly as the Central one, two hours later in UTC.
+- **Totals (11 Nov 2026):** 40 deals at 136 stops (A 13, B 26, C 1); 8 other-day and region-wide items; 12 leads.
+- **Local on the route:** J Resort's buffet 4-9 PM (A; current and retired military only), Atlantis's lunch buffet at
+  Toucan Charlie's 11-3 (A; one per person for 9-11 Nov; Monarch Rewards), Legends Bay's LB Grill breakfast or burger
+  7 AM-10 PM (A; veterans; LB Rewards), Gold Dust West (A; current and retired military; hours not published, call
+  first), Squeeze In's free meal (A; its post names no stores, so all four here with call first), In-N-Out (B; on 2026
+  national lists only, call first), the Reno parade (B; 11:11 opening at the Virginia Street Bridge, `arrive_by` 11:00),
+  the Sparks Marina observance 9-11:30 (A, the plaza's own site), the Nevada Museum of Art free for veterans and
+  active duty 10-6 (B). The players' clubs use the sign-up-ahead handling (`advance_signup`).
+- **Under Deals:** RTC Washoe's free rides for everyone all day (A; also the bar cards' transit line), Casino Fandango in
+  Carson City (A), Virginia City, Fallon, Truckee and South Lake Tahoe events (B), NPS fee-free (A), the museum's free
+  Saturday. Leads: Peppermill, Western Village, Grand Sierra (its page is 2024's), the Nugget, the Caesars downtown
+  casinos, Marked Studios, Black Bear Diner, Chick-fil-A, Jiffy Lube, the AUSA dinner, Dragon Lights, the Automobile
+  Museum.
+- **Stores:** 125 at 32 chains from All the Places and OpenStreetMap, using the main checkout's `.atp-cache`. In-N-Out
+  added (`innout`). `stores_region.py` now reads a street given only in `addr:full` (Twin Peaks Reno was dropped for
+  it); other areas weren't re-run. Golden Corral, Smashburger, Cracker Barrel, Circle K, Freddy's have no store here;
+  Grace for Vets has no Nevada wash.
+- **Corrections to the report:** Atlantis's page shows 2026's dates; J Resort and Gold Dust West name current and
+  retired military, not all veterans; no Grace for Vets wash in Nevada; Legends Bay and the Sparks observance are A from
+  their own pages; the museum's free day is only in Fox 11 (B); In-N-Out has no company word (B); Squeeze In names no
+  stores. Full list in the notes.
+- Checked in a preview on port 5058 at 375 px: the area loads from `?area=reno`, Optimal builds 14 stops at 8 AM PST,
+  Deals lists 40 of 40 with Pacific windows shown in the viewer's zone, the Map draws, no sideways scroll, no console
+  errors apart from the report Worker refusing that port's origin. 102 planner tests pass.
+
+## Fort Meade, MD (built 11 Nov 2026 about 1 AM CST on branch `vetday-fort-meade`; the coordinating session merges and deploys it)
 10 Nov 2026 night: an area for colleagues at Fort Meade, on Veterans Day itself. Built from a Claude research report (`Downloads\Veterans Day 2026 Near Fort Meade_ Deals, Freebies, Events and Closures.md`, 10 Nov about 11 PM CST)
 and the coordinating session's leads, each read at its own source on 11 Nov 2026. Every check, correction and judgment
 call: `research/fort-meade/notes.md`.
@@ -297,7 +336,7 @@ call: `research/fort-meade/notes.md`.
   unconfirmed (not routed); the Greene Turtle has a Veterans Day meal this year; Grace for Vets has a Severn wash.
 - **Testing:** the new worktree checked files out with CRLF (system `core.autocrlf=true`), which breaks the
   practice-marks test's regex; converting the working files to LF (git's stored form) fixed it. 99 planner and site
-  tests pass. Checked in a preview on port 5057 (not an allowed report origin) at 375 px: `?area=meade` opens and
+  tests pass on the branch, 102 after merging master's Reno–Sparks area. Checked in a preview on port 5057 (not an allowed report origin) at 375 px: `?area=meade` opens and
   saves the area; 41 of 41 deals; 12-stop Optimal route; the Map draws it by road; no sideways scroll.
 
 ## Optimal (engine v1.4, app v1.3; live since about 12:15 PM CST 10 Nov 2026 from `0b12a0d`, approved; not pushed)
@@ -342,12 +381,12 @@ count; Optimal is its own button, first, and the default.
 From the repo root (Windows: `python`, not `python3`):
 
 ```
-python -I veterans-day/build/build_data.py [area ...]     # research -> each area's deals.json (default: all five)
+python -I veterans-day/build/build_data.py [area ...]     # research -> each area's deals.json (default: all)
 python -I veterans-day/build/drive_matrix.py [area ...]   # only when stores change: OSRM tables -> drive.json (~2 min each)
 python -I veterans-day/build/stores_region.py <area> <cache folder>   # new areas only: chain stores -> research/<area>/locations-2026.json
 cd tests && node --test --no-warnings veterans.test.js veterans-engine.test.js veterans-roads.test.js site.test.js
 ```
-Area ids: `fargo-moorhead`, `bismarck-mandan`, `twin-cities`, `reston-va`, `fort-meade` (REGIONS in `build_data.py`). Rebuild Fargo-Moorhead's
+Area ids: `fargo-moorhead`, `bismarck-mandan`, `twin-cities`, `reston-va`, `reno-sparks`, `fort-meade` (REGIONS in `build_data.py`). Rebuild Fargo-Moorhead's
 `drive.json` only when its stores change; the drive table must follow every change to an area's store list.
 
 `tests/veterans-map.test.js` (the Map in a browser) needs Playwright: see `tests/README.md`.

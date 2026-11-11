@@ -1,0 +1,238 @@
+[
+ {
+  "name": "Reno Veterans Day Parade and opening ceremony",
+  "kind": "event",
+  "address": "Virginia Street Bridge, N Virginia St at the Truckee River, Reno, NV 89501",
+  "phone": "",
+  "geo": "39.525072,-119.812630",
+  "wednesday_hours": "10:45-13:00",
+  "status_2026": "confirmed",
+  "est_value_usd": 0,
+  "dates": "2026-11-11",
+  "hours_local": "10:45-13:00",
+  "mode": "event",
+  "eligible": ["public", "veteran", "active", "guard_reserve"],
+  "eligibility_quote": "Festivities begin Nov. 11 at 11:11 a.m., near the Virginia Street Bridge, south of the Virginia and First Street intersection (KOLO, 3 Nov 2026).",
+  "guard_reserve": "yes",
+  "spouse_or_guest": "yes",
+  "proof": [],
+  "limits": "Streets close 5 AM-3 PM: Virginia St from Liberty St to Sixth St, and First St from N Sierra St to University Way. End time not published.",
+  "offer": "The City of Reno's Veterans Day Parade: the opening ceremony at 11:11 AM near the Virginia Street Bridge (prayer, national anthem, city proclamation), then the parade north on Virginia Street from Liberty Street to Sixth Street. Free and open to all.",
+  "grade": "B",
+  "sources": [
+   {"url": "https://www.kolotv.com/2026/11/03/city-reno-hosting-veterans-day-parade-downtown-reno/", "publisher": "KOLO 8", "published": "2026-11-03", "accessed": "2026-11-11"},
+   {"url": "https://foxreno.com/news/local/veterans-day-events-in-northern-nevada-and-the-sierra-parades-and-ceremonies", "publisher": "Fox 11 Reno", "published": "2026-11-10", "accessed": "2026-11-11"}
+  ],
+  "notes": "Theme \"Veterans Helping Veterans and Their Families\"; grand marshal retired Maj. Gen. Ron Bath; streamed on the city's YouTube from 11 AM (Fox 11, 10 Nov 2026). The City of Reno's own 2026 page wasn't found, so grade B. Fabulous Nevada lists 11:00; the city's time as reported by KOLO and Fox 11 is 11:11."
+ },
+ {
+  "name": "Veterans Day observance, Nevada Veterans Memorial Plaza",
+  "kind": "event",
+  "address": "300 Howard Dr, Sparks, NV 89434",
+  "phone": "",
+  "geo": "39.535045,-119.731718",
+  "wednesday_hours": "09:00-11:30",
+  "status_2026": "confirmed",
+  "est_value_usd": 0,
+  "dates": "2026-11-11",
+  "hours_local": "09:00-11:30",
+  "mode": "event",
+  "eligible": ["public", "veteran", "active", "guard_reserve"],
+  "eligibility_quote": "Join us as we honor those who stood and raised their hands in defense of our nation.",
+  "guard_reserve": "yes",
+  "spouse_or_guest": "yes",
+  "proof": [],
+  "limits": "Program details not published.",
+  "offer": "The community Veterans Day observance at the Nevada Veterans Memorial Plaza at the Sparks Marina, 9:00-11:30 AM. Free and open to all.",
+  "grade": "A",
+  "sources": [
+   {"url": "https://nvmp.us/", "publisher": "Nevada Veterans Memorial Plaza", "published": "2026", "accessed": "2026-11-11"},
+   {"url": "https://foxreno.com/news/local/veterans-day-events-in-northern-nevada-and-the-sierra-parades-and-ceremonies", "publisher": "Fox 11 Reno", "published": "2026-11-10", "accessed": "2026-11-11"}
+  ],
+  "notes": "The plaza's own events list (nvmp.us, read 11 Nov 2026): 11 Nov 2026, 9:00-11:30 AM. RTC pointed riders to routes 11 and 21 for the plaza in 2025 (KOLO, 5 Nov 2025); not checked for 2026."
+ },
+ {
+  "name": "Nevada Museum of Art",
+  "kind": "attraction",
+  "address": "160 W Liberty St, Reno, NV 89501",
+  "phone": "(775) 329-3333",
+  "geo": "39.520828,-119.813362",
+  "wednesday_hours": "10:00-18:00",
+  "status_2026": "confirmed",
+  "est_value_usd": 15,
+  "dates": "2026-11-11",
+  "hours_local": "10:00-18:00",
+  "mode": "event",
+  "eligible": ["veteran", "active"],
+  "eligibility_quote": "Free admission for veterans and active-duty service members ... not free for all visitors (Fox 11, 10 Nov 2026).",
+  "guard_reserve": "unclear",
+  "spouse_or_guest": "no",
+  "proof": ["military_id", "dd214", "va_card", "dl_veteran"],
+  "limits": "Veterans and active duty only; general admission is $15 for others. The museum's free day for everyone is Saturday 14 Nov.",
+  "offer": "Free admission for veterans and active-duty service members, 10 AM-6 PM, with the new flag exhibition \"Broad Stripes Bright Stars: Celebrating 250 Years of America's Icons\".",
+  "grade": "B",
+  "sources": [
+   {"url": "https://foxreno.com/news/local/veterans-day-events-in-northern-nevada-and-the-sierra-parades-and-ceremonies", "publisher": "Fox 11 Reno", "published": "2026-11-10", "accessed": "2026-11-11"},
+   {"url": "https://www.nevadaart.org/art/exhibitions/broad-stripes-bright-stars-celebrating-250-years-of-americas-icons/", "publisher": "Nevada Museum of Art", "published": "2026", "accessed": "2026-11-11"}
+  ],
+  "notes": "Fox 11 quotes the museum's communications director, Valerie Primeau. The museum's own home and exhibition pages (read 11 Nov 2026) show the exhibition (7 Nov 2026-16 May 2027) and Wednesday hours 10-6 but not the free admission, so grade B. The $15 general admission is from the research report, not checked."
+ },
+ {
+  "name": "J Resort: The Buffet",
+  "kind": "business",
+  "status_2026": "confirmed",
+  "est_value_usd": 30,
+  "dates": "2026-11-11",
+  "hours_local": "16:00-21:00",
+  "mode": "dine_in",
+  "eligible": ["active", "guard_reserve", "retired"],
+  "eligibility_quote": "All current and retired military personnel get a FREE BUFFET on Veterans Day. Military I.D. required. Dine-in only.",
+  "guard_reserve": "yes",
+  "spouse_or_guest": "no",
+  "proof": ["military_id"],
+  "participating_locations_only": false,
+  "limits": "Current and retired military with a military ID; dine-in only. Friends and family pay; locals get 25% off dining.",
+  "offer": "A free buffet at The Buffet, 4-9 PM, for current and retired military.",
+  "grade": "A",
+  "stores": [
+   {"address": "345 N Arlington Ave, Reno, NV 89501", "phone": "", "wed_hours": "16:00-21:00", "geo": "39.528250,-119.819271", "status": "confirmed", "url": "https://www.jresortreno.com/promotions/veterans-day-free-meal-at-the-buffet/"}
+  ],
+  "sources": [
+   {"url": "https://www.jresortreno.com/promotions/veterans-day-free-meal-at-the-buffet/", "publisher": "J Resort Reno", "published": "2026", "accessed": "2026-11-11"},
+   {"url": "https://mynews4.com/news/local/veterans-day-free-meals-in-northern-nevada-local-offers-and-restaurant-deals", "publisher": "News 4 / Fox 11 Reno", "published": "2026-11-10", "accessed": "2026-11-11"}
+  ],
+  "notes": "The resort's page says \"Wednesday, November 11th, 4pm - 9pm\" with no year; 11 Nov is a Wednesday in 2026, and News 4's 10 Nov 2026 list carries the same offer and hours, so it is taken as this year's. Its older \"Veterans Dine Free\" page (Tuesday, 11 Nov: 2025) is not used. The page names current and retired military, not all veterans: a veteran without a military ID should call first. The value is an estimate."
+ },
+ {
+  "name": "Atlantis Casino Resort Spa: Toucan Charlie's",
+  "kind": "business",
+  "status_2026": "confirmed",
+  "est_value_usd": 25,
+  "dates": "2026-11-09/2026-11-11",
+  "hours_local": "11:00-15:00",
+  "mode": "dine_in",
+  "eligible": ["veteran", "active", "guard_reserve", "retired"],
+  "eligibility_quote": "Present your Monarch Rewards card and either a valid military ID, military spouse ID, or DD-214 to the buffet cashier.",
+  "guard_reserve": "yes",
+  "spouse_or_guest": "yes",
+  "proof": ["military_id", "dd214"],
+  "participating_locations_only": false,
+  "advance_signup": "Atlantis needs its free Monarch Rewards card: join at the Monarch Rewards desk before the buffet (players' clubs generally need you to be 21, with a photo ID)",
+  "limits": "One free buffet per person for the whole 9-11 Nov promotion, not one a day. A military spouse with a military spouse ID qualifies too.",
+  "offer": "A free lunch buffet at Toucan Charlie's Gourmet Buffet & Grille, 11 AM-3 PM, with a Monarch Rewards card and a military ID, military spouse ID or DD-214.",
+  "grade": "A",
+  "stores": [
+   {"address": "3800 S Virginia St, Reno, NV 89502", "phone": "(775) 825-4700", "wed_hours": "11:00-15:00", "geo": "39.488906,-119.793466", "status": "confirmed", "url": "https://atlantiscasino.com/more/events/veterans-day"}
+  ],
+  "sources": [
+   {"url": "https://atlantiscasino.com/more/events/veterans-day", "publisher": "Atlantis Casino Resort Spa", "published": "2026", "accessed": "2026-11-11"},
+   {"url": "https://mynews4.com/news/local/veterans-day-free-meals-in-northern-nevada-local-offers-and-restaurant-deals", "publisher": "News 4 / Fox 11 Reno", "published": "2026-11-10", "accessed": "2026-11-11"}
+  ],
+  "notes": "Its own events listing (read 11 Nov 2026) gives 9-11 Nov 2026, \"Monday - Wednesday\"; the event page gives the hours, the proof and \"One free buffet per person, per promotional period\". the research report said the Atlantis page still showed 2025's dates; on 11 Nov it showed 2026's. The value is an estimate."
+ },
+ {
+  "name": "Legends Bay Casino: LB Grill",
+  "kind": "business",
+  "status_2026": "confirmed",
+  "est_value_usd": 15,
+  "dates": "2026-11-11",
+  "hours_local": "07:00-22:00",
+  "mode": "dine_in",
+  "eligible": ["veteran"],
+  "eligibility_quote": "A Salute to Veterans. Veterans & First Responders: Enjoy your choice of a complimentary special at LB Grill. Must be an LB Rewards member. ID required.",
+  "guard_reserve": "unclear",
+  "spouse_or_guest": "no",
+  "proof": ["military_id", "dd214", "va_card", "dl_veteran"],
+  "participating_locations_only": false,
+  "advance_signup": "Legends Bay needs its free LB Rewards membership: join at the casino before you order (players' clubs generally need you to be 21, with a photo ID)",
+  "limits": "LB Rewards members only, with ID. Veterans and first responders; active duty and Guard aren't named.",
+  "offer": "A free All American Breakfast or Smash Burger at LB Grill, 7 AM-10 PM, for veterans and first responders who are LB Rewards members.",
+  "grade": "A",
+  "stores": [
+   {"address": "100 Legends Bay Dr, Sparks, NV 89434", "phone": "(775) 473-8000", "wed_hours": "07:00-22:00", "geo": "39.532143,-119.722452", "status": "confirmed", "url": "https://www.legendsbaycasino.com/promotions"}
+  ],
+  "sources": [
+   {"url": "https://www.legendsbaycasino.com/promotions", "publisher": "Legends Bay Casino", "published": "2026", "accessed": "2026-11-11"},
+   {"url": "https://mynews4.com/news/local/veterans-day-free-meals-in-northern-nevada-local-offers-and-restaurant-deals", "publisher": "News 4 / Fox 11 Reno", "published": "2026-11-10", "accessed": "2026-11-11"}
+  ],
+  "notes": "Its promotions page (read 11 Nov 2026): \"Wednesday, November 11th, 7AM-10PM\"; the image is named Nov26 in a 2026 upload folder, and News 4's 10 Nov 2026 list matches. The All American Breakfast is two eggs, hash browns, toast and ham, bacon or sausage. The value is an estimate."
+ },
+ {
+  "name": "Gold Dust West",
+  "kind": "business",
+  "status_2026": "confirmed",
+  "est_value_usd": 15,
+  "dates": "2026-11-11",
+  "hours_local": "",
+  "mode": "dine_in",
+  "eligible": ["active", "guard_reserve", "retired"],
+  "eligibility_quote": "All current and retired military personel get a Free Meal on Veterans Day. Military I.D. Required. Dine-in only.",
+  "guard_reserve": "yes",
+  "spouse_or_guest": "no",
+  "proof": ["military_id"],
+  "participating_locations_only": false,
+  "limits": "Current and retired military with a military ID; dine-in only. Hours, restaurant and menu not published.",
+  "offer": "A free meal for current and retired military, dine-in, with a military ID.",
+  "grade": "A",
+  "stores": [
+   {"address": "444 Vine St, Reno, NV 89503", "phone": "(775) 323-2211", "wed_hours": "", "geo": "39.528912,-119.824675", "status": "confirmed", "url": "https://www.gdwcasino.com/reno/events-promotions/veterans-day-free-meal-reno/"}
+  ],
+  "sources": [
+   {"url": "https://www.gdwcasino.com/reno/events-promotions/veterans-day-free-meal-reno/", "publisher": "Gold Dust West Reno", "published": "2026", "accessed": "2026-11-11"},
+   {"url": "https://mynews4.com/news/local/veterans-day-free-meals-in-northern-nevada-local-offers-and-restaurant-deals", "publisher": "News 4 / Fox 11 Reno", "published": "2026-11-10", "accessed": "2026-11-11"}
+  ],
+  "notes": "The Reno page (read 11 Nov 2026) says \"Wednesday, November 11th\" with no year; its image is named Nov26 in a 2026/10 upload folder and News 4's 10 Nov 2026 list carries it. No hours, restaurant or menu: in 2025 it was at The Grille, open 24 hours (the research report, from News 4's 2025 list; not checked). Usual meal hours are assumed on the page, with \"call first\". The value is an estimate."
+ },
+ {
+  "name": "Squeeze In",
+  "kind": "business",
+  "status_2026": "confirmed",
+  "est_value_usd": 18,
+  "dates": "2026-11-11",
+  "hours_local": "",
+  "mode": "dine_in",
+  "eligible": ["veteran"],
+  "eligibility_quote": "This Wednesday, November 11, we are honored to invite veterans to enjoy a free meal of their choice at Squeeze In.",
+  "guard_reserve": "unclear",
+  "spouse_or_guest": "no",
+  "proof": ["military_id", "dd214", "va_card", "dl_veteran"],
+  "participating_locations_only": false,
+  "limits": "The post names no stores, hours or proof. Each store's usual Wednesday hours are from Squeeze In's own locations page.",
+  "offer": "A free meal of your choice for veterans.",
+  "grade": "A",
+  "stores": [
+   {"address": "5020 Las Brisas Blvd, Reno, NV 89523", "phone": "(775) 787-2700", "wed_hours": "07:30-14:00", "geo": "39.540092,-119.863037", "status": "confirmed", "url": "https://squeezein.com/locations/"},
+   {"address": "2020 Red Dr, Ste 6, Reno, NV 89502", "phone": "(775) 971-4341", "wed_hours": "07:00-14:00", "geo": "39.503747,-119.798965", "status": "confirmed", "url": "https://squeezein.com/locations/"},
+   {"address": "25 Foothill Rd, Ste 3, Reno, NV 89511", "phone": "(775) 853-6090", "wed_hours": "07:30-14:00", "geo": "39.439785,-119.770734", "status": "confirmed", "url": "https://squeezein.com/locations/"},
+   {"address": "4670 Sparks Blvd, Ste 110, Sparks, NV 89436", "phone": "(775) 626-0100", "wed_hours": "07:30-14:00", "geo": "39.577551,-119.723454", "status": "confirmed", "url": "https://squeezein.com/locations/"}
+  ],
+  "sources": [
+   {"url": "https://squeezein.com/veterans-eat-free/", "publisher": "Squeeze In", "published": "2026-11-10", "accessed": "2026-11-11"},
+   {"url": "https://squeezein.com/locations/", "publisher": "Squeeze In", "published": "2026", "accessed": "2026-11-11"}
+  ],
+  "notes": "Squeeze In's own post, 10 Nov 2026. It names no stores (\"our Squeeze In communities\"), so all four in the area are listed with \"call first\"; Carson City and Fernley are outside it. In 2025 the Reno offer was a meal up to $20, 7:30 AM-2 PM (the research report, from News 4's 2025 list; not checked). The value is an estimate."
+ },
+ {
+  "name": "In-N-Out Burger",
+  "kind": "business",
+  "status_2026": "confirmed",
+  "est_value_usd": 10,
+  "dates": "2026-11-11",
+  "hours_local": "",
+  "mode": "dine_in",
+  "eligible": ["veteran", "active", "guard_reserve", "retired"],
+  "eligibility_quote": "Complimentary meal, including burger, fries, and drink, on November 11 (Newsweek).",
+  "guard_reserve": "yes",
+  "spouse_or_guest": "no",
+  "proof": ["military_id", "dd214", "va_card", "dl_veteran"],
+  "participating_locations_only": false,
+  "limits": "Proof of service. Lists differ on whether the drive-through counts: order inside.",
+  "offer": "A free meal (a burger, fries and a drink) for veterans, active duty, Reserve and Guard, with proof of service; a Veterans Day decal too.",
+  "grade": "B",
+  "sources": [
+   {"url": "https://www.newsweek.com/veterans-day-2026-free-meals-deals-discounts-12687407", "publisher": "Newsweek", "published": "2026", "accessed": "2026-11-11"},
+   {"url": "https://themilitarywallet.com/veterans-day-free-meals-and-discounts/", "publisher": "The Military Wallet", "published": "2026", "accessed": "2026-11-11"}
+  ],
+  "notes": "On 2026 national lists (Newsweek; The Military Wallet; VA News, which the research report cites but which couldn't be read here). No In-N-Out post was found, and one page calls In-N-Out's announcement pending, so the card says call first. In-N-Out was on News 4's 2025 Reno list. Stores from All the Places (In-N-Out's own locator, run 31 Oct 2026)."
+ }
+]

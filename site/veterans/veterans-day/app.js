@@ -22,6 +22,7 @@
     { id: "bismarck-mandan", dir: "data/bismarck-mandan/" },
     { id: "twin-cities", dir: "data/twin-cities/" },
     { id: "reston-va", dir: "data/reston-va/" },
+    { id: "reno-sparks", dir: "data/reno-sparks/" },
     { id: "fort-meade", dir: "data/fort-meade/" }
   ];
   const DEFAULT_AREA = "fargo-moorhead";
@@ -1305,6 +1306,15 @@
       ["38.9187,-77.2225", "Tysons, VA"],
       ["38.8543,-77.3106", "Fairfax, VA"]
     ],
+    "reno-sparks": [
+      ["", "Start from town…"],
+      ["39.5251,-119.8126", "Downtown Reno, NV"],
+      ["39.5146,-119.8060", "Midtown Reno, NV"],
+      ["39.5401,-119.8630", "Northwest Reno, NV"],
+      ["39.5350,-119.7560", "Sparks (Victorian Square), NV"],
+      ["39.5321,-119.7225", "Sparks Marina and Legends, NV"],
+      ["39.4398,-119.7707", "South Reno (South Meadows), NV"]
+    ],
     "fort-meade": [
       ["", "Start from town…"],
       ["39.0840,-76.7000", "Odenton, MD"],
@@ -1322,6 +1332,7 @@
     "bismarck-mandan": { deals: ["Perkins", "Expressway", "Mandan"], route: ["Perkins", "Olive Garden", "Century Ave"] },
     "twin-cities": { deals: ["Caribou", "Lexington Ave", "Maple Grove"], route: ["Caribou", "Perkins", "Wayzata Blvd"] },
     "reston-va": { deals: ["Chick-fil-A", "Leesburg Pike", "Herndon"], route: ["Chick-fil-A", "Wawa", "Sunset Hills"] },
+    "reno-sparks": { deals: ["Squeeze In", "Kietzke", "Sparks"], route: ["Squeeze In", "In-N-Out", "McCarran"] },
     "fort-meade": { deals: ["Mission BBQ", "Baltimore Ave", "Columbia"], route: ["Mission BBQ", "Wawa", "Arundel Mills"] }
   };
   const AREA_ALIASES = {
@@ -1339,6 +1350,10 @@
     "tysons": "reston-va",
     "fairfax": "reston-va",
     "nova": "reston-va",
+    "reno": "reno-sparks",
+    "sparks": "reno-sparks",
+    "reno-nv": "reno-sparks",
+    "washoe": "reno-sparks",
     "meade": "fort-meade",
     "ft-meade": "fort-meade",
     "fort-meade-md": "fort-meade",
