@@ -1,4 +1,4 @@
-# Hub handoff: where things stand (10 Nov 2026, about 11:10 PM CST: practice-mark fix, Mission BBQ Herndon and GEMINI.md live from ae0d44d, pushed; 11:00 PM: Reston's WTOP deals and page fixes live from fd2e434, pushed; 10:35 PM: Veterans Day Reston area and the Deals-tab fix live from fe2187a, pushed with 870fb2b; 5:30 PM: Antigravity's two commits live; 1:45 PM: Hornbacher's and Post 2 list live from d1d897c)
+# Hub handoff: where things stand (11 Nov 2026, 3:15 AM CST: Veterans Day planner live with Reno–Sparks, Fort Meade and Denver from `acef121`; Colorado Springs on `master` `cf59c04` but not live, and Firebase needs `firebase login --reauth` before the next deploy. 10 Nov 2026, about 11:10 PM CST: practice-mark fix, Mission BBQ Herndon and GEMINI.md live from ae0d44d, pushed; 11:00 PM: Reston's WTOP deals and page fixes live from fd2e434, pushed; 10:35 PM: Veterans Day Reston area and the Deals-tab fix live from fe2187a, pushed with 870fb2b; 5:30 PM: Antigravity's two commits live; 1:45 PM: Hornbacher's and Post 2 list live from d1d897c)
 
 Read with `CLAUDE.md` (the project's notes). Times are Central (CST since 1 Nov). Each commit, push and deploy needs
 Tom's yes.
@@ -38,13 +38,28 @@ the publisher authorized tonight's Veterans Day merges, deploys and pushes witho
 session ("Veterans Day regional locations setup") merges each area's branch into `master` here, tests, deploys from this
 checkout and pushes; the area sessions build in their own worktrees (`[local path]`,
 `hub-fort-meade`) and never deploy. the publisher's own session adding Colorado was told the same rules.
-- **Reno–Sparks: live** since about 12:00 AM CST 11 Nov from `ea1e106` (Reno `8dd2b76` plus a test fix), pushed. 40
-  deals at 136 stops (A 13, B 26, C 1), the first area on Pacific time (`day_start` 08:00 UTC). Checked live: planner
-  files and every area's data match `master`; headless Edge at 375 px shows 40 of 40 deals, Optimal 14 stops, no
-  errors. Details: `veterans-day/README.md` ("Reno–Sparks") and `research/reno-sparks/notes.md`.
+- **Final state, checked 3:12 AM CST 11 Nov:** both areas live with their phase 2 from merge `bf47b69` (deployed about
+  12:20 AM CST, pushed); the live site is Denver's later deploy `acef121`, which keeps them. Live Reno–Sparks and Fort
+  Meade data, `app.js`, `engine.js` and `index.html` match `acef121`. `master` is at `cf59c04` (Colorado Springs on
+  top, not live).
+  - **Reno–Sparks:** 42 deals at 138 stops (A 15, B 26, C 1), 8 other-day items, 13 leads.
+  - **Fort Meade:** 42 deals at 127 stops (A 9, B 30, C 3), 15 other-day items.
+- **Phase 2** was done by two sessions started outside this one ("Veterans Day Reno–Sparks Phase 2 research", "Fort
+  Meade Veterans Day deals research"), on the same branches; this session checked each touched only its own area's
+  files, merged both, ran the 103 planner tests and the map test, deployed, compared live files and pushed. Reno: the
+  parade to A (the city's 3 Nov release), the Nevada Museum of Art "call first" (its own page: closed on national
+  holidays), BJ's Pizookie (B) and the Retro Radio Dolls show at Reno Public Market 5-7 PM (A); Dickey's out (Carson
+  City only). Fort Meade: the Greene Turtle's store list (three, call first), Showroom Shine Gambrills (C, an undated
+  offer), the counties' own closure notices; no 2026 local roundup or post event found.
+- **Firebase sign-in expired** after about 12:20 AM CST: the Colorado coordinator's deploy of `cf59c04` failed with
+  "Your credentials are no longer valid". Tom runs `firebase login --reauth`, then
+  `firebase deploy --only hosting:hub --project context-484804` here, which also publishes Colorado Springs.
+- **Reno–Sparks: first live** about 12:00 AM CST 11 Nov from `ea1e106` (Reno `8dd2b76` plus a test fix), pushed. 40
+  deals at 136 stops then (A 13, B 26, C 1), the first area on Pacific time (`day_start` 08:00 UTC). Details:
+  `veterans-day/README.md` ("Reno–Sparks") and `research/reno-sparks/notes.md`.
 - **Test fix:** the practice-mark test now strips CRLF first (`core.autocrlf` is true here, so a merge rewrote `app.js`
   with CRLF and the LF-only patterns failed). The map test once timed out on OSRM and passed on a rerun.
-- **Fort Meade: live** since about 12:00 AM CST 11 Nov from merge `b70250d`, pushed. 41 deals at 125 stops (A 9, B 30,
+- **Fort Meade: first live** about 12:00 AM CST 11 Nov from merge `b70250d`, pushed. 41 deals at 125 stops then (A 9, B 30,
   C 2), Eastern time, `?area=fort-meade` (aliases `meade`, `odenton`, `laurel`, `columbia`, ...). Stores on the
   installation are kept off the route (`on_post` in REGIONS: base access needed). The National Cryptologic Museum is
   not routed (grade C: NSA's pages say closed on federal holidays per a search summary; nsa.gov blocks automated
@@ -53,11 +68,14 @@ checkout and pushes; the area sessions build in their own worktrees (`[local pat
 - Each area stays in preview until 4 AM local (`mode()` in `app.js`): Fort Meade goes live 3 AM CST, Reno 6 AM CST.
 - In the full `npm test` run the hub guide test and the map's OSRM test each failed once under load (several sessions
   running) and passed alone; the 102 planner tests passed every time.
-- **Next (from the 3:35 AM CST check-in, after the usage reset):** a second research pass per area by background agents
-  in the same worktrees (day-of local roundups, the open items in each `notes.md`), then merge, deploy, push.
 - **Colorado (the publisher's own session, "Veterans Day locations setup"):** Denver (`vetday-denver`) and Colorado Springs
-  (`vetday-colorado-springs`) in their own worktrees; they merge into master here themselves, and each side messages
-  the other before merging.
+  (`vetday-colorado-springs`) in their own worktrees; they merged into master here themselves, each side messaging the
+  other before merging. This session did not deploy Colorado Springs on that session's behalf after its own deploy was
+  refused (the publisher's call).
+- **Open for the day:** phone checks the notes list (Fort Meade: Greene Turtle stores, Main Event, All American
+  Steakhouse, KPOT, Grace for Vets Severn, the Cryptologic Museum; Reno: Gold Dust West hours, Squeeze In stores, the
+  museum). The worktrees `[local path]` and `hub-fort-meade` hold only line-ending noise and
+  can be removed (`git worktree remove`) once the publisher no longer needs them.
 - The laptop is held awake until 9:30 AM CST by `hold-awake.ps1` (SetThreadExecutionState, display on) in this
   session's scratchpad.
 
