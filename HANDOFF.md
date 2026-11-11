@@ -3,6 +3,21 @@
 Read with `CLAUDE.md` (the project's notes). Times are Central (CST since 1 Nov). Each commit, push and deploy needs
 Tom's yes.
 
+## Veterans Day planner: Colorado Springs, Monument & Falcon, CO, night of 10-11 Nov 2026 ("complete all work without requesting my yes or permission")
+Built in `D:\Projects\_worktrees\hub-colorado-springs` (branch `vetday-colorado-springs`); merged into `master` here
+(fast-forward to `195cf6d`, 104 planner and site tests pass) and pushed about 12:25 AM CST 11 Nov.
+- **Not deployed yet.** `firebase deploy --only hosting:hub --project context-484804` from this checkout was refused by
+  the side session's permission check (auto mode, "Production Deploy"), so the live site has no `colorado-springs`
+  files (checked 12:27 AM CST). The next hub deploy from this checkout publishes it; nothing else is needed.
+- 70 deals at 279 stops (A 15, B 52, C 3), `?area=colorado-springs` (aliases `cos`, `springs`, `monument`, `falcon`,
+  `fort-carson`, `peterson`, `usafa`), Mountain time, live mode from 5 AM CST. Eight circles (the whole city plus
+  Monument, Palmer Lake and Falcon).
+- Local: Memorial Park wreath-laying 11 AM, Tri-Lakes Post 9-11 in Palmer Lake 10 AM, Pikes Peak State College 11 AM,
+  Texas T-Bone and Famous Dave's sandwich, Nana's Dim Sum's free meal. Pikes Peak Highway is free for active and
+  retired military only (the city's 2026 page). Mountain Metro announced nothing.
+- Details: `veterans-day/README.md` ("Colorado Springs, Monument & Falcon, CO") and
+  `veterans-day/research/colorado-springs/notes.md`.
+
 ## Veterans Day planner: Denver metro, CO, night of 10-11 Nov 2026 ("complete all work without requesting my yes or permission")
 Built in `D:\Projects\_worktrees\hub-denver` (branch `vetday-denver`) by a session started from the publisher's "Veterans Day
 locations setup"; merged, deployed and pushed from this checkout under that instruction. **Live** since about 12:18 AM
