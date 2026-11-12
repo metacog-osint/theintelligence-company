@@ -114,11 +114,11 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   reach Open-Meteo. Vis's own cron moved to 08:53 and 20:53 as the fallback, and its gate skips a scheduled run within
   6 hours of a successful build (the models only change twice a day). Vis's repo is public, so its minutes are free.
   Tom adds `vis` to the `DISPATCH_TOKEN` token's repository access; until then Vis's start fails with GitHub's 404
-  twice a day and the others carry on.
+  twice a day and the others carry on. (It wasn't added until 12 Nov 2026, so Vis's dispatches 404'd 8-12 Nov.)
 - **Blackout joins (12 Nov 2026, Tom asked for all steps to get Blackout online):** Blackout `update.yml` at :45
   past 01, 05, 09, 13, 17 and 21 UTC. Private repo, one job of about a minute per run: about 180 Actions minutes a
-  month. Its own cron moved to every 6 hours as the fallback. Tom adds `blackout` to the `DISPATCH_TOKEN` token's
-  repository access; until then Blackout's start fails with GitHub's 404 every four hours and the others carry on.
+  month. Its own cron moved to every 6 hours as the fallback. Tom added `blackout` (and `vis`) to the `DISPATCH_TOKEN` token
+  (named `tic-dispatch` on GitHub) the same evening; it now covers cop, cordon, elements, vis and blackout.
 - **Its clock is PropertyCast's.** The free plan allows 5 cron triggers per account, and on 5 Nov all 5 were in use:
   PropertyCast's trigger 1 (`*/5`), Vigil's ingestion Worker 4. The first deploy, with a cron of its own, was refused
   (code 10072). So `tic-dispatch` has `crons = []`, and
@@ -136,7 +136,7 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
 - Deploy: `.github/workflows/dispatch-deploy.yml` runs on a push to `master` that touches `dispatch/**` (or by hand),
   tests first (`node --test` in `dispatch/`, no network), then `wrangler deploy` and the secret upload, in
   PropertyCast's order. Deploy `tic-dispatch` before any PropertyCast trigger deploy that adds the binding: a binding
-  to a missing Worker fails. Hub repo secrets, set by Tom: `DISPATCH_TOKEN` (fine-grained; elements, cordon, cop and, once Tom adds it, vis;
+  to a missing Worker fails. Hub repo secrets, set by Tom: `DISPATCH_TOKEN` (fine-grained, `tic-dispatch`; elements, cordon, cop, vis, blackout;
   Actions: read and write), `CLOUDFLARE_API_TOKEN` ("Edit Cloudflare Workers" template), `CLOUDFLARE_ACCOUNT_ID`. The
   `CLOUDFLARE_API_TOKEN` in this machine's environment sees Pages projects but not Workers, so it can't deploy this.
 - **`DISPATCH_TOKEN` expires 5 Nov 2027** (Tom, 5 Nov 2026). Before then Tom makes a new one the same way, runs
