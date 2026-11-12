@@ -24,6 +24,9 @@ export const JOBS = [
   // Vis twice a day, after the 00Z and 12Z ensembles reach Open-Meteo (8 Nov 2026). Its own cron (08:53 and 20:53)
   // is the fallback; its gate skips a scheduled run within 6 hours of a successful build.
   { repo: "metacog-osint/vis", workflow: "build.yml", ref: "main", minutes: [25], hours: [8, 20] },
+  // Blackout every four hours (12 Nov 2026). Private repo: 6 one-job runs a day is about 180 Actions minutes a month.
+  // Its own cron (every 6 h) is the fallback.
+  { repo: "metacog-osint/blackout", workflow: "update.yml", ref: "main", minutes: [45], hours: [1, 5, 9, 13, 17, 21] },
 ];
 
 // The jobs due at this minute. The caller passes the cron's slot time, not when it woke, so a late start still

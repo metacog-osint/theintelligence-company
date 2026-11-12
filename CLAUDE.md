@@ -115,6 +115,10 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   6 hours of a successful build (the models only change twice a day). Vis's repo is public, so its minutes are free.
   Tom adds `vis` to the `DISPATCH_TOKEN` token's repository access; until then Vis's start fails with GitHub's 404
   twice a day and the others carry on.
+- **Blackout joins (12 Nov 2026, Tom asked for all steps to get Blackout online):** Blackout `update.yml` at :45
+  past 01, 05, 09, 13, 17 and 21 UTC. Private repo, one job of about a minute per run: about 180 Actions minutes a
+  month. Its own cron moved to every 6 hours as the fallback. Tom adds `blackout` to the `DISPATCH_TOKEN` token's
+  repository access; until then Blackout's start fails with GitHub's 404 every four hours and the others carry on.
 - **Its clock is PropertyCast's.** The free plan allows 5 cron triggers per account, and on 5 Nov all 5 were in use:
   PropertyCast's trigger 1 (`*/5`), Vigil's ingestion Worker 4. The first deploy, with a cron of its own, was refused
   (code 10072). So `tic-dispatch` has `crons = []`, and
