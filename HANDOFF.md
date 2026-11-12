@@ -1,7 +1,41 @@
-# Hub handoff: where things stand (11 Nov 2026, 6:30 AM CST: every Veterans Day area live from master `00a542f`, Colorado Springs included (the publisher re-signed in to Firebase and deployed). 3:15 AM CST: Veterans Day planner live with Reno–Sparks, Fort Meade and Denver from `acef121`; Colorado Springs on `master` `cf59c04` but not live, and Firebase needs `firebase login --reauth` before the next deploy. 10 Nov 2026, about 11:10 PM CST: practice-mark fix, Mission BBQ Herndon and GEMINI.md live from ae0d44d, pushed; 11:00 PM: Reston's WTOP deals and page fixes live from fd2e434, pushed; 10:35 PM: Veterans Day Reston area and the Deals-tab fix live from fe2187a, pushed with 870fb2b; 5:30 PM: Antigravity's two commits live; 1:45 PM: Hornbacher's and Post 2 list live from d1d897c)
+# Hub handoff: where things stand (12 Nov 2026, about 10:05 AM CST: the planner's field lessons and 2027 plan written up in `veterans-day/README.md`, nothing built. About 8:45 AM CST: Veterans Day field results recorded below: 26 reports, all "worked", no tips, no overrides. 11 Nov 2026, 6:30 AM CST: every Veterans Day area live from master `00a542f`, Colorado Springs included (the publisher re-signed in to Firebase and deployed). 3:15 AM CST: Veterans Day planner live with Reno–Sparks, Fort Meade and Denver from `acef121` (Colorado Springs then waited for the publisher's Firebase sign-in and deploy). 10 Nov 2026, about 11:10 PM CST: practice-mark fix, Mission BBQ Herndon and GEMINI.md live from ae0d44d, pushed; 11:00 PM: Reston's WTOP deals and page fixes live from fd2e434, pushed; 10:35 PM: Veterans Day Reston area and the Deals-tab fix live from fe2187a, pushed with 870fb2b; 5:30 PM: Antigravity's two commits live; 1:45 PM: Hornbacher's and Post 2 list live from d1d897c)
 
 Read with `CLAUDE.md` (the project's notes). Times are Central (CST since 1 Nov). Each commit, push and deploy needs
 Tom's yes.
+
+## Veterans Day planner: after the day, 12 Nov 2026 (the publisher's nine points, then "Yes, write it up")
+the publisher listed nine improvements after using the planner live (search hard to find, picking your own next stop, voice,
+car navigation, repeat visits, to go per stop, editing time and amount with receipt scanning, shopping savings, wait
+time inferred from location) and asked for more. The review, the field data behind it and the proposed order are in
+`veterans-day/README.md`, "After the day: field lessons and the 2027 plan". **Nothing is built.** Most points rest on
+one change: a visit log in place of the one-mark-per-deal `S.done`. Open for whether routes plan repeat visits,
+how receipts are read (on the phone or through Claude), and a reach counter. **Check first:** the `vetday` Worker has
+Cloudflare's observability logs on (`worker/wrangler.jsonc`), which very likely keep callers' IP addresses for 3 days
+against the page's privacy text (unverified; one log entry in the dashboard settles it; fix and redeploy need the publisher's
+sign-in and yes).
+
+## Veterans Day planner: the day's field results, 11 Nov 2026 ("Until about 9 PM CST, check every hour", then "Yes, add it")
+An hourly watch ran in one session from 11:25 PM CST on 10 Nov to 9:28 PM CST on 11 Nov: new tips, report counts
+and overrides read from D1 `vetday`. Final read 12 Nov about 8:45 AM CST; nothing came in after 7:04 PM on the 11th.
+- **26 reports, all "worked"**, at 20 places, 8:33 AM to 7:04 PM CST. No "away", "out" or line reports, so no
+  override was proposed or set (`overrides` is empty). **No tips** all day (`tips` is empty).
+- **By area:** Fargo-Moorhead 25; Bismarck-Mandan 1 (Pizza Ranch, 1431 East LaSalle Drive, 7:04 PM). None from Twin
+  Cities, Reston, Denver, Colorado Springs, Reno–Sparks or Fort Meade.
+- **By deal:** Tommy's Express 3; Hornbacher's deli, Kwik Trip, Sandy's Donuts, Scooter's and Texas Roadhouse 2 each;
+  Blarney Stone, Blaze Pizza, Buffalo Wild Wings, Cash Wise deli, Charleys, Doolittles, Freddy's, Marcus (Century Cinema),
+  Pilot, Porter Creek, Qdoba and Wendy's 1 each.
+- **About six reporters:** seven distinct caller hashes, but the hash's salt changes at 00:00 UTC (6 PM CST), so
+  someone reporting on both sides of it counts twice. Hashes were compared for equality only, never printed; the
+  Worker wipes them after two days. Two reporters marked four places within a minute (11:31 AM and 12:57 PM), so a
+  report's time is when it was tapped, not when the deal was had.
+- **Watch notes:** the 1:28 and 2:28 AM checks ran late, together at 3:28 AM (the PC most likely asleep); nothing was
+  lost, since the tables keep everything. About one D1 query in four failed with Cloudflare's code 7403 ("The given
+  account is not valid or is not authorized to access this service") and worked on an immediate retry, so script a
+  retry for any watch like this. At 7:28 AM the report path was checked without sending anything: live `app.js` posts
+  to `https://vetday.metacog.workers.dev`, the live `connect-src` allows it, and the Worker's preflight from
+  `https://theintelligence.company` returns 204 allowing POST. Reports carry no origin, so it can't be proven that
+  none came from a local test; nothing was listening on `localhost:5055` or `5056` at 9:28 AM CST. The test row from
+  10 Nov night (05:08 UTC 11 Nov) had been deleted before the day started.
 
 ## Veterans Day planner: Colorado Springs, Monument & Falcon, CO, night of 10-11 Nov 2026 ("complete all work without requesting my yes or permission")
 Built in `D:\Projects\_worktrees\hub-colorado-springs` (branch `vetday-colorado-springs`); merged into `master` here
