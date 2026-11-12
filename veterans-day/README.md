@@ -5,6 +5,9 @@ data build (`build/`), the research it is built from (`research/`) and its field
 Built 8 Nov 2026 at request for Guard colleagues and other veterans in Fargo-Moorhead, for Wednesday
 11 Nov 2026. It is the first piece of a planned "For veterans" section on the hub.
 
+**After the day (12 Nov 2026):** the field data, nine improvement points and the 2027 plan are at the end, under
+"After the day: field lessons and the 2027 plan". Nothing there is built yet.
+
 ## What it does
 - **Route:** the whole day from where you are, timed against each deal's window, with Best for me or Maximize
   (most stops, most savings, both), Google Maps links (10 stops per link, Google's limit) and other choices. Got it /
@@ -654,3 +657,139 @@ Then set `API` in `site/veterans/veterans-day/app.js` to that origin and add it 
 - Read tips: `npx wrangler d1 execute vetday --remote --command "SELECT id, ts, name, address, offer, when_, source FROM tips WHERE status = 'new'"`.
   Add a good one to `research/local-2026.json` and `CURATE`, rebuild, deploy.
 - What people report: `SELECT o, k, COUNT(*) FROM reports GROUP BY o, k`.
+
+## After the day: field lessons and the 2027 plan (12 Nov 2026)
+12 Nov 2026, the day after: "I think the site worked well, though now having used it live and for its intended
+purpose, I can see there are some improvement opportunities." His nine points are below, each with what the planner
+does now and the proposed change, then other recommendations from the field data. Written up at request ("Yes,
+write it up"); **nothing here is built yet.** Veterans Day 2027 is Thursday 11 Nov 2027. Decisions still the publisher's are
+marked **the publisher's call**.
+
+### What the field data shows (D1 `vetday`, read 12 Nov 2026 about 9:50 AM CST)
+- **26 reports, all `worked`, at 20 places**, 8:33 AM-7:04 PM CST: Fargo-Moorhead 25, Bismarck-Mandan 1 (Pizza
+  Ranch), none from the other six areas. No `away`, `out` or `line` reports, no tips, no overrides. Counts by deal are
+  in `HANDOFF.md` ("the day's field results").
+- **Repeats.** One connection (caller hash, compared for equality only) sent 15 of the 26, 8:33 AM-5:14 PM, $134 of
+  estimated value. It reported Kwik Trip, 4501 37th Ave S, at 8:33 and 9:52, and Scooter's, 3610 Veterans Blvd, at
+  8:36 and 11:51. The app keeps one mark per deal per day (`S.done[offerId]`), so either someone went back and worked
+  around it (Undo under Me, then Got it again) or two phones shared one connection.
+- **Marks made after the fact.** That connection marked Qdoba, Blarney Stone, Texas Roadhouse and Porter Creek within
+  32 seconds at 11:31 AM; another marked Hornbacher's, Sandy's, Texas Roadhouse and Tommy's Express within 39 seconds at
+  12:57 PM. A report's time is when it was tapped, not when the deal was had.
+- **Values too low.** Porter Creek and Doolittles scored $15 each (`value`, from "last year it was a free meal"). the publisher,
+  12 Nov: each "allowed users to get a free meal which could be priced as high as $48 for the entree, and accompanying
+  soup, and free dessert". So they were undervalued at least 3x, which also ranked them low in Optimal and Most
+  savings. Target and Kohl's score $0 ("a discount"). The day's shared total, $245, is low for both reasons.
+- **Reach unknown.** No analytics, by design. Each open page calls `GET /v1/state` once a minute while on screen, so
+  the Worker's request count is the only usage signal. Workers Logs keep 3 days on the free plan (Cloudflare's Workers
+  pricing page, read 12 Nov 2026), so 11 Nov's detail is gone around 14 Nov.
+
+### The foundation: a visit log
+Most of the list (repeats, edits, to go, shopping, receipts, waits) needs the same change.
+- **Now:** `S.done[offerId] = { r: "worked"|"away", t, place }`, one per deal per day; `t` is the tap; the amount is
+  always `o.value` (doubled with a spouse where allowed) in `renderMine()` and in the report's `v`. The engine reads
+  `state.done` for "done", the one-a-day `group` (haircut), Optimal's kind spacing (`kindsT`), sit-down meals and
+  fullness (fullness with the day-wide `profile.togo`).
+- **Plan:** `S.visits`, one entry per visit: `{ id, offer, place, t, r: "worked"|"away"|"out", eat:
+  "there"|"togo"|null, amount, amountFrom: "estimate"|"typed"|"receipt", added }`, where `id` is a random token made
+  on the phone and `added` marks a visit typed in afterwards. The engine keeps its `state.done`, now derived from the
+  visits (the latest per offer), so engine changes stay small; fullness and the sit-down count read each visit's `eat`,
+  with `profile.togo` only as the default answer. A new year's storage key starts empty, so no migration is needed
+  unless the 2026 key is kept.
+- **Reports:** each report carries its visit's random `id`, so an edit to the amount, time or ate there / to go can
+  correct that one row (a new `POST /v1/report/fix`, same abuse limits). The token names one report, never a person or
+  a phone. Keep whether `v` is our estimate or a typed or receipt amount, so next year's values come from real numbers.
+  Your privacy's report sentence changes to say so.
+
+### Improvement points
+1. **"The search was hard to find, users struggled with that."** Now: the full search is on Deals (`#q`); Route has
+   only the quick-add box (`#route-q`) below the route summary. Plan: one search box at the top of Route, or a search
+   button in the sticky tab bar, finding deals, places, kinds ("coffee", "car wash") and streets; each result offers
+   Go now and Add to route.
+2. **"A user simply wanted a free coffee or to go to a specific location, regardless of what the app had listed
+   next."** Now: "Go here next", "Go here first" and "Go here" exist in four places (quick-add, Deals cards, map popups,
+   Other places you could go next) and set `focus`; none sits near the top. Plan: a "What now?" row above Stop 1:
+   Coffee · Food · Nearest · Ending soon · Search. Each lists the open, reachable options of that kind by drive time
+   with one Go button, which makes it the stop, opens navigation (point 4) and re-plans the rest from there. Map pins
+   get the same Go.
+3. **Voice commands.** Feasible. Browser speech recognition (Web Speech API) works in Chrome on Android and Safari on
+   iPhone (Firefox has none) and sends the audio to Google or Apple to transcribe, so it stays off until the user turns
+   it on, with a sentence in Your privacy. Speech output (`speechSynthesis`, reading the next stop aloud) runs on the
+   phone. Commands: "next stop", "got it", "skip", "find coffee", "take me to <place>", "how much have I saved". Not
+   verified: whether recognition works on an iPhone when the page is opened from a home-screen icon; test before
+   promising it.
+4. **Vehicle mapping.** A web page can't show itself on CarPlay or Android Auto; Google Maps, Apple Maps and Waze can,
+   so the planner's job is the handoff. Now: each stop has small Directions (Google) and Apple Maps buttons that pass
+   bare coordinates (the car screen shows a dropped pin), and "Whole route in Google Maps" sits under the route. Plan:
+   one large Navigate button on Stop 1 that opens the app picked once (Google, Apple or Waze, remembered on the phone),
+   showing the business name where the app's link allows it, and after Got it, "Navigate to next: <name>" at once.
+   Waze's link takes one destination, so the whole-route link stays Google-only. Not checked yet: each app's current
+   link format for a labelled destination.
+5. **Repeat visits** ("users may revisit the same location for repeat offerings and may go to more than one location
+   of the same company for the same deal more than once; we need to be able to track that"). The visit log records
+   every visit. **the publisher's call:** whether routes plan repeats. Proposed: only when the user turns repeats on, per kind (a
+   second coffee yes, a second free meal no), with each deal's own limit ("one per guest") on its card. The concern,
+   raised once on 12 Nov: many offers are one per veteran, and routing people to the same deal at several stores is how
+   a local business decides not to run it next year. The `group` rule (one haircut a day) stays.
+6. **"Food taken to go needs to be a selectable option in the results."** Now: offers carry `mode` (dine-in, to go,
+   drive-thru, dine-in or to go) and the engine has `takeaway()`, but one setting, "Take food home when I can"
+   (`profile.togo`), covers the whole day. Plan: Got it splits into Ate there and To go where the deal allows both;
+   to-go food doesn't fill you or count as a sit-down meal, and the route adjusts. Results can filter on to go.
+7. **Editing the time and amount; receipts** ("this matters at high-end locations like Porter Creek and
+   Doolittles"). Plan: each entry under My day so far gets Edit (time, amount pre-filled with the estimate, ate there or
+   to go) beside Undo, plus "Add something I forgot" (a deal from the list, or a typed name and amount). Receipt
+   scanning, **the publisher's call:**
+   - **On the phone:** Tesseract.js (Apache-2.0), self-hosted, set up to load its worker, core and English data from
+     our own folder (no CDN, no `blob:`), fetched only the first time someone scans: a few MB. The CSP needs
+     `'wasm-unsafe-eval'` in `script-src` for WebAssembly. It pre-fills the amount for the user to confirm; the photo
+     never leaves the phone, and a browser test like `veterans-map.test.js` should prove that. Thermal receipts
+     photographed in a car will be hit and miss, so it is a helper for typing, not a replacement.
+   - **Through Claude** (image reading, via the Worker): far better at reading a "Veteran comp" line, but the photo
+     leaves the phone (receipts can carry a card's last four digits and a server's name), the Privacy text changes, and
+     each receipt costs something: price it on the current model before asking.
+   - Proposed: on the phone first.
+8. **Shopping savings** (Kohl's, Target). Now: `value` 0, shown as "a discount". Plan: Got it on a shopping deal asks
+   "How much did you save?"; "Add savings" takes any store and amount. Both count in the day's total and, as typed
+   amounts, in the shared total.
+9. **Wait time from location** ("When a user selects got it and their location indicates they are still at the site,
+   could the program infer the potential wait time from that?"). Yes, within limits. A web page gets location only
+   while it is open on screen, and it sits in the background while the navigation app drives. Arrival: the first
+   location fix within about 75 m of the stop while the page is open; otherwise the time Navigate was tapped plus the
+   drive time. Got it minus arrival is roughly the line for counter and drive-thru deals; for a sit-down meal it is time
+   to be served or the whole meal, so infer only for quick stops. Then one tap: "You were here about 14 min. Share it
+   as the line?" Only the minutes are sent, as a `line` report does now (none came in all day). A fix still at the
+   store a while after Got it suggests the food was eaten there, which can pre-answer point 6. Your privacy gains a
+   sentence.
+
+### Other recommendations (12 Nov 2026)
+- **Possible privacy gap: check before anything else.** `worker/wrangler.jsonc` has `"observability": { "enabled":
+  true }`, documented nowhere. Cloudflare's Workers Logs docs say invocation logs capture request metadata and headers,
+  which very likely includes each caller's IP address and approximate location, kept 3 days on the free plan. The page
+  says the server keeps only "a scrambled form of your network address for a day". Not verified: one log entry in the
+  dashboard (Workers & Pages → vetday → Logs) settles it. Fix: `"observability": { "enabled": true, "logs": {
+  "invocation_logs": false } }` (or `"enabled": false`) and a Worker redeploy with the account owner's sign-in and yes; read the
+  request counts first if they're wanted.
+- **Real values.** Sit-down local places (Porter Creek, Doolittles, Fryn' Pan) get a value range, not a flat $15, and
+  typed and receipt amounts set next year's numbers. Asking this year's users now what those meals came to fixes the
+  2027 starting values while memories are fresh.
+- **Bad news in one tap.** On arrival, large Got it / Turned away / They ran out / Line buttons replace the "Report
+  the line…" dropdown, which nobody used.
+- **Reach without tracking** (**the publisher's call**: it changes "No analytics or tracking"). The Worker could count page
+  opens per area per hour, with no IP and no ID, so next year shows whether an area was used.
+- **Installable.** The planner page links no web manifest (the hub has `site.webmanifest`). A manifest and a service
+  worker with an offline copy open it full-screen from the home screen and keep it working in a dead zone.
+- **Car mode.** One screen joining points 2-4: large text, Navigate, Got it, Something else, and the mic.
+- **2027.** Six of the eight areas were built in the last 36 hours before the day and drew no reports. Start research
+  in mid-October, recruit one colleague per area as the local checker, and open tips earlier. Make the code
+  year-neutral: `KEY = "vd2026-v1"` in `app.js`, the dates and "2026" text in `index.html` and `app.js`, and REGIONS'
+  `day_start` in `build_data.py`.
+
+### Suggested order
+1. The visit log, with Edit, Add, ate there or to go, repeats and shopping savings (app, engine, the Worker's `fix`
+   route, Privacy text).
+2. Top search and What now?, the Navigate handoff and car mode.
+3. Wait-time inference, voice, and receipt reading on the phone.
+4. The reach counter (if wanted) and the installable app.
+
+The privacy check comes before all of them. Each step: tests first (`veterans.test.js`, `veterans-engine.test.js`, the
+Worker's), then approved to commit and deploy.
