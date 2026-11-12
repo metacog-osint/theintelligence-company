@@ -1,4 +1,4 @@
-# Hub handoff: where things stand (12 Nov 2026, about 10:05 AM CST: the planner's field lessons and 2027 plan written up in `veterans-day/README.md`, nothing built. About 8:45 AM CST: Veterans Day field results recorded below: 26 reports, all "worked", no tips, no overrides. 11 Nov 2026, 6:30 AM CST: every Veterans Day area live from master `00a542f`, Colorado Springs included (the publisher re-signed in to Firebase and deployed). 3:15 AM CST: Veterans Day planner live with Reno–Sparks, Fort Meade and Denver from `acef121` (Colorado Springs then waited for the publisher's Firebase sign-in and deploy). 10 Nov 2026, about 11:10 PM CST: practice-mark fix, Mission BBQ Herndon and GEMINI.md live from ae0d44d, pushed; 11:00 PM: Reston's WTOP deals and page fixes live from fd2e434, pushed; 10:35 PM: Veterans Day Reston area and the Deals-tab fix live from fe2187a, pushed with 870fb2b; 5:30 PM: Antigravity's two commits live; 1:45 PM: Hornbacher's and Post 2 list live from d1d897c)
+# Hub handoff: where things stand (12 Nov 2026, about 10:30 AM CST: the `vetday` report hashes, salts and rate rows wiped by hand. 10:20 AM CST: the `vetday` Worker's invocation logs turned off and the Worker redeployed (privacy fix, approved; not committed). About 10:05 AM CST: the planner's field lessons and 2027 plan written up in `veterans-day/README.md`, nothing built. About 8:45 AM CST: Veterans Day field results recorded below: 26 reports, all "worked", no tips, no overrides. 11 Nov 2026, 6:30 AM CST: every Veterans Day area live from master `00a542f`, Colorado Springs included (the publisher re-signed in to Firebase and deployed). 3:15 AM CST: Veterans Day planner live with Reno–Sparks, Fort Meade and Denver from `acef121` (Colorado Springs then waited for the publisher's Firebase sign-in and deploy). 10 Nov 2026, about 11:10 PM CST: practice-mark fix, Mission BBQ Herndon and GEMINI.md live from ae0d44d, pushed; 11:00 PM: Reston's WTOP deals and page fixes live from fd2e434, pushed; 10:35 PM: Veterans Day Reston area and the Deals-tab fix live from fe2187a, pushed with 870fb2b; 5:30 PM: Antigravity's two commits live; 1:45 PM: Hornbacher's and Post 2 list live from d1d897c)
 
 Read with `CLAUDE.md` (the project's notes). Times are Central (CST since 1 Nov). Each commit, push and deploy needs
 Tom's yes.
@@ -9,10 +9,14 @@ car navigation, repeat visits, to go per stop, editing time and amount with rece
 time inferred from location) and asked for more. The review, the field data behind it and the proposed order are in
 `veterans-day/README.md`, "After the day: field lessons and the 2027 plan". **Nothing is built.** Most points rest on
 one change: a visit log in place of the one-mark-per-deal `S.done`. Open for whether routes plan repeat visits,
-how receipts are read (on the phone or through Claude), and a reach counter. **Check first:** the `vetday` Worker has
-Cloudflare's observability logs on (`worker/wrangler.jsonc`), which very likely keep callers' IP addresses for 3 days
-against the page's privacy text (unverified; one log entry in the dashboard settles it; fix and redeploy need the publisher's
-sign-in and yes).
+how receipts are read (on the phone or through Claude), and a reach counter. **Privacy fixes:** the `vetday` Worker's
+Cloudflare invocation logs kept each caller's full IP address and city, postal code and coordinates for 3 days, against
+the page's privacy text (confirmed about 10:15 AM CST with `wrangler tail --ip self` on two test requests). Turned off
+(`invocation_logs: false`) and the Worker redeployed about 10:20 AM CST, approved (version `969982b1`); the
+`wrangler.jsonc` change is not committed. The Worker's hash and salt wipe runs only when a new day's first report
+arrives, so after the holiday the 26 reports' hashes and the 11 and 12 Nov salts stayed stored; wiped by hand about
+10:30 AM CST (approved): hashes cleared, salts and rate rows deleted, the 26 reports kept. For 2027 the wipe needs a
+daily cron. Details in the README.
 
 ## Veterans Day planner: the day's field results, 11 Nov 2026 ("Until about 9 PM CST, check every hour", then "Yes, add it")
 An hourly watch ran in one session from 11:25 PM CST on 10 Nov to 9:28 PM CST on 11 Nov: new tips, report counts

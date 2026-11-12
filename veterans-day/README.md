@@ -762,13 +762,30 @@ Most of the list (repeats, edits, to go, shopping, receipts, waits) needs the sa
    sentence.
 
 ### Other recommendations (12 Nov 2026)
-- **Possible privacy gap: check before anything else.** `worker/wrangler.jsonc` has `"observability": { "enabled":
-  true }`, documented nowhere. Cloudflare's Workers Logs docs say invocation logs capture request metadata and headers,
-  which very likely includes each caller's IP address and approximate location, kept 3 days on the free plan. The page
-  says the server keeps only "a scrambled form of your network address for a day". Not verified: one log entry in the
-  dashboard (Workers & Pages → vetday → Logs) settles it. Fix: `"observability": { "enabled": true, "logs": {
-  "invocation_logs": false } }` (or `"enabled": false`) and a Worker redeploy with the account owner's sign-in and yes; read the
-  request counts first if they're wanted.
+- **Privacy gap, confirmed and fixed 12 Nov 2026 (details below).** `worker/wrangler.jsonc` had
+  `"observability": { "enabled": true }`, documented nowhere, so Workers Logs keeps every request's invocation log for
+  3 days (free plan). A `wrangler tail vetday --ip self` of two marked test requests from this machine
+  (`/v1/state?probe=logcheck-tail0` and `1`) showed what each event carries: the caller's full IP address
+  (`cf-connecting-ip` and `x-real-ip`, not redacted) and, under `cf`, city, region, postal code, latitude, longitude
+  and network operator (checked for presence only; no values printed). Workers Logs stores that same event
+  (Cloudflare's docs). The page says the server keeps only "a scrambled form of your network address for a day". The
+  stored logs themselves weren't opened: the browser is signed in to a different Cloudflare account, and Wrangler has
+  no command that reads them. **Fixed about 10:20 AM CST** ("Yes, fix it"): `"observability": { "enabled": true,
+  "logs": { "invocation_logs": false } }` (the Worker's own `console.error` on a failure stays; it logs no IP) and the
+  Worker redeployed from unchanged code, version `969982b1-38c6-424d-9269-df47ad5696a0`. The 10 Worker tests pass;
+  afterwards `/v1/state` answered and the site's report preflight got 204. Wrangler can't read the setting back, so
+  check it in the dashboard once signed in to the right account. Logs already written expire on their own, 11 Nov's
+  around 14 Nov.
+- **Second gap, found the same morning: the hashes outlive the promise.** The Worker wipes caller hashes from
+  reports and tips, and deletes old salts and rate rows, only inside `saltFor`, which runs when a report or tip comes
+  in; the wipe happens on the first one of a new UTC day. After the holiday nothing comes in, so at 10:20 AM CST
+  12 Nov all 26 reports still carried hashes and the 11 and 12 Nov salts were stored (read with D1; values not
+  printed). With its salt kept, a hash can be checked against a known IP address. The page says the scrambled address
+  is kept "for a day, and then deletes it"; the code means two days. For 2027: wipe on a daily cron (the account has
+  free cron slots) or on reads too, and make the page and the code agree. **Wiped by hand about 10:30 AM CST 12 Nov**
+  ("Yes, wipe them"): `h` cleared on all 26 reports (tips had none), both salts and all 8 rate rows deleted. The
+  26 reports themselves stay ($245 in all); `/v1/state` still answered afterwards. A report sent later starts a new
+  salt for its day.
 - **Real values.** Sit-down local places (Porter Creek, Doolittles, Fryn' Pan) get a value range, not a flat $15, and
   typed and receipt amounts set next year's numbers. Asking this year's users now what those meals came to fixes the
   2027 starting values while memories are fresh.

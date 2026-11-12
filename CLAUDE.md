@@ -182,8 +182,9 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
 - **Denver metro, CO (11 Nov 2026 overnight, the publisher asleep; his instruction covered research, build, merge and deploy):** `denver`, the first area on Mountain time, 101 deals at 397 stops. A big metro thins a chain's stores (`thin` in REGIONS) and spaces the drive grid (`grid_km`); the Colorado chains (shared with Colorado Springs) are commit `ffba0e3`. Details in `veterans-day/README.md` ("Denver metro, CO") and `research/denver/notes.md`; live status in `HANDOFF.md`.
 - **Colorado Springs, Monument & Falcon, CO (11 Nov 2026 overnight, the publisher asleep; same instruction):** `colorado-springs`, the second Mountain area, 71 deals at 280 stops in eight circles (the whole city plus Monument, Palmer Lake and Falcon). Few local businesses posted 2026 offers; the shared Colorado chains carry it. Details in `veterans-day/README.md` ("Colorado Springs, Monument & Falcon, CO") and `research/colorado-springs/notes.md`; live status in `HANDOFF.md`.
 - **After the day (12 Nov 2026):** nine improvement points, the field data and the 2027 plan are in
-  `veterans-day/README.md` ("After the day"). Nothing is built; check the `vetday` Worker's observability logs against
-  the privacy text first (`HANDOFF.md`).
+  `veterans-day/README.md` ("After the day"). Nothing is built. The `vetday` Worker's invocation logs (callers' IP
+  addresses and locations, 3 days) were turned off 12 Nov 2026; its hash and salt wipe needs traffic to run, so
+  2026's were wiped by hand the same day (`HANDOFF.md`).
 - **Never deploy from `D:\Projects\tic-vetday`** (branch `veterans-day`, 8 Nov): Antigravity did on 10 Nov and its 46
   files most likely replaced the live hub for a while. `GEMINI.md` points Gemini at this file and `HANDOFF.md`. Details and the corrections in `veterans-day/README.md` ("Reston & Northern
   Virginia") and `research/reston-va/notes.md`. Antigravity also deployed two unnoted commits that evening,
