@@ -58,7 +58,7 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   satellite catalog changes and objects in orbit by owner code, from GCAT and Launch Library 2;
   `[local path]`, private repo `metacog-osint/orbit`, Cloudflare Pages `orbit-q2t.pages.dev`) went live at
   `orbit.theintelligence.company` on 13 Nov 2026. The hub's listing was prepared the same day (side session "Orbit
-  listing"; wording not yet approved by Tom): **beta** in the house bar (v1.9, after Noisefloor, "Space · orbital
+  listing"; wording Tom approved; live that day): **beta** in the house bar (v1.9, after Noisefloor, "Space · orbital
   activity"), in the product lists after Headwind, and on the drawing (its `line` is the bar's long text; the Space
   layer's launch and catalog-change rows are "now", manoeuvres and counterspace stay "dev"). Describe it only from
   what is live: manoeuvres and counterspace are not built. Its footer credit links `/#src-h` (its Sources heading).
@@ -84,7 +84,7 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   repo's main branch (checked 5 Nov 2026; some local trees lag): Watchfloor `web/`, Title 10 `deploy/public/`,
   Noisefloor `site_src/`, PropertyCast `src/wx/static/`, CONTEXT `public/`, Vigil `public/`, Listening Post
   `web/public/`, and COP, Elements and Cordon.
-- `site/shared/tic-nav.js` (v1.9, 13 Nov 2026: Orbit added after Noisefloor, committed, rollout in `HANDOFF.md`; v1.8,
+- `site/shared/tic-nav.js` (v1.9, 13 Nov 2026: Orbit added after Noisefloor, live on every site that day; v1.8,
   13 Nov 2026: Headwind added after Blackout, live on every site that day; v1.7, 13 Nov
   2026: Blackout's power and routing wording, committed, not pushed or rolled
   out; v1.6, 13 Nov 2026 UTC: Blackout added; v1.5, 8 Nov: Vis) + `tic-nav.css` (v1.2, 7 Nov 2026; rollout status in `HANDOFF.md`): **the house bar** on every program site (Tom: "I need a
