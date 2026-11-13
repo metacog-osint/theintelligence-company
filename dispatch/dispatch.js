@@ -27,6 +27,9 @@ export const JOBS = [
   // Blackout every four hours (12 Nov 2026). Private repo: 6 one-job runs a day is about 180 Actions minutes a month.
   // Its own cron (every 6 h) is the fallback.
   { repo: "metacog-osint/blackout", workflow: "update.yml", ref: "main", minutes: [45], hours: [1, 5, 9, 13, 17, 21] },
+  // Headwind every six hours (13 Nov 2026): its sources change daily at most. Private repo: 4 one-job runs a day.
+  // Its own cron (every 6 h) is the fallback.
+  { repo: "metacog-osint/headwind", workflow: "update.yml", ref: "main", minutes: [50], hours: [3, 9, 15, 21] },
 ];
 
 // The jobs due at this minute. The caller passes the cron's slot time, not when it woke, so a late start still
