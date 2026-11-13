@@ -30,6 +30,9 @@ export const JOBS = [
   // Headwind every six hours (13 Nov 2026): its sources change daily at most. Private repo: 4 one-job runs a day.
   // Its own cron (every 6 h) is the fallback.
   { repo: "metacog-osint/headwind", workflow: "update.yml", ref: "main", minutes: [50], hours: [3, 9, 15, 21] },
+  // Orbit every six hours (13 Nov 2026), the first about 35 minutes after GCAT republishes (about 00:20 UTC). Private
+  // repo: 4 one-job runs a day. Its own cron (:41 every 6 h) is the fallback.
+  { repo: "metacog-osint/orbit", workflow: "update.yml", ref: "main", minutes: [55], hours: [0, 6, 12, 18] },
 ];
 
 // The jobs due at this minute. The caller passes the cron's slot time, not when it woke, so a late start still
