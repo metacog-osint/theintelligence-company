@@ -680,9 +680,16 @@ marked **the publisher's call**.
   12 Nov: each "allowed users to get a free meal which could be priced as high as $48 for the entree, and accompanying
   soup, and free dessert". So they were undervalued at least 3x, which also ranked them low in Optimal and Most
   savings. Target and Kohl's score $0 ("a discount"). The day's shared total, $245, is low for both reasons.
-- **Reach unknown.** No analytics, by design. Each open page calls `GET /v1/state` once a minute while on screen, so
-  the Worker's request count is the only usage signal. Workers Logs keep 3 days on the free plan (Cloudflare's Workers
-  pricing page, read 12 Nov 2026), so 11 Nov's detail is gone around 14 Nov.
+- **Reach, roughly.** No analytics, by design. Each open page calls `GET /v1/state` once a minute while on screen, so
+  the Worker's request count is the only usage signal. Read 12 Nov about 7:45 PM CST in the dashboard's Metrics tab
+  (the account owner signed in to the right account; totals only, no log entries opened): **484 Worker requests on 11 Nov** (midnight
+  to midnight CST; the dashboard put 10 Nov 88% lower, about 257). 53 of them came between midnight and 12:45 AM,
+  most likely the overnight build sessions' preview checks (a preview page calls the Worker even when its origin is
+  refused). Daytime use ran from about 6:15 AM to 7:15 PM, busiest 11:45 AM-1:30 PM (peak 25 requests in the
+  15 minutes from 12:45), with a smaller rise about 5-6 PM and a few stray requests later. Take out the 26 reports and
+  their browser preflights and about 380 once-a-minute checks remain: roughly 6 hours of screen-on time across
+  everyone all day, and under two phones open at once even at the peak (an upper bound: page loads and returning to
+  the tab add checks). It can't tell people or areas apart.
 
 ### The foundation: a visit log
 Most of the list (repeats, edits, to go, shopping, receipts, waits) needs the same change.
@@ -773,9 +780,9 @@ Most of the list (repeats, edits, to go, shopping, receipts, waits) needs the sa
   no command that reads them. **Fixed about 10:20 AM CST** ("Yes, fix it"): `"observability": { "enabled": true,
   "logs": { "invocation_logs": false } }` (the Worker's own `console.error` on a failure stays; it logs no IP) and the
   Worker redeployed from unchanged code, version `969982b1-38c6-424d-9269-df47ad5696a0`. The 10 Worker tests pass;
-  afterwards `/v1/state` answered and the site's report preflight got 204. Wrangler can't read the setting back, so
-  check it in the dashboard once signed in to the right account. Logs already written expire on their own, 11 Nov's
-  around 14 Nov.
+  afterwards `/v1/state` answered and the site's report preflight got 204. Seen in the dashboard about 7:45 PM CST
+  (vetday → Settings → Observability): Logs on, "Include Invocation logs" off, Traces off. Logs already written
+  expire on their own, 11 Nov's around 14 Nov.
 - **Second gap, found the same morning: the hashes outlive the promise.** The Worker wipes caller hashes from
   reports and tips, and deletes old salts and rate rows, only inside `saltFor`, which runs when a report or tip comes
   in; the wipe happens on the first one of a new UTC day. After the holiday nothing comes in, so at 10:20 AM CST
