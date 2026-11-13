@@ -1,4 +1,4 @@
-// Checks the eight live feeds the hub reads against the same field list the browser tests use (lib/feeds.js SHAPES),
+// Checks the nine live feeds the hub reads against the same field list the browser tests use (lib/feeds.js SHAPES),
 // so a product changing its feed shows up here before visitors see a static line. Needs the internet:
 //   cd tests && npm run check:live
 // Exits 1 when a feed is unreachable, refuses other sites (CORS) or is missing a field the hub reads. A 503 from
