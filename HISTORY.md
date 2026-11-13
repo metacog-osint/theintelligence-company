@@ -36,8 +36,8 @@ stays short. Nothing here loads automatically. `CLAUDE.md` is the current refere
   Vigil's label). Rolled out to all ten sites and Listening Post the night of 12 Nov CST (commits in `HANDOFF.md`);
   PropertyCast with its 13 Nov publish. Blackout's own page gets the files from its own session. **v1.7** (13 Nov
   2026, hub `cf879a3`; Tom: "Approve, roll out") follows Blackout's new power and routing lanes: label "Cyberspace ·
-  internet and power outages", short "Where the lights go out and the internet goes dark, worldwide." (rollout in
-  `HANDOFF.md`).
+  internet and power outages", short "Where the lights go out and the internet goes dark, worldwide." Live on
+  the hub and every site by about 11:20 AM CST 13 Nov; PropertyCast with its 14 Nov publish (rollout in `HANDOFF.md`).
   **Rolled out
   (1 Nov 2026 UTC):** Title 10 (e7286a4, v1.0; v1.1 since 5 Nov 2026, 49a49c5, deployed from a clean worktree because
   its main folder holds an untracked `deploy/public/data/benefits-pack.json` that must not ship),
