@@ -54,6 +54,14 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   bar's long text; the Systems layer's sanctions, price and mineral-reliance rows are "now"). Pushed, deployed and rolled out the same day
   (`HANDOFF.md`). Its footer credit links its home page (its Sources card has
   no anchor). "Critical minerals" stays a separate planned tag on the drawing.
+- **Orbit** (space: orbital launches of the last 7 and 30 days, launches scheduled in the next 14 days, reentries,
+  satellite catalog changes and objects in orbit by owner code, from GCAT and Launch Library 2;
+  `D:\Projects\orbit`, private repo `metacog-osint/orbit`, Cloudflare Pages `orbit-q2t.pages.dev`) went live at
+  `orbit.theintelligence.company` on 13 Nov 2026. The hub's listing was prepared the same day (side session "Orbit
+  listing"; wording not yet approved by Tom): **beta** in the house bar (v1.9, after Noisefloor, "Space · orbital
+  activity"), in the product lists after Headwind, and on the drawing (its `line` is the bar's long text; the Space
+  layer's launch and catalog-change rows are "now", manoeuvres and counterspace stay "dev"). Describe it only from
+  what is live: manoeuvres and counterspace are not built. Its footer credit links `/#src-h` (its Sources heading).
 - **Context vs Watchfloor is parked** (Tom, 1 Nov 2026: "stop it, i'm not deciding on this yet"). Both may stay with
   different scopes. Leave Context's "Watchfloor's predecessor" line alone, and don't raise the question again until
   Tom does. Watchfloor's noindex and copyright registration or ™ are also left as they are for now.
@@ -76,7 +84,8 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   repo's main branch (checked 5 Nov 2026; some local trees lag): Watchfloor `web/`, Title 10 `deploy/public/`,
   Noisefloor `site_src/`, PropertyCast `src/wx/static/`, CONTEXT `public/`, Vigil `public/`, Listening Post
   `web/public/`, and COP, Elements and Cordon.
-- `site/shared/tic-nav.js` (v1.8, 13 Nov 2026: Headwind added after Blackout, live on every site that day; v1.7, 13 Nov
+- `site/shared/tic-nav.js` (v1.9, 13 Nov 2026: Orbit added after Noisefloor, committed, rollout in `HANDOFF.md`; v1.8,
+  13 Nov 2026: Headwind added after Blackout, live on every site that day; v1.7, 13 Nov
   2026: Blackout's power and routing wording, committed, not pushed or rolled
   out; v1.6, 13 Nov 2026 UTC: Blackout added; v1.5, 8 Nov: Vis) + `tic-nav.css` (v1.2, 7 Nov 2026; rollout status in `HANDOFF.md`): **the house bar** on every program site (Tom: "I need a
   link back to the home page on each subsite… a dropdown menu of all programs with their primary layer area or topic
@@ -144,6 +153,11 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   daily at most). Private repo, one job a run. Its own cron (`23 */6`) is the fallback; it has no gate job yet, so
   a late scheduled run repeats a dispatched one. Tom must add `headwind` to the `tic-dispatch` token's repository
   access; until then its start fails with GitHub's 404 four times a day and the others carry on.
+- **Orbit joins (13 Nov 2026):** Orbit `update.yml` at :55 past 00, 06, 12 and 18 UTC, the first about 35 minutes
+  after GCAT republishes (about 00:20 UTC). Private repo, one job a run. Its own cron (`41 */6`) is the fallback; it
+  has no gate job, so a late scheduled run repeats a dispatched one (GCAT is only asked for Last-Modified, and
+  Launch Library 2 gets one request a run). Tom must add `orbit` to the `tic-dispatch` token's repository access;
+  until then its start fails with GitHub's 404 four times a day and the others carry on.
 - **Its clock is PropertyCast's.** The free plan allows 5 cron triggers per account, and on 5 Nov all 5 were in use:
   PropertyCast's trigger 1 (`*/5`), Vigil's ingestion Worker 4. The first deploy, with a cron of its own, was refused
   (code 10072). So `tic-dispatch` has `crons = []`, and
@@ -377,6 +391,7 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
     `/#sources`, Title 10 `/#contacts` ("Contacts & sources"), Context `/sources` and Listening Post `/sources.html`
     (both linked since `4d05cf2`); since 7 Nov 2026 also Elements and Cordon `/#health-h` (each page's Sources card), since 8 Nov Vis `/#sources`,
     since 13 Nov Blackout's home page (it has no Sources section yet) and Headwind's (its Sources card has no anchor),
+    Orbit `/#src-h` (its "Sources and freshness" heading),
     and COP's home page (its Sources sit in its side panel, and its address after `#` holds the map view, so a
     `#sources` link wouldn't hold). Each ends in ↗ joined by `&nbsp;`, so the arrow never starts a line. A test checks
     there is one link per program in the house bar.
@@ -407,11 +422,12 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
     (400–500 KB, so it is never downloaded). Vis (8 Nov 2026) is on Cloudflare Pages, which sends an ETag but no
     `Last-Modified`, so the hub reads its whole `data/feed.geojson` (168 KB, about 8 KB as served, brotli) for
     `generated_at`. Blackout (13 Nov 2026) is on Cloudflare Pages too, so its whole feed is read the same way (about
-    40 KB, about 5 KB as served), and so is Headwind's (13 Nov 2026; about 150 KB, about 8 KB as served). Since 5 Nov 2026 the line adds "· running late" in amber when its own
+    40 KB, about 5 KB as served), and so is Headwind's (13 Nov 2026; about 150 KB, about 8 KB as served), and Orbit's
+    (13 Nov 2026; about 50 KB, about 5 KB as served). Since 5 Nov 2026 the line adds "· running late" in amber when its own
     "Updated … ago" is older than that program's `fresh_hours` in COP's health (COP's own `state` judges the newest
     data, not publication, so it isn't used); the reason is in the tooltip. If Vigil's `/api/summary` 503s, Vigil's
     time falls back to COP's `data_as_of`. The
-    tooltip gives the full time in the viewer's zone. `connect-src` lists the cop., elements., cordon., vis., blackout. and headwind. origins.
+    tooltip gives the full time in the viewer's zone. `connect-src` lists the cop., elements., cordon., vis., blackout., headwind. and orbit. origins.
     Add a program by giving its row `data-product` and calling `setFresh` with its most direct publish time.
   - **Vigil feature block:** the signed-in `img/vigil-actors.webp` (see Product screenshots); its three points are
     from Vigil's README, and Vigil's other pages need an account. The rule: **don't put leak-site victim names on the
