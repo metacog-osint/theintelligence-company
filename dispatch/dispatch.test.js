@@ -66,6 +66,16 @@ test("Headwind runs every six hours, at :50 past 03, 09, 15 and 21 UTC", () => {
   assert.deepEqual(due(JOBS, at(50, 10)).map((j) => j.repo), []);
 });
 
+test("Orbit runs every six hours, at :55 past 00, 06, 12 and 18 UTC", () => {
+  const ob = JOBS.find((j) => j.repo === "metacog-osint/orbit");
+  assert.equal(ob.workflow, "update.yml");
+  assert.equal(ob.ref, "main");
+  assert.deepEqual(ob.minutes, [55]);
+  assert.deepEqual(ob.hours, [0, 6, 12, 18]);
+  assert.deepEqual(due(JOBS, at(55, 6)).map((j) => j.repo), ["metacog-osint/orbit"]);
+  assert.deepEqual(due(JOBS, at(55, 7)).map((j) => j.repo), []);
+});
+
 test("no two jobs ever start in the same 5-minute slot", () => {
   const seen = new Set();
   for (const j of JOBS) {
