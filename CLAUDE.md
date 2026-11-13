@@ -36,6 +36,12 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   `metacog-osint/vis`, Cloudflare Pages) went live at `vis.theintelligence.company` on 8 Nov 2026 and is **beta** on
   the hub, in the house bar (v1.5) and in COP since the same day (Tom's yes, including the wording). Its drawing line
   ends "A thunderstorm hazard and scoring against station reports are planned"; update it as those arrive.
+- **Blackout** (internet outages, censorship measurements, and cloud and satellite providers' own incident reports;
+  `[local path]`, private repo `metacog-osint/blackout`, Cloudflare Pages) went live at
+  `blackout.theintelligence.company` on 12 Nov 2026 and joined COP the same day. Since 13 Nov 2026 UTC it is **beta**
+  on the hub, in the house bar (v1.6) and on the drawing, where its line ends "Night lights, power-grid data and BGP
+  routing beyond IODA's are planned"; update it as those arrive. Its footer credit links its home page, which has no
+  Sources section yet; point it there when one exists.
 - **Context vs Watchfloor is parked** (Tom, 1 Nov 2026: "stop it, i'm not deciding on this yet"). Both may stay with
   different scopes. Leave Context's "Watchfloor's predecessor" line alone, and don't raise the question again until
   Tom does. Watchfloor's noindex and copyright registration or ™ are also left as they are for now.
@@ -58,7 +64,7 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   repo's main branch (checked 5 Nov 2026; some local trees lag): Watchfloor `web/`, Title 10 `deploy/public/`,
   Noisefloor `site_src/`, PropertyCast `src/wx/static/`, CONTEXT `public/`, Vigil `public/`, Listening Post
   `web/public/`, and COP, Elements and Cordon.
-- `site/shared/tic-nav.js` (v1.5, 8 Nov 2026: Vis added) + `tic-nav.css` (v1.2, 7 Nov 2026; rollout status in `HANDOFF.md`): **the house bar** on every program site (Tom: "I need a
+- `site/shared/tic-nav.js` (v1.6, 13 Nov 2026 UTC: Blackout added; v1.5, 8 Nov: Vis) + `tic-nav.css` (v1.2, 7 Nov 2026; rollout status in `HANDOFF.md`): **the house bar** on every program site (Tom: "I need a
   link back to the home page on each subsite… a dropdown menu of all programs with their primary layer area or topic
   labeled (and a more in-depth description upon mouse-over)"). It is a slim navy bar with "← The Intelligence Company"
   and a **Programs ▾** disclosure menu. That menu lists every live program grouped "Across the layers" and "Other
@@ -80,7 +86,8 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
     incidents, …" and "Weather for more of the world is planned". `oe.js` names EMSC ("EMSC's independent
     catalogue"), NOAA, MeteoAlarm (38 European countries and Israel) and NIFC.
   - PropertyCast builds the bar into its page at its daily publish, so check its home page's HTML, not `/tic-nav.js`.
-- **Rolling out a shared file** (all ten program sites carry both, and Vis since 8 Nov 2026). When a program is added or renamed, update
+- **Rolling out a shared file** (all ten program sites carry both, Vis since 8 Nov 2026, and Blackout's own session
+  copies them into its page). When a program is added or renamed, update
   `PROGRAMS` in `tic-nav.js` and copy it to every site. Method: a git worktree per repo, test locally, Tom's yes, push
   to main, deploy the repo's own way. **Stop local preview servers with Stop-Process on their node or esbuild PIDs:**
   stopping the task only kills the shell, and the leftover processes lock the worktree folder. Per site (each
@@ -284,7 +291,7 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   code or styles, new-tab links, absolute URLs on the 404 page, `connect-src`, ruled-out wording, footer date vs
   sitemap; the page with sample feeds (`tests/fixtures`), its fallbacks, guide, keyboard and phone layout; and axe
   (WCAG 2.2 AA) in light and dark. When a rule here changes, change its test too. The workflow's `feeds` job checks
-  the seven live feeds (`tests/check-live.js`) and doesn't block: a product being down turns only that job red.
+  the eight live feeds (`tests/check-live.js`) and doesn't block: a product being down turns only that job red.
   This machine has no Playwright Chromium; run the browser tests on the installed Edge with a preload that wraps
   `chromium.launch` in `{ channel: "msedge" }` (`NODE_OPTIONS="--import=file:///<helper>.mjs" node --test`), or
   run `npx playwright install chromium` once (a download of about 150 MB).
@@ -351,6 +358,7 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   - **Footer Sources links:** Noisefloor `/sources`, Watchfloor `/#/sources`, Vigil `/sources`, PropertyCast
     `/#sources`, Title 10 `/#contacts` ("Contacts & sources"), Context `/sources` and Listening Post `/sources.html`
     (both linked since `4d05cf2`); since 7 Nov 2026 also Elements and Cordon `/#health-h` (each page's Sources card), since 8 Nov Vis `/#sources`,
+    since 13 Nov Blackout's home page (it has no Sources section yet),
     and COP's home page (its Sources sit in its side panel, and its address after `#` holds the map view, so a
     `#sources` link wouldn't hold). Each ends in ↗ joined by `&nbsp;`, so the arrow never starts a line. A test checks
     there is one link per program in the house bar.
@@ -380,11 +388,12 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
     small file of its own), and Elements and Cordon from a HEAD request's `Last-Modified` on their `data/feed.geojson`
     (400–500 KB, so it is never downloaded). Vis (8 Nov 2026) is on Cloudflare Pages, which sends an ETag but no
     `Last-Modified`, so the hub reads its whole `data/feed.geojson` (168 KB, about 8 KB as served, brotli) for
-    `generated_at`. Since 5 Nov 2026 the line adds "· running late" in amber when its own
+    `generated_at`. Blackout (13 Nov 2026) is on Cloudflare Pages too, so its whole feed is read the same way (about
+    40 KB, about 5 KB as served). Since 5 Nov 2026 the line adds "· running late" in amber when its own
     "Updated … ago" is older than that program's `fresh_hours` in COP's health (COP's own `state` judges the newest
     data, not publication, so it isn't used); the reason is in the tooltip. If Vigil's `/api/summary` 503s, Vigil's
     time falls back to COP's `data_as_of`. The
-    tooltip gives the full time in the viewer's zone. `connect-src` lists the cop., elements., cordon. and vis. origins.
+    tooltip gives the full time in the viewer's zone. `connect-src` lists the cop., elements., cordon., vis. and blackout. origins.
     Add a program by giving its row `data-product` and calling `setFresh` with its most direct publish time.
   - **Vigil feature block:** the signed-in `img/vigil-actors.webp` (see Product screenshots); its three points are
     from Vigil's README, and Vigil's other pages need an account. The rule: **don't put leak-site victim names on the
