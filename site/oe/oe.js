@@ -42,7 +42,7 @@
       feeds: [["Ransomware leak sites", "now", "Vigil"], ["Exploited vulnerabilities (CISA KEV, NVD)", "now", "Vigil"],
         ["CISA and ICS advisories", "now", "Vigil"], ["Internet outages and shutdowns (IODA, Cloudflare Radar)", "now", "Blackout"],
         ["Censorship and app blocks (OONI)", "now", "Blackout"], ["Cloud and satellite provider incidents", "now", "Blackout"],
-        ["Routing (BGP) beyond IODA", "planned", "Blackout"]] },
+        ["BGP hijacks and route leaks (Cloudflare Radar)", "now", "Blackout"]] },
     { k: "ems", name: "Electromagnetic spectrum", short: "Spectrum", y: 730,
       sub: "Navigation, communication and radar signals that run through every physical layer and carry the information above.",
       feeds: [["Aircraft navigation integrity (ADS-B)", "now", "Noisefloor"], ["Spoofed aircraft and ship positions", "now", "Noisefloor"],
@@ -66,7 +66,8 @@
       feeds: [["Conflict events (GDELT)", "now", "Watchfloor"], ["Ship positions (Finland's open AIS)", "now", "Noisefloor, Wake"],
         ["Navigational warnings (NGA)", "now", "Noisefloor, Cordon"], ["Quakes, volcanoes, fires and floods", "now", "Elements"],
         ["Ports, chokepoints and transit volume (IMF PortWatch)", "dev", "Wake"], ["Undersea cable corridors", "now", "Blackout, Wake"],
-        ["Night lights and power", "planned", "Blackout"]] }
+        ["Power: a nuclear plant's off-site power, US outages and grid demand", "now", "Blackout"],
+        ["Night lights (NASA Black Marble)", "dev", "Blackout"]] }
   ];
   var LK = LAYERS.map(function (l) { return l.k; });
   var L = {};
@@ -113,8 +114,8 @@
       href: "https://vigil.theintelligence.company", ask: "Who is ransomware hitting?",
       line: "Cyber threat intelligence: ransomware groups and their victims, exploited vulnerabilities and advisories, with the history kept." },
     { id: "blackout", name: "Blackout", status: "beta", home: "cyber", reach: ["land", "systems", "human"], at: [690, 650],
-      href: "https://blackout.theintelligence.company", ask: "Where is the internet going dark?",
-      line: "Where the internet goes dark: country outages from Georgia Tech IODA and Cloudflare Radar, censorship measurements from OONI, a watch on the Starlink, Amazon, Microsoft and Google networks and on eleven providers' own status pages, and a hand-compiled register of submarine cable corridors. A drop is called a likely shutdown only when OONI shows blocking in the same country. Night lights, power-grid data and BGP routing beyond IODA's are planned." },
+      href: "https://blackout.theintelligence.company", ask: "Where are the lights going out and the internet going dark?",
+      line: "Where the lights go out and the internet goes dark: country outages from Georgia Tech IODA and Cloudflare Radar, censorship measurements from OONI, BGP hijacks and route leaks from Cloudflare Radar, the Zaporizhzhya nuclear plant's off-site power as the IAEA reports it, US power outages by county and US grid operators' demand against their own forecasts, a watch on the Starlink, Amazon, Microsoft and Google networks and on eleven providers' own status pages, and a hand-compiled register of submarine cable corridors. A drop is called a likely shutdown only when OONI shows blocking in the same country. Night lights from NASA's Black Marble are built and start once NASA's data access is in place." },
 
     { id: "noisefloor", name: "Noisefloor", status: "live", home: "ems", reach: ["air", "space", "land"], at: [578, 694],
       href: "https://noisefloor.theintelligence.company", ask: "Is GPS being jammed or spoofed?",
