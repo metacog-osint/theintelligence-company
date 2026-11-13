@@ -1,13 +1,25 @@
-# Hub handoff: where things stand (13 Nov 2026, about 4:45 PM CST: Orbit's listing and house bar v1.9 committed in the hub, tic-doctrine and twelve rollout worktrees, nothing pushed or deployed. About 12:40 PM CST: Headwind listed and house bar v1.8 live on the hub and every site except PropertyCast, which takes it at its 14 Nov publish. About 11:20 AM CST: house bar v1.7 live on the hub and every
+# Hub handoff: where things stand (13 Nov 2026, about 5:05 PM CST: Orbit listed and house bar v1.9 live on the hub and every site except PropertyCast, which takes it at its 14 Nov publish. About 12:40 PM CST: Headwind listed and house bar v1.8 live on the hub and every site except PropertyCast, which takes it at its 14 Nov publish. About 11:20 AM CST: house bar v1.7 live on the hub and every
 site except PropertyCast, which takes it at its 14 Nov publish. 12 Nov 2026, about 10:55 PM CST: house bar v1.6 with Blackout live on the hub
 and eleven sites, PropertyCast at its 13 Nov publish. About 7:45 PM CST: the `vetday` logging fix confirmed in the dashboard and 11 Nov's request counts read. About 10:30 AM CST: the `vetday` report hashes, salts and rate rows wiped by hand. 10:20 AM CST: the `vetday` Worker's invocation logs turned off and the Worker redeployed (privacy fix, approved; not committed). About 10:05 AM CST: the planner's field lessons and 2027 plan written up in `veterans-day/README.md`, nothing built. About 8:45 AM CST: Veterans Day field results recorded below: 26 reports, all "worked", no tips, no overrides. 11 Nov 2026, 6:30 AM CST: every Veterans Day area live from master `00a542f`, Colorado Springs included (the publisher re-signed in to Firebase and deployed). 3:15 AM CST: Veterans Day planner live with Reno–Sparks, Fort Meade and Denver from `acef121` (Colorado Springs then waited for the publisher's Firebase sign-in and deploy). 10 Nov 2026, about 11:10 PM CST: practice-mark fix, Mission BBQ Herndon and GEMINI.md live from ae0d44d, pushed; 11:00 PM: Reston's WTOP deals and page fixes live from fd2e434, pushed; 10:35 PM: Veterans Day Reston area and the Deals-tab fix live from fe2187a, pushed with 870fb2b; 5:30 PM: Antigravity's two commits live; 1:45 PM: Hornbacher's and Post 2 list live from d1d897c)
 
 Read with `CLAUDE.md` (the project's notes). Times are Central (CST since 1 Nov). Each commit, push and deploy needs
 Tom's yes.
 
-## Orbit listed across the suite: house bar v1.9, 13 Nov 2026 (side session "Orbit listing"; committed, not pushed)
-Orbit (https://orbit.theintelligence.company, live 13 Nov 2026 about 3:57 PM CST), listed the way Headwind was. The
-wording is new and **not yet approved by Tom**; it describes only what is live (no manoeuvres or counterspace).
+## Orbit listed across the suite: house bar v1.9, 13 Nov 2026 (side session "Orbit listing"; live)
+Orbit (https://orbit.theintelligence.company, live 13 Nov 2026 about 3:57 PM CST), listed the way Headwind was. Tom
+approved the wording ("Approve, push and deploy"); it describes only what is live (no manoeuvres or counterspace).
+- **Status, about 5:05 PM CST 13 Nov: live everywhere except PropertyCast.** Pushed by commit: hub `43d12b0` to
+  `master` (`dispatch-deploy` and `site-checks` passed), tic-doctrine `895fcf1`, Context `6e02319` (`master`), Cordon
+  `e1efad4` (rebased), Elements `cbed562` (rebased), Noisefloor `f88d0f8`, PropertyCast `0957294` (live at its 14 Nov
+  publish), Title 10 `1fb1208`, Vigil `19a24e0`, Vis `0264adc`, Watchfloor `5207574`, Headwind `4adec00`, Blackout
+  `b58e426`, Orbit `aa932dc`. Deployed by hand: the hub (Firebase, from this folder at `43d12b0`), Watchfloor
+  (`build_web.py`, Firebase), Title 10 (worktree's `deploy/`), Context (`npx vercel --prod`), Listening Post (v1.8
+  backed up to `_backups/tic-nav-v1.8-2026-11-13/`, v1.9 copied into `web/public/` and `web/dist/`, hosting only).
+  Firebase's sign-in had expired; Tom signed in again before the Firebase deploys. Cordon's push run and the next
+  one failed in GitHub Pages' artifact fetch (GitHub's side); a dispatched run deployed it. Vis's push build failed
+  on an Open-Meteo handshake timeout; the rerun passed. Every live `tic-nav.js` reads v1.9 (COP's from its own
+  session). The live hub serves the Orbit row, drawing entry, `ORBIT_FEED` and `connect-src`. Worktrees and their
+  `tic-nav-v1.9` branches removed.
 - **Hub (this folder, two commits):** `5cfa03a` tic-dispatch `JOBS` line for `metacog-osint/orbit` `update.yml` at
   :55 past 00, 06, 12, 18 UTC, with a test (18 pass). `c70271c` the listing: `tic-nav.js` v1.9 adds Orbit after
   Noisefloor (beta, "Space · orbital activity"); product lists in `index.html` and `404.html` after Headwind; footer
@@ -22,7 +34,7 @@ wording is new and **not yet approved by Tom**; it describes only what is live (
   its feed's licence line word for word (the old "Orbit code MIT" dropped: the repo has no licence file), `owns` =
   launches, scheduled launches, reentries, catalog changes and owner codes. COP vendors the kit; the COP session
   ("Orbit: COP layer") was told to take 0.4.8 from this commit and to copy the bar v1.9 into COP itself.
-- **Rollout worktrees, one per repo, branch `tic-nav-v1.9`, each one commit ahead of its remote default branch, in
+- **Rollout worktrees (removed after the pushes), one per repo, branch `tic-nav-v1.9`, in
   `D:\Projects\_worktrees\`:** `context-nav19` `6e02319` (geo-context, `master`), `cordon-nav19` `193d0d0`,
   `elements-nav19` `db405d3`, `noisefloor-nav19` `f88d0f8` (pages rebuilt, `?v=6ef8b1f0d5`), `propertycast-nav19`
   `0957294`, `title10-nav19` `1fb1208` (`sw.js` `t10-2026-11-13d`, deploy README line), `vigil-nav19` `19a24e0`,
@@ -32,7 +44,7 @@ wording is new and **not yet approved by Tom**; it describes only what is live (
   Deploy notes as for v1.8 below: Watchfloor `build_web.py` then Firebase, Title 10 from the clean worktree's
   `deploy/`, Context `npx vercel --prod` (copy `.vercel/project.json` in), the hub by hand from a clean tree.
   Elements and Cordon commit data to `main` often, so rebase before pushing. Push by naming the commit.
-- **Still Tom's:** approve the wording; a yes for each push and deploy; add `orbit` to the `tic-dispatch` token's
+- **Still Tom's:** add `orbit` to the `tic-dispatch` token's
   repository access (until then its start 404s at 00:55, 06:55, 12:55 and 18:55 UTC). Orbit has no gate job, so its
   fallback cron (`41 */6`) can repeat a dispatched run; GCAT is only asked for Last-Modified and Launch Library 2 gets
   one request a run, so that costs little.
