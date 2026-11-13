@@ -4,6 +4,18 @@ and eleven sites, PropertyCast at its 13 Nov publish. About 7:45 PM CST: the `ve
 Read with `CLAUDE.md` (the project's notes). Times are Central (CST since 1 Nov). Each commit, push and deploy needs
 Tom's yes.
 
+## House bar v1.7: Blackout's power and routing wording, 13 Nov 2026 (Blackout side session; NOT pushed or rolled out)
+- Blackout added BGP routing (Cloudflare Radar hijacks and leaks) and power lanes (the IAEA's Zaporizhzhya updates,
+  ODIN US county outages, EIA-930 grid demand) on 13 Nov 2026, and Tom's headline "Where the lights go out and the
+  internet goes dark." The hub's entries follow it: `tic-nav.js` v1.7 (label "Cyberspace · internet and power
+  outages", short = the headline, long names the new lanes; `version: "1.7"`), the product list in `index.html` and
+  `404.html`, and the drawing (`oe.js`: BGP "now", power "now", night lights "dev", Blackout's ask and line).
+  Night lights are built but wait on Tom accepting LAADS's data licence, so the hub text doesn't claim them yet.
+- Checked: `npm run test:static` 34/34. The browser tests (`npm test`) can't run on this machine: Playwright's
+  Chromium isn't installed (21 fail at launch, none on content). Blackout carries v1.7 already (its own copy).
+- Waiting on Tom: OK on the wording, then the rollout as CLAUDE.md describes (copy `tic-nav.js` to every site, a
+  worktree per repo, test, Tom's yes, push, deploy each its own way), and the hub's push and Firebase deploy.
+
 ## House bar v1.6: Blackout in the Programs menu, 12 Nov 2026 night (side session "house bar v1.6"; Tom: "Approve,
 ## deploy all" in the parent session, then "Yes to all")
 Blackout (https://blackout.theintelligence.company, live 12 Nov 2026) is **beta** on the hub, in every site's Programs

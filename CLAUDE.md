@@ -39,9 +39,13 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
 - **Blackout** (internet outages, censorship measurements, and cloud and satellite providers' own incident reports;
   `D:\Projects\blackout`, private repo `metacog-osint/blackout`, Cloudflare Pages) went live at
   `blackout.theintelligence.company` on 12 Nov 2026 and joined COP the same day. Since 13 Nov 2026 UTC it is **beta**
-  on the hub, in the house bar (v1.6) and on the drawing, where its line ends "Night lights, power-grid data and BGP
-  routing beyond IODA's are planned"; update it as those arrive. Its footer credit links its home page, which has no
-  Sources section yet; point it there when one exists.
+  on the hub, in the house bar (v1.6) and on the drawing. On 13 Nov 2026 Blackout added BGP routing and power lanes
+  and Tom's headline "Where the lights go out and the internet goes dark."; the hub's wording for them (house bar v1.7,
+  product lists, drawing) was written by a Blackout side session and is committed here, not pushed, waiting on Tom's
+  OK and the house bar rollout. Its drawing line now ends "Night lights from NASA's Black Marble are built and start
+  once NASA's data access is in place" (they wait on Tom accepting LAADS's data licence on his Earthdata account);
+  update it when night lights read. Its footer credit links its home page, whose Method tab lists every source; point
+  it there if that becomes its own page.
 - **Context vs Watchfloor is parked** (Tom, 1 Nov 2026: "stop it, i'm not deciding on this yet"). Both may stay with
   different scopes. Leave Context's "Watchfloor's predecessor" line alone, and don't raise the question again until
   Tom does. Watchfloor's noindex and copyright registration or ™ are also left as they are for now.
@@ -64,7 +68,8 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   repo's main branch (checked 5 Nov 2026; some local trees lag): Watchfloor `web/`, Title 10 `deploy/public/`,
   Noisefloor `site_src/`, PropertyCast `src/wx/static/`, CONTEXT `public/`, Vigil `public/`, Listening Post
   `web/public/`, and COP, Elements and Cordon.
-- `site/shared/tic-nav.js` (v1.6, 13 Nov 2026 UTC: Blackout added; v1.5, 8 Nov: Vis) + `tic-nav.css` (v1.2, 7 Nov 2026; rollout status in `HANDOFF.md`): **the house bar** on every program site (Tom: "I need a
+- `site/shared/tic-nav.js` (v1.7, 13 Nov 2026: Blackout's power and routing wording, committed, not pushed or rolled
+  out; v1.6, 13 Nov 2026 UTC: Blackout added; v1.5, 8 Nov: Vis) + `tic-nav.css` (v1.2, 7 Nov 2026; rollout status in `HANDOFF.md`): **the house bar** on every program site (Tom: "I need a
   link back to the home page on each subsite… a dropdown menu of all programs with their primary layer area or topic
   labeled (and a more in-depth description upon mouse-over)"). It is a slim navy bar with "← The Intelligence Company"
   and a **Programs ▾** disclosure menu. That menu lists every live program grouped "Across the layers" and "Other
