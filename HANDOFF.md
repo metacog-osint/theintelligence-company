@@ -33,6 +33,9 @@ menu and on the drawing. Times below are CST.
   fast-forwarded (`--ff-only`) so a later hand deploy from them can't put v1.5 back.
 - **Seen, not changed:** on the first live check Noisefloor and Cordon each logged one 404; a rerun that logged every
   failed request found none.
+- The four Firebase deploys ran twice: the parent session ("Blackout project review") ran the same hub, Watchfloor,
+  Title 10 and Listening Post deploys at 04:48-04:52 UTC from the same commits, alongside this session's. Both runs
+  reported release complete; the live files are the same either way.
 
 ## Veterans Day planner: after the day, 12 Nov 2026 (the publisher's nine points, then "Yes, write it up")
 the publisher listed nine improvements after using the planner live (search hard to find, picking your own next stop, voice,
