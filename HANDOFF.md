@@ -1,25 +1,33 @@
-# Hub handoff: where things stand (12 Nov 2026, about 10:55 PM CST: house bar v1.6 with Blackout live on the hub
+# Hub handoff: where things stand (13 Nov 2026, about 11:20 AM CST: house bar v1.7 live on the hub and every
+site except PropertyCast, which takes it at its 14 Nov publish. 12 Nov 2026, about 10:55 PM CST: house bar v1.6 with Blackout live on the hub
 and eleven sites, PropertyCast at its 13 Nov publish. About 7:45 PM CST: the `vetday` logging fix confirmed in the dashboard and 11 Nov's request counts read. About 10:30 AM CST: the `vetday` report hashes, salts and rate rows wiped by hand. 10:20 AM CST: the `vetday` Worker's invocation logs turned off and the Worker redeployed (privacy fix, approved; not committed). About 10:05 AM CST: the planner's field lessons and 2027 plan written up in `veterans-day/README.md`, nothing built. About 8:45 AM CST: Veterans Day field results recorded below: 26 reports, all "worked", no tips, no overrides. 11 Nov 2026, 6:30 AM CST: every Veterans Day area live from master `00a542f`, Colorado Springs included (the publisher re-signed in to Firebase and deployed). 3:15 AM CST: Veterans Day planner live with Reno–Sparks, Fort Meade and Denver from `acef121` (Colorado Springs then waited for the publisher's Firebase sign-in and deploy). 10 Nov 2026, about 11:10 PM CST: practice-mark fix, Mission BBQ Herndon and GEMINI.md live from ae0d44d, pushed; 11:00 PM: Reston's WTOP deals and page fixes live from fd2e434, pushed; 10:35 PM: Veterans Day Reston area and the Deals-tab fix live from fe2187a, pushed with 870fb2b; 5:30 PM: Antigravity's two commits live; 1:45 PM: Hornbacher's and Post 2 list live from d1d897c)
 
 Read with `CLAUDE.md` (the project's notes). Times are Central (CST since 1 Nov). Each commit, push and deploy needs
 Tom's yes.
 
 ## House bar v1.7: Blackout's power and routing wording, 13 Nov 2026 (Tom: "Approve, roll out", about 10:45 AM)
-- **Rollout state, about 11:10 AM CST (side session "house bar v1.7"):** hub `cf879a3` pushed. Everything else is
-  committed and tested but waits on the parent session: the side session's permission check refused the hub's
-  Firebase deploy and the pushes to `main` (both "Production Deploy"). Ready on branch `tic-nav-v1.7` in
-  `[local path]<name>-nav17`, each one commit ahead of and fast-forward from origin at 11:05 AM: COP
-  `5218d90`, Elements `9064da6`, Cordon `94f47d0`, Vis `3287e0f`, Vigil `033d344`, Noisefloor `51b9ce1` (file and
-  rebuilt `site/`, pages load `tic-nav.js?v=33c43912bd`), Watchfloor `172911d` (built with `build_web.py`), Context
-  `9e77193` (`.vercel/project.json` copied in), PropertyCast `4d2a5d0`, Title 10 `3a1bd6c` (`sw.js`
-  `t10-2026-11-13b`, deploy README line). Listening Post (no git): v1.6 backed up to
-  `_backups/tic-nav-v1.6-2026-11-13/`, v1.7 copied into `web/public/`. Blackout already serves v1.7 (its own copy).
-  The hub deploys from the clean worktree `[local path]` (detached at `cf879a3`), because the main
-  folder holds another session's uncommitted Headwind work (`tic-nav.js` v1.8, `index.html`, `oe.js`, `firebase.json`).
-- Each live page was loaded in Edge with v1.7 swapped in (COP, Watchfloor, Context, Vigil, Noisefloor, Cordon, Vis,
-  Elements, PropertyCast inlined, Title 10, Listening Post, Blackout): all mount v1.7 with 12 programs, the new label,
-  "You are here", Blackout's panel, the menu on top and no console errors.
+- **Live on the hub and every program site except PropertyCast (about 11:20 AM CST).** The side session "house bar
+  v1.7" prepared and tested everything; its permission check refused the deploys and the pushes to `main`
+  ("Production Deploy"), so the parent session ("Blackout project review") ran them between 11:00 and 11:20 AM.
+  Hub `cf879a3` deployed from the clean worktree `_worktrees/hub-nav17` (the main folder held another session's
+  uncommitted Headwind work). Pushed to `main`: COP `5218d90`, Elements `29451ee` (rebased over a data commit), Cordon
+  `94f47d0`, Vis `3287e0f`, Vigil `033d344`, Noisefloor `51b9ce1` (file and rebuilt `site/`, pages load
+  `tic-nav.js?v=33c43912bd`; deploy-site run 43470356445), Watchfloor `172911d` (`build_web.py`, then
+  `firebase deploy --only hosting:watchfloor`), Context `9e77193` (to `master`; `npx vercel --prod`: a try with
+  `--yes` errored, the rerun without it deployed), PropertyCast `4d2a5d0`, Title 10 `3a1bd6c` (`sw.js`
+  `t10-2026-11-13b`, deploy README line; deployed from the clean worktree's `deploy/`). Listening Post (no git): v1.6
+  backed up to `_backups/tic-nav-v1.6-2026-11-13/`, v1.7 copied into `web/public/`, `firebase deploy --only hosting`.
+  Blackout already carried v1.7 (its own copy).
+- Checked live at 11:13-11:20 AM (parent session) and about 11:15 AM (side session): every `/tic-nav.js` serves v1.7
+  with "Cyberspace · internet and power outages" (hub and COP at `/shared/`). **PropertyCast `4d2a5d0` goes live at
+  its next daily publish** (about 4:23 AM, 14 Nov); check its home page's HTML.
+- Before the pushes, each live page was loaded in Edge with v1.7 swapped in (COP, Watchfloor, Context, Vigil,
+  Noisefloor, Cordon, Vis, Elements, PropertyCast inlined, Title 10, Listening Post, Blackout): all mount v1.7 with 12
+  programs, the new label, "You are here", Blackout's panel, the menu on top and no console errors.
 - PropertyCast went live with v1.6 at its 13 Nov publish (checked about 11:05 AM).
+- Afterwards the `*-nav17` worktrees, their `tic-nav-v1.7` branches and `hub-nav17` were removed (each branch checked
+  on origin first), and the main checkouts of `geo-context`, `more-context` and `Title 10 Field Guide` were
+  fast-forwarded (`--ff-only`) so a hand deploy from them can't put v1.6 back.
 - Blackout added BGP routing (Cloudflare Radar hijacks and leaks) and power lanes (the IAEA's Zaporizhzhya updates,
   ODIN US county outages, EIA-930 grid demand) on 13 Nov 2026, and Tom's headline "Where the lights go out and the
   internet goes dark." The hub's entries follow it: `tic-nav.js` v1.7 (label "Cyberspace · internet and power
