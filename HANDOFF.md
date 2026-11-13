@@ -4,7 +4,22 @@ and eleven sites, PropertyCast at its 13 Nov publish. About 7:45 PM CST: the `ve
 Read with `CLAUDE.md` (the project's notes). Times are Central (CST since 1 Nov). Each commit, push and deploy needs
 Tom's yes.
 
-## House bar v1.7: Blackout's power and routing wording, 13 Nov 2026 (Blackout side session; NOT pushed or rolled out)
+## House bar v1.7: Blackout's power and routing wording, 13 Nov 2026 (Tom: "Approve, roll out", about 10:45 AM)
+- **Rollout state, about 11:10 AM CST (side session "house bar v1.7"):** hub `cf879a3` pushed. Everything else is
+  committed and tested but waits on the parent session: the side session's permission check refused the hub's
+  Firebase deploy and the pushes to `main` (both "Production Deploy"). Ready on branch `tic-nav-v1.7` in
+  `D:\Projects\_worktrees\<name>-nav17`, each one commit ahead of and fast-forward from origin at 11:05 AM: COP
+  `5218d90`, Elements `9064da6`, Cordon `94f47d0`, Vis `3287e0f`, Vigil `033d344`, Noisefloor `51b9ce1` (file and
+  rebuilt `site/`, pages load `tic-nav.js?v=33c43912bd`), Watchfloor `172911d` (built with `build_web.py`), Context
+  `9e77193` (`.vercel/project.json` copied in), PropertyCast `4d2a5d0`, Title 10 `3a1bd6c` (`sw.js`
+  `t10-2026-11-13b`, deploy README line). Listening Post (no git): v1.6 backed up to
+  `_backups/tic-nav-v1.6-2026-11-13/`, v1.7 copied into `web/public/`. Blackout already serves v1.7 (its own copy).
+  The hub deploys from the clean worktree `D:\Projects\_worktrees\hub-nav17` (detached at `cf879a3`), because the main
+  folder holds another session's uncommitted Headwind work (`tic-nav.js` v1.8, `index.html`, `oe.js`, `firebase.json`).
+- Each live page was loaded in Edge with v1.7 swapped in (COP, Watchfloor, Context, Vigil, Noisefloor, Cordon, Vis,
+  Elements, PropertyCast inlined, Title 10, Listening Post, Blackout): all mount v1.7 with 12 programs, the new label,
+  "You are here", Blackout's panel, the menu on top and no console errors.
+- PropertyCast went live with v1.6 at its 13 Nov publish (checked about 11:05 AM).
 - Blackout added BGP routing (Cloudflare Radar hijacks and leaks) and power lanes (the IAEA's Zaporizhzhya updates,
   ODIN US county outages, EIA-930 grid demand) on 13 Nov 2026, and Tom's headline "Where the lights go out and the
   internet goes dark." The hub's entries follow it: `tic-nav.js` v1.7 (label "Cyberspace · internet and power
@@ -13,8 +28,7 @@ Tom's yes.
   Night lights are built but wait on Tom accepting LAADS's data licence, so the hub text doesn't claim them yet.
 - Checked: `npm run test:static` 34/34. The browser tests (`npm test`) can't run on this machine: Playwright's
   Chromium isn't installed (21 fail at launch, none on content). Blackout carries v1.7 already (its own copy).
-- Waiting on Tom: OK on the wording, then the rollout as CLAUDE.md describes (copy `tic-nav.js` to every site, a
-  worktree per repo, test, Tom's yes, push, deploy each its own way), and the hub's push and Firebase deploy.
+- Tom approved the wording and the rollout ("Approve, roll out", about 10:45 AM 13 Nov); state above.
 
 ## House bar v1.6: Blackout in the Programs menu, 12 Nov 2026 night (side session "house bar v1.6"; Tom: "Approve,
 ## deploy all" in the parent session, then "Yes to all")
