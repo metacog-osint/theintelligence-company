@@ -46,6 +46,14 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   once NASA's data access is in place" (they wait on Tom accepting LAADS's data licence on his Earthdata account);
   update it when night lights read. Its footer credit links its home page, whose Method tab lists every source; point
   it there if that becomes its own page.
+- **Headwind** (economic stress: currencies, energy and food prices against their own range, sanctions and
+  screening-list changes, BIS and OFAC rules, US mineral import reliance; `D:\Projects\headwind`, private repo
+  `metacog-osint/headwind`, Cloudflare Pages) went live at `headwind.theintelligence.company` on 13 Nov 2026. The
+  hub's listing was prepared the same day with the wording Tom approved: **beta** in the house bar (v1.8, after
+  Blackout, "Systems · economic stress"), in the product lists after Blackout, and on the drawing (its `line` is the
+  bar's long text; the Systems layer's sanctions, price and mineral-reliance rows are "now"). Whether it is
+  committed, pushed and rolled out is in `HANDOFF.md`. Its footer credit links its home page (its Sources card has
+  no anchor). "Critical minerals" stays a separate planned tag on the drawing.
 - **Context vs Watchfloor is parked** (Tom, 1 Nov 2026: "stop it, i'm not deciding on this yet"). Both may stay with
   different scopes. Leave Context's "Watchfloor's predecessor" line alone, and don't raise the question again until
   Tom does. Watchfloor's noindex and copyright registration or ™ are also left as they are for now.
@@ -68,7 +76,8 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   repo's main branch (checked 5 Nov 2026; some local trees lag): Watchfloor `web/`, Title 10 `deploy/public/`,
   Noisefloor `site_src/`, PropertyCast `src/wx/static/`, CONTEXT `public/`, Vigil `public/`, Listening Post
   `web/public/`, and COP, Elements and Cordon.
-- `site/shared/tic-nav.js` (v1.7, 13 Nov 2026: Blackout's power and routing wording, committed, not pushed or rolled
+- `site/shared/tic-nav.js` (v1.8, 13 Nov 2026: Headwind added after Blackout, status in `HANDOFF.md`; v1.7, 13 Nov
+  2026: Blackout's power and routing wording, committed, not pushed or rolled
   out; v1.6, 13 Nov 2026 UTC: Blackout added; v1.5, 8 Nov: Vis) + `tic-nav.css` (v1.2, 7 Nov 2026; rollout status in `HANDOFF.md`): **the house bar** on every program site (Tom: "I need a
   link back to the home page on each subsite… a dropdown menu of all programs with their primary layer area or topic
   labeled (and a more in-depth description upon mouse-over)"). It is a slim navy bar with "← The Intelligence Company"
@@ -131,6 +140,10 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   past 01, 05, 09, 13, 17 and 21 UTC. Private repo, one job of about a minute per run: about 180 Actions minutes a
   month. Its own cron moved to every 6 hours as the fallback. Tom added `blackout` (and `vis`) to the `DISPATCH_TOKEN` token
   (named `tic-dispatch` on GitHub) the same evening; it now covers cop, cordon, elements, vis and blackout.
+- **Headwind joins (13 Nov 2026):** Headwind `update.yml` at :50 past 03, 09, 15 and 21 UTC (its sources change
+  daily at most). Private repo, one job a run. Its own cron (`23 */6`) is the fallback; it has no gate job yet, so
+  a late scheduled run repeats a dispatched one. Tom must add `headwind` to the `tic-dispatch` token's repository
+  access; until then its start fails with GitHub's 404 four times a day and the others carry on.
 - **Its clock is PropertyCast's.** The free plan allows 5 cron triggers per account, and on 5 Nov all 5 were in use:
   PropertyCast's trigger 1 (`*/5`), Vigil's ingestion Worker 4. The first deploy, with a cron of its own, was refused
   (code 10072). So `tic-dispatch` has `crons = []`, and
@@ -363,7 +376,7 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   - **Footer Sources links:** Noisefloor `/sources`, Watchfloor `/#/sources`, Vigil `/sources`, PropertyCast
     `/#sources`, Title 10 `/#contacts` ("Contacts & sources"), Context `/sources` and Listening Post `/sources.html`
     (both linked since `4d05cf2`); since 7 Nov 2026 also Elements and Cordon `/#health-h` (each page's Sources card), since 8 Nov Vis `/#sources`,
-    since 13 Nov Blackout's home page (it has no Sources section yet),
+    since 13 Nov Blackout's home page (it has no Sources section yet) and Headwind's (its Sources card has no anchor),
     and COP's home page (its Sources sit in its side panel, and its address after `#` holds the map view, so a
     `#sources` link wouldn't hold). Each ends in ↗ joined by `&nbsp;`, so the arrow never starts a line. A test checks
     there is one link per program in the house bar.
@@ -394,11 +407,11 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
     (400–500 KB, so it is never downloaded). Vis (8 Nov 2026) is on Cloudflare Pages, which sends an ETag but no
     `Last-Modified`, so the hub reads its whole `data/feed.geojson` (168 KB, about 8 KB as served, brotli) for
     `generated_at`. Blackout (13 Nov 2026) is on Cloudflare Pages too, so its whole feed is read the same way (about
-    40 KB, about 5 KB as served). Since 5 Nov 2026 the line adds "· running late" in amber when its own
+    40 KB, about 5 KB as served), and so is Headwind's (13 Nov 2026; about 150 KB, about 8 KB as served). Since 5 Nov 2026 the line adds "· running late" in amber when its own
     "Updated … ago" is older than that program's `fresh_hours` in COP's health (COP's own `state` judges the newest
     data, not publication, so it isn't used); the reason is in the tooltip. If Vigil's `/api/summary` 503s, Vigil's
     time falls back to COP's `data_as_of`. The
-    tooltip gives the full time in the viewer's zone. `connect-src` lists the cop., elements., cordon., vis. and blackout. origins.
+    tooltip gives the full time in the viewer's zone. `connect-src` lists the cop., elements., cordon., vis., blackout. and headwind. origins.
     Add a program by giving its row `data-product` and calling `setFresh` with its most direct publish time.
   - **Vigil feature block:** the signed-in `img/vigil-actors.webp` (see Product screenshots); its three points are
     from Vigil's README, and Vigil's other pages need an account. The rule: **don't put leak-site victim names on the

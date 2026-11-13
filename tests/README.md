@@ -15,7 +15,7 @@ Checks for the hub site (`../site`), the house bar every program site carries, a
 | `veterans-engine.test.js` | The planner's route engine (`engine.js`) | Node only |
 | `veterans-roads.test.js` | The Map's route line (`roads.js`): splitting OSRM's answer into legs, one request a second, legs kept, failures and timeouts stay straight | Node only |
 | `veterans-map.test.js` | The planner's Map in Chromium with a stand-in OSRM: only store coordinates are sent (never a start point or GPS position), the road line replaces the straight one, offline fallback, colours in light and dark | Playwright |
-| `check-live.js` | The eight live feeds have every field the hub reads (not a test; needs the internet) | Node |
+| `check-live.js` | The nine live feeds have every field the hub reads (not a test; needs the internet) | Node |
 
 ## Run
 

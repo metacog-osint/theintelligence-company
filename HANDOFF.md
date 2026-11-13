@@ -5,6 +5,34 @@ and eleven sites, PropertyCast at its 13 Nov publish. About 7:45 PM CST: the `ve
 Read with `CLAUDE.md` (the project's notes). Times are Central (CST since 1 Nov). Each commit, push and deploy needs
 Tom's yes.
 
+## Headwind listed across the suite: house bar v1.8, 13 Nov 2026 (side session "Headwind listing"; prepared, see status)
+Headwind (https://headwind.theintelligence.company, live 13 Nov 2026) with the wording Tom approved that day.
+- **Hub (this folder, two commits: the listing and the dispatch line):** `tic-nav.js` v1.8 adds Headwind after Blackout (beta, "Systems ·
+  economic stress"); v1.8 contains v1.7's Blackout wording, so pushing it also publishes that. Product lists in
+  `index.html` and `404.html` (after Blackout, the bar's short line), footer Sources link (its home page), the
+  drawing (`oe.js`: beta, linked, asks "Which currencies, prices or sanctions lists moved?", line = the bar's long
+  text; sanctions, prices and a new "US mineral import reliance (USGS)" row are "now"), "Updated … ago" from its
+  feed's `generated_at`, `connect-src`, and the tests (a Headwind sample feed; `check-live.js` covers nine feeds and
+  passed). `npm test` on Edge: 188 pass (the Veterans Day map test timed out once in the full run and passed alone).
+- **Dispatch:** `JOBS` line for `metacog-osint/headwind` `update.yml` at :50 past 03, 09, 15, 21 UTC, with a test
+  (17 pass). **Tom must add `headwind` to the `tic-dispatch` token's repository access**, or its start 404s.
+- **Rollout worktrees, one per repo, branch `tic-nav-v1.8`, each one commit ahead of GitHub's tip (which is v1.7,
+  live since about 11:20 AM), in `D:\Projects\_worktrees\`:** `context-nav18` `090a51c`, `cordon-nav18` `088c40f`,
+  `elements-nav18` `38446bf`, `noisefloor-nav18` `b8448bf` (pages rebuilt, `?v=bb852f807e`), `propertycast-nav18`
+  `cc153fd`, `title10-nav18` `c34c5f3` (`sw.js` `t10-2026-11-13c`, deploy README line), `vigil-nav18` `ebbaee9`,
+  `vis-nav18` `bf69f3e`, `watchfloor-nav18` `52158ba`, `headwind-nav18` `7df0baa` (`site_src/` and `site/`),
+  `blackout-nav18` `7028f8b` (both folders), and COP in `cop-headwind` (branch `headwind-joins`: `3f1e315` the bar,
+  `f6cd6c4` COP's own Headwind changes). Listening Post has no git: back up its `tic-nav.js`, copy, `firebase deploy
+  --only hosting` at deploy time. Watchfloor needs `build_web.py` and Context `.vercel/project.json` at deploy, as
+  in the v1.7 notes below. Elements and Cordon commit data to `main` often, so rebase before pushing.
+- **Registry and COP:** `tic-doctrine` 0.4.6 sets Headwind live (terms = its feed's licence line; `owns` = what it
+  collects). COP (`cop-headwind` worktree): kit 0.4.6, drawing entry (wine `#882255` rings, preset "Economic
+  stress", routine readings shown in its preset, freshness "feed"), eight sources registered, `headwind` on the
+  gate's open list (needs Tom's confirmation, as the lists are his), MCP instructions, a fixture. A live local
+  build read Headwind fresh with 60 items and no lint errors; the page showed its rings under the new preset.
+- **Status, about 12:00 PM CST 13 Nov: committed locally everywhere (Tom: "Yes, commit all"); tic-doctrine is
+  `6ca4163`. Nothing is pushed or deployed; each push and deploy waits on Tom's yes.** Update this line as they happen.
+
 ## House bar v1.7: Blackout's power and routing wording, 13 Nov 2026 (Tom: "Approve, roll out", about 10:45 AM)
 - **Live on the hub and every program site except PropertyCast (about 11:20 AM CST).** The side session "house bar
   v1.7" prepared and tested everything; its permission check refused the deploys and the pushes to `main`
