@@ -1,4 +1,4 @@
-# Hub handoff: where things stand (13 Nov 2026, about 11:20 AM CST: house bar v1.7 live on the hub and every
+# Hub handoff: where things stand (13 Nov 2026, about 12:40 PM CST: Headwind listed and house bar v1.8 live on the hub and every site except PropertyCast, which takes it at its 14 Nov publish. About 11:20 AM CST: house bar v1.7 live on the hub and every
 site except PropertyCast, which takes it at its 14 Nov publish. 12 Nov 2026, about 10:55 PM CST: house bar v1.6 with Blackout live on the hub
 and eleven sites, PropertyCast at its 13 Nov publish. About 7:45 PM CST: the `vetday` logging fix confirmed in the dashboard and 11 Nov's request counts read. About 10:30 AM CST: the `vetday` report hashes, salts and rate rows wiped by hand. 10:20 AM CST: the `vetday` Worker's invocation logs turned off and the Worker redeployed (privacy fix, approved; not committed). About 10:05 AM CST: the planner's field lessons and 2027 plan written up in `veterans-day/README.md`, nothing built. About 8:45 AM CST: Veterans Day field results recorded below: 26 reports, all "worked", no tips, no overrides. 11 Nov 2026, 6:30 AM CST: every Veterans Day area live from master `00a542f`, Colorado Springs included (the publisher re-signed in to Firebase and deployed). 3:15 AM CST: Veterans Day planner live with Reno–Sparks, Fort Meade and Denver from `acef121` (Colorado Springs then waited for the publisher's Firebase sign-in and deploy). 10 Nov 2026, about 11:10 PM CST: practice-mark fix, Mission BBQ Herndon and GEMINI.md live from ae0d44d, pushed; 11:00 PM: Reston's WTOP deals and page fixes live from fd2e434, pushed; 10:35 PM: Veterans Day Reston area and the Deals-tab fix live from fe2187a, pushed with 870fb2b; 5:30 PM: Antigravity's two commits live; 1:45 PM: Hornbacher's and Post 2 list live from d1d897c)
 
@@ -30,8 +30,26 @@ Headwind (https://headwind.theintelligence.company, live 13 Nov 2026) with the w
   stress", routine readings shown in its preset, freshness "feed"), eight sources registered, `headwind` on the
   gate's open list (needs Tom's confirmation, as the lists are his), MCP instructions, a fixture. A live local
   build read Headwind fresh with 60 items and no lint errors; the page showed its rings under the new preset.
-- **Status, about 12:00 PM CST 13 Nov: committed locally everywhere (Tom: "Yes, commit all"); tic-doctrine is
-  `6ca4163`. Nothing is pushed or deployed; each push and deploy waits on Tom's yes.** Update this line as they happen.
+- **Status, about 12:40 PM CST 13 Nov: live everywhere except PropertyCast (Tom: "Yes, commit all", then "Yes,
+  push and deploy").** Pushed: tic-doctrine `6ca4163`, hub `2a41b86` and `050c02a` (`dispatch-deploy` and
+  `site-checks` passed), COP `3f1e315` and `f6cd6c4`, Cordon `088c40f`, Elements `ebafe3e` (rebased), Vis `bf69f3e`,
+  Vigil `ebbaee9`, Blackout `7028f8b`, Headwind `7df0baa`, Noisefloor `b8448bf`, PropertyCast `d27dd87` (rebased;
+  live at its 14 Nov publish), Watchfloor `52158ba`, Title 10 `c34c5f3`, Context `090a51c`. Deployed by hand: the
+  hub (Firebase, from this folder at `050c02a`), Watchfloor (`build_web.py`, Firebase, from its worktree), Title 10
+  (clean worktree's `deploy/`), Context (`npx vercel --prod`), Listening Post (v1.7 backed up to
+  `_backups/tic-nav-v1.7-2026-11-13/`, hosting only). Each live `tic-nav.js` reads `version: "1.8"`. Checked in
+  Chrome: Headwind's Programs menu lists 13 programs with Headwind "You are here"; the hub's Headwind row reads
+  "Updated 1 min ago". COP's live `health.json` has Headwind fresh with 60 items. The other sites' menus were
+  checked by file version only, not opened.
+- **Headwind's first deploy from its workflow:** its push run skipped the deploy (the Pages token was saved after
+  it started), and a hand-started run failed because the repo variable `CLOUDFLARE_ACCOUNT_ID` began with a
+  byte-order mark. The variable was set again without it and the next run deployed.
+- **The tic-doctrine push also carried `62875dd`** (kit 0.4.7, Blackout's EAGLE-I base rates, another session's
+  commit sitting on local `main`): it was pushed by `git push origin main` without checking what was ahead. Later
+  pushes named the commit. COP vendors kit 0.4.6.
+- **Still Tom's:** add `headwind` to the `tic-dispatch` token's repository access (until then its start 404s at
+  03:50, 09:50, 15:50 and 21:50 UTC); confirm `headwind` on the open list in COP's `tools/gate.py`. The rollout
+  worktrees and their branches were removed after the pushes.
 
 ## House bar v1.7: Blackout's power and routing wording, 13 Nov 2026 (Tom: "Approve, roll out", about 10:45 AM)
 - **Live on the hub and every program site except PropertyCast (about 11:20 AM CST).** The side session "house bar
