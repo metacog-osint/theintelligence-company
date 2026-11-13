@@ -51,8 +51,8 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   `metacog-osint/headwind`, Cloudflare Pages) went live at `headwind.theintelligence.company` on 13 Nov 2026. The
   hub's listing was prepared the same day with the wording Tom approved: **beta** in the house bar (v1.8, after
   Blackout, "Systems · economic stress"), in the product lists after Blackout, and on the drawing (its `line` is the
-  bar's long text; the Systems layer's sanctions, price and mineral-reliance rows are "now"). Whether it is
-  committed, pushed and rolled out is in `HANDOFF.md`. Its footer credit links its home page (its Sources card has
+  bar's long text; the Systems layer's sanctions, price and mineral-reliance rows are "now"). Pushed, deployed and rolled out the same day
+  (`HANDOFF.md`). Its footer credit links its home page (its Sources card has
   no anchor). "Critical minerals" stays a separate planned tag on the drawing.
 - **Context vs Watchfloor is parked** (Tom, 1 Nov 2026: "stop it, i'm not deciding on this yet"). Both may stay with
   different scopes. Leave Context's "Watchfloor's predecessor" line alone, and don't raise the question again until
@@ -76,7 +76,7 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   repo's main branch (checked 5 Nov 2026; some local trees lag): Watchfloor `web/`, Title 10 `deploy/public/`,
   Noisefloor `site_src/`, PropertyCast `src/wx/static/`, CONTEXT `public/`, Vigil `public/`, Listening Post
   `web/public/`, and COP, Elements and Cordon.
-- `site/shared/tic-nav.js` (v1.8, 13 Nov 2026: Headwind added after Blackout, status in `HANDOFF.md`; v1.7, 13 Nov
+- `site/shared/tic-nav.js` (v1.8, 13 Nov 2026: Headwind added after Blackout, live on every site that day; v1.7, 13 Nov
   2026: Blackout's power and routing wording, committed, not pushed or rolled
   out; v1.6, 13 Nov 2026 UTC: Blackout added; v1.5, 8 Nov: Vis) + `tic-nav.css` (v1.2, 7 Nov 2026; rollout status in `HANDOFF.md`): **the house bar** on every program site (Tom: "I need a
   link back to the home page on each subsite… a dropdown menu of all programs with their primary layer area or topic
