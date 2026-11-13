@@ -30,6 +30,11 @@ stays short. Nothing here loads automatically. `CLAUDE.md` is the current refere
   **v1.4** (6 Nov 2026, hub `58a54ea`; Tom approved the wording) adds EMSC under Worldwide earthquakes (impact alerts
   stay with USGS) and wildfire incidents (NIFC) under "US only for now", after Elements `8f6cfb4` put both lanes live.
   Rolled out to all ten sites that morning (commits in `HANDOFF.md`); PropertyCast with its 7 Nov publish.
+  **v1.5** (8 Nov 2026) adds Vis (rollout in `HANDOFF.md`, "Vis live across the suite"). **v1.6** (13 Nov 2026
+  UTC, hub `41b4a7f`; Tom approved the wording: "Approve, deploy all", then "Yes to all") adds Blackout after
+  Vigil, label "Cyberspace · internet outages" (the draft's "Cyber" changed to match the drawing's layer and
+  Vigil's label). Rolled out to all ten sites and Listening Post the night of 12 Nov CST (commits in `HANDOFF.md`);
+  PropertyCast with its 13 Nov publish. Blackout's own page gets the files from its own session.
   **Rolled out
   (1 Nov 2026 UTC):** Title 10 (e7286a4, v1.0; v1.1 since 5 Nov 2026, 49a49c5, deployed from a clean worktree because
   its main folder holds an untracked `deploy/public/data/benefits-pack.json` that must not ship),
