@@ -11,6 +11,7 @@
   var ELEMENTS_FEED = "https://elements.theintelligence.company/data/feed.geojson"; // read by HEAD only (Last-Modified)
   var CORDON_FEED = "https://cordon.theintelligence.company/data/feed.geojson";
   var VIS_FEED = "https://vis.theintelligence.company/data/feed.geojson"; // about 8 KB compressed; read for generated_at
+  var BLACKOUT_FEED = "https://blackout.theintelligence.company/data/feed.geojson"; // also Cloudflare Pages; read whole
 
   // Time: the Time button (it names the viewer's zone) and every <time data-tic>.
   var holder = document.getElementById("time-settings");
@@ -121,6 +122,8 @@
   // Vis: its feed's generated_at. Cloudflare Pages sends no Last-Modified, so the feed itself is read (168 KB,
   // about 8 KB as served compressed).
   getJSON(VIS_FEED).then(function (f) { setFresh("vis", f.generated_at); }).catch(function () {});
+  // Blackout: the same, for the same reason (about 40 KB, about 5 KB as served compressed).
+  getJSON(BLACKOUT_FEED).then(function (f) { setFresh("blackout", f.generated_at); }).catch(function () {});
 
   // Noisefloor: the briefing's bottom line for the newest aircraft day. Shared with oe/oe.js.
   window.ticNoisefloor = getJSON(NOISEFLOOR);

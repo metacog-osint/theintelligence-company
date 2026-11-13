@@ -40,8 +40,9 @@
     { k: "cyber", name: "Cyberspace", y: 600,
       sub: "Networks, the services that run on them and the personas that use them.",
       feeds: [["Ransomware leak sites", "now", "Vigil"], ["Exploited vulnerabilities (CISA KEV, NVD)", "now", "Vigil"],
-        ["CISA and ICS advisories", "now", "Vigil"], ["Internet outages and shutdowns (IODA)", "dev", "Blackout"],
-        ["Routing (BGP)", "dev", "Blackout"], ["Censorship and app blocks (OONI)", "dev", "Blackout"]] },
+        ["CISA and ICS advisories", "now", "Vigil"], ["Internet outages and shutdowns (IODA, Cloudflare Radar)", "now", "Blackout"],
+        ["Censorship and app blocks (OONI)", "now", "Blackout"], ["Cloud and satellite provider incidents", "now", "Blackout"],
+        ["Routing (BGP) beyond IODA", "planned", "Blackout"]] },
     { k: "ems", name: "Electromagnetic spectrum", short: "Spectrum", y: 730,
       sub: "Navigation, communication and radar signals that run through every physical layer and carry the information above.",
       feeds: [["Aircraft navigation integrity (ADS-B)", "now", "Noisefloor"], ["Spoofed aircraft and ship positions", "now", "Noisefloor"],
@@ -64,7 +65,7 @@
       sub: "Terrain, settlements, infrastructure, coasts and sea lanes, down to the seabed.",
       feeds: [["Conflict events (GDELT)", "now", "Watchfloor"], ["Ship positions (Finland's open AIS)", "now", "Noisefloor, Wake"],
         ["Navigational warnings (NGA)", "now", "Noisefloor, Cordon"], ["Quakes, volcanoes, fires and floods", "now", "Elements"],
-        ["Ports, chokepoints and transit volume (IMF PortWatch)", "dev", "Wake"], ["Undersea cable corridors", "dev", "Wake, Blackout"],
+        ["Ports, chokepoints and transit volume (IMF PortWatch)", "dev", "Wake"], ["Undersea cable corridors", "now", "Blackout, Wake"],
         ["Night lights and power", "planned", "Blackout"]] }
   ];
   var LK = LAYERS.map(function (l) { return l.k; });
@@ -111,9 +112,9 @@
     { id: "vigil", name: "Vigil", status: "live", home: "cyber", reach: ["systems", "human"], at: [914, 610],
       href: "https://vigil.theintelligence.company", ask: "Who is ransomware hitting?",
       line: "Cyber threat intelligence: ransomware groups and their victims, exploited vulnerabilities and advisories, with the history kept." },
-    { id: "blackout", name: "Blackout", status: "dev", home: "cyber", reach: ["land", "systems", "human"], at: [690, 650],
-      ask: "Where are the internet or routing out?",
-      line: "Internet and power outages, BGP routing drops, state shutdowns and censorship." },
+    { id: "blackout", name: "Blackout", status: "beta", home: "cyber", reach: ["land", "systems", "human"], at: [690, 650],
+      href: "https://blackout.theintelligence.company", ask: "Where is the internet going dark?",
+      line: "Where the internet goes dark: country outages from Georgia Tech IODA and Cloudflare Radar, censorship measurements from OONI, a watch on the Starlink, Amazon, Microsoft and Google networks and on eleven providers' own status pages, and a hand-compiled register of submarine cable corridors. A drop is called a likely shutdown only when OONI shows blocking in the same country. Night lights, power-grid data and BGP routing beyond IODA's are planned." },
 
     { id: "noisefloor", name: "Noisefloor", status: "live", home: "ems", reach: ["air", "space", "land"], at: [578, 694],
       href: "https://noisefloor.theintelligence.company", ask: "Is GPS being jammed or spoofed?",
