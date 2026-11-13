@@ -1,7 +1,38 @@
-# Hub handoff: where things stand (12 Nov 2026, about 7:45 PM CST: the `vetday` logging fix confirmed in the dashboard and 11 Nov's request counts read. About 10:30 AM CST: the `vetday` report hashes, salts and rate rows wiped by hand. 10:20 AM CST: the `vetday` Worker's invocation logs turned off and the Worker redeployed (privacy fix, approved; not committed). About 10:05 AM CST: the planner's field lessons and 2027 plan written up in `veterans-day/README.md`, nothing built. About 8:45 AM CST: Veterans Day field results recorded below: 26 reports, all "worked", no tips, no overrides. 11 Nov 2026, 6:30 AM CST: every Veterans Day area live from master `00a542f`, Colorado Springs included (the publisher re-signed in to Firebase and deployed). 3:15 AM CST: Veterans Day planner live with Reno–Sparks, Fort Meade and Denver from `acef121` (Colorado Springs then waited for the publisher's Firebase sign-in and deploy). 10 Nov 2026, about 11:10 PM CST: practice-mark fix, Mission BBQ Herndon and GEMINI.md live from ae0d44d, pushed; 11:00 PM: Reston's WTOP deals and page fixes live from fd2e434, pushed; 10:35 PM: Veterans Day Reston area and the Deals-tab fix live from fe2187a, pushed with 870fb2b; 5:30 PM: Antigravity's two commits live; 1:45 PM: Hornbacher's and Post 2 list live from d1d897c)
+# Hub handoff: where things stand (12 Nov 2026, about 10:55 PM CST: house bar v1.6 with Blackout live on the hub
+and eleven sites, PropertyCast at its 13 Nov publish. About 7:45 PM CST: the `vetday` logging fix confirmed in the dashboard and 11 Nov's request counts read. About 10:30 AM CST: the `vetday` report hashes, salts and rate rows wiped by hand. 10:20 AM CST: the `vetday` Worker's invocation logs turned off and the Worker redeployed (privacy fix, approved; not committed). About 10:05 AM CST: the planner's field lessons and 2027 plan written up in `veterans-day/README.md`, nothing built. About 8:45 AM CST: Veterans Day field results recorded below: 26 reports, all "worked", no tips, no overrides. 11 Nov 2026, 6:30 AM CST: every Veterans Day area live from master `00a542f`, Colorado Springs included (the publisher re-signed in to Firebase and deployed). 3:15 AM CST: Veterans Day planner live with Reno–Sparks, Fort Meade and Denver from `acef121` (Colorado Springs then waited for the publisher's Firebase sign-in and deploy). 10 Nov 2026, about 11:10 PM CST: practice-mark fix, Mission BBQ Herndon and GEMINI.md live from ae0d44d, pushed; 11:00 PM: Reston's WTOP deals and page fixes live from fd2e434, pushed; 10:35 PM: Veterans Day Reston area and the Deals-tab fix live from fe2187a, pushed with 870fb2b; 5:30 PM: Antigravity's two commits live; 1:45 PM: Hornbacher's and Post 2 list live from d1d897c)
 
 Read with `CLAUDE.md` (the project's notes). Times are Central (CST since 1 Nov). Each commit, push and deploy needs
 Tom's yes.
+
+## House bar v1.6: Blackout in the Programs menu, 12 Nov 2026 night (side session "house bar v1.6"; Tom: "Approve,
+## deploy all" in the parent session, then "Yes to all")
+Blackout (https://blackout.theintelligence.company, live 12 Nov 2026) is **beta** on the hub, in every site's Programs
+menu and on the drawing. Times below are CST.
+- **Hub** `41b4a7f` (pushed together with another session's `f46da47`; deployed about 10:50 PM, after Tom ran
+  `firebase login --reauth`: the CLI's sign-in had expired again, as on 8 and 11 Nov). Blackout is in Every product and
+  `404.html` after Vis; the footer credits its home page (no Sources section yet); "Updated … ago" reads its feed's
+  `generated_at` (whole feed, about 40 KB, about 5 KB as served); `connect-src` allows the blackout. origin. On the
+  drawing Blackout is beta and linked, asks "Where is the internet going dark?", and its line ends "Night lights,
+  power-grid data and BGP routing beyond IODA's are planned." The cyberspace layer's outage (IODA, Cloudflare Radar),
+  censorship (OONI) and new provider-incident rows are "now", BGP beyond IODA "planned"; undersea cable corridors are
+  "now" (Blackout, Wake). Tests: a Blackout sample feed, its shape check and expected Updated line; `check-live.js`
+  covers eight feeds. 188 tests passed locally on Edge. Live page checked: Blackout's row reads "Updated 2 h ago", no
+  console errors apart from Vigil's usual `/api/summary` 503.
+- **House bar `tic-nav.js` v1.6** (wording Tom approved): Blackout after Vigil, label "Cyberspace · internet outages",
+  phones "Internet outages, censorship and cloud provider incidents, worldwide.", hover "Where the internet goes dark:
+  … Updated every four hours." `tic-nav.css` stays v1.2. Live with `version: "1.6"` (by about 10:55 PM; each live file
+  checked, then each page loaded in Edge: 12 programs, Blackout's panel, "You are here", menu on top, no console
+  errors): COP `f6a54f1`, Elements `289231c`, Cordon `125b12c` (both rebased over data commits), Vis `a5f00c7`, Vigil
+  `83870db` (straight to `main`), Noisefloor `29b8b30` (file and rebuilt `site/`, pages load
+  `tic-nav.js?v=f5f477f9c8`), Context `9bd9b23` (`npx vercel --prod`; the first try said "Not authorized", the retry
+  deployed), Watchfloor `8e3439d` (`build_web.py`, `firebase deploy --only hosting:watchfloor`), Title 10 `97f2cc6`
+  (`sw.js` `t10-2026-11-13a`, deploy README line, clean worktree), Listening Post (no git; v1.5 backed up to
+  `_backups/tic-nav-v1.5-2026-11-13/`; hosting only, nothing else in `web/` had changed since 8 Nov).
+  **PropertyCast `217f63c` goes live at its next daily publish** (about 4:23 AM, 13 Nov); check its home page's HTML.
+- The main folders of `geo-context`, `more-context` and `Title 10 Field Guide` were clean and behind GitHub; they were
+  fast-forwarded (`--ff-only`) so a later hand deploy from them can't put v1.5 back.
+- **Seen, not changed:** on the first live check Noisefloor and Cordon each logged one 404; a rerun that logged every
+  failed request found none.
 
 ## Veterans Day planner: after the day, 12 Nov 2026 (the publisher's nine points, then "Yes, write it up")
 the publisher listed nine improvements after using the planner live (search hard to find, picking your own next stop, voice,
