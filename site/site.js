@@ -15,6 +15,7 @@
   var HEADWIND_FEED = "https://headwind.theintelligence.company/data/feed.geojson"; // Cloudflare Pages too; read whole
   var ORBIT_FEED = "https://orbit.theintelligence.company/data/feed.geojson"; // Cloudflare Pages too; read whole
   var LAUNCH_FEED = "https://launch.theintelligence.company/data/feed.geojson"; // Cloudflare Pages too; read whole
+  var UNDERTOW_FEED = "https://undertow.theintelligence.company/data/feed.geojson"; // Cloudflare Pages too; read whole
 
   // Time: the Time button (it names the viewer's zone) and every <time data-tic>.
   var holder = document.getElementById("time-settings");
@@ -133,6 +134,8 @@
   getJSON(ORBIT_FEED).then(function (f) { setFresh("orbit", f.generated_at); }).catch(function () {});
   // Launch: the same (about 10 KB).
   getJSON(LAUNCH_FEED).then(function (f) { setFresh("launch", f.generated_at); }).catch(function () {});
+  // Undertow: the same (about 1.9 MB, about 65 KB as served compressed).
+  getJSON(UNDERTOW_FEED).then(function (f) { setFresh("undertow", f.generated_at); }).catch(function () {});
 
   // Noisefloor: the briefing's bottom line for the newest aircraft day. Shared with oe/oe.js.
   window.ticNoisefloor = getJSON(NOISEFLOOR);

@@ -35,6 +35,9 @@ export const JOBS = [
   // Launch every six hours (14 Nov 2026), 20 minutes after Orbit starts, since it reads Orbit's published snapshot.
   // Private repo: 4 short one-job runs a day. Its own cron (:11 every 6 h) is the fallback.
   { repo: "metacog-osint/launch", workflow: "update.yml", ref: "main", minutes: [15], hours: [1, 7, 13, 19] },
+  // Undertow every six hours (14 Nov 2026): its publishers disclose monthly to yearly, so four runs a day is plenty.
+  // Private repo: 4 one-job runs of under a minute a day. Its own cron (:41 every 6 h) is the fallback.
+  { repo: "metacog-osint/undertow", workflow: "update.yml", ref: "main", minutes: [30], hours: [2, 8, 14, 20] },
   // COP's suite watchdog every three hours (14 Nov 2026): it fails, and GitHub mails the owner, when COP's build or
   // a program has stopped. On its own cron it would fire only every 7 to 14 hours. Private repo: 8 runs a day of
   // well under a minute is about 240 Actions minutes a month. It reads the public snapshot, so it is kept off COP's
