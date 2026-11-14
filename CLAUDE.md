@@ -68,6 +68,16 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   Space layer at [736, 930] (its row "Launch and reentry closure areas" is "now"; the old "Launch hazard areas,
   planned, Cordon" row became it), and in the second guide question. Worldwide NOTAMs wait on FAA access: say so.
   Footer credit links `/#src-h`.
+- **Undertow** (covert influence operations as the platforms and governments that disrupted them report them: Meta,
+  Google, OpenAI's RSS feed, TikTok via the EU Code of Conduct Transparency Centre, and the EEAS; origin, targets,
+  DISARM techniques, STIX 2.1 export; operation level only; `[local path]`, private repo
+  `metacog-osint/undertow`, Cloudflare Pages `undertow-cm3.pages.dev`) went live at
+  `undertow.theintelligence.company` on 14 Nov 2026. Listed the same day (Tom approved the wording, "Yes, go"):
+  **beta** in the house bar (v1.11, after Context, "Human · influence operations"), in the product lists after
+  Launch, on the drawing at [780, 426] (the planned "Influence operations" node became it; the Human row
+  "Attributed influence operations and platform takedowns" is "now"), and in the first guide question after
+  Context. Its DISARM technique mapping is proposed and not yet reviewed by Tom: don't describe it as reviewed.
+  Footer credit links `/#method`. Its feed is about 1.9 MB (about 65 KB compressed) and the hub reads it whole.
 - **Context vs Watchfloor is parked** (Tom, 1 Nov 2026: "stop it, i'm not deciding on this yet"). Both may stay with
   different scopes. Leave Context's "Watchfloor's predecessor" line alone, and don't raise the question again until
   Tom does. Watchfloor's noindex and copyright registration or ™ are also left as they are for now.
@@ -90,7 +100,9 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   repo's main branch (checked 5 Nov 2026; some local trees lag): Watchfloor `web/`, Title 10 `deploy/public/`,
   Noisefloor `site_src/`, PropertyCast `src/wx/static/`, CONTEXT `public/`, Vigil `public/`, Listening Post
   `web/public/`, and COP, Elements and Cordon.
-- `site/shared/tic-nav.js` (v1.10, 14 Nov 2026: Launch added after Orbit, pushed and deployed to the program sites about 2:20 PM CST that day (Tom's "Ship house bar v1.10"), COP followed about 2:55 PM CST (`bfad57b`, build run 43639997763), live everywhere except PropertyCast (goes live at its next daily publish); v1.9, 13 Nov 2026: Orbit added after Noisefloor, live on every site that day; v1.8,
+- `site/shared/tic-nav.js` (v1.11, 14 Nov 2026: Undertow added after Context, and the hub's own home page carries
+  the bar (Tom: the Programs menu on theintelligence.company too) with `data-home="here"`, which shows the home
+  link as plain text; rolled out to the program sites by a side session; v1.10, 14 Nov 2026: Launch added after Orbit, pushed and deployed to the program sites about 2:20 PM CST that day (Tom's "Ship house bar v1.10"), COP followed about 2:55 PM CST (`bfad57b`, build run 43639997763), live everywhere except PropertyCast (goes live at its next daily publish); v1.9, 13 Nov 2026: Orbit added after Noisefloor, live on every site that day; v1.8,
   13 Nov 2026: Headwind added after Blackout, live on every site that day; v1.7, 13 Nov
   2026: Blackout's power and routing wording, live on every site that day; v1.6, 13 Nov 2026 UTC: Blackout added; v1.5, 8 Nov: Vis) + `tic-nav.css` (v1.2, 7 Nov 2026; rollout status in `HANDOFF.md`): **the house bar** on every program site (Tom: "I need a
   link back to the home page on each subsite… a dropdown menu of all programs with their primary layer area or topic
@@ -102,7 +114,8 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   first in `<body>` or into `#tic-nav`, finds the current program from the host name (or `data-current`), and opens
   program links in the same tab, since it is site navigation. **Keep its `PROGRAMS` in step with `oe/oe.js` and the
   product list** when a program is added, renamed or goes live. Test page: `tools/tic-nav-demo.html` (serve the
-  project root). The hub itself doesn't use the bar; it has its own masthead.
+  project root). The hub's home page carries it too since v1.11 (mounted in `#tic-nav` after the skip link, above its own
+  masthead, with `data-home="here"`); the 404 and planner pages don't.
   - Its z-index is 10000 so its menu covers headers with their own stacking, such as Noisefloor's z-index 1100, and it
     resets `display`, margins, padding and borders so a site's generic `nav` rules can't reshape it, such as
     Watchfloor's flex `nav`.
@@ -169,6 +182,10 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   the fallback. `launch` was added to the `tic-dispatch` token's repository access about 2:30 PM CST 14 Nov (Claude in
   Tom's signed-in GitHub, at his request); the token now covers cop, cordon, elements, vis, blackout, headwind, orbit
   and launch.
+- **Undertow joins (14 Nov 2026):** Undertow `update.yml` at :30 past 02, 08, 14 and 20 UTC. Private repo, one job of
+  well under a minute a run. Its own cron (`41 */6`) is the fallback; it has no gate job, so a late scheduled run
+  repeats a dispatched one. **Tom adds `undertow` to the `tic-dispatch` token's repository access;** until then its
+  start fails with GitHub's 404 four times a day and the others carry on.
 - **COP's watchdog joins (14 Nov 2026):** COP `watch.yml` at :00 past 01, 04, 07, 10, 13, 16, 19 and 22 UTC. It
   fails, and GitHub mails the owner, when COP's build or a program has stopped (COP `tools/suite_watch.py`). Private
   repo, one job of well under a minute; its own cron (`47 */3`) is the fallback. No token change: `cop` is already
