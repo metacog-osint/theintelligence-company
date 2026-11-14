@@ -65,7 +65,7 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
 - **Launch** (launch and reentry closure areas: FAA space-operations TFRs, scheduled launches that coincide with a
   closure area, Tom's closure history since 2023 with per-pad corridors and recurring drop zones; `[local path]`,
   private repo `metacog-osint/launch`, Cloudflare Pages `launch-ey0.pages.dev`) went live at
-  `launch.theintelligence.company` on 14 Nov 2026. Listing prepared the same day (Tom's "list it"): **beta** in the
+  `launch.theintelligence.company` on 14 Nov 2026. Listed the same day (Tom's "list it", then "push and deploy"; hub deployed about 11:20 AM CST after Tom re-signed in to Firebase): **beta** in the
   house bar (v1.10, after Orbit, "Space · launch closures"), in the product lists after Orbit, on the drawing in the
   Space layer at [736, 930] (its row "Launch and reentry closure areas" is "now"; the old "Launch hazard areas,
   planned, Cordon" row became it), and in the second guide question. Worldwide NOTAMs wait on FAA access: say so.
