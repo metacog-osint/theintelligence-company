@@ -92,8 +92,8 @@ Headwind (https://headwind.theintelligence.company, live 13 Nov 2026) with the w
 - **The tic-doctrine push also carried `62875dd`** (kit 0.4.7, Blackout's EAGLE-I base rates, another session's
   commit sitting on local `main`): it was pushed by `git push origin main` without checking what was ahead. Later
   pushes named the commit. COP vendors kit 0.4.6.
-- **Still Tom's:** confirm `headwind` on the open list in COP's `tools/gate.py`. (`headwind` was added to the
-  `tic-dispatch` token about 6:50 PM CST 13 Nov; its 21:50 UTC start that day had 404'd.) The rollout
+- **Done:** `headwind` is on the open list in COP's `tools/gate.py` (checked 13 Nov evening; `orbit` too), and
+  `headwind` was added to the `tic-dispatch` token about 6:50 PM CST 13 Nov (its 21:50 UTC start that day had 404'd). The rollout
   worktrees and their branches were removed after the pushes.
 
 ## House bar v1.7: Blackout's power and routing wording, 13 Nov 2026 (Tom: "Approve, roll out", about 10:45 AM)
