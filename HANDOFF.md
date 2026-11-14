@@ -1,4 +1,4 @@
-# Hub handoff: where things stand (13 Nov 2026, about 5:05 PM CST: Orbit listed and house bar v1.9 live on the hub and every site except PropertyCast, which takes it at its 14 Nov publish. About 12:40 PM CST: Headwind listed and house bar v1.8 live on the hub and every site except PropertyCast, which takes it at its 14 Nov publish. About 11:20 AM CST: house bar v1.7 live on the hub and every
+# Hub handoff: where things stand (13 Nov 2026, about 7:05 PM CST: `headwind` and `orbit` added to the `tic-dispatch` token; Orbit's first dispatched run passed. About 5:05 PM CST: Orbit listed and house bar v1.9 live on the hub and every site except PropertyCast, which takes it at its 14 Nov publish. About 12:40 PM CST: Headwind listed and house bar v1.8 live on the hub and every site except PropertyCast, which takes it at its 14 Nov publish. About 11:20 AM CST: house bar v1.7 live on the hub and every
 site except PropertyCast, which takes it at its 14 Nov publish. 12 Nov 2026, about 10:55 PM CST: house bar v1.6 with Blackout live on the hub
 and eleven sites, PropertyCast at its 13 Nov publish. About 7:45 PM CST: the `vetday` logging fix confirmed in the dashboard and 11 Nov's request counts read. About 10:30 AM CST: the `vetday` report hashes, salts and rate rows wiped by hand. 10:20 AM CST: the `vetday` Worker's invocation logs turned off and the Worker redeployed (privacy fix, approved; not committed). About 10:05 AM CST: the planner's field lessons and 2027 plan written up in `veterans-day/README.md`, nothing built. About 8:45 AM CST: Veterans Day field results recorded below: 26 reports, all "worked", no tips, no overrides. 11 Nov 2026, 6:30 AM CST: every Veterans Day area live from master `00a542f`, Colorado Springs included (the publisher re-signed in to Firebase and deployed). 3:15 AM CST: Veterans Day planner live with Reno–Sparks, Fort Meade and Denver from `acef121` (Colorado Springs then waited for the publisher's Firebase sign-in and deploy). 10 Nov 2026, about 11:10 PM CST: practice-mark fix, Mission BBQ Herndon and GEMINI.md live from ae0d44d, pushed; 11:00 PM: Reston's WTOP deals and page fixes live from fd2e434, pushed; 10:35 PM: Veterans Day Reston area and the Deals-tab fix live from fe2187a, pushed with 870fb2b; 5:30 PM: Antigravity's two commits live; 1:45 PM: Hornbacher's and Post 2 list live from d1d897c)
 
@@ -44,8 +44,9 @@ approved the wording ("Approve, push and deploy"); it describes only what is liv
   Deploy notes as for v1.8 below: Watchfloor `build_web.py` then Firebase, Title 10 from the clean worktree's
   `deploy/`, Context `npx vercel --prod` (copy `.vercel/project.json` in), the hub by hand from a clean tree.
   Elements and Cordon commit data to `main` often, so rebase before pushing. Push by naming the commit.
-- **Still Tom's:** add `orbit` to the `tic-dispatch` token's
-  repository access (until then its start 404s at 00:55, 06:55, 12:55 and 18:55 UTC). Orbit has no gate job, so its
+- **Token done:** `orbit` and `headwind` were added to the `tic-dispatch` token's repository access about 6:50 PM CST
+  (no new token; permissions unchanged). Orbit's first dispatched run (00:55 UTC 14 Nov, run 43537385979) passed.
+  The token covers cop, cordon, elements, vis, blackout, headwind and orbit. Orbit has no gate job, so its
   fallback cron (`41 */6`) can repeat a dispatched run; GCAT is only asked for Last-Modified and Launch Library 2 gets
   one request a run, so that costs little.
 
@@ -91,8 +92,8 @@ Headwind (https://headwind.theintelligence.company, live 13 Nov 2026) with the w
 - **The tic-doctrine push also carried `62875dd`** (kit 0.4.7, Blackout's EAGLE-I base rates, another session's
   commit sitting on local `main`): it was pushed by `git push origin main` without checking what was ahead. Later
   pushes named the commit. COP vendors kit 0.4.6.
-- **Still Tom's:** add `headwind` to the `tic-dispatch` token's repository access (until then its start 404s at
-  03:50, 09:50, 15:50 and 21:50 UTC); confirm `headwind` on the open list in COP's `tools/gate.py`. The rollout
+- **Still Tom's:** confirm `headwind` on the open list in COP's `tools/gate.py`. (`headwind` was added to the
+  `tic-dispatch` token about 6:50 PM CST 13 Nov; its 21:50 UTC start that day had 404'd.) The rollout
   worktrees and their branches were removed after the pushes.
 
 ## House bar v1.7: Blackout's power and routing wording, 13 Nov 2026 (Tom: "Approve, roll out", about 10:45 AM)
