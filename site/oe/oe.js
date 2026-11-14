@@ -55,7 +55,7 @@
       feeds: [["Satellite catalog (Space-Track)", "now", "Noisefloor"], ["Space weather (NOAA, ESA)", "now", "Noisefloor"],
         ["Ionospheric disturbance from GPS base stations", "dev", "FieldCast"],
         ["Launches, scheduled launches and reentries (GCAT, Launch Library 2)", "now", "Orbit"], ["Satellite catalog changes (GCAT)", "now", "Orbit"],
-        ["Manoeuvres and counterspace events", "dev", "Orbit"], ["Launch hazard areas", "planned", "Cordon"],
+        ["Manoeuvres and counterspace events", "dev", "Orbit"], ["Launch and reentry closure areas (FAA TFRs, navigational warnings, closure history)", "now", "Launch"],
         ["Ground segment and cislunar activity", "research", ""]] },
     { k: "air", name: "Air", y: 990,
       sub: "Airspace, flights, notices to aviation and weather.",
@@ -129,6 +129,9 @@
     { id: "orbit", name: "Orbit", status: "beta", home: "space", reach: ["ems", "land", "systems"], at: [862, 904],
       href: "https://orbit.theintelligence.company", ask: "What launched, came down or changed in the satellite catalog?",
       line: "What changed in Earth orbit, from public catalogs: orbital launches of the last 7 and 30 days, launches scheduled for the next 14 days, reentries, and changes to the satellite catalog between Orbit's own readings, with objects in orbit counted by owner. From Jonathan McDowell's GCAT (CC BY 4.0) and The Space Devs' Launch Library 2. Measurements and reports only; Orbit adds no judgment. Updated every six hours." },
+    { id: "launch", name: "Launch", status: "beta", home: "space", reach: ["air", "land"], at: [736, 930],
+      href: "https://launch.theintelligence.company", ask: "Where are launch and reentry closures, and which launches do they match?",
+      line: "Launch and reentry closure areas from official notices: the FAA's space-operations flight restrictions in force, scheduled launches that coincide with an announced closure area in time, in time and place, or as a launch since dated, a searchable history of closures since 2023 with each notice's own text, and where each pad's closures fall. Worldwide NOTAMs wait on FAA access." },
 
     { id: "cordon", name: "Cordon", status: "beta", home: "air", reach: ["land", "space", "systems", "human"], at: [756, 1036], end: true,
       href: "https://cordon.theintelligence.company", ask: "Where are authorities warning people away?",
@@ -152,7 +155,7 @@
     { id: "g1", q: "Where is conflict or pressure building?", layers: ["systems", "human"],
       programs: ["cop", "watchfloor", "context", "headwind", "verdict"] },
     { id: "g2", q: "What's hitting networks, signals and satellites?", layers: ["cyber", "ems", "space"],
-      programs: ["vigil", "noisefloor", "blackout", "fieldcast", "orbit"] },
+      programs: ["vigil", "noisefloor", "blackout", "fieldcast", "orbit", "launch"] },
     { id: "g3", q: "What's happening on the ground, at sea and in the air?", layers: ["air", "land"],
       programs: ["cordon", "elements", "vis", "wake"] }
   ];

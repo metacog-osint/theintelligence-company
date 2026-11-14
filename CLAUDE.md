@@ -62,6 +62,14 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   activity"), in the product lists after Headwind, and on the drawing (its `line` is the bar's long text; the Space
   layer's launch and catalog-change rows are "now", manoeuvres and counterspace stay "dev"). Describe it only from
   what is live: manoeuvres and counterspace are not built. Its footer credit links `/#src-h` (its Sources heading).
+- **Launch** (launch and reentry closure areas: FAA space-operations TFRs, scheduled launches that coincide with a
+  closure area, Tom's closure history since 2023 with per-pad corridors and recurring drop zones; `[local path]`,
+  private repo `metacog-osint/launch`, Cloudflare Pages `launch-ey0.pages.dev`) went live at
+  `launch.theintelligence.company` on 14 Nov 2026. Listing prepared the same day (Tom's "list it"): **beta** in the
+  house bar (v1.10, after Orbit, "Space · launch closures"), in the product lists after Orbit, on the drawing in the
+  Space layer at [736, 930] (its row "Launch and reentry closure areas" is "now"; the old "Launch hazard areas,
+  planned, Cordon" row became it), and in the second guide question. Worldwide NOTAMs wait on FAA access: say so.
+  Footer credit links `/#src-h`. Not yet rolled to the program sites' copies of the house bar.
 - **Context vs Watchfloor is parked** (Tom, 1 Nov 2026: "stop it, i'm not deciding on this yet"). Both may stay with
   different scopes. Leave Context's "Watchfloor's predecessor" line alone, and don't raise the question again until
   Tom does. Watchfloor's noindex and copyright registration or ™ are also left as they are for now.
@@ -84,7 +92,7 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   repo's main branch (checked 5 Nov 2026; some local trees lag): Watchfloor `web/`, Title 10 `deploy/public/`,
   Noisefloor `site_src/`, PropertyCast `src/wx/static/`, CONTEXT `public/`, Vigil `public/`, Listening Post
   `web/public/`, and COP, Elements and Cordon.
-- `site/shared/tic-nav.js` (v1.9, 13 Nov 2026: Orbit added after Noisefloor, live on every site that day; v1.8,
+- `site/shared/tic-nav.js` (v1.10, 14 Nov 2026: Launch added after Orbit, not yet copied to the program sites; v1.9, 13 Nov 2026: Orbit added after Noisefloor, live on every site that day; v1.8,
   13 Nov 2026: Headwind added after Blackout, live on every site that day; v1.7, 13 Nov
   2026: Blackout's power and routing wording, committed, not pushed or rolled
   out; v1.6, 13 Nov 2026 UTC: Blackout added; v1.5, 8 Nov: Vis) + `tic-nav.css` (v1.2, 7 Nov 2026; rollout status in `HANDOFF.md`): **the house bar** on every program site (Tom: "I need a
@@ -159,6 +167,9 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   Launch Library 2 gets one request a run). `orbit` was added to the `tic-dispatch` token's repository access on
   13 Nov (no new token); the first dispatched run, 00:55 UTC 14 Nov (6:55 PM CST 13 Nov), passed. The token now
   covers cop, cordon, elements, vis, blackout, headwind and orbit.
+- **Launch joins (14 Nov 2026):** Launch `update.yml` at :15 past 01, 07, 13 and 19 UTC, 20 minutes after Orbit
+  starts, because it reads Orbit's published snapshot. Private repo, one short job a run; its own cron (`11 */6`) is
+  the fallback. Tom must add `launch` to the `tic-dispatch` token's repository access, or the start 404s.
 - **Its clock is PropertyCast's.** The free plan allows 5 cron triggers per account, and on 5 Nov all 5 were in use:
   PropertyCast's trigger 1 (`*/5`), Vigil's ingestion Worker 4. The first deploy, with a cron of its own, was refused
   (code 10072). So `tic-dispatch` has `crons = []`, and

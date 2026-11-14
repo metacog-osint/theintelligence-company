@@ -14,6 +14,7 @@
   var BLACKOUT_FEED = "https://blackout.theintelligence.company/data/feed.geojson"; // also Cloudflare Pages; read whole
   var HEADWIND_FEED = "https://headwind.theintelligence.company/data/feed.geojson"; // Cloudflare Pages too; read whole
   var ORBIT_FEED = "https://orbit.theintelligence.company/data/feed.geojson"; // Cloudflare Pages too; read whole
+  var LAUNCH_FEED = "https://launch.theintelligence.company/data/feed.geojson"; // Cloudflare Pages too; read whole
 
   // Time: the Time button (it names the viewer's zone) and every <time data-tic>.
   var holder = document.getElementById("time-settings");
@@ -130,6 +131,8 @@
   getJSON(HEADWIND_FEED).then(function (f) { setFresh("headwind", f.generated_at); }).catch(function () {});
   // Orbit: the same (about 50 KB, about 5 KB as served compressed).
   getJSON(ORBIT_FEED).then(function (f) { setFresh("orbit", f.generated_at); }).catch(function () {});
+  // Launch: the same (about 10 KB).
+  getJSON(LAUNCH_FEED).then(function (f) { setFresh("launch", f.generated_at); }).catch(function () {});
 
   // Noisefloor: the briefing's bottom line for the newest aircraft day. Shared with oe/oe.js.
   window.ticNoisefloor = getJSON(NOISEFLOOR);
