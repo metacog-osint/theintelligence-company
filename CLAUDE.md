@@ -172,6 +172,10 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   the fallback. `launch` was added to the `tic-dispatch` token's repository access about 2:30 PM CST 14 Nov (Claude in
   Tom's signed-in GitHub, at his request); the token now covers cop, cordon, elements, vis, blackout, headwind, orbit
   and launch.
+- **COP's watchdog joins (14 Nov 2026):** COP `watch.yml` at :00 past 01, 04, 07, 10, 13, 16, 19 and 22 UTC. It
+  fails, and GitHub mails the owner, when COP's build or a program has stopped (COP `tools/suite_watch.py`). Private
+  repo, one job of well under a minute; its own cron (`47 */3`) is the fallback. No token change: `cop` is already
+  in the `tic-dispatch` token's repository access.
 - **Its clock is PropertyCast's.** The free plan allows 5 cron triggers per account, and on 5 Nov all 5 were in use:
   PropertyCast's trigger 1 (`*/5`), Vigil's ingestion Worker 4. The first deploy, with a cron of its own, was refused
   (code 10072). So `tic-dispatch` has `crons = []`, and
