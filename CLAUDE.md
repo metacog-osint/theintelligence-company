@@ -92,7 +92,7 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   repo's main branch (checked 5 Nov 2026; some local trees lag): Watchfloor `web/`, Title 10 `deploy/public/`,
   Noisefloor `site_src/`, PropertyCast `src/wx/static/`, CONTEXT `public/`, Vigil `public/`, Listening Post
   `web/public/`, and COP, Elements and Cordon.
-- `site/shared/tic-nav.js` (v1.10, 14 Nov 2026: Launch added after Orbit, not yet copied to the program sites; v1.9, 13 Nov 2026: Orbit added after Noisefloor, live on every site that day; v1.8,
+- `site/shared/tic-nav.js` (v1.10, 14 Nov 2026: Launch added after Orbit, pushed and deployed to the program sites about 2:20 PM CST that day (Tom's "Ship house bar v1.10"), live everywhere except COP (its own session ships it) and PropertyCast (goes live at its next daily publish); v1.9, 13 Nov 2026: Orbit added after Noisefloor, live on every site that day; v1.8,
   13 Nov 2026: Headwind added after Blackout, live on every site that day; v1.7, 13 Nov
   2026: Blackout's power and routing wording, committed, not pushed or rolled
   out; v1.6, 13 Nov 2026 UTC: Blackout added; v1.5, 8 Nov: Vis) + `tic-nav.css` (v1.2, 7 Nov 2026; rollout status in `HANDOFF.md`): **the house bar** on every program site (Tom: "I need a
