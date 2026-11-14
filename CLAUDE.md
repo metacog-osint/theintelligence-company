@@ -169,7 +169,9 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   covers cop, cordon, elements, vis, blackout, headwind and orbit.
 - **Launch joins (14 Nov 2026):** Launch `update.yml` at :15 past 01, 07, 13 and 19 UTC, 20 minutes after Orbit
   starts, because it reads Orbit's published snapshot. Private repo, one short job a run; its own cron (`11 */6`) is
-  the fallback. Tom must add `launch` to the `tic-dispatch` token's repository access, or the start 404s.
+  the fallback. `launch` was added to the `tic-dispatch` token's repository access about 2:30 PM CST 14 Nov (Claude in
+  Tom's signed-in GitHub, at his request); the token now covers cop, cordon, elements, vis, blackout, headwind, orbit
+  and launch.
 - **Its clock is PropertyCast's.** The free plan allows 5 cron triggers per account, and on 5 Nov all 5 were in use:
   PropertyCast's trigger 1 (`*/5`), Vigil's ingestion Worker 4. The first deploy, with a cron of its own, was refused
   (code 10072). So `tic-dispatch` has `crons = []`, and
