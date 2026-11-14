@@ -3,7 +3,7 @@
 // America/Chicago, so "Updated … ago" and every tooltip are known in advance.
 import { test, before, after, describe } from "node:test";
 import assert from "node:assert/strict";
-import { chromium } from "playwright";
+import { launch } from "./lib/browser.js";
 import { startSite } from "./lib/server.js";
 import { sample, problems, SHAPES } from "./lib/feeds.js";
 import { openHub } from "./lib/hub.js";
@@ -12,7 +12,7 @@ import { read, oe, productList } from "./lib/source.js";
 
 const OE = oe();
 let browser, site;
-before(async () => { site = await startSite(); browser = await chromium.launch(); });
+before(async () => { site = await startSite(); browser = await launch(); });
 after(async () => { await browser?.close(); site?.close(); });
 
 const open = (pathname, opts) => openHub(browser, site, pathname, opts);

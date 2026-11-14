@@ -92,13 +92,12 @@ export const SAMPLE_MODIFIED = { ELEMENTS_FEED: "2026-11-07T13:00:00Z", CORDON_F
 // Answer the hub's feed requests in a Playwright context. `feeds` overrides any feed by name with one of:
 //   { json }         a body to send as JSON          { body, status }  a raw body and status
 //   { abort: true }  a network failure               { lastModified }  a HEAD answer for the GeoJSON feeds
-// Requests to the local site go through; anything else is refused and recorded in the returned list.
+// Requests to the local site go straight through; anything else is refused and recorded in the returned list.
 export async function routeFeeds(context, siteUrl, feeds = {}) {
   const strays = [];
   const byUrl = Object.fromEntries(Object.entries(URLS).map(([k, u]) => [u, k]));
-  await context.route("**/*", async (route) => {
+  await context.route(offSite(siteUrl), async (route) => {
     const url = route.request().url();
-    if (url.startsWith(siteUrl)) return route.continue();
     const name = byUrl[url.split("?")[0]];
     if (!name) { strays.push(url); return route.abort(); }
     const spec = feeds[name] || (HEAD_ONLY.includes(name)
@@ -116,4 +115,12 @@ export async function routeFeeds(context, siteUrl, feeds = {}) {
     return route.fulfill({ status: spec.status || 200, headers, body: spec.body || "" });
   });
   return strays;
+}
+
+// Every URL except the local site's, for context.route. Playwright matches a pattern itself, so the page's own
+// requests (scripts, styles, fonts, data) never wait on the test process; under a full run, on a busy machine, that
+// wait made the Veterans Day map's router request outlast the planner's 8-second timeout.
+export function offSite(siteUrl) {
+  const esc = siteUrl.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  return new RegExp("^(?!" + esc + "(?:[/?#]|$))");
 }

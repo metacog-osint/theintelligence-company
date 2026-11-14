@@ -77,8 +77,15 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         super().end_headers()
 
 
+class Server(http.server.ThreadingHTTPServer):
+    # Python's default listen backlog is 5. A browser opens several connections at once, and on Windows a connection
+    # past the backlog is refused outright (net::ERR_CONNECTION_REFUSED), which failed browser tests under load.
+    request_queue_size = 128
+    daemon_threads = True
+
+
 if __name__ == "__main__":
     port = int(sys.argv[1]) if len(sys.argv) > 1 else 5055
-    server = http.server.ThreadingHTTPServer(("127.0.0.1", port), Handler)  # port 0 picks a free one (the tests do)
+    server = Server(("127.0.0.1", port), Handler)  # port 0 picks a free one (the tests do)
     print(f"Serving {SITE} on http://127.0.0.1:{server.server_address[1]} with firebase.json headers", flush=True)
     server.serve_forever()

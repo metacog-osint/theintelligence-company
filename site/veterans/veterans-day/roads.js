@@ -1,11 +1,11 @@
-/*! Veterans Day route lines v1.0 · The Intelligence Company · the road shapes for the Map's route line.
+/*! Veterans Day route lines v1.1 · The Intelligence Company · the road shapes for the Map's route line.
  *  Browser: window.VDRoads. Node (tests): require("./roads.js").
  *
  *  Privacy: this file only ever sees stores, which are public places, never where you are. The app draws the leg
  *  from you to your first stop itself, straight, on the phone. The legs between stores come from OSRM's public
  *  server (run by FOSSGIS), which asks for at most one request a second. So one request covers every leg the route
  *  is missing, each leg is kept for the visit (marking a stop or a re-plan that reuses legs sends nothing), a request
- *  gives up after 8 seconds, and a leg that failed waits a minute before it is asked for again. Until a leg's road
+ *  gives up 8 seconds after it is sent (v1.1, 14 Nov 2026: the time used to start when it was queued), and a leg that failed waits a minute before it is asked for again. Until a leg's road
  *  shape arrives, or if it never does, the leg is drawn straight.
  */
 (function (root, factory) {
@@ -101,13 +101,17 @@
       if (left > 0) { timer = later(function () { timer = null; pump(); }, left); return; }
       busy = true; lastAt = clock(); requests++;
       var ctl = typeof AbortController === "function" ? new AbortController() : null, stop = null;
-      var timeout = new Promise(function (resolve, reject) {
-        stop = later(function () { if (ctl) ctl.abort(); reject(new Error("the router took too long")); }, TIMEOUT);
-      });
-      var answer = Promise.resolve()
-        .then(function () { return get(url(run), { signal: ctl ? ctl.signal : undefined, credentials: "omit" }); })
-        .then(function (r) { if (!r.ok) throw new Error("router " + r.status); return r.json(); });
-      Promise.race([answer, timeout])
+      // The 8 seconds start when the request goes out, not when it is queued: the request leaves only after the
+      // render that asked for it finishes, and a long render on a busy phone mustn't count against the router.
+      Promise.resolve()
+        .then(function () {
+          var timeout = new Promise(function (resolve, reject) {
+            stop = later(function () { if (ctl) ctl.abort(); reject(new Error("the router took too long")); }, TIMEOUT);
+          });
+          var answer = get(url(run), { signal: ctl ? ctl.signal : undefined, credentials: "omit" })
+            .then(function (r) { if (!r.ok) throw new Error("router " + r.status); return r.json(); });
+          return Promise.race([answer, timeout]);
+        })
         .then(function (j) {
           splitLegs(run, j).forEach(function (x) { have.set(x[0], x[1]); failedAt.delete(x[0]); });
           return true;
@@ -131,6 +135,6 @@
     };
   }
 
-  return { version: "1.0", ROUTER: ROUTER, GAP: GAP, TIMEOUT: TIMEOUT, RETRY: RETRY, MAX_STOPS: MAX_STOPS,
+  return { version: "1.1", ROUTER: ROUTER, GAP: GAP, TIMEOUT: TIMEOUT, RETRY: RETRY, MAX_STOPS: MAX_STOPS,
     legKey: legKey, url: url, span: span, splitLegs: splitLegs, lines: lines, create: create };
 }));

@@ -3,14 +3,14 @@
 // measure contrast, so a last test measures them from a screenshot.
 import { test, before, after, describe } from "node:test";
 import assert from "node:assert/strict";
-import { chromium } from "playwright";
+import { launch } from "./lib/browser.js";
 import { startSite } from "./lib/server.js";
 import { openHub } from "./lib/hub.js";
 import { openStandIn } from "./lib/standin.js";
 import { axe, describe as explain } from "./lib/axe.js";
 
 let browser, site;
-before(async () => { site = await startSite(); browser = await chromium.launch(); });
+before(async () => { site = await startSite(); browser = await launch(); });
 after(async () => { await browser?.close(); site?.close(); });
 
 // The layers band's background is a radial gradient, which axe can't read. Its lightest point is the worst case for
