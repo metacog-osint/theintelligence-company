@@ -170,3 +170,13 @@ test("one failing job doesn't stop another due at the same minute", async () => 
   await assert.rejects(run({ DISPATCH_TOKEN: "t" }, at(5), jobs, fetcher), /o\/a x\.yml: HTTP 404 \(Not Found\)/);
   assert.equal(calls.length, 2);
 });
+
+test("Launch runs every six hours, at :15 past 01, 07, 13 and 19 UTC, after Orbit", () => {
+  const la = JOBS.find((j) => j.repo === "metacog-osint/launch");
+  assert.equal(la.workflow, "update.yml");
+  assert.equal(la.ref, "main");
+  assert.deepEqual(la.minutes, [15]);
+  assert.deepEqual(la.hours, [1, 7, 13, 19]);
+  assert.deepEqual(due(JOBS, at(15, 7)).map((j) => j.repo), ["metacog-osint/launch"]);
+  assert.deepEqual(due(JOBS, at(15, 8)).map((j) => j.repo), []);
+});

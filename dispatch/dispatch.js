@@ -33,6 +33,9 @@ export const JOBS = [
   // Orbit every six hours (13 Nov 2026), the first about 35 minutes after GCAT republishes (about 00:20 UTC). Private
   // repo: 4 one-job runs a day. Its own cron (:41 every 6 h) is the fallback.
   { repo: "metacog-osint/orbit", workflow: "update.yml", ref: "main", minutes: [55], hours: [0, 6, 12, 18] },
+  // Launch every six hours (14 Nov 2026), 20 minutes after Orbit starts, since it reads Orbit's published snapshot.
+  // Private repo: 4 short one-job runs a day. Its own cron (:11 every 6 h) is the fallback.
+  { repo: "metacog-osint/launch", workflow: "update.yml", ref: "main", minutes: [15], hours: [1, 7, 13, 19] },
 ];
 
 // The jobs due at this minute. The caller passes the cron's slot time, not when it woke, so a late start still
