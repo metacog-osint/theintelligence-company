@@ -1,6 +1,7 @@
 // tools/serve.py behaves like Firebase Hosting for the hub: the same headers, and 404.html for a missing page.
 import { test, before, after } from "node:test";
 import assert from "node:assert/strict";
+import net from "node:net";
 import { startSite } from "./lib/server.js";
 import { read } from "./lib/source.js";
 
@@ -49,4 +50,18 @@ test("a HEAD request for a missing page gets the status without a body", async (
   const r = await fetch(site.url + "/nope", { method: "HEAD" });
   assert.equal(r.status, 404);
   assert.equal(await r.text(), "");
+});
+
+test("many connections at once are all accepted, as a browser opens them (none refused)", async () => {
+  // Python's default listen backlog is 5; on Windows the sixth waiting connection was refused, which failed browser
+  // tests in full runs (net::ERR_CONNECTION_REFUSED). serve.py raises it.
+  const port = Number(new URL(site.url).port);
+  const results = await Promise.all(Array.from({ length: 40 }, () => new Promise((done) => {
+    const s = net.connect(port, "127.0.0.1", () => s.write(["HEAD /robots.txt HTTP/1.1", "Host: x", "Connection: close", "", ""].join("\r\n")));
+    let got = "";
+    s.on("data", (d) => { got += d; });
+    s.on("end", () => done(got.startsWith("HTTP/1.") ? "ok" : "no answer"));
+    s.on("error", (e) => done(e.code));
+  })));
+  assert.deepEqual(results.filter((r) => r !== "ok"), []);
 });

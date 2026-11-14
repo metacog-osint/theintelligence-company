@@ -6,7 +6,7 @@ Checks for the hub site (`../site`), the house bar every program site carries, a
 | File | What it checks | Needs |
 | --- | --- | --- |
 | `site.test.js` | House rules from `CLAUDE.md`, read from the files: the four program lists agree (house bar, drawing, product list, 404 page), no inline code or styles (CSP), new-tab links, absolute URLs on the 404 page, `connect-src`, ruled-out wording, footer date vs sitemap, version lines | Node only |
-| `serve.test.js` | `serve.py` sends `firebase.json`'s headers and serves `404.html` for missing pages | Node, Python |
+| `serve.test.js` | `serve.py` sends `firebase.json`'s headers, serves `404.html` for missing pages, and accepts many connections at once (a backlog of 5 made Windows refuse a browser's sixth) | Node, Python |
 | `browser.test.js` | The home page in Chromium with sample feeds: Latest lines, "Updated … ago", "running late", fallbacks when feeds fail, the guide, keyboard, phone layout, the drawing's labels (no overlaps, inside their plates, 9 px at 1440×900), the 404 page | Playwright |
 | `nav.test.js` | The house bar on a stand-in product page: menu, "You are here", keyboard, phone | Playwright |
 | `a11y.test.js` | axe (WCAG 2.2 AA and best practices) in light and dark, desktop and phone; contrast of the drawing's labels | Playwright, axe |
@@ -29,6 +29,21 @@ npm run check:live                  # the real feeds
 ```
 
 `serve.py` is started as `python3` (Linux, macOS) or `python` / `py` (Windows); set `PYTHON` to choose another.
+
+### On an installed browser instead of Playwright's Chromium
+
+The browser tests launch Playwright's own Chromium (`lib/browser.js`), which GitHub's runner installs. To skip the
+download (about 150 MB), set `BROWSER_CHANNEL` to a browser that is already installed: `msedge` (Edge, on every
+Windows machine), `chrome`, or another channel Playwright's `chromium.launch` accepts. Without it, a machine with no
+Playwright Chromium fails at launch with a message pointing here.
+
+```
+$env:BROWSER_CHANNEL = "msedge"; npm test     # PowerShell (stays set in that window)
+BROWSER_CHANNEL=msedge npm test               # Git Bash, Linux, macOS
+```
+
+Edge and Playwright's Chromium share the Chromium engine, so results match apart from text rendering details; the
+drawing's label checks are written to pass on both, and on GitHub's runner (`CLAUDE.md`, "The drawing's labels").
 
 ## Sample feeds
 

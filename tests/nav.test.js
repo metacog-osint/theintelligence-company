@@ -2,13 +2,13 @@
 // served at a program's own address under a strict CSP, as the sites serve it.
 import { test, before, after } from "node:test";
 import assert from "node:assert/strict";
-import { chromium } from "playwright";
+import { launch } from "./lib/browser.js";
 import { ticNav } from "./lib/source.js";
 import { openStandIn } from "./lib/standin.js";
 
 const NAV = ticNav();
 let browser;
-before(async () => { browser = await chromium.launch(); });
+before(async () => { browser = await launch(); });
 after(async () => { await browser?.close(); });
 const open = (opts) => openStandIn(browser, opts);
 const btn = (page) => page.locator(".tic-house-btn");

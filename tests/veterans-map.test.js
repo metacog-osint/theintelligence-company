@@ -4,10 +4,11 @@
 // planning Wednesday from 10:00 AM.
 import { test, before, after } from "node:test";
 import assert from "node:assert/strict";
-import { chromium } from "playwright";
+import { launch } from "./lib/browser.js";
 import { startSite } from "./lib/server.js";
 import { read } from "./lib/source.js";
 import { PHONE } from "./lib/hub.js";
+import { offSite } from "./lib/feeds.js";
 
 const DEALS = JSON.parse(read("site/veterans/veterans-day/data/deals.json"));
 const STORES = new Set(DEALS.places.map((p) => p.lng + "," + p.lat));
@@ -18,7 +19,7 @@ const PNG = Buffer.from("iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR
 const CORS = { "access-control-allow-origin": "*" };
 
 let browser, site;
-before(async () => { site = await startSite(); browser = await chromium.launch(); });
+before(async () => { site = await startSite(); browser = await launch(); });
 after(async () => { await browser?.close(); site?.close(); });
 
 // An answer shaped like OSRM's for whatever stops were asked for: each leg bends once, joining points are shared,
@@ -40,9 +41,8 @@ async function openMap({ state = {}, router = "answer", colorScheme = "light", g
   await context.addInitScript((s) => { localStorage.setItem("vd2026-v1", JSON.stringify(s)); },
     { previewMin: 600, ...state, gps });
   const sent = [], strays = [], errors = [];
-  await context.route("**/*", (route) => {
+  await context.route(offSite(site.url), (route) => {
     const u = new URL(route.request().url());
-    if (u.origin === site.url) return route.continue();
     if (u.origin === "https://router.project-osrm.org") {
       sent.push(u.href);
       if (router === "fail") return route.abort("internetdisconnected");
@@ -174,6 +174,14 @@ test("opening the Map zooms to the route; after that the view stays where you pu
     await t.page.mouse.down();
     await t.page.mouse.move(box.x + box.width / 2 + 80, box.y + box.height / 2 + 60, { steps: 8 });
     await t.page.mouse.up();
+    // Leaflet glides on after a drag (inertia), slower when the machine is busy: read the view once it has stopped,
+    // that is when the first stop hasn't moved for 10 frames in a row.
+    await t.page.evaluate(() => new Promise((done) => {
+      const at = () => { const r = document.querySelector(".vd-num").getBoundingClientRect(); return r.left + "," + r.top; };
+      let last = at(), still = 0;
+      const tick = () => { const now = at(); still = now === last ? still + 1 : 0; last = now; if (still >= 10) done(true); else requestAnimationFrame(tick); };
+      requestAnimationFrame(tick);
+    }));
     const moved = await firstStop();
     assert.ok(Math.abs(moved[0] - before[0]) > 40, "the drag moved the map");
     await t.page.evaluate(() => document.dispatchEvent(new Event("visibilitychange")));

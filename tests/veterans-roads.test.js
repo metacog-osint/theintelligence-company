@@ -43,12 +43,18 @@ function bench(respond) {
       return new Promise((resolve, reject) => {
         const r = respond(u, opts);
         if (r === "hang") { if (opts.signal) opts.signal.addEventListener("abort", () => reject(new Error("aborted"))); return; }
+        if (r && r.after) { // answered r.after ms later, unless cancelled first
+          if (opts.signal) opts.signal.addEventListener("abort", () => reject(new Error("aborted")));
+          return env.setTimeout(() => resolve({ ok: true, status: 200, json: async () => r.body }), r.after);
+        }
         if (r instanceof Error) return reject(r);
         if (typeof r === "number") return resolve({ ok: false, status: r, json: async () => ({}) });
         resolve({ ok: true, status: 200, json: async () => r });
       });
     },
   };
+  // The page is busy for ms (a long render): the clock moves, but nothing else runs until it finishes.
+  env.block = (ms) => { t += ms; };
   // Move the clock forward, firing timers in order and letting promises settle in between.
   env.advance = async (ms) => {
     const end = t + ms;
@@ -201,6 +207,19 @@ test("a request that hangs gives up after 8 seconds, and the line stays straight
   assert.equal(signal.aborted, true, "the request is cancelled");
   assert.equal(b.roads.stats().busy, false);
   assert.deepEqual(b.roads.lines([A, B]).map((l) => l.road), [false]);
+});
+
+test("the 8 seconds start when the request goes out: a long render after it was asked for doesn't use them up", async () => {
+  // In a full test run the planner's render took 14 s on a busy machine, the request left after it, and the old
+  // timer (started when the request was queued) cancelled it at once (14 Nov 2026).
+  const b = bench((u) => ({ after: 100, body: answering(u) }));
+  b.roads.want([A, B, C]);
+  b.block(R.TIMEOUT + 1000);
+  await b.advance(200);
+  assert.equal(b.calls.length, 1);
+  assert.equal(b.calls[0].opts.signal.aborted, false, "not cancelled");
+  assert.deepEqual(b.roads.lines([A, B, C]).map((l) => l.road), [true], "the answer arrived and is drawn by road");
+  assert.equal(b.updates, 1);
 });
 
 test("only each stop's id and coordinates reach the module, and it never looks for the phone's position", () => {
