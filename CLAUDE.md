@@ -151,13 +151,14 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   (named `tic-dispatch` on GitHub) the same evening; it now covers cop, cordon, elements, vis and blackout.
 - **Headwind joins (13 Nov 2026):** Headwind `update.yml` at :50 past 03, 09, 15 and 21 UTC (its sources change
   daily at most). Private repo, one job a run. Its own cron (`23 */6`) is the fallback; it has no gate job yet, so
-  a late scheduled run repeats a dispatched one. Tom must add `headwind` to the `tic-dispatch` token's repository
-  access; until then its start fails with GitHub's 404 four times a day and the others carry on.
+  a late scheduled run repeats a dispatched one. `headwind` was missing from the `tic-dispatch` token until about
+  6:50 PM CST 13 Nov (its 21:50 UTC start 404'd); it was added then, with `orbit` (no new token).
 - **Orbit joins (13 Nov 2026):** Orbit `update.yml` at :55 past 00, 06, 12 and 18 UTC, the first about 35 minutes
   after GCAT republishes (about 00:20 UTC). Private repo, one job a run. Its own cron (`41 */6`) is the fallback; it
   has no gate job, so a late scheduled run repeats a dispatched one (GCAT is only asked for Last-Modified, and
-  Launch Library 2 gets one request a run). Tom must add `orbit` to the `tic-dispatch` token's repository access;
-  until then its start fails with GitHub's 404 four times a day and the others carry on.
+  Launch Library 2 gets one request a run). `orbit` was added to the `tic-dispatch` token's repository access on
+  13 Nov (no new token); the first dispatched run, 00:55 UTC 14 Nov (6:55 PM CST 13 Nov), passed. The token now
+  covers cop, cordon, elements, vis, blackout, headwind and orbit.
 - **Its clock is PropertyCast's.** The free plan allows 5 cron triggers per account, and on 5 Nov all 5 were in use:
   PropertyCast's trigger 1 (`*/5`), Vigil's ingestion Worker 4. The first deploy, with a cron of its own, was refused
   (code 10072). So `tic-dispatch` has `crons = []`, and
