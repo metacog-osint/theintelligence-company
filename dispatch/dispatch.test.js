@@ -47,6 +47,15 @@ test("COP runs every two hours, at :20 on even UTC hours", () => {
   assert.deepEqual(cop.hours, [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22]);
 });
 
+test("COP's watchdog runs every three hours at :00, apart from COP's build", () => {
+  const watch = JOBS.find((j) => j.repo === "metacog-osint/cop" && j.workflow === "watch.yml");
+  assert.deepEqual(watch.minutes, [0]);
+  assert.deepEqual(watch.hours, [1, 4, 7, 10, 13, 16, 19, 22]);
+  assert.deepEqual(due(JOBS, at(0, 4)).map((j) => `${j.repo} ${j.workflow}`), ["metacog-osint/cop watch.yml"]);
+  assert.deepEqual(due(JOBS, at(0, 5)).map((j) => j.repo), []);
+  assert.deepEqual(due(JOBS, at(20, 4)).map((j) => j.workflow), ["build.yml"]);
+});
+
 test("Vis runs twice a day, at 08:25 and 20:25 UTC", () => {
   const vis = JOBS.find((j) => j.repo === "metacog-osint/vis");
   assert.equal(vis.workflow, "build.yml");

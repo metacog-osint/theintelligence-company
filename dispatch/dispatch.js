@@ -36,6 +36,11 @@ export const JOBS = [
   // Launch every six hours (14 Nov 2026), 20 minutes after Orbit starts, since it reads Orbit's published snapshot.
   // Private repo: 4 short one-job runs a day. Its own cron (:11 every 6 h) is the fallback.
   { repo: "metacog-osint/launch", workflow: "update.yml", ref: "main", minutes: [15], hours: [1, 7, 13, 19] },
+  // COP's suite watchdog every three hours (14 Nov 2026): it fails, and GitHub mails the owner, when COP's build or
+  // a program has stopped. On its own cron it would fire only every 7 to 14 hours. Private repo: 8 runs a day of
+  // well under a minute is about 240 Actions minutes a month. It reads the public snapshot, so it is kept off COP's
+  // build slot (:20) and sits 40 minutes after it on the hours they share.
+  { repo: "metacog-osint/cop", workflow: "watch.yml", ref: "main", minutes: [0], hours: [1, 4, 7, 10, 13, 16, 19, 22] },
 ];
 
 // The jobs due at this minute. The caller passes the cron's slot time, not when it woke, so a late start still
