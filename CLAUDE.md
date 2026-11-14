@@ -3,9 +3,8 @@
 The company's home page (to serve `theintelligence.company`) and the canonical home of code shared by every
 Intelligence Company site. Started 27 Oct 2026 at Tom's request after a review of all his projects.
 
-> **Current state: read [`HANDOFF.md`](./HANDOFF.md) first.** It is the 7 Nov 2026 handoff: what is live, what
-> shipped last (tests, the house bar's v1.2 stylesheet, Time dialog fixes, the drawing's labels), next steps, and the
-> Vigil summary-feed work.
+> **Current state: read [`HANDOFF.md`](./HANDOFF.md) first.** It holds the current state, measured, and the open
+> next steps only. Finished dated sections move verbatim to `HISTORY.md` (last done 14 Nov 2026).
 
 Dated history (version-by-version changes to the shared files, rollout commits, one-off fixes, superseded details)
 is in [`HISTORY.md`](./HISTORY.md). Procedures needed now and then (the Dispatch Worker's checks and local test,
@@ -41,8 +40,7 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   `blackout.theintelligence.company` on 12 Nov 2026 and joined COP the same day. Since 13 Nov 2026 UTC it is **beta**
   on the hub, in the house bar (v1.6) and on the drawing. On 13 Nov 2026 Blackout added BGP routing and power lanes
   and Tom's headline "Where the lights go out and the internet goes dark."; the hub's wording for them (house bar v1.7,
-  product lists, drawing) was written by a Blackout side session and is committed here, not pushed, waiting on Tom's
-  OK and the house bar rollout. Its drawing line now ends "Night lights from NASA's Black Marble are built and start
+  product lists, drawing) was written by a Blackout side session and went live on every site the same day. Its drawing line now ends "Night lights from NASA's Black Marble are built and start
   once NASA's data access is in place" (they wait on Tom accepting LAADS's data licence on his Earthdata account);
   update it when night lights read. Its footer credit links its home page, whose Method tab lists every source; point
   it there if that becomes its own page.
@@ -69,7 +67,7 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   house bar (v1.10, after Orbit, "Space · launch closures"), in the product lists after Orbit, on the drawing in the
   Space layer at [736, 930] (its row "Launch and reentry closure areas" is "now"; the old "Launch hazard areas,
   planned, Cordon" row became it), and in the second guide question. Worldwide NOTAMs wait on FAA access: say so.
-  Footer credit links `/#src-h`. Not yet rolled to the program sites' copies of the house bar.
+  Footer credit links `/#src-h`.
 - **Context vs Watchfloor is parked** (Tom, 1 Nov 2026: "stop it, i'm not deciding on this yet"). Both may stay with
   different scopes. Leave Context's "Watchfloor's predecessor" line alone, and don't raise the question again until
   Tom does. Watchfloor's noindex and copyright registration or ™ are also left as they are for now.
@@ -94,8 +92,7 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   `web/public/`, and COP, Elements and Cordon.
 - `site/shared/tic-nav.js` (v1.10, 14 Nov 2026: Launch added after Orbit, pushed and deployed to the program sites about 2:20 PM CST that day (Tom's "Ship house bar v1.10"), COP followed about 2:55 PM CST (`bfad57b`, build run 43639997763), live everywhere except PropertyCast (goes live at its next daily publish); v1.9, 13 Nov 2026: Orbit added after Noisefloor, live on every site that day; v1.8,
   13 Nov 2026: Headwind added after Blackout, live on every site that day; v1.7, 13 Nov
-  2026: Blackout's power and routing wording, committed, not pushed or rolled
-  out; v1.6, 13 Nov 2026 UTC: Blackout added; v1.5, 8 Nov: Vis) + `tic-nav.css` (v1.2, 7 Nov 2026; rollout status in `HANDOFF.md`): **the house bar** on every program site (Tom: "I need a
+  2026: Blackout's power and routing wording, live on every site that day; v1.6, 13 Nov 2026 UTC: Blackout added; v1.5, 8 Nov: Vis) + `tic-nav.css` (v1.2, 7 Nov 2026; rollout status in `HANDOFF.md`): **the house bar** on every program site (Tom: "I need a
   link back to the home page on each subsite… a dropdown menu of all programs with their primary layer area or topic
   labeled (and a more in-depth description upon mouse-over)"). It is a slim navy bar with "← The Intelligence Company"
   and a **Programs ▾** disclosure menu. That menu lists every live program grouped "Across the layers" and "Other
@@ -193,7 +190,8 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
 - Deploy: `.github/workflows/dispatch-deploy.yml` runs on a push to `master` that touches `dispatch/**` (or by hand),
   tests first (`node --test` in `dispatch/`, no network), then `wrangler deploy` and the secret upload, in
   PropertyCast's order. Deploy `tic-dispatch` before any PropertyCast trigger deploy that adds the binding: a binding
-  to a missing Worker fails. Hub repo secrets, set by Tom: `DISPATCH_TOKEN` (fine-grained, `tic-dispatch`; elements, cordon, cop, vis, blackout;
+  to a missing Worker fails. Hub repo secrets, set by Tom: `DISPATCH_TOKEN` (fine-grained, `tic-dispatch`; elements, cordon, cop, vis, blackout,
+  headwind, orbit, launch;
   Actions: read and write), `CLOUDFLARE_API_TOKEN` ("Edit Cloudflare Workers" template), `CLOUDFLARE_ACCOUNT_ID`. The
   `CLOUDFLARE_API_TOKEN` in this machine's environment sees Pages projects but not Workers, so it can't deploy this.
 - **`DISPATCH_TOKEN` expires 5 Nov 2027** (Tom, 5 Nov 2026). Before then Tom makes a new one the same way, runs
@@ -342,9 +340,16 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   sitemap; the page with sample feeds (`tests/fixtures`), its fallbacks, guide, keyboard and phone layout; and axe
   (WCAG 2.2 AA) in light and dark. When a rule here changes, change its test too. The workflow's `feeds` job checks
   the eight live feeds (`tests/check-live.js`) and doesn't block: a product being down turns only that job red.
-  This machine has no Playwright Chromium; run the browser tests on the installed Edge with a preload that wraps
-  `chromium.launch` in `{ channel: "msedge" }` (`NODE_OPTIONS="--import=file:///<helper>.mjs" node --test`), or
-  run `npx playwright install chromium` once (a download of about 150 MB).
+  This machine has no Playwright Chromium: run the tests on the installed Edge with `BROWSER_CHANNEL=msedge`
+  (`tests/lib/browser.js`; PowerShell `$env:BROWSER_CHANNEL = "msedge"; npm test`), since 14 Nov 2026. It replaced
+  an uncommitted preload. A full run here takes 2 to 3 minutes (4 cores, 7 test files at once).
+  Three fixes the same day for tests that failed only in full runs (each measured, then 5 of 5 full runs passed):
+  `tools/serve.py` listens with a backlog of 128, since Python's default of 5 made Windows refuse a page's sixth
+  connection (`ERR_CONNECTION_REFUSED`; most likely also the "drawing not yet rendered" failures);
+  the tests route only off-site requests through the test process (`offSite` in `tests/lib/feeds.js`); and the
+  planner's `roads.js` v1.1 starts its 8-second router timeout when the request is sent, not when it is queued
+  (a 14 s render on the busy machine had used it up). `serve.test.js` and `veterans-roads.test.js` guard the first
+  and last.
 - The shared time dialog (`tic-time.css`) reads `--panel`, `--bg`, `--line`, `--muted` and `--accent` (white text on
   it), and falls back to white and grey. A site whose own variables have other names must map them on
   `.tic-time-dialog`, or dark mode breaks. The hub maps `--card`, `--paper`, `--rule` and `--mut` in `style.css`
