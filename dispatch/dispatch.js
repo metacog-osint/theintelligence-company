@@ -58,6 +58,12 @@ export const JOBS = [
   // so its minutes are free. Its own crons are the fallback; its gate skips a day already published, so extra starts
   // end in about a minute.
   { repo: "metacog-osint/noise-floor", workflow: "cosmic2.yml", ref: "main", minutes: [50], hours: [4, 5, 6, 7, 8, 10, 11, 12, 13] },
+  // Noisefloor's ground ROTI day job: BKG lists most IGS station files for day D by about 09:10 UTC on D+1 (one batch
+  // came at 12:45 on 14 Nov 2026) and the day file is due by 14:00 UTC. From 09:00 the job publishes what is in, and a
+  // later start remakes a day when a missing station turns up, so :30 from 09 to 13 UTC, then 16:30 and 22:30 for
+  // stations that post a day or two late. Public repo, so its minutes are free. Its own crons are the fallback; its
+  // gate ends a start in about a minute when nothing new is posted.
+  { repo: "metacog-osint/noise-floor", workflow: "ground-roti.yml", ref: "main", minutes: [30], hours: [9, 10, 11, 12, 13, 16, 22] },
 ];
 
 // The jobs due at this minute. The caller passes the cron's slot time, not when it woke, so a late start still
