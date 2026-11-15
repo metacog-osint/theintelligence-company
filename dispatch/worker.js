@@ -1,9 +1,9 @@
 // tic-dispatch: The Intelligence Company's dispatch clock (Cloudflare Worker). The logic and the JOBS list are in
 // dispatch.js.
 //
-// No cron and no public URL. PropertyCast's trigger Worker calls tick() every 5 minutes through its service binding
-// DISPATCH (PropertyCast/trigger/wrangler.toml); nothing else can reach it. scheduled() is here so a cron can be
-// added later without code changes, if a cron slot frees up.
+// Its own cron, every 5 minutes (wrangler.toml), since 14 Nov 2026, and no public URL. Before that PropertyCast's
+// trigger Worker called tick() through a service binding; that binding is gone, so nothing calls tick() now. It stays
+// as a fallback clock entry, but never bind it while the cron runs: every job would start twice.
 //
 // Deployed by .github/workflows/dispatch-deploy.yml. One secret, DISPATCH_TOKEN: a fine-grained GitHub token with
 // Actions: read and write on the JOBS repos only.

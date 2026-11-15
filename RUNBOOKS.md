@@ -8,19 +8,17 @@ turn. `CLAUDE.md` points here where each applies; its rules still govern.
 - Checked 5 Nov: GitHub Pages' soft limit of 10 builds an hour doesn't apply to sites published by a custom Actions
   workflow (both are); a run takes under 75 seconds; both repos are public, so their minutes are free; Elements' repo
   was 1.3 MB after a week of data commits.
-- No public URL (`workers_dev = false`, `preview_urls = false`); only the binding reaches it. A start that fails
-  (expired token, a workflow without `workflow_dispatch`) shows as an error in tic-dispatch's metrics and as a
-  `tic-dispatch: …` line in propertycast-trigger's logs; on the hub it shows up as "running late" on Elements or
-  Cordon. The error carries GitHub's message, never the token.
+- No public URL (`workers_dev = false`, `preview_urls = false`); since 14 Nov 2026 its own cron runs it. A start that
+  fails (expired token, a workflow without `workflow_dispatch`) throws from `scheduled()`, so it shows as an error in
+  tic-dispatch's metrics and logs (before 14 Nov it was a `tic-dispatch: …` line in propertycast-trigger's logs); on
+  the hub it shows up as "running late" on Elements or Cordon. The error carries GitHub's message, never the token.
 - Local test without deploying: Wrangler is installed in `D:\Projects\mole-hunt\server\node_modules\wrangler`. Put
-  `DISPATCH_TOKEN=fake` in `dispatch/.dev.vars` (git ignores it) and run `wrangler dev -c <PropertyCast>/trigger/wrangler.toml
-  -c wrangler.toml --test-scheduled` in `dispatch/`, then POST
-  `/cdn-cgi/local/explorer/api/local/scheduled?worker=propertycast-trigger` with
+  `DISPATCH_TOKEN=fake` in `dispatch/.dev.vars` (git ignores it) and run `wrangler dev --test-scheduled` in
+  `dispatch/`, then POST `/cdn-cgi/local/explorer/api/local/scheduled?worker=tic-dispatch` with
   `{"cron":"*/5 * * * *","scheduled_time":<ms>}` (the older `/cdn-cgi/handler/scheduled?time=` ignores the time). The
-  fake token reaches GitHub and gets "401 Bad credentials", which proves the path. Wrangler 4.147's local runtime
-  refuses PropertyCast's worker.js because it exports constants ("Incorrect type for map entry 'COLLECT_MINUTE'"),
-  although Cloudflare runs it; test with a scratch copy that drops `export` from the `export const` lines. Afterwards
-  stop the node, esbuild and workerd processes by PID and delete `dispatch/.wrangler/` and `.dev.vars`.
+  fake token reaches GitHub and gets "401 Bad credentials", which proves the path. Afterwards stop the node, esbuild
+  and workerd processes by PID and delete `dispatch/.wrangler/` and `.dev.vars`. (Until 14 Nov 2026 the test ran
+  through PropertyCast's trigger with `-c <PropertyCast>/trigger/wrangler.toml -c wrangler.toml`.)
 
 ## Product screenshots (from CLAUDE.md, Site)
 

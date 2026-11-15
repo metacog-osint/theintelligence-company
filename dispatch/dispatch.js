@@ -4,9 +4,8 @@
 // GitHub starts scheduled runs on this account only every 4 to 9 hours, whatever the cron says (measured on eight
 // repos, 4-5 Nov 2026). So tic-dispatch starts each workflow in JOBS itself, through GitHub's workflow_dispatch API.
 //
-// The clock: the free plan's 5 cron triggers are all in use (PropertyCast 1, Vigil 4), so tic-dispatch has none of
-// its own. PropertyCast's trigger Worker, which wakes every 5 minutes and has kept time since October 2026, calls
-// tick() on each wake through a service binding (DISPATCH).
+// The clock: tic-dispatch's own cron, every 5 minutes, since 14 Nov 2026. From 5 to 14 Nov it borrowed PropertyCast's
+// trigger Worker's clock through a service binding, because the free plan's 5 cron triggers were all in use.
 //
 // To add a workflow: give it a `workflow_dispatch:` trigger, add a line to JOBS, add its repo to the token's
 // repository access, and push. Minutes are UTC and must be multiples of 5, the clock's step. `hours` is optional:
