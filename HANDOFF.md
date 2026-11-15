@@ -6,6 +6,22 @@ tests, dispatch, the Vigil summary feed) is in `HISTORY.md`, moved verbatim on 1
 and how the house bar rolls out are in `CLAUDE.md`.
 
 ## Current state (checked 14 Nov 2026, about 3:27 PM CST)
+- **House bar v1.13** (15 Nov 2026, Tom's "Yes, all 16"; only `tic-nav.js` changed: Wake in the Programs menu,
+  `tic-nav.css` stays v1.3). Hub `23b2e27` (deployed about 12:35 PM CST) and Wake (`5e9548c`, deployed by hand).
+  Every old copy matched the hub's v1.12 byte for byte. Worktrees `_worktrees/<site>-nav113`, branch
+  `tic-nav-v1.13` (the folders named `watchfloor-nav113` and `context-nav113` hold geo-context and more-context,
+  which are Context and Watchfloor: labels swapped, contents right). Pushed by sha, about 1:45 PM CST: COP
+  `1a56c5f`, Context (geo-context, `master`) `74ff939`, Title 10 `573fc08` (`sw.js` `t10-2026-11-15a`), Noisefloor
+  `3a060d7` (with `build_site.py`'s `?v=` hashes), PropertyCast `bca54f4`, Watchfloor (more-context) `c013585`,
+  Vigil `e4a045c`, Elements `57293f2`, Cordon `dc68580`, Vis `bc7d55f`, Blackout `70c3cc3`, Headwind `e4df8ce`,
+  Orbit `9bf2035`, Launch `9c0bdb9`, Undertow `28fb96d` (PropertyCast, Elements, Cordon and Orbit rebased over
+  their bots' commits first). Deployed by hand: Watchfloor (`python -I scripts/build_web.py`, then `firebase deploy
+  --only hosting:watchfloor --project context-484804`), Title 10 (`deploy/` of the clean worktree), Context
+  (`npx vercel deploy --prod` with `.vercel/project.json` copied in; READY), Listening Post (no git; v1.12 backed up
+  in `_backups/tic-nav-v1.12-2026-11-15/`; `firebase deploy --only hosting`). **Checked live about 2:00 PM CST:**
+  every `/tic-nav.js` reads v1.13 on all 18 sites but PropertyCast, whose page inlines the bar and still shows
+  **v1.10** (its v1.12 never published either); `main` carries v1.13, so its 16 Nov publish (about 4:20 AM CST)
+  should bring it. Check its home page HTML then. Remove the `*-nav113` worktrees once that is confirmed.
 - **House bar v1.12** (stays at the top, minimizes to a tab; `tic-nav.css` v1.3; Tom's yes on the look 14 Nov,
   "push and deploy" 15 Nov): checked 15 Nov about 12:10 PM CST, every live `/tic-nav.js` reads `version: "1.12"` and
   every `/tic-nav.css` v1.3: the hub and COP (`/shared/`), Watchfloor, Title 10 (`activation.`), Noisefloor,
