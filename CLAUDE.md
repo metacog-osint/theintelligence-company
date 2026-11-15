@@ -184,8 +184,9 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   and launch.
 - **Undertow joins (14 Nov 2026):** Undertow `update.yml` at :30 past 02, 08, 14 and 20 UTC. Private repo, one job of
   well under a minute a run. Its own cron (`41 */6`) is the fallback; it has no gate job, so a late scheduled run
-  repeats a dispatched one. **Tom adds `undertow` to the `tic-dispatch` token's repository access;** until then its
-  start fails with GitHub's 404 four times a day and the others carry on.
+  repeats a dispatched one. `undertow` was added to the `tic-dispatch` token's repository access at 8:42 AM CST 15 Nov
+  (Claude in Tom's signed-in GitHub, at his request; no new token). Until then its dispatched starts failed with
+  GitHub's 404, the last at 14:30 UTC 15 Nov, and the others carried on; the first that should pass is 20:30 UTC 15 Nov.
 - **COP's watchdog joins (14 Nov 2026):** COP `watch.yml` at :00 past 01, 04, 07, 10, 13, 16, 19 and 22 UTC. It
   fails, and GitHub mails the owner, when COP's build or a program has stopped (COP `tools/suite_watch.py`). Private
   repo, one job of well under a minute; its own cron (`47 */3`) is the fallback. No token change: `cop` is already
@@ -194,9 +195,9 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   Headwind's). UCAR posts the COSMIC-2 day archive at about 04:35 UTC and Noisefloor's limb S4 day file is due by
   14:00 UTC; the job waits up to 45 minutes for a late archive. Public repo, so its minutes are free. Its own crons
   (01:15, 03:15, 05:15, 08:15 UTC) are the fallback, and its gate skips a day already in the release, so extra starts
-  end in about a minute. `noise-floor` was added to the `tic-dispatch` token's repository access about 8:20 AM CST
-  15 Nov (Claude in Tom's signed-in GitHub, at his request; no new token). The first dispatched start is 04:50 UTC
-  16 Nov. `undertow` is still not in the token (checked the same morning).
+  end in about a minute. `noise-floor` was added to the `tic-dispatch` token's repository access at 8:15 AM CST
+  15 Nov (Claude in Tom's signed-in GitHub, at his request; no new token; times from GitHub's security log). The
+  first dispatched start is 04:50 UTC 16 Nov.
 - **Its own clock since 14 Nov 2026** ("Yes, build it"): `crons = ["*/5 * * * *"]`, and `scheduled()` runs it.
   From 5 to 14 Nov it ran on PropertyCast's: the free plan allows 5 cron triggers per account, all 5 were in use on
   5 Nov (PropertyCast's trigger 1, Vigil's ingestion Worker 4) and the first deploy with a cron was refused (code
@@ -217,7 +218,7 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
 - Deploy: `.github/workflows/dispatch-deploy.yml` runs on a push to `master` that touches `dispatch/**` (or by hand),
   tests first (`node --test` in `dispatch/`, no network), then `wrangler deploy` and the secret upload, in
   PropertyCast's order. Hub repo secrets, set by Tom: `DISPATCH_TOKEN` (fine-grained, `tic-dispatch`; elements, cordon, cop, vis, blackout,
-  headwind, orbit, launch, noise-floor;
+  headwind, orbit, launch, noise-floor, undertow;
   Actions: read and write), `CLOUDFLARE_API_TOKEN` ("Edit Cloudflare Workers" template), `CLOUDFLARE_ACCOUNT_ID`. The
   `CLOUDFLARE_API_TOKEN` in this machine's environment sees Pages projects but not Workers, so it can't deploy this.
 - **`DISPATCH_TOKEN` expires 5 Nov 2027** (Tom, 5 Nov 2026). Before then Tom makes a new one the same way, runs
