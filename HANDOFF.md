@@ -58,9 +58,10 @@ and how the house bar rolls out are in `CLAUDE.md`.
    its drawing line; Launch's worldwide NOTAMs (FAA access).
 4. **Wake** is on the drawing as in development, not linked. Before the hub links it, it needs live collectors or
    its seed data labelled as test.
-5. **Other repos, noted, not started (rechecked on GitHub 14 Nov evening):** Vis's gate counts a scheduled run whose
-   build it skipped as a success, so a skip restarts its 6-hour window (its `build.yml` still asks for
-   `status=success`). Headwind, Orbit and Launch have no gate job, so a late fallback cron repeats a dispatched run.
+5. **Other repos, noted, not started (rechecked on GitHub 14 Nov evening):** Vis's gate is fixed: it counted a run
+   whose build it skipped as a build, so each skip restarted its 6-hour window; Vis `99327e5` (approved, 14 Nov about
+   8:25 PM CST; push run 43667680394 passed) counts only runs whose build job succeeded. First real test: the 08:53 UTC
+   fallback, 2:53 AM CST 15 Nov. Headwind, Orbit and Launch have no gate job, so a late fallback cron repeats a dispatched run.
    Vigil: `/api/feed` counts claims from a `limit=300` query, the `cisa-advisories` 403, and COP's
    `tests/fixtures/vigil.geojson` unchanged since 31 Oct. Elements' wording needs nothing yet: its live feed (386
    items, 16 publishers) has no lane the house bar's text doesn't already name.
@@ -69,4 +70,5 @@ and how the house bar rolls out are in `CLAUDE.md`.
    `engine.js` and `roads.js`), `hub-dispatch-pntsa` (2 commits not in `master`; pntsa now runs its own Worker),
    `D:\Projects\tic-vetday` (branch `veterans-day`, merged, 19 uncommitted files; never deploy from it), and the merged
    local branch `vetday-co-chains`. Added 14 Nov evening, both clean and merged: `_worktrees/pc-trigger-own-clock`
-   (PropertyCast, branch `trigger-own-clock`) and `_worktrees/watchfloor-contrast` (Watchfloor, branch `contrast-fix`).
+   (PropertyCast, branch `trigger-own-clock`) and `_worktrees/watchfloor-contrast` (Watchfloor, branch `contrast-fix`), and `_worktrees/vis-gate` (Vis, branch
+   `gate-fix`).
