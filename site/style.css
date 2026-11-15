@@ -54,7 +54,7 @@ a:hover { color: var(--acc); }
 img { max-width: 100%; height: auto; display: block; }
 h1, h2, h3, p, ul, ol, figure { margin: 0; }
 .wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-.skip { position: absolute; left: -9999px; top: 0; background: var(--card); padding: 8px 12px; z-index: 10; }
+.skip { position: absolute; left: -9999px; top: 0; background: var(--card); padding: 8px 12px; z-index: 10001; } /* above the house bar */
 .skip:focus { left: 8px; top: 8px; }
 
 /* Utility bar and masthead */

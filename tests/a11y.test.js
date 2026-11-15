@@ -70,15 +70,24 @@ for (const colorScheme of ["light", "dark"]) {
     const t = await openHub(browser, site, "/missing", { colorScheme, bypassCSP: true, allowFailedLoads: true });
     try { await audit(t, "404"); } finally { await t.close(); }
   });
+  // v1.12: the bar full and minimized to its tab, menu closed and open, on a scrolled page with a sticky site header.
+  const BAR_STATES = {
+    "at rest": async () => {},
+    "with its menu open": async (p) => { await p.click(".tic-house-btn"); },
+    "minimized, scrolled": async (p) => { await p.click(".tic-house-toggle"); await p.evaluate(() => window.scrollTo(0, 1500)); },
+    "minimized, its menu open": async (p) => { await p.click(".tic-house-toggle"); await p.click(".tic-house-btn"); },
+  };
   for (const phone of [false, true]) {
-    test(`house bar with its menu open, ${phone ? "phone" : "desktop"}, ${colorScheme}`, async () => {
-      const t = await openStandIn(browser, { colorScheme, phone, bypassCSP: true });
-      try {
-        await t.page.click(".tic-house-btn");
-        const v = await axe(t.page);
-        assert.deepEqual(v, [], explain(v));
-      } finally { await t.close(); }
-    });
+    for (const [name, act] of Object.entries(BAR_STATES)) {
+      test(`house bar ${name}, ${phone ? "phone" : "desktop"}, ${colorScheme}`, async () => {
+        const t = await openStandIn(browser, { colorScheme, phone, bypassCSP: true, stickyHeader: true });
+        try {
+          await act(t.page);
+          const v = await axe(t.page);
+          assert.deepEqual(v, [], explain(v));
+        } finally { await t.close(); }
+      });
+    }
   }
 }
 

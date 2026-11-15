@@ -5,17 +5,30 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>tic-nav demo</title>
 <!-- Local test page for site/shared/tic-nav.js (not deployed). Pretends to be Vigil so "You are here" shows.
-     Serve the project root (python -m http.server 5056 --bind 127.0.0.1) and open /tools/tic-nav-demo.html. -->
+     Serve the project root (python -m http.server 5056 --bind 127.0.0.1) and open /tools/tic-nav-demo.html.
+     v1.12: the page is long and its own header is sticky, sitting under the house bar with var(--tic-house-h), the
+     way a program site with a sticky header does it. Scroll, minimize and restore the bar, and follow the anchor
+     link: the target lands below both headers. -->
 <link rel="stylesheet" href="../site/shared/tic-nav.css">
 <style>
+  html { scroll-padding-top: calc(var(--tic-house-h, 0px) + 56px); } /* the bar plus this page's own header */
   body { margin: 0; font: 16px/1.5 system-ui, sans-serif; background: #0b0f17; color: #e5e7eb; }
-  header { padding: 16px 24px; border-bottom: 1px solid #1f2937; font-weight: 700; color: #22c55e; }
+  header { position: sticky; top: var(--tic-house-h, 0px); z-index: 50; padding: 16px 24px; background: #0b0f17;
+    border-bottom: 1px solid #1f2937; font-weight: 700; color: #22c55e; display: flex; justify-content: space-between; }
+  header a { color: #93c5fd; font-weight: 400; }
   main { padding: 24px; max-width: 60em; }
+  section { min-height: 70vh; border-top: 1px dashed #1f2937; padding-top: 12px; }
 </style>
 </head>
 <body>
-<header>VIGIL · a stand-in product header</header>
-<main><p>Product page content. The house bar above should show "← The Intelligence Company" and a Programs menu.</p></main>
+<header>VIGIL · a stand-in product header <a href="#limits">Limits</a></header>
+<main>
+<p>Product page content. The house bar above should show "← The Intelligence Company", a Programs menu and a
+  minimize button, and stay at the top while the page scrolls. This header is sticky too and sits under it.</p>
+<section><h2>Method</h2><p>Scroll down.</p></section>
+<section><h2 id="limits">Limits</h2><p>The anchor link lands here, clear of both headers.</p></section>
+<section><h2>Sources</h2><p>The end of the page.</p></section>
+</main>
 <script src="../site/shared/tic-nav.js" data-current="vigil"></script>
 </body>
 </html>

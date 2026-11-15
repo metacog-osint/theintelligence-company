@@ -104,7 +104,7 @@
 .z-info { color: #C9B8FF !important; } .z-seam { color: #F6C760 !important; } .z-phys { color: #9CC3FF !important; } .z-ie { color: #F2A779 !important; }
 
 /* figure */
-.oe-fig { margin: 0; position: sticky; top: 16px; }
+.oe-fig { margin: 0; position: sticky; top: calc(var(--tic-house-h, 0px) + 16px); } /* below the house bar (tic-nav v1.12) */
 .oe-svg { display: block; width: 100%; height: auto; max-height: max(620px, calc(100svh - 80px)); touch-action: manipulation; }
 .oe-svg .pl, .oe-svg .fd, .oe-svg .nm, .oe-svg .th, .oe-svg .zone, .oe-svg .dzone, .oe-svg .chip { transition: opacity .25s ease; }
 .oe-svg .pl, .oe-svg .fd, .oe-svg .nm, .oe-svg .th, .oe-svg .zone, .oe-svg .dzone, .oe-svg .reach, .oe-svg rect:not(.zhit):not(.dhit):not(.chit):not(.pill) { pointer-events: none; }
