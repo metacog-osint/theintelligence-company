@@ -138,6 +138,13 @@
 .oe-svg .chip-plan .ctx { font: 500 13.5px "IBM Plex Sans", sans-serif; fill: #E2E7EF; paint-order: stroke; stroke: #070C17; stroke-width: 4px; stroke-linejoin: round; }
 .oe-svg .chip-plan .ring { fill: #070C17; stroke: #C5CEDB; stroke-width: 1.5; }
 .oe-svg .chip .chit { fill: transparent; }
+/* Today's glow: the program has findings that are unusual against its own baseline in COP's snapshot */
+.oe-svg .chip.hot .pill { animation: oe-hot 2.6s ease-in-out infinite; }
+.oe-svg .chip.hot .dot { fill: #FF9A6B; }
+@keyframes oe-hot { 0%, 100% { filter: drop-shadow(0 0 2px rgba(255, 154, 107, .55)); } 50% { filter: drop-shadow(0 0 9px rgba(255, 154, 107, .95)); } }
+@media (prefers-reduced-motion: reduce) { .oe-svg .chip.hot .pill { animation: none; filter: drop-shadow(0 0 5px rgba(255, 154, 107, .85)); } }
+.oe-unusual { color: #FFC2A6 !important; }
+.k-hot { background: #FF9A6B; box-shadow: 0 0 6px 1px rgba(255, 154, 107, .85); }
 .oe-svg .chip:hover .pill, .oe-svg .chip:focus-visible .pill { stroke: #FFFFFF; stroke-opacity: 1; stroke-width: 1.6; }
 .oe-svg .chip-plan:hover .ring, .oe-svg .chip-plan:focus-visible .ring { stroke: #FFFFFF; }
 .oe-svg .chip-plan:hover .ctx, .oe-svg .chip-plan:focus-visible .ctx { fill: #FFFFFF; }

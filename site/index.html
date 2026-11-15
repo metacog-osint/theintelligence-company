@@ -62,6 +62,8 @@
       <span>The Intelligence Company</span>
     </a>
     <nav aria-label="Main">
+      <a href="#layers">Layers</a>
+      <a href="#today">Today</a>
       <a href="#products">Products</a>
       <a href="#services">Work with us</a>
       <a href="#standards">How we work</a>
@@ -75,40 +77,19 @@
 <main id="main">
   <section class="wrap hero">
     <div>
-      <p class="kicker">Conflict · GPS interference · Cyber threats · Forecasting</p>
+      <p class="kicker">Conflict · Cyber · GPS · Space · Hazards · Economics · Shipping</p>
       <h1>Open-source intelligence, built in the Red River Valley.</h1>
-      <p class="lede">We build monitoring and analysis tools from publicly available information: warning on conflict,
-        GPS jamming and spoofing, cyber threats, and forecasts that check themselves. Every product credits its
-        sources, dates its claims and publishes its methods.</p>
+    </div>
+    <div class="hero-side">
+      <p class="lede">Monitoring tools built from publicly available information, from the seabed to orbit. Each one
+        reads its own layer against its own baseline, and every product credits its sources, dates its claims and
+        publishes its methods.</p>
       <p class="actions">
-        <a class="btn" href="#products">See the products</a>
+        <a class="btn" href="#layers">Explore the layers</a>
         <a class="btn btn-line" href="#services">Work with us</a>
       </p>
     </div>
 
-    <aside class="latest" aria-labelledby="latest-h">
-      <h2 id="latest-h" class="label">Latest from the products</h2>
-      <article class="latest-item" id="latest-noisefloor">
-        <p class="latest-meta">Noisefloor</p>
-        <p class="latest-text"><b class="latest-topic">GPS interference:</b> <span class="latest-body">A daily briefing on where satellite navigation is being jammed or spoofed, from aircraft, satellite and official sources.</span></p>
-        <a class="latest-link" href="https://noisefloor.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab">Open Noisefloor <span aria-hidden="true">↗</span></a>
-      </article>
-      <article class="latest-item" id="latest-watchfloor">
-        <p class="latest-meta">Watchfloor</p>
-        <p class="latest-text"><b class="latest-topic">Conflict warning:</b> <span class="latest-body">How much the world's news covered each conflict zone yesterday, against its own usual level.</span></p>
-        <a class="latest-link" href="https://watchfloor.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab">Open Watchfloor <span aria-hidden="true">↗</span></a>
-      </article>
-      <article class="latest-item" id="latest-vigil">
-        <p class="latest-meta">Vigil</p>
-        <p class="latest-text"><b class="latest-topic">Cyber threats:</b> <span class="latest-body">New victim claims on ransomware leak sites, counted by group, with the evidence kept.</span></p>
-        <a class="latest-link" href="https://vigil.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab">Open Vigil <span aria-hidden="true">↗</span></a>
-      </article>
-      <article class="latest-item" id="latest-cop">
-        <p class="latest-meta">COP</p>
-        <p class="latest-text"><b class="latest-topic">All layers:</b> <span class="latest-body">Every program’s latest findings on one map, with today’s top five and each feed’s health.</span></p>
-        <a class="latest-link" href="https://cop.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab">Open COP <span aria-hidden="true">↗</span></a>
-      </article>
-    </aside>
   </section>
 
   <section id="layers" class="oe" aria-labelledby="oe-h">
@@ -398,6 +379,7 @@
             <li><i class="oe-sdot k-dev" aria-hidden="true"></i>Beta or in development</li>
             <li><i class="oe-sdot k-plan" aria-hidden="true"></i>Planned</li>
             <li><i class="oe-sdot k-core" aria-hidden="true"></i>Core</li>
+            <li><i class="oe-sdot k-hot" aria-hidden="true"></i>Unusual findings today</li>
             <li><i class="lg-reach" aria-hidden="true"></i>Reach of the selected program</li>
           </ul>
         </figure>
@@ -411,85 +393,158 @@
     </div>
   </section>
 
+  <section id="today" class="today" aria-labelledby="today-h">
+    <div class="wrap">
+      <p class="kicker">Today</p>
+      <h2 id="today-h" class="section-h">Every program, checked by COP.</h2>
+      <dl class="stats" id="stats" hidden>
+        <div class="stat"><dt>Program feeds up to date</dt><dd id="st-fresh">&nbsp;</dd></div>
+        <div class="stat"><dt>Findings placed on the map</dt><dd id="st-placed">&nbsp;</dd></div>
+        <div class="stat"><dt>Unusual against their own baseline</dt><dd id="st-unusual">&nbsp;</dd></div>
+        <div class="stat"><dt>Programs with something unusual</dt><dd id="st-progs">&nbsp;</dd></div>
+      </dl>
+      <p class="stats-note" id="stats-note" hidden>From COP's check of every program's feed, <time id="st-when"></time>. Unusual means unusual for that program's own record, not a warning.
+        <a href="https://cop.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab">Open COP <span aria-hidden="true">↗</span></a></p>
+      <div class="latest">
+        <h3 id="latest-h" class="label">Latest from the products</h3>
+        <article class="latest-item" id="latest-noisefloor">
+          <p class="latest-meta">Noisefloor</p>
+          <p class="latest-text"><b class="latest-topic">GPS interference:</b> <span class="latest-body">A daily briefing on where satellite navigation is being jammed or spoofed, from aircraft, satellite and official sources.</span></p>
+          <a class="latest-link" href="https://noisefloor.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab">Open Noisefloor <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="latest-item" id="latest-watchfloor">
+          <p class="latest-meta">Watchfloor</p>
+          <p class="latest-text"><b class="latest-topic">Conflict warning:</b> <span class="latest-body">How much the world's news covered each conflict zone yesterday, against its own usual level.</span></p>
+          <a class="latest-link" href="https://watchfloor.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab">Open Watchfloor <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="latest-item" id="latest-vigil">
+          <p class="latest-meta">Vigil</p>
+          <p class="latest-text"><b class="latest-topic">Cyber threats:</b> <span class="latest-body">New victim claims on ransomware leak sites, counted by group, with the evidence kept.</span></p>
+          <a class="latest-link" href="https://vigil.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab">Open Vigil <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="latest-item" id="latest-cop">
+          <p class="latest-meta">COP</p>
+          <p class="latest-text"><b class="latest-topic">All layers:</b> <span class="latest-body">Every program’s latest findings on one map, with today’s top five and each feed’s health.</span></p>
+          <a class="latest-link" href="https://cop.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab">Open COP <span aria-hidden="true">↗</span></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <section id="products" class="products" aria-labelledby="products-h">
     <div class="wrap">
       <p class="kicker">Products</p>
       <h2 id="products-h" class="section-h">Tools that show their sources and their methods.</h2>
 
-      <div class="feature">
-        <div>
-          <p class="meta">Warning and monitoring · <span class="st-live">Live</span></p>
-          <h3 class="feature-h">Noisefloor</h3>
-          <p class="feature-text">GPS interference worldwide: where satellite navigation is being jammed or spoofed,
-            mapped every day from aircraft and ship position reports, and what it does to navigation and satellite links.
-            Measures effects and states its evidence.</p>
-          <ul class="points">
-            <li>A daily map of where aircraft lost GPS, every day since 1 October 2025</li>
-            <li>Layers for GPS spoofing, radio noise measured from orbit, and radar emitters</li>
-            <li>Every object in the geostationary belt on a globe</li>
-          </ul>
+      <div class="rail-head">
+        <h3 class="label">Seen working</h3>
+        <div class="rail-btns" id="rail-btns" hidden>
+          <button type="button" data-dir="-1" aria-controls="shots" aria-label="Previous screenshot">←</button>
+          <button type="button" data-dir="1" aria-controls="shots" aria-label="Next screenshot">→</button>
+        </div>
+      </div>
+      <ul class="shots" id="shots" tabindex="0" aria-label="Product screenshots">
+        <li class="shot">
+          <figure>
+            <img src="img/noisefloor-today.webp" width="1600" height="1000" loading="lazy" decoding="async" alt="Noisefloor's Today page for 30 Oct 2026: the day's briefing, counts of areas with GPS interference, active spoofing episodes and aircraft over Kaliningrad sending no GPS position, and a map of where aircraft lost GPS over northern Europe">
+            <figcaption>Noisefloor's daily briefing on GPS interference (screenshot, 31 Oct 2026).</figcaption>
+          </figure>
           <a class="more" href="https://noisefloor.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab">Open Noisefloor <span aria-hidden="true">↗</span></a>
-        </div>
-        <figure>
-          <img src="img/noisefloor-today.webp" width="1600" height="1000" loading="lazy" alt="Noisefloor's Today page for 30 Oct 2026: the day's briefing, counts of areas with GPS interference, active spoofing episodes and aircraft over Kaliningrad sending no GPS position, and a map of where aircraft lost GPS over northern Europe">
-          <figcaption>Noisefloor's daily briefing on GPS interference (screenshot, 31 Oct 2026).</figcaption>
-        </figure>
-      </div>
-
-      <div class="feature feature-rev">
-        <figure>
-          <img src="img/watchfloor-zones.webp" width="1600" height="1000" loading="lazy" alt="Watchfloor's zone board for 30 Oct 2026: conflict zones with story counts, news attention against each zone's usual level, and reported violence against its usual level">
-          <figcaption>Watchfloor's zone board for 30 Oct 2026 (screenshot, 31 Oct 2026).</figcaption>
-        </figure>
-        <div>
-          <p class="meta">Warning and monitoring · <span class="st-beta">Beta</span></p>
-          <h3 class="feature-h">Watchfloor</h3>
-          <p class="feature-text">A daily warning picture for every conflict zone and strategic topic on its watch list,
-            built from the world's news: what changed, and how each side is telling it.</p>
+        </li>
+        <li class="shot">
+          <figure>
+            <img src="img/watchfloor-zones.webp" width="1600" height="1000" loading="lazy" decoding="async" alt="Watchfloor's zone board for 30 Oct 2026: conflict zones with story counts, news attention against each zone's usual level, and reported violence against its usual level">
+            <figcaption>Watchfloor's zone board for 30 Oct 2026 (screenshot, 31 Oct 2026).</figcaption>
+          </figure>
           <a class="more" href="https://watchfloor.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab">Open Watchfloor <span aria-hidden="true">↗</span></a>
-        </div>
-      </div>
-
-      <div class="feature">
-        <div>
-          <p class="meta">Cyber threat intelligence · <span class="st-live">Live</span></p>
-          <h3 class="feature-h">Vigil</h3>
-          <p class="feature-text">A threat intelligence database that records why it believes things: ransomware groups,
-            APT groups, exploited vulnerabilities and threat indicators from public sources, with the history kept.</p>
-          <ul class="points">
-            <li>Every judgment call kept with its evidence: which two names are one group, when a group counts as dead, whether a sanction applies</li>
-            <li>Identity, lineage and shared tooling kept apart, so look-alike groups are never quietly merged</li>
-            <li>A live dashboard with no account needed; a free account adds alerts and exports</li>
-          </ul>
+        </li>
+        <li class="shot">
+          <figure>
+            <img src="img/vigil-actors.webp" width="1600" height="1000" loading="lazy" decoding="async" alt="Vigil's Threat Actors view as a signed-in user sees it: 4,630 tracked actors, counts of escalating, stable and declining groups, and ransomware groups ranked by victims claimed in the last seven days against the seven days before, with trend lines and status">
+            <figcaption>Vigil's Threat Actors view, signed in: groups ranked by this week's claims against last week's (screenshot, 31 Oct 2026).</figcaption>
+          </figure>
           <a class="more" href="https://vigil.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab">Open Vigil <span aria-hidden="true">↗</span></a>
-        </div>
-        <figure>
-          <img src="img/vigil-actors.webp" width="1600" height="1000" loading="lazy" alt="Vigil's Threat Actors view as a signed-in user sees it: 4,630 tracked actors, counts of escalating, stable and declining groups, and ransomware groups ranked by victims claimed in the last seven days against the seven days before, with trend lines and status">
-          <figcaption>Vigil's Threat Actors view, signed in: groups ranked by this week's claims against last week's (screenshot, 31 Oct 2026).</figcaption>
-        </figure>
-      </div>
+        </li>
+      </ul>
 
-      <h3 class="label list-h">Every product</h3>
+      <h3 class="label list-h">Every product, by its home layer</h3>
       <ul class="plist">
-        <li data-product="noisefloor"><a href="https://noisefloor.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab"><span class="p-name">Noisefloor</span><span class="p-what">GPS interference: where satellite navigation is jammed or spoofed, mapped every day from aircraft and ship reports, with its effects on navigation and satellite links.</span><span class="p-st st-live">Live · Open <span aria-hidden="true">↗</span></span></a></li>
-        <li data-product="watchfloor"><a href="https://watchfloor.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab"><span class="p-name">Watchfloor</span><span class="p-what">A daily warning picture for every conflict zone and strategic topic on its watch list, built from the world's news.</span><span class="p-st st-beta">Beta · Open <span aria-hidden="true">↗</span></span></a></li>
-        <li data-product="vigil"><a href="https://vigil.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab"><span class="p-name">Vigil</span><span class="p-what">Cyber threat intelligence: ransomware, exploited vulnerabilities and threat indicators, with the history kept.</span><span class="p-st st-live">Live · Open <span aria-hidden="true">↗</span></span></a></li>
-        <li data-product="context"><a href="https://context.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab"><span class="p-name">Context</span><span class="p-what">How the world's press is covering each watched conflict zone and strategic topic, refreshed twice a day. Watchfloor's predecessor.</span><span class="p-st st-live">Live · Open <span aria-hidden="true">↗</span></span></a></li>
-        <li data-product="cop"><a href="https://cop.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab"><span class="p-name">COP</span><span class="p-what">The common operational picture: every program's latest findings on one map, with today's top five, what else is unusual, and each feed's health.</span><span class="p-st st-beta">Beta · Open <span aria-hidden="true">↗</span></span></a></li>
-        <li data-product="elements"><a href="https://elements.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab"><span class="p-name">Elements</span><span class="p-what">Natural hazards as the authorities report them: earthquakes, volcanoes, wildfires, storms, floods, droughts, tsunami warnings and disaster mapping on one map.</span><span class="p-st st-beta">Beta · Open <span aria-hidden="true">↗</span></span></a></li>
-        <li data-product="cordon"><a href="https://cordon.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab"><span class="p-name">Cordon</span><span class="p-what">Where authorities warn people away: travel advisories, embassy departures, airspace conflict-zone bulletins and navigational warnings at sea, on one map.</span><span class="p-st st-beta">Beta · Open <span aria-hidden="true">↗</span></span></a></li>
-        <li data-product="vis"><a href="https://vis.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab"><span class="p-name">Vis</span><span class="p-what">Operational weather and illumination: how likely the coming week's weather is to hamper air, ISR, maritime or ground operations at airfields and ports in each watched conflict zone, with each night's light.</span><span class="p-st st-beta">Beta · Open <span aria-hidden="true">↗</span></span></a></li>
-        <li data-product="blackout"><a href="https://blackout.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab"><span class="p-name">Blackout</span><span class="p-what">Where the lights go out and the internet goes dark: internet and power outages, censorship, BGP routing, cloud and satellite provider incidents and submarine cable corridors, on one map.</span><span class="p-st st-beta">Beta · Open <span aria-hidden="true">↗</span></span></a></li>
-        <li data-product="headwind"><a href="https://headwind.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab"><span class="p-name">Headwind</span><span class="p-what">Currencies, energy and food prices against their own normal range, and sanctions-list changes.</span><span class="p-st st-beta">Beta · Open <span aria-hidden="true">↗</span></span></a></li>
-        <li data-product="orbit"><a href="https://orbit.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab"><span class="p-name">Orbit</span><span class="p-what">What changed in Earth orbit: orbital launches, launches scheduled in the next two weeks, reentries and satellite catalog changes, from GCAT and Launch Library 2.</span><span class="p-st st-beta">Beta · Open <span aria-hidden="true">↗</span></span></a></li>
-        <li data-product="launch"><a href="https://launch.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab"><span class="p-name">Launch</span><span class="p-what">Where states close the sky and sea for launches: FAA space-operations restrictions, scheduled launches that coincide with closure areas, and a searchable closure history since 2023.</span><span class="p-st st-beta">Beta · Open <span aria-hidden="true">↗</span></span></a></li>
-        <li data-product="undertow"><a href="https://undertow.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab"><span class="p-name">Undertow</span><span class="p-what">Covert influence operations that platforms and governments have taken down, as they report them: origin, targets and DISARM techniques, with a STIX 2.1 export. Operations only.</span><span class="p-st st-beta">Beta · Open <span aria-hidden="true">↗</span></span></a></li>
-        <li data-product="wake"><a href="https://wake.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab"><span class="p-name">Wake</span><span class="p-what">Ships crossing 28 maritime chokepoints, week by week: IMF PortWatch's transit counts by ship type against the 90 days before and the same weeks a year earlier. Measurements only.</span><span class="p-st st-beta">Beta · Open <span aria-hidden="true">↗</span></span></a></li>
-        <li><a href="https://propertycast.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab"><span class="p-name">PropertyCast</span><span class="p-what">A hyperlocal forecast for one property that verifies itself every hour against its own weather station, with a garden decision layer.</span><span class="p-st st-live">Live · Open <span aria-hidden="true">↗</span></span></a></li>
-        <li><a href="https://activation.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab"><span class="p-name">Title 10 Field Guide</span><span class="p-what">What activated Air Guard members earn on federal orders, what gets missed, and what to do before and after release. Unofficial; compiled from public sources.</span><span class="p-st st-live">Live · Open <span aria-hidden="true">↗</span></span></a></li>
-        <li><a href="https://listeningpost.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab"><span class="p-name">Listening Post</span><span class="p-what">A job-search workspace: each opening scored against your own criteria, new postings found by a weekly sweep, and drafts you review and send yourself. Google sign-in, by invitation.</span><span class="p-st st-invite">Invite only · Open <span aria-hidden="true">↗</span></span></a></li>
+        <li data-product="cop" data-layer="all" data-layer-name="Every layer"><a href="https://cop.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab"><span class="p-name">COP</span><span class="p-what">The common operational picture: every program's latest findings on one map, with today's top five, what else is unusual, and each feed's health.</span><span class="p-st st-beta">Beta · Open <span aria-hidden="true">↗</span></span></a></li>
+        <li data-product="watchfloor" data-layer="systems" data-layer-name="Systems"><a href="https://watchfloor.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab"><span class="p-name">Watchfloor</span><span class="p-what">A daily warning picture for every conflict zone and strategic topic on its watch list, built from the world's news.</span><span class="p-st st-beta">Beta · Open <span aria-hidden="true">↗</span></span></a></li>
+        <li data-product="headwind" data-layer="systems" data-layer-name="Systems"><a href="https://headwind.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab"><span class="p-name">Headwind</span><span class="p-what">Currencies, energy and food prices against their own normal range, and sanctions-list changes.</span><span class="p-st st-beta">Beta · Open <span aria-hidden="true">↗</span></span></a></li>
+        <li data-product="context" data-layer="human" data-layer-name="Human"><a href="https://context.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab"><span class="p-name">Context</span><span class="p-what">How the world's press is covering each watched conflict zone and strategic topic, refreshed twice a day. Watchfloor's predecessor.</span><span class="p-st st-live">Live · Open <span aria-hidden="true">↗</span></span></a></li>
+        <li data-product="undertow" data-layer="human" data-layer-name="Human"><a href="https://undertow.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab"><span class="p-name">Undertow</span><span class="p-what">Covert influence operations that platforms and governments have taken down, as they report them: origin, targets and DISARM techniques, with a STIX 2.1 export. Operations only.</span><span class="p-st st-beta">Beta · Open <span aria-hidden="true">↗</span></span></a></li>
+        <li data-product="vigil" data-layer="cyber" data-layer-name="Cyberspace"><a href="https://vigil.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab"><span class="p-name">Vigil</span><span class="p-what">Cyber threat intelligence: ransomware, exploited vulnerabilities and threat indicators, with the history kept.</span><span class="p-st st-live">Live · Open <span aria-hidden="true">↗</span></span></a></li>
+        <li data-product="blackout" data-layer="cyber" data-layer-name="Cyberspace"><a href="https://blackout.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab"><span class="p-name">Blackout</span><span class="p-what">Where the lights go out and the internet goes dark: internet and power outages, censorship, BGP routing, cloud and satellite provider incidents and submarine cable corridors, on one map.</span><span class="p-st st-beta">Beta · Open <span aria-hidden="true">↗</span></span></a></li>
+        <li data-product="noisefloor" data-layer="ems" data-layer-name="Spectrum"><a href="https://noisefloor.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab"><span class="p-name">Noisefloor</span><span class="p-what">GPS interference: where satellite navigation is jammed or spoofed, mapped every day from aircraft and ship reports, with its effects on navigation and satellite links.</span><span class="p-st st-live">Live · Open <span aria-hidden="true">↗</span></span></a></li>
+        <li data-product="orbit" data-layer="space" data-layer-name="Space"><a href="https://orbit.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab"><span class="p-name">Orbit</span><span class="p-what">What changed in Earth orbit: orbital launches, launches scheduled in the next two weeks, reentries and satellite catalog changes, from GCAT and Launch Library 2.</span><span class="p-st st-beta">Beta · Open <span aria-hidden="true">↗</span></span></a></li>
+        <li data-product="launch" data-layer="space" data-layer-name="Space"><a href="https://launch.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab"><span class="p-name">Launch</span><span class="p-what">Where states close the sky and sea for launches: FAA space-operations restrictions, scheduled launches that coincide with closure areas, and a searchable closure history since 2023.</span><span class="p-st st-beta">Beta · Open <span aria-hidden="true">↗</span></span></a></li>
+        <li data-product="vis" data-layer="air" data-layer-name="Air"><a href="https://vis.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab"><span class="p-name">Vis</span><span class="p-what">Operational weather and illumination: how likely the coming week's weather is to hamper air, ISR, maritime or ground operations at airfields and ports in each watched conflict zone, with each night's light.</span><span class="p-st st-beta">Beta · Open <span aria-hidden="true">↗</span></span></a></li>
+        <li data-product="cordon" data-layer="air" data-layer-name="Air"><a href="https://cordon.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab"><span class="p-name">Cordon</span><span class="p-what">Where authorities warn people away: travel advisories, embassy departures, airspace conflict-zone bulletins and navigational warnings at sea, on one map.</span><span class="p-st st-beta">Beta · Open <span aria-hidden="true">↗</span></span></a></li>
+        <li data-product="elements" data-layer="land" data-layer-name="Land and maritime"><a href="https://elements.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab"><span class="p-name">Elements</span><span class="p-what">Natural hazards as the authorities report them: earthquakes, volcanoes, wildfires, storms, floods, droughts, tsunami warnings and disaster mapping on one map.</span><span class="p-st st-beta">Beta · Open <span aria-hidden="true">↗</span></span></a></li>
+        <li data-product="wake" data-layer="land" data-layer-name="Land and maritime"><a href="https://wake.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab"><span class="p-name">Wake</span><span class="p-what">Ships crossing 28 maritime chokepoints, week by week: IMF PortWatch's transit counts by ship type against the 90 days before and the same weeks a year earlier. Measurements only.</span><span class="p-st st-beta">Beta · Open <span aria-hidden="true">↗</span></span></a></li>
+        <li data-layer="other" data-layer-name="Other tools"><a href="https://propertycast.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab"><span class="p-name">PropertyCast</span><span class="p-what">A hyperlocal forecast for one property that verifies itself every hour against its own weather station, with a garden decision layer.</span><span class="p-st st-live">Live · Open <span aria-hidden="true">↗</span></span></a></li>
+        <li data-layer="other" data-layer-name="Other tools"><a href="https://activation.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab"><span class="p-name">Title 10 Field Guide</span><span class="p-what">What activated Air Guard members earn on federal orders, what gets missed, and what to do before and after release. Unofficial; compiled from public sources.</span><span class="p-st st-live">Live · Open <span aria-hidden="true">↗</span></span></a></li>
+        <li data-layer="other" data-layer-name="Other tools"><a href="https://listeningpost.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab"><span class="p-name">Listening Post</span><span class="p-what">A job-search workspace: each opening scored against your own criteria, new postings found by a weekly sweep, and drafts you review and send yourself. Google sign-in, by invitation.</span><span class="p-st st-invite">Invite only · Open <span aria-hidden="true">↗</span></span></a></li>
       </ul>
     </div>
+  </section>
+
+  <section id="sources" class="sources" aria-labelledby="sources-h">
+    <div class="wrap">
+      <p class="kicker">Sources</p>
+      <h2 id="sources-h" class="section-h">Read from the people who publish it.</h2>
+      <p class="sources-lede">Agencies, research groups and platforms whose public data the programs read. Each name opens
+        the Sources page of the program that reads it, with the licence.</p>
+    </div>
+    <div class="wall" id="wall">
+      <div class="wall-track" id="wall-track">
+        <ul class="wall-list">
+          <li><a href="https://elements.theintelligence.company/#health-h" target="_blank" rel="noopener" aria-describedby="newtab">USGS <span class="sw-p">Elements</span>&nbsp;<span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://wake.theintelligence.company/" target="_blank" rel="noopener" aria-describedby="newtab">IMF PortWatch <span class="sw-p">Wake</span>&nbsp;<span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://watchfloor.theintelligence.company/#/sources" target="_blank" rel="noopener" aria-describedby="newtab">The GDELT Project <span class="sw-p">Watchfloor</span>&nbsp;<span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://blackout.theintelligence.company/" target="_blank" rel="noopener" aria-describedby="newtab">OONI <span class="sw-p">Blackout</span>&nbsp;<span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://orbit.theintelligence.company/#src-h" target="_blank" rel="noopener" aria-describedby="newtab">Space-Track.org <span class="sw-p">Orbit</span>&nbsp;<span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://vigil.theintelligence.company/sources" target="_blank" rel="noopener" aria-describedby="newtab">RansomLook <span class="sw-p">Vigil</span>&nbsp;<span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://elements.theintelligence.company/#health-h" target="_blank" rel="noopener" aria-describedby="newtab">EMSC <span class="sw-p">Elements</span>&nbsp;<span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://cordon.theintelligence.company/#health-h" target="_blank" rel="noopener" aria-describedby="newtab">US Department of State <span class="sw-p">Cordon</span>&nbsp;<span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://blackout.theintelligence.company/" target="_blank" rel="noopener" aria-describedby="newtab">Georgia Tech IODA <span class="sw-p">Blackout</span>&nbsp;<span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://orbit.theintelligence.company/#src-h" target="_blank" rel="noopener" aria-describedby="newtab">GCAT, by J. McDowell <span class="sw-p">Orbit</span>&nbsp;<span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://noisefloor.theintelligence.company/sources" target="_blank" rel="noopener" aria-describedby="newtab">adsb.lol contributors <span class="sw-p">Noisefloor</span>&nbsp;<span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://vis.theintelligence.company/#sources" target="_blank" rel="noopener" aria-describedby="newtab">Open-Meteo <span class="sw-p">Vis</span>&nbsp;<span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://headwind.theintelligence.company/" target="_blank" rel="noopener" aria-describedby="newtab">European Central Bank <span class="sw-p">Headwind</span>&nbsp;<span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://undertow.theintelligence.company/#method" target="_blank" rel="noopener" aria-describedby="newtab">Meta <span class="sw-p">Undertow</span>&nbsp;<span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://elements.theintelligence.company/#health-h" target="_blank" rel="noopener" aria-describedby="newtab">NASA FIRMS <span class="sw-p">Elements</span>&nbsp;<span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://cordon.theintelligence.company/#health-h" target="_blank" rel="noopener" aria-describedby="newtab">EASA <span class="sw-p">Cordon</span>&nbsp;<span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://vigil.theintelligence.company/sources" target="_blank" rel="noopener" aria-describedby="newtab">CISA <span class="sw-p">Vigil</span>&nbsp;<span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://orbit.theintelligence.company/#src-h" target="_blank" rel="noopener" aria-describedby="newtab">Launch Library 2 <span class="sw-p">Orbit</span>&nbsp;<span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://blackout.theintelligence.company/" target="_blank" rel="noopener" aria-describedby="newtab">Cloudflare Radar <span class="sw-p">Blackout</span>&nbsp;<span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://headwind.theintelligence.company/" target="_blank" rel="noopener" aria-describedby="newtab">FAO <span class="sw-p">Headwind</span>&nbsp;<span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://elements.theintelligence.company/#health-h" target="_blank" rel="noopener" aria-describedby="newtab">Copernicus EMS <span class="sw-p">Elements</span>&nbsp;<span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://launch.theintelligence.company/#src-h" target="_blank" rel="noopener" aria-describedby="newtab">FAA <span class="sw-p">Launch</span>&nbsp;<span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://undertow.theintelligence.company/#method" target="_blank" rel="noopener" aria-describedby="newtab">Google <span class="sw-p">Undertow</span>&nbsp;<span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://cordon.theintelligence.company/#health-h" target="_blank" rel="noopener" aria-describedby="newtab">NGA <span class="sw-p">Cordon</span>&nbsp;<span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://headwind.theintelligence.company/" target="_blank" rel="noopener" aria-describedby="newtab">US Energy Information Administration <span class="sw-p">Headwind</span>&nbsp;<span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://elements.theintelligence.company/#health-h" target="_blank" rel="noopener" aria-describedby="newtab">GDACS <span class="sw-p">Elements</span>&nbsp;<span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://cordon.theintelligence.company/#health-h" target="_blank" rel="noopener" aria-describedby="newtab">UK FCDO <span class="sw-p">Cordon</span>&nbsp;<span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://undertow.theintelligence.company/#method" target="_blank" rel="noopener" aria-describedby="newtab">OpenAI <span class="sw-p">Undertow</span>&nbsp;<span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://vigil.theintelligence.company/sources" target="_blank" rel="noopener" aria-describedby="newtab">FIRST <span class="sw-p">Vigil</span>&nbsp;<span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://elements.theintelligence.company/#health-h" target="_blank" rel="noopener" aria-describedby="newtab">MeteoAlarm <span class="sw-p">Elements</span>&nbsp;<span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://headwind.theintelligence.company/" target="_blank" rel="noopener" aria-describedby="newtab">US Treasury (OFAC) <span class="sw-p">Headwind</span>&nbsp;<span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://launch.theintelligence.company/#src-h" target="_blank" rel="noopener" aria-describedby="newtab">Japan Coast Guard <span class="sw-p">Launch</span>&nbsp;<span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://undertow.theintelligence.company/#method" target="_blank" rel="noopener" aria-describedby="newtab">TikTok <span class="sw-p">Undertow</span>&nbsp;<span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://elements.theintelligence.company/#health-h" target="_blank" rel="noopener" aria-describedby="newtab">NOAA <span class="sw-p">Elements</span>&nbsp;<span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://cordon.theintelligence.company/#health-h" target="_blank" rel="noopener" aria-describedby="newtab">Global Affairs Canada <span class="sw-p">Cordon</span>&nbsp;<span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://headwind.theintelligence.company/" target="_blank" rel="noopener" aria-describedby="newtab">World Bank <span class="sw-p">Headwind</span>&nbsp;<span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://undertow.theintelligence.company/#method" target="_blank" rel="noopener" aria-describedby="newtab">EEAS <span class="sw-p">Undertow</span>&nbsp;<span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://cordon.theintelligence.company/#health-h" target="_blank" rel="noopener" aria-describedby="newtab">CDC <span class="sw-p">Cordon</span>&nbsp;<span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://headwind.theintelligence.company/" target="_blank" rel="noopener" aria-describedby="newtab">UN Security Council <span class="sw-p">Headwind</span>&nbsp;<span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://undertow.theintelligence.company/#method" target="_blank" rel="noopener" aria-describedby="newtab">DISARM Foundation <span class="sw-p">Undertow</span>&nbsp;<span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://elements.theintelligence.company/#health-h" target="_blank" rel="noopener" aria-describedby="newtab">US Drought Monitor <span class="sw-p">Elements</span>&nbsp;<span aria-hidden="true">↗</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap wall-ctl"><button type="button" class="wall-btn" id="wall-btn" aria-controls="wall" aria-pressed="false" hidden>Pause</button></div>
   </section>
 
   <section id="services" class="services" aria-labelledby="services-h">
