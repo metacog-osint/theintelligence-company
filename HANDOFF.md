@@ -1,4 +1,4 @@
-# Hub handoff: where things stand (14 Nov 2026, about 3:30 PM CST)
+# Hub handoff: where things stand (15 Nov 2026, about 12:30 PM CST)
 
 Read with `CLAUDE.md` (the project's notes). Times are Central (CST since 1 Nov). Each commit, push and deploy needs
 approved. Every finished dated section up to 13 Nov 2026 (Veterans Day planner, house bar v1.3 to v1.9, Vis,
@@ -6,13 +6,25 @@ tests, dispatch, the Vigil summary feed) is in `HISTORY.md`, moved verbatim on 1
 and how the house bar rolls out are in `CLAUDE.md`.
 
 ## Current state (checked 14 Nov 2026, about 3:27 PM CST)
-- **House bar v1.10** (Launch added after Orbit): every live `/tic-nav.js` reads `version: "1.10"`: the hub and COP
-  (both at `/shared/`), Watchfloor, Context, Vigil, Blackout, Headwind, Noisefloor, Orbit, Launch, Cordon, Vis,
-  Elements, Title 10 (`activation.`) and Listening Post. **PropertyCast's home page still builds in v1.9**
-  (`TicNav = { version: "1.9"`, its 14 Nov publish); its `main` carries v1.10 (`src/wx/static/tic-nav.js`), so it
-  goes to v1.10 at its 15 Nov publish, about 4:23 AM CST.
-- **Programs in the house bar:** 15, the newest Launch (14 Nov), Orbit and Headwind (13 Nov) and Blackout (12-13
-  Nov). Their wording, drawing rows and footer credits: `CLAUDE.md`, "Family".
+- **House bar v1.12** (stays at the top, minimizes to a tab; `tic-nav.css` v1.3; Tom's yes on the look 14 Nov,
+  "push and deploy" 15 Nov): checked 15 Nov about 12:10 PM CST, every live `/tic-nav.js` reads `version: "1.12"` and
+  every `/tic-nav.css` v1.3: the hub and COP (`/shared/`), Watchfloor, Title 10 (`activation.`), Noisefloor,
+  Context, Vigil, Listening Post, Elements, Cordon, Vis, Blackout, Headwind, Orbit, Launch and Undertow. A live
+  browser check the same hour, 1440 px and 375 px, passed on all 16: the bar stays at the top when scrolled, nothing
+  of the site's slides under the full bar, minimizing sets `--tic-house-h` to 0px, Programs opens from the tab, no
+  page is wider than the phone, no script errors. **PropertyCast's page still carries v1.10** (built 10:16 UTC
+  15 Nov, before the push); its `main` (`241aee6`) carries v1.12, so it goes live at its 16 Nov publish, about
+  4:20 AM CST. Pushed by sha on 15 Nov morning: hub `de3d057` (`site-checks` 43730327238 green), Watchfloor
+  `56158c6`, Title 10 `102a707`, Noisefloor `0ea8510`, PropertyCast `241aee6`, Context `3bcb711` (`master`), Vigil
+  `7d5f4a6`, COP `67ea331`, Elements `86a235a`, Cordon `5365d45`, Vis `1541504`, Blackout `b2ecef0`, Headwind
+  `0814445`, Orbit `ed7275f`, Launch `d17412d`, Undertow `79f99a1`. Deployed by hand: the hub, Watchfloor
+  (`build_web.py`), Title 10 (the first try failed in Firebase's file upload, the retry deployed), Context (`npx vercel
+  deploy --prod` from the worktree with `.vercel/project.json` copied in; the first run printed `"status": "error"`,
+  the retry was ready) and Listening Post (no git; its v1.10 files are in `_backups/tic-nav-v1.10-2026-11-14/`).
+  Hub tests: 213, all passing (the full run's one failure, the COP "Latest" line under load, passed 40 of 40 alone).
+  What each site changed: `CLAUDE.md`, "Rolling out a shared file".
+- **Programs in the house bar:** 16, the newest Undertow and Launch (14 Nov), Orbit and Headwind (13 Nov) and
+  Blackout (12-13 Nov). Their wording, drawing rows and footer credits: `CLAUDE.md`, "Family".
 - **`site-checks` on `master`: green.** The last run, 43616958717 on `4d4351b` (the Launch listing), passed both jobs
   (`checks`, `feeds`). The commits since (`c0c037d` to `e1e3e29`) touch only `CLAUDE.md` and `dispatch/`, which don't
   start it; `dispatch-deploy` passed on `15caf79` (COP's watchdog).
@@ -39,8 +51,8 @@ and how the house bar rolls out are in `CLAUDE.md`.
   (optional, a layout change).
 
 ## Next steps
-1. **PropertyCast to v1.10:** after its 15 Nov publish (about 4:23 AM CST), check its home page's HTML for
-   `TicNav = { version: "1.10"`. That finishes v1.10 everywhere.
+1. **PropertyCast to v1.12:** after its 16 Nov publish (about 4:20 AM CST), check its home page's HTML for
+   `tic-nav.js v1.12` and `tic-nav.css v1.3` (the inlined copies' first lines). That finishes v1.12 everywhere.
 2. **Waiting on the publisher (listed 14 Nov 2026, nothing changed):**
    - The drawing is small between 821 and about 1100 px wide (labels 5 to 7 px at 821 to 1024 px); the phone layout
      starts at 820 px, so a breakpoint change.
@@ -70,4 +82,6 @@ and how the house bar rolls out are in `CLAUDE.md`.
    `D:\Projects\tic-vetday` (branch `veterans-day`, merged, 19 uncommitted files; never deploy from it), and the merged
    local branch `vetday-co-chains`. Added 14 Nov evening, both clean and merged: `_worktrees/pc-trigger-own-clock`
    (PropertyCast, branch `trigger-own-clock`) and `_worktrees/watchfloor-contrast` (Watchfloor, branch `contrast-fix`), and `_worktrees/vis-gate` (Vis, branch
-   `gate-fix`).
+   `gate-fix`). Also left from the v1.10 rollout, all clean: the eleven `_worktrees/*-nav110` (branch
+   `tic-nav-v1.10`). The v1.12 rollout's own worktrees (`*-nav112`, `hub-nav-v112`, branch `tic-nav-v1.12` or
+   `nav-v1.12`) were removed after its pushes.
