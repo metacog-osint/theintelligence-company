@@ -428,6 +428,8 @@
   function programHTML(id) {
     var p = P[id];
     var stat = p.stat ? '<p class="oe-stat">' + esc(p.stat) + "</p>" : "";
+    if (p.unusual) stat += '<p class="oe-unusual"><i class="oe-sdot k-hot" aria-hidden="true"></i>' + n(p.unusual) + " " +
+      (p.unusual === 1 ? "finding" : "findings") + " unusual against its own baseline in today’s COP snapshot.</p>";
     var home = p.core ? '<p class="oe-k">Reads</p><p>Every layer.</p>'
       : '<p class="oe-k">Home layer</p><div class="oe-plist">' + layerChip(p.home) + "</div>";
     var reach = p.core || !p.reach.length ? "" : '<div class="oe-sec"><p class="oe-k">Also reaches</p><div class="oe-plist">' + p.reach.map(layerChip).join("") + "</div></div>";
@@ -605,6 +607,15 @@
       var placed = progs.reduce(function (acc, p) { return acc + (Number(p.placed) || 0); }, 0);
       P.cop.short_stat = current + "/" + progs.length + "\u00a0feeds up to date";
       P.cop.stat = current + " of " + progs.length + " program feeds up to date, with " + n(placed) + " findings placed on the map.";
+      // Today's glow (design preview, 15 Nov 2026): a tag lights when COP's snapshot holds findings from that program
+      // that are unusual against the program's own baseline. It says where to look, not that anything is wrong.
+      progs.forEach(function (h) {
+        var g = chipEls[h.id], a = Number(h.anomalies) || 0;
+        if (!g || !a || !P[h.id]) return;
+        g.classList.add("hot");
+        g.setAttribute("aria-label", P[h.id].name + ", " + statusWords(P[h.id]) + ", " + a + " unusual " + (a === 1 ? "finding" : "findings") + " today");
+        P[h.id].unusual = a;
+      });
       drawGuide();
       render(pinned);
     }).catch(function () {});
