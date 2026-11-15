@@ -4,10 +4,10 @@ compatibility_date = "2026-09-01"
 workers_dev = false    # no public URL
 preview_urls = false
 
-# No cron of its own: the free plan's 5 are in use (PropertyCast 1, Vigil 4). PropertyCast's trigger Worker calls
-# tick() every 5 minutes through its service binding DISPATCH. An empty list also clears any cron left from a
-# refused deploy.
+# Its own clock since 14 Nov 2026 (Tom's yes). From 5 to 14 Nov PropertyCast's trigger Worker called tick() every
+# 5 minutes through a service binding; that binding is gone. Nothing stops a job starting twice in one slot, so only
+# one clock may run it. The account's cron triggers in use: PropertyCast 1, Vigil 1, this 1 (free plan allows 5).
 [triggers]
-crons = []
+crons = ["*/5 * * * *"]
 
 # Secret (uploaded by .github/workflows/dispatch-deploy.yml from the hub repo's GitHub secrets): DISPATCH_TOKEN

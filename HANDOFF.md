@@ -17,20 +17,23 @@ and how the house bar rolls out are in `CLAUDE.md`.
   (`checks`, `feeds`). The commits since (`c0c037d` to `e1e3e29`) touch only `CLAUDE.md` and `dispatch/`, which don't
   start it; `dispatch-deploy` passed on `15caf79` (COP's watchdog).
 - **Dispatch:** `tic-dispatch` starts Elements, Cordon, COP (build and watchdog), Vis, Blackout, Headwind, Orbit and
-  Launch on PropertyCast's 5-minute clock; the token covers all eight repos (`CLAUDE.md`, "Dispatch Worker").
+  Launch. **Its own clock, built 14 Nov, not live until pushed:** `crons = ["*/5 * * * *"]` in the hub, and
+  PropertyCast's `lend()` and `DISPATCH` binding removed in PropertyCast. Push PropertyCast's first (its
+  `trigger-deploy` removes the binding), then the hub's (`dispatch-deploy` adds the cron), so the two clocks never
+  both run: nothing stops a job starting twice in one slot. Then check one dispatched run per repo. The token covers
+  all eight repos (`CLAUDE.md`, "Dispatch Worker").
 - **Tests on this machine:** `BROWSER_CHANNEL=msedge npm test` runs everything on the installed Edge (`tests/README.md`);
   190 of 190 passed in 6 full runs on 14 Nov, 2 to 3 minutes each. The two tests that failed only in full runs, and a
   third found on the way, are fixed at the cause (`CLAUDE.md`, "Tests"): `serve.py`'s listen backlog, off-site-only
-  routing in the tests, and the planner's `roads.js` v1.1 timeout. **`roads.js` v1.1 changes the live planner's
-  page, so it reaches the site only with a hub deploy** (Tom's yes). The drag test's 34 px shift (2 of about 12 runs
+  routing in the tests, and the planner's `roads.js` v1.1 timeout. Pushed 14 Nov about 4:33 PM CST (`5245689`;
+  `site-checks` run 43648715410 green, both jobs) and deployed to the hub about 4:40 PM CST (approved); the live
+  `/veterans/veterans-day/roads.js` is byte-identical to `master`. The drag test's 34 px shift (2 of about 12 runs
   before the routing change, none in 8 after) wasn't explained; it now also waits for the map to stop gliding.
 
 ## Next steps
 1. **PropertyCast to v1.10:** after its 15 Nov publish (about 4:23 AM CST), check its home page's HTML for
    `TicNav = { version: "1.10"`. That finishes v1.10 everywhere.
 2. **Waiting on the publisher (listed 14 Nov 2026, nothing changed):**
-   - A cron of its own for `tic-dispatch` (3 of the account's 5 cron triggers were free on 6 Nov; not rechecked), so it no longer depends on
-     PropertyCast's trigger.
    - The drawing is small between 821 and about 1100 px wide (labels 5 to 7 px at 821 to 1024 px); the phone layout
      starts at 820 px, so a breakpoint change.
    - Watchfloor's own `button.primary`: white on amber in light mode, 4.0:1 (WCAG AA asks 4.5:1 for normal text).

@@ -173,24 +173,26 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   fails, and GitHub mails the owner, when COP's build or a program has stopped (COP `tools/suite_watch.py`). Private
   repo, one job of well under a minute; its own cron (`47 */3`) is the fallback. No token change: `cop` is already
   in the `tic-dispatch` token's repository access.
-- **Its clock is PropertyCast's.** The free plan allows 5 cron triggers per account, and on 5 Nov all 5 were in use:
-  PropertyCast's trigger 1 (`*/5`), Vigil's ingestion Worker 4. The first deploy, with a cron of its own, was refused
-  (code 10072). So `tic-dispatch` has `crons = []`, and
-  `propertycast-trigger` calls its `tick(scheduledTime)` on every 5-minute wake through the service binding `DISPATCH`
-  (`PropertyCast/trigger/wrangler.toml`; `lend()` in its `worker.js` logs tic-dispatch's failures and never throws).
-  Tom chose this over Workers Paid ($5/month: 250 cron triggers per the docs, the error said 1,000) and over merging
-  Vigil's crons, 5 Nov 2026. If PropertyCast's trigger is ever removed, the dispatcher stops: give it a cron of its
-  own first (its `scheduled()` handler is ready).
+- **Its own clock since 14 Nov 2026** ("Yes, build it"): `crons = ["*/5 * * * *"]`, and `scheduled()` runs it.
+  From 5 to 14 Nov it ran on PropertyCast's: the free plan allows 5 cron triggers per account, all 5 were in use on
+  5 Nov (PropertyCast's trigger 1, Vigil's ingestion Worker 4) and the first deploy with a cron was refused (code
+  10072), so `propertycast-trigger` called its `tick(scheduledTime)` on every wake through a service binding
+  `DISPATCH`. the publisher chose that over Workers Paid ($5/month) on 5 Nov; Vigil's crons merged the next day (below), which
+  freed the slots. PropertyCast's binding and `lend()` were removed the same day as the cron was added (its
+  `trigger/`, deployed first, so the two clocks never overlapped). The account now uses 3 of its 5 cron triggers:
+  PropertyCast `*/5`, Vigil `15,45`, `tic-dispatch` `*/5` (read from the five Workers' configs, 14 Nov; the account's
+  Workers are `propertycast-trigger`, `vigil-ingestion`, `tic-dispatch`, `vetday` and `molehunt`, the last two
+  without crons). **Nothing stops a job starting twice in one slot**, so only one clock may call `run()`: never bind
+  `tick()` while the cron runs.
 - **Vigil's crons merged, 6 Nov 2026** (Tom asked, 5 Nov; Vigil PR #92, merge `a2383f5`; Worker deployed by hand
   about 3:20 PM CST): one trigger, `15,45 * * * *`, so 2 of the account's 5 are in use and 3 are free. Vigil's four
   triggers were only ticks (its scheduler runs whatever is overdue), but one hourly trigger would have overloaded it:
   its registry declares about 900 subrequests a day, and 24 ticks admit 768. Vigil's
-  `workers/src/lib/__tests__/capacity.test.js` fails if that stops fitting. `tic-dispatch` still runs on PropertyCast's
-  clock; a cron of its own is now possible (Tom's call).
+  `workers/src/lib/__tests__/capacity.test.js` fails if that stops fitting. `tic-dispatch` took one of the free slots on
+  14 Nov 2026 (above).
 - Deploy: `.github/workflows/dispatch-deploy.yml` runs on a push to `master` that touches `dispatch/**` (or by hand),
   tests first (`node --test` in `dispatch/`, no network), then `wrangler deploy` and the secret upload, in
-  PropertyCast's order. Deploy `tic-dispatch` before any PropertyCast trigger deploy that adds the binding: a binding
-  to a missing Worker fails. Hub repo secrets, set by Tom: `DISPATCH_TOKEN` (fine-grained, `tic-dispatch`; elements, cordon, cop, vis, blackout,
+  PropertyCast's order. Hub repo secrets, set by Tom: `DISPATCH_TOKEN` (fine-grained, `tic-dispatch`; elements, cordon, cop, vis, blackout,
   headwind, orbit, launch;
   Actions: read and write), `CLOUDFLARE_API_TOKEN` ("Edit Cloudflare Workers" template), `CLOUDFLARE_ACCOUNT_ID`. The
   `CLOUDFLARE_API_TOKEN` in this machine's environment sees Pages projects but not Workers, so it can't deploy this.
