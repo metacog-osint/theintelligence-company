@@ -73,10 +73,13 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   DISARM techniques, STIX 2.1 export; operation level only; `D:\Projects\undertow`, private repo
   `metacog-osint/undertow`, Cloudflare Pages `undertow-cm3.pages.dev`) went live at
   `undertow.theintelligence.company` on 14 Nov 2026. Listed the same day (Tom approved the wording, "Yes, go"):
-  **beta** in the house bar (v1.11, after Context, "Human · influence operations"), in the product lists after
+  **beta** in the house bar (added in v1.11, after Context, "Human · influence operations"), in the product lists after
   Launch, on the drawing at [780, 426] (the planned "Influence operations" node became it; the Human row
   "Attributed influence operations and platform takedowns" is "now"), and in the first guide question after
-  Context. Its DISARM technique mapping is proposed and not yet reviewed by Tom: don't describe it as reviewed.
+  Context. Its DISARM rule table was reviewed by Tom on 14 Nov 2026 CST (two rules narrowed; Undertow `d18db9a`):
+  a technique is still Undertow's reading of the publisher's words, not the publisher's claim. Its EEAS register had
+  a second machine reading on 15 Nov 2026 (Undertow `e70194d`), not a person's check. Since kit 0.5.6 (15 Nov
+  2026) its date-only and month-only items carry `data_as_of_precision`.
   Footer credit links `/#method`. Its feed is about 1.9 MB (about 65 KB compressed) and the hub reads it whole.
 - **Context vs Watchfloor is parked** (Tom, 1 Nov 2026: "stop it, i'm not deciding on this yet"). Both may stay with
   different scopes. Leave Context's "Watchfloor's predecessor" line alone, and don't raise the question again until
