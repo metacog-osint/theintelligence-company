@@ -72,7 +72,7 @@ test("Headwind runs every six hours, at :50 past 03, 09, 15 and 21 UTC", () => {
   assert.deepEqual(hw.minutes, [50]);
   assert.deepEqual(hw.hours, [3, 9, 15, 21]);
   assert.deepEqual(due(JOBS, at(50, 9)).map((j) => j.repo), ["metacog-osint/headwind"]);
-  assert.deepEqual(due(JOBS, at(50, 10)).map((j) => j.repo), []);
+  assert.deepEqual(due(JOBS, at(50, 14)).map((j) => j.repo), []);   // 10:50 is Noisefloor's since 15 Nov
 });
 
 test("Orbit runs every six hours, at :55 past 00, 06, 12 and 18 UTC", () => {
@@ -188,4 +188,15 @@ test("Launch runs every six hours, at :15 past 01, 07, 13 and 19 UTC, after Orbi
   assert.deepEqual(la.hours, [1, 7, 13, 19]);
   assert.deepEqual(due(JOBS, at(15, 7)).map((j) => j.repo), ["metacog-osint/launch"]);
   assert.deepEqual(due(JOBS, at(15, 8)).map((j) => j.repo), []);
+});
+
+test("Noisefloor's COSMIC-2 day job runs at :50 from 04 to 13 UTC, except Headwind's 09:50", () => {
+  const nf = JOBS.find((j) => j.repo === "metacog-osint/noise-floor");
+  assert.equal(nf.workflow, "cosmic2.yml");
+  assert.equal(nf.ref, "main");
+  assert.deepEqual(nf.minutes, [50]);
+  assert.deepEqual(nf.hours, [4, 5, 6, 7, 8, 10, 11, 12, 13]);
+  assert.deepEqual(due(JOBS, at(50, 4)).map((j) => j.repo), ["metacog-osint/noise-floor"]);
+  assert.deepEqual(due(JOBS, at(50, 9)).map((j) => j.repo), ["metacog-osint/headwind"]);
+  assert.deepEqual(due(JOBS, at(50, 14)).map((j) => j.repo), []);
 });
