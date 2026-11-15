@@ -5,6 +5,57 @@ approved. Every finished dated section up to 13 Nov 2026 (Veterans Day planner, 
 tests, dispatch, the Vigil summary feed) is in `HISTORY.md`, moved verbatim on 14 Nov 2026. What each program is
 and how the house bar rolls out are in `CLAUDE.md`.
 
+## Design review and hub preview (15 Nov 2026, about 4:00 PM CST)
+- **Review** (Tom: "review ... layout, flow, connectivity, and user experience in all sites", with ideas from the
+  Squarespace homepage): published as a private page, https://claude.ai/artifact/HbqH9AaUvGSWiu1JXfW2V4. Source,
+  screenshots and the Playwright measuring scripts: `[local path]`
+  (untracked). Measured 15 Nov about 2:20-3:10 PM CST, headless Edge at 1440x900 and 390x844:
+  - Hub 8,701 px desktop, 13,300 px phone. Longest program pages on a phone: Cordon 36,195 px (about 43 screens),
+    Orbit 27,713, Elements 19,333, Undertow 16,097, Headwind 15,897, Launch 14,269.
+  - Links to sibling sites outside the house bar: COP links to all 13 programs; Vigil, Noisefloor, Blackout,
+    Headwind, Orbit, Undertow and Wake link to none; Watchfloor, Context and Elements only to the hub; Cordon to
+    Launch, Vis to Watchfloor, Launch to Orbit. **No program page links to COP.**
+  - Three looks: light pages (Elements, Cordon, Blackout, Headwind, Orbit, Launch, Undertow, Wake, Noisefloor close),
+    dark dashboards (COP, Context, Vigil), and their own style (Watchfloor, Vis, Title 10, PropertyCast; keep these).
+  - Squarespace was read from its markup only (the in-app browser was hidden and Chrome's screenshots timed out), so
+    its structure was seen, not its motion.
+- **Preview built, Tom's "Yes, build preview" then "Yes, commit":** branch `design/hub-preview`, commit `f6099a5`,
+  worktree `[local path]`, one commit on GitHub's `master` `25d99d3`. **Not pushed, merged
+  or deployed.** 213 of 213 tests passed on Edge (`BROWSER_CHANNEL=msedge npm test`; the worktree's
+  `tests/node_modules` is a junction to the main checkout's). Preview: the `hub-design` entry in
+  `[local path]`, `tools/serve.py` on port 5058. What it changes:
+  - Compact hero, so the drawing starts 495 px down at 1440x900 (was 1,221 at 1024 wide). Nav gains Layers and Today.
+  - **Draft wording, not approved by Tom:** top line "Conflict · Cyber · GPS · Space · Hazards · Economics ·
+    Shipping"; lede "Monitoring tools built from publicly available information, from the seabed to orbit. Each one
+    reads its own layer against its own baseline, and every product credits its sources, dates its claims and
+    publishes its methods."; first button "Explore the layers" (`#layers`).
+  - Drawing: a program tag glows (class `hot`) when COP health's `anomalies` for it is above 0; aria-label and the
+    program panel give the count ("unusual against its own baseline in today's COP snapshot"); legend "Unusual
+    findings today". Drop-shadow only, so tag geometry and the label-overlap test are unchanged; still with reduced
+    motion.
+  - `#today` band after the drawing: four numbers from COP health (feeds fresh of all, `placed` summed, `anomalies`
+    summed, programs with anomalies), hidden until they load, count-up unless reduced motion; then the four Latest
+    articles (markup unchanged; the heading is now an h3) in a row.
+  - Products: the three feature blocks became a screenshot rail (`#shots`, arrow buttons). `ul.plist` cards carry
+    `data-layer` and `data-layer-name` (label drawn by CSS `attr()`), coloured by `--l-*` tokens from the drawing's
+    plates; COP is a full-width first card; on phones the list is a sideways rail. **Both lists are now ordered by
+    home layer** (COP, Watchfloor, Headwind, Context, Undertow, Vigil, Blackout, Noisefloor, Orbit, Launch, Vis,
+    Cordon, Elements, Wake, then PropertyCast, Title 10, Listening Post); `404.html` matches, as its test requires.
+  - `#sources` wall: 41 publishers taken from each program's `attribution` in COP health, each linking to that
+    program's Sources page (the footer's URLs). Script adds a hidden second copy and `.moving`; it pauses on hover,
+    focus or the Pause button; without script or with reduced motion it is a still, wrapped list.
+  - After: desktop 7,851 px (was 8,701), phone 8,956 px (was 13,300); products on a phone about 1,037 px (was about
+    5,000). No console or CSP errors.
+- **Proposed in the review, not built:** sticky-scroll "How it works" over the drawing; folding Work with us, How we
+  work and About; a Verdict number in the Today band (needs Verdict's origin in `connect-src`); house bar v2 (layer
+  grouping, a freshness dot per program, "See it on COP"); `tic-related.js` "Elsewhere today" (other programs'
+  findings in the same countries, from COP's snapshot; start on Blackout); one shared page layout for the light
+  pages, with sections as tabs on phones (start with Cordon); consistent page titles "Name · The Intelligence Company".
+- **Before merging:** Tom approves or rewrites the draft wording; bump the footer date and `sitemap.xml` `lastmod`;
+  check the 404 page's look with the new cards; record the new rules in `CLAUDE.md` (layer order of the product
+  lists, the glow, the Today band, the sources wall and its sync with each program's attribution). The main
+  checkout's local `master` was 4 commits behind GitHub on 15 Nov; pull before merging there.
+
 ## Current state (checked 14 Nov 2026, about 3:27 PM CST)
 - **House bar v1.13** (15 Nov 2026, Tom's "Yes, all 16"; only `tic-nav.js` changed: Wake in the Programs menu,
   `tic-nav.css` stays v1.3). Hub `23b2e27` (deployed about 12:35 PM CST) and Wake (`5e9548c`, deployed by hand).
