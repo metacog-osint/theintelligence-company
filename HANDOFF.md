@@ -28,7 +28,8 @@ and how the house bar rolls out are in `CLAUDE.md`.
   third found on the way, are fixed at the cause (`CLAUDE.md`, "Tests"): `serve.py`'s listen backlog, off-site-only
   routing in the tests, and the planner's `roads.js` v1.1 timeout. Pushed 14 Nov about 4:33 PM CST (`5245689`;
   `site-checks` run 43648715410 green, both jobs) and deployed to the hub about 4:40 PM CST (approved); the live
-  `/veterans/veterans-day/roads.js` is byte-identical to `master`. The drag test's 34 px shift (2 of about 12 runs
+  `/veterans/veterans-day/roads.js` is byte-identical to `master`. After `npm ci` (14 Nov evening; `node_modules` had been
+  found empty at 7:29 PM CST, cause not found), 190 of 190 passed on `682285e`, Undertow's changes included. The drag test's 34 px shift (2 of about 12 runs
   before the routing change, none in 8 after) wasn't explained; it now also waits for the map to stop gliding.
 
 - **Watchfloor contrast fixed (14 Nov 2026, Tom's yes):** axe on the live site, light and dark, found the warm badge
@@ -50,8 +51,6 @@ and how the house bar rolls out are in `CLAUDE.md`.
    - Product screenshots (`site/img/`, 31 Oct 2026) may be out of date.
    - Watchfloor's Rising headline links are 17 px tall, under WCAG 2.2's 24 px target size (axe, 14 Nov); fixing it
      changes the layout.
-   - **The hub's `tests/node_modules` was found empty at 7:29 PM CST 14 Nov** (cause not found; no npm was running).
-     Run `npm ci` in `tests/` before the next test run.
    - Veterans Day 2027: the open questions in `veterans-day/README.md` ("After the day"): repeat visits, how receipts
      are read, a reach counter, and a daily cron for the hash and salt wipe.
 3. **Waiting on access:** Blackout's night lights (the publisher accepting LAADS's data licence on his Earthdata account), then
