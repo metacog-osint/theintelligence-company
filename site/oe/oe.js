@@ -67,7 +67,7 @@
       sub: "Terrain, settlements, infrastructure, coasts and sea lanes, down to the seabed.",
       feeds: [["Conflict events (GDELT)", "now", "Watchfloor"], ["Ship positions (Finland's open AIS)", "now", "Noisefloor, Wake"],
         ["Navigational warnings (NGA)", "now", "Noisefloor, Cordon"], ["Quakes, volcanoes, fires and floods", "now", "Elements"],
-        ["Ports, chokepoints and transit volume (IMF PortWatch)", "dev", "Wake"], ["Undersea cable corridors", "now", "Blackout, Wake"],
+        ["Chokepoint transit volume (IMF PortWatch)", "now", "Wake"], ["Port throughput (IMF PortWatch)", "dev", "Wake"], ["Undersea cable corridors", "now", "Blackout, Wake"],
         ["Power: a nuclear plant's off-site power, US outages and grid demand", "now", "Blackout"],
         ["Night lights (NASA Black Marble)", "dev", "Blackout"]] }
   ];
@@ -144,9 +144,9 @@
     { id: "elements", name: "Elements", status: "beta", home: "land", reach: ["air", "systems", "human"], at: [530, 1125],
       href: "https://elements.theintelligence.company", ask: "Where are natural hazards hitting?",
       line: "Natural hazards as the authorities report them, on one map. Worldwide: earthquakes from USGS (with impact alerts) and from EMSC's independent catalogue, NASA satellite fire detections, GDACS alerts and Copernicus disaster mapping. Regional: weather warnings for the US (NOAA) and for 38 European countries and Israel (MeteoAlarm), NOAA hurricane-center storms, and tsunami messages for North America, the Pacific and the Caribbean. US only for now: wildfire incidents (NIFC), NOAA severe-storm outlooks, the US Drought Monitor and USGS volcano alert levels. Weather for more of the world and a radiation lane are planned." },
-    { id: "wake", name: "Wake", status: "dev", home: "land", reach: ["ems", "systems"], at: [900, 1152],
-      ask: "What is moving through maritime chokepoints?",
-      line: "Maritime: chokepoint and port throughput (IMF PortWatch), Baltic open AIS gaps, undersea cable corridors and navigational hazards." }
+    { id: "wake", name: "Wake", status: "beta", home: "land", reach: ["ems", "systems"], at: [900, 1152],
+      href: "https://wake.theintelligence.company", ask: "What is moving through maritime chokepoints?",
+      line: "Vessel transits through 28 maritime chokepoints, from Hormuz and Bab el-Mandeb to Malacca and Panama: IMF PortWatch's daily counts by ship type, as weekly means compared with the 90 days before and the same weeks a year earlier. Updated by hand once a week. Measurements only. Planned: port throughput, Baltic open AIS gaps and undersea cable corridors." }
   ];
   var P = {};
   PROGRAMS.forEach(function (p) { P[p.id] = p; if (p.core) { p.home = null; p.reach = LK.slice(); } });

@@ -1,4 +1,4 @@
-// The twelve feeds the hub reads, what it needs from each, and sample copies for the browser tests.
+// The thirteen feeds the hub reads, what it needs from each, and sample copies for the browser tests.
 // SHAPES lists exactly the fields site.js and oe/oe.js read, so the samples and the live feeds are checked against the
 // same thing: check-live.js runs these on the real feeds, and the browser tests run them on the samples.
 import { readFileSync } from "node:fs";
@@ -6,7 +6,7 @@ import path from "node:path";
 import { ROOT, feedUrls } from "./source.js";
 
 export const URLS = feedUrls(); // NOISEFLOOR, WATCHFLOOR, VIGIL, COP_HEALTH, ELEMENTS_FEED, CORDON_FEED, VIS_FEED, BLACKOUT_FEED,
-// HEADWIND_FEED, ORBIT_FEED, LAUNCH_FEED, UNDERTOW_FEED
+// HEADWIND_FEED, ORBIT_FEED, LAUNCH_FEED, UNDERTOW_FEED, WAKE_FEED
 // The samples' clock: every time in tests/fixtures is set relative to this moment (12:00 PM CST, 7 Nov 2026).
 export const NOW = new Date("2026-11-07T18:00:00Z");
 
@@ -71,6 +71,8 @@ export const SHAPES = {
   LAUNCH_FEED: (f) => [need(isTime(f.generated_at), "generated_at: the Updated time")],
   // And Undertow's (Cloudflare Pages; about 1.9 MB, about 65 KB compressed).
   UNDERTOW_FEED: (f) => [need(isTime(f.generated_at), "generated_at: the Updated time")],
+  // And Wake's (Cloudflare Pages; about 100 KB; built by hand once a week).
+  WAKE_FEED: (f) => [need(isTime(f.generated_at), "generated_at: the Updated time")],
 };
 // The two GeoJSON feeds are read with HEAD only, for their Last-Modified header.
 export const HEAD_ONLY = ["ELEMENTS_FEED", "CORDON_FEED"];
@@ -84,7 +86,7 @@ export function problems(name, data) {
 const FILES = { NOISEFLOOR: "noisefloor-board.json", WATCHFLOOR: "watchfloor-summary.json", VIGIL: "vigil-summary.json",
   COP_HEALTH: "cop-health.json", VIS_FEED: "vis-feed.json",
   BLACKOUT_FEED: "blackout-feed.json", HEADWIND_FEED: "headwind-feed.json",
-  ORBIT_FEED: "orbit-feed.json", LAUNCH_FEED: "launch-feed.json", UNDERTOW_FEED: "undertow-feed.json" };
+  ORBIT_FEED: "orbit-feed.json", LAUNCH_FEED: "launch-feed.json", UNDERTOW_FEED: "undertow-feed.json", WAKE_FEED: "wake-feed.json" };
 export function sample(name) {
   return JSON.parse(readFileSync(path.join(ROOT, "tests", "fixtures", FILES[name]), "utf8"));
 }
