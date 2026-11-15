@@ -17,7 +17,7 @@ and how the house bar rolls out are in `CLAUDE.md`.
   (`checks`, `feeds`). The commits since (`c0c037d` to `e1e3e29`) touch only `CLAUDE.md` and `dispatch/`, which don't
   start it; `dispatch-deploy` passed on `15caf79` (COP's watchdog).
 - **Dispatch:** `tic-dispatch` starts Elements, Cordon, COP (build and watchdog), Vis, Blackout, Headwind, Orbit and
-  Launch (and Undertow since 14 Nov evening; `CLAUDE.md`). **On its own `*/5` cron since 14 Nov 2026, 7:19 PM CST**
+  Launch (and Undertow since 14 Nov evening, Noisefloor's COSMIC-2 job since 15 Nov; `CLAUDE.md`). **On its own `*/5` cron since 14 Nov 2026, 7:19 PM CST**
   (Tom's yes): PropertyCast `cad0665` removed `lend()` and the `DISPATCH` binding (`trigger-deploy` 43662451686,
   7:18 PM; the deployed Worker lists only `LIVE`, `REPO`, `REF`), then hub `c1c301b` added the cron
   (`dispatch-deploy` 43662538238; Cloudflare reported `schedule: */5 * * * *`). No slot was missed or started twice.

@@ -43,6 +43,11 @@ export const JOBS = [
   // well under a minute is about 240 Actions minutes a month. It reads the public snapshot, so it is kept off COP's
   // build slot (:20) and sits 40 minutes after it on the hours they share.
   { repo: "metacog-osint/cop", workflow: "watch.yml", ref: "main", minutes: [0], hours: [1, 4, 7, 10, 13, 16, 19, 22] },
+  // Noisefloor's COSMIC-2 day job (15 Nov 2026, Tom's yes): UCAR posts the day's archive at about 04:35 UTC and the
+  // day's limb S4 file is due by 14:00 UTC, so :50 from 04 to 13 UTC, skipping 09:50 (Headwind's slot). Public repo,
+  // so its minutes are free. Its own crons are the fallback; its gate skips a day already published, so extra starts
+  // end in about a minute.
+  { repo: "metacog-osint/noise-floor", workflow: "cosmic2.yml", ref: "main", minutes: [50], hours: [4, 5, 6, 7, 8, 10, 11, 12, 13] },
 ];
 
 // The jobs due at this minute. The caller passes the cron's slot time, not when it woke, so a late start still

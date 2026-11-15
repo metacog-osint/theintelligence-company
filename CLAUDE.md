@@ -190,6 +190,12 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   fails, and GitHub mails the owner, when COP's build or a program has stopped (COP `tools/suite_watch.py`). Private
   repo, one job of well under a minute; its own cron (`47 */3`) is the fallback. No token change: `cop` is already
   in the `tic-dispatch` token's repository access.
+- **Noisefloor joins (15 Nov 2026, Tom's yes):** noise-floor `cosmic2.yml` at :50 past 04-08 and 10-13 UTC (09:50 is
+  Headwind's). UCAR posts the COSMIC-2 day archive at about 04:35 UTC and Noisefloor's limb S4 day file is due by
+  14:00 UTC; the job waits up to 45 minutes for a late archive. Public repo, so its minutes are free. Its own crons
+  (01:15, 03:15, 05:15, 08:15 UTC) are the fallback, and its gate skips a day already in the release, so extra starts
+  end in about a minute. **Tom adds `noise-floor` to the `tic-dispatch` token's repository access;** until then its
+  start fails with GitHub's 404 nine times a day and the others carry on.
 - **Its own clock since 14 Nov 2026** ("Yes, build it"): `crons = ["*/5 * * * *"]`, and `scheduled()` runs it.
   From 5 to 14 Nov it ran on PropertyCast's: the free plan allows 5 cron triggers per account, all 5 were in use on
   5 Nov (PropertyCast's trigger 1, Vigil's ingestion Worker 4) and the first deploy with a cron was refused (code
