@@ -100,11 +100,12 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   repo's main branch (checked 5 Nov 2026; some local trees lag): Watchfloor `web/`, Title 10 `deploy/public/`,
   Noisefloor `site_src/`, PropertyCast `src/wx/static/`, CONTEXT `public/`, Vigil `public/`, Listening Post
   `web/public/`, and COP, Elements and Cordon.
-- `site/shared/tic-nav.js` (v1.11, 14 Nov 2026: Undertow added after Context, and the hub's own home page carries
+- `site/shared/tic-nav.js` (v1.12, 14-15 Nov 2026: the bar stays at the top of the window and minimizes to a tab,
+  below; v1.11, 14 Nov 2026: Undertow added after Context, and the hub's own home page carries
   the bar (Tom: the Programs menu on theintelligence.company too) with `data-home="here"`, which shows the home
   link as plain text; rolled out to the program sites by a side session; v1.10, 14 Nov 2026: Launch added after Orbit, pushed and deployed to the program sites about 2:20 PM CST that day (Tom's "Ship house bar v1.10"), COP followed about 2:55 PM CST (`bfad57b`, build run 43639997763), live everywhere except PropertyCast (goes live at its next daily publish); v1.9, 13 Nov 2026: Orbit added after Noisefloor, live on every site that day; v1.8,
   13 Nov 2026: Headwind added after Blackout, live on every site that day; v1.7, 13 Nov
-  2026: Blackout's power and routing wording, live on every site that day; v1.6, 13 Nov 2026 UTC: Blackout added; v1.5, 8 Nov: Vis) + `tic-nav.css` (v1.2, 7 Nov 2026; rollout status in `HANDOFF.md`): **the house bar** on every program site (Tom: "I need a
+  2026: Blackout's power and routing wording, live on every site that day; v1.6, 13 Nov 2026 UTC: Blackout added; v1.5, 8 Nov: Vis) + `tic-nav.css` (v1.3 with v1.12; v1.2, 7 Nov 2026; rollout status in `HANDOFF.md`): **the house bar** on every program site (Tom: "I need a
   link back to the home page on each subsite… a dropdown menu of all programs with their primary layer area or topic
   labeled (and a more in-depth description upon mouse-over)"). It is a slim navy bar with "← The Intelligence Company"
   and a **Programs ▾** disclosure menu. That menu lists every live program grouped "Across the layers" and "Other
@@ -119,9 +120,29 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   - Its z-index is 10000 so its menu covers headers with their own stacking, such as Noisefloor's z-index 1100, and it
     resets `display`, margins, padding and borders so a site's generic `nav` rules can't reshape it, such as
     Watchfloor's flex `nav`.
+  - **v1.12 and `tic-nav.css` v1.3** (Tom, 14 Nov 2026: "each page's header should freeze as the page scrolls
+    down… If the user chooses to minimize the header bar, we should have a button for that, too, on the header"; Tom
+    approved the look from screenshots; live on 16 sites 15 Nov 2026, `HANDOFF.md`). The bar is `position: fixed` at
+    the top and an empty `.tic-house-room` after it holds its place, so it stays put whether it is first in `<body>` or
+    in `#tic-nav`. A chevron button (`.tic-house-toggle`, "Minimize the house bar" / "Show the house bar") folds it
+    to a tab at the **top centre** holding Programs and the restore button; the menu opens centred under it. The top
+    right was tried first and covered the Time button on about ten sites. The choice is kept like the time
+    settings: cookie `tic_nav` (`min` or `full`, Domain theintelligence.company) else localStorage `tic-nav-v1`,
+    written only when pressed, every access in try/catch. While mounted, `<html>` has `tic-house-on` (and
+    `tic-house-minimized`), and **`--tic-house-h`** is 34px, 0px minimized or printed: **a site whose own header or
+    tab row is sticky or fixed at the top uses `top: var(--tic-house-h, 0px)`**, and one that sets its own
+    `scroll-padding-top` adds it (the bar's default `scroll-padding-top` is inside `:where()`, so any site rule wins).
+    At 360 px or less the row tightens so 320 px fits. Nothing moves, so reduced motion needs nothing. Known
+    trade-off: minimized and scrolled, the centred tab covers one or two links in the middle of a site's sticky tab
+    row (Orbit's section bar, Title 10's and PropertyCast's phone tabs, COP's header text); one click restores the
+    bar. `TicNav.minimized()` and `TicNav.minimize(bool)`. The hub's skip link sits above the bar (`z-index: 10001`;
+    it was under it from v1.11) and the drawing's sticky `top` adds the bar's height.
   - `tic-nav.css` v1.2 (7 Nov 2026): "You are here" uses the text accent `#8F5509` on the light panel (`--tn-here`);
     the amber it used read 1.9:1, under WCAG's 4.5:1. Dark mode keeps the amber.
-  - `tests/nav.test.js` and `tests/a11y.test.js` test the bar on a stand-in product page (menu, keyboard, phone, axe).
+  - `tests/nav.test.js` and `tests/a11y.test.js` test the bar on a stand-in product page (menu, keyboard, phone, axe);
+    since v1.12 also fixed after scrolling, in a short `#tic-nav` slot, in-page links, minimize and restore, the
+    cookie across two program origins, localStorage off the domain, blocked storage, 320 px, print, and axe on
+    both states (`tests/lib/standin.js`: `stickyHeader`, `slot`, `alsoServe`).
   - Elements' `long` text is the v1.4 wording Tom approved on 6 Nov 2026: "Worldwide: earthquakes from USGS (with
     impact alerts) and EMSC, …", weather warnings "Regional: … for the US and Europe", "US only for now: wildfire
     incidents, …" and "Weather for more of the world is planned". `oe.js` names EMSC ("EMSC's independent
@@ -141,9 +162,18 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   - PropertyCast goes live with the next daily publish. Vigil: Vercel deploys on push to main.
   - Context deploys only with `npx vercel --prod`, so copy `.vercel/project.json` into the worktree.
   - Listening Post has **no git**: back up files before editing; `firebase deploy --only hosting`.
-  - COP is a fixed full-screen layout, so `cop.css` pins the bar and moves `.bar` and `.app` down 34px, under
-    `body:has(> .tic-house)`.
+  - COP is a fixed full-screen layout, so `cop.css` moves `.bar` and `.app` down by `var(--tic-house-h, 34px)` (the
+    map by that plus 56px), under `body:has(> .tic-house)`; since v1.12 the bar fixes itself.
   - Elements and Cordon copy `site_src/` to `site/` at build and deploy to GitHub Pages on push.
+  - **Each site's own sticky chrome sits below the bar (v1.12):** Title 10 `.tabs` (inline CSS in `index.html` and
+    `print.html`; bump `sw.js`'s `VERSION`), Noisefloor's table `th` (`site_src/style.css`), Orbit's `.secbar` and
+    `scroll-padding-top` (`site_src/style.css`; its build copies `site_src` into `site`), PropertyCast's `.tabs`
+    (`src/wx/dashboard.py`), Context's sidebar, phone header, drawer and refresh notice (`src/styles/index.css`),
+    Vigil's `--house-bar-h: var(--tic-house-h, 34px)` (`src/index.css`; its own sticky pin of the bar is gone, as it
+    overrode the fixed bar), Listening Post's `.nav` and `.sheet-bg` (`web/src/app.css`; its hosting deploy rebuilds
+    `web/dist`). Cordon's tables scroll in their own box (`div.tbl` in `app.js`): they made its phone page 597 px wide,
+    which put the bar's buttons off screen. A site that adds a sticky header or a full-height overlay gives it the
+    variable. Context and Vigil compile their CSS, so test them by injecting the rules into the live page.
 
 ## Dispatch Worker (`dispatch/`, Cloudflare Worker `tic-dispatch`)
 - Built 5 Nov 2026 at Tom's request ("Yes, build it"). GitHub starts scheduled runs on this account only every 4 to 9
@@ -445,9 +475,10 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
     and COP's home page (its Sources sit in its side panel, and its address after `#` holds the map view, so a
     `#sources` link wouldn't hold). Each ends in ↗ joined by `&nbsp;`, so the arrow never starts a line. A test checks
     there is one link per program in the house bar.
-  - **Privacy line:** "No analytics or tracking. Time settings, if you change them, stay in your browser." True as
-    of 31 Oct 2026: no analytics or third-party scripts, and `tic-time.js` writes its cookie and local storage only
-    when the visitor changes a setting. Change the line before adding anything that tracks.
+  - **Privacy line:** "No analytics or tracking. If you change the time settings or minimize the top bar, that
+    choice stays in your browser." (since 15 Nov 2026; until then it named only the time settings). True: no
+    analytics or third-party scripts, and `tic-time.js` and `tic-nav.js` write their cookie and local storage only
+    when the visitor changes a setting or presses the bar's minimize button. Change the line before adding anything that tracks.
   - **Search markup:** JSON-LD in `<head>` (Organization with logo, email, founder Thomas Brummer, address Fargo, ND,
     the LLC's registered city; plus WebSite). A JSON-LD block isn't executed, so the `script-src 'self'` CSP allows it
     (checked: no console violation).
