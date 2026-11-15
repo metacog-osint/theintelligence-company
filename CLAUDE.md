@@ -194,8 +194,9 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   Headwind's). UCAR posts the COSMIC-2 day archive at about 04:35 UTC and Noisefloor's limb S4 day file is due by
   14:00 UTC; the job waits up to 45 minutes for a late archive. Public repo, so its minutes are free. Its own crons
   (01:15, 03:15, 05:15, 08:15 UTC) are the fallback, and its gate skips a day already in the release, so extra starts
-  end in about a minute. **Tom adds `noise-floor` to the `tic-dispatch` token's repository access;** until then its
-  start fails with GitHub's 404 nine times a day and the others carry on.
+  end in about a minute. `noise-floor` was added to the `tic-dispatch` token's repository access about 8:20 AM CST
+  15 Nov (Claude in Tom's signed-in GitHub, at his request; no new token). The first dispatched start is 04:50 UTC
+  16 Nov. `undertow` is still not in the token (checked the same morning).
 - **Its own clock since 14 Nov 2026** ("Yes, build it"): `crons = ["*/5 * * * *"]`, and `scheduled()` runs it.
   From 5 to 14 Nov it ran on PropertyCast's: the free plan allows 5 cron triggers per account, all 5 were in use on
   5 Nov (PropertyCast's trigger 1, Vigil's ingestion Worker 4) and the first deploy with a cron was refused (code
@@ -216,7 +217,7 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
 - Deploy: `.github/workflows/dispatch-deploy.yml` runs on a push to `master` that touches `dispatch/**` (or by hand),
   tests first (`node --test` in `dispatch/`, no network), then `wrangler deploy` and the secret upload, in
   PropertyCast's order. Hub repo secrets, set by Tom: `DISPATCH_TOKEN` (fine-grained, `tic-dispatch`; elements, cordon, cop, vis, blackout,
-  headwind, orbit, launch;
+  headwind, orbit, launch, noise-floor;
   Actions: read and write), `CLOUDFLARE_API_TOKEN` ("Edit Cloudflare Workers" template), `CLOUDFLARE_ACCOUNT_ID`. The
   `CLOUDFLARE_API_TOKEN` in this machine's environment sees Pages projects but not Workers, so it can't deploy this.
 - **`DISPATCH_TOKEN` expires 5 Nov 2027** (Tom, 5 Nov 2026). Before then Tom makes a new one the same way, runs
