@@ -17,6 +17,7 @@
   var LAUNCH_FEED = "https://launch.theintelligence.company/data/feed.geojson"; // Cloudflare Pages too; read whole
   var UNDERTOW_FEED = "https://undertow.theintelligence.company/data/feed.geojson"; // Cloudflare Pages too; read whole
   var WAKE_FEED = "https://wake.theintelligence.company/data/feed.geojson"; // Cloudflare Pages too; read whole
+  var RELIEF_FEED = "https://relief.theintelligence.company/data/feed.geojson"; // Cloudflare Pages too; read whole
   var VERDICT_SCORES = "https://metacog-osint.github.io/verdict/data/scores.json"; // Verdict's ledger counts (GitHub Pages)
 
   // Time: the Time button (it names the viewer's zone) and every <time data-tic>.
@@ -237,6 +238,8 @@
   getJSON(UNDERTOW_FEED).then(function (f) { setFresh("undertow", f.generated_at); }).catch(function () {});
   // Wake: the same (about 100 KB; built by hand once a week).
   getJSON(WAKE_FEED).then(function (f) { setFresh("wake", f.generated_at); }).catch(function () {});
+  // Relief: the same (rebuilt every six hours).
+  getJSON(RELIEF_FEED).then(function (f) { setFresh("relief", f.generated_at); }).catch(function () {});
 
   // Noisefloor: the briefing's bottom line for the newest aircraft day. Shared with oe/oe.js.
   window.ticNoisefloor = getJSON(NOISEFLOOR);

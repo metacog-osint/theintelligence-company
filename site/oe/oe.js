@@ -33,7 +33,7 @@
       feeds: [["Press attention and framing", "now", "Context"], ["Coverage split by source group", "now", "Watchfloor"],
         ["US embassy security and demonstration alerts", "now", "Cordon"],
         ["Official statements and votes", "planned", "Readout"], ["Unrest and displacement", "planned", "Temper"],
-        ["Press freedom", "planned", "Temper"], ["Humanitarian needs and funding", "planned", "Humanitarian response"],
+        ["Press freedom", "planned", "Temper"], ["Humanitarian appeals and funding (IFRC GO)", "now", "Relief"], ["Disease outbreak reports (WHO)", "now", "Relief"],
         ["Attributed influence operations and platform takedowns", "now", "Undertow"]],
       who: "Who's who: actors are named and described by their role (a party to a conflict, a third party, civilians) " +
         "as the cited sources describe them, and every claim is marked claimed, reported or assessed. Coverage is split " +
@@ -110,8 +110,9 @@
       line: "Covert influence operations as the platforms and governments that disrupted them report them: Meta's takedown networks, Google's influence-operations bulletins, OpenAI's threat reports, TikTok's reports under the EU Code of Conduct, and the EEAS's named operations. Each gives the origin the publisher assessed, the targets, and the DISARM techniques described, with a STIX 2.1 export. Operations only: no account handles, links or names of individuals." },
     { id: "temper", name: "Temper", status: "planned", home: "human", reach: ["systems", "land", "cyber"], at: [880, 506],
       line: "Unrest, displacement, public attention, press freedom and pressure on civil society." },
-    { id: "humanitarian", name: "Humanitarian response", status: "planned", working: true, home: "human", reach: ["systems", "land"], at: [618, 534], end: true,
-      line: "Needs, funding, appeals, food security and outbreaks. It may become part of Temper." },
+    { id: "relief", name: "Relief", status: "live", home: "human", reach: ["systems", "land"], at: [800, 548], end: true,
+      href: "https://relief.theintelligence.company", ask: "Where are the Red Cross and Red Crescent asking for help?",
+      line: "Where the Red Cross and Red Crescent are asking for help, and where WHO is reporting outbreaks: IFRC GO appeals and WHO Disease Outbreak News, as they publish them. Measurements only." },
 
     { id: "vigil", name: "Vigil", status: "live", home: "cyber", reach: ["systems", "human"], at: [914, 610],
       href: "https://vigil.theintelligence.company", ask: "Who is ransomware hitting?",
@@ -154,7 +155,7 @@
   // programs under it. Every program with an `ask` belongs to exactly one group; sites first, then in development.
   var GROUPS = [
     { id: "g1", q: "Where is conflict or pressure building?", layers: ["systems", "human"],
-      programs: ["cop", "watchfloor", "context", "undertow", "headwind", "verdict"] },
+      programs: ["cop", "watchfloor", "context", "undertow", "relief", "headwind", "verdict"] },
     { id: "g2", q: "What's hitting networks, signals and satellites?", layers: ["cyber", "ems", "space"],
       programs: ["vigil", "noisefloor", "blackout", "fieldcast", "orbit", "launch"] },
     { id: "g3", q: "What's happening on the ground, at sea and in the air?", layers: ["air", "land"],
