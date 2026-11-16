@@ -1,5 +1,5 @@
 /*! tic-related.js v1.0 · The Intelligence Company: "Elsewhere today", other layers' findings in the countries a
- *  page names, from COP's picture · canonical copy: D:\Projects\theintelligence-company\site\shared\tic-related.js
+ *  page names, from COP's picture · canonical copy: the hub's site/shared/tic-related.js
  *  (copy into each site with tic-related.css; keep the version line).
  *
  *  From the suite design review (15 Nov 2026): each program page shows what the other layers report in the same
@@ -20,7 +20,7 @@
  *  What it shows: items from the other programs (never the page's own), placed in one of those countries, current
  *  in COP's picture (not stale, not past valid_until) and from the last 48 hours (an item dated by day only: today
  *  or the two UTC days before, each of which still overlaps the last 48 hours, so a day posted the next morning
- *  shows; Tom, 15 Nov 2026. One dated by month only: never). Unusual readings first, then those in the countries the page
+ *  shows; 15 Nov 2026. One dated by month only: never). Unusual readings first, then those in the countries the page
  *  lists first (list them strongest first), then the newest; three at most, one per program before any program
  *  repeats, then a link to COP for the rest. Items whose us_person_data is "individuals" are left out.
  *  Words: "Unusual" means unusual against that program's own baseline, never a warning; Vis's items are forecasts;
