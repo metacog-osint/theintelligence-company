@@ -174,6 +174,10 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
       (layer order, COP's text).
     - **Rollout per site:** copy both files, add `https://cop.theintelligence.company` to `connect-src` where the
       site sets one, add `data-health="on"`, and check the menu's dots and the browser console live.
+      Rolled out 15-16 Nov 2026 (`HANDOFF.md`). Copy from the committed blob (`git show <sha>:site/shared/tic-nav.js`),
+      not the hub's working copy, which has CRLF endings. Blackout's `tests/test_blackout.py` pins its CSP origins
+      and checks `data-health`. PropertyCast inlines the bar, so its attribute is on `<script data-health="on">` in
+      `src/wx/dashboard.py`. Wake has no deploy workflow: it deploys by hand with wrangler (Wake's `CLAUDE.md`).
   - `tic-nav.css` v1.2 (7 Nov 2026): "You are here" uses the text accent `#8F5509` on the light panel (`--tn-here`);
     the amber it used read 1.9:1, under WCAG's 4.5:1. Dark mode keeps the amber.
   - `tests/nav.test.js` and `tests/a11y.test.js` test the bar on a stand-in product page (menu, keyboard, phone, axe);
@@ -185,6 +189,26 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
     incidents, …" and "Weather for more of the world is planned". `oe.js` names EMSC ("EMSC's independent
     catalogue"), NOAA, MeteoAlarm (38 European countries and Israel) and NIFC.
   - PropertyCast builds the bar into its page at its daily publish, so check its home page's HTML, not `/tic-nav.js`.
+- `site/shared/tic-related.js` + `tic-related.css` (v1.0, 16 Nov 2026; built on Blackout, canonical copy from Blackout
+  `bcdb010`): **"Elsewhere today"**, a card on a program page with the other programs' findings in that page's
+  countries, from COP's agent index (`/data/agent/index.json`), read once when the card nears the screen, without
+  cookies. Rules (48 hours; day precision today and the two UTC days before; month precision never; the page's own
+  program, stale, expired and `us_person_data` "individuals" left out; unusual first, then the page's country order,
+  then newest; three, one per program first) and the API are in the module's header. Per site: copy both files, add
+  `https://cop.theintelligence.company` to `connect-src`, put the hidden element in normal block flow (not straight
+  in a grid or flex row). Labels: Unusual (with the baseline note), Forecast, "<Program>'s judgment", As claimed;
+  never say COP checks or verifies. Tests: `tests/related.test.js` (pick rules in Node on a fixture index; the card,
+  its lazy read and a failed read on a stand-in page, `tests/lib/modpage.js`; axe light and dark). Check lazy
+  loading in headless Edge (Playwright), never with `eager`: a hidden Browser pane never reports intersection.
+- `site/shared/tic-tabs.js` + `tic-tabs.css` (v1.0, 16 Nov 2026; built on Cordon, canonical copy from Cordon
+  `f17f551`): **the sections row** from the design review's "C · Shell". Wrap the sections below the map in
+  `<div data-tic-tabs>`, each group `<div id data-tab-label>`; a sticky "Sections on this page" row under the house
+  bar; one group at a time at 760 px or less, every group with a jumping row wider; links and `aria-current`, not ARIA
+  tabs; a link into a group (`#health-h`) opens it; `tic-tabs:show` on a group for a map to redraw. The row takes the
+  page's `--panel`, `--line`, `--muted` and `--link`. Tests: `tests/tabs.test.js` (phone, desktop, deep link,
+  keyboard, resize, no script, axe light and dark run from the top of the page, since a sticky row over a link reads
+  as "obscured"). Blackout and Orbit have tabs of their own.
+- Copy every shared file from a committed blob (`git show <sha>:site/shared/<file>`), with LF endings.
 - **Rolling out a shared file** (all ten program sites carry both, Vis since 8 Nov 2026, and Blackout's own session
   copies them into its page). When a program is added or renamed, update
   `PROGRAMS` in `tic-nav.js` and copy it to every site. Method: a git worktree per repo, test locally, Tom's yes, push
@@ -492,8 +516,8 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
 - **No clock in the top bar** since 31 Oct 2026: the Time button already names the viewer's zone, and Tom found the
   zone repeated (clock, button, and "Central time" in the contact block, all removed except the button). **Don't sell
   the time settings in copy either** (Tom, 15 Nov 2026: drop the "your timezone" nonsense): How we work's fourth item,
-  "Your clock", is gone, and a test keeps time-zone wording out of How we work. Noisefloor's page carries the same
-  "Your clock" line; it goes when Noisefloor is next touched.
+  "Your clock", is gone, and a test keeps time-zone wording out of How we work. Noisefloor's Methods page carried the
+  same selling sentence; it went with house bar v2.0 (16 Nov 2026).
 - **Hub design (Tom's yes on the preview, 15 Nov 2026; branch `design/hub-preview`):**
   - **Hero lede:** "Monitoring tools built from publicly available information, from the seabed to orbit. Each reads
     its own layer against its own baseline; COP lays the layers over one another to show where more than one is
