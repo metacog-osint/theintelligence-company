@@ -29,9 +29,16 @@ export const JOBS = [
   // Headwind every six hours (13 Nov 2026): its sources change daily at most. Private repo: 4 one-job runs a day.
   // Its own cron (every 6 h) is the fallback.
   { repo: "metacog-osint/headwind", workflow: "update.yml", ref: "main", minutes: [50], hours: [3, 9, 15, 21] },
-  // Orbit every six hours (13 Nov 2026), the first about 35 minutes after GCAT republishes (about 00:20 UTC). Private
-  // repo: 4 one-job runs a day. Its own cron (:41 every 6 h) is the fallback.
+  // Orbit every six hours (13 Nov 2026). GCAT republishes about once a day at no fixed time (headers seen 00:21 and
+  // 10:18 UTC), so a run reads an update within six hours. Its own cron (:41 every 6 h) is the fallback.
   { repo: "metacog-osint/orbit", workflow: "update.yml", ref: "main", minutes: [55], hours: [0, 6, 12, 18] },
+  // Orbit's launch ledger every hour (16 Nov 2026, Tom's "yes, build it"): one Launch Library 2 pull of 14 launches
+  // (free limit 15 requests an hour), published on Orbit's public release `ledger`. :45 every hour but Blackout's
+  // (01, 05, 09, 13, 17, 21 UTC), where it starts at :55. Public repo, so its minutes are free. Its own cron is the
+  // fallback.
+  { repo: "metacog-osint/orbit", workflow: "ledger.yml", ref: "main", minutes: [45],
+    hours: [0, 2, 3, 4, 6, 7, 8, 10, 11, 12, 14, 15, 16, 18, 19, 20, 22, 23] },
+  { repo: "metacog-osint/orbit", workflow: "ledger.yml", ref: "main", minutes: [55], hours: [1, 5, 9, 13, 17, 21] },
   // Launch every six hours (14 Nov 2026), 20 minutes after Orbit starts, since it reads Orbit's published snapshot.
   // Private repo: 4 short one-job runs a day. Its own cron (:11 every 6 h) is the fallback.
   { repo: "metacog-osint/launch", workflow: "update.yml", ref: "main", minutes: [15], hours: [1, 7, 13, 19] },

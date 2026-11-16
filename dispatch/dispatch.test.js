@@ -85,6 +85,17 @@ test("Orbit runs every six hours, at :55 past 00, 06, 12 and 18 UTC", () => {
   assert.deepEqual(due(JOBS, at(55, 7)).map((j) => j.repo), []);
 });
 
+test("Orbit's launch ledger starts once every UTC hour, at :45, or :55 in Blackout's hours", () => {
+  const lg = JOBS.filter((j) => j.repo === "metacog-osint/orbit" && j.workflow === "ledger.yml");
+  for (let h = 0; h < 24; h++) {
+    const starts = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55].filter((m) =>
+      due(lg, at(m, h)).length > 0);
+    assert.deepEqual(starts, [1, 5, 9, 13, 17, 21].includes(h) ? [55] : [45], `hour ${h}`);
+  }
+  assert.ok(lg.every((j) => j.ref === "main"));
+  assert.deepEqual(due(JOBS, at(45, 3)).map((j) => j.workflow), ["ledger.yml"]);
+});
+
 test("no two jobs ever start in the same 5-minute slot", () => {
   const seen = new Set();
   for (const j of JOBS) {
