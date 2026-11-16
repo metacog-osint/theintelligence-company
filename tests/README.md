@@ -9,6 +9,8 @@ Checks for the hub site (`../site`), the house bar every program site carries, a
 | `serve.test.js` | `serve.py` sends `firebase.json`'s headers, serves `404.html` for missing pages, and accepts many connections at once (a backlog of 5 made Windows refuse a browser's sixth) | Node, Python |
 | `browser.test.js` | The home page in Chromium with sample feeds: Latest lines, "Updated … ago", "running late", fallbacks when feeds fail, the guide, keyboard, phone layout, the drawing's labels (no overlaps, inside their plates, 9 px at 1440×900), the 404 page | Playwright |
 | `nav.test.js` | The house bar on a stand-in product page: menu, "You are here", keyboard, phone | Playwright |
+| `related.test.js` | "Elsewhere today" (`tic-related.js`): the pick rules on a fixture index in Node (48 hours, day and month precision, own program, stale, expired, individuals, order); the card on a stand-in program page under a strict CSP: one per program, labels, links, one read without cookies, a failed read stays hidden, no read until the card nears the screen; axe light and dark | Node, Playwright, axe |
+| `tabs.test.js` | The sections row (`tic-tabs.js`): one group at a time on phones, every group on desktop, deep links into a group, keyboard, resize, no script; axe light and dark from the top of the page | Playwright, axe |
 | `a11y.test.js` | axe (WCAG 2.2 AA and best practices) in light and dark, desktop and phone; contrast of the drawing's labels | Playwright, axe |
 | `feeds.test.js` | `check-live.js` itself, against a stand-in server | Node |
 | `veterans.test.js` | The Veterans Day planner's house rules and data: no inline code, CSP, page text (privacy, sources), deals vs stores vs drive tables | Node only |

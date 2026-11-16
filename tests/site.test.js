@@ -13,7 +13,8 @@ const OE_JS = read("site/oe/oe.js");
 const NAV = ticNav();
 const OE = oe();
 const HTML_PAGES = { "index.html": INDEX, "404.html": NOT_FOUND };
-const SCRIPTS = Object.fromEntries(["site.js", "oe/oe.js", "shared/tic-nav.js", "shared/tic-time.js"]
+const SCRIPTS = Object.fromEntries(["site.js", "oe/oe.js", "shared/tic-nav.js", "shared/tic-time.js",
+  "shared/tic-related.js", "shared/tic-tabs.js"]
   .map((f) => [f, read("site/" + f)]));
 const byHref = (a, b) => a.href.localeCompare(b.href);
 const STATUS_WORDS = { live: "Live", beta: "Beta", invite: "Invite only" };
@@ -278,7 +279,8 @@ function localRefs() {
   for (const [page, html] of Object.entries(HTML_PAGES)) {
     for (const m of html.matchAll(/\s(?:href|src)="([^"]*)"/g)) add(page, m[1]);
   }
-  for (const css of ["style.css", "oe/oe.css", "shared/tic-time.css", "shared/tic-nav.css"]) {
+  for (const css of ["style.css", "oe/oe.css", "shared/tic-time.css", "shared/tic-nav.css", "shared/tic-related.css",
+    "shared/tic-tabs.css"]) {
     for (const m of read("site/" + css).matchAll(/url\(\s*["']?([^"')]+)["']?\s*\)/g)) add(css, m[1]);
   }
   for (const icon of JSON.parse(read("site/site.webmanifest")).icons) add("site.webmanifest", icon.src);
@@ -330,7 +332,14 @@ test("the shared files' version lines match the versions they report", () => {
   const nav = SCRIPTS["shared/tic-nav.js"], time = SCRIPTS["shared/tic-time.js"];
   assert.equal(/tic-nav\.js v([\d.]+)/.exec(nav)[1], NAV.version, "tic-nav.js header vs TicNav.version");
   assert.equal(/tic-time\.js v([\d.]+)/.exec(time)[1], /TicTime = \{ version: "([\d.]+)"/.exec(time)[1], "tic-time.js header vs TicTime.version");
-  for (const css of ["shared/tic-nav.css", "shared/tic-time.css"]) assert.match(read("site/" + css), /^\/\*! tic-[a-z]+\.css v\d+\.\d+/, css);
+  const related = SCRIPTS["shared/tic-related.js"], tabs = SCRIPTS["shared/tic-tabs.js"];
+  assert.equal(/tic-related\.js v([\d.]+)/.exec(related)[1], /TicRelated = \{ version: "([\d.]+)"/.exec(related)[1],
+    "tic-related.js header vs TicRelated.version");
+  assert.equal(/tic-tabs\.js v([\d.]+)/.exec(tabs)[1], /TicTabs = \{ version: "([\d.]+)"/.exec(tabs)[1],
+    "tic-tabs.js header vs TicTabs.version");
+  for (const css of ["shared/tic-nav.css", "shared/tic-time.css", "shared/tic-related.css", "shared/tic-tabs.css"]) {
+    assert.match(read("site/" + css), /^\/\*! tic-[a-z]+\.css v\d+\.\d+/, css);
+  }
 });
 
 test("the home page is public and canonical on the apex domain; the 404 page is not indexed", () => {
