@@ -35,6 +35,45 @@ test("each product list status reads the same as its class (Live Â· Open, Beta Â
   }
 });
 
+test("the product list runs COP first, then programs by home layer from Systems down, then the other tools", () => {
+  const order = productList(INDEX).map((p) => p.a);
+  const layerOf = (a) => (/data-product="([a-z0-9]+)"/.exec(a) || [])[1];
+  const ids = [...INDEX.matchAll(/<li data-product="([a-z0-9]+)" data-layer="([a-z]+)"/g)].map((m) => ({ id: m[1], layer: m[2] }));
+  assert.ok(ids.length > 0, "the product list's items carry data-product and data-layer");
+  assert.equal(ids[0].id, "cop", "COP comes first");
+  assert.equal(ids[0].layer, "all");
+  const rank = (l) => (OE.LK.indexOf(l) < 0 ? OE.LK.length : OE.LK.indexOf(l));
+  const ranks = ids.slice(1).map((x) => rank(x.layer));
+  assert.deepEqual(ranks, [...ranks].sort((a, b) => a - b), "programs follow the drawing's layer order");
+  for (const x of ids.slice(1)) {
+    const p = OE.PROGRAMS.find((q) => q.id === x.id);
+    if (p && p.home) assert.equal(x.layer, p.home, `${x.id}'s data-layer is its home layer on the drawing`);
+  }
+  assert.ok(order.length >= ids.length && layerOf);
+});
+
+test("each name on the sources wall links to a Sources page the footer credits, and names that program", () => {
+  const footer = /<footer[\s\S]*?<\/footer>/.exec(INDEX)[0];
+  const credited = new Set([...footer.matchAll(/href="(https:\/\/[^"]+)"/g)].map((m) => m[1]));
+  const wall = /<div class="wall" id="wall">([\s\S]*?)<\/div>\s*<div class="wrap wall-ctl">/.exec(INDEX);
+  assert.ok(wall, "the sources wall is on the page");
+  const items = [...wall[1].matchAll(/<a href="([^"]+)"[^>]*>([^<]+)<span class="sw-p">([^<]+)<\/span>/g)];
+  assert.ok(items.length > 0);
+  const names = new Set();
+  for (const [, href, name, prog] of items) {
+    assert.ok(credited.has(href), `${name.trim()} links to ${href}, which the footer doesn't credit as a Sources page`);
+    const p = NAV.programs.find((q) => q.name === prog);
+    assert.ok(p && new URL(href).origin === new URL(p.href).origin, `${name.trim()}: ${prog}'s link goes to ${prog}'s own site`);
+    assert.ok(!names.has(name.trim() + prog), `${name.trim()} (${prog}) is listed once`);
+    names.add(name.trim() + prog);
+  }
+});
+
+test("How we work names no time-zone feature (the Time button already says the zone; Tom, 31 Oct and 15 Nov 2026)", () => {
+  const std = /<section id="standards"[\s\S]*?<\/section>/.exec(INDEX)[0];
+  assert.ok(!/time zone|your clock/i.test(std));
+});
+
 test("404.html's product list is the home page's, link for link and in the same order", () => {
   const home = productList(INDEX).map((p) => p.a);
   const nf = productList(NOT_FOUND).map((p) => p.a);

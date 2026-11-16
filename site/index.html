@@ -76,14 +76,14 @@
 
 <main id="main">
   <section class="wrap hero">
+    <p class="kicker">Conflict · Influence · Cyber · Outages · GPS · Space · Hazards · Economics · Shipping</p>
     <div>
-      <p class="kicker">Conflict · Cyber · GPS · Space · Hazards · Economics · Shipping</p>
       <h1>Open-source intelligence, built in the Red River Valley.</h1>
     </div>
     <div class="hero-side">
-      <p class="lede">Monitoring tools built from publicly available information, from the seabed to orbit. Each one
-        reads its own layer against its own baseline, and every product credits its sources, dates its claims and
-        publishes its methods.</p>
+      <p class="lede">Monitoring tools built from publicly available information, from the seabed to orbit. Each reads
+        its own layer against its own baseline; COP lays the layers over one another to show where more than one is
+        moving. Every product credits its sources, dates its claims and publishes its methods.</p>
       <p class="actions">
         <a class="btn" href="#layers">Explore the layers</a>
         <a class="btn btn-line" href="#services">Work with us</a>
@@ -383,6 +383,24 @@
             <li><i class="lg-reach" aria-hidden="true"></i>Reach of the selected program</li>
           </ul>
         </figure>
+        <section class="oe-steps" id="oe-steps" aria-labelledby="oe-how-h">
+          <h3 id="oe-how-h" class="oe-eyebrow">How it works</h3>
+          <ol>
+            <li class="oe-step" data-step="collect"><p class="oe-k">1 · Collect</p><h4>One pipeline per program</h4>
+              <p>Each program reads public, licence-checked feeds on its own schedule, and reaches every layer its
+                sources touch.</p></li>
+            <li class="oe-step" data-step="compare"><p class="oe-k">2 · Compare</p><h4>Each layer against its own baseline</h4>
+              <p>Unusual means unusual for that place and that series, not a global threshold. A tag glows when
+                today's snapshot holds something unusual from that program.</p></li>
+            <li class="oe-step" data-step="combine"><p class="oe-k">3 · Combine</p><h4>Where the layers meet</h4>
+              <p>COP lays every layer over the same ground. A region or topic that turns up in more than one layer may
+                have more to the story. COP already reads each internet outage against hazards, travel notices and
+                press attention in the same country; scoring that convergence is in development.</p></li>
+            <li class="oe-step" data-step="check"><p class="oe-k">4 · Check</p><h4>Every call scored in public</h4>
+              <p>Verdict logs forecasts and warnings with the rule that will settle them and scores them when they do,
+                so a call drawn from the layers can be checked against what happened.</p></li>
+          </ol>
+        </section>
       </div>
       <p class="oe-src">Drawing &copy; 2026 Thomas Brummer, adapted from JP 2-01.3, <cite>Joint Intelligence Preparation of the Operational
         Environment</cite> (21 May 2014), Figure I-1, &ldquo;Holistic View of the Operational Environment&rdquo;, with
@@ -396,14 +414,16 @@
   <section id="today" class="today" aria-labelledby="today-h">
     <div class="wrap">
       <p class="kicker">Today</p>
-      <h2 id="today-h" class="section-h">Every program, checked by COP.</h2>
+      <h2 id="today-h" class="section-h">Every layer, one picture.</h2>
       <dl class="stats" id="stats" hidden>
         <div class="stat"><dt>Program feeds up to date</dt><dd id="st-fresh">&nbsp;</dd></div>
         <div class="stat"><dt>Findings placed on the map</dt><dd id="st-placed">&nbsp;</dd></div>
         <div class="stat"><dt>Unusual against their own baseline</dt><dd id="st-unusual">&nbsp;</dd></div>
         <div class="stat"><dt>Programs with something unusual</dt><dd id="st-progs">&nbsp;</dd></div>
+        <div class="stat" id="st-verdict-box" hidden><dt>Forecasts on Verdict's public ledger</dt><dd id="st-verdict">&nbsp;</dd></div>
       </dl>
-      <p class="stats-note" id="stats-note" hidden>From COP's check of every program's feed, <time id="st-when"></time>. Unusual means unusual for that program's own record, not a warning.
+      <p class="stats-note" id="stats-note" hidden>From COP's check of every program's feed, <time id="st-when"></time>. Unusual means unusual for that program's own record, not a warning.<span id="st-verdict-note" hidden>
+        Forecasts are Verdict's, each scored when it settles.</span>
         <a href="https://cop.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab">Open COP <span aria-hidden="true">↗</span></a></p>
       <div class="latest">
         <h3 id="latest-h" class="label">Latest from the products</h3>
@@ -424,7 +444,7 @@
         </article>
         <article class="latest-item" id="latest-cop">
           <p class="latest-meta">COP</p>
-          <p class="latest-text"><b class="latest-topic">All layers:</b> <span class="latest-body">Every program’s latest findings on one map, with today’s top five and each feed’s health.</span></p>
+          <p class="latest-text"><b class="latest-topic">All layers:</b> <span class="latest-body">Every layer’s findings on one map, so a place or topic that turns up in more than one layer stands out.</span></p>
           <a class="latest-link" href="https://cop.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab">Open COP <span aria-hidden="true">↗</span></a>
         </article>
       </div>
@@ -469,7 +489,7 @@
 
       <h3 class="label list-h">Every product, by its home layer</h3>
       <ul class="plist">
-        <li data-product="cop" data-layer="all" data-layer-name="Every layer"><a href="https://cop.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab"><span class="p-name">COP</span><span class="p-what">The common operational picture: every program's latest findings on one map, with today's top five, what else is unusual, and each feed's health.</span><span class="p-st st-beta">Beta · Open <span aria-hidden="true">↗</span></span></a></li>
+        <li data-product="cop" data-layer="all" data-layer-name="Every layer"><a href="https://cop.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab"><span class="p-name">COP</span><span class="p-what">The common operational picture: every layer's findings on one map, so a place or topic that turns up in more than one layer stands out. Outages are already read against hazards, notices and press attention in the same country; convergence scoring, checked by Verdict, is in development.</span><span class="p-st st-beta">Beta · Open <span aria-hidden="true">↗</span></span></a></li>
         <li data-product="watchfloor" data-layer="systems" data-layer-name="Systems"><a href="https://watchfloor.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab"><span class="p-name">Watchfloor</span><span class="p-what">A daily warning picture for every conflict zone and strategic topic on its watch list, built from the world's news.</span><span class="p-st st-beta">Beta · Open <span aria-hidden="true">↗</span></span></a></li>
         <li data-product="headwind" data-layer="systems" data-layer-name="Systems"><a href="https://headwind.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab"><span class="p-name">Headwind</span><span class="p-what">Currencies, energy and food prices against their own normal range, and sanctions-list changes.</span><span class="p-st st-beta">Beta · Open <span aria-hidden="true">↗</span></span></a></li>
         <li data-product="context" data-layer="human" data-layer-name="Human"><a href="https://context.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab"><span class="p-name">Context</span><span class="p-what">How the world's press is covering each watched conflict zone and strategic topic, refreshed twice a day. Watchfloor's predecessor.</span><span class="p-st st-live">Live · Open <span aria-hidden="true">↗</span></span></a></li>
@@ -553,6 +573,8 @@
       <h2 id="services-h" class="section-h">The same methods, applied to your question.</h2>
       <p class="services-lede">Everything here is built from publicly available information, and so is the work we take
         on. The pipelines and standards behind the products can be put to work on what you need to watch.</p>
+      <details class="fold">
+        <summary>Custom monitoring, briefings, analyst training, tools and consulting</summary>
       <ul class="offer">
         <li><h3>Custom monitoring</h3><p>A watch on the region, topic, network or supply chain you care about, built on the
           pipelines behind our products, with an alert when it moves off its usual level.</p></li>
@@ -563,6 +585,7 @@
         <li><h3>Tools and consulting</h3><p>Help designing or building monitoring tools and analytic standards, including
           AI-assisted analysis that keeps its sources.</p></li>
       </ul>
+      </details>
       <div class="services-cta">
         <a class="btn" href="mailto:support@theintelligence.company?subject=Working%20with%20The%20Intelligence%20Company">Tell us what you need</a>
         <p>Or write to support@theintelligence.company. Publicly available information only, for every client.</p>
@@ -573,18 +596,23 @@
   <section id="standards" class="band" aria-labelledby="standards-h">
     <div class="wrap">
       <h2 id="standards-h" class="section-h">How we work</h2>
+      <details class="fold">
+        <summary>Publicly available information only, every source credited, methods in the open</summary>
       <ol class="standards">
         <li><span class="num">01</span><h3>Publicly available information only</h3><p>No classified or proprietary material, ever.</p></li>
         <li><span class="num">02</span><h3>Every source credited</h3><p>Each product lists its sources and their licences.</p></li>
         <li><span class="num">03</span><h3>Methods in the open</h3><p>How each measure works, and how well it has been checked.</p></li>
-        <li><span class="num">04</span><h3>Your clock</h3><p>Times show in your own time zone; use the Time button to choose another, Zulu included, and a 12- or 24-hour clock.</p></li>
       </ol>
+      </details>
     </div>
   </section>
 
   <section id="about" class="wrap about" aria-labelledby="about-h">
     <p class="kicker">About</p>
     <h2 id="about-h" class="section-h">Professional analytic standards, applied to public information.</h2>
+    <details class="fold">
+      <summary>Run by Thomas Brummer: Air National Guard for 25 years, from F-16 crew chief and weather forecaster to
+        signals intelligence analyst</summary>
     <div class="about-body">
     <figure class="about-photo">
       <img src="img/thomas-brummer.webp" width="480" height="480" loading="lazy" alt="Thomas Brummer">
@@ -602,6 +630,7 @@
       <p><a class="more" href="https://www.linkedin.com/in/tom-brummer/" target="_blank" rel="noopener" aria-describedby="newtab">Thomas Brummer on LinkedIn <span aria-hidden="true">↗</span></a></p>
     </div>
     </div>
+    </details>
   </section>
 
   <section id="contact" class="contact" aria-labelledby="contact-h">
@@ -617,7 +646,7 @@
 
 <footer class="foot">
   <div class="wrap foot-inner">
-    <p>&copy; 2026 Thomas Brummer · The Intelligence Company · Fargo-Moorhead, ND/MN · Updated <time datetime="2026-11-13T03:00:00Z" data-tic="date" data-tic-year>13 Nov 2026</time></p>
+    <p>&copy; 2026 Thomas Brummer · The Intelligence Company · Fargo-Moorhead, ND/MN · Updated <time datetime="2026-11-15T23:00:00Z" data-tic="date" data-tic-year>15 Nov 2026</time></p>
     <p>Data sources and licences, credited by each product:
       <a href="https://noisefloor.theintelligence.company/sources" target="_blank" rel="noopener" aria-describedby="newtab">Noisefloor&nbsp;<span aria-hidden="true">↗</span></a> ·
       <a href="https://watchfloor.theintelligence.company/#/sources" target="_blank" rel="noopener" aria-describedby="newtab">Watchfloor&nbsp;<span aria-hidden="true">↗</span></a> ·

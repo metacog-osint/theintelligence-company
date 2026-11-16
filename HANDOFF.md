@@ -5,6 +5,14 @@ approved. Every finished dated section up to 13 Nov 2026 (Veterans Day planner, 
 tests, dispatch, the Vigil summary feed) is in `HISTORY.md`, moved verbatim on 14 Nov 2026. What each program is
 and how the house bar rolls out are in `CLAUDE.md`.
 
+## Hub finished on the branch (15 Nov 2026 evening; not committed until Tom's yes)
+- Tom approved the wording (top line with Influence and Outages, the lede naming COP's role, COP's convergence line,
+  "Every layer, one picture.") and asked that COP not be described as checking the programs and that the
+  time-zone selling line go. Built in the worktree: sticky "How it works" steps lighting the drawing, the three
+  folds, the Verdict tile (connect-src gains `https://metacog-osint.github.io`), footer date and `sitemap.xml`
+  15 Nov 2026, 404 product list in step, rules in `CLAUDE.md` ("Hub design"), new tests. Phone page 8,231 px.
+- Still the old COP line: `tic-nav.js` (house bar v2) and Noisefloor's "Your clock" line.
+
 ## Design review and hub preview (15 Nov 2026, about 4:00 PM CST)
 - **Review** (Tom: "review ... layout, flow, connectivity, and user experience in all sites", with ideas from the
   Squarespace homepage): published as a private page, https://claude.ai/artifact/HbqH9AaUvGSWiu1JXfW2V4. Source,

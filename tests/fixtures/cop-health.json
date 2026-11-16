@@ -1,11 +1,11 @@
 {
   "generated_at": "2026-11-07T17:30:00Z",
   "programs": [
-    { "id": "noisefloor", "state": "fresh", "placed": 100, "fresh_hours": 30, "data_as_of": "2026-11-07T16:00:00Z" },
+    { "id": "noisefloor", "state": "fresh", "placed": 100, "anomalies": 4, "fresh_hours": 30, "data_as_of": "2026-11-07T16:00:00Z" },
     { "id": "watchfloor", "state": "fresh", "placed": 200, "fresh_hours": 30, "data_as_of": "2026-11-07T15:00:00Z" },
     { "id": "context", "state": "fresh", "placed": 0, "fresh_hours": 14, "data_as_of": "2026-11-07T13:00:00Z" },
     { "id": "vigil", "state": "fresh", "placed": 50, "fresh_hours": 6, "data_as_of": "2026-11-07T16:00:00Z" },
-    { "id": "elements", "state": "late", "placed": 1234, "fresh_hours": 2, "data_as_of": "2026-11-07T13:00:00Z" },
+    { "id": "elements", "state": "late", "placed": 1234, "anomalies": 1, "fresh_hours": 2, "data_as_of": "2026-11-07T13:00:00Z" },
     { "id": "cordon", "state": "fresh", "placed": 10, "fresh_hours": 2, "data_as_of": "2026-11-07T17:40:00Z" }
   ]
 }

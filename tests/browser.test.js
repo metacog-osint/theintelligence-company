@@ -246,7 +246,7 @@ describe("How the programs fit (the drawing and its guide)", () => {
       assert.equal(await textOf(t.page, "#oe-panel h3"), "Elements");
       await t.page.locator("#oe-panel [data-how]").focus(); // "Back to the guide" (the × is for phones)
       await t.page.keyboard.press("Enter");
-      assert.equal(await textOf(t.page, "#oe-panel .oe-k"), "How it works");
+      assert.equal(await textOf(t.page, "#oe-panel .oe-k"), "How to read");
       clean(t);
     } finally { await t.close(); }
   });
@@ -276,6 +276,92 @@ describe("How the programs fit (the drawing and its guide)", () => {
       assert.equal(await sideways(t.page), 0, "no sideways scroll with the sheet open");
       await t.page.locator("#oe-panel [data-close]").tap();
       assert.equal(await t.page.locator("#layers.sheet").count(), 0);
+      clean(t);
+    } finally { await t.close(); }
+  });
+});
+
+describe("the hub design (15 Nov 2026)", () => {
+  test("a program's tag glows when COP's snapshot holds something unusual from it, and says how many", async () => {
+    const t = await open();
+    try {
+      const hot = await t.page.$$eval("#oe-svg g.chip.hot", (gs) => gs.map((g) => g.dataset.p).sort());
+      assert.deepEqual(hot, ["elements", "noisefloor"]);
+      assert.match(await t.page.locator('#oe-svg g.chip[data-p="noisefloor"]').getAttribute("aria-label"), /4 unusual findings today$/);
+      assert.match(await t.page.locator('#oe-svg g.chip[data-p="elements"]').getAttribute("aria-label"), /1 unusual finding today$/);
+      clean(t);
+    } finally { await t.close(); }
+  });
+
+  test("the Today band shows COP's numbers and Verdict's ledger, from the feeds", async () => {
+    const t = await open();
+    try {
+      await t.page.locator("#st-verdict-box").waitFor();
+      await t.page.waitForTimeout(1200); // the numbers count up for 900 ms
+      assert.equal(await textOf(t.page, "#st-fresh"), "5of 6");
+      assert.equal(await textOf(t.page, "#st-placed"), "1,594");
+      assert.equal(await textOf(t.page, "#st-unusual"), "5");
+      assert.equal(await textOf(t.page, "#st-progs"), "2of 6");
+      assert.equal(await textOf(t.page, "#st-verdict"), "73 settled");
+      assert.ok(await t.page.locator("#st-verdict-note").isVisible());
+      clean(t);
+    } finally { await t.close(); }
+  });
+
+  test("without COP the Today band stays hidden; without Verdict only its tile is missing", async () => {
+    let t = await open("/", { feeds: { COP_HEALTH: { abort: true } } });
+    try {
+      await t.page.waitForTimeout(500);
+      assert.ok(await t.page.locator("#stats").isHidden());
+      assert.ok(await t.page.locator("#st-verdict-box").isHidden());
+    } finally { await t.close(); }
+    t = await open("/", { feeds: { VERDICT_SCORES: { status: 404, body: "" } } });
+    try {
+      await t.page.locator("#stats").waitFor();
+      await t.page.waitForTimeout(500);
+      assert.ok(await t.page.locator("#st-verdict-box").isHidden());
+      assert.ok(await t.page.locator("#st-verdict-note").isHidden());
+    } finally { await t.close(); }
+  });
+
+  test("How it works: the drawing stays in view while the steps scroll past, and each step lights the drawing", async () => {
+    const t = await open("/", { viewport: { width: 1440, height: 900 } });
+    try {
+      await t.page.locator("#oe-svg g.chip.hot").first().waitFor({ state: "attached" });
+      const at = async (k) => {
+        // As a reader scrolls: the step's top a little above the middle of the screen.
+        await t.page.$eval(`.oe-step[data-step="${k}"]`, (li) => window.scrollBy(0, li.getBoundingClientRect().top - innerHeight * 0.4));
+        await t.page.waitForFunction((k) => document.querySelector(`.oe-step[data-step="${k}"]`).classList.contains("on"), k);
+        return t.page.evaluate(() => ({
+          figTop: document.getElementById("oe-fig").getBoundingClientRect().top,
+          lit: new Set([...document.querySelectorAll("#oe-svg .pl.on")].flatMap((e) => e.dataset.layer.split(" "))).size,
+          chips: [...document.querySelectorAll("#oe-svg g.chip.on")].map((g) => g.dataset.p).sort(),
+        }));
+      };
+      const compare = await at("compare");
+      assert.deepEqual(compare.chips, ["elements", "noisefloor"], "Compare lights the programs with something unusual");
+      const combine = await at("combine");
+      assert.equal(combine.lit, OE.LAYERS.length, "Combine lights every layer");
+      assert.ok(combine.chips.includes("cop"));
+      const check = await at("check");
+      assert.deepEqual(check.chips, ["cop", "verdict"]);
+      for (const s of [compare, combine, check]) assert.ok(s.figTop >= 0 && s.figTop < 120, `the drawing stays pinned (top ${s.figTop})`);
+      clean(t);
+    } finally { await t.close(); }
+  });
+
+  test("Work with us, How we work and About fold behind a summary line, and open with the keyboard", async () => {
+    const t = await open();
+    try {
+      for (const id of ["services", "standards", "about"]) {
+        const d = t.page.locator(`#${id} details.fold`);
+        assert.equal(await d.count(), 1, `#${id} has one fold`);
+        assert.equal(await d.getAttribute("open"), null, `#${id} starts folded`);
+        await t.page.locator(`#${id} details.fold > summary`).focus();
+        await t.page.keyboard.press("Enter");
+        assert.notEqual(await d.getAttribute("open"), null, `#${id} opens with Enter`);
+      }
+      assert.ok(await t.page.locator("#services .services-cta .btn").isVisible(), "the mail button stays outside the fold");
       clean(t);
     } finally { await t.close(); }
   });

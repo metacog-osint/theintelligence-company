@@ -456,14 +456,51 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   builds its "Open" links the same way; keep both in step when adding a product.
   Links that open a new tab end in **↗**; arrows on in-page controls stay →.
 - **No clock in the top bar** since 31 Oct 2026: the Time button already names the viewer's zone, and Tom found the
-  zone repeated (clock, button, and "Central time" in the contact block, all removed except the button).
+  zone repeated (clock, button, and "Central time" in the contact block, all removed except the button). **Don't sell
+  the time settings in copy either** (Tom, 15 Nov 2026: drop the "your timezone" nonsense): How we work's fourth item,
+  "Your clock", is gone, and a test keeps time-zone wording out of How we work. Noisefloor's page carries the same
+  "Your clock" line; it goes when Noisefloor is next touched.
+- **Hub design (Tom's yes on the preview, 15 Nov 2026; branch `design/hub-preview`):**
+  - **Hero lede:** "Monitoring tools built from publicly available information, from the seabed to orbit. Each reads
+    its own layer against its own baseline; COP lays the layers over one another to show where more than one is
+    moving. Every product credits its sources, dates its claims and publishes its methods." First button "Explore the
+    layers" (`#layers`).
+  - **What COP is** (Tom, 15 Nov 2026: COP doesn't exist to check other programs; it shows every layer together to
+    find areas of potential convergence, a region or topic with more than one layer reporting, and Verdict is how
+    that gets checked). Its line everywhere on the hub: "The common operational picture: every layer's findings on one
+    map, so a place or topic that turns up in more than one layer stands out. Outages are already read against
+    hazards, notices and press attention in the same country; convergence scoring, checked by Verdict, is in
+    development." Say convergence scoring is in development until COP v1 ships it (COP's `CLAUDE.md`, "Not in v0";
+    its convergence flags need a mosaic-effect review first). Never describe COP as checking or verifying the
+    programs. `tic-nav.js` still carries the old line until house bar v2.
+  - **Glow:** a program's tag on the drawing glows (`hot`) when COP health's `anomalies` for it is above 0; its
+    aria-label and panel give the count. A drop-shadow only, so tag geometry is unchanged.
+  - **Today band** (`#today`, after the drawing): "Every layer, one picture." Four numbers from COP health (feeds
+    fresh of all, `placed` summed, `anomalies` summed, programs with anomalies), hidden until they load, counting up
+    unless reduced motion. A fifth tile, Verdict's ledger (`registered`, with `resolved` as "N settled"), from
+    `https://metacog-osint.github.io/verdict/data/scores.json` (open CORS; in `connect-src`); it shows only with the
+    COP numbers and only when Verdict answers. No Brier score on the hub: a handful of settled forecasts says little.
+  - **How it works** (`#oe-steps`): four steps (Collect, Compare, Combine, Check) scroll beside the drawing, which is
+    already sticky; the step at the middle of the screen lights the drawing (`stepLights` in `oe.js`: Collect every
+    out program's tag, Compare the tags that glow and their layers, Combine every layer and COP, Check COP and
+    Verdict). A pinned selection wins. Phones show the steps as a list after the drawing, unlit. The panel's
+    default is now "How to read".
+  - **Folds:** Work with us (the offer list; the mail button stays out), How we work and About open from a summary
+    line (`details.fold`). The content stays in the page.
+  - **Product lists in layer order:** COP first (full width), then programs by home layer from Systems down, then
+    PropertyCast, Title 10 and Listening Post. Each `li` carries `data-layer` (its home layer on the drawing) and
+    `data-layer-name`, coloured by the plates' `--l-*` tokens. `404.html` matches. A test checks the order.
+  - **Sources wall** (`#sources`): publishers from each program's `attribution` in COP health, each linking to that
+    program's Sources page as the footer credits it. A test checks every link is a footer Sources link on that
+    program's own site. Add a publisher when a program adds a source.
 - **Seven improvements, 31 Oct 2026 (Tom asked for all seven):**
   - **Link preview:** Open Graph and Twitter card tags in `<head>`, image `site/img/og-card.png` (1200×630). Its source
     is `tools/og-card.html` (site fonts and colours); `site/img/logo-512.png` comes from `tools/logo.html`. Neither
     source is deployed; how to regenerate both is in `RUNBOOKS.md`. LinkedIn caches previews; its Post Inspector
     refreshes one.
-  - **Hero top line:** "Conflict · GPS interference · Cyber threats · Forecasting" since 31 Oct 2026. Keep it to one
-    line at 1280 px.
+  - **Hero top line:** "Conflict · Influence · Cyber · Outages · GPS · Space · Hazards · Economics · Shipping" since
+    15 Nov 2026 (Tom's pick; it was "Conflict · GPS interference · Cyber threats · Forecasting" from 31 Oct). It spans
+    both hero columns (`.hero .kicker`, `grid-column: 1 / -1`). Keep it to one line at 1280 px (a test checks).
   - **Say what each line measures** (Tom, 31 Oct 2026: readers must know Noisefloor is about GPS interference, and
     the same goes for every summary). Each "Latest" item starts with a bold topic (`.latest-topic`: "GPS
     interference:", "Conflict warning:", "Cyber threats:"), and `setItem` fills only `.latest-body`, so the topic

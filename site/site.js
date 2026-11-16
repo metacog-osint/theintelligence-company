@@ -17,6 +17,7 @@
   var LAUNCH_FEED = "https://launch.theintelligence.company/data/feed.geojson"; // Cloudflare Pages too; read whole
   var UNDERTOW_FEED = "https://undertow.theintelligence.company/data/feed.geojson"; // Cloudflare Pages too; read whole
   var WAKE_FEED = "https://wake.theintelligence.company/data/feed.geojson"; // Cloudflare Pages too; read whole
+  var VERDICT_SCORES = "https://metacog-osint.github.io/verdict/data/scores.json"; // Verdict's ledger counts (GitHub Pages)
 
   // Time: the Time button (it names the viewer's zone) and every <time data-tic>.
   var holder = document.getElementById("time-settings");
@@ -163,6 +164,20 @@
       document.getElementById("stats-note").hidden = false;
     }
   }).catch(function () { /* the band stays hidden */ });
+  // Verdict's tile: forecasts registered on its ledger, and how many have settled. It shows only with the COP numbers,
+  // and only when Verdict answers; no score is shown, because a handful of settled forecasts says little.
+  Promise.all([window.ticCopHealth, getJSON(VERDICT_SCORES)]).then(function (r) {
+    var v = r[1] || {}, reg = Number(v.registered), done = Number(v.resolved);
+    var tile = document.getElementById("st-verdict-box");
+    if (!tile || !(reg >= 0) || !(done >= 0) || !((r[0] || {}).programs || []).length) return;
+    var dd = document.getElementById("st-verdict");
+    countUp(dd, reg);
+    var small = document.createElement("small");
+    small.textContent = done + " settled";
+    dd.appendChild(small);
+    tile.hidden = false;
+    document.getElementById("st-verdict-note").hidden = false;
+  }).catch(function () { /* no Verdict tile */ });
 
   // Screenshot rail: the arrow buttons scroll one screenshot at a time; swiping and scrolling work without them.
   var shots = document.getElementById("shots"), railBtns = document.getElementById("rail-btns");
