@@ -110,7 +110,7 @@
       line: "Covert influence operations as the platforms and governments that disrupted them report them: Meta's takedown networks, Google's influence-operations bulletins, OpenAI's threat reports, TikTok's reports under the EU Code of Conduct, and the EEAS's named operations. Each gives the origin the publisher assessed, the targets, and the DISARM techniques described, with a STIX 2.1 export. Operations only: no account handles, links or names of individuals." },
     { id: "temper", name: "Temper", status: "planned", home: "human", reach: ["systems", "land", "cyber"], at: [880, 506],
       line: "Unrest, displacement, public attention, press freedom and pressure on civil society." },
-    { id: "relief", name: "Relief", status: "live", home: "human", reach: ["systems", "land"], at: [800, 548], end: true,
+    { id: "relief", name: "Relief", status: "beta", home: "human", reach: ["systems", "land"], at: [800, 548], end: true,
       href: "https://relief.theintelligence.company", ask: "Where are the Red Cross and Red Crescent asking for help?",
       line: "Where the Red Cross and Red Crescent are asking for help, and where WHO is reporting outbreaks: IFRC GO appeals and WHO Disease Outbreak News, as they publish them. Measurements only." },
 
