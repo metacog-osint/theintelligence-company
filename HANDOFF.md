@@ -26,10 +26,23 @@ and how the house bar rolls out are in `CLAUDE.md`.
   hub, Title 10, Watchfloor, Context, Noisefloor, Vigil, Vis, Blackout, Headwind, Orbit, Launch, Undertow, Relief,
   Verdict, Elements and Cordon (both with `TicArea`), Wake (`wake-7qh.pages.dev`), Listening Post and COP. Not yet:
   PropertyCast (check its home page HTML after the daily publish). The only console errors were favicon 404s.
-- **Open:** Launch's privacy check (rule names only) flags the shared headers' "canonical copy: [local path]"
-  line and the name in dated attributions, in tic-time.js, tic-nav.js/.css and tic-related/tic-tabs; it doesn't
-  fail Launch's tests. A comment-only fix ("canonical copy: the hub's site/shared/<file>", attributions as dates)
-  waits on Tom's word. Remove the `*-tt14` worktrees and `hub-tictime` once PropertyCast is live.
+- **Shared headers fixed** (Tom's yes, about 10:35 AM-12:00 PM CST): Launch's privacy check flagged a local path
+  in seven `site/shared` headers and a name in three. Hub `e6bbec0` says "the hub's site/shared/<file>" and keeps
+  dates without the name; comments only, no version bump; zero hits in every shared file; deployed. Sites (one
+  commit each, every changed line a comment; tic-nav kept each site's own version, v2.0 on 15 sites and v2.1 on
+  COP and Relief, so Relief's menu entry did not spread): Watchfloor `e35582f`, Context `f56ee5f`, Title 10
+  `72806cc` (`sw.js` `t10-2026-11-16c`), Noisefloor `44e845e` (hashes rebuilt), PropertyCast `1edd4ab`, Vigil
+  `5aa6b07`, Vis `38537f0`, Blackout `f7da1e2` (and tic-related), Headwind `8ca3ff9`, Orbit `e6f7a70`, Wake
+  `cb735fc`, COP `8e13c87`, Elements `cdd24e9`, Cordon `38beffb` (and tic-tabs), Launch `98ac7b6`, Undertow
+  `63cb636`, Relief `5dfe07e`, Verdict `ce60d07`; Listening Post deployed (backup in
+  `_backups/shared-headers-2026-11-16/`). Hand deploys: Watchfloor, Title 10, Context, Listening Post.
+  Live files checked free of the path and the name on every site except Wake.
+- **Wake not deployed:** its `main` gained PR 2 (port calls, listed-IMO match) at 11:10 AM CST, which isn't live
+  and needs a data build, so deploying `main` would have shipped it. Live Wake keeps v1.4 with the old comments
+  until Wake's next deploy, which carries `cb735fc`.
+- **Not yet:** tic-nav v2.1 (Relief in the Programs menu) is only on the hub, COP and Relief; the other 15 sites
+  show v2.0 without Relief. Roll it out on Tom's word. Remove the `*-tt14` worktrees and `hub-tictime` once
+  PropertyCast is live (its daily publish, about 4:20 AM CST 17 Nov).
 
 ## Shared modules in the hub, and the move onto the new history (16 Nov 2026, about 8:20-8:40 AM CST)
 - **Main checkout moved onto the rewritten history:** `master` in `[local path]` was old
