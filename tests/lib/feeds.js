@@ -73,6 +73,11 @@ export const SHAPES = {
   UNDERTOW_FEED: (f) => [need(isTime(f.generated_at), "generated_at: the Updated time")],
   // And Wake's (Cloudflare Pages; about 100 KB; built by hand once a week).
   WAKE_FEED: (f) => [need(isTime(f.generated_at), "generated_at: the Updated time")],
+  // Verdict's ledger counts, for the Today band's Verdict tile (GitHub Pages, about 3 KB).
+  VERDICT_SCORES: (v) => [
+    need(Number.isInteger(v.registered) && v.registered >= 0, "registered: forecasts on the ledger, a whole number"),
+    need(Number.isInteger(v.resolved) && v.resolved >= 0, "resolved: forecasts settled, a whole number"),
+  ],
 };
 // The two GeoJSON feeds are read with HEAD only, for their Last-Modified header.
 export const HEAD_ONLY = ["ELEMENTS_FEED", "CORDON_FEED"];
@@ -86,7 +91,8 @@ export function problems(name, data) {
 const FILES = { NOISEFLOOR: "noisefloor-board.json", WATCHFLOOR: "watchfloor-summary.json", VIGIL: "vigil-summary.json",
   COP_HEALTH: "cop-health.json", VIS_FEED: "vis-feed.json",
   BLACKOUT_FEED: "blackout-feed.json", HEADWIND_FEED: "headwind-feed.json",
-  ORBIT_FEED: "orbit-feed.json", LAUNCH_FEED: "launch-feed.json", UNDERTOW_FEED: "undertow-feed.json", WAKE_FEED: "wake-feed.json" };
+  ORBIT_FEED: "orbit-feed.json", LAUNCH_FEED: "launch-feed.json", UNDERTOW_FEED: "undertow-feed.json", WAKE_FEED: "wake-feed.json",
+  VERDICT_SCORES: "verdict-scores.json" };
 export function sample(name) {
   return JSON.parse(readFileSync(path.join(ROOT, "tests", "fixtures", FILES[name]), "utf8"));
 }

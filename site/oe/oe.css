@@ -105,6 +105,18 @@
 
 /* figure */
 .oe-fig { margin: 0; position: sticky; top: calc(var(--tic-house-h, 0px) + 16px); } /* below the house bar (tic-nav v1.12) */
+/* How it works (15 Nov 2026): the steps scroll beside the sticky drawing and light it (oe.js stepLights). */
+.oe-copy { grid-column: 1; grid-row: 1; }
+.oe-fig { grid-column: 2; grid-row: 1 / span 2; }
+.oe-steps { grid-column: 1; grid-row: 2; margin-top: clamp(32px, 6vh, 72px); }
+.oe-steps h3 { margin: 0 0 8px; }
+.oe-steps ol { list-style: none; margin: 0; padding: 0; }
+.oe-step { min-height: 52svh; padding: 18px 0 0 18px; border-left: 2px solid var(--line); }
+.oe-step:last-child { min-height: 62svh; } /* keeps the drawing pinned while the last step lights */
+.oe-step h4 { margin: 4px 0 6px; font-size: 22px; line-height: 1.25; font-weight: 600; color: var(--ink); }
+.oe-step p { margin: 0; font-size: 15px; line-height: 1.55; color: var(--muted); max-width: 34em; }
+.oe-steps.js .oe-step { transition: border-color .3s; }
+.oe-steps.js .oe-step.on { border-left-color: var(--beta); }
 .oe-svg { display: block; width: 100%; height: auto; max-height: max(620px, calc(100svh - 80px)); touch-action: manipulation; }
 .oe-svg .pl, .oe-svg .fd, .oe-svg .nm, .oe-svg .th, .oe-svg .zone, .oe-svg .dzone, .oe-svg .chip { transition: opacity .25s ease; }
 .oe-svg .pl, .oe-svg .fd, .oe-svg .nm, .oe-svg .th, .oe-svg .zone, .oe-svg .dzone, .oe-svg .reach, .oe-svg rect:not(.zhit):not(.dhit):not(.chit):not(.pill) { pointer-events: none; }
@@ -177,6 +189,8 @@
   .oe-copy { gap: 12px; }
   .oe-guide { display: none; }
   .oe-fig { position: relative; top: 0; margin-top: 18px; }
+  .oe-steps { margin-top: 28px; }
+  .oe-step, .oe-step:last-child { min-height: 0; padding: 12px 0 14px 14px; }
   .oe-chips { display: flex; gap: 8px; overflow-x: auto; padding: 2px 0 10px; margin: 0 -4px; scrollbar-width: none; }
   .oe-chip { flex: none; display: inline-flex; align-items: center; gap: 8px; height: 36px; padding: 0 14px; border-radius: 18px; border: 1px solid var(--line); background: var(--card); font-size: 14px; font-weight: 600; cursor: pointer; }
   .oe-chip.how { font-weight: 500; color: var(--muted); }
