@@ -111,8 +111,8 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   2026: Blackout's power and routing wording, live on every site that day; v1.6, 13 Nov 2026 UTC: Blackout added; v1.5, 8 Nov: Vis) + `tic-nav.css` (v1.3 with v1.12; v1.2, 7 Nov 2026; rollout status in `HANDOFF.md`): **the house bar** on every program site (Tom: "I need a
   link back to the home page on each subsite… a dropdown menu of all programs with their primary layer area or topic
   labeled (and a more in-depth description upon mouse-over)"). It is a slim navy bar with "← The Intelligence Company"
-  and a **Programs ▾** disclosure menu. That menu lists every live program grouped "Across the layers" and "Other
-  tools", each with its layer and topic label, its status (Live, Beta or Invite only) and "You are here", and a side
+  and a **Programs ▾** disclosure menu. That menu lists every live program grouped by home layer since v2.0 (it was
+  "Across the layers" and "Other tools" until v1.13), each with its layer and topic label, its status (Live, Beta or Invite only) and "You are here", and a side
   panel with the long description on hover or focus. Phones show the label and a one-line summary instead.
   Keyboard: arrows, Home and End move; Esc closes. It is CSP-safe, with no inline styles and no HTML strings, mounts
   first in `<body>` or into `#tic-nav`, finds the current program from the host name (or `data-current`), and opens
@@ -140,6 +140,34 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
     row (Orbit's section bar, Title 10's and PropertyCast's phone tabs, COP's header text); one click restores the
     bar. `TicNav.minimized()` and `TicNav.minimize(bool)`. The hub's skip link sits above the bar (`z-index: 10001`;
     it was under it from v1.11) and the drawing's sticky `top` adds the bar's height.
+  - **v2.0 and `tic-nav.css` v2.0** (15 Nov 2026, from the suite design review; branch `design/house-bar-v2`):
+    - **Grouped by layer:** headings "Every layer" (COP), then Systems, Human, Cyberspace, Spectrum, Space, Air, Land
+      and maritime in the drawing's order, then "Other tools". Each program carries `layer` (its `home` in `oe.js`;
+      COP `all`); `PROGRAMS` runs in that order, and a test checks both against `oe.js`. Under a heading each item
+      shows only its topic ("Conflict warning"), capitalised; the side panel keeps the full label. The layer groups
+      flow down two columns on desktop (`columns`, a group never splits); one column on phones.
+    - **COP's text** is the hub's convergence line (Tom, 15 Nov 2026); a test keeps `long` equal to `oe.js`'s `line`
+      and keeps "check" and "verify" out of it, apart from "checked by Verdict".
+    - **Freshness dots** from COP's `data/health.json` (`state`: fresh, late, stale), read **once, when the menu
+      first opens**, without cookies: a filled green dot "On time", a filled amber dot "Running late", a grey ring
+      "No current data" (COP's own legend calls stale "no current data"). Never colour alone: each dot has
+      screen-reader text, late and stale also show their words after the topic, the side panel adds them, and a
+      note under the links says what the dots mean and when COP checked ("… as COP's health check found 5 h ago").
+      No dot for a program COP doesn't cover (COP itself, the tools); a failed read leaves no dots and no note.
+      **Opt-in per site:** `<script src="tic-nav.js" data-health="on">`, only after the site's CSP `connect-src`
+      allows `https://cop.theintelligence.company`; without both, nothing is fetched. COP gets it without the
+      attribute (same origin), and so does the hub, whose bar reuses `window.ticCopHealth` (no second request).
+      `data-health="off"` turns it off.
+    - **"See it on COP"** at the panel's foot, right of "How the programs fit together…": "See Vigil with the other
+      layers on COP →" on a program site, "See every layer together on COP →" on the hub and the tools, nothing on
+      COP. It opens COP with every layer showing (not a family preset): the point is the program beside the others.
+    - Tests: `nav.test.js` (headings, topics, dots and words, one read without cookies, no read without the
+      attribute, a failed read, COP itself, the COP link; the stand-in's `health` option serves the
+      `cop-health-nav.json` fixture with open CORS and adds COP to its CSP), `a11y.test.js` (axe on the menu with
+      dots, desktop and phone, light and dark), `browser.test.js` (the hub reuses its own read), `site.test.js`
+      (layer order, COP's text).
+    - **Rollout per site:** copy both files, add `https://cop.theintelligence.company` to `connect-src` where the
+      site sets one, add `data-health="on"`, and check the menu's dots and the browser console live.
   - `tic-nav.css` v1.2 (7 Nov 2026): "You are here" uses the text accent `#8F5509` on the light panel (`--tn-here`);
     the amber it used read 1.9:1, under WCAG's 4.5:1. Dark mode keeps the amber.
   - `tests/nav.test.js` and `tests/a11y.test.js` test the bar on a stand-in product page (menu, keyboard, phone, axe);
@@ -472,7 +500,7 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
     hazards, notices and press attention in the same country; convergence scoring, checked by Verdict, is in
     development." Say convergence scoring is in development until COP v1 ships it (COP's `CLAUDE.md`, "Not in v0";
     its convergence flags need a mosaic-effect review first). Never describe COP as checking or verifying the
-    programs. `tic-nav.js` still carries the old line until house bar v2.
+    programs. `tic-nav.js` carries the same line since house bar v2.0.
   - **Glow:** a program's tag on the drawing glows (`hot`) when COP health's `anomalies` for it is above 0; its
     aria-label and panel give the count. A drop-shadow only, so tag geometry is unchanged.
   - **Today band** (`#today`, after the drawing): "Every layer, one picture." Four numbers from COP health (feeds

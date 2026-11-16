@@ -5,8 +5,15 @@ approved. Every finished dated section up to 13 Nov 2026 (Veterans Day planner, 
 tests, dispatch, the Vigil summary feed) is in `HISTORY.md`, moved verbatim on 14 Nov 2026. What each program is
 and how the house bar rolls out are in `CLAUDE.md`.
 
-## Hub finished and merged (15 Nov 2026 evening; not deployed)
-- On master after Tom's yes, from `design/hub-preview` (fa74742, 40aef94, afab8b9 and this note). The branch was
+## House bar v2.0 (15 Nov 2026 night; on master after Tom's "Yes, ship to master"; hub not deployed)
+- `tic-nav.js` and `tic-nav.css` v2.0: Programs grouped by layer in the drawing's order, freshness dots from COP's
+  health check (opt-in per site with `data-health="on"` once its CSP allows COP; COP and the hub get them anyway),
+  "See it on COP" at the panel's foot, and COP's convergence line. Rules and tests in `CLAUDE.md` (house bar, v2.0).
+- Not yet: the hub deploy, and the rollout to every program site (copy both files;
+  add COP to `connect-src` and `data-health="on"` per site). Noisefloor's "Your clock" line can go in the same pass.
+
+## Hub finished and merged (15 Nov 2026 evening; deployed about 8:20 PM CST)
+- Deployed from the main checkout at 94c3db0 after 221 of 221 tests passed (Tom's yes). On master after Tom's yes, from `design/hub-preview` (fa74742, 40aef94, afab8b9 and this note). The branch was
   first rebased off the old history onto the scrubbed master (old base 25d99d3 = new 03580e6), so no old commit
   went back to GitHub; the old copy is local only, `backup/hub-preview-oldbase`. The main checkout was moved to
   the new history the same evening. Deploy needs its own yes: `firebase deploy --only hosting:hub --project
