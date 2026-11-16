@@ -219,6 +219,8 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   keyboard, resize, no script, axe light and dark run from the top of the page, since a sticky row over a link reads
   as "obscured"). Blackout and Orbit have tabs of their own.
 - Copy every shared file from a committed blob (`git show <sha>:site/shared/<file>`), with LF endings.
+- **Shared headers name no local path and no person** (16 Nov 2026; Launch's and other public repos' privacy
+  checks flag both): say "canonical copy: the hub's site/shared/<file>" and date decisions without a name.
 - **Rolling out a shared file** (all ten program sites carry both, Vis since 8 Nov 2026, and Blackout's own session
   copies them into its page). When a program is added or renamed, update
   `PROGRAMS` in `tic-nav.js` and copy it to every site. Method: a git worktree per repo, test locally, Tom's yes, push
