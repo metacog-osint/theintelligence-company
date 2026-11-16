@@ -109,6 +109,14 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
     gave identical text for 160,056 cases (24 zones including an invalid one, 3 clocks, 9 option sets, dates across
     both DST changes, bad input); 6,000 calls 4,940 ms -> 880 ms in Node on a loaded machine. Not yet copied to the
     program sites, which carry v1.3; roll out like any shared file (Tom's yes per site).
+- `site/shared/tic-area.js` (v1.1): **"My area"**, the viewer's chosen part of the world (all, the US 48, a US state,
+  or within a distance of a point), saved in this browser only; items outside it are dimmed, never hidden. API:
+  `TicArea.mountSettings(el, states, opts)` (an "Area" button; `opts.note` replaces the dialog's closing note),
+  `get()`, `contains(item)` (`item = {subdivisions, countries, geometry}`; countries without "US" put an item outside
+  any US area), `label()`, `onChange(fn)`. Its dialog uses `tic-time.css`. Built in Cordon (v1.0, 15 Nov 2026);
+  v1.1 from Elements (16 Nov 2026, `e2585e8`) is the canonical copy here, moved 16 Nov 2026 once two sites used it.
+  Carried by Elements and Cordon (`site_src/`). Tests: `site.test.js` checks its version line and CSP rules; its
+  behaviour is tested in each site.
 - `site/shared/tic-nav.js` (v1.12, 14-15 Nov 2026: the bar stays at the top of the window and minimizes to a tab,
   below; v1.11, 14 Nov 2026: Undertow added after Context, and the hub's own home page carries
   the bar (Tom: the Programs menu on theintelligence.company too) with `data-home="here"`, which shows the home

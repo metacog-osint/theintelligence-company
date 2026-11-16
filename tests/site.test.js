@@ -14,7 +14,7 @@ const NAV = ticNav();
 const OE = oe();
 const HTML_PAGES = { "index.html": INDEX, "404.html": NOT_FOUND };
 const SCRIPTS = Object.fromEntries(["site.js", "oe/oe.js", "shared/tic-nav.js", "shared/tic-time.js",
-  "shared/tic-related.js", "shared/tic-tabs.js"]
+  "shared/tic-related.js", "shared/tic-tabs.js", "shared/tic-area.js"]
   .map((f) => [f, read("site/" + f)]));
 const byHref = (a, b) => a.href.localeCompare(b.href);
 const STATUS_WORDS = { live: "Live", beta: "Beta", invite: "Invite only" };
@@ -337,6 +337,7 @@ test("the shared files' version lines match the versions they report", () => {
     "tic-related.js header vs TicRelated.version");
   assert.equal(/tic-tabs\.js v([\d.]+)/.exec(tabs)[1], /TicTabs = \{ version: "([\d.]+)"/.exec(tabs)[1],
     "tic-tabs.js header vs TicTabs.version");
+  assert.match(SCRIPTS["shared/tic-area.js"], /^\/\*! tic-area\.js v\d+\.\d+ /, "tic-area.js version line");
   for (const css of ["shared/tic-nav.css", "shared/tic-time.css", "shared/tic-related.css", "shared/tic-tabs.css"]) {
     assert.match(read("site/" + css), /^\/\*! tic-[a-z]+\.css v\d+\.\d+/, css);
   }
