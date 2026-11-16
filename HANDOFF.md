@@ -341,7 +341,7 @@ and how the house bar rolls out are in `CLAUDE.md`.
    items, 16 publishers) has no lane the house bar's text doesn't already name.
 6. **Leftover worktrees and branches (removing them is the publisher's call):** `_worktrees/hub-colorado-springs`,
    `hub-denver`, `hub-reno-sparks` (clean, merged), `hub-fort-meade` (merged; uncommitted edits to the planner's
-   `engine.js` and `roads.js`), `hub-dispatch-pntsa` (2 commits not in `master`; pntsa now runs its own Worker),
+   `engine.js` and `roads.js`),
    `D:\Projects\tic-vetday` (branch `veterans-day`, merged, 19 uncommitted files; never deploy from it), and the merged
    local branch `vetday-co-chains`. Added 14 Nov evening, both clean and merged: `_worktrees/pc-trigger-own-clock`
    (PropertyCast, branch `trigger-own-clock`) and `_worktrees/watchfloor-contrast` (Watchfloor, branch `contrast-fix`), and `_worktrees/vis-gate` (Vis, branch
