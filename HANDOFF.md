@@ -5,7 +5,14 @@ approved. Every finished dated section up to 13 Nov 2026 (Veterans Day planner, 
 tests, dispatch, the Vigil summary feed) is in `HISTORY.md`, moved verbatim on 14 Nov 2026. What each program is
 and how the house bar rolls out are in `CLAUDE.md`.
 
-## Hub finished on the branch (15 Nov 2026 evening; not committed until Tom's yes)
+## Hub finished and merged (15 Nov 2026 evening; not deployed)
+- On master after Tom's yes, from `design/hub-preview` (fa74742, 40aef94, afab8b9 and this note). The branch was
+  first rebased off the old history onto the scrubbed master (old base 25d99d3 = new 03580e6), so no old commit
+  went back to GitHub; the old copy is local only, `backup/hub-preview-oldbase`. The main checkout was moved to
+  the new history the same evening. Deploy needs its own yes: `firebase deploy --only hosting:hub --project
+  context-484804` from the main checkout, HEAD asserted.
+- Still on the old history: the hub-colorado-springs, hub-denver, hub-fort-meade, hub-reno-sparks, hub-wake and
+  hub-ground-roti worktrees and `[local path]` (swap plan step 9).
 - Tom approved the wording (top line with Influence and Outages, the lede naming COP's role, COP's convergence line,
   "Every layer, one picture.") and asked that COP not be described as checking the programs and that the
   time-zone selling line go. Built in the worktree: sticky "How it works" steps lighting the drawing, the three
