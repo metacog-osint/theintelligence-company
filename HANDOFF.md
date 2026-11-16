@@ -32,6 +32,29 @@ and how the house bar rolls out are in `CLAUDE.md`.
   `f17f551` (1 ahead, 35 behind), Blackout `17a199c`/`8ef0e2e`/`bcdb010` (3 ahead, 0 behind), Noisefloor `aa75019` and
   Watchfloor `9863836` (1 ahead, 2 behind each); every base is on the new history. Rebase each before its push.
 
+- **Shipped on Tom's "Lifted, ship it"** (push hold lifted; 16 Nov 2026, about 8:40-8:55 AM CST), each rebased onto the
+  current origin, only its own commits ahead, pushed by sha, checked live:
+  - Hub `40d2d38` (notes) and `067d80c` (shared modules and tests), rebased over another session's `8106d33`
+    (tic-time v1.4). Pushing doesn't deploy the hub.
+  - COP `dbef6f5` (was `b666619`): its CI test files pass locally; build run 43888914732 succeeded, health live at
+    14:44 UTC.
+  - Noisefloor `765141e` (was `aa75019`): deploy-site passed; the live feed (14:51 UTC) has 26 of 26 items with
+    `data_as_of_precision` "day" at midnight UTC.
+  - Watchfloor (more-context) `017cc35` (was `9863836`; its `HANDOFF.md` conflict resolved by putting the
+    day-precision bullet first under the newer 16 Nov section). **Not live:** the feed changes only after an `mc-api`
+    deploy, which needs Tom's yes (Watchfloor's `CLAUDE.md`). **Deployed on Tom's yes** about 8:56 AM CST:
+    `mc-api-00022-qah` from a clean `git archive` of `017cc35` (origin's tip; the live revision before was
+    `mc-api-00021-bat` from `e6c617c`, an ancestor), env vars checked separate, `/status` 200, `/feed` 46 of 46
+    items "day" at midnight UTC (14:56 UTC). Watchfloor's own `HANDOFF.md` still says "not pushed or deployed".
+  - Blackout `bcdb010` (with `17a199c`, `8ef0e2e`): tests pass; update run 43889594285 succeeded. Live in headless
+    Edge (1280 light, 390 dark): no COP read at load, one read without cookies once the card nears the screen, three
+    items, "158 more on COP", no console errors, no sideways scroll.
+  - Cordon `62402a1` (was `f17f551`, rebased over its bot's data): `test_cordon.py` passes; ci and update runs
+    succeeded. Live: `tic-tabs.js` v1.0, five sections (Changes, Travel, Air, Sea, Sources), one at a time on a
+    390 px phone (page 3,089 px on Changes), all five on desktop, no sideways scroll. One 404 in the phone console on
+    the first load did not come back on a second (no failing request on phone or desktop).
+  - COP picks up Noisefloor's day-precision items at its next build (:20 past even UTC hours).
+
 ## Sections row, tic-tabs.js v1.0 (16 Nov 2026, about 1:00 AM CST; built on Cordon, committed `f17f551`, not pushed)
 - The light-page layout from the design review ("C · Shell"), first part: `tic-tabs.js` and `tic-tabs.css` in Cordon's
   worktree `D:\Projects\_worktrees\cordon-tabs` (branch `layout/tabs`, from the rewritten `origin/main`). Wrap the
