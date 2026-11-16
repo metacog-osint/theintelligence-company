@@ -94,7 +94,7 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   adding one.
 
 ## Shared code
-- `site/shared/tic-time.js` + `tic-time.css` (v1.3): time display. House rule: store UTC; show the viewer's own
+- `site/shared/tic-time.js` (v1.4) + `tic-time.css` (v1.3): time display. House rule: store UTC; show the viewer's own
   zone by default, always naming it; a settings menu for zone (automatic, Zulu/UTC, major zones, any IANA zone) and
   12/24-hour clock. On `*.theintelligence.company` the choice is kept in a domain-wide cookie so it follows the
   visitor across sites. The `year` option gives a full date in the house style, "31 Oct 2026", in every zone and
@@ -103,6 +103,12 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   repo's main branch (checked 5 Nov 2026; some local trees lag): Watchfloor `web/`, Title 10 `deploy/public/`,
   Noisefloor `site_src/`, PropertyCast `src/wx/static/`, CONTEXT `public/`, Vigil `public/`, Listening Post
   `web/public/`, and COP, Elements and Cordon.
+  - **v1.4 (16 Nov 2026):** formatters are built once per zone and option set and reused, and the device's zone and
+    clock are read once per page. v1.3 built a new `Intl.DateTimeFormat` on every call, about 1 ms each, which held
+    Elements' first draw for seconds (~5,700 fire tooltips) and cost Cordon ~0.25 s. Output unchanged: v1.3 and v1.4
+    gave identical text for 160,056 cases (24 zones including an invalid one, 3 clocks, 9 option sets, dates across
+    both DST changes, bad input); 6,000 calls 4,940 ms -> 880 ms in Node on a loaded machine. Not yet copied to the
+    program sites, which carry v1.3; roll out like any shared file (Tom's yes per site).
 - `site/shared/tic-nav.js` (v1.12, 14-15 Nov 2026: the bar stays at the top of the window and minimizes to a tab,
   below; v1.11, 14 Nov 2026: Undertow added after Context, and the hub's own home page carries
   the bar (Tom: the Programs menu on theintelligence.company too) with `data-home="here"`, which shows the home
