@@ -40,9 +40,17 @@ and how the house bar rolls out are in `CLAUDE.md`.
 - **Wake not deployed:** its `main` gained PR 2 (port calls, listed-IMO match) at 11:10 AM CST, which isn't live
   and needs a data build, so deploying `main` would have shipped it. Live Wake keeps v1.4 with the old comments
   until Wake's next deploy, which carries `cb735fc`.
-- **Not yet:** tic-nav v2.1 (Relief in the Programs menu) is only on the hub, COP and Relief; the other 15 sites
-  show v2.0 without Relief. Roll it out on Tom's word. Remove the `*-tt14` worktrees and `hub-tictime` once
-  PropertyCast is live (its daily publish, about 4:20 AM CST 17 Nov).
+- **House bar v2.1 everywhere** (Tom's "Roll out v2.1", about 12:10-12:15 PM CST): Relief in the Programs menu on
+  the 15 sites that had v2.0, copied from the hub's blob (`e6bbec0`): Watchfloor `63f1fbc`, Context `98b4eee`,
+  Title 10 `ad2ce03` (`sw.js` `t10-2026-11-16d`), Noisefloor `9ec9e6a` (hashes rebuilt), PropertyCast `fa786d5`,
+  Vigil `34b83c8`, Vis `ea2f9c8`, Blackout `70f750e`, Headwind `1157a5c`, Orbit `41a8f5f`, Wake `3081b3b`,
+  Elements `421b13b`, Cordon `3339e34`, Launch `b6dd809`, Undertow `638ddfa`; Blackout, Elements and Cordon tests
+  pass. Listening Post deployed (v2.0 backed up in `_backups/tic-nav-v2.0-2026-11-16/`). Hand
+  deploys: Watchfloor, Title 10, Context, Listening Post. **Checked live** in clean headless Chrome:
+  `TicNav.version` 2.1 with Relief and no page errors on the hub and 16 sites (all but Wake and PropertyCast).
+- **Still to go live:** Wake (its next deploy carries v1.4, the header fix and v2.1; PR 2 on its `main` needs its
+  data build first) and PropertyCast (its daily publish, about 4:20 AM CST 17 Nov; check its home page HTML).
+  Then remove the `*-tt14` worktrees and `hub-tictime`.
 
 ## Shared modules in the hub, and the move onto the new history (16 Nov 2026, about 8:20-8:40 AM CST)
 - **Main checkout moved onto the rewritten history:** `master` in `D:\Projects\theintelligence-company` was old
