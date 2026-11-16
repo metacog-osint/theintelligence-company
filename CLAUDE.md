@@ -278,6 +278,12 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   repeats a dispatched one. `undertow` was added to the `tic-dispatch` token's repository access at 8:42 AM CST 15 Nov
   (Claude in Tom's signed-in GitHub, at his request; no new token). Until then its dispatched starts failed with
   GitHub's 404, the last at 14:30 UTC 15 Nov, and the others carried on; the first that should pass is 20:30 UTC 15 Nov.
+- **Orbit's launch ledger joins (16 Nov 2026, Tom's "yes, build it"):** Orbit `ledger.yml` every hour, at :45, or
+  :55 in Blackout's hours (01, 05, 09, 13, 17, 21 UTC): one Launch Library 2 pull of 14 launches (LL2 allows 15
+  requests an hour without a key), published on Orbit's public release `ledger`. Orbit's repo is public since
+  15 Nov, so its minutes are free; its own cron (`45 * * * *`) is the fallback. No token change: `orbit` is already in
+  the `tic-dispatch` token's repository access. (Orbit's update run: GCAT republishes about once a day at no fixed
+  time, not "about 00:20 UTC" as written above; headers seen 00:21 and 10:18 UTC.)
 - **COP's watchdog joins (14 Nov 2026):** COP `watch.yml` at :00 past 01, 04, 07, 10, 13, 16, 19 and 22 UTC. It
   fails, and GitHub mails the owner, when COP's build or a program has stopped (COP `tools/suite_watch.py`). Private
   repo, one job of well under a minute; its own cron (`47 */3`) is the fallback. No token change: `cop` is already
