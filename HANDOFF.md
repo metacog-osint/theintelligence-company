@@ -5,12 +5,116 @@ approved. Every finished dated section up to 13 Nov 2026 (Veterans Day planner, 
 tests, dispatch, the Vigil summary feed) is in `HISTORY.md`, moved verbatim on 14 Nov 2026. What each program is
 and how the house bar rolls out are in `CLAUDE.md`.
 
-## House bar v2.0 (15 Nov 2026 night; on master after Tom's "Yes, ship to master"; hub not deployed)
+## Shared modules in the hub, and the move onto the new history (16 Nov 2026, about 8:20-8:40 AM CST)
+- **Main checkout moved onto the rewritten history:** `master` in `D:\Projects\theintelligence-company` was old
+  `f8d6390` (mapped to `0a8fc7f`, `swap\rewrite\maps\theintelligence-company-commit-map.tsv`). The uncommitted
+  `CLAUDE.md` and `HANDOFF.md` notes were stashed, `master` reset to `origin/master` `df037c2` (Relief listed, house bar
+  v2.1, by another session), and the notes re-applied cleanly. `vetrules.clean_notes()` changes nothing in either
+  file. The pre-move diff is in `.claude/hub-notes-uncommitted-2026-11-16.patch`. Nothing committed.
+- **Canonical copies in `site/shared/`** (uncommitted): `tic-related.js`/`.css` v1.0 from Blackout `bcdb010` and
+  `tic-tabs.js`/`.css` v1.0 from Cordon `f17f551`, copied with `git show`, LF, byte-identical to those blobs.
+- **Tests** (uncommitted): `tests/related.test.js` (pick rules in Node on a fixture index: decode, own program,
+  other countries, stale, expired, individuals, order, the 48-hour rule, the two-day rule for day precision, month
+  never; in headless Edge: the card, one per program, labels, links, one read without cookies, a redraw from the same
+  read, nothing there, a failed read stays hidden, no read until the card nears the screen at 1440 and 375 px; axe
+  light and dark) and `tests/tabs.test.js` (the row under the house bar, desktop, phone one at a time with
+  `tic-tabs:show`, deep link `#health-h`, keyboard, resize, no script; axe light and dark from the top), with
+  `tests/lib/modpage.js` (a stand-in program page under a strict CSP with the house bar) and the new files in
+  `site.test.js`'s inline-code, CSS-reference and version-line checks. 14 and 11 pass on Edge, and the full suite 259 of 259 (`--test-concurrency=2`); a mutation run
+  (the read made eager, phone groups never hidden) failed the lazy, phone and deep-link tests as it should.
+  "Shared code" lines added to `CLAUDE.md`, rows to `tests/README.md`.
+- **PropertyCast** went live with house bar v2.0 at its 16 Nov publish (`tic-nav.js v2.0`, `data-health="on"` in its
+  home page HTML; checked about 8:30 AM CST). The `_worktrees/*-nav113` and `*-nav20` worktrees (30, all clean;
+  Noisefloor's v1.13 differed in line endings only) were removed; their local branches `tic-nav-v1.13` and
+  `tic-nav-v2.0` were left in each repo (old history in COP, Cordon, Elements, Undertow, Launch, Headwind and Wake:
+  never push them).
+- **Held commits checked against the current origins** (about 8:35 AM CST): COP `b666619` (1 ahead, 3 behind), Cordon
+  `f17f551` (1 ahead, 35 behind), Blackout `17a199c`/`8ef0e2e`/`bcdb010` (3 ahead, 0 behind), Noisefloor `aa75019` and
+  Watchfloor `9863836` (1 ahead, 2 behind each); every base is on the new history. Rebase each before its push.
+
+## Sections row, tic-tabs.js v1.0 (16 Nov 2026, about 1:00 AM CST; built on Cordon, committed `f17f551`, not pushed)
+- The light-page layout from the design review ("C · Shell"), first part: `tic-tabs.js` and `tic-tabs.css` in Cordon's
+  worktree `D:\Projects\_worktrees\cordon-tabs` (branch `layout/tabs`, from the rewritten `origin/main`). Wrap the
+  sections below the map in `<div data-tic-tabs>`, each group `<div id data-tab-label>`; a sticky "Sections on this
+  page" row under the house bar; one group at a time at 760 px or less, every group with a jumping row wider. Rules in
+  the module's header. Cordon also folds long tables on phones ("Show all N"). Cordon's phone page: 35,573 px with
+  every card before, longest group now 8,506 px (Travel). Details and checks in Cordon's `CLAUDE.md`.
+- Tom approved the look and wording; committed on his yes as Cordon `f17f551` (LF blobs), one ahead of `origin/main`.
+- Still to do: push when the hold lifts, the canonical
+  copy in the hub's `site/shared/` with tests, then the header row (layer chip in the drawing's colour, one "today's
+  reading" line, stat tiles) and the other light sites, each in its own worktree.
+
+## "Elsewhere today", tic-related.js v1.0 (15 Nov 2026, committed 10:48 PM CST; built on Blackout, not pushed)
+- Blackout commit `17a199c` on branch `related/elsewhere-today`, worktree `D:\Projects\_worktrees\blackout-related`
+  (on Blackout's `main` `8b4242f`), committed on Tom's yes, **not pushed** (push hold; pushing Blackout's `main`
+  deploys it). Files: `site_src/tic-related.js` and `.css`, a hidden `#tic-related` card after "Now" on the
+  Overview, `renderRelated()` in `app.js`, test lines in `tests/test_blackout.py`, a note in Blackout's `CLAUDE.md`.
+- What it does: reads COP's agent index (`/data/agent/index.json`, columnar, labels coded as numbers in `codes`;
+  about 100 KB brotli) once the card nears the screen, without cookies; other programs' items in the page's
+  countries, not stale, not past `valid_until`, from the last 48 hours (day precision: today or yesterday UTC;
+  month precision never), `us_person_data` "individuals" left out; unusual first, then the page's country order,
+  then newest; three at most, one per program first; "N more on COP". Labels: Unusual (with the baseline note),
+  Forecast, "<Program>'s judgment", As claimed. Hidden until the read succeeds. API `TicRelated.render(el, {countries,
+  here, names, level, eager})` or `data-tic-related data-countries data-here`. The module's header has the rules.
+- Checked on a copy of Blackout's live data under its real CSP (scratchpad preview "bo-related"): 1280 px light
+  (lowest contrast 6.09:1), 390 px dark (7.27:1), no sideways scroll, no console errors. The lazy read was not seen
+  firing: the Browser pane was hidden, and a hidden page never reports intersection, so the test used `eager`.
+- **Lazy read fixed** (15 Nov 2026, about 11:15 PM CST): headless Edge on the same preview showed the
+  read fired at load, every visit: while the card is hidden `whenNear` watched its parent, Blackout's whole Overview.
+  It now watches an empty `span.tic-rel-near` placed just before the card (no height in block flow; removed once the
+  read starts); a later `render` cancels an earlier wait. Checked headless (scratchpad `lazy_check.js`): no read at
+  load, one read without cookies once the card's spot is within 400 px of the screen (1280 px light and 390 px dark),
+  no console errors, no sideways scroll. Tom approved the card's look and wording from the screenshots and the fix
+  was committed on his yes: Blackout `8ef0e2e` on `related/elsewhere-today` (LF in the blob), now three ahead
+  of `origin/main` (`17a199c`, `8ef0e2e`, `bcdb010`), not pushed. Copy the hub's canonical file from `bcdb010`. Hub tests should cover it
+  (the card well below the fold: no read until scrolled).
+- **Day-stamped items show a clock time:** Watchfloor's zone items and Noisefloor's event and spoofing items cover a
+  whole UTC day but carry `data_as_of` 23:59:59Z with no `data_as_of_precision`, so the card prints "Nov 14,
+  5:59 PM CST". The fix belongs in those programs' feeds (`data_as_of_precision: "day"`, kit 0.5.6). **Tom, 15 Nov
+  2026 about 11:30 PM CST: "count back two UTC days"**: a day-only item now counts if dated today or either of the
+  two UTC days before (each still overlaps the last 48 hours), so Noisefloor's day, posted the next morning, shows.
+  Committed on Tom's yes as Blackout `bcdb010` (`recent()` and the header), not pushed; checked on fixture
+  rows through `_pick` (scratchpad `day_rule_check.js`: today, -1 and -2 days in; -3 days, tomorrow and month-only
+  out; timed items keep the 48-hour cut). It changes nothing live until Watchfloor and Noisefloor mark their days.
+- Still to do: the canonical copy in the hub's `site/shared/` (after the history rewrite), hub tests for it (pick
+  rules on a fixture index, axe light and dark, the CSP list), a line in `CLAUDE.md` "Shared code", Tom's look at the
+  card and its wording, the push, then other sites one at a time.
+
+## House bar v2.0 (15 Nov 2026 night; on master; live on the hub and 15 program sites 15-16 Nov 2026)
 - `tic-nav.js` and `tic-nav.css` v2.0: Programs grouped by layer in the drawing's order, freshness dots from COP's
   health check (opt-in per site with `data-health="on"` once its CSP allows COP; COP and the hub get them anyway),
   "See it on COP" at the panel's foot, and COP's convergence line. Rules and tests in `CLAUDE.md` (house bar, v2.0).
-- Not yet: the hub deploy, and the rollout to every program site (copy both files;
-  add COP to `connect-src` and `data-health="on"` per site). Noisefloor's "Your clock" line can go in the same pass.
+- **Hub deployed** about 9:50 PM CST 15 Nov from the main checkout, HEAD asserted `f8d6390`, after 234 of 234 tests
+  passed on Edge (`--test-concurrency=2`). Live: v2.0, 13 dots, "See every layer together on COP", no console errors.
+- **Rollout** (Tom's yes: push all 16, then the four hand deploys; about 10:00-10:30 PM CST): worktrees
+  `_worktrees/<site>-nav20`, branch `tic-nav-v2.0`, one commit each, rebased on the latest main, one ahead, pushed by
+  sha: COP `16bfeac`, Watchfloor (more-context) `e17a4c5`, Context (geo-context, `master`) `8b32e7a`, Title 10
+  `1bbd053` (`sw.js` `t10-2026-11-16a`), Noisefloor `161ed93` (with `build_site.py`'s `?v=` hashes, and Methods'
+  Time-button sentence removed: the "Your clock" line), PropertyCast `9538e67`, Vigil `ed9537a`, Elements `55da484`,
+  Cordon `984e529`, Vis `dc8ad18`, Blackout `8b4242f` (its CSP test now expects COP and `data-health`), Headwind
+  `07170b0`, Orbit `ac1cc3d`, Launch `72bd285`, Undertow `2d11178`, Wake `c95cd14`. COP's `main` was force-rewritten
+  by the "Tom's launch map" scrub during the rollout (`62b0f1b` became `05067f2`); the commit was moved onto the new
+  history with `rebase --onto` before pushing, and no old-history commit went up. Listening Post (no git): v1.13 backed
+  up in `_backups/tic-nav-v1.13-2026-11-15/`. Deployed by hand: Watchfloor, Title 10, Context (first
+  `vercel deploy` errored, the retry was READY) and Listening Post. Files were copied from the blob at `f8d6390`
+  (the hub's working copy has CRLF endings).
+- **Checked live about 10:40 PM CST:** `/tic-nav.js` v2.0, 13 dots and COP's note with the menu open on the hub, COP,
+  Watchfloor, Context, Title 10, Noisefloor, Vigil, Elements, Cordon, Vis, Blackout, Headwind, Orbit, Launch, Undertow
+  and Listening Post; COP in `connect-src` on every site that sets a CSP; no CSP errors.
+- **Wake deployed by hand** about 10:55 PM CST (Tom: pushes are on hold, a deploy may go ahead): `npx --yes
+  wrangler@4.151.3 pages deploy site --project-name wake --branch main` from `_worktrees/wake-nav20` at `c95cd14`.
+  Its built `site/data/` is not in git, and the live `feed.geojson` was newer than any local copy, so the three live
+  data files (`snapshot.json`, `feed.geojson`, `ended.geojson`; the other `/data/` paths answer with the page) were
+  downloaded and deployed unchanged; checked byte-identical afterwards. Live: v2.0, 13 dots, COP in `connect-src`.
+- **Not live yet:** PropertyCast (its next daily publish, about 4:20 AM CST 16 Nov; its page still shows v1.10, so
+  check the home page HTML). Then remove the `*-nav113` and `*-nav20` worktrees.
+- **Push hold** (Tom, about 10:50 PM CST 15 Nov: "there's a hold on pushes at the moment"): these notes are
+  uncommitted in the main checkout; commit and push them when the hold lifts.
+- **History rewrite under way** (message from the "Hub work continuation and overnight checks" session, about
+  11:00 PM CST 15 Nov): tic-doctrine, cop, cordon, elements, undertow, verdict, launch and this hub are being
+  rewritten and force-pushed. The v2.0 shas above for COP, Cordon, Elements, Undertow and Launch will change. Never
+  pull or merge origin into an old branch afterwards: rebase with the commit map that session sends. These notes
+  get rebased that way before they are committed.
 
 ## Hub finished and merged (15 Nov 2026 evening; deployed about 8:20 PM CST)
 - Deployed from the main checkout at 94c3db0 after 221 of 221 tests passed (Tom's yes). On master after Tom's yes, from `design/hub-preview` (fa74742, 40aef94, afab8b9 and this note). The branch was
@@ -25,7 +129,7 @@ and how the house bar rolls out are in `CLAUDE.md`.
   time-zone selling line go. Built in the worktree: sticky "How it works" steps lighting the drawing, the three
   folds, the Verdict tile (connect-src gains `https://metacog-osint.github.io`), footer date and `sitemap.xml`
   15 Nov 2026, 404 product list in step, rules in `CLAUDE.md` ("Hub design"), new tests. Phone page 8,231 px.
-- Still the old COP line: `tic-nav.js` (house bar v2) and Noisefloor's "Your clock" line.
+- The old COP line and Noisefloor's "Your clock" line went with house bar v2.0 (above).
 
 ## Design review and hub preview (15 Nov 2026, about 4:00 PM CST)
 - **Review** (Tom: "review ... layout, flow, connectivity, and user experience in all sites", with ideas from the
