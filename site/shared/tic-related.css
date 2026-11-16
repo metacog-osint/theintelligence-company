@@ -1,4 +1,4 @@
-/*! tic-related.css v1.0 · pairs with tic-related.js (canonical copy in [local path]).
+/*! tic-related.css v1.0 · pairs with tic-related.js (canonical copy in the hub's site/shared/).
     The card takes the page's own colours and type: text and links inherit, rules use the page's --line if it has
     one. The only colour of its own is the layer dot, the hub drawing's plate colour, and it is decorative (the
     layer is named in text beside it). Nothing moves, so reduced motion needs nothing. */
