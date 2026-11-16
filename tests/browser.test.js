@@ -367,6 +367,25 @@ describe("the hub design (15 Nov 2026)", () => {
   });
 });
 
+describe("house bar v2.0 on the hub", () => {
+  test("the Programs menu marks freshness from the page's own COP health read, and offers every layer on COP", async () => {
+    const t = await open();
+    let copReads = 0;
+    t.page.on("request", (r) => { if (r.url().endsWith("/data/health.json")) copReads++; });
+    try {
+      await t.page.locator(".tic-house-btn").click();
+      await t.page.locator(".tic-house-fnote:not([hidden])").waitFor();
+      const late = await t.page.$$eval(".tic-house-item", (as) => as.filter((a) => a.querySelector(".tic-house-dot.f-late"))
+        .map((a) => a.querySelector(".tic-house-name").firstChild.textContent));
+      assert.deepEqual(late, ["Elements"], "the sample's late program");
+      assert.equal(await t.page.locator(".tic-house-dot").count(), 6, "one dot per program in the sample");
+      assert.equal(copReads, 0, "the bar reuses the page's read instead of asking COP again");
+      assert.equal(await t.page.locator(".tic-house-cop").textContent(), "See every layer together on COP →");
+      clean(t);
+    } finally { await t.close(); }
+  });
+});
+
 describe("the drawing's labels", () => {
   // Screens the drawing is sized for (its height follows the window's), from a large desktop to a small phone.
   const SCREENS = [[1920, 1080], [1440, 900], [1366, 768], [1280, 800], [1024, 768], [821, 1000], [820, 1000], [600, 900], [375, 812], [320, 640]];

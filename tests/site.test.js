@@ -74,6 +74,23 @@ test("How we work names no time-zone feature (the Time button already says the z
   assert.ok(!/time zone|your clock/i.test(std));
 });
 
+test("house bar v2.0: each program's layer is its home layer on the drawing, and the menu runs in the drawing's layer order", () => {
+  const order = ["all", ...OE.LK];
+  for (const p of NAV.programs.filter((q) => q.group === "layers")) {
+    const drawn = OE.PROGRAMS.find((q) => q.id === p.id);
+    assert.equal(p.layer, drawn.home || (drawn.core ? "all" : undefined), `${p.name}'s layer in tic-nav.js vs its home in oe.js`);
+  }
+  const ranks = NAV.programs.map((p) => (p.group === "tools" ? order.length : order.indexOf(p.layer)));
+  assert.ok(ranks.every((r) => r >= 0), "every program across the layers names a layer");
+  assert.deepEqual(ranks, [...ranks].sort((a, b) => a - b), "PROGRAMS in tic-nav.js runs in the drawing's layer order");
+});
+
+test("COP is described the same way in the house bar and on the hub (Tom, 15 Nov 2026: convergence, not checking)", () => {
+  const cop = NAV.programs.find((p) => p.id === "cop");
+  assert.equal(cop.long, OE.PROGRAMS.find((p) => p.id === "cop").line);
+  for (const s of [cop.label, cop.short, cop.long]) assert.ok(!/\b(check|checks|verif)/i.test(s.replace("checked by Verdict", "")), s);
+});
+
 test("404.html's product list is the home page's, link for link and in the same order", () => {
   const home = productList(INDEX).map((p) => p.a);
   const nf = productList(NOT_FOUND).map((p) => p.a);

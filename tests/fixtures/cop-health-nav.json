@@ -1,0 +1,41 @@
+{
+ "generated_at": "2026-11-15T22:00:00Z",
+ "programs": [
+  {
+   "id": "watchfloor",
+   "state": "fresh"
+  },
+  {
+   "id": "context",
+   "state": "fresh"
+  },
+  {
+   "id": "vigil",
+   "state": "fresh"
+  },
+  {
+   "id": "blackout",
+   "state": "late"
+  },
+  {
+   "id": "noisefloor",
+   "state": "fresh"
+  },
+  {
+   "id": "elements",
+   "state": "fresh"
+  },
+  {
+   "id": "cordon",
+   "state": "fresh"
+  },
+  {
+   "id": "wake",
+   "state": "stale"
+  },
+  {
+   "id": "mystery",
+   "state": "fresh"
+  }
+ ]
+}

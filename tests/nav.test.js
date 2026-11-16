@@ -37,7 +37,9 @@ test("the menu lists every program in its group, opens in the same tab, and star
   try {
     await btn(t.page).click();
     assert.equal(await btn(t.page).getAttribute("aria-expanded"), "true");
-    assert.deepEqual(await t.page.$$eval(".tic-house-group", (ps) => ps.map((p) => p.textContent)), ["Across the layers", "Other tools"]);
+    assert.deepEqual(await t.page.$$eval(".tic-house-group", (ps) => ps.map((p) => p.textContent)),
+      ["Every layer", "Systems", "Human", "Cyberspace", "Spectrum", "Space", "Air", "Land and maritime", "Other tools"],
+      "v2.0: one heading per layer, in the drawing's order, then the other tools");
     const items = await t.page.$$eval(".tic-house-item", (as) => as.map((a) => ({ href: a.getAttribute("href"), target: a.target })));
     const order = ["layers", "tools"].flatMap((g) => NAV.programs.filter((p) => p.group === g));
     assert.deepEqual(items.map((i) => i.href), order.map((p) => p.href));
@@ -95,7 +97,7 @@ test("the menu closes on a click outside it, and when focus leaves it", async ()
     await t.page.mouse.click(5, Math.min(895, panel.y + panel.height + 20)); // below the open menu
     assert.ok(await t.page.locator("#tic-house-panel").isHidden(), "a click outside closes it");
     await btn(t.page).click();
-    await t.page.locator(".tic-house-all").focus();
+    await t.page.locator(".tic-house-cop").focus(); // v2.0: the menu's last link
     await t.page.keyboard.press("Tab");
     // The bar checks where focus went on the next tick, so wait for it rather than look straight away.
     await t.page.locator("#tic-house-panel").waitFor({ state: "hidden", timeout: 2000 });
@@ -342,6 +344,109 @@ test("printing leaves the bar and its room out", async () => {
       h: getComputedStyle(document.documentElement).getPropertyValue("--tic-house-h").trim(),
     }));
     assert.deepEqual(p, { nav: "none", room: "none", h: "0px" });
+  } finally { await t.close(); }
+});
+
+// ---------------------------------------------------------------- v2.0: freshness dots and "See it on COP"
+const HEALTH = { attrs: ' data-health="on"', health: "cop-health-nav.json" };
+const dots = (page) => page.$$eval(".tic-house-item", (as) => as.map((a) => ({
+  id: new URL(a.href).hostname.split(".")[0],
+  dot: (a.querySelector(".tic-house-dot") || {}).className || "",
+  sr: (a.querySelector(".tic-house-dot .tic-house-sr") || {}).textContent || "",
+  words: (a.querySelector(".tic-house-fw") || {}).textContent || "",
+})).filter((x) => x.dot));
+
+test("v2.0: with data-health=\"on\", opening the menu reads COP's health once, without cookies, and marks each program", async () => {
+  const t = await open(HEALTH);
+  try {
+    await t.page.waitForTimeout(300);
+    assert.equal(t.healthHits.n, 0, "nothing is fetched until the menu opens");
+    await btn(t.page).click();
+    await t.page.locator(".tic-house-fnote:not([hidden])").waitFor();
+    const d = await dots(t.page);
+    const by = Object.fromEntries(d.map((x) => [x.id, x]));
+    assert.equal(by.vigil.dot, "tic-house-dot f-fresh");
+    assert.equal(by.vigil.sr, "On time.");
+    assert.equal(by.vigil.words, "", "on time needs no words after the topic");
+    assert.equal(by.blackout.dot, "tic-house-dot f-late");
+    assert.equal(by.blackout.words, " · running late", "running late is said in words, not colour alone");
+    assert.equal(by.wake.dot, "tic-house-dot f-stale");
+    assert.equal(by.wake.words, " · no current data");
+    assert.ok(!by.cop && !by.orbit && !by.propertycast, "no dot for a program COP's check doesn't cover");
+    assert.equal(d.length, 8, "an id COP knows but the bar doesn't is ignored");
+    assert.match(await t.page.locator(".tic-house-dmeta").textContent(), /· Live · on time · you are here$/);
+    assert.match(await t.page.locator(".tic-house-fnote").textContent(), /^Dots: on time, running late or no current data, as COP's health check found \d+ (min|h|days) ago\.$/);
+    await btn(t.page).click();
+    await btn(t.page).click();
+    assert.equal(t.healthHits.n, 1, "read once, however often the menu opens");
+    assert.deepEqual(t.healthHits.cookie, [""], "no cookies go to COP");
+    assert.deepEqual(t.errors, []);
+    assert.deepEqual(t.strays, []);
+  } finally { await t.close(); }
+});
+
+test("v2.0: without data-health the bar asks COP for nothing, and shows no dots", async () => {
+  const t = await open({ health: "cop-health-nav.json" });
+  try {
+    await btn(t.page).click();
+    await t.page.waitForTimeout(500);
+    assert.equal(t.healthHits.n, 0);
+    assert.equal(await t.page.locator(".tic-house-dot").count(), 0);
+    assert.ok(await t.page.locator(".tic-house-fnote").isHidden());
+  } finally { await t.close(); }
+});
+
+test("v2.0: when COP's health check fails, the menu works as before, without dots or the note", async () => {
+  const t = await open({ ...HEALTH, health: { status: 503 } });
+  try {
+    await btn(t.page).click();
+    await t.page.waitForTimeout(500);
+    assert.equal(t.healthHits.n, 1);
+    assert.equal(await t.page.locator(".tic-house-dot").count(), 0);
+    assert.ok(await t.page.locator(".tic-house-fnote").isHidden());
+    assert.equal(await t.page.locator(".tic-house-item").count(), NAV.programs.length);
+    assert.deepEqual(t.errors.filter((e) => e.startsWith("pageerror")), [], "no script errors");
+  } finally { await t.close(); }
+});
+
+test("v2.0: on COP itself the dots need no attribute, and there is no link to COP", async () => {
+  const t = await open({ origin: "https://cop.theintelligence.company", health: "cop-health-nav.json" });
+  try {
+    await btn(t.page).click();
+    await t.page.locator(".tic-house-fnote:not([hidden])").waitFor();
+    assert.equal(await t.page.locator(".tic-house-dot").count(), 8);
+    assert.equal(await t.page.locator(".tic-house-cop").count(), 0);
+  } finally { await t.close(); }
+});
+
+test("v2.0: \"See it on COP\" opens COP with every layer, named for the program you are on", async () => {
+  let t = await open();
+  try {
+    await btn(t.page).click();
+    const a = t.page.locator(".tic-house-cop");
+    assert.equal(await a.textContent(), "See Vigil with the other layers on COP →");
+    assert.equal(await a.getAttribute("href"), "https://cop.theintelligence.company");
+    assert.equal(await a.getAttribute("target"), null, "site navigation stays in the same tab");
+  } finally { await t.close(); }
+  t = await open({ origin: "https://activation.theintelligence.company" });
+  try {
+    await btn(t.page).click();
+    assert.equal(await t.page.locator(".tic-house-cop").textContent(), "See every layer together on COP →",
+      "a tool outside the layers gets the general link");
+  } finally { await t.close(); }
+});
+
+test("v2.0: under a layer's heading each program shows its topic, not the layer again", async () => {
+  const t = await open();
+  try {
+    await btn(t.page).click();
+    const labels = await t.page.$$eval(".tic-house-label", (ls) => ls.map((l) => l.textContent));
+    const want = NAV.programs.map((p) => {
+      if (p.group === "tools") return p.label;
+      const s = p.label.split(" · ").slice(1).join(" · ");
+      return s.charAt(0).toUpperCase() + s.slice(1);
+    });
+    assert.deepEqual(labels, want);
   } finally { await t.close(); }
 });
 

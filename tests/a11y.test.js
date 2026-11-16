@@ -88,6 +88,17 @@ for (const colorScheme of ["light", "dark"]) {
         } finally { await t.close(); }
       });
     }
+    // v2.0: the menu with freshness dots and their words (on time, running late, no current data).
+    test(`house bar menu with freshness dots, ${phone ? "phone" : "desktop"}, ${colorScheme}`, async () => {
+      const t = await openStandIn(browser, { colorScheme, phone, bypassCSP: true, stickyHeader: true,
+        attrs: ' data-health="on"', health: "cop-health-nav.json" });
+      try {
+        await t.page.click(".tic-house-btn");
+        await t.page.locator(".tic-house-fnote:not([hidden])").waitFor();
+        const v = await axe(t.page);
+        assert.deepEqual(v, [], explain(v));
+      } finally { await t.close(); }
+    });
   }
 }
 
