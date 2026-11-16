@@ -99,16 +99,18 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   12/24-hour clock. On `*.theintelligence.company` the choice is kept in a domain-wide cookie so it follows the
   visitor across sites. The `year` option gives a full date in the house style, "31 Oct 2026", in every zone and
   clock, Zulu included, and `renderAll` reads `data-tic-year`. Copy the files into each site and keep the version
-  line; the hub also serves them at `/shared/` (CORS open; live, checked 6 Nov 2026). Every copy is v1.3 on its
-  repo's main branch (checked 5 Nov 2026; some local trees lag): Watchfloor `web/`, Title 10 `deploy/public/`,
-  Noisefloor `site_src/`, PropertyCast `src/wx/static/`, CONTEXT `public/`, Vigil `public/`, Listening Post
-  `web/public/`, and COP, Elements and Cordon.
+  line; the hub also serves them at `/shared/` (CORS open; live, checked 6 Nov 2026). Every copy is v1.4 on its
+  repo's main branch (16 Nov 2026): Watchfloor `web/`, Title 10 `deploy/public/`, Noisefloor `site_src/` (and
+  `site/`), PropertyCast `src/wx/static/`, CONTEXT `public/`, Vigil `public/`, Listening Post `web/public/` (no
+  git), COP `site/shared/`, Vis `site/`, Headwind, Orbit, Wake and Verdict `site_src/` and `site/`, and Elements,
+  Cordon, Blackout, Launch, Undertow and Relief `site_src/`. Find copies with `git ls-tree -r origin/<main>` per
+  repo; a grep across D: takes over 5 minutes.
   - **v1.4 (16 Nov 2026):** formatters are built once per zone and option set and reused, and the device's zone and
     clock are read once per page. v1.3 built a new `Intl.DateTimeFormat` on every call, about 1 ms each, which held
     Elements' first draw for seconds (~5,700 fire tooltips) and cost Cordon ~0.25 s. Output unchanged: v1.3 and v1.4
     gave identical text for 160,056 cases (24 zones including an invalid one, 3 clocks, 9 option sets, dates across
-    both DST changes, bad input); 6,000 calls 4,940 ms -> 880 ms in Node on a loaded machine. Not yet copied to the
-    program sites, which carry v1.3; roll out like any shared file (Tom's yes per site).
+    both DST changes, bad input); 6,000 calls 4,940 ms -> 880 ms in Node on a loaded machine. Rolled out to every
+    program site 16 Nov 2026 (Tom's "Ship it all"; commits in `HANDOFF.md`). Verdict went from v1.2.
 - `site/shared/tic-area.js` (v1.1): **"My area"**, the viewer's chosen part of the world (all, the US 48, a US state,
   or within a distance of a point), saved in this browser only; items outside it are dimmed, never hidden. API:
   `TicArea.mountSettings(el, states, opts)` (an "Area" button; `opts.note` replaces the dialog's closing note),

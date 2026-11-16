@@ -5,6 +5,32 @@ approved. Every finished dated section up to 13 Nov 2026 (Veterans Day planner, 
 tests, dispatch, the Vigil summary feed) is in `HISTORY.md`, moved verbatim on 14 Nov 2026. What each program is
 and how the house bar rolls out are in `CLAUDE.md`.
 
+## tic-time.js v1.4 everywhere, tic-area.js in the hub (16 Nov 2026, about 9:25 AM-10:25 AM CST)
+- Tom's "Ship it all". **Hub:** `fa1394b` adds `site/shared/tic-area.js` v1.1 (byte-identical to Elements'
+  `e2585e8`) with a version-line test and a "Shared code" note; 258 of 259 tests passed on Edge, the one failure
+  ("Latest from the products", a feed line timing out under load) passed 6 of 6 alone. Deployed about 9:30 AM CST
+  from `_worktrees/hub-tictime`, HEAD asserted: live `/shared/tic-time.js` v1.4 and `/shared/tic-area.js` v1.1.
+- **Sites** (worktrees `_worktrees/<site>-tt14`, branch `tic-time-v1.4`, one commit each, rebased, pushed by sha;
+  every copied file checked equal to the hub's blob): Watchfloor `fb8e9b9` (deployed by hand), Context `f859bfe`
+  (`vercel --prod`, ran twice by mistake, both Ready, same tree), Title 10 `79dd0f4` (`sw.js` `t10-2026-11-16b`;
+  deployed by hand from the clean worktree), Noisefloor `bb29b26` (`build_site.py` `?v=` hashes on 13 pages),
+  PropertyCast `6f010d3` (live at its next daily publish, about 4:20 AM CST 17 Nov), Vigil `a558492`, Vis
+  `98325dc`, Blackout `a7a9335` (59 tests pass), Headwind `575bf53`, Orbit `ee22c33`, Wake `6b5727a` (deployed by
+  hand with wrangler; its three live data files downloaded first and checked byte-identical afterwards; live
+  `main` matched `site/` apart from line endings), COP `753320c`, Elements `3ef8cdf` (96 tests), Cordon `be22448`
+  (77 tests; also tic-area.js v1.1: none of 905 live items is placed in a US state while tagged outside the US),
+  Launch `8df982b` (privacy test 8 of 8), Undertow `be1f852`, Relief `de53046`, Verdict `04a4962` (from v1.2; 38
+  tests). Listening Post (no git): v1.3 backed up in `_backups/tic-time-v1.3-2026-11-16/`, deployed;
+  nothing in its folder was newer than its last build.
+- **Checked live about 10:20 AM CST** in clean headless Chrome: `TicTime.version` 1.4 and no page errors on the
+  hub, Title 10, Watchfloor, Context, Noisefloor, Vigil, Vis, Blackout, Headwind, Orbit, Launch, Undertow, Relief,
+  Verdict, Elements and Cordon (both with `TicArea`), Wake (`wake-7qh.pages.dev`), Listening Post and COP. Not yet:
+  PropertyCast (check its home page HTML after the daily publish). The only console errors were favicon 404s.
+- **Open:** Launch's privacy check (rule names only) flags the shared headers' "canonical copy: [local path]"
+  line and the name in dated attributions, in tic-time.js, tic-nav.js/.css and tic-related/tic-tabs; it doesn't
+  fail Launch's tests. A comment-only fix ("canonical copy: the hub's site/shared/<file>", attributions as dates)
+  waits on Tom's word. Remove the `*-tt14` worktrees and `hub-tictime` once PropertyCast is live.
+
 ## Shared modules in the hub, and the move onto the new history (16 Nov 2026, about 8:20-8:40 AM CST)
 - **Main checkout moved onto the rewritten history:** `master` in `[local path]` was old
   `f8d6390` (mapped to `0a8fc7f`, `swap\rewrite\maps\theintelligence-company-commit-map.tsv`). The uncommitted
