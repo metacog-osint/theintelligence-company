@@ -33,6 +33,11 @@ export const JOBS = [
   // Orbit every six hours (13 Nov 2026). GCAT republishes about once a day at no fixed time (headers seen 00:21 and
   // 10:18 UTC), so a run reads an update within six hours. Its own cron (:41 every 6 h) is the fallback.
   { repo: "metacog-osint/orbit", workflow: "update.yml", ref: "main", minutes: [55], hours: [0, 6, 12, 18] },
+  // Orbit's satellite catalog once a day (17 Nov 2026, Tom's yes). Space-Track's use policy allows the SATCAT read
+  // once per UTC date, after 17:00 UTC, and GitHub's own crons (17:23, 19:23, 21:23) fire hours late, so a start that
+  // slips past midnight UTC loses the day. 17:30 UTC: 17:35 is Elements' slot. catalog.yml's own guard (stcat.due)
+  // allows one read per UTC date, so later starts that day are no-ops. Public repo, so its minutes are free.
+  { repo: "metacog-osint/orbit", workflow: "catalog.yml", ref: "main", minutes: [30], hours: [17] },
   // Orbit's launch ledger every hour (16 Nov 2026, Tom's "yes, build it"): one Launch Library 2 pull of 14 launches
   // (free limit 15 requests an hour), published on Orbit's public release `ledger`. :45 every hour but Blackout's
   // (01, 05, 09, 13, 17, 21 UTC), where it starts at :55. Public repo, so its minutes are free. Its own cron is the
