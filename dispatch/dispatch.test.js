@@ -113,7 +113,23 @@ test("due picks only the jobs for this minute", () => {
   assert.deepEqual(due(JOBS, at(5)).map((j) => j.repo), ["metacog-osint/elements"]);
   assert.deepEqual(due(JOBS, at(40)).map((j) => j.repo), ["metacog-osint/cordon"]);
   assert.deepEqual(due(JOBS, at(0)), []);
-  assert.deepEqual(due(JOBS, at(15)), []);
+  assert.deepEqual(due(JOBS, at(15, 4)), []);   // 03:15 is Orbit's GEO region since 16 Nov
+});
+
+test("Orbit's GEO region starts at 03:15 and 15:15 UTC, over two hours from Orbit's update runs", () => {
+  const geo = JOBS.filter((j) => j.workflow === "geo.yml");
+  assert.equal(geo.length, 1);
+  assert.equal(geo[0].repo, "metacog-osint/orbit");
+  assert.equal(geo[0].ref, "main");
+  assert.deepEqual(due(JOBS, at(15, 3)).map((j) => j.workflow), ["geo.yml"]);
+  assert.deepEqual(due(JOBS, at(15, 15)).map((j) => j.workflow), ["geo.yml"]);
+  const up = JOBS.find((j) => j.repo === "metacog-osint/orbit" && j.workflow === "update.yml");
+  for (const gh of geo[0].hours) {
+    for (const uh of up.hours) {
+      const gap = Math.abs((gh * 60 + geo[0].minutes[0]) - (uh * 60 + up.minutes[0]));
+      assert.ok(Math.min(gap, 1440 - gap) > 120, `geo ${gh}h vs update ${uh}h`);
+    }
+  }
 });
 
 test("due respects a job's hours", () => {

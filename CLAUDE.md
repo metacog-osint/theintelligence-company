@@ -296,6 +296,12 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   15 Nov, so its minutes are free; its own cron (`45 * * * *`) is the fallback. No token change: `orbit` is already in
   the `tic-dispatch` token's repository access. (Orbit's update run: GCAT republishes about once a day at no fixed
   time, not "about 00:20 UTC" as written above; headers seen 00:21 and 10:18 UTC.)
+- **Orbit's GEO region joins (16 Nov 2026, GEO move step 2):** Orbit `geo.yml` at 03:15 and 15:15 UTC: one
+  Space-Track gp query for the GEO region, files on Orbit's public release `geo-2026`. It shares the Space-Track
+  account (gp once an hour) with Orbit's update run and Noisefloor's daily run; geo.yml skips while either queried
+  within the hour, and when today's file is under an hour old, so its own cron (`17 3,15 * * *`) ends in about a
+  minute after a dispatched run. Over two hours from Orbit's update starts (:55 past 00, 06, 12, 18 UTC). Public
+  repo, minutes free. No token change: `orbit` is already in the `tic-dispatch` token's repository access.
 - **COP's watchdog joins (14 Nov 2026):** COP `watch.yml` at :00 past 01, 04, 07, 10, 13, 16, 19 and 22 UTC. It
   fails, and GitHub mails the owner, when COP's build or a program has stopped (COP `tools/suite_watch.py`). Private
   repo, one job of well under a minute; its own cron (`47 */3`) is the fallback. No token change: `cop` is already
