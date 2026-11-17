@@ -5,6 +5,43 @@ approved. Every finished dated section up to 13 Nov 2026 (Veterans Day planner, 
 tests, dispatch, the Vigil summary feed) is in `HISTORY.md`, moved verbatim on 14 Nov 2026. What each program is
 and how the house bar rolls out are in `CLAUDE.md`.
 
+## Rollout follow-ups and suite work (16 Nov 2026, about 9:05-11:30 PM CST)
+- **Wake is live with the shared files** (Tom's "Yes, deploy Wake", about 9:30 PM CST). Live Wake had been its
+  `81771dd` site with `6b5727a`'s tic-time.js, and Wake's `main` carries PR 2 (port calls, listed-IMO match), which
+  needs a data build, so `main` was not deployed. The deploy folder was `81771dd`'s `site/` plus `origin/main`'s
+  `tic-time.js`, `tic-nav.js` and `tic-nav.css` and the three live data files (`snapshot.json`, `feed.geojson` with
+  28 items, `ended.geojson`) downloaded first; each file was checked against its git blob or the live copy.
+  `wrangler@4.151.3 pages deploy`, Tom's OAuth sign-in: 3 files uploaded, 7 already there; deployment
+  `34caefe8.wake-7qh.pages.dev`. Checked in clean headless Chrome on `wake-7qh.pages.dev` and
+  `wake.theintelligence.company`: TicTime 1.4, TicNav 2.1 with Relief, no local path in the shared files, no page
+  errors. **Live Wake is not one commit:** it is `81771dd`'s site with `main`'s three shared files; PR 2 is still not
+  live, and Wake's next deploy of `main` adds only PR 2.
+- **Worktrees removed** (Tom's "Yes, clean 18 now"): `_worktrees/<site>-tt14` for Blackout, Context, COP, Cordon,
+  Elements, Headwind, Launch, Noisefloor, Orbit, Relief, Title 10, Undertow, Verdict, Vigil, Vis, Wake and Watchfloor,
+  and `hub-tictime`, with their local branches (`tic-time-v1.4`, `tic-headers`, `tic-nav-v2.1`; in the hub
+  `tic-time-cache`, `tic-area-hub`, `tt14-notes`, `shared-headers`, `notes-headers`, `notes-nav21`). Each was clean
+  and each branch on a remote branch first (`hub-tictime/.claude/` held only commit-message files). Cordon's first
+  `worktree remove` failed with "Permission denied" on `.git/config` (written by another process at 9:12 PM); the
+  retry passed. **Left: `propertycast-tt14`** and its three branches, for after the PropertyCast check.
+- **PropertyCast** still served tic-time v1.3 and tic-nav v2.0 at 9:10 PM CST, as expected. It was not published early:
+  a manual `publish` run also sends push alerts (source health, aurora, spray windows). Check its home page HTML after
+  the 4:20 AM CST 17 Nov run, then remove `propertycast-tt14`.
+- **Elements' first draw** (clean headless Chrome, three runs): long tasks after load 0.56-0.77 s in all, the longest
+  0.32-0.40 s, 1,580 shapes, no errors; it was 1.8-2.4 s that morning and ~8 s before. Cordon: 0.30-0.53 s. tic-time
+  v1.4 closed it; Leaflet's canvas renderer could trim the rest.
+- **WHO Disease Outbreak News for Cordon:** not needed. Relief already ingests it under WHO's terms of use (checked
+  16 Nov; Relief `doctrine/sources.json` `who-don`: research and non-commercial extracts with acknowledgement,
+  substantial portions need written permission; Relief publishes title, date, place and link only). Cordon has CDC's
+  health notices; a WHO lane there would duplicate Relief.
+- **Verdict:** the six EASA Gulf bulletin questions resolved **Yes** (all revised 16 Nov, valid to 31 Jan 2027;
+  `auto-resolve --apply --by "Tom Brummer"`, EASA read 04:32 UTC 17 Nov). Verdict `f5ecb61` (Tom's "Yes, commit and
+  push"), CI and Pages passed; live: 8 of 8 registered forecasts resolved, Brier 0.0142.
+- **Suite work in `[local path]` (private, uncommitted):** `case-bahrain-2026-11-15.md`, a review of Iran's
+  15 Nov drone attack on Bahrain against COP's layers (Watchfloor's Bahrain counts saw 13 and 15 Nov; the three-signal
+  join read "partial" throughout; UKMTO's tanker attacks are not in COP until Wake PR 4; seven gaps, each Tom's call);
+  `tools/iran_row.py` now lists Watchfloor's country anomalies for Iran and the Gulf states; the Iran rows in
+  `convergence-scenarios.md` gained 15 Nov (missed) and a 16 Nov row with a draft Change cell for Tom.
+
 ## tic-time.js v1.4 everywhere, tic-area.js in the hub (16 Nov 2026, about 9:25 AM-10:25 AM CST)
 - Tom's "Ship it all". **Hub:** `fa1394b` adds `site/shared/tic-area.js` v1.1 (byte-identical to Elements'
   `e2585e8`) with a version-line test and a "Shared code" note; 258 of 259 tests passed on Edge, the one failure
@@ -48,9 +85,8 @@ and how the house bar rolls out are in `CLAUDE.md`.
   pass. Listening Post deployed (v2.0 backed up in `_backups/tic-nav-v2.0-2026-11-16/`). Hand
   deploys: Watchfloor, Title 10, Context, Listening Post. **Checked live** in clean headless Chrome:
   `TicNav.version` 2.1 with Relief and no page errors on the hub and 16 sites (all but Wake and PropertyCast).
-- **Still to go live:** Wake (its next deploy carries v1.4, the header fix and v2.1; PR 2 on its `main` needs its
-  data build first) and PropertyCast (its daily publish, about 4:20 AM CST 17 Nov; check its home page HTML).
-  Then remove the `*-tt14` worktrees and `hub-tictime`.
+- **Still to go live:** PropertyCast (its daily publish, about 4:20 AM CST 17 Nov; check its home page HTML). Wake
+  went live that evening, and every worktree but `propertycast-tt14` is gone (section above).
 
 ## Shared modules in the hub, and the move onto the new history (16 Nov 2026, about 8:20-8:40 AM CST)
 - **Main checkout moved onto the rewritten history:** `master` in `[local path]` was old
