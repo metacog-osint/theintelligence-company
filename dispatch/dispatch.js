@@ -75,7 +75,21 @@ export const JOBS = [
   // UTC (no minute is free in all of 04-09; 08:25 is Vis's) lands it in the early morning; a start with no new day
   // exits in a few minutes. Its CelesTrak and Space-Track steps run only on its own crons, so these hourly starts
   // don't repeat them. Public repo, so its minutes are free.
-  { repo: "metacog-osint/noise-floor", workflow: "daily.yml", ref: "main", minutes: [25], hours: [4, 5, 6, 7] },
+  { repo: "metacog-osint/noise-floor", workflow: "daily.yml", ref: "main", minutes: [25], hours: [4, 5, 6, 7] },  // Verdict's two daily jobs (17 Nov 2026). Its own crons (13:40, 14:15 UTC) fired 18:28 to 23:26 UTC on 8-16 Nov, so
+  // the "forecasts due" reminder meant for 8:15 AM CST arrived mid-afternoon. The calendar sync goes first, at 13:20
+  // (after Cordon's 13:10 run), the due check 55 minutes later. Public repo, so free. Each has a gate job that skips a
+  // scheduled run within 12 hours of a successful one (Verdict 7210d45).
+  { repo: "metacog-osint/verdict", workflow: "calendar-sync.yml", ref: "main", minutes: [20], hours: [13] },
+  { repo: "metacog-osint/verdict", workflow: "due.yml", ref: "main", minutes: [15], hours: [14] },
+  // The ESA ionosphere nowcast capture, once an hour (17 Nov 2026). ESA keeps only the current nowcast, and the GitHub
+  // cron's gaps of 6 to 10 hours (15-17 Nov) lost the hours between; the PC task that also captures it runs only
+  // while the PC is on. :25 every hour but 04-07 (Noisefloor's ADS-B day job) and 08 and 20 (Vis): :15 at 04, 05, 06,
+  // 08 and 20, :30 at 07. The script skips an hour it already holds, so a repeat start ends in under a minute and
+  // needs no gate. Public repo, so its minutes are free. Its own cron (:11, :41) is the fallback.
+  { repo: "metacog-osint/noise-floor-data", workflow: "ism-hourly.yml", ref: "main", minutes: [25],
+    hours: [0, 1, 2, 3, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 21, 22, 23] },
+  { repo: "metacog-osint/noise-floor-data", workflow: "ism-hourly.yml", ref: "main", minutes: [15], hours: [4, 5, 6, 8, 20] },
+  { repo: "metacog-osint/noise-floor-data", workflow: "ism-hourly.yml", ref: "main", minutes: [30], hours: [7] },
 ];
 
 // The jobs due at this minute. The caller passes the cron's slot time, not when it woke, so a late start still

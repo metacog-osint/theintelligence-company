@@ -52,7 +52,7 @@ test("COP's watchdog runs every three hours at :00, apart from COP's build", () 
   assert.deepEqual(watch.minutes, [0]);
   assert.deepEqual(watch.hours, [1, 4, 7, 10, 13, 16, 19, 22]);
   assert.deepEqual(due(JOBS, at(0, 4)).map((j) => `${j.repo} ${j.workflow}`), ["metacog-osint/cop watch.yml"]);
-  assert.deepEqual(due(JOBS, at(0, 5)).map((j) => j.repo), []);
+  assert.deepEqual(due(JOBS, at(0, 6)).map((j) => j.repo), []);
   assert.deepEqual(due(JOBS, at(20, 4)).map((j) => j.workflow), ["build.yml"]);
 });
 
@@ -62,7 +62,7 @@ test("Vis runs twice a day, at 08:25 and 20:25 UTC", () => {
   assert.deepEqual(vis.minutes, [25]);
   assert.deepEqual(vis.hours, [8, 20]);
   assert.deepEqual(due(JOBS, at(25, 8)).map((j) => j.repo), ["metacog-osint/vis"]);
-  assert.deepEqual(due(JOBS, at(25, 9)).map((j) => j.repo), []);
+  assert.ok(!due(JOBS, at(25, 9)).some((j) => j.repo === "metacog-osint/vis"));
 });
 
 test("Headwind runs every six hours, at :50 past 03, 09, 15 and 21 UTC", () => {
@@ -113,7 +113,7 @@ test("due picks only the jobs for this minute", () => {
   assert.deepEqual(due(JOBS, at(5)).map((j) => j.repo), ["metacog-osint/elements"]);
   assert.deepEqual(due(JOBS, at(40)).map((j) => j.repo), ["metacog-osint/cordon"]);
   assert.deepEqual(due(JOBS, at(0)), []);
-  assert.deepEqual(due(JOBS, at(15, 4)), []);   // 03:15 is Orbit's GEO region since 16 Nov
+  assert.deepEqual(due(JOBS, at(15, 9)), []);   // 03:15 is Orbit's GEO region since 16 Nov
 });
 
 test("Orbit's GEO region starts at 03:15 and 15:15 UTC, over two hours from Orbit's update runs", () => {
@@ -214,7 +214,7 @@ test("Launch runs every six hours, at :15 past 01, 07, 13 and 19 UTC, after Orbi
   assert.deepEqual(la.minutes, [15]);
   assert.deepEqual(la.hours, [1, 7, 13, 19]);
   assert.deepEqual(due(JOBS, at(15, 7)).map((j) => j.repo), ["metacog-osint/launch"]);
-  assert.deepEqual(due(JOBS, at(15, 8)).map((j) => j.repo), []);
+  assert.ok(!due(JOBS, at(15, 8)).some((j) => j.repo === "metacog-osint/launch"));
 });
 
 test("Noisefloor's COSMIC-2 day job runs at :50 from 04 to 13 UTC, except Headwind's 09:50", () => {
@@ -255,4 +255,23 @@ test("Noisefloor's ADS-B day job runs at :25 from 04 to 07 UTC", () => {
   assert.deepEqual(dj.hours, [4, 5, 6, 7]);
   assert.deepEqual(due(JOBS, at(25, 4)).map((j) => j.workflow), ["daily.yml"]);
   assert.ok(!due(JOBS, at(25, 8)).some((j) => j.workflow === "daily.yml"));
+});
+
+test("Verdict's calendar sync starts at 13:20 UTC and its due check at 14:15", () => {
+  const sync = JOBS.find((j) => j.repo === "metacog-osint/verdict" && j.workflow === "calendar-sync.yml");
+  const dueJob = JOBS.find((j) => j.repo === "metacog-osint/verdict" && j.workflow === "due.yml");
+  assert.deepEqual([sync.ref, sync.minutes, sync.hours], ["main", [20], [13]]);
+  assert.deepEqual([dueJob.ref, dueJob.minutes, dueJob.hours], ["main", [15], [14]]);
+  assert.deepEqual(due(JOBS, at(20, 13)).map((j) => j.workflow), ["calendar-sync.yml"]);
+  assert.deepEqual(due(JOBS, at(15, 14)).map((j) => j.workflow), ["due.yml"]);
+});
+
+test("the ESA ionosphere capture starts once every UTC hour, in a slot no other job has", () => {
+  const ism = JOBS.filter((j) => j.repo === "metacog-osint/noise-floor-data");
+  assert.ok(ism.every((j) => j.workflow === "ism-hourly.yml" && j.ref === "main"));
+  const odd = { 4: 15, 5: 15, 6: 15, 7: 30, 8: 15, 20: 15 };
+  for (let h = 0; h < 24; h++) {
+    const starts = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55].filter((m) => due(ism, at(m, h)).length > 0);
+    assert.deepEqual(starts, [odd[h] ?? 25], `hour ${h}`);
+  }
 });
