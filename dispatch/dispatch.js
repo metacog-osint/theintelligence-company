@@ -70,6 +70,12 @@ export const JOBS = [
   // stations that post a day or two late. Public repo, so its minutes are free. Its own crons are the fallback; its
   // gate ends a start in about a minute when nothing new is posted.
   { repo: "metacog-osint/noise-floor", workflow: "ground-roti.yml", ref: "main", minutes: [30], hours: [9, 10, 11, 12, 13, 16, 22] },
+  // Noisefloor's ADS-B day job (17 Nov 2026, Tom's yes): adsb.lol posts day D at about 03:30 UTC on D+1, and GitHub's own
+  // crons (05:40, 12:40) fired at 12-14 UTC, so the day landed at 12:02-14:28 UTC on 1-16 Nov. :25 from 04 to 07
+  // UTC (no minute is free in all of 04-09; 08:25 is Vis's) lands it in the early morning; a start with no new day
+  // exits in a few minutes. Its CelesTrak and Space-Track steps run only on its own crons, so these hourly starts
+  // don't repeat them. Public repo, so its minutes are free.
+  { repo: "metacog-osint/noise-floor", workflow: "daily.yml", ref: "main", minutes: [25], hours: [4, 5, 6, 7] },
 ];
 
 // The jobs due at this minute. The caller passes the cron's slot time, not when it woke, so a late start still
