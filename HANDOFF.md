@@ -5,6 +5,33 @@ approved. Every finished dated section up to 13 Nov 2026 (Veterans Day planner, 
 tests, dispatch, the Vigil summary feed) is in `HISTORY.md`, moved verbatim on 14 Nov 2026. What each program is
 and how the house bar rolls out are in `CLAUDE.md`.
 
+## Light-page shell rollout: Cordon and Elements (16 Nov 2026, about 9:10-10:20 PM CST)
+- **Shared-header privacy fix** was already done by another session (hub `e6bbec0`, every site); nothing left.
+- **Cordon's Travel section: Tom chose a destination picker** (over one tab per government, or leaving it). Built in
+  `_worktrees/cordon-picker` (branch `layout/destination`) and **pushed on Tom's yes**: Cordon `cce422f` (picker:
+  one row per government for the chosen place, dates with the year, quick picks where two or more governments advise
+  against all travel to the whole country, every government's full list in a fold, open wider than 760 px) and
+  `d1efc08` (hub `tic-related.js` v1.0 for the chosen place only: no COP read until a place is picked). Update run
+  44009418472 succeeded. **Live** (headless Edge): phone Travel 8,506 px to 1,437; one read without cookies after a
+  pick, none at load; axe clean light and dark; no sideways scroll. Details in Cordon's `CLAUDE.md` (untracked).
+- **Elements pushed on Tom's yes** (`_worktrees/elements-shell`, branch `layout/shell`): `683f24c` (sections row: Alerts,
+  Weather, Quakes, Fires, Disasters, Sources; tables over 12 rows fold to 10 on phones, Cordon's rule) and `f1cdea2`
+  (Elsewhere today under the alerts, in the alerts' countries, strongest first). Update run 44016182065 succeeded.
+  **Live:** phone page 30,572 px before; now Alerts 4,113, Weather 7,394, Quakes 3,465, Fires 3,851, Disasters 2,718,
+  Sources 3,587; desktop 13,364; no read at load, one without cookies near the card. Axe: only the map's GDACS
+  marker icons (contrast, target size), already live before. Details in Elements' `CLAUDE.md` (untracked).
+- Shared files in both copied from the hub's `e6bbec0` blobs (LF), checked equal. Old-sha checks printed 0.
+- **Hub `tests/node_modules` was emptied** by something else during the session (about 10:20 PM CST; 0 entries). Run
+  `npm ci` in `tests/` before the hub tests. Live checks used Playwright 1.63.0 installed in this session's
+  scratchpad (`shell_check.js`: tab heights at 390 px, reads, axe, sideways scroll; works on any light page).
+- **Still to do, each on Tom's yes, one worktree per site:** Elsewhere today on Headwind and Watchfloor (Watchfloor's
+  website deploys by hand; add `https://cop.theintelligence.company` to `connect-src` on sites with a CSP); the
+  sections row on Headwind, Launch, Undertow and Wake (Wake's `main` carries PR 2 that needs its data build before any
+  deploy); then the rest of "C · Shell" (header row with a layer chip, one "today's reading" line, stat tiles). A
+  page with long tables wants Cordon's fold too. Check whether a busy session owns a site first (`ListAgents`; at
+  9:15 PM CST Headwind, Undertow and Launch sessions were busy).
+- Worktrees to remove once nothing else needs them: `_worktrees/cordon-picker`, `_worktrees/elements-shell`.
+
 ## Rollout follow-ups and suite work (16 Nov 2026, about 9:05-11:30 PM CST)
 - **Wake is live with the shared files** (Tom's "Yes, deploy Wake", about 9:30 PM CST). Live Wake had been its
   `81771dd` site with `6b5727a`'s tic-time.js, and Wake's `main` carries PR 2 (port calls, listed-IMO match), which
