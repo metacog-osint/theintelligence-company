@@ -302,6 +302,13 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   within the hour, and when today's file is under an hour old, so its own cron (`17 3,15 * * *`) ends in about a
   minute after a dispatched run. Over two hours from Orbit's update starts (:55 past 00, 06, 12, 18 UTC). Public
   repo, minutes free. No token change: `orbit` is already in the `tic-dispatch` token's repository access.
+- **Verdict and the ESA ionosphere capture join (17 Nov 2026, measured on every repo with a `schedule:`):** Verdict
+  `calendar-sync.yml` at 13:20 and `due.yml` at 14:15 UTC (their crons began 18:28-23:26 UTC on 8-16 Nov; each has a
+  12-hour gate job, Verdict `7210d45`). noise-floor-data `ism-hourly.yml` once an hour, at :25 (:15 at 04, 05, 06, 08
+  and 20; :30 at 07): ESA keeps only the current nowcast, the cron's gaps were 6 to 10 hours, and the script skips an
+  hour it holds, so it needs no gate. Both repos are public. `verdict` and `noise-floor-data` were added to the
+  `DISPATCH_TOKEN` token's repository access by Tom on 17 Nov 2026. Free slots are few: Elements and Cordon take :05,
+  :10, :35 and :40 every hour, and a test forbids two jobs in one hour and minute.
 - **COP's watchdog joins (14 Nov 2026):** COP `watch.yml` at :00 past 01, 04, 07, 10, 13, 16, 19 and 22 UTC. It
   fails, and GitHub mails the owner, when COP's build or a program has stopped (COP `tools/suite_watch.py`). Private
   repo, one job of well under a minute; its own cron (`47 */3`) is the fallback. No token change: `cop` is already
@@ -333,7 +340,7 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
 - Deploy: `.github/workflows/dispatch-deploy.yml` runs on a push to `master` that touches `dispatch/**` (or by hand),
   tests first (`node --test` in `dispatch/`, no network), then `wrangler deploy` and the secret upload, in
   PropertyCast's order. Hub repo secrets, set by Tom: `DISPATCH_TOKEN` (fine-grained, `tic-dispatch`; elements, cordon, cop, vis, blackout,
-  headwind, orbit, launch, noise-floor, undertow;
+  headwind, orbit, launch, noise-floor, undertow, verdict, noise-floor-data;
   Actions: read and write), `CLOUDFLARE_API_TOKEN` ("Edit Cloudflare Workers" template), `CLOUDFLARE_ACCOUNT_ID`. The
   `CLOUDFLARE_API_TOKEN` in this machine's environment sees Pages projects but not Workers, so it can't deploy this.
 - **`DISPATCH_TOKEN` expires 5 Nov 2027** (Tom, 5 Nov 2026). Before then Tom makes a new one the same way, runs
