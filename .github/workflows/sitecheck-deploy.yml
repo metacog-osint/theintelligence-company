@@ -1,0 +1,60 @@
+name: sitecheck-deploy
+# Tests and deploys the Cloudflare Worker in sitecheck/ (tic-sitecheck), which opens every Intelligence Company site in
+# a headless browser twice a day (Cloudflare Browser Run, Workers Paid). Results: https://tic-sitecheck.metacog.workers.dev/
+# Repo secrets, set by Tom:
+#   CLOUDFLARE_API_TOKEN    Cloudflare API token made from the "Edit Cloudflare Workers" template (shared with dispatch)
+#   CLOUDFLARE_ACCOUNT_ID   the Cloudflare account ID
+#   HC_SITECHECK_PING_URL   optional: a Healthchecks.io check's ping address (period 12 h, grace 1 h)
+on:
+  workflow_dispatch:
+  push:
+    branches: [master]
+    paths: ["sitecheck/**", "site/shared/tic-nav.js", ".github/workflows/sitecheck-deploy.yml"]
+permissions:
+  contents: read
+concurrency:
+  group: sitecheck-deploy
+  cancel-in-progress: false
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      HAS_SECRETS: ${{ secrets.CLOUDFLARE_API_TOKEN != '' && secrets.CLOUDFLARE_ACCOUNT_ID != '' }}
+      HAS_HC: ${{ secrets.HC_SITECHECK_PING_URL != '' }}
+    steps:
+      - name: Stop if a secret is missing
+        if: env.HAS_SECRETS != 'true'
+        run: echo "::error::Set CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID first (see the top of this file)"; exit 1
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: sitecheck/package-lock.json
+      - run: npm ci
+        working-directory: sitecheck
+      # The test also checks that every program in the house bar is checked, so a new program fails here until it
+      # is added to sites.js.
+      - name: Test
+        working-directory: sitecheck
+        run: node --test
+      - name: Deploy the Worker
+        uses: cloudflare/wrangler-action@v4
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          workingDirectory: sitecheck
+          command: deploy
+      - name: Upload the Healthchecks address
+        if: env.HAS_HC == 'true'
+        uses: cloudflare/wrangler-action@v4
+        env:
+          HC_PING_URL: ${{ secrets.HC_SITECHECK_PING_URL }}
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          workingDirectory: sitecheck
+          command: deploy
+          secrets: |
+            HC_PING_URL

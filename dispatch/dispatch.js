@@ -5,7 +5,8 @@
 // repos, 4-5 Nov 2026). So tic-dispatch starts each workflow in JOBS itself, through GitHub's workflow_dispatch API.
 //
 // The clock: tic-dispatch's own cron, every 5 minutes, since 14 Nov 2026. From 5 to 14 Nov it borrowed PropertyCast's
-// trigger Worker's clock through a service binding, because the free plan's 5 cron triggers were all in use.
+// trigger Worker's clock through a service binding, because the free plan's 5 cron triggers were all in use. The
+// account is on Workers Paid since 17 Nov 2026 (250 cron triggers, scheduled runs up to 15 minutes).
 //
 // To add a workflow: give it a `workflow_dispatch:` trigger, add a line to JOBS, add its repo to the token's
 // repository access, and push. Minutes are UTC and must be multiples of 5, the clock's step. `hours` is optional:
@@ -100,21 +101,70 @@ export function due(jobs, when) {
   return jobs.filter((j) => j.minutes.includes(m) && (!j.hours || j.hours.includes(h)));
 }
 
-// Start every due job. One failure doesn't stop the others; any failure is thrown at the end, so it shows as an
-// error in tic-dispatch's metrics and logs.
-export async function run(env, when, jobs = JOBS, fetcher = (...a) => fetch(...a)) {
+// Waits before the second and third tries of a start that failed in a way that can pass: GitHub busy (5xx), rate
+// limited (429) or the network. Scheduled runs may take up to 15 minutes on Workers Paid (17 Nov 2026), so a minute's
+// wait is safe. A refusal that names a setup fault (401 bad token, 404 no such workflow or no access, 422 no
+// workflow_dispatch trigger) is not retried: the same request would fail the same way.
+export const RETRY_DELAYS_MS = [15_000, 60_000];
+
+const sleepMs = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+// Start every due job, then report the tick to Healthchecks.io when HC_PING_URL is set. One failure doesn't stop the
+// others; any failure is thrown at the end, so it shows as an error in tic-dispatch's metrics and logs.
+//
+// The report: every tick pings the check, with or without jobs due, so the check also goes red when the clock itself
+// stops (a dead-man). A tick where a start failed after its retries pings /fail with the failures, so Healthchecks
+// emails Tom at once rather than nothing at all (the 15 Nov suite review: Vis's starts failed for four days unseen).
+// A failed ping never fails the tick.
+export async function run(env, when, jobs = JOBS, fetcher = (...a) => fetch(...a), { sleep = sleepMs, delays = RETRY_DELAYS_MS } = {}) {
   const list = due(jobs, when);
-  if (!list.length) return [];
-  if (!env.DISPATCH_TOKEN) throw new Error("DISPATCH_TOKEN is not set");
-  const results = await Promise.allSettled(list.map((j) => dispatch(env.DISPATCH_TOKEN, j, fetcher)));
   const failed = [];
-  results.forEach((r, i) => {
-    const name = `${list[i].repo} ${list[i].workflow}`;
-    if (r.status === "fulfilled") console.log(`started ${name}`);
-    else failed.push(`${name}: ${r.reason && r.reason.message}`);
-  });
+  if (list.length) {
+    if (!env.DISPATCH_TOKEN) {
+      failed.push("DISPATCH_TOKEN is not set");
+    } else {
+      const results = await Promise.allSettled(list.map((j) => withRetries(() => dispatch(env.DISPATCH_TOKEN, j, fetcher), sleep, delays)));
+      results.forEach((r, i) => {
+        const name = `${list[i].repo} ${list[i].workflow}`;
+        if (r.status === "fulfilled") console.log(`started ${name}${r.value > 1 ? ` (try ${r.value})` : ""}`);
+        else failed.push(`${name}: ${r.reason && r.reason.message}`);
+      });
+    }
+  }
+  await report(env.HC_PING_URL, when, list.length, failed, fetcher);
   if (failed.length) throw new Error(failed.join("; "));
   return list.map((j) => j.repo);
+}
+
+// Try fn, then once after each delay while the error is retryable. Resolves with the try that worked (1, 2 or 3).
+export async function withRetries(fn, sleep = sleepMs, delays = RETRY_DELAYS_MS) {
+  for (let tryNo = 1; ; tryNo++) {
+    try {
+      await fn();
+      return tryNo;
+    } catch (e) {
+      if (!e.retryable || tryNo > delays.length) {
+        if (tryNo > 1) e.message += ` (after ${tryNo} tries)`;
+        throw e;
+      }
+      await sleep(delays[tryNo - 1]);
+    }
+  }
+}
+
+// Ping Healthchecks.io: the check's address on success, /fail with the failures in the body otherwise. The address is
+// a secret (it lets anyone ping the check), so it is never logged.
+export async function report(url, when, due, failed, fetcher) {
+  if (!url) return;
+  const ok = !failed.length;
+  const body = ok
+    ? `${when.toISOString()} ${due} due, all started`
+    : `${when.toISOString()} ${failed.length} of ${due} failed to start:\n${failed.join("\n")}`;
+  try {
+    await fetcher(ok ? url : `${url.replace(/\/+$/, "")}/fail`, { method: "POST", body, headers: { "User-Agent": "tic-dispatch" } });
+  } catch (e) {
+    console.log(`Healthchecks ping failed: ${e && e.message}`);
+  }
 }
 
 export async function dispatch(token, job, fetcher) {
@@ -138,5 +188,7 @@ export async function dispatch(token, job, fetcher) {
   } catch {
     // no JSON body
   }
-  throw new Error(`HTTP ${r.status}${why ? ` (${why})` : ""}`);
+  const e = new Error(`HTTP ${r.status}${why ? ` (${why})` : ""}`);
+  e.retryable = r.status === 429 || r.status >= 500;
+  throw e;
 }

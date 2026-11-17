@@ -348,9 +348,30 @@ verbatim on 6 Nov 2026 and aren't auto-loaded.
   upload it. The Cloudflare token doesn't expire.
 - No public URL (`workers_dev = false`, `preview_urls = false`); only the binding reaches it. How a failed start
   shows up, the 5 Nov checks on GitHub's limits, and a local test without deploying: [`RUNBOOKS.md`](./RUNBOOKS.md).
+- **Retries and alerts (17 Nov 2026, Workers Paid, Tom's yes):** a start that fails with 429 or 5xx is tried again
+  after 15 s and 60 s; 401, 404 and 422 (setup faults) and a fetch that throws are not. Every tick pings the
+  Healthchecks.io check in the Worker secret `HC_PING_URL` (uploaded from the hub repo secret `HC_DISPATCH_PING_URL`);
+  a tick with a failed start pings `/fail` with the failures, so Healthchecks emails Tom, and a stopped clock goes red
+  as a dead-man. Workers Logs are on (7 days).
 - To add a workflow: give it `workflow_dispatch:`, add a `JOBS` line (minutes are multiples of 5, in a slot of its
   own; optional `hours` for less than hourly; a test checks no two jobs share an hour and minute), add its repo to
   the token's repository access, push.
+
+## Site check Worker (`sitecheck/`, Cloudflare Worker `tic-sitecheck`)
+- Built 17 Nov 2026 (Tom: "yes to all quick wins and all medium builds", after the move to Workers Paid). Twice a
+  day (05:10 and 17:10 UTC) it opens the hub and every program in the house bar, 19 pages, one at a time in Cloudflare
+  Browser Run (headless Chrome; about 2 of the 10 included browser-hours a month). A page fails when it doesn't answer
+  200, has an uncaught script error, doesn't mount the house bar (its scripts didn't run) or, where `sites.js` gives an
+  `expect` selector, its map or chart doesn't draw. Console errors and failed requests are kept as evidence only.
+- Results: public, read-only JSON at https://tic-sitecheck.metacog.workers.dev/ (the latest run) and `/history` (the
+  last 28 runs' summary), from KV namespace `tic-sitecheck`. A Healthchecks.io check (Worker secret `HC_PING_URL`,
+  from the hub repo secret `HC_SITECHECK_PING_URL`) gets a ping each run, or `/fail` with the failures.
+- Deploy: `.github/workflows/sitecheck-deploy.yml` on a push to `master` touching `sitecheck/**` or `tic-nav.js`.
+  Its test fails when a program in `tic-nav.js` isn't in `sites.js`: add the program's page (and its map selector,
+  from a headless run) when listing a new program.
+- Baseline 17 Nov 2026 (headless Edge from this laptop): all 19 loaded in under 4 s with the house bar; maps on COP,
+  Blackout, Orbit and Launch (MapLibre), Cordon and Elements (Leaflet); PropertyCast's chart is a canvas. Noisefloor,
+  Cordon and Elements each logged one 404 in the console.
 
 ## Veterans Day planner (`site/veterans/veterans-day/`, live since 8 Nov 2026)
 - **Live** at https://theintelligence.company/veterans/veterans-day/ (deployed about 4:45 PM CST 8 Nov 2026 from

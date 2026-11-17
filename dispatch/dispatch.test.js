@@ -1,7 +1,7 @@
 // Run with `node --test` in dispatch/. No network: fetch is replaced by a recorder.
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { JOBS, due, run, dispatch } from "./dispatch.js";
+import { JOBS, due, run, dispatch, withRetries } from "./dispatch.js";
 
 const at = (min, hour = 3) => new Date(Date.UTC(2026, 10, 6, hour, min));
 
@@ -274,4 +274,91 @@ test("the ESA ionosphere capture starts once every UTC hour, in a slot no other 
     const starts = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55].filter((m) => due(ism, at(m, h)).length > 0);
     assert.deepEqual(starts, [odd[h] ?? 25], `hour ${h}`);
   }
+});
+
+// Retries and the Healthchecks report (17 Nov 2026, Workers Paid). No real waits: sleep is replaced.
+const noSleep = { sleep: async () => {}, delays: [1, 2] };
+const oneJob = [{ repo: "o/a", workflow: "x.yml", ref: "main", minutes: [5] }];
+
+function sequence(statuses) {
+  const calls = [];
+  const fetcher = async (url, init) => {
+    calls.push({ url, init });
+    if (url.startsWith("https://hc.example")) return { status: 200, json: async () => ({}) };
+    const s = statuses[Math.min(calls.filter((c) => !c.url.startsWith("https://hc.example")).length - 1, statuses.length - 1)];
+    if (s === "net") throw new TypeError("network down");
+    return { status: s, json: async () => ({ message: "msg" }) };
+  };
+  return { calls, fetcher };
+}
+
+test("a 502 is retried and a later 204 counts as started", async () => {
+  const { calls, fetcher } = sequence([502, 204]);
+  const started = await run({ DISPATCH_TOKEN: "t" }, at(5), oneJob, fetcher, noSleep);
+  assert.deepEqual(started, ["o/a"]);
+  assert.equal(calls.length, 2);
+});
+
+test("a 429 is retried, and three failures report the tries", async () => {
+  const { calls, fetcher } = sequence([429, 503, 500]);
+  await assert.rejects(run({ DISPATCH_TOKEN: "t" }, at(5), oneJob, fetcher, noSleep), /o\/a x\.yml: HTTP 500 \(msg\) \(after 3 tries\)/);
+  assert.equal(calls.length, 3);
+});
+
+test("a setup fault (401, 404, 422) is not retried", async () => {
+  for (const s of [401, 404, 422]) {
+    const { calls, fetcher } = sequence([s]);
+    await assert.rejects(run({ DISPATCH_TOKEN: "t" }, at(5), oneJob, fetcher, noSleep));
+    assert.equal(calls.length, 1, `status ${s}`);
+  }
+});
+
+test("withRetries waits the given delays between tries", async () => {
+  const waits = [];
+  let n = 0;
+  const fn = async () => {
+    n++;
+    if (n < 3) throw Object.assign(new Error("busy"), { retryable: true });
+  };
+  assert.equal(await withRetries(fn, async (ms) => waits.push(ms), [15, 60]), 3);
+  assert.deepEqual(waits, [15, 60]);
+});
+
+test("a network error from fetch itself is not retried by dispatch, so it fails once", async () => {
+  // fetch throwing (DNS, reset) has no status; it is treated as a failure, reported, and left to the next slot's
+  // fallback cron, because a retry can't tell whether GitHub already accepted the start.
+  const { calls, fetcher } = sequence(["net"]);
+  await assert.rejects(run({ DISPATCH_TOKEN: "t" }, at(5), oneJob, fetcher, noSleep), /network down/);
+  assert.equal(calls.length, 1);
+});
+
+test("every tick pings Healthchecks when HC_PING_URL is set, even with nothing due", async () => {
+  const { calls, fetcher } = sequence([204]);
+  await run({ HC_PING_URL: "https://hc.example/ping/abc" }, at(0, 3), [], fetcher, noSleep);
+  assert.equal(calls.length, 1);
+  assert.equal(calls[0].url, "https://hc.example/ping/abc");
+  assert.match(calls[0].init.body, /0 due, all started/);
+});
+
+test("a failed start pings /fail with the failure, never the token", async () => {
+  const { calls, fetcher } = sequence([404]);
+  await assert.rejects(run({ DISPATCH_TOKEN: "s3cret", HC_PING_URL: "https://hc.example/ping/abc/" }, at(5), oneJob, fetcher, noSleep));
+  const ping = calls.find((c) => c.url.startsWith("https://hc.example"));
+  assert.equal(ping.url, "https://hc.example/ping/abc/fail");
+  assert.match(ping.init.body, /1 of 1 failed to start:\no\/a x\.yml: HTTP 404/);
+  assert.doesNotMatch(ping.init.body, /s3cret/);
+});
+
+test("a missing token on a due minute is reported to Healthchecks and still thrown", async () => {
+  const { calls, fetcher } = sequence([204]);
+  await assert.rejects(run({ HC_PING_URL: "https://hc.example/p" }, at(5), oneJob, fetcher, noSleep), /DISPATCH_TOKEN is not set/);
+  assert.equal(calls[0].url, "https://hc.example/p/fail");
+});
+
+test("a Healthchecks outage never fails the tick", async () => {
+  const fetcher = async (url) => {
+    if (url.startsWith("https://hc.example")) throw new TypeError("hc down");
+    return { status: 204, json: async () => ({}) };
+  };
+  assert.deepEqual(await run({ DISPATCH_TOKEN: "t", HC_PING_URL: "https://hc.example/p" }, at(5), oneJob, fetcher, noSleep), ["o/a"]);
 });
