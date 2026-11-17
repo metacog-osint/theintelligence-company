@@ -5,6 +5,7 @@ name: dispatch-deploy
 #   DISPATCH_TOKEN         fine-grained GitHub token: repositories elements and cordon only, Actions: read and write
 #   CLOUDFLARE_API_TOKEN   Cloudflare API token made from the "Edit Cloudflare Workers" template
 #   CLOUDFLARE_ACCOUNT_ID  the Cloudflare account ID
+#   HC_DISPATCH_PING_URL   optional: a Healthchecks.io check's ping address (period 5 min, grace 15 min)
 on:
   workflow_dispatch:
   push:
@@ -21,6 +22,7 @@ jobs:
     timeout-minutes: 10
     env:
       HAS_SECRETS: ${{ secrets.DISPATCH_TOKEN != '' && secrets.CLOUDFLARE_API_TOKEN != '' && secrets.CLOUDFLARE_ACCOUNT_ID != '' }}
+      HAS_HC: ${{ secrets.HC_DISPATCH_PING_URL != '' }}
     steps:
       - name: Stop if a secret is missing
         if: env.HAS_SECRETS != 'true'
@@ -49,3 +51,17 @@ jobs:
           command: deploy
           secrets: |
             DISPATCH_TOKEN
+      # Optional: the Healthchecks.io ping address (dispatch.js, report()). Without the repo secret this step is
+      # skipped and the Worker keeps whatever HC_PING_URL it has, or none.
+      - name: Upload the Healthchecks address
+        if: env.HAS_HC == 'true'
+        uses: cloudflare/wrangler-action@v4
+        env:
+          HC_PING_URL: ${{ secrets.HC_DISPATCH_PING_URL }}
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          workingDirectory: dispatch
+          command: deploy
+          secrets: |
+            HC_PING_URL

@@ -1,0 +1,28 @@
+name = "tic-sitecheck"
+main = "worker.js"
+compatibility_date = "2026-09-01"
+compatibility_flags = ["nodejs_compat"]   # @cloudflare/puppeteer needs it
+workers_dev = true     # public, read-only JSON at https://tic-sitecheck.metacog.workers.dev/ (and /history)
+preview_urls = false
+
+# Twice a day, 05:10 and 17:10 UTC (11:10 PM and 11:10 AM CST). 19 sites one at a time take about 2 minutes of
+# browser time, so about 2 of the 10 browser-hours a month Workers Paid includes. Cron count on the account after
+# this: tic-dispatch, propertycast-trigger, vigil-ingestion, wake-ais and this one (Workers Paid allows 250).
+[triggers]
+crons = ["10 5,17 * * *"]
+
+# Cloudflare Browser Run (headless Chrome).
+[browser]
+binding = "BROWSER"
+
+# The latest run and the last 28 runs' summary. Namespace created 17 Nov 2026.
+[[kv_namespaces]]
+binding = "RESULTS"
+id = "3b040a8e171844049bb71a7116e672aa"
+
+# Optional secret HC_PING_URL: a Healthchecks.io check's ping address (period 12 h, grace 1 h). Uploaded by
+# .github/workflows/sitecheck-deploy.yml from the hub repo secret HC_SITECHECK_PING_URL when that is set.
+
+# Workers Logs: one summary line a run. No visitor data: its only callers are the cron and readers of the JSON.
+[observability]
+enabled = true
