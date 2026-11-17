@@ -247,3 +247,12 @@ test("Noisefloor's ground ROTI day job runs at :30 from 09 to 13 UTC and at 16:3
   assert.deepEqual(due(JOBS, at(30, 8)).map((j) => j.repo), ["metacog-osint/undertow"]);
   assert.deepEqual(due(JOBS, at(30, 15)).map((j) => j.repo), []);
 });
+
+test("Noisefloor's ADS-B day job runs at :25 from 04 to 07 UTC", () => {
+  const dj = JOBS.find((j) => j.repo === "metacog-osint/noise-floor" && j.workflow === "daily.yml");
+  assert.equal(dj.ref, "main");
+  assert.deepEqual(dj.minutes, [25]);
+  assert.deepEqual(dj.hours, [4, 5, 6, 7]);
+  assert.deepEqual(due(JOBS, at(25, 4)).map((j) => j.workflow), ["daily.yml"]);
+  assert.ok(!due(JOBS, at(25, 8)).some((j) => j.workflow === "daily.yml"));
+});
