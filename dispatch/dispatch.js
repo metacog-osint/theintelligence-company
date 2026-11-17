@@ -39,6 +39,12 @@ export const JOBS = [
   { repo: "metacog-osint/orbit", workflow: "ledger.yml", ref: "main", minutes: [45],
     hours: [0, 2, 3, 4, 6, 7, 8, 10, 11, 12, 14, 15, 16, 18, 19, 20, 22, 23] },
   { repo: "metacog-osint/orbit", workflow: "ledger.yml", ref: "main", minutes: [55], hours: [1, 5, 9, 13, 17, 21] },
+  // Orbit's GEO region twice a day (16 Nov 2026, GEO move step 2): one Space-Track gp query for every object near
+  // GEO, on the account Orbit's update run and Noisefloor's daily run also use (gp at most once an hour). 03:15 and
+  // 15:15 UTC sit over two hours from Orbit's update starts (:55 past 00, 06, 12, 18), and geo.yml skips while
+  // either of the others made a gp query within the hour, or when today's file was pulled under an hour ago, so its
+  // own cron (03:17, 15:17) ends in about a minute after a dispatched run. Public repo, so its minutes are free.
+  { repo: "metacog-osint/orbit", workflow: "geo.yml", ref: "main", minutes: [15], hours: [3, 15] },
   // Launch every six hours (14 Nov 2026), 20 minutes after Orbit starts, since it reads Orbit's published snapshot.
   // Private repo: 4 short one-job runs a day. Its own cron (:11 every 6 h) is the fallback.
   { repo: "metacog-osint/launch", workflow: "update.yml", ref: "main", minutes: [15], hours: [1, 7, 13, 19] },
