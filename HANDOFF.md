@@ -53,6 +53,9 @@ and how the house bar rolls out are in `CLAUDE.md`.
 - **PropertyCast** still served tic-time v1.3 and tic-nav v2.0 at 9:10 PM CST, as expected. It was not published early:
   a manual `publish` run also sends push alerts (source health, aurora, spray windows). Check its home page HTML after
   the 4:20 AM CST 17 Nov run, then remove `propertycast-tt14`.
+  **Done 18 Nov, about 9:00 AM CST:** PropertyCast's daily `publish` ran (17 and 18 Nov); clean headless Chrome on
+  the home page shows TicTime 1.4, TicNav 2.1 with Relief, no `[local path]` in the HTML, no page errors.
+  `propertycast-tt14` removed and its three branches deleted (each on `origin/main` first). No rollout worktrees remain.
 - **Elements' first draw** (clean headless Chrome, three runs): long tasks after load 0.56-0.77 s in all, the longest
   0.32-0.40 s, 1,580 shapes, no errors; it was 1.8-2.4 s that morning and ~8 s before. Cordon: 0.30-0.53 s. tic-time
   v1.4 closed it; Leaflet's canvas renderer could trim the rest.
