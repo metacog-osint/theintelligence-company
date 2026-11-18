@@ -6,8 +6,8 @@ preview_urls = false
 
 # Its own clock since 14 Nov 2026 (Tom's yes). From 5 to 14 Nov PropertyCast's trigger Worker called tick() every
 # 5 minutes through a service binding; that binding is gone. Nothing stops a job starting twice in one slot, so only
-# one clock may run it. The account's cron triggers in use: PropertyCast 1, Vigil 1, this 1, Wake 1 (Workers Paid since
-# 17 Nov 2026 allows 250; the free plan allowed 5).
+# one clock may run it. Cron triggers are no longer scarce: Workers Paid (since 17 Nov 2026) allows 250 per account
+# (the free plan allowed 5), so count them from the Workers' configs when it matters rather than keeping a tally here.
 [triggers]
 crons = ["*/5 * * * *"]
 
