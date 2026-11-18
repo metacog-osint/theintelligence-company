@@ -115,6 +115,16 @@ test("phone, with the sections row: a link to a row the site draws later opens i
   } finally { await t.close(); }
 });
 
+test("a link to a folded row inside a closed <details> opens the details and the fold", async () => {
+  const t = await open(`<details id="lists"><summary>Every list</summary>${TABLE(40)}</details><div class="spacer"></div>`,
+    { phone: true, hash: "#r-31" });
+  try {
+    await t.page.waitForFunction(() => document.getElementById("r-31").offsetParent !== null);
+    assert.equal(await t.page.evaluate(() => document.getElementById("lists").open), true);
+    assert.equal(await visible(t.page), 40);
+  } finally { await t.close(); }
+});
+
 test("a table the site adds after load is folded too", async () => {
   const t = await open('<div id="slot"></div>');
   try {

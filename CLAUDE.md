@@ -51,7 +51,7 @@ checks, signed-in screenshots, link-preview image): [`RUNBOOKS.md`](./RUNBOOKS.m
 | `tic-area.js` | 1.1 | "My area" (all, US 48, a state, radius); dims, never hides. Elements and Cordon |
 | `tic-related.js` / `.css` | 1.0 | "Elsewhere today" from COP's `/data/agent/index.json`, one lazy read without cookies; rules in its header. Element in normal block flow; COP in `connect-src`. Labels: Unusual, Forecast, "<Program>'s judgment", As claimed |
 | `tic-tabs.js` / `.css` | 1.0 | Sections row: `<div data-tic-tabs>`, groups `<div id data-tab-label>`; one group at a time at ≤760 px; links, not ARIA tabs; `tic-tabs:show` for map redraws. Blackout and Orbit have their own |
-| `tic-fold.js` / `.css` | 1.0 | Long tables/lists: `data-tic-fold` ("10 15", phone/wide): first rows, "Show all N"; `data-tic-fold-find` at 25+; survives redraws; links open the row's fold and tic-tabs group |
+| `tic-fold.js` / `.css` | 1.1 | Long tables/lists: `data-tic-fold` ("10 15", phone/wide): first rows, "Show all N"; `data-tic-fold-find` at 25+; survives redraws; links open the row's fold and tic-tabs group |
 
 - Copy from a committed blob (`git show <sha>:site/shared/<file>`, LF; the main checkout has CRLF); keep version
   lines. Find copies with `git ls-tree -r origin/<main>` per repo, not a grep of D:.
