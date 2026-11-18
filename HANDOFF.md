@@ -7,11 +7,11 @@ Central. Each commit, push and deploy needs Tom's yes.
 ## Current state
 - **Shared files live everywhere:** tic-time 1.4, tic-nav 2.1 (with Relief) on the hub and every program site,
   PropertyCast included (checked 18 Nov). tic-area 1.1 on Elements and Cordon. tic-related 1.0 on Blackout, Cordon
-  (chosen place only), Elements, Headwind, Launch (Live tab) and Watchfloor (home page). tic-tabs 1.0 on
-  Cordon, Elements and Headwind.
-- **Wake's live site is not one commit:** `81771dd`'s site plus `main`'s three shared files. Wake's `main` carries PR 2
-  (port calls, listed-IMO match), which needs its data build before any deploy; the next deploy of `main` ships PR 2
-  and the shared-header comment fix together.
+  (chosen place only), Elements, Headwind, Launch (Live tab), Undertow (Overview), Wake (Traffic) and Watchfloor
+  (home page). tic-tabs 1.0 on Cordon, Elements, Headwind, Undertow and Wake.
+- **Wake deploys itself** (update workflow every 6 h and on each push to `main`; PortWatch stays a weekly by-hand
+  read). Port calls and the listed-IMO match are live. Wake's `CLAUDE.md` is 33.6 KB, far over the 12 KB cap: it
+  needs its own trim session.
 - **Dispatch and site check:** `tic-dispatch` on its own `*/5` cron, retries and Healthchecks alerts (Workers Paid,
   17 Nov); `tic-sitecheck` twice a day. Jobs in `dispatch/dispatch.js`.
 - **Main checkout** `[local path]` (`master`) may be behind origin; pull before working there.
@@ -21,10 +21,11 @@ Central. Each commit, push and deploy needs Tom's yes.
   Launch, Headwind and Wake: never push them.
 
 ## Open items
-1. **Light-page shell ("C · Shell"), each on Tom's yes, one worktree per site:** the sections row on Undertow and Wake
-   (Wake only after PR 2's data build). Launch keeps its own tab row; its phone folds and Elsewhere today
-   went live 18 Nov (`63762bb`, about 1:05 PM CST); then the header row (layer chip in the drawing's colour, one
-   "today's reading" line, stat tiles), with screenshots and Tom's yes on look and wording first. Pages with long
+1. **Light-page shell ("C · Shell"), each on Tom's yes, one worktree per site:** the sections row is done on every
+   light page (18 Nov: Undertow `6eeebf8`, Wake `03ae0bf`; Launch keeps its own tab row, `63762bb`), each with phone
+   folds and Elsewhere today. Axe failures already on a live site were fixed in the same commit (Undertow: Method's
+   links, matrix contrast; both: sideways tables made focusable regions). Next, the header row (layer chip in the
+   drawing's colour, one "today's reading" line, stat tiles), with screenshots and Tom's yes on look and wording first. Pages with long
    tables want Cordon's phone fold. Check no busy session owns a site first (`ListAgents`). Check script pattern:
    Playwright + axe in headless Edge, axe injected with `page.evaluate` (a `script-src 'self'` CSP refuses
    `addScriptTag`). Also proposed in the design review, not built: page titles "Name · The Intelligence Company".
@@ -40,7 +41,8 @@ Central. Each commit, push and deploy needs Tom's yes.
      `roads.js` edit), `hub-design`, `hub-notes-shell` (both merged), `.claude/worktrees/stoic-jemison-5b6dd1`
      (detached), `[local path]` (branch `veterans-day`, uncommitted files; never deploy from it); merged
      local branches `vetday-*`, `design/hub-preview`, `listing/wake`, `relief-listed-2`. From the shell rollout:
-     `_worktrees/cordon-picker`, `cordon-tabs`, `elements-shell`, `headwind-shell`, `watchfloor-shell`.
+     `_worktrees/cordon-picker`, `cordon-tabs`, `elements-shell`, `headwind-shell`, `watchfloor-shell`,
+     `launch-shell`, `undertow-shell`, `wake-shell` (all three pushed, clean).
 3. **Waiting on access:** Blackout's night lights (Tom accepting LAADS's data licence on Earthdata), then its drawing
    line; Launch's worldwide NOTAMs (FAA access).
 4. **When lanes arrive:** Elements' wording (next CAP countries: Canada ECCC Datamart, then Japan JMA; the radiation
