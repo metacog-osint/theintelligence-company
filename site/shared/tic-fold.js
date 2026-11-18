@@ -1,4 +1,4 @@
-/*! tic-fold.js v1.0 · The Intelligence Company: a long table or list shows its first rows and "Show all N" ·
+/*! tic-fold.js v1.1 · The Intelligence Company: a long table or list shows its first rows and "Show all N" ·
  *  canonical copy: the hub's site/shared/tic-fold.js (copy into each site with
  *  tic-fold.css; keep the version line).
  *
@@ -18,8 +18,8 @@
  *  sideways-scrolling box such as <div class="scroll">).
  *  A site that redraws the element (innerHTML on a filter or a refresh) needs nothing more: the fold re-applies,
  *  and an opened fold stays open. An element added later is found as well. A link to a row (#breakup-12345)
- *  opens the fold and, on a page with tic-tabs.js (load it first), the row's group, even when the site draws the
- *  row after the page has loaded. Printing shows every row. Without script, every row shows.
+ *  opens the fold, any closed <details> around it and, on a page with tic-tabs.js, the row's group, even when the
+ *  site draws the row after the page has loaded (1.1: the <details>, for Cordon's travel lists). Printing shows every row. Without script, every row shows.
  *  Hidden rows are display: none, so the browser's own find does not reach them; "Show all" is one press away and
  *  data-tic-fold-find searches every row.
  *  No inline styles, no HTML strings (works under style-src 'self'); nothing is stored. Nothing moves.
@@ -161,6 +161,7 @@
     var g = t.closest("[data-tab-label]");
     var tabs = g && g.parentElement && g.parentElement._ticTabs;
     if (tabs && g.hidden) tabs.show(g.id);
+    for (var d = t.closest("details"); d; d = d.parentElement && d.parentElement.closest("details")) d.open = true;
     t.scrollIntoView({ block: "start" });
     // Other folds above the row settle in this same frame; land on the row again once they have.
     requestAnimationFrame(function () { if (location.hash === h) t.scrollIntoView({ block: "start" }); });
@@ -196,6 +197,6 @@
     if (mq.addEventListener) mq.addEventListener("change", onChange); else if (mq.addListener) mq.addListener(onChange);
   }
 
-  window.TicFold = { version: "1.0", setup: setup, scan: scanNew };
+  window.TicFold = { version: "1.1", setup: setup, scan: scanNew };
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", start); else start();
 })();
