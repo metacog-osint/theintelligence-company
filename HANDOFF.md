@@ -5,6 +5,31 @@ approved. Every finished dated section up to 13 Nov 2026 (Veterans Day planner, 
 tests, dispatch, the Vigil summary feed) is in `HISTORY.md`, moved verbatim on 14 Nov 2026. What each program is
 and how the house bar rolls out are in `CLAUDE.md`.
 
+## Light-page shell rollout: Headwind and Watchfloor (18 Nov 2026, about 8:55-10:30 AM CST)
+- **Headwind pushed on Tom's "Yes, commit and push"** (`_worktrees/headwind-shell`, branch `layout/shell`): `b705cbe`
+  (Elsewhere today under "Watched countries side by side", the snapshot's `country_view` countries strongest first;
+  its links underlined, since Headwind strips link underlines and axe flagged the COP link) and `42b3c5a` (sections
+  row: Unusual, Prices, Countries, Sanctions, Rules and courts, Minerals, Dates and sources; phone folds of 10 for
+  lists and tables over 12, Cordon's rule; a duplicate heading id fixed). Update run 44339559592 passed. **Live**
+  (headless Edge): phone page 31,586 px before; now 1,721 / 3,259 / 3,093 / 9,470 / 6,944 / 3,338 / 4,586; no COP
+  read at load, one without cookies near the card (on a phone only once Countries is open); axe only issues live
+  before. The push was first refused because `main` moved (another session's `639ba8b`, a bot history commit);
+  re-fetched, rebased, re-checked. A rebase stopped once on a lock held by another git process; `--continue` finished
+  it. Details in Headwind's `CLAUDE.md` (main checkout, uncommitted, beside another session's uncommitted edits).
+- **Watchfloor pushed on the same yes** (`_worktrees/watchfloor-shell`, branch `layout/elsewhere`): `412568a`
+  (Elsewhere today on the home page under the conflict zones, newest day only; zone pages keep "From the suite").
+  Zones list GDELT FIPS codes, so `scripts/build_web.py` writes `web/data/fips_iso.json` for the card. CI passed.
+  **The website is not deployed yet** (by hand, needs Tom's yes: `python -I scripts/build_web.py`, then
+  `firebase deploy --only hosting:watchfloor --project context-484804`, from the worktree). Note in Watchfloor's
+  `CLAUDE.md` (main checkout, uncommitted). Watchfloor has no old-sha list (not in the history rewrite).
+- Shared files copied from the hub's `e6bbec0` blobs, checked equal in each commit. Old-sha check for Headwind: 0.
+- **Check script:** `shell_check.js` in this session's scratchpad (Playwright 1.63.0, axe-core, channel msedge;
+  opens the card's group on a phone before scrolling to it; injects axe with `page.evaluate`, since `addScriptTag`
+  is refused by a `script-src 'self'` CSP).
+- **Still to do, each on Tom's yes:** the sections row on Launch, Undertow and Wake (Wake's `main` carries PR 2,
+  which needs its data build before any deploy); then the rest of "C · Shell" (header row with a layer chip, one
+  "today's reading" line, stat tiles; screenshots and Tom's yes on look and wording first).
+
 ## Light-page shell rollout: Cordon and Elements (16 Nov 2026, about 9:10-10:20 PM CST)
 - **Shared-header privacy fix** was already done by another session (hub `e6bbec0`, every site); nothing left.
 - **Cordon's Travel section: Tom chose a destination picker** (over one tab per government, or leaving it). Built in
