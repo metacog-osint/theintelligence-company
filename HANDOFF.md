@@ -7,7 +7,8 @@ Central. Each commit, push and deploy needs Tom's yes.
 ## Current state
 - **Shared files live everywhere:** tic-time 1.4, tic-nav 2.1 (with Relief) on the hub and every program site,
   PropertyCast included (checked 18 Nov). tic-area 1.1 on Elements and Cordon. tic-related 1.0 on Blackout, Cordon
-  (chosen place only), Elements, Headwind and Watchfloor (home page). tic-tabs 1.0 on Cordon, Elements and Headwind.
+  (chosen place only), Elements, Headwind, Launch (Live tab) and Watchfloor (home page). tic-tabs 1.0 on
+  Cordon, Elements and Headwind.
 - **Wake's live site is not one commit:** `81771dd`'s site plus `main`'s three shared files. Wake's `main` carries PR 2
   (port calls, listed-IMO match), which needs its data build before any deploy; the next deploy of `main` ships PR 2
   and the shared-header comment fix together.
@@ -20,8 +21,9 @@ Central. Each commit, push and deploy needs Tom's yes.
   Launch, Headwind and Wake: never push them.
 
 ## Open items
-1. **Light-page shell ("C · Shell"), each on Tom's yes, one worktree per site:** the sections row on Launch, Undertow
-   and Wake (Wake only after PR 2's data build); then the header row (layer chip in the drawing's colour, one
+1. **Light-page shell ("C · Shell"), each on Tom's yes, one worktree per site:** the sections row on Undertow and Wake
+   (Wake only after PR 2's data build). Launch keeps its own tab row; its phone folds and Elsewhere today
+   went live 18 Nov (`63762bb`, about 1:05 PM CST); then the header row (layer chip in the drawing's colour, one
    "today's reading" line, stat tiles), with screenshots and Tom's yes on look and wording first. Pages with long
    tables want Cordon's phone fold. Check no busy session owns a site first (`ListAgents`). Check script pattern:
    Playwright + axe in headless Edge, axe injected with `page.evaluate` (a `script-src 'self'` CSP refuses
