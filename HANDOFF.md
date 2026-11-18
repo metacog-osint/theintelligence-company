@@ -19,8 +19,10 @@ and how the house bar rolls out are in `CLAUDE.md`.
 - **Watchfloor pushed on the same yes** (`_worktrees/watchfloor-shell`, branch `layout/elsewhere`): `412568a`
   (Elsewhere today on the home page under the conflict zones, newest day only; zone pages keep "From the suite").
   Zones list GDELT FIPS codes, so `scripts/build_web.py` writes `web/data/fips_iso.json` for the card. CI passed.
-  **The website is not deployed yet** (by hand, needs Tom's yes: `python -I scripts/build_web.py`, then
-  `firebase deploy --only hosting:watchfloor --project context-484804`, from the worktree). Note in Watchfloor's
+  **Website deployed by hand** on Tom's "Yes, deploy Watchfloor" (16:14 UTC, 10:14 AM CST), from the worktree
+  fast-forwarded to `main`'s `5fa2741` (another session's notes PR #6, `HANDOFF.md` only), HEAD and a clean tree
+  asserted, `build_web.py` then `firebase deploy --only hosting:watchfloor`. **Live** (headless Edge): files equal
+  the commit, `data/fips_iso.json` served, axe clean light and dark, one COP read without cookies. Note in Watchfloor's
   `CLAUDE.md` (main checkout, uncommitted). Watchfloor has no old-sha list (not in the history rewrite).
 - Shared files copied from the hub's `e6bbec0` blobs, checked equal in each commit. Old-sha check for Headwind: 0.
 - **Check script:** `shell_check.js` in this session's scratchpad (Playwright 1.63.0, axe-core, channel msedge;
