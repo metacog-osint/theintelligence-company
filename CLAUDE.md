@@ -3,21 +3,19 @@
 The company's home page (`theintelligence.company`, Firebase Hosting) and the canonical home of code shared by every
 Intelligence Company site (public repo `metacog-osint/theintelligence-company`, branch `master`).
 
-**Slimmed 18 Nov 2026** from 74 KB; full earlier text archived outside the repo
-(`D:\Projects\_ideas\archive\hub-CLAUDE-2026-11-18.md`). **Current state and open items:
-[`HANDOFF.md`](./HANDOFF.md)**, read it first. Dated history: [`HISTORY.md`](./HISTORY.md). Occasional procedures
-(Dispatch checks and local test, signed-in screenshots, link-preview image): [`RUNBOOKS.md`](./RUNBOOKS.md).
-Keep this file under 12 KB; state goes in `HANDOFF.md`. The repo is public: nothing private.
+**Slimmed 18 Nov 2026** (old text: `D:\Projects\_ideas\archive\hub-CLAUDE-2026-11-18.md`). **State and open items:
+[`HANDOFF.md`](./HANDOFF.md)**, read it first. History: `HISTORY.md`. Procedures (Dispatch
+checks, signed-in screenshots, link-preview image): [`RUNBOOKS.md`](./RUNBOOKS.md). Under 12 KB; state goes in `HANDOFF.md`. The repo is public: nothing private.
 
 ## Commands and deploy
 - Static files in `site/`, no build. Deploy (Tom's yes each time), from a clean checkout with HEAD asserted:
   `firebase deploy --only hosting:hub --project context-484804`. Pushing `master` runs the site checks and, for
   `dispatch/**` or `sitecheck/**` (or `tic-nav.js`), deploys those Workers; it doesn't deploy the hub site.
-- **Never deploy from `D:\Projects\tic-vetday`** or any `_worktrees\hub-*` copy (Antigravity did once, 10 Nov 2026,
-  and replaced the live hub). `GEMINI.md` points Gemini here.
+- **Never deploy from `D:\Projects\tic-vetday`** or any `_worktrees\hub-*` copy (one replaced the live hub, 10 Nov
+  2026). `GEMINI.md` points Gemini here.
 - Preview: `python tools/serve.py 5055` (applies `firebase.json` headers, real 404s). `firebase serve` skips headers.
 - Tests: `npm test` in `tests/` (`tests/README.md`; `npm ci` first if `node_modules` is empty, which has happened).
-  This machine has no Playwright Chromium: `$env:BROWSER_CHANNEL = "msedge"; npm test` (2-3 min). GitHub runs
+  This machine has no Playwright Chromium: `$env:BROWSER_CHANNEL = "msedge"; npm test` (5 min; rerun timeouts alone). GitHub runs
   `site-checks.yml` on pushes touching `site/`, `tests/`, `serve.py`, `firebase.json`; its `feeds` job checks live
   feeds and doesn't block. **When a rule here changes, change its test.**
 - Check lazy loads and timing in headless Edge (Playwright), not the hidden Browser pane.
@@ -53,6 +51,7 @@ Keep this file under 12 KB; state goes in `HANDOFF.md`. The repo is public: noth
 | `tic-area.js` | 1.1 | "My area" (all, US 48, a state, radius); dims, never hides. Elements and Cordon |
 | `tic-related.js` / `.css` | 1.0 | "Elsewhere today" from COP's `/data/agent/index.json`, one lazy read without cookies; rules in its header. Element in normal block flow; COP in `connect-src`. Labels: Unusual, Forecast, "<Program>'s judgment", As claimed |
 | `tic-tabs.js` / `.css` | 1.0 | Sections row: `<div data-tic-tabs>`, groups `<div id data-tab-label>`; one group at a time at ≤760 px; links, not ARIA tabs; `tic-tabs:show` for map redraws. Blackout and Orbit have their own |
+| `tic-fold.js` / `.css` | 1.0 | Long tables/lists: `data-tic-fold` ("10 15", phone/wide): first rows, "Show all N"; `data-tic-fold-find` at 25+; survives redraws; links open the row's fold and tic-tabs group |
 
 - Copy from a committed blob (`git show <sha>:site/shared/<file>`, LF; the main checkout has CRLF); keep version
   lines. Find copies with `git ls-tree -r origin/<main>` per repo, not a grep of D:.
