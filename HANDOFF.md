@@ -25,8 +25,8 @@ Central. Each commit, push and deploy needs Tom's yes.
    light page (18 Nov: Undertow `6eeebf8`, Wake `03ae0bf`; Launch keeps its own tab row, `63762bb`), each with phone
    folds and Elsewhere today. Axe failures already on a live site were fixed in the same commit (Undertow: Method's
    links, matrix contrast; both: sideways tables made focusable regions). Next, the header row (layer chip in the
-   drawing's colour, one "today's reading" line, stat tiles), with screenshots and Tom's yes on look and wording first. Pages with long
-   tables want Cordon's phone fold. Check no busy session owns a site first (`ListAgents`). Check script pattern:
+   drawing's colour, one "today's reading" line, stat tiles), with screenshots and Tom's yes on look and wording first. Long tables:
+   `tic-fold.js` 1.0 (18 Nov, Relief first; Cordon's own phone fold predates it), then the next long pages. Check no busy session owns a site first (`ListAgents`). Check script pattern:
    Playwright + axe in headless Edge, axe injected with `page.evaluate` (a `script-src 'self'` CSP refuses
    `addScriptTag`). Also proposed in the design review, not built: page titles "Name · The Intelligence Company".
 2. **Waiting on Tom:**

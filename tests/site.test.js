@@ -14,7 +14,7 @@ const NAV = ticNav();
 const OE = oe();
 const HTML_PAGES = { "index.html": INDEX, "404.html": NOT_FOUND };
 const SCRIPTS = Object.fromEntries(["site.js", "oe/oe.js", "shared/tic-nav.js", "shared/tic-time.js",
-  "shared/tic-related.js", "shared/tic-tabs.js", "shared/tic-area.js"]
+  "shared/tic-related.js", "shared/tic-tabs.js", "shared/tic-fold.js", "shared/tic-area.js"]
   .map((f) => [f, read("site/" + f)]));
 const byHref = (a, b) => a.href.localeCompare(b.href);
 const STATUS_WORDS = { live: "Live", beta: "Beta", invite: "Invite only" };
@@ -280,7 +280,7 @@ function localRefs() {
     for (const m of html.matchAll(/\s(?:href|src)="([^"]*)"/g)) add(page, m[1]);
   }
   for (const css of ["style.css", "oe/oe.css", "shared/tic-time.css", "shared/tic-nav.css", "shared/tic-related.css",
-    "shared/tic-tabs.css"]) {
+    "shared/tic-tabs.css", "shared/tic-fold.css"]) {
     for (const m of read("site/" + css).matchAll(/url\(\s*["']?([^"')]+)["']?\s*\)/g)) add(css, m[1]);
   }
   for (const icon of JSON.parse(read("site/site.webmanifest")).icons) add("site.webmanifest", icon.src);
@@ -337,8 +337,11 @@ test("the shared files' version lines match the versions they report", () => {
     "tic-related.js header vs TicRelated.version");
   assert.equal(/tic-tabs\.js v([\d.]+)/.exec(tabs)[1], /TicTabs = \{ version: "([\d.]+)"/.exec(tabs)[1],
     "tic-tabs.js header vs TicTabs.version");
+  const fold = SCRIPTS["shared/tic-fold.js"];
+  assert.equal(/tic-fold\.js v([\d.]+)/.exec(fold)[1], /TicFold = \{ version: "([\d.]+)"/.exec(fold)[1],
+    "tic-fold.js header vs TicFold.version");
   assert.match(SCRIPTS["shared/tic-area.js"], /^\/\*! tic-area\.js v\d+\.\d+ /, "tic-area.js version line");
-  for (const css of ["shared/tic-nav.css", "shared/tic-time.css", "shared/tic-related.css", "shared/tic-tabs.css"]) {
+  for (const css of ["shared/tic-nav.css", "shared/tic-time.css", "shared/tic-related.css", "shared/tic-tabs.css", "shared/tic-fold.css"]) {
     assert.match(read("site/" + css), /^\/\*! tic-[a-z]+\.css v\d+\.\d+/, css);
   }
 });

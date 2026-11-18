@@ -1,4 +1,4 @@
-// A stand-in program page for the shared page modules (tic-related.js, tic-tabs.js), served at a program's own address
+// A stand-in program page for the shared page modules (tic-related.js, tic-tabs.js, tic-fold.js), served at a program's own address
 // under a strict CSP with the house bar, the way the program sites serve them. Used by related.test.js and
 // tabs.test.js.
 // `body` is the page's <main> content; `modules` names the shared files to load after tic-nav.js ("tic-related",
@@ -56,7 +56,8 @@ export async function openModulePage(browser, { origin = "https://blackout.thein
     if (u.origin !== origin) { strays.push(u.href); return route.abort(); }
     const headers = { "content-security-policy": csp };
     const file = { "/tic-nav.js": "tic-nav.js", "/tic-nav.css": "tic-nav.css", "/tic-related.js": "tic-related.js",
-      "/tic-related.css": "tic-related.css", "/tic-tabs.js": "tic-tabs.js", "/tic-tabs.css": "tic-tabs.css" }[u.pathname];
+      "/tic-related.css": "tic-related.css", "/tic-tabs.js": "tic-tabs.js", "/tic-tabs.css": "tic-tabs.css",
+      "/tic-fold.js": "tic-fold.js", "/tic-fold.css": "tic-fold.css" }[u.pathname];
     if (u.pathname === "/") return route.fulfill({ headers, contentType: "text/html", body: PAGE({ body, modules }) });
     if (u.pathname === "/page.css") return route.fulfill({ headers, contentType: "text/css", body: PAGE_CSS });
     if (file) {
