@@ -8,7 +8,8 @@ Central. Each commit, push and deploy needs Tom's yes.
 - **Shared files live everywhere:** tic-time 1.4, tic-nav 2.1 (with Relief) on the hub and every program site,
   PropertyCast included (checked 18 Nov). tic-area 1.1 on Elements and Cordon. tic-related 1.0 on Blackout, Cordon
   (chosen place only), Elements, Headwind, Launch (Live tab), Undertow (Overview), Wake (Traffic) and Watchfloor
-  (home page). tic-tabs 1.0 on Cordon, Elements, Headwind, Undertow and Wake.
+  (home page). tic-tabs 1.0 on Cordon, Elements, Headwind, Undertow and Wake. tic-shell 1.0 (header row) on Elements,
+  Headwind, Orbit, Undertow and Wake (18 Nov, Tom's yes on look and wording from the Undertow screenshots).
 - **Wake deploys itself** (update workflow every 6 h and on each push to `main`; PortWatch stays a weekly by-hand
   read). Port calls and the listed-IMO match are live. Wake's `CLAUDE.md` is 33.6 KB, far over the 12 KB cap: it
   needs its own trim session.
@@ -24,8 +25,11 @@ Central. Each commit, push and deploy needs Tom's yes.
 1. **Light-page shell ("C · Shell"), each on Tom's yes, one worktree per site:** the sections row is done on every
    light page (18 Nov: Undertow `6eeebf8`, Wake `03ae0bf`; Launch keeps its own tab row, `63762bb`), each with phone
    folds and Elsewhere today. Axe failures already on a live site were fixed in the same commit (Undertow: Method's
-   links, matrix contrast; both: sideways tables made focusable regions). Next, the header row (layer chip in the
-   drawing's colour, one "today's reading" line, stat tiles), with screenshots and Tom's yes on look and wording first. Long tables:
+   links, matrix contrast; both: sideways tables made focusable regions). Header row (`tic-shell.css`): done on
+   Elements, Headwind, Orbit (chip and tiles; its "last 24 hours" card is its reading), Undertow and Wake; still to do
+   on Blackout, Cordon and Launch (busy sessions on 18 Nov) and Noisefloor. Each site writes its own reading sentence
+   from its data. Elements' GDACS map markers are 19×14 px, under the 24 px target size, and green alerts are only
+   counted in a table, so the "equivalent control" exception does not hold: a map decision for Tom. Long tables:
    `tic-fold.js` 1.0 (18 Nov, Relief first; Cordon's own phone fold predates it), then the next long pages. Check no busy session owns a site first (`ListAgents`). Check script pattern:
    Playwright + axe in headless Edge, axe injected with `page.evaluate` (a `script-src 'self'` CSP refuses
    `addScriptTag`). Also proposed in the design review, not built: page titles "Name · The Intelligence Company".

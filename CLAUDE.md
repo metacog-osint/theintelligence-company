@@ -18,7 +18,6 @@ checks, signed-in screenshots, link-preview image): [`RUNBOOKS.md`](./RUNBOOKS.m
   This machine has no Playwright Chromium: `$env:BROWSER_CHANNEL = "msedge"; npm test` (5 min; rerun timeouts alone). GitHub runs
   `site-checks.yml` on pushes touching `site/`, `tests/`, `serve.py`, `firebase.json`; its `feeds` job checks live
   feeds and doesn't block. **When a rule here changes, change its test.**
-- Check lazy loads and timing in headless Edge (Playwright), not the hidden Browser pane.
 
 ## Family and listing rules
 - Two houses: **The Intelligence Company** (analysis, warning, professional tools) and **Oddly Specific Studio**
@@ -52,6 +51,7 @@ checks, signed-in screenshots, link-preview image): [`RUNBOOKS.md`](./RUNBOOKS.m
 | `tic-related.js` / `.css` | 1.0 | "Elsewhere today" from COP's `/data/agent/index.json`, one lazy read without cookies; rules in its header. Element in normal block flow; COP in `connect-src`. Labels: Unusual, Forecast, "<Program>'s judgment", As claimed |
 | `tic-tabs.js` / `.css` | 1.0 | Sections row: `<div data-tic-tabs>`, groups `<div id data-tab-label>`; one group at a time at ≤760 px; links, not ARIA tabs; `tic-tabs:show` for map redraws. Blackout and Orbit have their own |
 | `tic-fold.js` / `.css` | 1.1 | Long tables/lists: `data-tic-fold` ("10 15", phone/wide): first rows, "Show all N"; `data-tic-fold-find` at 25+; survives redraws; links open the row's fold and tic-tabs group |
+| `tic-shell.css` | 1.0 | Header row: `<html data-tic-layer>`, `.tic-layer` chip in the drawing's colours (a test reads `oe.css`), `.tic-reading`, `.tic-tiles`; markup in its header |
 
 - Copy from a committed blob (`git show <sha>:site/shared/<file>`, LF; the main checkout has CRLF); keep version
   lines. Find copies with `git ls-tree -r origin/<main>` per repo, not a grep of D:.

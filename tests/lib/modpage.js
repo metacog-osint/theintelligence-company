@@ -1,4 +1,4 @@
-// A stand-in program page for the shared page modules (tic-related.js, tic-tabs.js, tic-fold.js), served at a program's own address
+// A stand-in program page for the shared page modules (tic-related.js, tic-tabs.js, tic-fold.js, tic-shell.css), served at a program's own address
 // under a strict CSP with the house bar, the way the program sites serve them. Used by related.test.js and
 // tabs.test.js.
 // `body` is the page's <main> content; `modules` names the shared files to load after tic-nav.js ("tic-related",
@@ -8,6 +8,8 @@
 import { read } from "./source.js";
 
 const COP = "https://cop.theintelligence.company";
+// Modules that are a stylesheet only (no script to load).
+const CSS_ONLY = new Set(["tic-shell"]);
 const CSP = "default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:";
 
 const PAGE = ({ body, modules }) => `<!doctype html><html lang="en"><head><meta charset="utf-8">
@@ -17,7 +19,7 @@ const PAGE = ({ body, modules }) => `<!doctype html><html lang="en"><head><meta 
 <header class="product"><p>A stand-in program</p></header>
 <main id="main">${body}</main>
 <footer class="product"><p>Footer</p></footer>
-<script src="/tic-nav.js"></script>${modules.map((m) => `<script src="/${m}.js"></script>`).join("")}</body></html>`;
+<script src="/tic-nav.js"></script>${modules.filter((m) => !CSS_ONLY.has(m)).map((m) => `<script src="/${m}.js"></script>`).join("")}</body></html>`;
 
 // A program's own colours, light and dark, named the way the modules read them (--line, --muted, --panel, --link).
 const PAGE_CSS = `:root { --bg: #ffffff; --panel: #ffffff; --line: #c9ced6; --muted: #4a5260; --link: #1a4fa0;
@@ -57,7 +59,7 @@ export async function openModulePage(browser, { origin = "https://blackout.thein
     const headers = { "content-security-policy": csp };
     const file = { "/tic-nav.js": "tic-nav.js", "/tic-nav.css": "tic-nav.css", "/tic-related.js": "tic-related.js",
       "/tic-related.css": "tic-related.css", "/tic-tabs.js": "tic-tabs.js", "/tic-tabs.css": "tic-tabs.css",
-      "/tic-fold.js": "tic-fold.js", "/tic-fold.css": "tic-fold.css" }[u.pathname];
+      "/tic-fold.js": "tic-fold.js", "/tic-fold.css": "tic-fold.css", "/tic-shell.css": "tic-shell.css" }[u.pathname];
     if (u.pathname === "/") return route.fulfill({ headers, contentType: "text/html", body: PAGE({ body, modules }) });
     if (u.pathname === "/page.css") return route.fulfill({ headers, contentType: "text/css", body: PAGE_CSS });
     if (file) {
