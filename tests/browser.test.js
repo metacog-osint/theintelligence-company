@@ -351,18 +351,17 @@ describe("the hub design (15 Nov 2026)", () => {
     } finally { await t.close(); }
   });
 
-  test("Work with us, How we work and About fold behind a summary line, and open with the keyboard", async () => {
+  test("How we work and About show in full without a click: no fold (Tom, 18 Nov 2026)", async () => {
     const t = await open();
     try {
-      for (const id of ["services", "standards", "about"]) {
-        const d = t.page.locator(`#${id} details.fold`);
-        assert.equal(await d.count(), 1, `#${id} has one fold`);
-        assert.equal(await d.getAttribute("open"), null, `#${id} starts folded`);
-        await t.page.locator(`#${id} details.fold > summary`).focus();
-        await t.page.keyboard.press("Enter");
-        assert.notEqual(await d.getAttribute("open"), null, `#${id} opens with Enter`);
+      for (const id of ["standards", "about"]) {
+        assert.equal(await t.page.locator(`#${id} details`).count(), 0, `#${id} has no fold`);
       }
-      assert.ok(await t.page.locator("#services .services-cta .btn").isVisible(), "the mail button stays outside the fold");
+      assert.ok(await t.page.locator("#standards ol.standards li").first().isVisible(), "the standards list shows");
+      const photo = t.page.locator("#about .about-photo img");
+      await photo.scrollIntoViewIfNeeded();
+      assert.ok(await photo.isVisible(), "the About photo shows");
+      assert.ok(await t.page.locator("#about .about-text p").first().isVisible(), "the About text shows");
       clean(t);
     } finally { await t.close(); }
   });

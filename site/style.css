@@ -99,8 +99,6 @@ h1 { font: 500 clamp(2.4rem, 4.4vw, 3.9rem)/1.04 var(--serif); letter-spacing: -
 .btn { display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; background: var(--btn); color: var(--btn-ink);
   text-decoration: none; font-weight: 500; border: 1px solid var(--btn); border-radius: 2px; }
 .btn:hover { color: var(--btn-ink); opacity: .9; }
-.btn-line { background: transparent; color: var(--ink); border-color: var(--ink); }
-.btn-line:hover { color: var(--acc); border-color: var(--acc); opacity: 1; }
 
 /* Today: COP's check of every program, then the latest lines */
 .today { padding-top: 72px; padding-bottom: 24px; }
@@ -202,24 +200,6 @@ figcaption { margin-top: 10px; font: 400 13px/1.45 var(--mono); color: var(--mut
 .wall:not(.moving) .wall-track { width: auto; }
 .wall:not(.moving) .wall-list { flex-wrap: wrap; white-space: normal; gap: 10px 28px; padding: 0 24px; max-width: 1200px; margin: 0 auto; }
 
-/* Work with us */
-/* Folded detail (15 Nov 2026): Work with us, How we work and About open from their summary line. */
-.fold > summary { cursor: pointer; list-style: none; display: inline-flex; gap: 10px; align-items: baseline; font-size: 18px;
-  font-weight: 500; padding: 6px 0; margin-bottom: 20px; }
-.fold > summary::-webkit-details-marker { display: none; }
-.fold > summary::before { content: "+"; font: 500 20px/1 "IBM Plex Mono", ui-monospace, monospace; color: var(--acc); width: 1em; flex: none; }
-.fold[open] > summary::before { content: "\2212"; }
-.band .fold > summary::before { color: var(--mark); }
-.services { border-top: 1px solid var(--rule); margin-top: 56px; padding-top: 72px; }
-.services .section-h { max-width: 18em; margin-bottom: 20px; }
-.services-lede { font-size: 18px; color: var(--body); max-width: 40em; margin-bottom: 44px; }
-.offer { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
-  gap: 32px 40px; margin-bottom: 44px; }
-.offer li { border-top: 2px solid var(--mark); padding-top: 18px; }
-.offer h3 { font: 500 24px/1.2 var(--serif); margin-bottom: 8px; }
-.offer p { color: var(--body); font-size: 16px; }
-.services-cta { display: flex; flex-wrap: wrap; gap: 14px 24px; align-items: center; }
-.services-cta p { color: var(--mut); font-size: 15px; }
 
 /* How we work */
 .band { background: var(--band); color: var(--band-ink); margin-top: 72px; padding: 56px 0 40px; }
