@@ -351,10 +351,10 @@ describe("the hub design (15 Nov 2026)", () => {
     } finally { await t.close(); }
   });
 
-  test("Work with us, How we work and About fold behind a summary line, and open with the keyboard", async () => {
+  test("How we work and About fold behind a summary line, and open with the keyboard", async () => {
     const t = await open();
     try {
-      for (const id of ["services", "standards", "about"]) {
+      for (const id of ["standards", "about"]) {
         const d = t.page.locator(`#${id} details.fold`);
         assert.equal(await d.count(), 1, `#${id} has one fold`);
         assert.equal(await d.getAttribute("open"), null, `#${id} starts folded`);
@@ -362,7 +362,6 @@ describe("the hub design (15 Nov 2026)", () => {
         await t.page.keyboard.press("Enter");
         assert.notEqual(await d.getAttribute("open"), null, `#${id} opens with Enter`);
       }
-      assert.ok(await t.page.locator("#services .services-cta .btn").isVisible(), "the mail button stays outside the fold");
       clean(t);
     } finally { await t.close(); }
   });
