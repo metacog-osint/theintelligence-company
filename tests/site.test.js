@@ -369,6 +369,13 @@ test("wording the notes rule out stays out (GNSS, Moorhead, Minnesota, 25-year)"
   }
 });
 
+test("the hub offers no paid work: no Work with us section, nav item or button (Tom, 18 Nov 2026: a personal project)", () => {
+  for (const [page, html] of Object.entries(HTML_PAGES)) {
+    assert.ok(!/id="services"|href="#services"/.test(html), `${page}: the Work with us section and its links are gone`);
+    assert.ok(!/work with us|tell us what you need|for every client|consulting/i.test(html), `${page}: no wording that offers work`);
+  }
+});
+
 test('"Fargo-Moorhead, ND/MN" is in the top bar and in both footers', () => {
   assert.match(/<div class="util">[\s\S]*?<\/div>/.exec(INDEX)[0], /Fargo-Moorhead, ND\/MN/);
   for (const [page, html] of Object.entries(HTML_PAGES)) assert.match(footerOf(html), /Fargo-Moorhead, ND\/MN/, page);
