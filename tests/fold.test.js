@@ -104,6 +104,8 @@ test("a table or list without a wrapper of its own is wrapped; a list keeps its 
       ["DIV", "u", "region", "Items: 30 items, in a window that scrolls"]]);
     assert.equal(await t.page.getByRole("list").count(), 1);
     assert.equal(await inView(t.page, "#u li", ".tic-fold-box:has(#u)"), 10);
+    const pad = await t.page.evaluate(() => [...document.querySelectorAll(".tic-fold-box")].map((b) => getComputedStyle(b).paddingLeft));
+    assert.deepEqual(pad, ["0px", "8px"], "a list stands off the border; a table's cells have their own padding");
   } finally { await t.close(); }
 });
 

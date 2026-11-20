@@ -12,6 +12,8 @@
    three quarters of the screen; the header row stays at its top. */
 .tic-fold-win { max-height: min(var(--tic-fold-h, 26em), 75vh); overflow-y: auto; border: 1px solid var(--tf-line);
   border-radius: 6px; }
+/* A list or cards (not a table, whose cells have their own padding) stand off the window's border. */
+.tic-fold-win:not(:has(> table)) { padding-inline: 8px; }
 .tic-fold-win thead th, .tic-fold-win thead td { position: sticky; top: 0; z-index: 1; }
 :where(.tic-fold-win) thead th, :where(.tic-fold-win) thead td { background: var(--tf-bg); box-shadow: 0 1px 0 var(--tf-line); }
 /* A link to a row lands just under the header row, not behind it. */
