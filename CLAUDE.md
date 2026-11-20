@@ -37,9 +37,8 @@ checks, signed-in screenshots, link-preview image): [`RUNBOOKS.md`](./RUNBOOKS.m
   Never say COP checks or verifies the programs; keep "in development" until COP ships scoring.
 - **Context vs Watchfloor is parked** (Tom, 1 Nov): don't raise it; leave "Watchfloor's predecessor" alone, and
   Watchfloor's noindex and ™ as they are. Wake stays "in development", unlinked, until its collectors are live.
-- Intel names come from watching and listening. Each product keeps its colours; every site carries the
-  house layer: footer (who, date, code and licence if public, terms, credits, Sources), About (what, method, limits,
-  sources), time settings, house bar.
+- Intel names come from watching and listening. Each product keeps its colours; every site carries the house
+  layer: footer (who, date, code and licence if public, terms, credits, Sources), About, time settings, house bar.
 - Licences: Vigil and Noisefloor AGPL-3.0; Title 10, PropertyCast and Watchfloor have none: ask Tom before adding.
 
 ## Shared code (`site/shared/`; the hub also serves `/shared/` with open CORS)
@@ -50,19 +49,19 @@ checks, signed-in screenshots, link-preview image): [`RUNBOOKS.md`](./RUNBOOKS.m
 | `tic-area.js` | 1.1 | "My area" (all, US 48, a state, radius); dims, never hides. Elements and Cordon |
 | `tic-related.js` / `.css` | 1.0 | "Elsewhere today" from COP's `/data/agent/index.json`, one lazy read without cookies; rules in its header. Element in normal block flow; COP in `connect-src`. Labels: Unusual, Forecast, "<Program>'s judgment", As claimed |
 | `tic-tabs.js` / `.css` | 1.0 | Sections row: `<div data-tic-tabs>`, groups `<div id data-tab-label>`; one group at a time at ≤760 px; links, not ARIA tabs; `tic-tabs:show` for map redraws. Blackout and Orbit have their own |
-| `tic-fold.js` / `.css` | 1.1 | Long tables/lists: `data-tic-fold` ("10 15", phone/wide): first rows, "Show all N"; `data-tic-fold-find` at 25+; survives redraws; links open the row's fold and tic-tabs group |
+| `tic-fold.js` / `.css` | 2.0 | Long tables/lists (20 Nov rule): `data-tic-fold` ("10"; "6 12" phone/wide): a scrolling window that many rows tall, sticky `thead`, "Show all N"; rows stay in the page; wraps unless a `<div>`'s only child; `data-tic-fold-find` at 25+; `#row` links scroll to the row |
 | `tic-shell.css` | 1.0 | Header row: `<html data-tic-layer>`, `.tic-layer` chip in the drawing's colours (a test reads `oe.css`), `.tic-reading`, `.tic-tiles`; markup in its header |
 
 - Copy from a committed blob (`git show <sha>:site/shared/<file>`, LF; the main checkout has CRLF); keep version
   lines. Find copies with `git ls-tree -r origin/<main>` per repo, not a grep of D:.
 - Shared headers name no local path and no person: "canonical copy: the hub's site/shared/<file>".
 - **Rolling out:** a worktree per repo cut from origin, test locally, Tom's yes, rebase, push by sha, deploy the repo's
-  own way, check live (`TicTime.version`, `TicNav.version`, console). Stop preview servers with Stop-Process on their
-  node/esbuild PIDs, or they lock the worktree. Site quirks:
+  own way, check live (`TicTime.version`, `TicNav.version`, console). Stop preview servers' node/esbuild PIDs, or they
+  lock the worktree. Site quirks:
   - Title 10: deploy from a clean worktree (untracked `deploy/public/data/benefits-pack.json` must not ship); bump `sw.js` `VERSION`.
   - Noisefloor: commit with `FORBIDDEN_TERMS="$(cat <main>/private/forbidden_terms.txt)"`; run `python tools/build_site.py` for `?v=` hashes or CI skips the deploy.
   - PropertyCast inlines the bar at its daily publish (check home page HTML; `data-health` in `src/wx/dashboard.py`). A manual `publish` sends push alerts: don't.
-  - Context: `npx vercel --prod` with `.vercel/project.json` copied in (first run may error; retry). Vigil: Vercel on push. Watchfloor: `python -I scripts/build_web.py`, then `firebase deploy --only hosting:watchfloor --project context-484804`.
+  - Context: `npx vercel --prod` with `.vercel/project.json` copied in (retry a first-run error). Vigil: Vercel on push. Watchfloor: `python -I scripts/build_web.py`, then `firebase deploy --only hosting:watchfloor --project context-484804`.
   - Listening Post: no git; back up files first; `firebase deploy --only hosting`.
   - Wake: no deploy workflow; wrangler by hand; its `site/data/` isn't in git, so download the live data files first.
   - COP's `cop.css` offsets `.bar`/`.app` by `--tic-house-h`. Blackout's tests pin CSP origins and `data-health`.
