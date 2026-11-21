@@ -362,10 +362,6 @@
       } else if (sel.type === "group") {
         on = G[sel.key].layers.slice();
         chipsOn = G[sel.key].programs.slice();
-      } else if (sel.type === "step") {
-        var st = stepLights(sel.key);
-        on = st.on;
-        chipsOn = st.chips;
       } else if (sel.type === "zone") { zone = sel.key; on = ZONES[zone].layers.slice(); }
       else if (sel.type === "dzone") { dzone = sel.key; on = DZONES[dzone].layers.slice(); }
     }
@@ -401,7 +397,10 @@
   // ---------------------------------------------------------------- panel
   var CLOSE = '<button type="button" class="oe-x" data-close aria-label="Close">×</button>';
   function howHTML() {
-    return CLOSE + '<p class="oe-k">How to read</p><h3>One plate per layer, on the same ground</h3>' +
+    return CLOSE + '<p class="oe-k">How it works</p><ol class="oe-how">' +
+      '<li><span class="oe-n">1</span><span><b>Collect</b>One pipeline per program, on public, licence-checked feeds. Each program reaches every layer its sources touch.</span></li>' +
+      '<li><span class="oe-n">2</span><span><b>Analyze</b>Each layer against its own baseline, then every layer read together in the COP.</span></li>' +
+      '<li><span class="oe-n">3</span><span><b>Publish</b>Daily pictures, warnings and forecasts, with sources, methods and a public scorecard.</span></li></ol>' +
       '<p class="oe-sec">Each plate is one layer, registered to the same ground. The left column groups the layers by kind; the right column shows doctrine’s grouping of the same layers. A tag sits on a program’s home layer, and the vertical threads show how tips travel across layers: ' +
       (phone.matches ? "tap" : "select") + ' any plate, tag or thread to inspect it.</p>';
   }
@@ -514,54 +513,17 @@
   }
   function drawGuide() { if (guide) guide.innerHTML = guideHTML(); if (chipBar) chipBar.innerHTML = chipsHTML(); }
 
-  // ---------------------------------------------------------------- How it works (the steps beside the drawing)
-  // On wide screens the drawing stays in view while the steps scroll past; the step nearest the middle of the screen
-  // lights its layers and tags, unless the reader has pinned something. Phones show the steps as a plain list after
-  // the drawing. Without script they are plain text; with reduced motion the lighting still changes, without fading.
-  function live(p) { return p.status === "live" || p.status === "beta"; }
-  function stepLights(k) {
-    var out = PROGRAMS.filter(live);
-    if (k === "collect") return { on: [], chips: out.map(function (p) { return p.id; }) };
-    if (k === "compare") {
-      var hot = out.filter(function (p) { return p.unusual; });
-      if (!hot.length) return { on: LK.slice(), chips: [] };
-      var ls = [];
-      hot.forEach(function (p) { if (p.home && ls.indexOf(p.home) < 0) ls.push(p.home); });
-      return { on: ls, chips: hot.map(function (p) { return p.id; }) };
-    }
-    if (k === "combine") return { on: LK.slice(), chips: ["cop"] };
-    return { on: [], chips: ["cop", "verdict"] };
-  }
-  var steps = document.getElementById("oe-steps"), step = null;
-  function idle() { return step ? { type: "step", key: step } : null; }
-  function setStep(k) {
-    if (k === step) return;
-    step = k;
-    if (steps) steps.querySelectorAll(".oe-step").forEach(function (li) { li.classList.toggle("on", li.getAttribute("data-step") === k); });
-    if (!pinned) render(idle());
-  }
-  if (steps && "IntersectionObserver" in window) {
-    steps.classList.add("js");
-    var mid = new IntersectionObserver(function (es) {
-      es.forEach(function (e) { if (e.isIntersecting && !phone.matches) setStep(e.target.getAttribute("data-step")); });
-    }, { rootMargin: "-45% 0px -45% 0px" });
-    steps.querySelectorAll(".oe-step").forEach(function (li) { mid.observe(li); });
-    new IntersectionObserver(function (es) {
-      es.forEach(function (e) { if (!e.isIntersecting) setStep(null); });
-    }).observe(steps);
-  }
-
   // ---------------------------------------------------------------- state
   var pinned = null;
   function render(sel) {
     highlight(sel && sel.type !== "all" ? sel : null);
-    panel.innerHTML = !sel || sel.type === "step" ? howHTML() : sel.type === "all" ? allHTML() : sel.type === "layer" ? layerHTML(sel.key)
+    panel.innerHTML = !sel ? howHTML() : sel.type === "all" ? allHTML() : sel.type === "layer" ? layerHTML(sel.key)
       : sel.type === "program" ? programHTML(sel.key) : sel.type === "thread" ? threadHTML(sel.key)
       : sel.type === "group" ? groupHTML(sel.key) : zoneHTML(sel.key, sel.type === "dzone");
   }
   function pin(sel, open) {
     pinned = sel;
-    render(sel || idle());
+    render(sel);
     if (phone.matches) {
       var ls = !sel || sel.type === "all" ? [] : sel.type === "layer" ? [sel.key]
         : sel.type === "thread" ? THREADS[sel.key].layers : sel.type === "group" ? G[sel.key].layers
@@ -587,7 +549,7 @@
     var t = ev.target.closest(TARGETS);
     if (t) render(selFor(t));
   });
-  fig.addEventListener("pointerleave", function () { if (!pinned) render(idle()); });
+  fig.addEventListener("pointerleave", function () { if (!pinned) render(null); });
   fig.addEventListener("click", function (ev) {
     var t = ev.target.closest(TARGETS);
     if (!t) { if (pinned) pin(null, false); return; }
@@ -620,7 +582,7 @@
     var b = ev.target.closest("button[data-p],button[data-g]");
     if (b) render(b.hasAttribute("data-g") ? { type: "group", key: b.getAttribute("data-g") } : { type: "program", key: b.getAttribute("data-p") });
   });
-  if (guide) guide.addEventListener("pointerleave", function () { if (!pinned) render(idle()); });
+  if (guide) guide.addEventListener("pointerleave", function () { if (!pinned) render(null); });
   phone.addEventListener("change", function () { root.classList.remove("sheet"); fit(); render(pinned); });
 
   // ---------------------------------------------------------------- live counts (shared with site.js)
@@ -657,7 +619,7 @@
         P[h.id].unusual = a;
       });
       drawGuide();
-      render(pinned || idle());
+      render(pinned);
     }).catch(function () {});
   }
 
