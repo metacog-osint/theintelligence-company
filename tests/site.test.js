@@ -374,7 +374,7 @@ test('"Fargo-Moorhead, ND/MN" is in the top bar and in both footers', () => {
 
 test("each Latest item keeps its bold topic and a body for the feed to fill", () => {
   const items = [...INDEX.matchAll(/<article class="latest-item" id="(latest-[a-z]+)">([\s\S]*?)<\/article>/g)];
-  assert.deepEqual(items.map((m) => m[1]), ["latest-noisefloor", "latest-watchfloor", "latest-vigil", "latest-cop"]);
+  assert.deepEqual(items.map((m) => m[1]), ["latest-cop", "latest-noisefloor", "latest-watchfloor", "latest-vigil"]);
   for (const [, id, body] of items) {
     assert.match(body, /<p class="latest-meta">[^<]+<\/p>/, id);
     assert.match(body, /<b class="latest-topic">[^<]+:<\/b> <span class="latest-body">[^<]+<\/span>/, id);
