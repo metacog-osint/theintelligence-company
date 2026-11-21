@@ -280,6 +280,30 @@ describe("How the programs fit (the drawing and its guide)", () => {
       clean(t);
     } finally { await t.close(); }
   });
+
+  test("on a phone the closed sheet casts no shadow into view, and the open sheet keeps its shadow", async () => {
+    for (const colorScheme of ["light", "dark"]) {
+      const t = await open("/", { phone: true, colorScheme });
+      const shadow = () => t.page.evaluate(() => getComputedStyle(document.getElementById("oe-panel")).boxShadow);
+      const gone = () => t.page.waitForFunction(() => getComputedStyle(document.getElementById("oe-panel")).boxShadow === "none");
+      try {
+        assert.equal(await shadow(), "none", "closed at load");
+        await t.page.locator('#oe-chips .oe-chip[data-p="noisefloor"]').tap();
+        assert.match(await shadow(), /0px -?12px 40px/, "open after a tap");
+        await t.page.locator("#oe-panel [data-close]").tap();
+        await gone();
+        await t.page.evaluate(() => { const l = document.getElementById("layers"); l.classList.remove("top"); l.classList.add("sheet"); });
+        assert.match(await shadow(), /0px -12px 40px/, "open from the bottom");
+        await t.page.evaluate(() => document.getElementById("layers").classList.remove("sheet"));
+        await gone();
+        await t.page.evaluate(() => document.getElementById("layers").classList.add("top", "sheet"));
+        assert.match(await shadow(), /0px 12px 40px/, "open from the top");
+        await t.page.evaluate(() => document.getElementById("layers").classList.remove("sheet"));
+        await gone();
+        clean(t);
+      } finally { await t.close(); }
+    }
+  });
 });
 
 describe("the hub design (15 Nov 2026)", () => {

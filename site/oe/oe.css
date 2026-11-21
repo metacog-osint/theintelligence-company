@@ -198,10 +198,11 @@
   .oe-svg .chip-plan .ctx { display: none; }
   .oe-svg .chip-plan .ring { r: 7px; stroke-width: 2.2; }
   .oe-panel { position: fixed; left: 8px; right: 8px; bottom: 8px; z-index: 20; max-height: 62svh; overflow: auto; min-height: 0;
-    box-shadow: 0 -12px 40px rgba(0, 0, 0, .55); transform: translateY(calc(100% + 16px)); transition: transform .28s ease; border-color: #34486B; }
-  .oe.sheet .oe-panel { transform: none; }
-  .oe.top .oe-panel { bottom: auto; top: 8px; transform: translateY(calc(-100% - 16px)); box-shadow: 0 12px 40px rgba(0, 0, 0, .55); }
-  .oe.top.sheet .oe-panel { transform: none; }
+    transform: translateY(calc(100% + 16px)); transition: transform .28s ease, box-shadow 0s linear .28s; border-color: #34486B; }
+  /* The shadow only while open: parked off screen, it would still reach into view. On closing it goes after the slide. */
+  .oe.sheet .oe-panel { transform: none; box-shadow: 0 -12px 40px rgba(0, 0, 0, .55); transition: transform .28s ease; }
+  .oe.top .oe-panel { bottom: auto; top: 8px; transform: translateY(calc(-100% - 16px)); }
+  .oe.top.sheet .oe-panel { transform: none; box-shadow: 0 12px 40px rgba(0, 0, 0, .55); }
   .oe-x { display: block; }
   .oe-legend { font-size: 11px; }
 }
