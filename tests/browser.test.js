@@ -281,6 +281,33 @@ describe("How the programs fit (the drawing and its guide)", () => {
     } finally { await t.close(); }
   });
 
+  test("on a phone a sheet opened from the top sits below the house bar, and clears the screen when closed", async () => {
+    for (const colorScheme of ["light", "dark"]) {
+      const t = await open("/", { phone: true, colorScheme });
+      try {
+        await t.page.locator('#oe-chips .oe-chip[data-p="noisefloor"]').tap();
+        assert.ok(await t.page.locator("#layers.top.sheet").count(), "Noisefloor's sheet opens from the top");
+        await t.page.waitForFunction(() => getComputedStyle(document.getElementById("oe-panel")).transform === "none");
+        const shown = await t.page.evaluate(() => {
+          const bar = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--tic-house-h"));
+          const panel = document.getElementById("oe-panel"), x = panel.querySelector("[data-close]");
+          const r = x.getBoundingClientRect();
+          return { bar, top: panel.getBoundingClientRect().top, bottom: panel.getBoundingClientRect().bottom, vh: innerHeight,
+            onTop: x.contains(document.elementFromPoint(r.left + r.width / 2, r.top + 1)) };
+        });
+        assert.equal(shown.bar, 34);
+        assert.ok(shown.top >= shown.bar + 8, `the sheet starts below the bar (${shown.top})`);
+        assert.ok(shown.bottom <= shown.vh, "the sheet ends on screen");
+        assert.ok(shown.onTop, "the close button's top edge is not covered");
+        await t.page.locator("#oe-panel [data-close]").tap();
+        await t.page.waitForFunction(() => document.getElementById("oe-panel").getBoundingClientRect().top >= innerHeight);
+        await t.page.evaluate(() => document.getElementById("layers").classList.add("top"));
+        await t.page.waitForFunction(() => document.getElementById("oe-panel").getBoundingClientRect().bottom <= 0);
+        clean(t);
+      } finally { await t.close(); }
+    }
+  });
+
   test("on a phone the closed sheet casts no shadow into view, and the open sheet keeps its shadow", async () => {
     for (const colorScheme of ["light", "dark"]) {
       const t = await open("/", { phone: true, colorScheme });
