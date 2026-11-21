@@ -209,6 +209,26 @@ test("a link to a row inside a closed <details> opens the details and measures t
   } finally { await t.close(); }
 });
 
+// A site's own search hides rows with the hidden attribute (Noisefloor's Sources).
+test("rows the site marks hidden are left out of the count and the window, which follows them", async () => {
+  const t = await open(TABLE(40));
+  try {
+    const showFirst = (n) => t.page.$$eval("#t tbody tr", (rs, k) => rs.forEach((r, i) => { r.hidden = i >= k; }), n);
+    await showFirst(20);
+    await t.page.waitForFunction(() => document.querySelector(".tic-fold-more").textContent === "Show all 20");
+    assert.equal(await inPage(t.page), 20);
+    assert.equal(await inView(t.page), 10);
+    assert.match(await t.page.getAttribute(".scroll", "aria-label"), /: 20 rows, in a window/);
+    await showFirst(12);
+    await t.page.waitForFunction(() => !document.querySelector(".scroll").classList.contains("tic-fold-win"));
+    assert.equal(await t.page.locator(".tic-fold-more").isVisible(), false, "two over the window: no window");
+    await showFirst(40);
+    await t.page.waitForFunction(() => document.querySelector(".tic-fold-more").textContent === "Show all 40");
+    assert.equal(await inView(t.page), 10);
+    assert.deepEqual(t.errors, []);
+  } finally { await t.close(); }
+});
+
 test("a table the site adds after load gets the window too", async () => {
   const t = await open('<div id="slot"></div>');
   try {

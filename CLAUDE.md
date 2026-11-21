@@ -49,7 +49,7 @@ checks, signed-in screenshots, link-preview image): [`RUNBOOKS.md`](./RUNBOOKS.m
 | `tic-area.js` | 1.1 | "My area" (all, US 48, a state, radius); dims, never hides. Elements and Cordon |
 | `tic-related.js` / `.css` | 1.0 | "Elsewhere today" from COP's `/data/agent/index.json`, one lazy read without cookies; rules in its header. Element in normal block flow; COP in `connect-src`. Labels: Unusual, Forecast, "<Program>'s judgment", As claimed |
 | `tic-tabs.js` / `.css` | 1.0 | Sections row: `<div data-tic-tabs>`, groups `<div id data-tab-label>`; one group at a time at ≤760 px; links, not ARIA tabs; `tic-tabs:show` for map redraws. Blackout and Orbit have their own |
-| `tic-fold.js` / `.css` | 2.0 | Long tables/lists (20 Nov rule): `data-tic-fold` ("10"; "6 12" phone/wide): a scrolling window that many rows tall, sticky `thead`, "Show all N"; rows stay in the page; wraps unless a `<div>`'s only child; `data-tic-fold-find` at 25+; `#row` links scroll to the row |
+| `tic-fold.js` / `.css` | 2.1 / 2.0 | Long tables/lists: `data-tic-fold` ("10"; "6 12" phone/wide): a scrolling window that many rows tall, sticky `thead`, "Show all N"; rows stay in the page; `data-tic-fold-find` at 25+; `#row` links scroll to the row |
 | `tic-shell.css` | 1.0 | Header row: `<html data-tic-layer>`, `.tic-layer` chip in the drawing's colours (a test reads `oe.css`), `.tic-reading`, `.tic-tiles`; markup in its header |
 
 - Copy from a committed blob (`git show <sha>:site/shared/<file>`, LF; the main checkout has CRLF); keep version
@@ -63,7 +63,7 @@ checks, signed-in screenshots, link-preview image): [`RUNBOOKS.md`](./RUNBOOKS.m
   - PropertyCast inlines the bar at its daily publish (check home page HTML; `data-health` in `src/wx/dashboard.py`). A manual `publish` sends push alerts: don't.
   - Context: `npx vercel --prod` with `.vercel/project.json` copied in (retry a first-run error). Vigil: Vercel on push. Watchfloor: `python -I scripts/build_web.py`, then `firebase deploy --only hosting:watchfloor --project context-484804`.
   - Listening Post: no git; back up files first; `firebase deploy --only hosting`.
-  - Wake: no deploy workflow; wrangler by hand; its `site/data/` isn't in git, so download the live data files first.
+  - Wake: `update.yml` deploys on push to main.
   - COP's `cop.css` offsets `.bar`/`.app` by `--tic-house-h`. Blackout's tests pin CSP origins and `data-health`.
   - Context and Vigil compile CSS: test by injecting rules into the live page.
 
