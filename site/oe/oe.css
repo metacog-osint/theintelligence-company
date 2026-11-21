@@ -201,7 +201,8 @@
     transform: translateY(calc(100% + 16px)); transition: transform .28s ease, box-shadow 0s linear .28s; border-color: #34486B; }
   /* The shadow only while open: parked off screen, it would still reach into view. On closing it goes after the slide. */
   .oe.sheet .oe-panel { transform: none; box-shadow: 0 -12px 40px rgba(0, 0, 0, .55); transition: transform .28s ease; }
-  .oe.top .oe-panel { bottom: auto; top: 8px; transform: translateY(calc(-100% - 16px)); }
+  .oe.top .oe-panel { bottom: auto; top: calc(var(--tic-house-h, 0px) + 8px);
+    transform: translateY(calc(-100% - 16px - var(--tic-house-h, 0px))); }
   .oe.top.sheet .oe-panel { transform: none; box-shadow: 0 12px 40px rgba(0, 0, 0, .55); }
   .oe-x { display: block; }
   .oe-legend { font-size: 11px; }
