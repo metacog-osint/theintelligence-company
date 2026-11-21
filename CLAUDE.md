@@ -49,7 +49,7 @@ checks, signed-in screenshots, link-preview image): [`RUNBOOKS.md`](./RUNBOOKS.m
 | `tic-area.js` | 1.1 | "My area" (all, US 48, a state, radius); dims, never hides. Elements and Cordon |
 | `tic-related.js` / `.css` | 1.0 | "Elsewhere today" from COP's `/data/agent/index.json`, one lazy read without cookies; rules in its header. Element in normal block flow; COP in `connect-src`. Labels: Unusual, Forecast, "<Program>'s judgment", As claimed |
 | `tic-tabs.js` / `.css` | 1.0 | Sections row: `<div data-tic-tabs>`, groups `<div id data-tab-label>`; one group at a time at ≤760 px; links, not ARIA tabs; `tic-tabs:show` for map redraws. Blackout and Orbit have their own |
-| `tic-fold.js` / `.css` | 2.2 / 2.0 | Long tables/lists: `data-tic-fold` ("10"; "6 12" phone/wide): a scrolling window that many rows tall, sticky `thead`, "Show all N"; rows stay in the page; `data-tic-fold-find` at 25+; `#row` links scroll to the row |
+| `tic-fold.js` / `.css` | 2.3 / 2.0 | Long tables/lists: `data-tic-fold` ("10"; "6 12" phone/wide): a scrolling window that many rows tall, sticky `thead`, "Show all N"; rows stay in the page; `data-tic-fold-find` at 25+; `#row` links scroll to the row |
 | `tic-shell.css` | 1.0 | Header row: `<html data-tic-layer>`, `.tic-layer` chip in the drawing's colours (a test reads `oe.css`), `.tic-reading`, `.tic-tiles`; markup in its header |
 
 - Copy from a committed blob (`git show <sha>:site/shared/<file>`, LF; the main checkout has CRLF); keep version
