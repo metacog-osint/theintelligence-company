@@ -18,7 +18,6 @@
   var UNDERTOW_FEED = "https://undertow.theintelligence.company/data/feed.geojson"; // Cloudflare Pages too; read whole
   var WAKE_FEED = "https://wake.theintelligence.company/data/feed.geojson"; // Cloudflare Pages too; read whole
   var RELIEF_FEED = "https://relief.theintelligence.company/data/feed.geojson"; // Cloudflare Pages too; read whole
-  var VERDICT_SCORES = "https://metacog-osint.github.io/verdict/data/scores.json"; // Verdict's ledger counts (GitHub Pages)
 
   // Time: the Time button (it names the viewer's zone) and every <time data-tic>.
   var holder = document.getElementById("time-settings");
@@ -123,103 +122,6 @@
     });
     paintFresh();
   }).catch(function () { /* no line for these */ });
-  // Today: four numbers from COP's check of every program (design preview, 15 Nov 2026). The band stays hidden until
-  // they arrive, so a failed fetch shows nothing rather than empty tiles. Counts come from the feed, never from copy.
-  var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  function countUp(el, to, of) {
-    el.textContent = "";
-    var num = document.createTextNode(reduceMotion ? to.toLocaleString("en-US") : "0");
-    el.appendChild(num);
-    if (of != null) {
-      var small = document.createElement("small");
-      small.textContent = "of " + of;
-      el.appendChild(small);
-    }
-    if (reduceMotion || !to) return;
-    var t0 = null;
-    function step(t) {
-      if (t0 === null) t0 = t;
-      var k = Math.min(1, (t - t0) / 900);
-      num.nodeValue = Math.round(to * (1 - Math.pow(1 - k, 3))).toLocaleString("en-US");
-      if (k < 1) requestAnimationFrame(step);
-    }
-    requestAnimationFrame(step);
-  }
-  window.ticCopHealth.then(function (h) {
-    var progs = h.programs || [];
-    var box = document.getElementById("stats");
-    if (!progs.length || !box) return;
-    var sum = function (key) { return progs.reduce(function (a, p) { return a + (Number(p[key]) || 0); }, 0); };
-    var current = progs.filter(function (p) { return p.state === "fresh"; }).length;
-    var withUnusual = progs.filter(function (p) { return Number(p.anomalies) > 0; }).length;
-    box.hidden = false;
-    countUp(document.getElementById("st-fresh"), current, progs.length);
-    countUp(document.getElementById("st-placed"), sum("placed"));
-    countUp(document.getElementById("st-unusual"), sum("anomalies"));
-    countUp(document.getElementById("st-progs"), withUnusual, progs.length);
-    var when = document.getElementById("st-when"), t = Date.parse(h.generated_at || "");
-    if (when && !isNaN(t)) {
-      when.setAttribute("datetime", new Date(t).toISOString());
-      when.textContent = ago(t);
-      if (T) when.title = T.format(new Date(t).toISOString(), { year: true });
-      document.getElementById("stats-note").hidden = false;
-    }
-  }).catch(function () { /* the band stays hidden */ });
-  // Verdict's tile: forecasts registered on its ledger, and how many have settled. It shows only with the COP numbers,
-  // and only when Verdict answers; no score is shown, because a handful of settled forecasts says little.
-  Promise.all([window.ticCopHealth, getJSON(VERDICT_SCORES)]).then(function (r) {
-    var v = r[1] || {}, reg = Number(v.registered), done = Number(v.resolved);
-    var tile = document.getElementById("st-verdict-box");
-    if (!tile || !(reg >= 0) || !(done >= 0) || !((r[0] || {}).programs || []).length) return;
-    var dd = document.getElementById("st-verdict");
-    countUp(dd, reg);
-    var small = document.createElement("small");
-    small.textContent = done + " settled";
-    dd.appendChild(small);
-    tile.hidden = false;
-    document.getElementById("st-verdict-note").hidden = false;
-  }).catch(function () { /* no Verdict tile */ });
-
-  // Screenshot rail: the arrow buttons scroll one screenshot at a time; swiping and scrolling work without them.
-  var shots = document.getElementById("shots"), railBtns = document.getElementById("rail-btns");
-  if (shots && railBtns) {
-    var btns = railBtns.querySelectorAll("button");
-    var railEnds = function () {
-      var max = shots.scrollWidth - shots.clientWidth - 2;
-      btns[0].disabled = shots.scrollLeft <= 2;
-      btns[1].disabled = shots.scrollLeft >= max;
-      railBtns.hidden = max <= 0;
-    };
-    railBtns.addEventListener("click", function (ev) {
-      var b = ev.target.closest("button[data-dir]");
-      if (!b) return;
-      var first = shots.querySelector(".shot");
-      var stepPx = first ? first.getBoundingClientRect().width + 24 : shots.clientWidth;
-      shots.scrollBy({ left: Number(b.getAttribute("data-dir")) * stepPx, behavior: reduceMotion ? "auto" : "smooth" });
-    });
-    shots.addEventListener("scroll", railEnds, { passive: true });
-    window.addEventListener("resize", railEnds);
-    railEnds();
-  }
-
-  // Sources wall: without reduced motion, a second copy (hidden from screen readers, out of the tab order) makes the
-  // loop seamless, and Pause stops it. With reduced motion, or without script, it stays a still list.
-  var wall = document.getElementById("wall"), wallBtn = document.getElementById("wall-btn");
-  if (wall && wallBtn && !reduceMotion) {
-    var list = wall.querySelector(".wall-list");
-    var copy = list.cloneNode(true);
-    copy.setAttribute("aria-hidden", "true");
-    copy.querySelectorAll("a").forEach(function (a) { a.setAttribute("tabindex", "-1"); });
-    list.parentNode.appendChild(copy);
-    wall.classList.add("moving");
-    wallBtn.hidden = false;
-    wallBtn.addEventListener("click", function () {
-      var paused = wall.classList.toggle("paused");
-      wallBtn.textContent = paused ? "Play" : "Pause";
-      wallBtn.setAttribute("aria-pressed", String(paused));
-    });
-  }
-
   // Elements and Cordon: when their feed was last published.
   getModified(ELEMENTS_FEED).then(function (m) { setFresh("elements", m); }).catch(function () {});
   getModified(CORDON_FEED).then(function (m) { setFresh("cordon", m); }).catch(function () {});
