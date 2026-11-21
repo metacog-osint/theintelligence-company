@@ -19,6 +19,7 @@
   var WAKE_FEED = "https://wake.theintelligence.company/data/feed.geojson"; // Cloudflare Pages too; read whole
   var RELIEF_FEED = "https://relief.theintelligence.company/data/feed.geojson"; // Cloudflare Pages too; read whole
   var COP_POINTS = "https://cop.theintelligence.company/data/home-points.json"; // places of today's unusual findings
+  var COP_DIRECTION = "https://cop.theintelligence.company/data/direction.json"; // where concern is moving, and the record
 
   // Time: the Time button (it names the viewer's zone) and every <time data-tic>.
   var holder = document.getElementById("time-settings");
@@ -109,20 +110,31 @@
   window.ticCopHealth.then(function (h) {
     setFresh("cop", h.generated_at);
     var progs = h.programs || [];
-    var current = progs.filter(function (p) { return p.state === "fresh"; }).length;
-    var placed = progs.reduce(function (acc, p) { return acc + (Number(p.placed) || 0); }, 0);
-    var day = plainDay(h.generated_at);
-    if (progs.length) {
-      setItem("latest-cop", "COP" + (day ? " · " + day : ""),
-        current + " of " + progs.length + " program feeds up to date, with " + placed.toLocaleString("en-US") +
-        " findings placed on the map.");
-    }
     progs.forEach(function (p) {
       if (p.id === "context") setFresh("context", p.data_as_of);
       if (Number(p.fresh_hours) > 0) cycle[p.id] = Number(p.fresh_hours);
     });
     paintFresh();
   }).catch(function () { /* no line for these */ });
+  // COP's card: which places are moving against their own last two weeks, and Verdict's record as it stands. The
+  // sentence is COP's, written from its direction join. A failed read keeps the static line. Never a Brier score here.
+  function recordLine(r) {
+    if (!r || !r.resolved) return "";
+    var side = r.on_called_side === r.called ? "all " + r.called : r.on_called_side + " of " + r.called;
+    var line = "Forecast record: " + r.resolved + " scored, " + side + " on the side we called" +
+      (r.independent ? " (" + r.independent + " independent questions; skill is held until 30)." : ".");
+    if (r.last && r.last.title) {
+      line += " Last scored: " + r.last.title + ". We said " + Math.round(r.last.probability * 100) + "%, and it " +
+        (r.last.outcome === 1 ? "happened." : "did not happen.");
+    }
+    return line;
+  }
+  getJSON(COP_DIRECTION).then(function (d) {
+    var day = plainDay(d.generated_at);
+    setItem("latest-cop", "COP" + (day ? " · " + day : ""), d.summary);
+    var line = recordLine(d.record), el = document.getElementById("latest-record");
+    if (el && line) { el.textContent = line; el.hidden = false; }
+  }).catch(function () { /* keep the static line */ });
   // Elements and Cordon: when their feed was last published.
   getModified(ELEMENTS_FEED).then(function (m) { setFresh("elements", m); }).catch(function () {});
   getModified(CORDON_FEED).then(function (m) { setFresh("cordon", m); }).catch(function () {});

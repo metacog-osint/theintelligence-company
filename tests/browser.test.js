@@ -56,7 +56,8 @@ describe("Latest from the products", () => {
         body: "Zone Alpha drew 2.40 times its usual news coverage, the furthest above normal of any zone.", topic: "Conflict warning:" });
       assert.deepEqual(await latest(t.page, "vigil"), { meta: "Vigil · 6 Nov 2026", body: sample("VIGIL").brief, topic: "Cyber threats:" });
       assert.deepEqual(await latest(t.page, "cop"), { meta: "COP · 7 Nov 2026",
-        body: "5 of 6 program feeds up to date, with 1,594 findings placed on the map.", topic: "All layers:" });
+        body: sample("COP_DIRECTION").summary, topic: "Where concern is moving:" });
+      assert.match(await textOf(t.page, "#latest-record"), /^Forecast record: 8 scored, all 8 on the side we called \(3 independent questions; skill is held until 30\)\. Last scored: .+ We said 95%, and it happened\.$/);
       clean(t);
     } finally { await t.close(); }
   });
@@ -77,7 +78,7 @@ describe("Latest from the products", () => {
   });
 
   test("with every feed down, the page keeps its static lines, shows no Updated times, and works", async () => {
-    const down = Object.fromEntries(["NOISEFLOOR", "WATCHFLOOR", "VIGIL", "COP_HEALTH", "ELEMENTS_FEED", "CORDON_FEED", "VIS_FEED", "BLACKOUT_FEED", "HEADWIND_FEED", "ORBIT_FEED", "LAUNCH_FEED", "UNDERTOW_FEED", "WAKE_FEED", "RELIEF_FEED"].map((k) => [k, { abort: true }]));
+    const down = Object.fromEntries(["NOISEFLOOR", "WATCHFLOOR", "VIGIL", "COP_HEALTH", "COP_DIRECTION", "ELEMENTS_FEED", "CORDON_FEED", "VIS_FEED", "BLACKOUT_FEED", "HEADWIND_FEED", "ORBIT_FEED", "LAUNCH_FEED", "UNDERTOW_FEED", "WAKE_FEED", "RELIEF_FEED"].map((k) => [k, { abort: true }]));
     const t = await open("/", { feeds: down, allowFailedLoads: true });
     try {
       for (const id of Object.keys(STATIC)) {
@@ -106,7 +107,7 @@ describe("Latest from the products", () => {
     delete wf.entities.Z01.attention.ratio; // the top zone, which has an alarm, so its ratio is needed
     const t = await open("/", { feeds: {
       NOISEFLOOR: { json: {} }, WATCHFLOOR: { json: wf }, VIGIL: { body: "<html>Bad gateway</html>" },
-      COP_HEALTH: { json: { generated_at: "2026-11-07T17:30:00Z", programs: [] } },
+      COP_HEALTH: { json: { generated_at: "2026-11-07T17:30:00Z", programs: [] } }, COP_DIRECTION: { json: {} },
     } });
     try {
       for (const id of Object.keys(STATIC)) {
