@@ -105,8 +105,7 @@ checks, signed-in screenshots, link-preview image): [`RUNBOOKS.md`](./RUNBOOKS.m
   sources line, public documents only; actors described by role, never as hostile; PropertyCast off the drawing;
   every program with an `ask` in exactly one `GROUPS` band. Labels ≥ 9 px at 1440×900, none overlapping: run
   `tests/browser.test.js` after moving a tag or label, and leave a few units of room (CI rounds glyph widths).
-- Tags glow on COP-health anomalies; Today band from COP health and Verdict's `scores.json` (no Brier score); the
-  Sources wall follows each program's COP `attribution`.
+- Tags glow on COP-health anomalies. The hero map reads COP's `data/home-points.json`, never `today.geojson`.
 - Product lists in layer order (COP first; PropertyCast, Title 10, Listening Post last); `404.html` matches with
   absolute URLs. Product links open a new tab (`target="_blank" rel="noopener" aria-describedby="newtab"`, ending ↗).
 - Screenshots (`site/img/`): real site and data, signed in, header included; Tom signs in himself (`RUNBOOKS.md`).

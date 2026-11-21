@@ -310,6 +310,70 @@ describe("the hub design (15 Nov 2026)", () => {
   });
 });
 
+describe("the world map under the hero text", () => {
+  const marks = (page) => page.locator("#hero-map circle.hv-hit").count();
+
+  test("at desktop width it draws the land and one mark per grid cell, adds no text, and stays beside Latest", async () => {
+    for (const width of [1024, 1280, 1440, 1920]) {
+      const t = await open("/", { viewport: { width, height: 900 } });
+      try {
+        await t.page.waitForSelector("#hero-map circle.hv-hit");
+        assert.equal(await marks(t.page), 3, "two sample places share a cell");
+        assert.equal(await t.page.locator('#hero-map use[href="/img/world-dots.svg#land"]').count(), 1);
+        assert.equal(squash(await t.page.locator("#hero-map").textContent()), "");
+        assert.equal(await t.page.locator("#hero-map svg").getAttribute("aria-label"), "World map of today's unusual findings");
+        const fit = await t.page.evaluate(() => {
+          const box = (s) => document.querySelector(s).getBoundingClientRect();
+          const m = box("#hero-map"), l = box(".latest"), a = box(".hero-main .actions");
+          return { top: m.top - a.bottom, right: l.left - m.right, bottom: Math.abs(l.bottom - m.bottom), height: m.height };
+        });
+        assert.ok(fit.top >= 0 && fit.right > 0, `${width}: below the button and left of Latest`);
+        assert.ok(fit.bottom < 1, `${width}: ends level with the Latest box`);
+        assert.ok(fit.height >= 150, `${width}: at least 150 px tall`);
+        assert.equal(await sideways(t.page), 0);
+        clean(t);
+      } finally { await t.close(); }
+    }
+  });
+
+  test("on a phone it is hidden and fetches nothing", async () => {
+    const t = await open("/", { phone: true });
+    try {
+      assert.equal(await t.page.locator("#hero-map").isVisible(), false);
+      assert.equal(await t.page.locator("#hero-map svg").count(), 0);
+      const asked = await t.page.evaluate(() => performance.getEntriesByType("resource").map((r) => r.name));
+      assert.ok(!asked.some((u) => /world-dots|home-points/.test(u)), "neither map file is requested");
+      clean(t);
+    } finally { await t.close(); }
+  });
+
+  test("with COP's file down or broken it still shows the land, with no errors", async () => {
+    for (const spec of [{ abort: true }, { status: 503, body: "" }, { json: { points: "none" } }]) {
+      const t = await open("/", { feeds: { COP_POINTS: spec }, allowFailedLoads: true });
+      try {
+        assert.equal(await t.page.locator("#hero-map use").count(), 1);
+        assert.equal(await marks(t.page), 0);
+        assert.equal(await t.page.locator("#hero-map svg").getAttribute("aria-label"), "World map");
+        clean(t);
+      } finally { await t.close(); }
+    }
+  });
+
+  test("a bad place is skipped, and nothing on the map moves", async () => {
+    const t = await open("/", { feeds: { COP_POINTS: { json: { points: [["x", 1], [999, 0], [10, 85], [10, 20]] } } } });
+    try {
+      await t.page.waitForSelector("#hero-map circle.hv-hit");
+      assert.equal(await marks(t.page), 1);
+      const moving = await t.page.$$eval("#hero-map, #hero-map *", (els) => els.filter((e) => {
+        const c = getComputedStyle(e);
+        return c.animationName !== "none" || parseFloat(c.transitionDuration) > 0;
+      }).length);
+      assert.equal(moving, 0);
+      clean(t);
+    } finally { await t.close(); }
+  });
+});
+
 describe("house bar v2.0 on the hub", () => {
   test("the Programs menu marks freshness from the page's own COP health read, and offers every layer on COP", async () => {
     const t = await open();

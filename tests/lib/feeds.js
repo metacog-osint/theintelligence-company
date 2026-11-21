@@ -75,6 +75,12 @@ export const SHAPES = {
   WAKE_FEED: (f) => [need(isTime(f.generated_at), "generated_at: the Updated time")],
   // And Relief's (Cloudflare Pages; rebuilt every six hours).
   RELIEF_FEED: (f) => [need(isTime(f.generated_at), "generated_at: the Updated time")],
+  // COP's small file of places for the home page's world map (about 1.5 KB).
+  COP_POINTS: (d) => [
+    need(isTime(d.generated_at), "generated_at: when COP built the places"),
+    need(Array.isArray(d.points) && d.points.every((p) => Array.isArray(p) && isNum(p[0]) && isNum(p[1])),
+      "points: a list of [longitude, latitude]"),
+  ],
   // Verdict's ledger counts, for the Today band's Verdict tile (GitHub Pages, about 3 KB).
   VERDICT_SCORES: (v) => [
     need(Number.isInteger(v.registered) && v.registered >= 0, "registered: forecasts on the ledger, a whole number"),
@@ -91,7 +97,7 @@ export function problems(name, data) {
 // ---------------------------------------------------------------- samples
 
 const FILES = { NOISEFLOOR: "noisefloor-board.json", WATCHFLOOR: "watchfloor-summary.json", VIGIL: "vigil-summary.json",
-  COP_HEALTH: "cop-health.json", VIS_FEED: "vis-feed.json",
+  COP_HEALTH: "cop-health.json", COP_POINTS: "cop-home-points.json", VIS_FEED: "vis-feed.json",
   BLACKOUT_FEED: "blackout-feed.json", HEADWIND_FEED: "headwind-feed.json",
   ORBIT_FEED: "orbit-feed.json", LAUNCH_FEED: "launch-feed.json", UNDERTOW_FEED: "undertow-feed.json", WAKE_FEED: "wake-feed.json", RELIEF_FEED: "relief-feed.json",
   VERDICT_SCORES: "verdict-scores.json" };

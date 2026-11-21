@@ -18,6 +18,7 @@
   var UNDERTOW_FEED = "https://undertow.theintelligence.company/data/feed.geojson"; // Cloudflare Pages too; read whole
   var WAKE_FEED = "https://wake.theintelligence.company/data/feed.geojson"; // Cloudflare Pages too; read whole
   var RELIEF_FEED = "https://relief.theintelligence.company/data/feed.geojson"; // Cloudflare Pages too; read whole
+  var COP_POINTS = "https://cop.theintelligence.company/data/home-points.json"; // places of today's unusual findings
 
   // Time: the Time button (it names the viewer's zone) and every <time data-tic>.
   var holder = document.getElementById("time-settings");
@@ -188,4 +189,41 @@
     var day = plainDay(s.day);
     setItem("latest-watchfloor", "Watchfloor" + (day ? " · " + day + (s.partial ? ", so far" : "") : ""), text);
   }).catch(function () { /* keep the static line */ });
+
+  // The dotted world map beside Latest: land from a static file, an amber mark on each grid cell holding one of today's
+  // unusual findings. Drawn only where the hero has two columns, so a phone downloads neither file. Without COP's
+  // file it stays plain land. Nothing on it moves.
+  (function () {
+    var slot = document.getElementById("hero-map");
+    if (!slot) return;
+    var wide = window.matchMedia("(min-width: 960px)");
+    var COLS = 144, ROWS = 54, STEP = 2.5, TOP = 80;
+    function add(parent, name, attrs) {
+      var node = document.createElementNS("http://www.w3.org/2000/svg", name);
+      Object.keys(attrs).forEach(function (k) { node.setAttribute(k, attrs[k]); });
+      return parent.appendChild(node);
+    }
+    function mark(svg, points) {
+      var seen = {}, any = false;
+      (Array.isArray(points) ? points : []).forEach(function (p) {
+        if (!Array.isArray(p) || typeof p[0] !== "number" || typeof p[1] !== "number") return;
+        if (Math.abs(p[0]) > 180 || Math.abs(p[1]) > 90) return;
+        var col = Math.floor((p[0] + 180) / STEP) % COLS, row = Math.floor((TOP - p[1]) / STEP);
+        if (row < 0 || row >= ROWS || seen[col + "," + row]) return;
+        seen[col + "," + row] = any = true;
+        add(svg, "circle", { "class": "hv-ring", cx: col + 0.5, cy: row + 0.5, r: 1.5 });
+        add(svg, "circle", { "class": "hv-hit", cx: col + 0.5, cy: row + 0.5, r: 0.62 });
+      });
+      if (any) svg.setAttribute("aria-label", "World map of today's unusual findings");
+    }
+    function draw() {
+      if (!wide.matches || slot.firstChild) return;
+      var svg = add(slot, "svg", { viewBox: "0 0 " + COLS + " " + ROWS, role: "img", "aria-label": "World map",
+        preserveAspectRatio: "xMinYMid meet" });
+      add(svg, "use", { "class": "hv-land", href: "/img/world-dots.svg#land" });
+      getJSON(COP_POINTS).then(function (d) { mark(svg, d && d.points); }).catch(function () { /* land only */ });
+    }
+    draw();
+    if (wide.addEventListener) wide.addEventListener("change", draw);
+  })();
 })();
