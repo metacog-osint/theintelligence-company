@@ -198,6 +198,42 @@ test("phone, with the sections row: a link to a row the site draws later opens i
   } finally { await t.close(); }
 });
 
+// tic-fold lands on a linked row, then again one frame later. These act in that gap: the hashchange listener below
+// runs after tic-fold's own and before the next frame, so each case is exact rather than a matter of timing.
+const inTheGap = (page, hash, act) => page.evaluate(([hash, act]) => new Promise((done) => {
+  const row = document.getElementById(hash.slice(1));
+  addEventListener("hashchange", () => {
+    const landed = row.getBoundingClientRect().top;
+    if (act === "page") scrollTo(0, 0);
+    if (act === "window") document.querySelector(".tic-fold-box").scrollTop = 0;
+    if (act === "layout") {
+      document.documentElement.style.overflowAnchor = "none";  // so the browser doesn't hold the row in place itself
+      document.getElementById("above").style.height = "300px";
+    }
+    requestAnimationFrame(() => requestAnimationFrame(() => requestAnimationFrame(() => done({ landed,
+      top: row.getBoundingClientRect().top, y: scrollY, inner: document.querySelector(".tic-fold-box").scrollTop }))));
+  }, { once: true });
+  location.hash = hash;
+}), [hash, act]);
+
+test("after a link lands on a row, a reader who scrolls the page or the window in the next frame stays put", async () => {
+  for (const act of ["page", "window"]) {
+    const t = await open(`<div id="above"></div>${TABLE(40)}<div class="spacer"></div>`, { phone: true });
+    try {
+      const r = await inTheGap(t.page, "#r-33", act);
+      assert.equal(act === "page" ? r.y : r.inner, 0, `the ${act} stays where the reader put it`);
+    } finally { await t.close(); }
+  }
+});
+
+test("after a link lands on a row, a layout change above it in the next frame still lands on the row", async () => {
+  const t = await open(`<div id="above"></div>${TABLE(40)}<div class="spacer"></div>`, { phone: true });
+  try {
+    const r = await inTheGap(t.page, "#r-33", "layout");
+    assert.ok(Math.abs(r.top - r.landed) < 1, `row back at ${r.landed} (${r.top})`);
+  } finally { await t.close(); }
+});
+
 test("a link to a row inside a closed <details> opens the details and measures the window then", async () => {
   const t = await open(`<details id="lists"><summary>Every list</summary>${TABLE(40)}</details><div class="spacer"></div>`,
     { phone: true, hash: "#r-31" });
