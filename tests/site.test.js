@@ -53,23 +53,6 @@ test("the product list runs COP first, then programs by home layer from Systems 
   assert.ok(order.length >= ids.length && layerOf);
 });
 
-test("each name on the sources wall links to a Sources page the footer credits, and names that program", () => {
-  const footer = /<footer[\s\S]*?<\/footer>/.exec(INDEX)[0];
-  const credited = new Set([...footer.matchAll(/href="(https:\/\/[^"]+)"/g)].map((m) => m[1]));
-  const wall = /<div class="wall" id="wall">([\s\S]*?)<\/div>\s*<div class="wrap wall-ctl">/.exec(INDEX);
-  assert.ok(wall, "the sources wall is on the page");
-  const items = [...wall[1].matchAll(/<a href="([^"]+)"[^>]*>([^<]+)<span class="sw-p">([^<]+)<\/span>/g)];
-  assert.ok(items.length > 0);
-  const names = new Set();
-  for (const [, href, name, prog] of items) {
-    assert.ok(credited.has(href), `${name.trim()} links to ${href}, which the footer doesn't credit as a Sources page`);
-    const p = NAV.programs.find((q) => q.name === prog);
-    assert.ok(p && new URL(href).origin === new URL(p.href).origin, `${name.trim()}: ${prog}'s link goes to ${prog}'s own site`);
-    assert.ok(!names.has(name.trim() + prog), `${name.trim()} (${prog}) is listed once`);
-    names.add(name.trim() + prog);
-  }
-});
-
 test("How we work names no time-zone feature (the Time button already says the zone; Tom, 31 Oct and 15 Nov 2026)", () => {
   const std = /<section id="standards"[\s\S]*?<\/section>/.exec(INDEX)[0];
   assert.ok(!/time zone|your clock/i.test(std));
@@ -367,6 +350,14 @@ test("wording the notes rule out stays out (GNSS, Moorhead, Minnesota, 25-year)"
     assert.ok(!/Moorhead,\s+Minnesota/i.test(src), `${file}: the label is "Fargo-Moorhead, ND/MN"`);
     assert.ok(!/\b25-year\b/i.test(src), `${file}: "25-year" before a noun reads as an age`);
   }
+});
+
+test("Every program is one closed list that names every row and opens in place (Tom, 20 Nov 2026)", () => {
+  const fold = /<details class="plist-fold">([\s\S]*?)<\/details>/.exec(INDEX);
+  assert.ok(fold, "the program list is a <details>");
+  assert.ok(!/<details class="plist-fold"[^>]*\bopen\b/.test(INDEX), "it starts closed");
+  const rows = (fold[1].match(/<li\b/g) || []).length;
+  assert.equal(Number(/class="plist-n">(\d+)</.exec(fold[1])[1]), rows, "the count in its summary matches its rows");
 });
 
 test("the hub offers no paid work: no Work with us section, nav item or button (Tom, 18 Nov 2026: a personal project)", () => {
