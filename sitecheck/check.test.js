@@ -43,6 +43,13 @@ test("each way a visitor sees a broken page fails it, with the reason", () => {
   assert.equal(judge(mapSite, { ...good, probe: { ...good.probe, expect: true } }).ok, true);
 });
 
+test("Orbit's home page is checked for its Cesium globe, not the MapLibre map it moved to /launches", () => {
+  const orbit = SITES.find((s) => s.id === "orbit");
+  assert.equal(orbit.url, "https://orbit.theintelligence.company/");
+  assert.match(orbit.expect, /cesium-widget/);
+  assert.doesNotMatch(orbit.expect, /maplibregl/);
+});
+
 test("a page that never loaded reports only that, not a missing house bar", () => {
   const r = judge(mapSite, { error: "net::ERR_NAME_NOT_RESOLVED" });
   assert.equal(r.problems.length, 1);
