@@ -81,8 +81,8 @@
     { id: "cop", name: "COP", status: "beta", core: true, at: [652, 196],
       href: "https://cop.theintelligence.company", ask: "What stands out across every program today?",
       line: "The common operational picture: every layer's findings on one map, so a place or topic that turns up in more than one layer stands out. Outages are already read against hazards, notices and press attention in the same country; convergence scoring, checked by Verdict, is in development." },
-    { id: "verdict", name: "Verdict", status: "dev", core: true, at: [772, 196],
-      ask: "How accurate are the forecasts?",
+    { id: "verdict", name: "Verdict", status: "beta", core: true, at: [772, 196],
+      href: "https://metacog-osint.github.io/verdict/", ask: "How accurate are the forecasts?",
       line: "Logs every forecast and warning with the rule that will settle it, syncs the event calendar, and scores calibration in public." },
 
     { id: "watchfloor", name: "Watchfloor", status: "beta", home: "systems", reach: LK.slice(1), at: [800, 300],

@@ -29,7 +29,8 @@
  *    TicNav.minimize(bool)   minimizes (true) or restores (false) it, and remembers the choice
  *  v1.13 (15 Nov 2026): Wake (shipping through maritime chokepoints, beta) in the Programs menu.
  *
- *  v2.2 (23 Nov 2026): Listening Post leaves the public menu; "Other tools" becomes "Other projects".
+ *  v2.2 (23 Nov 2026): Listening Post leaves the public menu; "Other tools" becomes "Other projects"; Verdict (the
+ *  public forecast ledger) joins COP under "Every layer".
  *
  *  v2.1 (15 Nov 2026): Relief (humanitarian appeals and disease outbreaks, live) in the Programs menu, Human layer.
  *
@@ -59,6 +60,10 @@
       label: "Every layer · common operational picture",
       short: "Every layer's findings on one map, so places where more than one layer reports stand out.",
       long: "The common operational picture: every layer's findings on one map, so a place or topic that turns up in more than one layer stands out. Outages are already read against hazards, notices and press attention in the same country; convergence scoring, checked by Verdict, is in development." },
+    { id: "verdict", name: "Verdict", href: "https://metacog-osint.github.io/verdict/", status: "beta", group: "layers", layer: "all",
+      label: "Every layer · forecast ledger",
+      short: "Every forecast logged before its outcome, then scored; misses stay in.",
+      long: "Logs every forecast and warning with the rule that will settle it, syncs the event calendar, and scores calibration in public." },
     { id: "watchfloor", name: "Watchfloor", href: "https://watchfloor.theintelligence.company", status: "beta", group: "layers", layer: "systems",
       label: "Systems · conflict warning",
       short: "A daily warning picture for each watched conflict zone and topic.",

@@ -43,7 +43,7 @@ test("the product list runs COP first, then programs by home layer from Systems 
   assert.ok(ids.length > 0, "the product list's items carry data-product and data-layer");
   assert.equal(ids[0].id, "cop", "COP comes first");
   assert.equal(ids[0].layer, "all");
-  const rank = (l) => (OE.LK.indexOf(l) < 0 ? OE.LK.length : OE.LK.indexOf(l));
+  const rank = (l) => (l === "all" ? -1 : OE.LK.indexOf(l) < 0 ? OE.LK.length : OE.LK.indexOf(l)); // Verdict joins COP under "Every layer"
   const ranks = ids.slice(1).map((x) => rank(x.layer));
   assert.deepEqual(ranks, [...ranks].sort((a, b) => a - b), "programs follow the drawing's layer order");
   for (const x of ids.slice(1)) {
@@ -229,7 +229,7 @@ test("new-tab links end in ↗, and in-page links never do", () => {
 
 test("the footer credits every program's sources, and says which programs feed the Latest lines", () => {
   const foot = footerOf(INDEX);
-  const credited = links(foot).map((l) => new URL(l.attrs.href)).filter((u) => u.hostname.endsWith(".theintelligence.company"));
+  const credited = links(foot).map((l) => new URL(l.attrs.href)).filter((u) => u.hostname.endsWith(".theintelligence.company") || u.hostname === "metacog-osint.github.io"); // Verdict, until its suite address
   const hosts = credited.map((u) => u.hostname).sort();
   assert.deepEqual(hosts, NAV.programs.map((p) => new URL(p.href).hostname).sort(), "one Sources link per program in the house bar");
   const latest = [...INDEX.matchAll(/<article class="latest-item" id="latest-[a-z]+">\s*<p class="latest-meta">([^<]+)<\/p>/g)].map((m) => m[1]);

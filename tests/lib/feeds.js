@@ -93,8 +93,8 @@ export const SHAPES = {
     need(Number.isInteger(v.resolved) && v.resolved >= 0, "resolved: forecasts settled, a whole number"),
   ],
 };
-// The two GeoJSON feeds are read with HEAD only, for their Last-Modified header.
-export const HEAD_ONLY = ["ELEMENTS_FEED", "CORDON_FEED"];
+// The two GeoJSON feeds and Verdict's scores are read with HEAD only, for their Last-Modified header.
+export const HEAD_ONLY = ["ELEMENTS_FEED", "CORDON_FEED", "VERDICT_SCORES"];
 
 export function problems(name, data) {
   return SHAPES[name](data || {}).filter((r) => r !== true);
@@ -110,8 +110,9 @@ const FILES = { NOISEFLOOR: "noisefloor-board.json", WATCHFLOOR: "watchfloor-sum
 export function sample(name) {
   return JSON.parse(readFileSync(path.join(ROOT, "tests", "fixtures", FILES[name]), "utf8"));
 }
-// When the samples say Elements and Cordon last published.
-export const SAMPLE_MODIFIED = { ELEMENTS_FEED: "2026-11-07T13:00:00Z", CORDON_FEED: "2026-11-07T17:40:00Z" };
+// When the samples say Elements, Cordon and Verdict last published.
+export const SAMPLE_MODIFIED = { ELEMENTS_FEED: "2026-11-07T13:00:00Z", CORDON_FEED: "2026-11-07T17:40:00Z",
+  VERDICT_SCORES: "2026-11-07T17:00:00Z" };
 
 // Answer the hub's feed requests in a Playwright context. `feeds` overrides any feed by name with one of:
 //   { json }         a body to send as JSON          { body, status }  a raw body and status
