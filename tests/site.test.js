@@ -22,7 +22,7 @@ const STATUS_WORDS = { live: "Live", beta: "Beta", invite: "Invite only" };
 // ---------------------------------------------------------------- the program lists agree
 
 test("the home page's product list and the house bar list the same programs, names, links and statuses", () => {
-  const home = productList(INDEX).map((p) => ({ name: p.name, href: p.href, status: p.statusClass })).sort(byHref);
+  const home = productList(INDEX).filter((p) => !/data-offbar/.test(p.li)).map((p) => ({ name: p.name, href: p.href, status: p.statusClass })).sort(byHref);
   const bar = NAV.programs.map((p) => ({ name: p.name, href: p.href, status: p.status })).sort(byHref);
   assert.deepEqual(home, bar, "keep PROGRAMS in tic-nav.js in step with the product list in index.html");
 });
@@ -358,6 +358,14 @@ test("Every program is one closed list that names every row and opens in place (
   assert.ok(!/<details class="plist-fold"[^>]*\bopen\b/.test(INDEX), "it starts closed");
   const rows = (fold[1].match(/<li\b/g) || []).length;
   assert.equal(Number(/class="plist-n">(\d+)</.exec(fold[1])[1]), rows, "the count in its summary matches its rows");
+});
+
+test("reviewer front door: Listening Post is off the public lists, and the About wording holds (Tom, 21 Nov 2026)", () => {
+  for (const [page, html] of Object.entries(HTML_PAGES)) assert.ok(!/listening ?post/i.test(html), `${page}: no Listening Post`);
+  assert.ok(!NAV.programs.some((p) => p.id === "listeningpost"), "not in the house bar");
+  assert.ok(/about half his career as a signals intelligence \(SIGINT\)/.test(INDEX));
+  assert.ok(/on his own time from public sources, using no employer's methods or data/.test(INDEX));
+  assert.ok(/href="\/tagging\/"/.test(INDEX), "Start here links the tagging page");
 });
 
 test("the hub offers no paid work: no Work with us section, nav item or button (Tom, 18 Nov 2026: a personal project)", () => {

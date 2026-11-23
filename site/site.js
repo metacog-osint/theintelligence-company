@@ -59,7 +59,7 @@
   // calls below). The full time, in the viewer's zone and named, is in the tooltip. When that time is older than the
   // program's usual cycle (COP health's fresh_hours), the line adds "running late". It judges the same time the line
   // shows: COP's own state judges the newest data instead, and mixing the two read "Updated 2 min ago, running late".
-  // Programs without a feed (PropertyCast, Title 10, Listening Post) show nothing.
+  // Programs without a feed (PropertyCast, Title 10, the Veterans Day planner) show nothing.
   var fresh = {}, cycle = {};
   function isLate(k) { return cycle[k] > 0 && fresh[k] && (Date.now() - fresh[k].t) / 3600000 > cycle[k]; }
   function ago(t) {
