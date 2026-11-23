@@ -16,3 +16,4 @@ Rules that matter most:
   check the page at phone size.
 - Put a source and date on every claim, and say when something is unverified.
 - Add what you change to `HANDOFF.md` and the relevant README, so the next session (yours or Claude's) knows.
+- Work queue: read `[local path]` first (it does not load from inside this repo). Work from an issue on `metacog-osint/ideas`, write no prompt files, and ask Tom before every commit, push, PR, merge or deploy.
