@@ -18,8 +18,8 @@ export function probe(expect) {
   return {
     title: document.title || "",
     house_bar: !!document.querySelector(".tic-house"),
-    // A map library's container, then any canvas: MapLibre, Leaflet and OpenLayers all draw into one of these.
-    map: pick([".maplibregl-map", ".leaflet-container", ".ol-viewport", "canvas"]),
+    // A map library's container, then any canvas: MapLibre, Leaflet, OpenLayers and Cesium all draw into one of these.
+    map: pick([".maplibregl-map", ".leaflet-container", ".ol-viewport", ".cesium-widget", "canvas"]),
     expect: expect ? !!document.querySelector(expect) : null,
     text_chars: (document.body && document.body.innerText ? document.body.innerText.length : 0),
     load_ms: nav ? Math.round(nav.loadEventEnd || nav.domContentLoadedEventEnd || 0) : null,
