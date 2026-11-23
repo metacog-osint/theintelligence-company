@@ -1,7 +1,7 @@
 # Hub handoff (18 Nov 2026, about 11:45 AM CST)
 
 Read with `CLAUDE.md`. Current state and open items only; done items are deleted (git and `HISTORY.md` keep the
-record; the full 18 Nov text before slimming is in `D:\Projects\_ideas\archive\hub-HANDOFF-2026-11-18.md`). Times
+record; the full 18 Nov text before slimming is in the private planning notes). Times
 Central. Each commit, push and deploy needs Tom's yes.
 
 ## Current state
@@ -17,7 +17,7 @@ Central. Each commit, push and deploy needs Tom's yes.
   needs its own trim session.
 - **Dispatch and site check:** `tic-dispatch` on its own `*/5` cron, retries and Healthchecks alerts (Workers Paid,
   17 Nov); `tic-sitecheck` twice a day. Jobs in `dispatch/dispatch.js`.
-- **Main checkout** `D:\Projects\theintelligence-company` (`master`) may be behind origin; pull before working there.
+- **Main checkout** this repo (`master`) may be behind origin; pull before working there.
   Its untracked `.claude/` holds the design review (`design-review/`, published at
   https://claude.ai/artifact/HbqH9AaUvGSWiu1JXfW2V4), `launch.json` and an old notes patch.
 - **Old-history local branches** `tic-nav-v1.13` and `tic-nav-v2.0` remain in COP, Cordon, Elements, Undertow,
@@ -49,7 +49,7 @@ Central. Each commit, push and deploy needs Tom's yes.
      for the hash and salt wipe.
    - Leftover worktrees and branches (removing them is Tom's call): `_worktrees/hub-fort-meade` (uncommitted
      `roads.js` edit), `hub-design`, `hub-notes-shell` (both merged), `.claude/worktrees/stoic-jemison-5b6dd1`
-     (detached), `D:\Projects\tic-vetday` (branch `veterans-day`, uncommitted files; never deploy from it); merged
+     (detached), `../tic-vetday` (branch `veterans-day`, uncommitted files; never deploy from it); merged
      local branches `vetday-*`, `design/hub-preview`, `listing/wake`, `relief-listed-2`. From the shell rollout:
      `_worktrees/cordon-picker`, `cordon-tabs`, `elements-shell`, `headwind-shell`, `watchfloor-shell`,
      `launch-shell`, `undertow-shell`, `wake-shell` (all three pushed, clean).

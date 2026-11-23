@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Delete branches that are fully contained in origin/<default> (re-checked here), locally and on GitHub.
 # Never touches the default branch, the checked-out branch, or anything unmerged.
-cd "D:/Projects" || exit 1
+cd "$(dirname "$0")/../.." || exit 1
 for r in Vigil noise-floor PropertyCast; do
   git -C "$r" fetch -q --prune origin
   def=$(git -C "$r" symbolic-ref --short refs/remotes/origin/HEAD | sed 's|origin/||')
@@ -20,4 +20,4 @@ for r in Vigil noise-floor PropertyCast; do
   left=$(git -C "$r" for-each-ref --format='%(refname:short)' refs/heads refs/remotes/origin | grep -v -E "^origin$|origin/HEAD|^$def$|^origin/$def$" | tr '\n' ' ')
   echo "$r: deleted $nl local and ${#rem[@]} GitHub branches; still there: ${left:-none}"
 done
-rmdir "D:/Projects/_worktrees" 2>/dev/null && echo "removed empty D:/Projects/_worktrees"
+rmdir "_worktrees" 2>/dev/null && echo "removed empty ../_worktrees"
