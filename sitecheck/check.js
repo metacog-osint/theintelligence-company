@@ -20,7 +20,7 @@ export function judge(site, seen) {
   else if (seen.status !== 200) problems.push(`HTTP ${seen.status}`);
   if (!seen.error) {
     if (seen.page_errors && seen.page_errors.length) problems.push(`script error: ${seen.page_errors[0]}`);
-    if (seen.probe && !seen.probe.house_bar) problems.push("house bar missing (its scripts may not have run)");
+    if (site.house !== false && seen.probe && !seen.probe.house_bar) problems.push("house bar missing (its scripts may not have run)");
     if (site.expect && seen.probe && !seen.probe.expect) problems.push(`no ${site.expect} (the map or chart did not draw)`);
   }
   return {
