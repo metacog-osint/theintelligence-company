@@ -82,9 +82,9 @@ export function feedUrls() {
 
 // The "Every product" list (ul.plist) of a page: one entry per <li>.
 export function productList(html) {
-  const ul = /<ul class="plist">([\s\S]*?)<\/ul>/.exec(html);
-  if (!ul) throw new Error("no <ul class=\"plist\"> found");
-  return [...ul[1].matchAll(/<li([^>]*)>([\s\S]*?)<\/li>/g)].map((m) => {
+  const uls = [...html.matchAll(/<ul class="plist(?: plist-other)?">([\s\S]*?)<\/ul>/g)];
+  if (!uls.length) throw new Error("no <ul class=\"plist\"> found");
+  return [...uls.map((u) => u[1]).join("").matchAll(/<li([^>]*)>([\s\S]*?)<\/li>/g)].map((m) => {
     const a = m[2];
     const attr = (re) => (re.exec(a) || [])[1];
     const st = /<span class="p-st st-([a-z]+)">([^<]*)/.exec(a) || [];
