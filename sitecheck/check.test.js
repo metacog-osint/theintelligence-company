@@ -19,7 +19,19 @@ test("every program in the house bar, and the hub, is checked, once", () => {
   assert.equal(new Set(urls).size, urls.length, "no site twice");
   for (const h of hrefs) assert.ok(urls.includes(h), `${h} is in the house bar but not checked`);
   assert.ok(urls.includes("https://theintelligence.company/"));
-  for (const s of SITES) assert.match(s.url, /^https:\/\/([a-z0-9-]+\.)?theintelligence\.company\/$/);
+  for (const s of SITES.filter((x) => x.house !== false)) {
+    assert.match(s.url, /^https:\/\/([a-z0-9-]+\.)?theintelligence\.company\/$/);
+  }
+});
+
+test("Verdict is checked for its drawn board and is the only site excused from the house bar", () => {
+  const excused = SITES.filter((s) => s.house === false);
+  assert.deepEqual(excused.map((s) => s.id), ["verdict"]);
+  assert.ok(excused[0].expect, "an excused site must still prove it drew");
+  const noBar = { ...good, probe: { ...good.probe, house_bar: false, expect: true } };
+  assert.equal(judge(excused[0], noBar).ok, true);
+  assert.equal(judge(excused[0], { ...noBar, probe: { ...noBar.probe, expect: false } }).ok, false);
+  assert.equal(judge(site, noBar).ok, false);
 });
 
 test("a page that loads, runs its scripts and has no script error passes", () => {
