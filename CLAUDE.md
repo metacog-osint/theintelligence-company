@@ -3,7 +3,7 @@
 The company's home page (`theintelligence.company`, Firebase Hosting) and the canonical home of code shared by every
 Intelligence Company site (public repo `metacog-osint/theintelligence-company`, branch `master`).
 
-**Slimmed 18 Nov 2026** (old text: `D:\Projects\_ideas\archive\hub-CLAUDE-2026-11-18.md`). **State and open items:
+**Slimmed 18 Nov 2026** (old text: the private planning notes). **State and open items:
 [`HANDOFF.md`](./HANDOFF.md)**, read it first. History: `HISTORY.md`. Procedures (Dispatch
 checks, signed-in screenshots, link-preview image): [`RUNBOOKS.md`](./RUNBOOKS.md). Under 12 KB; state goes in `HANDOFF.md`. The repo is public: nothing private.
 
@@ -11,7 +11,7 @@ checks, signed-in screenshots, link-preview image): [`RUNBOOKS.md`](./RUNBOOKS.m
 - Static files in `site/`, no build. Deploy (Tom's yes each time), from a clean checkout with HEAD asserted:
   `firebase deploy --only hosting:hub --project context-484804`. Pushing `master` runs the site checks and, for
   `dispatch/**` or `sitecheck/**` (or `tic-nav.js`), deploys those Workers; it doesn't deploy the hub site.
-- **Never deploy from `D:\Projects\tic-vetday`** or any `_worktrees\hub-*` copy (one replaced the live hub, 10 Nov
+- **Never deploy from `../tic-vetday`** or any `_worktrees\hub-*` copy (one replaced the live hub, 10 Nov
   2026). `GEMINI.md` points Gemini here.
 - Preview: `python tools/serve.py 5055` (applies `firebase.json` headers, real 404s). `firebase serve` skips headers.
 - Tests: `npm test` in `tests/` (`tests/README.md`; `npm ci` first if `node_modules` is empty, which has happened).
