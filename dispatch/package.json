@@ -1,6 +1,7 @@
 {
   "name": "tic-dispatch",
   "private": true,
+  "license": "AGPL-3.0-only",
   "type": "module",
   "description": "Cloudflare Worker that starts GitHub workflows on a reliable clock",
   "scripts": {

@@ -39,7 +39,7 @@ checks, signed-in screenshots, link-preview image): [`RUNBOOKS.md`](./RUNBOOKS.m
   Watchfloor's noindex and ™ as they are. Wake stays "in development", unlinked, until its collectors are live.
 - Intel names come from watching and listening. Each product keeps its colours; every site carries the house
   layer: footer (who, date, code and licence if public, terms, credits, Sources), About, time settings, house bar.
-- Licences: Vigil and Noisefloor AGPL-3.0; Title 10, PropertyCast and Watchfloor have none: ask Tom before adding.
+- Licences: every TIC program repo, this hub included, is AGPL-3.0; the shared tic-* site files and the doctrine kit are MIT (see NOTICE). Title 10 and PropertyCast have none: ask Tom before adding.
 
 ## Shared code (`site/shared/`; the hub also serves `/shared/` with open CORS)
 | File | Version | What, and rules |
