@@ -115,6 +115,7 @@ h1 { font: 500 clamp(2.6rem, 5.6vw, 4.75rem)/1.04 var(--serif); letter-spacing: 
 .latest-topic { font-weight: 600; } /* says what each line measures, whatever the feed's own wording */
 .latest-record { font: 400 14px/1.45 var(--sans, inherit); color: var(--mut); margin-bottom: 10px; }
 .latest-link { font-size: 15px; font-weight: 500; }
+.latest-link + .latest-link { margin-left: 18px; }
 
 /* Products */
 .products { border-top: 1px solid var(--rule); padding-top: 72px; padding-bottom: 24px; }

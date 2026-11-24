@@ -389,6 +389,11 @@ test("each Latest item keeps its bold topic and a body for the feed to fill", ()
   }
 });
 
+test("the COP item links COP's daily brief (ideas#259)", () => {
+  const cop = /<article class="latest-item" id="latest-cop">([\s\S]*?)<\/article>/.exec(INDEX)[1];
+  assert.match(cop, /<a class="latest-link" href="https:\/\/cop\.theintelligence\.company\/brief\/"[^>]*>Today's brief/);
+});
+
 test("no site file is left over from editing (backups, notes, scratch)", () => {
   const walk = (dir) => readdirSync(dir).flatMap((f) => {
     const p = path.join(dir, f);
