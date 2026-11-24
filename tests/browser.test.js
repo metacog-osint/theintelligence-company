@@ -78,7 +78,7 @@ describe("Latest from the products", () => {
   });
 
   test("with every feed down, the page keeps its static lines, shows no Updated times, and works", async () => {
-    const down = Object.fromEntries(["NOISEFLOOR", "WATCHFLOOR", "VIGIL", "COP_HEALTH", "COP_DIRECTION", "ELEMENTS_FEED", "CORDON_FEED", "VIS_FEED", "BLACKOUT_FEED", "HEADWIND_FEED", "ORBIT_FEED", "LAUNCH_FEED", "UNDERTOW_FEED", "WAKE_FEED", "RELIEF_FEED"].map((k) => [k, { abort: true }]));
+    const down = Object.fromEntries(["NOISEFLOOR", "WATCHFLOOR", "VIGIL", "COP_HEALTH", "COP_DIRECTION", "ELEMENTS_FEED", "CORDON_FEED", "VERDICT_SCORES", "VIS_FEED", "BLACKOUT_FEED", "HEADWIND_FEED", "ORBIT_FEED", "LAUNCH_FEED", "UNDERTOW_FEED", "WAKE_FEED", "RELIEF_FEED"].map((k) => [k, { abort: true }]));
     const t = await open("/", { feeds: down, allowFailedLoads: true });
     try {
       for (const id of Object.keys(STATIC)) {
@@ -153,7 +153,8 @@ describe('"Updated … ago" in the product list', () => {
         Undertow: "Updated 1 h ago", // its feed's generated_at 17:00; not in the sample COP health either
         Wake: "Updated 6 h ago", // its feed's generated_at 12:00; not in the sample COP health either
         Relief: "Updated 3 h ago", // its feed's generated_at 15:00; not in the sample COP health either
-        PropertyCast: null, "Title 10 Field Guide": null, "Listening Post": null,
+        Verdict: "Updated 1 h ago", // Last-Modified of its scores file, 17:00
+        PropertyCast: null, "Title 10 Field Guide": null, "Veterans Day planner": null,
       });
       clean(t);
     } finally { await t.close(); }

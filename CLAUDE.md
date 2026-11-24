@@ -45,7 +45,7 @@ checks, signed-in screenshots, link-preview image): [`RUNBOOKS.md`](./RUNBOOKS.m
 | File | Version | What, and rules |
 |---|---|---|
 | `tic-time.js` / `.css` | 1.4 / 1.3 | Store UTC; show the viewer's zone, always named; menu for zone and 12/24 h; domain cookie on `*.theintelligence.company`; `year` option and `data-tic-year` give "31 Oct 2026". The dialog reads `--panel --bg --line --muted --accent`: a site with other names maps them on `.tic-time-dialog` (hub maps `--card --paper --rule --mut`), or dark mode breaks. Open the dialog in dark mode after colour changes |
-| `tic-nav.js` / `.css` | 2.1 / 2.0 | The house bar: "← The Intelligence Company" and Programs ▾ grouped by layer in the drawing's order (COP "Every layer" first, "Other tools" last); `long` equals `oe.js` `line` (tests). Fixed at top; minimizes to a top-centre tab (cookie `tic_nav`). **`--tic-house-h`** (34px, 0 minimized/print): a site's own sticky header uses `top: var(--tic-house-h, 0px)`. Freshness dots from COP health, read once on first open, opt-in `data-health="on"` once `connect-src` allows `https://cop.theintelligence.company`. Never colour alone |
+| `tic-nav.js` / `.css` | 2.2 / 2.0 | The house bar: "← The Intelligence Company" and Programs ▾ grouped by layer in the drawing's order (COP "Every layer" first, "Other projects" last); `long` equals `oe.js` `line` (tests). Fixed at top; minimizes to a top-centre tab (cookie `tic_nav`). **`--tic-house-h`** (34px, 0 minimized/print): a site's own sticky header uses `top: var(--tic-house-h, 0px)`. Freshness dots from COP health, read once on first open, opt-in `data-health="on"` once `connect-src` allows `https://cop.theintelligence.company`. Never colour alone |
 | `tic-area.js` | 1.1 | "My area" (all, US 48, a state, radius); dims, never hides. Elements and Cordon |
 | `tic-related.js` / `.css` | 1.0 | "Elsewhere today" from COP's `/data/agent/index.json`, one lazy read without cookies; rules in its header. Element in normal block flow; COP in `connect-src`. Labels: Unusual, Forecast, "<Program>'s judgment", As claimed |
 | `tic-tabs.js` / `.css` | 1.0 | Sections row: `<div data-tic-tabs>`, groups `<div id data-tab-label>`; one group at a time at ≤760 px; links, not ARIA tabs; `tic-tabs:show` for map redraws. Blackout and Orbit have their own |
@@ -87,7 +87,7 @@ checks, signed-in screenshots, link-preview image): [`RUNBOOKS.md`](./RUNBOOKS.m
   Deploy: `sitecheck-deploy.yml` on push touching `sitecheck/**` or `tic-nav.js`.
 
 ## Veterans Day planner (`site/veterans/veterans-day/`)
-- Everything is in `veterans-day/README.md`. Not in the product lists, bar or drawing; shared by link.
+- Everything is in `veterans-day/README.md`. Under Other projects on the hub; not in the bar or drawing.
 - Report Worker `vetday`: deploy with Tom's `wrangler login` and `env -u CLOUDFLARE_API_TOKEN`.
   **Never tap Got it / Turned away / ran out / line report with `?now=` on `localhost:5055`/`5056`**: those origins
   record real reports.
@@ -106,7 +106,7 @@ checks, signed-in screenshots, link-preview image): [`RUNBOOKS.md`](./RUNBOOKS.m
   every program with an `ask` in exactly one `GROUPS` band. Labels ≥ 9 px at 1440×900, none overlapping: run
   `tests/browser.test.js` after moving a tag or label, and leave a few units of room (CI rounds glyph widths).
 - Tags glow on COP-health anomalies. The hero map reads COP's `data/home-points.json`, never `today.geojson`.
-- Product lists in layer order (COP first; PropertyCast, Title 10, Listening Post last); `404.html` matches with
+- Product lists in layer order (COP first; Other projects last; no Listening Post); `404.html` matches with
   absolute URLs. Product links open a new tab (`target="_blank" rel="noopener" aria-describedby="newtab"`, ending ↗).
 - Screenshots (`site/img/`): real site and data, signed in, header included; Tom signs in himself (`RUNBOOKS.md`).
 - Location: "Fargo-Moorhead, ND/MN" (prose: "on the North Dakota–Minnesota border"), never "Moorhead, Minnesota".

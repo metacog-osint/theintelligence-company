@@ -38,7 +38,7 @@ test("the menu lists every program in its group, opens in the same tab, and star
     await btn(t.page).click();
     assert.equal(await btn(t.page).getAttribute("aria-expanded"), "true");
     assert.deepEqual(await t.page.$$eval(".tic-house-group", (ps) => ps.map((p) => p.textContent)),
-      ["Every layer", "Systems", "Human", "Cyberspace", "Spectrum", "Space", "Air", "Land and maritime", "Other tools"],
+      ["Every layer", "Systems", "Human", "Cyberspace", "Spectrum", "Space", "Air", "Land and maritime", "Other projects"],
       "v2.0: one heading per layer, in the drawing's order, then the other tools");
     const items = await t.page.$$eval(".tic-house-item", (as) => as.map((a) => ({ href: a.getAttribute("href"), target: a.target })));
     const order = ["layers", "tools"].flatMap((g) => NAV.programs.filter((p) => p.group === g));
