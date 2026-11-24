@@ -155,7 +155,7 @@ approved the wording ("Approve, push and deploy"); it describes only what is liv
   launches, scheduled launches, reentries, catalog changes and owner codes. COP vendors the kit; the COP session
   ("Orbit: COP layer") was told to take 0.4.8 from this commit and to copy the bar v1.9 into COP itself.
 - **Rollout worktrees (removed after the pushes), one per repo, branch `tic-nav-v1.9`, in
-  `[local path]`:** `context-nav19` `6e02319` (geo-context, `master`), `cordon-nav19` `193d0d0`,
+  `../_worktrees\`:** `context-nav19` `6e02319` (geo-context, `master`), `cordon-nav19` `193d0d0`,
   `elements-nav19` `db405d3`, `noisefloor-nav19` `f88d0f8` (pages rebuilt, `?v=6ef8b1f0d5`), `propertycast-nav19`
   `0957294`, `title10-nav19` `1fb1208` (`sw.js` `t10-2026-11-13d`, deploy README line), `vigil-nav19` `19a24e0`,
   `vis-nav19` `0264adc`, `watchfloor-nav19` `5207574` (more-context), `headwind-nav19` `4adec00`, `blackout-nav19`
@@ -182,7 +182,7 @@ Headwind (https://headwind.theintelligence.company, live 13 Nov 2026) with the w
 - **Dispatch:** `JOBS` line for `metacog-osint/headwind` `update.yml` at :50 past 03, 09, 15, 21 UTC, with a test
   (17 pass). **Tom must add `headwind` to the `tic-dispatch` token's repository access**, or its start 404s.
 - **Rollout worktrees, one per repo, branch `tic-nav-v1.8`, each one commit ahead of GitHub's tip (which is v1.7,
-  live since about 11:20 AM), in `[local path]`:** `context-nav18` `090a51c`, `cordon-nav18` `088c40f`,
+  live since about 11:20 AM), in `../_worktrees\`:** `context-nav18` `090a51c`, `cordon-nav18` `088c40f`,
   `elements-nav18` `38446bf`, `noisefloor-nav18` `b8448bf` (pages rebuilt, `?v=bb852f807e`), `propertycast-nav18`
   `cc153fd`, `title10-nav18` `c34c5f3` (`sw.js` `t10-2026-11-13c`, deploy README line), `vigil-nav18` `ebbaee9`,
   `vis-nav18` `bf69f3e`, `watchfloor-nav18` `52158ba`, `headwind-nav18` `7df0baa` (`site_src/` and `site/`),
@@ -324,7 +324,7 @@ and overrides read from D1 `vetday`. Final read 12 Nov about 8:45 AM CST; nothin
   10 Nov night (05:08 UTC 11 Nov) had been deleted before the day started.
 
 ## Veterans Day planner: Colorado Springs, Monument & Falcon, CO, night of 10-11 Nov 2026 ("complete all work without requesting my yes or permission")
-Built in `[local path]` (branch `vetday-colorado-springs`); merged into `master` here
+Built in a separate worktree (branch `vetday-colorado-springs`); merged into `master` here
 (fast-forward to `195cf6d`, 104 planner and site tests pass) and pushed about 12:25 AM CST 11 Nov.
 - **Live.** The side session's own deploy was refused by its permission check (auto mode, "Production Deploy"), and
   the coordinator's later deploy failed on an expired Firebase sign-in. the publisher re-signed in and deployed master before
@@ -358,7 +358,7 @@ Built in `[local path]` (branch `vetday-colorado-springs`); merged into `master`
   stop is added or removed, also `python -I veterans-day/build/drive_matrix.py colorado-springs` (about 4 minutes, one
   OSRM request a second) before testing. Tests: `cd tests && node --test --no-warnings veterans.test.js
   veterans-engine.test.js veterans-roads.test.js site.test.js` (104 pass). Preview config `hub-colorado-springs` (port
-  5064) in `[local path]` serves the old worktree; point it at this checkout or use `hub-main`
+  5064) in the workspace `launch.json` serves the old worktree; point it at this checkout or use `hub-main`
   (5055, where report buttons send real reports during the day). Before a master merge, message the coordinating and
   Denver sessions if they're still running.
 - **Deploys:** a session started by another session can't deploy (auto mode refuses `firebase deploy` even with Tom's
@@ -368,7 +368,7 @@ Built in `[local path]` (branch `vetday-colorado-springs`); merged into `master`
   `veterans-day/research/colorado-springs/notes.md`.
 
 ## Veterans Day planner: Denver metro, CO, night of 10-11 Nov 2026 ("complete all work without requesting my yes or permission")
-Built in `[local path]` (branch `vetday-denver`) by a session started from the publisher's "Veterans Day
+Built in a separate worktree (branch `vetday-denver`) by a session started from the publisher's "Veterans Day
 locations setup"; merged, deployed and pushed from this checkout under that instruction. **Live** since about 12:18 AM
 CST 11 Nov from merge `24edc10`, pushed. Checked live in Chrome: `?area=denver` loads Denver's 101 deals, forecast, a
 15-stop Optimal route and the map with no console errors; every area's deals and drive tables load and match;
@@ -399,7 +399,7 @@ app.js, index.html and the data files match the commit. That Chrome's saved area
 - **Open for the day:** the phone checks the notes list. Fort Meade: the Greene Turtle stores, Main Event Columbia, All
   American Steakhouse, KPOT, Grace for Vets in Severn, the Cryptologic Museum. Reno: Gold Dust West's hours, Squeeze
   In's stores, the Nevada Museum of Art.
-- **Cleanup when the publisher wants it:** the worktrees `[local path]` and `hub-fort-meade` hold only
+- **Cleanup when the publisher wants it:** the worktrees a separate worktree and `hub-fort-meade` hold only
   line-ending noise (no content change), so `git worktree remove --force` each, then `git branch -d vetday-reno-sparks
   vetday-fort-meade` (both merged).
 - The laptop is held awake until 9:30 AM CST by `hold-awake.ps1` (SetThreadExecutionState, display on), run from the
@@ -458,7 +458,7 @@ site-checks run 42960407365 on `870fb2b` passed too.
     saved in `S.done`, `S.away`, `S.strikes` and `S.last` with the simulated Wednesday time and nothing clears them,
     so a deal someone practised on tonight shows as already got on the day, and `S.last` can set their position to
     that stop for two hours. Antigravity fixed this only in the stale worktree (below). Fix offered to the publisher.
-  - **Stale worktree deploy:** `[local path]` (branch `veterans-day` at `32ffe9f`, 8 Nov) holds
+  - **Stale worktree deploy:** `../tic-vetday` (branch `veterans-day` at `32ffe9f`, 8 Nov) holds
     Antigravity's first-chat edits uncommitted (preview-mark clearing, Undo cleanup, share buttons, a link-preview
     image, Fargo phone numbers and grades). Its `site/` has exactly 46 files, the number its chat says it deployed,
     so the live hub was most likely the 8 Nov version for a while on 10 Nov afternoon (files edited until 4:22 PM)
@@ -608,7 +608,7 @@ and no errors.
 **Follow-up the same night (Tom):** bars on by default with a drive-safe line, ten bars moved onto the route; Fryn'
 Pan, Doolittle's and Porter Creek confirmed by Tom (grade A); Hardee's added (C, Tom's memory of 2025); engine v1.2
 keeps a Great Clips or Freddy's card from opening a route unless it has to. Now 66 deals at 161 stores, 12 leads.
-No cap on bars per route (Tom: "Leave it as is"). 67 tests pass; not committed or deployed. Preview: `hub-main-alt` in `[local path]` serves the main checkout on port 5063
+No cap on bars per route (Tom: "Leave it as is"). 67 tests pass; not committed or deployed. Preview: `hub-main-alt` in the workspace `launch.json` serves the main checkout on port 5063
 when another session holds 5055 (not 5061: browsers block that port).
 
 ## Veterans Day planner: route builder live, 8 Nov 2026 evening ("Commit and deploy", then "push to github and update the handoff")
@@ -636,10 +636,10 @@ section.
 - Tests: 32 planner tests (`tests/veterans.test.js`, `tests/veterans-engine.test.js`) and `site.test.js` pass.
 
 **Watch out:**
-- **Don't deploy from `[local path]`.** That worktree (branch `veterans-day`) is still at `32ffe9f`, the
+- **Don't deploy from `../tic-vetday`.** That worktree (branch `veterans-day`) is still at `32ffe9f`, the
   old Next/Plan page; a deploy from there would roll the route builder back. Work in the main checkout on `master`.
   The `vetday` preview config (port 5056) serves that worktree; `hub-main` (port 5055, added 8 Nov in
-  `[local path]`) serves the main checkout. Removing the worktree is the publisher's call.
+  the workspace `launch.json`) serves the main checkout. Removing the worktree is the publisher's call.
 - `build_data.py` calls the Census geocoder live. After a rebuild, diff `deals.json` against the old one: place ids
   and their order must not change unless stores changed (then run `drive_matrix.py`, about 2 minutes, and
   `veterans.test.js` checks the two match).
@@ -688,7 +688,7 @@ table; commands in the README's "On the day"); it shows on phones within five mi
 - **PropertyCast v1.5: not checkable yet.** At 1:38 PM its home page still read `TicNav = { version: "1.4"`, and
   `ea2cca9` is on its `main`. Its publish ran by `workflow_dispatch` at 4:16 AM on 7 and 8 Nov (the 09:23 UTC cron
   comes hours later and skips). Check the home page's HTML after about 4:30 AM, 9 Nov; that finishes v1.5 everywhere.
-- **Stray kit commit `24fcc56`: already gone.** Another session reset `[local path]` at 1:37 PM (reflog:
+- **Stray kit commit `24fcc56`: already gone.** Another session reset `../tic-doctrine` at 1:37 PM (reflog:
   "reset: moving to origin/main"); the folder is at `63882c0`, clean and even with `origin/main`. `24fcc56` had nothing
   `63882c0` lacks: Vis sat at the end among the planned entries (status live), fresh 18 h, shorter terms ("Vis code
   AGPL-3.0; CC BY 4.0 (Open-Meteo, ECMWF IFS ensemble); NOAA GEFS public domain"), `owns` "theatre weather and
@@ -738,7 +738,7 @@ hub, in every site's Programs menu and in COP. Times below are CST.
   These deploys also shipped the 7 Nov work that was waiting on this machine: every site now serves `tic-nav.css` v1.2.
 - **Doctrine kit 0.4.2** (`tic-doctrine` `63882c0`): Vis live in the registry, in the live block after Cordon; fresh
   20 h, stale 48 h; terms say AGPL-3.0 (the entry said MIT); `owns` names the Open-Meteo ensembles at named airfields
-  and ports and the computed sun and moon. **Loose end:** the main folder `[local path]` holds a local,
+  and ports and the computed sun and moon. **Loose end:** the main folder `../tic-doctrine` holds a local,
   unpushed commit `24fcc56` with the same title, made at 12:59 PM by another session (fresh 18 h, Vis left among the
   planned entries). It diverges from `origin/main`; it was left alone. Whoever made it should drop it (`git reset
   --hard origin/main` in that folder) once they agree `63882c0` covers it. Syncs here used a worktree at `63882c0`.
@@ -760,7 +760,7 @@ hub, in every site's Programs menu and in COP. Times below are CST.
   a day and the other jobs carry on.
 - **Seen, not changed:** the kit test `test_kitcheck_survives_crlf_and_catches_edits` fails in a fresh Windows
   worktree (CRLF checkout: its CRLF step makes `\r\r\n`); it passes on LF files. Two preview entries
-  (`hub-vis-worktree`, `cop-vis-worktree`) were added to `[local path]` and removed again.
+  (`hub-vis-worktree`, `cop-vis-worktree`) were added to the workspace `launch.json` and removed again.
 
 ## Merge, rollout, Time dialogs and drawing labels, 7 Nov 2026 evening (cloud session; Tom: "1. yes 2. yes 3. yes,
 ## just make sure everything is clean, nothing overlaps 4. yes")
@@ -905,7 +905,7 @@ Vercel or Google Cloud sign-in, so those deploys are Tom's (commands below).
   - Noisefloor's local folder is on another session's `docs/satcom-reconcile` branch, so it still holds the old,
     long notes until that branch takes in `main`.
 - **No leftover worktrees** in the hub, Title 10, Watchfloor, Noisefloor, PropertyCast, Context, Vigil, COP, Elements
-  or Cordon. The empty `[local path]` folder was removed; `git worktree add` recreates it when needed.
+  or Cordon. The empty `../_worktrees` folder was removed; `git worktree add` recreates it when needed.
 - **Merged branches deleted** by Tom on 6 Nov, using `tools/prune_merged.sh` (it re-checks each branch is in main
   before deleting; Claude's own attempt was blocked by auto mode's safety check):
   - Vigil: 37 local and 50 on GitHub.
@@ -925,10 +925,10 @@ Vercel or Google Cloud sign-in, so those deploys are Tom's (commands below).
   fallback), PropertyCast (`tools/smoke_garden.py`), and Title 10's `benefits-pack` files.
 
 ## Pushed 6 Nov 2026 (Tom's yes): COP on the dispatch clock
-- **COP on the dispatch clock**, worktree `[local path]`, branch `dispatch-cop` (from
+- **COP on the dispatch clock**, worktree a separate worktree, branch `dispatch-cop` (from
   `origin/master` `3563f8e`), pushed to `master` 6 Nov (Tom added `cop` to the token first): `dispatch/dispatch.js` (optional `hours` per job; COP `build.yml` at :20
   on even UTC hours) and `dispatch/dispatch.test.js` (15 tests pass). Part of COP's MCP server work (COP worktree
-  `[local path]`, branch `mcp-server`; plan `~\.claude\plans\compiled-toasting-treehouse.md`).
+  a separate worktree, branch `mcp-server`; plan `~\.claude\plans\compiled-toasting-treehouse.md`).
   Done in that order on 6 Nov: COP `9e421f9` first (its gate and the MCP server at
   https://cop.theintelligence.company/mcp, live and checked), then this, rebased onto `aa27ba7` (the notes trim).
   To confirm: COP's first dispatched build at 16:20 UTC (10:20 AM CST), `gh run list -R metacog-osint/cop
@@ -1089,7 +1089,7 @@ Full notes, with the real response, the counting rules and the measurements behi
   - Tests: 36/36 in the summary file, including a replay of the real 3–4 Nov runs. Full suite: 1,362 passed, 3 todo,
     1 failed (below, unrelated). CI lint-and-test, build and CodeQL passed. Lint: 0 errors, 288 warnings (cap
     325), none in the changed files.
-- The worktree `[local path]` was removed after the merge. The shared `[local path]` tree
+- The worktree `../Vigil-summary-data-as-of` was removed after the merge. The shared `../Vigil` tree
   was not touched; it is 2 commits behind `main` and holds someone else's uncommitted edits (`api/feed.js`,
   `api/_lib/doctrineFeed.js`, `docs/SESSION_HANDOFF.md`, `doctrine/kit/KIT.json`).
 
@@ -1106,4 +1106,4 @@ Full notes, with the real response, the counting rules and the measurements behi
 - The `cisa-advisories` 403: not rechecked.
 - `/api/feed` counts claims with `claims.length` from a `limit=300` query, and similar caps exist for KEV and
   disclosures. Today's counts are correct, but past the cap they would stop rising and give no warning.
-- COP's test fixture `[local path]` is stale.
+- COP's test fixture `../cop\tests\fixtures\vigil.geojson` is stale.

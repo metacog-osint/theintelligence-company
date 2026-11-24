@@ -12,7 +12,7 @@ turn. `CLAUDE.md` points here where each applies; its rules still govern.
   fails (expired token, a workflow without `workflow_dispatch`) throws from `scheduled()`, so it shows as an error in
   tic-dispatch's metrics and logs (before 14 Nov it was a `tic-dispatch: …` line in propertycast-trigger's logs); on
   the hub it shows up as "running late" on Elements or Cordon. The error carries GitHub's message, never the token.
-- Local test without deploying: Wrangler is installed in `[local path]`. Put
+- Local test without deploying: use a local Wrangler install. Put
   `DISPATCH_TOKEN=fake` in `dispatch/.dev.vars` (git ignores it) and run `wrangler dev --test-scheduled` in
   `dispatch/`, then POST `/cdn-cgi/local/explorer/api/local/scheduled?worker=tic-dispatch` with
   `{"cron":"*/5 * * * *","scheduled_time":<ms>}` (the older `/cdn-cgi/handler/scheduled?time=` ignores the time). The
