@@ -24,6 +24,26 @@ test("every program in the house bar, and the hub, is checked, once", () => {
   }
 });
 
+test("other work on the domain is checked but listed apart from the programs (Tom, 24 Nov 2026)", () => {
+  assert.deepEqual(SITES.filter((s) => s.group === "other").map((s) => s.id), ["propertycast", "activation", "listeningpost"]);
+  const other = { id: "o", url: "https://o.theintelligence.company/", group: "other" };
+  const run = summarize([judge(site, good), judge(other, { ...good, status: 500 })], new Date(0), new Date(1000));
+  assert.equal(run.contract, "tic-sitecheck/1.1");
+  assert.deepEqual(run.results.map((r) => r.id), ["a"], "results holds the programs only");
+  assert.deepEqual(run.other_work.map((r) => r.id), ["o"]);
+  assert.equal(run.sites, 2);
+  assert.deepEqual(run.failed, ["o"], "a failed other page still fails the run");
+});
+
+test("Healthchecks hears about a failed other page too", async () => {
+  const calls = [];
+  const other = { id: "o", url: "https://o.theintelligence.company/", group: "other" };
+  await report("https://hc.example/p", summarize([judge(other, { ...good, status: 503 })], new Date(0), new Date(0)),
+    async (u, o) => calls.push([u, o.body]));
+  assert.equal(calls[0][0], "https://hc.example/p/fail");
+  assert.match(calls[0][1], /o https:\/\/o\.theintelligence\.company\/: HTTP 503/);
+});
+
 test("Verdict is checked for its drawn board and is the only site excused from the house bar", () => {
   const excused = SITES.filter((s) => s.house === false);
   assert.deepEqual(excused.map((s) => s.id), ["verdict"]);
@@ -69,7 +89,7 @@ test("a page that never loaded reports only that, not a missing house bar", () =
 
 test("the run record names the failed sites", () => {
   const run = summarize([judge(site, good), judge(mapSite, { ...good, status: 500 })], new Date(0), new Date(1000));
-  assert.equal(run.contract, "tic-sitecheck/1");
+  assert.equal(run.contract, "tic-sitecheck/1.1");
   assert.equal(run.ok, 1);
   assert.deepEqual(run.failed, ["a"]);
   assert.equal(run.finished_at, "1970-01-01T00:00:01.000Z");
