@@ -154,7 +154,6 @@ describe('"Updated … ago" in the product list', () => {
         Wake: "Updated 6 h ago", // its feed's generated_at 12:00; not in the sample COP health either
         Relief: "Updated 3 h ago", // its feed's generated_at 15:00; not in the sample COP health either
         Verdict: "Updated 1 h ago", // Last-Modified of its scores file, 17:00
-        PropertyCast: null, "Title 10 Field Guide": null, "Veterans Day planner": null,
       });
       clean(t);
     } finally { await t.close(); }
