@@ -207,3 +207,23 @@ figcaption { margin-top: 10px; font: 400 13px/1.45 var(--mono); color: var(--mut
   .band { padding: 56px 0; }
   .about { padding-top: 64px; padding-bottom: 64px; }
 }
+
+/* Start here (reviewer path) and the tagging page */
+.start { border-top: 1px solid var(--rule); padding-top: 72px; padding-bottom: 24px; }
+.start .section-h { margin-bottom: 32px; }
+.start-steps { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 32px; margin-bottom: 36px; }
+.start-steps li { border-top: 2px solid var(--mark); padding-top: 16px; }
+.start-steps h3 { font-size: 19px; font-weight: 600; line-height: 1.35; margin-bottom: 6px; }
+.start-steps a, .start-aud a, .tagging-lede a { color: var(--acc); }
+.start-by { margin-bottom: 12px; }
+.start-aud { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 4px 32px; }
+.start-aud a { display: inline-flex; align-items: center; min-height: 32px; }
+.plist-other { margin-top: 0; }
+.tagging { padding-top: 56px; padding-bottom: 72px; }
+.tagging-lede { max-width: 44em; margin: 20px 0 32px; }
+.tagging-h { font: 500 1.6rem/1.2 var(--serif); margin: 40px 0 16px; }
+.tagging-scroll { overflow-x: auto; }
+.tagging-table { border-collapse: collapse; width: 100%; min-width: 720px; font-size: 15px; }
+.tagging-table th, .tagging-table td { text-align: left; vertical-align: top; padding: 10px 14px 10px 0; border-bottom: 1px solid var(--rule); }
+.tagging-table thead th { font: 500 12px/1.4 var(--mono); text-transform: uppercase; letter-spacing: .06em; color: var(--mut); border-bottom-color: var(--ink); }
+.tagging-table tbody th { font-weight: 600; color: var(--ink); }

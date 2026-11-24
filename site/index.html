@@ -62,6 +62,7 @@
       <span>The Intelligence Company</span>
     </a>
     <nav aria-label="Main">
+      <a href="#start">Start here</a>
       <a href="#products">Products</a>
       <a href="#standards">How we work</a>
       <a href="#about">About</a>
@@ -412,6 +413,27 @@
     </div>
   </section>
 
+  <section id="start" class="start" aria-labelledby="start-h">
+    <div class="wrap">
+      <p class="kicker">For reviewers</p>
+      <h2 id="start-h" class="section-h">Start here</h2>
+      <ol class="start-steps">
+        <li><h3><a href="https://cop.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab">See the whole picture on COP&nbsp;<span aria-hidden="true">↗</span></a></h3><p>Every layer's findings on one map.</p></li>
+        <li><h3><a href="https://noisefloor.theintelligence.company/validation" target="_blank" rel="noopener" aria-describedby="newtab">Check the method on Noisefloor&nbsp;<span aria-hidden="true">↗</span></a></h3><p>How its GPS interference measure is tested, and how well it holds up.</p></li>
+        <li><h3><a href="/tagging/">Read the tagging scheme</a></h3><p>What each item is tagged with, on what basis, and what the tags do not claim.</p></li>
+      </ol>
+      <h3 class="label start-by">Or go by subject</h3>
+      <ul class="start-aud">
+        <li><a href="https://watchfloor.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab">Conflict and warning: Watchfloor&nbsp;<span aria-hidden="true">↗</span></a></li>
+        <li><a href="https://vigil.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab">Cyber threats: Vigil&nbsp;<span aria-hidden="true">↗</span></a></li>
+        <li><a href="https://noisefloor.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab">Spectrum and navigation: Noisefloor&nbsp;<span aria-hidden="true">↗</span></a></li>
+        <li><a href="https://orbit.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab">Space: Orbit&nbsp;<span aria-hidden="true">↗</span></a></li>
+        <li><a href="https://undertow.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab">Influence operations: Undertow&nbsp;<span aria-hidden="true">↗</span></a></li>
+        <li><a href="https://cordon.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab">Travel and airspace risk: Cordon&nbsp;<span aria-hidden="true">↗</span></a></li>
+      </ul>
+    </div>
+  </section>
+
   <section id="products" class="products" aria-labelledby="products-h">
     <div class="wrap">
       <p class="kicker">Products</p>
@@ -471,9 +493,10 @@
       </div>
 
       <details class="plist-fold">
-        <summary class="label list-h">Every program <span class="plist-n">18</span></summary>
+        <summary class="label list-h">Every program <span class="plist-n">19</span></summary>
         <ul class="plist">
         <li data-product="cop" data-layer="all" data-layer-name="Every layer"><a href="https://cop.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab"><span class="p-name">COP</span><span class="p-what">The common operational picture: every layer's findings on one map, so a place or topic that turns up in more than one layer stands out. Outages are already read against hazards, notices and press attention in the same country; convergence scoring, checked by Verdict, is in development.</span><span class="p-st st-beta">Beta · Open <span aria-hidden="true">↗</span></span></a></li>
+        <li data-product="verdict" data-layer="all" data-layer-name="Every layer"><a href="https://metacog-osint.github.io/verdict/" target="_blank" rel="noopener" aria-describedby="newtab"><span class="p-name">Verdict</span><span class="p-what">Logs every forecast and warning with the rule that will settle it, syncs the event calendar, and scores calibration in public.</span><span class="p-st st-beta">Beta · Open <span aria-hidden="true">↗</span></span></a></li>
         <li data-product="watchfloor" data-layer="systems" data-layer-name="Systems"><a href="https://watchfloor.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab"><span class="p-name">Watchfloor</span><span class="p-what">A daily warning picture for every conflict zone and strategic topic on its watch list, built from the world's news.</span><span class="p-st st-beta">Beta · Open <span aria-hidden="true">↗</span></span></a></li>
         <li data-product="headwind" data-layer="systems" data-layer-name="Systems"><a href="https://headwind.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab"><span class="p-name">Headwind</span><span class="p-what">Currencies, energy and food prices against their own normal range, and sanctions-list changes.</span><span class="p-st st-beta">Beta · Open <span aria-hidden="true">↗</span></span></a></li>
         <li data-product="context" data-layer="human" data-layer-name="Human"><a href="https://context.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab"><span class="p-name">Context</span><span class="p-what">How the world's press is covering each watched conflict zone and strategic topic, refreshed twice a day. Watchfloor's predecessor.</span><span class="p-st st-live">Live · Open <span aria-hidden="true">↗</span></span></a></li>
@@ -488,9 +511,12 @@
         <li data-product="cordon" data-layer="air" data-layer-name="Air"><a href="https://cordon.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab"><span class="p-name">Cordon</span><span class="p-what">Where authorities warn people away: travel advisories, embassy departures, airspace conflict-zone bulletins and navigational warnings at sea, on one map.</span><span class="p-st st-beta">Beta · Open <span aria-hidden="true">↗</span></span></a></li>
         <li data-product="elements" data-layer="land" data-layer-name="Land and maritime"><a href="https://elements.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab"><span class="p-name">Elements</span><span class="p-what">Natural hazards as the authorities report them: earthquakes, volcanoes, wildfires, storms, floods, droughts, tsunami warnings and disaster mapping on one map.</span><span class="p-st st-beta">Beta · Open <span aria-hidden="true">↗</span></span></a></li>
         <li data-product="wake" data-layer="land" data-layer-name="Land and maritime"><a href="https://wake.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab"><span class="p-name">Wake</span><span class="p-what">Ships crossing 28 maritime chokepoints, week by week: IMF PortWatch's transit counts by ship type against the 90 days before and the same weeks a year earlier. Measurements only.</span><span class="p-st st-beta">Beta · Open <span aria-hidden="true">↗</span></span></a></li>
-        <li data-layer="other" data-layer-name="Other tools"><a href="https://propertycast.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab"><span class="p-name">PropertyCast</span><span class="p-what">A hyperlocal forecast for one property that verifies itself every hour against its own weather station, with a garden decision layer.</span><span class="p-st st-live">Live · Open <span aria-hidden="true">↗</span></span></a></li>
-        <li data-layer="other" data-layer-name="Other tools"><a href="https://activation.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab"><span class="p-name">Title 10 Field Guide</span><span class="p-what">What activated Air Guard members earn on federal orders, what gets missed, and what to do before and after release. Unofficial; compiled from public sources.</span><span class="p-st st-live">Live · Open <span aria-hidden="true">↗</span></span></a></li>
-        <li data-layer="other" data-layer-name="Other tools"><a href="https://listeningpost.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab"><span class="p-name">Listening Post</span><span class="p-what">A job-search workspace: each opening scored against your own criteria, new postings found by a weekly sweep, and drafts you review and send yourself. Google sign-in, by invitation.</span><span class="p-st st-invite">Invite only · Open <span aria-hidden="true">↗</span></span></a></li>
+        </ul>
+        <h3 class="label list-h">Other projects</h3>
+        <ul class="plist plist-other">
+        <li data-layer="other" data-layer-name="Other projects"><a href="https://propertycast.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab"><span class="p-name">PropertyCast</span><span class="p-what">A hyperlocal forecast for one property that verifies itself every hour against its own weather station, with a garden decision layer.</span><span class="p-st st-live">Live · Open <span aria-hidden="true">↗</span></span></a></li>
+        <li data-layer="other" data-layer-name="Other projects"><a href="https://activation.theintelligence.company" target="_blank" rel="noopener" aria-describedby="newtab"><span class="p-name">Title 10 Field Guide</span><span class="p-what">What activated Air Guard members earn on federal orders, what gets missed, and what to do before and after release. Unofficial; compiled from public sources.</span><span class="p-st st-live">Live · Open <span aria-hidden="true">↗</span></span></a></li>
+        <li data-offbar data-layer="other" data-layer-name="Other projects"><a href="https://theintelligence.company/veterans/veterans-day/" target="_blank" rel="noopener" aria-describedby="newtab"><span class="p-name">Veterans Day planner</span><span class="p-what">Where to go next for Veterans Day deals, by area: offers checked against their sources and timed against when each one ends. Built for 11 November 2026.</span><span class="p-st st-live">Live · Open <span aria-hidden="true">↗</span></span></a></li>
         </ul>
       </details>
     </div>
@@ -505,7 +531,7 @@
         <li><h3>Is this unusual?</h3><p>Measured against that place's own baseline.</p></li>
         <li><h3>What else moved?</h3><p>Read across every layer at once.</p></li>
         <li><h3>Who says so?</h3><p>Traced to the publisher, dated and credited.</p></li>
-        <li><h3>How sure are we?</h3><p>Likelihood and confidence, stated separately.</p></li>
+        <li><h3>How sure are we?</h3><p>Where a program makes a judgment: likelihood and confidence, stated separately.</p></li>
       </ul>
       <a class="btn" href="#contact">Bring a question</a>
     </div>
@@ -533,12 +559,13 @@
     <div class="about-text">
       <p>The Intelligence Company is based in Fargo-Moorhead, on the North Dakota&ndash;Minnesota border, and run by
         Thomas Brummer. He has served in the Air National Guard for 25 years. He started as an F-16 crew chief and an
-        Air Force weather forecaster, and has spent more than half his career as a signals intelligence (SIGINT)
+        Air Force weather forecaster, and has spent about half his career as a signals intelligence (SIGINT)
         analyst.</p>
       <p>Each of those jobs asks the same thing: judge the state of a complex system under pressure, whether a jet, the
         weather or an adversary's network, and say how sure you are. The company's products follow the same rules:
         sources credited and licensed, claims dated, uncertainty stated, and methods and validation published alongside
         them.</p>
+      <p>He builds it on his own time from public sources, using no employer's methods or data.</p>
       <p><a class="more" href="https://www.linkedin.com/in/tom-brummer/" target="_blank" rel="noopener" aria-describedby="newtab">Thomas Brummer on LinkedIn <span aria-hidden="true">↗</span></a></p>
     </div>
     </div>
@@ -557,13 +584,14 @@
 
 <footer class="foot">
   <div class="wrap foot-inner">
-    <p>&copy; 2026 Thomas Brummer · The Intelligence Company · Fargo-Moorhead, ND/MN · Updated <time datetime="2026-11-21T05:43:00Z" data-tic="date" data-tic-year>21 Nov 2026</time></p>
+    <p>&copy; 2026 Thomas Brummer · The Intelligence Company · Fargo-Moorhead, ND/MN · Updated <time datetime="2026-11-23T17:30:00Z" data-tic="date" data-tic-year>23 Nov 2026</time></p>
     <p>Data sources and licences, credited by each product:
       <a href="https://noisefloor.theintelligence.company/sources" target="_blank" rel="noopener" aria-describedby="newtab">Noisefloor&nbsp;<span aria-hidden="true">↗</span></a> ·
       <a href="https://watchfloor.theintelligence.company/#/sources" target="_blank" rel="noopener" aria-describedby="newtab">Watchfloor&nbsp;<span aria-hidden="true">↗</span></a> ·
       <a href="https://vigil.theintelligence.company/sources" target="_blank" rel="noopener" aria-describedby="newtab">Vigil&nbsp;<span aria-hidden="true">↗</span></a> ·
       <a href="https://context.theintelligence.company/sources" target="_blank" rel="noopener" aria-describedby="newtab">Context&nbsp;<span aria-hidden="true">↗</span></a> ·
       <a href="https://cop.theintelligence.company/" target="_blank" rel="noopener" aria-describedby="newtab">COP&nbsp;<span aria-hidden="true">↗</span></a> ·
+      <a href="https://metacog-osint.github.io/verdict/#how-h" target="_blank" rel="noopener" aria-describedby="newtab">Verdict&nbsp;<span aria-hidden="true">↗</span></a> ·
       <a href="https://elements.theintelligence.company/#health-h" target="_blank" rel="noopener" aria-describedby="newtab">Elements&nbsp;<span aria-hidden="true">↗</span></a> ·
       <a href="https://cordon.theintelligence.company/#health-h" target="_blank" rel="noopener" aria-describedby="newtab">Cordon&nbsp;<span aria-hidden="true">↗</span></a> ·
       <a href="https://vis.theintelligence.company/#sources" target="_blank" rel="noopener" aria-describedby="newtab">Vis&nbsp;<span aria-hidden="true">↗</span></a> ·
@@ -575,8 +603,7 @@
       <a href="https://wake.theintelligence.company/" target="_blank" rel="noopener" aria-describedby="newtab">Wake&nbsp;<span aria-hidden="true">↗</span></a> ·
       <a href="https://relief.theintelligence.company/" target="_blank" rel="noopener" aria-describedby="newtab">Relief&nbsp;<span aria-hidden="true">↗</span></a> ·
       <a href="https://propertycast.theintelligence.company/#sources" target="_blank" rel="noopener" aria-describedby="newtab">PropertyCast&nbsp;<span aria-hidden="true">↗</span></a> ·
-      <a href="https://activation.theintelligence.company/#contacts" target="_blank" rel="noopener" aria-describedby="newtab">Title 10 Field Guide&nbsp;<span aria-hidden="true">↗</span></a> ·
-      <a href="https://listeningpost.theintelligence.company/sources.html" target="_blank" rel="noopener" aria-describedby="newtab">Listening Post&nbsp;<span aria-hidden="true">↗</span></a>.
+      <a href="https://activation.theintelligence.company/#contacts" target="_blank" rel="noopener" aria-describedby="newtab">Title 10 Field Guide&nbsp;<span aria-hidden="true">↗</span></a>.
       The latest lines come from COP, Noisefloor, Watchfloor and Vigil; Vigil's leak-site claims are from
       <a href="https://www.ransomlook.io/" target="_blank" rel="noopener" aria-describedby="newtab">RansomLook&nbsp;<span aria-hidden="true">↗</span></a>
       (<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener" aria-describedby="newtab">CC BY 4.0&nbsp;<span aria-hidden="true">↗</span></a>).
