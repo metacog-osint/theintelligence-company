@@ -1,6 +1,7 @@
 {
   "name": "vetday-worker",
   "private": true,
+  "license": "AGPL-3.0-only",
   "type": "module",
   "scripts": { "test": "node --test --no-warnings test/*.test.js" }
 }

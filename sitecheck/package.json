@@ -1,6 +1,7 @@
 {
   "name": "tic-sitecheck",
   "private": true,
+  "license": "AGPL-3.0-only",
   "type": "module",
   "description": "Cloudflare Worker that opens every Intelligence Company site in a headless browser twice a day",
   "scripts": {
