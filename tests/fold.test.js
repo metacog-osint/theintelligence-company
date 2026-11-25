@@ -69,6 +69,21 @@ test("desktop: a 40-row table opens in a window about ten rows tall, every row i
   } finally { await t.close(); }
 });
 
+test("a short table that scrolls sideways on a phone is focusable and named; one that fits is not", async () => {
+  const wide = `<div class="scroll"><table id="t" data-tic-fold><caption>Wide</caption><thead><tr><th scope="col">Name</th><th scope="col">Detail</th></tr></thead>
+<tbody><tr><td>One</td><td>${"longtext".repeat(40)}</td></tr><tr><td>Two</td><td>x</td></tr></tbody></table></div>`;
+  const t = await open(wide, { phone: true });
+  try {
+    const b = await t.page.evaluate(() => { const e = document.querySelector(".scroll");
+      return { win: e.classList.contains("tic-fold-win"), tab: e.getAttribute("tabindex"), role: e.getAttribute("role"), label: e.getAttribute("aria-label") }; });
+    assert.deepEqual(b, { win: false, tab: "0", role: "region", label: "Wide: 2 rows, scrolls sideways" });
+  } finally { await t.close(); }
+  const u = await open(`<div class="scroll"><table id="t" data-tic-fold><thead><tr><th scope="col">Name</th></tr></thead><tbody><tr><td>One</td></tr></tbody></table></div>`, { phone: true });
+  try {
+    assert.equal(await u.page.$eval(".scroll", (e) => e.getAttribute("tabindex")), null);
+  } finally { await u.close(); }
+});
+
 test("phone: the same ten rows; a count attribute sets its own numbers, one for phones and one wider", async () => {
   const t = await open(TABLE(40), { phone: true });
   try {
