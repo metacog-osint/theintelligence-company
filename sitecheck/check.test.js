@@ -44,13 +44,13 @@ test("Healthchecks hears about a failed other page too", async () => {
   assert.match(calls[0][1], /o https:\/\/o\.theintelligence\.company\/: HTTP 503/);
 });
 
-test("Verdict is checked for its drawn board and is the only site excused from the house bar", () => {
-  const excused = SITES.filter((s) => s.house === false);
-  assert.deepEqual(excused.map((s) => s.id), ["verdict"]);
-  assert.ok(excused[0].expect, "an excused site must still prove it drew");
+test("every site must mount the house bar; Verdict joined it on its own domain (25 Nov 2026)", () => {
+  assert.deepEqual(SITES.filter((s) => s.house === false).map((s) => s.id), []);
+  const verdict = SITES.find((s) => s.id === "verdict");
+  assert.equal(verdict.url, "https://verdict.theintelligence.company/");
+  assert.ok(verdict.expect, "Verdict must still prove it drew its board");
   const noBar = { ...good, probe: { ...good.probe, house_bar: false, expect: true } };
-  assert.equal(judge(excused[0], noBar).ok, true);
-  assert.equal(judge(excused[0], { ...noBar, probe: { ...noBar.probe, expect: false } }).ok, false);
+  assert.equal(judge(verdict, noBar).ok, false);
   assert.equal(judge(site, noBar).ok, false);
 });
 
