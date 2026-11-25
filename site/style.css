@@ -202,6 +202,14 @@ figcaption { margin-top: 10px; font: 400 13px/1.45 var(--mono); color: var(--mut
 @media (max-width: 560px) {
   .wrap { padding-left: 16px; padding-right: 16px; } /* sides only: blocks that are also .wrap keep their own top and bottom */
   .brand { font-size: 23px; }
+  /* Phone header: the utility text and the Time button share one row, and the menu fits on one row. */
+  .util-inner { flex-wrap: nowrap; gap: 12px; padding-top: 6px; padding-bottom: 6px; }
+  .util { font-size: 12px; }
+  .mast { padding-top: 12px; }
+  .mast-inner { gap: 0; padding-bottom: 8px; }
+  .brand { gap: 10px; }
+  nav { flex-wrap: nowrap; width: 100%; justify-content: space-between; gap: 0 8px; font-size: 15px; }
+  nav a { padding: 8px 0; }
   .hero { padding-top: 48px; padding-bottom: 56px; gap: 40px; }
   .lede { font-size: 18px; }
   .latest { padding: 22px 20px 6px; }
