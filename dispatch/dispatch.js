@@ -96,6 +96,12 @@ export const JOBS = [
     hours: [0, 1, 2, 3, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 21, 22, 23] },
   { repo: "metacog-osint/noise-floor-data", workflow: "ism-hourly.yml", ref: "main", minutes: [15], hours: [4, 5, 6, 8, 20] },
   { repo: "metacog-osint/noise-floor-data", workflow: "ism-hourly.yml", ref: "main", minutes: [30], hours: [7] },
+  // Wake every six hours (25 Nov 2026, ideas#258): its own cron (17 */6) fired every 10 to 14.6 hours from 21 Nov. :55
+  // at 04, 10, 16 and 22 UTC is the only minute free in all four of those hours; it also lands an hour after
+  // Headwind's start (:50 at 03, 09, 15, 21), whose ship table Wake reads, and 4 hours clear of its own fallback cron.
+  // Private repo: 4 runs a day of about a minute each (billed rounded up per run), so about 160 Actions minutes a
+  // month. update.yml has a concurrency group, so a start that meets a push or the fallback run waits its turn.
+  { repo: "metacog-osint/wake", workflow: "update.yml", ref: "main", minutes: [55], hours: [4, 10, 16, 22] },
 ];
 
 // The jobs due at this minute. The caller passes the cron's slot time, not when it woke, so a late start still
