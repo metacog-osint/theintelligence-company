@@ -131,8 +131,14 @@
     return line;
   }
   getJSON(COP_DIRECTION).then(function (d) {
-    var day = plainDay(d.generated_at);
-    setItem("latest-cop", "COP" + (day ? " · " + day : ""), d.summary);
+    // generated_at is an instant, not a data day: show it in the viewer's zone, named, and follow the Time setting.
+    var iso = d.generated_at, ok = /^\d{4}-\d{2}-\d{2}/.test(iso || "");
+    function paintCop() {
+      var when = !ok ? "" : T ? T.format(iso, { year: true }) : plainDay(iso);
+      setItem("latest-cop", "COP" + (when ? " · " + when : ""), d.summary);
+    }
+    paintCop();
+    if (T) T.onChange(paintCop);
     var line = recordLine(d.record), el = document.getElementById("latest-record");
     if (el && line) { el.textContent = line; el.hidden = false; }
   }).catch(function () { /* keep the static line */ });
