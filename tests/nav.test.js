@@ -38,8 +38,8 @@ test("the menu lists every program in its group, opens in the same tab, and star
     await btn(t.page).click();
     assert.equal(await btn(t.page).getAttribute("aria-expanded"), "true");
     assert.deepEqual(await t.page.$$eval(".tic-house-group", (ps) => ps.map((p) => p.textContent)),
-      ["Every layer", "Systems", "Human", "Cyberspace", "Spectrum", "Space", "Air", "Land and maritime", "Other tools"],
-      "v2.0: one heading per layer, in the drawing's order, then the other tools");
+      ["Every layer", "Systems", "Human", "Cyberspace", "Spectrum", "Space", "Air", "Land and maritime"],
+      "v2.0: one heading per layer, in the drawing's order; v2.3: no other projects");
     const items = await t.page.$$eval(".tic-house-item", (as) => as.map((a) => ({ href: a.getAttribute("href"), target: a.target })));
     const order = ["layers", "tools"].flatMap((g) => NAV.programs.filter((p) => p.group === g));
     assert.deepEqual(items.map((i) => i.href), order.map((p) => p.href));
@@ -434,6 +434,21 @@ test("v2.0: \"See it on COP\" opens COP with every layer, named for the program 
     assert.equal(await t.page.locator(".tic-house-cop").textContent(), "See every layer together on COP →",
       "a tool outside the layers gets the general link");
   } finally { await t.close(); }
+});
+
+test("v2.3: data-menu=\"off\" mounts the home link and the minimize button with no Programs menu", async () => {
+  const t = await open({ origin: "https://activation.theintelligence.company", attrs: ' data-menu="off"' });
+  try {
+    assert.equal(await t.page.locator(".tic-house-home").getAttribute("href"), "https://theintelligence.company/");
+    assert.equal(await btn(t.page).count(), 0, "no Programs button");
+    assert.equal(await t.page.locator("#tic-house-panel").count(), 0, "no menu panel");
+    assert.equal(await t.page.locator(".tic-house-toggle").count(), 1, "the minimize button stays");
+  } finally { await t.close(); }
+});
+
+test("v2.3: the menu lists only the suite: no PropertyCast, Title 10 or Listening Post", () => {
+  for (const id of ["propertycast", "activation", "listeningpost"]) assert.ok(!NAV.programs.some((p) => p.id === id), id);
+  assert.ok(NAV.programs.every((p) => p.group === "layers"));
 });
 
 test("v2.0: under a layer's heading each program shows its topic, not the layer again", async () => {

@@ -20,12 +20,13 @@ export function judge(site, seen) {
   else if (seen.status !== 200) problems.push(`HTTP ${seen.status}`);
   if (!seen.error) {
     if (seen.page_errors && seen.page_errors.length) problems.push(`script error: ${seen.page_errors[0]}`);
-    if (seen.probe && !seen.probe.house_bar) problems.push("house bar missing (its scripts may not have run)");
+    if (site.house !== false && seen.probe && !seen.probe.house_bar) problems.push("house bar missing (its scripts may not have run)");
     if (site.expect && seen.probe && !seen.probe.expect) problems.push(`no ${site.expect} (the map or chart did not draw)`);
   }
   return {
     id: site.id,
     url: site.url,
+    group: site.group === "other" ? "other" : "suite",
     ok: problems.length === 0,
     problems,
     status: seen.status ?? null,
@@ -38,17 +39,19 @@ export function judge(site, seen) {
   };
 }
 
-// The run's record: what is stored in KV and served at /.
+// The run's record: what is stored in KV and served at /. results holds the hub and the suite programs;
+// other_work (tic-sitecheck/1.1, 24 Nov 2026) holds the other pages on the domain. The counts and failed cover both.
 export function summarize(results, startedAt, finishedAt) {
   const failed = results.filter((r) => !r.ok);
   return {
-    contract: "tic-sitecheck/1",
+    contract: "tic-sitecheck/1.1",
     started_at: startedAt.toISOString(),
     finished_at: finishedAt.toISOString(),
     sites: results.length,
     ok: results.length - failed.length,
     failed: failed.map((r) => r.id),
-    results,
+    results: results.filter((r) => r.group !== "other"),
+    other_work: results.filter((r) => r.group === "other"),
   };
 }
 
@@ -57,7 +60,7 @@ export function summarize(results, startedAt, finishedAt) {
 export async function report(url, run, fetcher) {
   if (!url) return;
   const ok = run.failed.length === 0;
-  const lines = run.results.filter((r) => !r.ok).map((r) => `${r.id} ${r.url}: ${r.problems.join("; ")}`);
+  const lines = [...run.results, ...(run.other_work || [])].filter((r) => !r.ok).map((r) => `${r.id} ${r.url}: ${r.problems.join("; ")}`);
   const body = ok
     ? `${run.finished_at} all ${run.sites} sites passed`
     : `${run.finished_at} ${run.failed.length} of ${run.sites} sites failed:\n${lines.join("\n")}`;
