@@ -8,7 +8,7 @@
 import puppeteer from "@cloudflare/puppeteer";
 import { SITES } from "./sites.js";
 import { probe } from "./probe.js";
-import { judge, summarize, report, clip, LOAD_TIMEOUT_MS, EXPECT_TIMEOUT_MS, SETTLE_MS, HISTORY_RUNS } from "./check.js";
+import { judge, summarize, report, clip, checkWithRetry, LOAD_TIMEOUT_MS, EXPECT_TIMEOUT_MS, SETTLE_MS, HISTORY_RUNS } from "./check.js";
 
 const UA_SUFFIX = " tic-sitecheck (+https://theintelligence.company)";
 
@@ -44,8 +44,9 @@ export async function runChecks(env) {
   const browser = await puppeteer.launch(env.BROWSER);
   const results = [];
   try {
-    // One page at a time: browser time is what's billed, and it keeps one slow site from crowding another.
-    for (const site of SITES) results.push(await checkSite(browser, site));
+    // One page at a time: browser time is what's billed, and it keeps one slow site from crowding another. A site
+    // that fails is opened once more before it counts (checkWithRetry).
+    for (const site of SITES) results.push(await checkWithRetry((s) => checkSite(browser, s), site));
   } finally {
     await browser.close().catch(() => {});
   }

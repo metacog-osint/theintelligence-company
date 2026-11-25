@@ -4,7 +4,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { SITES } from "./sites.js";
-import { judge, summarize, report, clip } from "./check.js";
+import { judge, summarize, report, clip, checkWithRetry } from "./check.js";
 
 const good = { status: 200, ms: 4000, console_errors: [], page_errors: [], failed_requests: [],
   probe: { title: "X", house_bar: true, map: null, expect: null, text_chars: 900, load_ms: 1200 } };
@@ -28,7 +28,7 @@ test("other work on the domain is checked but listed apart from the programs (To
   assert.deepEqual(SITES.filter((s) => s.group === "other").map((s) => s.id), ["propertycast", "activation", "listeningpost"]);
   const other = { id: "o", url: "https://o.theintelligence.company/", group: "other" };
   const run = summarize([judge(site, good), judge(other, { ...good, status: 500 })], new Date(0), new Date(1000));
-  assert.equal(run.contract, "tic-sitecheck/1.1");
+  assert.equal(run.contract, "tic-sitecheck/1.2");
   assert.deepEqual(run.results.map((r) => r.id), ["a"], "results holds the programs only");
   assert.deepEqual(run.other_work.map((r) => r.id), ["o"]);
   assert.equal(run.sites, 2);
@@ -89,7 +89,7 @@ test("a page that never loaded reports only that, not a missing house bar", () =
 
 test("the run record names the failed sites", () => {
   const run = summarize([judge(site, good), judge(mapSite, { ...good, status: 500 })], new Date(0), new Date(1000));
-  assert.equal(run.contract, "tic-sitecheck/1.1");
+  assert.equal(run.contract, "tic-sitecheck/1.2");
   assert.equal(run.ok, 1);
   assert.deepEqual(run.failed, ["a"]);
   assert.equal(run.finished_at, "1970-01-01T00:00:01.000Z");
@@ -117,4 +117,44 @@ test("evidence drops query strings and stays on one short line", () => {
   assert.equal(clip("404 https://api.example/x?key=SECRET&b=1"), "404 https://api.example/x?…");
   assert.equal(clip("a\n  b"), "a b");
   assert.equal(clip("x".repeat(500)).length, 160);
+});
+
+test("a missing map selector on a page whose map drew is a warning that the check may be out of date, not a failure", () => {
+  const drew = { ...good, probe: { ...good.probe, expect: false, map: { selector: ".cesium-widget", width: 1366, height: 800 } } };
+  const r = judge(mapSite, drew);
+  assert.equal(r.ok, true);
+  assert.match(r.warnings[0], /check may be out of date: no \.maplibregl-map, but a map drew \(\.cesium-widget\)/);
+  assert.equal(judge(mapSite, { ...good, probe: { ...good.probe, expect: false, map: null } }).ok, false, "no map at all still fails");
+  const verdict = SITES.find((s) => s.id === "verdict");
+  assert.equal(judge(verdict, { ...drew, probe: { ...drew.probe, house_bar: false } }).ok, false, "a board that is not a map is never excused");
+  const run = summarize([r], new Date(0), new Date(0));
+  assert.deepEqual(run.failed, []);
+  assert.deepEqual(run.warnings, ["a"]);
+});
+
+test("Healthchecks gets a plain ping with the warnings listed when the only issue is an out-of-date check", async () => {
+  const calls = [];
+  const drew = { ...good, probe: { ...good.probe, expect: false, map: { selector: "canvas", width: 10, height: 10 } } };
+  await report("https://hc.example/p", summarize([judge(mapSite, drew)], new Date(0), new Date(0)), async (u, o) => calls.push([u, o.body]));
+  assert.equal(calls[0][0], "https://hc.example/p");
+  assert.match(calls[0][1], /all 1 sites passed\nWarnings \(passed\):\na https/);
+});
+
+test("a site that fails is opened once more and only the second result counts", async () => {
+  const waits = [];
+  const sleep = async (ms) => waits.push(ms);
+  let n = 0;
+  const flaky = async (s) => judge(s, ++n === 1 ? { error: "Navigation timeout of 30000 ms exceeded" } : good);
+  const r = await checkWithRetry(flaky, site, sleep, 5);
+  assert.equal(r.ok, true);
+  assert.match(r.first_try[0], /did not load/);
+  assert.deepEqual(waits, [5]);
+  const down = await checkWithRetry(async (s) => judge(s, { ...good, status: 502 }), site, sleep, 5);
+  assert.equal(down.ok, false);
+  assert.match(down.problems[0], /HTTP 502/);
+  let calls = 0;
+  const fine = await checkWithRetry(async (s) => (calls++, judge(s, good)), site, sleep, 5);
+  assert.equal(fine.ok, true);
+  assert.equal(calls, 1, "a pass is not opened twice");
+  assert.equal(fine.first_try, undefined);
 });
