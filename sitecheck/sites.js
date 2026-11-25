@@ -20,9 +20,11 @@ export const SITES = [
   { id: "vis", url: "https://vis.theintelligence.company/" },
   { id: "elements", url: "https://elements.theintelligence.company/", expect: ".leaflet-container" },
   { id: "wake", url: "https://wake.theintelligence.company/" },
-  { id: "propertycast", url: "https://propertycast.theintelligence.company/", expect: "canvas" },
-  { id: "activation", url: "https://activation.theintelligence.company/" },
-  { id: "listeningpost", url: "https://listeningpost.theintelligence.company/" },
+  // Other work on the domain, not suite programs (Tom, 24 Nov 2026): still checked and still in the totals and the
+  // Healthchecks ping, but listed apart, under other_work, so the run record does not present them as programs.
+  { id: "propertycast", url: "https://propertycast.theintelligence.company/", expect: "canvas", group: "other" },
+  { id: "activation", url: "https://activation.theintelligence.company/", group: "other" },
+  { id: "listeningpost", url: "https://listeningpost.theintelligence.company/", group: "other" },
   // Verdict has no house bar or suite address yet, so it is held to its own drawn board instead. When it joins the
   // house bar, drop `house: false` and move it to its theintelligence.company address.
   { id: "verdict", url: "https://metacog-osint.github.io/verdict/", expect: "#tiles > *", house: false },
