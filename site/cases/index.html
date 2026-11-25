@@ -115,6 +115,79 @@
     <li>Aircraft data: <a href="https://adsb.lol" target="_blank" rel="noopener" aria-describedby="newtab">adsb.lol&nbsp;<span aria-hidden="true">↗</span></a>
       (ODbL). Space weather: Kp from GFZ Potsdam (CC BY 4.0).</li>
   </ul>
+<h2 class="tagging-h" id="vigil-monai-label">Vigil: a medical-imaging tool added to CISA's list of exploited flaws, November 2026</h2>
+<p class="tagging-lede"><strong>The published finding.</strong> Vigil published
+<code>vigil:kev:CVE-2026-133968</code>: "CVE-2026-133968 (Project MONAI MONAI Label) added to CISA's KEV catalog
+on 23 Nov 2026; EPSS 0.04", and beside it <code>vigil:adp:CVE-2026-133968</code>, CISA's own assessment that
+exploitation is active. MONAI Label is an open-source tool for labelling medical images. Vigil marked the KEV
+entry routine, not unusual. Both items are on Vigil's
+<a href="https://vigil.theintelligence.company/vulnerabilities" target="_blank" rel="noopener" aria-describedby="newtab">vulnerabilities page&nbsp;<span aria-hidden="true">↗</span></a>
+and in COP.</p>
+
+<p class="tagging-lede"><strong>The sources it was checked against.</strong> Three public records, read again on
+24 Nov 2026:</p>
+<ul class="points">
+<li>CISA's Known Exploited Vulnerabilities (KEV) catalog, version 2026.11.24: added 23 Nov 2026 as a path
+traversal flaw that lets an unauthenticated remote attacker write files outside the intended directory,
+"potentially resulting in remote code execution". Federal agencies must act by 26 Nov 2026. Known ransomware
+campaign use: "Unknown".</li>
+<li>The CVE record, published 20 Nov 2026: versions before 0.8.6 are affected, and its description says the flaw
+was exploited in the wild from September 2026. Its CVSS 3.1 base score is 9.8 (critical).</li>
+<li>CISA's Vulnrichment assessment (SSVC), dated
+<time datetime="2026-11-23T20:42:05Z" data-tic="time">20:42 UTC on 23 Nov 2026</time>: exploitation active,
+automatable yes, technical impact total.</li>
+</ul>
+
+<h3 class="tagging-h">The exploit score, day by day</h3>
+<p class="tagging-lede">EPSS, from FIRST, is a model's probability that the flaw is exploited in the next 30 days,
+published daily. Vigil's item carries the score from the day CISA added the flaw; the next day's score was much
+higher.</p>
+<div class="tagging-scroll" tabindex="0" role="region" aria-label="EPSS scores for CVE-2026-133968, 21 to 24 Nov 2026">
+<table class="tagging-table">
+<thead><tr><th scope="col">Day</th><th scope="col">EPSS</th><th scope="col">Percentile</th><th scope="col">Note</th></tr></thead>
+<tbody>
+<tr><th scope="row">21 Nov</th><td>0.031</td><td>88th</td><td>CVE published the day before</td></tr>
+<tr><th scope="row">22 Nov</th><td>0.038</td><td>90th</td><td></td></tr>
+<tr><th scope="row">23 Nov</th><td>0.037</td><td>90th</td><td>Added to KEV; the score Vigil shows</td></tr>
+<tr><th scope="row">24 Nov</th><td>0.498</td><td>99th</td><td></td></tr>
+</tbody>
+</table>
+</div>
+
+<h3 class="tagging-h">What this establishes</h3>
+<ul class="points">
+<li>CISA lists the flaw as exploited in the wild and, separately, assesses exploitation as active. Vigil repeats
+CISA's statements without change. Both come from one publisher, so they are not two independent confirmations.</li>
+<li>Why Vigil kept it routine. Vigil's EPSS alert needs known ransomware use and a current score of at least 0.5.
+CISA gives ransomware use as unknown, and the score Vigil held was 0.037. Even the 24 Nov score, 0.498, would not
+have met the rule.</li>
+<li>How fast it moved: the CVE was published on 20 Nov and added to KEV three days later.</li>
+</ul>
+
+<h3 class="tagging-h">What it does not establish</h3>
+<ul class="points">
+<li>Who exploited the flaw, against whom, or how widely. The KEV entry names no attacker and no victim.</li>
+<li>That it has not been used for ransomware. "Unknown" means CISA does not know, not that it has not happened.</li>
+<li>Why the EPSS score jumped on 24 Nov. FIRST publishes the scores, not the reason a score changed, and the
+score is a model's estimate, not a count of attacks.</li>
+<li>How many MONAI Label servers can be reached from the internet. Vigil does not measure exposure.</li>
+<li>That version 0.8.6 fixes the flaw. That comes from the CVE record; Vigil did not test it.</li>
+</ul>
+
+<h3 class="tagging-h">Check it yourself</h3>
+<ul class="points">
+<li>KEV catalog:
+<a href="https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json" target="_blank" rel="noopener" aria-describedby="newtab">CISA's JSON feed&nbsp;<span aria-hidden="true">↗</span></a>
+(US public domain); search for <code>CVE-2026-133968</code>.</li>
+<li>CVE record and CISA's assessment:
+<a href="https://github.com/cisagov/vulnrichment/blob/develop/2026/133xxx/CVE-2026-133968.json" target="_blank" rel="noopener" aria-describedby="newtab">Vulnrichment file&nbsp;<span aria-hidden="true">↗</span></a>
+(CC0); the SSVC options are under the "CISA ADP Vulnrichment" container.</li>
+<li>EPSS:
+<a href="https://api.first.org/data/v1/epss?cve=CVE-2026-133968&amp;scope=time-series" target="_blank" rel="noopener" aria-describedby="newtab">FIRST's API, with recent days&nbsp;<span aria-hidden="true">↗</span></a>
+(free to use with attribution).</li>
+<li>Vigil's alert rule: the <code>EPSS_ALERT</code> rule in Vigil's
+<a href="https://github.com/metacog-osint/Vigil/blob/main/api/_lib/doctrineFeed.js" target="_blank" rel="noopener" aria-describedby="newtab">feed code&nbsp;<span aria-hidden="true">↗</span></a>.</li>
+</ul>
 </main>
 
 <footer class="foot">
