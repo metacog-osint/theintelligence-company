@@ -65,7 +65,7 @@
       label: "Every layer · common operational picture",
       short: "Every layer's findings on one map, so places where more than one layer reports stand out.",
       long: "The common operational picture: every layer's findings on one map, so a place or topic that turns up in more than one layer stands out. Outages are already read against hazards, notices and press attention in the same country; convergence scoring, checked by Verdict, is in development." },
-    { id: "verdict", name: "Verdict", href: "https://metacog-osint.github.io/verdict/", status: "beta", group: "layers", layer: "all",
+    { id: "verdict", name: "Verdict", href: "https://verdict.theintelligence.company/", status: "beta", group: "layers", layer: "all",
       label: "Every layer · forecast ledger",
       short: "Every forecast logged before its outcome, then scored; misses stay in.",
       long: "Logs every forecast and warning with the rule that will settle it, syncs the event calendar, and scores calibration in public." },
