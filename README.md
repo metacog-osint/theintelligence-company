@@ -32,3 +32,7 @@ Copyright © 2026 Thomas Brummer, The Intelligence Company. The code is licensed
 License v3.0 (`LICENSE`), except the shared site scripts in `site/shared/`, which are MIT so that every site can copy
 them. Fonts and other third-party files keep their own licences, and data keeps its sources' terms; all are listed in
 `NOTICE`.
+
+## AI assistance
+
+This repository is built with AI coding assistance (Anthropic's Claude Code). The Intelligence Company is responsible for everything published here.
