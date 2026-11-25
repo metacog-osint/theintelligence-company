@@ -368,6 +368,16 @@ test("reviewer front door: Listening Post is off the public lists, and the About
   assert.ok(/href="\/tagging\/"/.test(INDEX), "Start here links the tagging page");
 });
 
+test("Start here links the worked cases page, and each case says what it did not establish (ideas#194)", () => {
+  assert.ok(/href="\/cases\/"/.test(INDEX), "Start here links the cases page");
+  const cases = read("site/cases/index.html");
+  assert.ok(/<title>Worked cases · The Intelligence Company<\/title>/.test(cases));
+  assert.ok(!/<script>(?!<\/)/.test(cases), "no inline script under the CSP");
+  const cs = cases.match(/<h2 class="tagging-h" id="[^"]+">/g) || [];
+  const nots = cases.match(/What it does not establish/g) || [];
+  assert.ok(cs.length >= 1 && nots.length === cs.length, "every case has a 'does not establish' part");
+});
+
 test("the hub offers no paid work: no Work with us section, nav item or button (Tom, 18 Nov 2026: a personal project)", () => {
   for (const [page, html] of Object.entries(HTML_PAGES)) {
     assert.ok(!/id="services"|href="#services"/.test(html), `${page}: the Work with us section and its links are gone`);
