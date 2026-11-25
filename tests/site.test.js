@@ -22,7 +22,7 @@ const STATUS_WORDS = { live: "Live", beta: "Beta", invite: "Invite only" };
 // ---------------------------------------------------------------- the program lists agree
 
 test("the home page's product list and the house bar list the same programs, names, links and statuses", () => {
-  const home = productList(INDEX).map((p) => ({ name: p.name, href: p.href, status: p.statusClass })).sort(byHref);
+  const home = productList(INDEX).filter((p) => !/data-offbar/.test(p.li)).map((p) => ({ name: p.name, href: p.href, status: p.statusClass })).sort(byHref);
   const bar = NAV.programs.map((p) => ({ name: p.name, href: p.href, status: p.status })).sort(byHref);
   assert.deepEqual(home, bar, "keep PROGRAMS in tic-nav.js in step with the product list in index.html");
 });
@@ -43,7 +43,7 @@ test("the product list runs COP first, then programs by home layer from Systems 
   assert.ok(ids.length > 0, "the product list's items carry data-product and data-layer");
   assert.equal(ids[0].id, "cop", "COP comes first");
   assert.equal(ids[0].layer, "all");
-  const rank = (l) => (OE.LK.indexOf(l) < 0 ? OE.LK.length : OE.LK.indexOf(l));
+  const rank = (l) => (l === "all" ? -1 : OE.LK.indexOf(l) < 0 ? OE.LK.length : OE.LK.indexOf(l)); // Verdict joins COP under "Every layer"
   const ranks = ids.slice(1).map((x) => rank(x.layer));
   assert.deepEqual(ranks, [...ranks].sort((a, b) => a - b), "programs follow the drawing's layer order");
   for (const x of ids.slice(1)) {
@@ -229,7 +229,7 @@ test("new-tab links end in ↗, and in-page links never do", () => {
 
 test("the footer credits every program's sources, and says which programs feed the Latest lines", () => {
   const foot = footerOf(INDEX);
-  const credited = links(foot).map((l) => new URL(l.attrs.href)).filter((u) => u.hostname.endsWith(".theintelligence.company"));
+  const credited = links(foot).map((l) => new URL(l.attrs.href)).filter((u) => u.hostname.endsWith(".theintelligence.company") || u.hostname === "metacog-osint.github.io"); // Verdict, until its suite address
   const hosts = credited.map((u) => u.hostname).sort();
   assert.deepEqual(hosts, NAV.programs.map((p) => new URL(p.href).hostname).sort(), "one Sources link per program in the house bar");
   const latest = [...INDEX.matchAll(/<article class="latest-item" id="latest-[a-z]+">\s*<p class="latest-meta">([^<]+)<\/p>/g)].map((m) => m[1]);
@@ -358,6 +358,24 @@ test("Every program is one closed list that names every row and opens in place (
   assert.ok(!/<details class="plist-fold"[^>]*\bopen\b/.test(INDEX), "it starts closed");
   const rows = (fold[1].match(/<li\b/g) || []).length;
   assert.equal(Number(/class="plist-n">(\d+)</.exec(fold[1])[1]), rows, "the count in its summary matches its rows");
+});
+
+test("reviewer front door: Listening Post is off the public lists, and the About wording holds (Tom, 21 Nov 2026)", () => {
+  for (const [page, html] of Object.entries(HTML_PAGES)) assert.ok(!/listening ?post/i.test(html), `${page}: no Listening Post`);
+  assert.ok(!NAV.programs.some((p) => p.id === "listeningpost"), "not in the house bar");
+  assert.ok(/about half his career as a signals intelligence \(SIGINT\)/.test(INDEX));
+  assert.ok(/on his own time from public sources, using no employer's methods or data/.test(INDEX));
+  assert.ok(/href="\/tagging\/"/.test(INDEX), "Start here links the tagging page");
+});
+
+test("Start here links the worked cases page, and each case says what it did not establish (ideas#194)", () => {
+  assert.ok(/href="\/cases\/"/.test(INDEX), "Start here links the cases page");
+  const cases = read("site/cases/index.html");
+  assert.ok(/<title>Worked cases · The Intelligence Company<\/title>/.test(cases));
+  assert.ok(!/<script>(?!<\/)/.test(cases), "no inline script under the CSP");
+  const cs = cases.match(/<h2 class="tagging-h" id="[^"]+">/g) || [];
+  const nots = cases.match(/What it does not establish/g) || [];
+  assert.ok(cs.length >= 1 && nots.length === cs.length, "every case has a 'does not establish' part");
 });
 
 test("the hub offers no paid work: no Work with us section, nav item or button (Tom, 18 Nov 2026: a personal project)", () => {

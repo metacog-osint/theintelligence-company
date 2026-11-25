@@ -19,7 +19,39 @@ test("every program in the house bar, and the hub, is checked, once", () => {
   assert.equal(new Set(urls).size, urls.length, "no site twice");
   for (const h of hrefs) assert.ok(urls.includes(h), `${h} is in the house bar but not checked`);
   assert.ok(urls.includes("https://theintelligence.company/"));
-  for (const s of SITES) assert.match(s.url, /^https:\/\/([a-z0-9-]+\.)?theintelligence\.company\/$/);
+  for (const s of SITES.filter((x) => x.house !== false)) {
+    assert.match(s.url, /^https:\/\/([a-z0-9-]+\.)?theintelligence\.company\/$/);
+  }
+});
+
+test("other work on the domain is checked but listed apart from the programs (Tom, 24 Nov 2026)", () => {
+  assert.deepEqual(SITES.filter((s) => s.group === "other").map((s) => s.id), ["propertycast", "activation", "listeningpost"]);
+  const other = { id: "o", url: "https://o.theintelligence.company/", group: "other" };
+  const run = summarize([judge(site, good), judge(other, { ...good, status: 500 })], new Date(0), new Date(1000));
+  assert.equal(run.contract, "tic-sitecheck/1.1");
+  assert.deepEqual(run.results.map((r) => r.id), ["a"], "results holds the programs only");
+  assert.deepEqual(run.other_work.map((r) => r.id), ["o"]);
+  assert.equal(run.sites, 2);
+  assert.deepEqual(run.failed, ["o"], "a failed other page still fails the run");
+});
+
+test("Healthchecks hears about a failed other page too", async () => {
+  const calls = [];
+  const other = { id: "o", url: "https://o.theintelligence.company/", group: "other" };
+  await report("https://hc.example/p", summarize([judge(other, { ...good, status: 503 })], new Date(0), new Date(0)),
+    async (u, o) => calls.push([u, o.body]));
+  assert.equal(calls[0][0], "https://hc.example/p/fail");
+  assert.match(calls[0][1], /o https:\/\/o\.theintelligence\.company\/: HTTP 503/);
+});
+
+test("Verdict is checked for its drawn board and is the only site excused from the house bar", () => {
+  const excused = SITES.filter((s) => s.house === false);
+  assert.deepEqual(excused.map((s) => s.id), ["verdict"]);
+  assert.ok(excused[0].expect, "an excused site must still prove it drew");
+  const noBar = { ...good, probe: { ...good.probe, house_bar: false, expect: true } };
+  assert.equal(judge(excused[0], noBar).ok, true);
+  assert.equal(judge(excused[0], { ...noBar, probe: { ...noBar.probe, expect: false } }).ok, false);
+  assert.equal(judge(site, noBar).ok, false);
 });
 
 test("a page that loads, runs its scripts and has no script error passes", () => {
@@ -43,6 +75,13 @@ test("each way a visitor sees a broken page fails it, with the reason", () => {
   assert.equal(judge(mapSite, { ...good, probe: { ...good.probe, expect: true } }).ok, true);
 });
 
+test("Orbit's home page is checked for its Cesium globe, not the MapLibre map it moved to /launches", () => {
+  const orbit = SITES.find((s) => s.id === "orbit");
+  assert.equal(orbit.url, "https://orbit.theintelligence.company/");
+  assert.match(orbit.expect, /cesium-widget/);
+  assert.doesNotMatch(orbit.expect, /maplibregl/);
+});
+
 test("a page that never loaded reports only that, not a missing house bar", () => {
   const r = judge(mapSite, { error: "net::ERR_NAME_NOT_RESOLVED" });
   assert.equal(r.problems.length, 1);
@@ -50,7 +89,7 @@ test("a page that never loaded reports only that, not a missing house bar", () =
 
 test("the run record names the failed sites", () => {
   const run = summarize([judge(site, good), judge(mapSite, { ...good, status: 500 })], new Date(0), new Date(1000));
-  assert.equal(run.contract, "tic-sitecheck/1");
+  assert.equal(run.contract, "tic-sitecheck/1.1");
   assert.equal(run.ok, 1);
   assert.deepEqual(run.failed, ["a"]);
   assert.equal(run.finished_at, "1970-01-01T00:00:01.000Z");
