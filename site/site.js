@@ -18,7 +18,7 @@
   var UNDERTOW_FEED = "https://undertow.theintelligence.company/data/feed.geojson"; // Cloudflare Pages too; read whole
   var WAKE_FEED = "https://wake.theintelligence.company/data/feed.geojson"; // Cloudflare Pages too; read whole
   var RELIEF_FEED = "https://relief.theintelligence.company/data/feed.geojson"; // Cloudflare Pages too; read whole
-  var VERDICT_SCORES = "https://metacog-osint.github.io/verdict/data/scores.json"; // read by HEAD only: its generated_at is a date, not a time
+  var VERDICT_SCORES = "https://verdict.theintelligence.company/data/scores.json"; // read by HEAD only: its generated_at is a date, not a time
   var COP_POINTS = "https://cop.theintelligence.company/data/home-points.json"; // places of today's unusual findings
   var COP_DIRECTION = "https://cop.theintelligence.company/data/direction.json"; // where concern is moving, and the record
 
