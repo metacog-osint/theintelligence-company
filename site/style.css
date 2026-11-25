@@ -56,6 +56,7 @@ h1, h2, h3, p, ul, ol, figure { margin: 0; }
 .wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 .skip { position: absolute; left: -9999px; top: 0; background: var(--card); padding: 8px 12px; z-index: 10001; } /* above the house bar */
 .skip:focus { left: 8px; top: 8px; }
+.noscript { margin: 16px 0 0; padding: 10px 12px; border: 1px solid var(--rule); background: var(--card); }
 
 /* Utility bar and masthead */
 .util { border-bottom: 1px solid var(--rule); font: 400 13px/1.4 var(--mono); color: var(--mut); }
