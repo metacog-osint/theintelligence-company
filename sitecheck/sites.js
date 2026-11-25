@@ -28,5 +28,5 @@ export const SITES = [
   { id: "listeningpost", url: "https://listeningpost.theintelligence.company/", group: "other" },
   // Verdict has no house bar or suite address yet, so it is held to its own drawn board instead. When it joins the
   // house bar, drop `house: false` and move it to its theintelligence.company address.
-  { id: "verdict", url: "https://metacog-osint.github.io/verdict/", expect: "#tiles > *", house: false },
+  { id: "verdict", url: "https://verdict.theintelligence.company/", expect: "#tiles > *" },
 ];
