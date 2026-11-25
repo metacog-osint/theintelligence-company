@@ -323,11 +323,87 @@ them.</li>
 <a href="https://cop.theintelligence.company/data/today.geojson" target="_blank" rel="noopener" aria-describedby="newtab">today.geojson&nbsp;<span aria-hidden="true">↗</span></a>;
 search for <code>UT-GOOGLE-0ff0742451</code>.</li>
 </ul>
+
+<h2 class="tagging-h" id="cop-cameroon-triage">COP: an internet outage in Cameroon, read across three other programs, November 2026</h2>
+<p class="tagging-lede"><strong>The published finding.</strong> Blackout published
+<code>blackout:radar-anomaly:3123fd7f-5639-46ed-9a0a-c37e71706282</code>: a traffic anomaly on one Cameroonian
+network, AS15964 (CAMNET-AS), from
+<time datetime="2026-11-22T11:45:00Z" data-tic="time">11:45 UTC</time> to
+<time datetime="2026-11-22T13:30:00Z" data-tic="time">13:30 UTC</time> on 22 Nov 2026, which Cloudflare Radar
+flagged and marked verified. COP's outage triage then asked three other programs what they showed for Cameroon
+around that hour, and read the outage <strong>open</strong>. Elements had no significant hazard that began in the
+72 hours before. Cordon had no travel or embassy notice issued or raised in the 48 hours before. Watchfloor's press
+attention was not raised. The reading is on
+<a href="https://cop.theintelligence.company/" target="_blank" rel="noopener" aria-describedby="newtab">COP&nbsp;<span aria-hidden="true">↗</span></a>,
+under Outage triage.</p>
+
+<p class="tagging-lede"><strong>The sources it was checked against.</strong> COP's own daily archive shows when
+the item arrived. It is absent from the snapshots of 23 Nov at 00:20, 06:21 and 12:20 UTC and present from the
+18:20 UTC snapshot, about 29 hours after the anomaly ended, because Radar's verification came after the event. As a
+second instrument, IODA (Georgia Tech's Internet Outage Detection and Analysis) was asked for alerts on AS15964 and
+on Cameroon between 06:00 and 20:00 UTC on 22 Nov, on 25 Nov 2026. It returned none. The same query does return
+IODA's alerts for an outage that Blackout took from IODA (Tuvalu, 24 Nov), so the empty answer is IODA's, not a
+failed request.</p>
+
+<h3 class="tagging-h">How the reading is put together</h3>
+<div class="tagging-scroll" tabindex="0" role="region" aria-label="How COP's triage read the Cameroon outage">
+<table class="tagging-table">
+<thead><tr><th scope="col">Part</th><th scope="col">What COP shows</th><th scope="col">Where it comes from</th></tr></thead>
+<tbody>
+<tr><th scope="row">The outage</th><td>One network, 1 hour 45 minutes, verified by Cloudflare; no cause given</td><td>Blackout, from Cloudflare Radar (CC BY-NC 4.0)</td></tr>
+<tr><th scope="row">Hazards</th><td>Nothing found: one minor hazard and one already running, neither counted</td><td>Elements</td></tr>
+<tr><th scope="row">Notices</th><td>Nothing found: four older notices standing, not counted</td><td>Cordon</td></tr>
+<tr><th scope="row">Press attention</th><td>Nothing found: not raised</td><td>Watchfloor</td></tr>
+<tr><th scope="row">Base rate</th><td>In Cameroon an outage would have read open on 16 of 16 counted days, whatever its cause</td><td>COP's archive</td></tr>
+<tr><th scope="row">Replay</th><td>Open on 58.6% of documented 2025 shutdowns and 80.9% of the same countries' ordinary days; in Cameroon, 4 of 4 shutdowns read open, against 84.6% of 285 ordinary days</td><td>Access Now, #KeepItOn STOP, replayed through triage</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3 class="tagging-h">What this establishes</h3>
+<ul class="points">
+<li>Cloudflare saw an unusual drop in its own traffic from one Cameroonian network on 22 Nov 2026 and marked it
+verified. Blackout's item and COP's archive carry the same network, times and wording.</li>
+<li>None of the context triage looks for was there: no new hazard, no fresh notice, no unusual press attention in
+Cameroon around that hour, with each layer reporting current data.</li>
+<li>What "open" is worth. In Cameroon, almost every day reads open, and so did every documented Cameroonian
+shutdown of 2025. Here the reading adds little either way, and COP prints the base rate and the replay beside it
+to say so.</li>
+</ul>
+
+<h3 class="tagging-h">What it does not establish</h3>
+<ul class="points">
+<li>The cause. Radar gives none, and triage never names one: "open" means nothing else in COP explains the drop,
+not that someone ordered it.</li>
+<li>That it was a shutdown. A fault, maintenance or a power cut on one network looks the same in traffic.</li>
+<li>That the country was affected. Cloudflare saw one network; the other layers are read for the whole country,
+and IODA showed no alert for the network or the country.</li>
+<li>That nothing happened, from the empty layers. "Nothing found" covers only what those three programs read.</li>
+<li>How it ends. The drafted question beside it (whether OONI measures blocking rising in Cameroon in the 72 hours
+after) is a draft, not a registered forecast, and has no probability.</li>
+</ul>
+
+<h3 class="tagging-h">Check it yourself</h3>
+<ul class="points">
+<li>COP's reading:
+<a href="https://cop.theintelligence.company/data/triage.json" target="_blank" rel="noopener" aria-describedby="newtab">triage.json&nbsp;<span aria-hidden="true">↗</span></a>;
+search for <code>3123fd7f</code>. It changes with each build; every reading is kept in the
+<code>triage-log</code> release of COP's public repository.</li>
+<li>COP's archived snapshots:
+<a href="https://github.com/metacog-osint/cop/releases/tag/snapshots-2026-11" target="_blank" rel="noopener" aria-describedby="newtab">snapshots-2026-11&nbsp;<span aria-hidden="true">↗</span></a>,
+the files for 23 Nov.</li>
+<li>The network on Cloudflare Radar:
+<a href="https://radar.cloudflare.com/as15964" target="_blank" rel="noopener" aria-describedby="newtab">AS15964&nbsp;<span aria-hidden="true">↗</span></a>.</li>
+<li>IODA's view of Cameroon:
+<a href="https://ioda.inetintel.cc.gatech.edu/country/CM" target="_blank" rel="noopener" aria-describedby="newtab">IODA&nbsp;<span aria-hidden="true">↗</span></a>.</li>
+<li>The replay method and its figures:
+<a href="https://cop.theintelligence.company/scoring#triage" target="_blank" rel="noopener" aria-describedby="newtab">How COP reads it&nbsp;<span aria-hidden="true">↗</span></a>.</li>
+</ul>
 </main>
 
 <footer class="foot">
   <div class="wrap foot-inner">
-    <p>&copy; 2026 Thomas Brummer · The Intelligence Company · Fargo-Moorhead, ND/MN · Updated <time datetime="2026-11-24T17:00:00Z" data-tic="date" data-tic-year>24 Nov 2026</time></p>
+    <p>&copy; 2026 Thomas Brummer · The Intelligence Company · Fargo-Moorhead, ND/MN · Updated <time datetime="2026-11-25T04:00:00Z" data-tic="date" data-tic-year>25 Nov 2026</time></p>
     <p>No analytics or tracking. If you change the time settings or minimize the top bar, that choice stays in your browser.</p>
   </div>
 </footer>
