@@ -10,5 +10,8 @@ Third-party and shared files in this repository keep their own licences:
 - site/fonts/          IBM Plex Sans and Mono, and Newsreader, SIL Open Font License 1.1
   (site/fonts/OFL-ibm-plex.txt, site/fonts/OFL-newsreader.txt)
 - site/veterans/veterans-day/vendor/leaflet/   Leaflet 1.9.4, BSD 2-Clause (LICENSE.txt)
+- site/veterans/veterans-day/data/   Store locations and drive times derived from OpenStreetMap data
+  (routes from the OSRM demo server on OpenStreetMap roads): © OpenStreetMap contributors, available under the
+  Open Database License (ODbL) 1.0, https://www.openstreetmap.org/copyright. These derived files are ODbL too.
 
 Data shown on the sites keeps its sources' terms and is credited where it is shown.
