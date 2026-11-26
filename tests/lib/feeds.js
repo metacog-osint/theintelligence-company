@@ -6,7 +6,7 @@ import path from "node:path";
 import { ROOT, feedUrls } from "./source.js";
 
 export const URLS = feedUrls(); // NOISEFLOOR, WATCHFLOOR, VIGIL, COP_HEALTH, ELEMENTS_FEED, CORDON_FEED, VIS_FEED, BLACKOUT_FEED,
-// HEADWIND_FEED, ORBIT_FEED, LAUNCH_FEED, UNDERTOW_FEED, WAKE_FEED, RELIEF_FEED
+// HEADWIND_FEED, ORBIT_FEED, LAUNCH_FEED, UNDERTOW_FEED, WAKE_FEED, RELIEF_FEED, READOUT_FEED
 // The samples' clock: every time in tests/fixtures is set relative to this moment (12:00 PM CST, 7 Nov 2026).
 export const NOW = new Date("2026-11-07T18:00:00Z");
 
@@ -75,6 +75,8 @@ export const SHAPES = {
   WAKE_FEED: (f) => [need(isTime(f.generated_at), "generated_at: the Updated time")],
   // And Relief's (Cloudflare Pages; rebuilt every six hours).
   RELIEF_FEED: (f) => [need(isTime(f.generated_at), "generated_at: the Updated time")],
+  // And Readout's (Cloudflare Pages; rebuilt every six hours).
+  READOUT_FEED: (f) => [need(isTime(f.generated_at), "generated_at: the Updated time")],
   // COP's small file of places for the home page's world map (about 1.5 KB).
   COP_DIRECTION: (d) => [
     need(isTime(d.generated_at), "generated_at: the COP card's date"),
@@ -105,7 +107,7 @@ export function problems(name, data) {
 const FILES = { NOISEFLOOR: "noisefloor-board.json", WATCHFLOOR: "watchfloor-summary.json", VIGIL: "vigil-summary.json",
   COP_HEALTH: "cop-health.json", COP_POINTS: "cop-home-points.json", COP_DIRECTION: "cop-direction.json", VIS_FEED: "vis-feed.json",
   BLACKOUT_FEED: "blackout-feed.json", HEADWIND_FEED: "headwind-feed.json",
-  ORBIT_FEED: "orbit-feed.json", LAUNCH_FEED: "launch-feed.json", UNDERTOW_FEED: "undertow-feed.json", WAKE_FEED: "wake-feed.json", RELIEF_FEED: "relief-feed.json",
+  ORBIT_FEED: "orbit-feed.json", LAUNCH_FEED: "launch-feed.json", UNDERTOW_FEED: "undertow-feed.json", WAKE_FEED: "wake-feed.json", RELIEF_FEED: "relief-feed.json", READOUT_FEED: "readout-feed.json",
   VERDICT_SCORES: "verdict-scores.json" };
 export function sample(name) {
   return JSON.parse(readFileSync(path.join(ROOT, "tests", "fixtures", FILES[name]), "utf8"));

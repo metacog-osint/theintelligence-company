@@ -228,6 +228,16 @@ test("Noisefloor's COSMIC-2 day job runs at :50 from 04 to 13 UTC, except Headwi
   assert.deepEqual(due(JOBS, at(50, 14)).map((j) => j.repo), []);
 });
 
+test("Readout runs every six hours, at :00 past 05, 11, 17 and 23 UTC", () => {
+  const r = JOBS.find((j) => j.repo === "metacog-osint/readout");
+  assert.equal(r.workflow, "update.yml");
+  assert.equal(r.ref, "main");
+  assert.deepEqual(r.minutes, [0]);
+  assert.deepEqual(r.hours, [5, 11, 17, 23]);
+  assert.deepEqual(due(JOBS, at(0, 11)).map((j) => j.repo), ["metacog-osint/readout"]);
+  assert.deepEqual(due(JOBS, at(0, 12)).map((j) => j.repo), []);
+});
+
 test("Relief runs every six hours, at :00 past 02, 08, 14 and 20 UTC", () => {
   const r = JOBS.find((j) => j.repo === "metacog-osint/relief");
   assert.equal(r.workflow, "update.yml");

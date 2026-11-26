@@ -60,6 +60,10 @@ export const JOBS = [
   // Relief every six hours (15 Nov 2026): IFRC GO appeals and WHO Disease Outbreak News change daily at most. Public repo,
   // so its minutes are free. :00 at 02, 08, 14 and 20 UTC shares no slot with the others. Its own cron is the fallback.
   { repo: "metacog-osint/relief", workflow: "update.yml", ref: "main", minutes: [0], hours: [2, 8, 14, 20] },
+  // Readout every six hours (26 Nov 2026, to start once Tom says yes): the Kremlin, GOV.UK and the EEAS publish
+  // through the day, and its say-do check reads COP's bus, so :00 at 05, 11, 17 and 23 UTC, 40 minutes after COP's
+  // even-hour build, in a slot no other job uses. Public repo, so its minutes are free. Its own cron (:17 every 6 h) is the fallback.
+  { repo: "metacog-osint/readout", workflow: "update.yml", ref: "main", minutes: [0], hours: [5, 11, 17, 23] },
   // COP's suite watchdog every three hours (14 Nov 2026): it fails, and GitHub mails the owner, when COP's build or
   // a program has stopped. On its own cron it would fire only every 7 to 14 hours. Private repo: 8 runs a day of
   // well under a minute is about 240 Actions minutes a month. It reads the public snapshot, so it is kept off COP's

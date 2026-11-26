@@ -32,7 +32,7 @@
       sub: "People and groups: who acts, what they say and believe, and how they decide, shaped by sociocultural factors.",
       feeds: [["Press attention and framing", "now", "Context"], ["Coverage split by source group", "now", "Watchfloor"],
         ["US embassy security and demonstration alerts", "now", "Cordon"],
-        ["Official statements and votes", "planned", "Readout"], ["Unrest and displacement", "planned", "Temper"],
+        ["Official statements (Kremlin, UK, EU)", "now", "Readout"], ["Security Council votes and AU communiqués", "planned", "Readout"], ["Unrest and displacement", "planned", "Temper"],
         ["Press freedom", "planned", "Temper"], ["Humanitarian appeals and funding (IFRC GO)", "now", "Relief"], ["Disease outbreak reports (WHO)", "now", "Relief"],
         ["Attributed influence operations and platform takedowns", "now", "Undertow"]],
       who: "Who's who: actors are named and described by their role (a party to a conflict, a third party, civilians) " +
@@ -104,8 +104,9 @@
     { id: "context", name: "Context", status: "live", home: "human", reach: ["systems", "cyber", "ems", "space", "air", "land"], at: [752, 486],
       href: "https://context.theintelligence.company", ask: "How is the world's press framing each conflict?",
       line: "How the world's press covers each watched zone and topic: attention, escalation and framing, refreshed twice a day from GDELT." },
-    { id: "readout", name: "Readout", status: "planned", home: "human", reach: ["systems"], at: [694, 430], end: true,
-      line: "Official statements, Security Council votes and African Union communiqués, with a check of what was said against what was done." },
+    { id: "readout", name: "Readout", status: "beta", home: "human", reach: ["systems"], at: [590, 444],
+      href: "https://readout.theintelligence.company", ask: "Do governments' calm words match what the sensors saw?",
+      line: "Official statements from the Kremlin, the UK government and the EU, sorted by the kind of claim they make (de-escalation, denial, assurance, threat, accusation) and held against the anomalies and warnings other TIC programs saw in the same countries within three days. Claims, not facts; a candidate say-do gap is a pointer to look, never a finding. UN Security Council and African Union lanes are built and held until their terms are cleared." },
     { id: "undertow", name: "Undertow", status: "beta", home: "human", reach: ["cyber", "systems"], at: [780, 426],
       href: "https://undertow.theintelligence.company", ask: "Which influence operations have platforms and governments taken down?",
       line: "Covert influence operations as the platforms and governments that disrupted them report them: Meta's takedown networks, Google's influence-operations bulletins, OpenAI's threat reports, TikTok's reports under the EU Code of Conduct, and the EEAS's named operations. Each gives the origin the publisher assessed, the targets, and the DISARM techniques described, with a STIX 2.1 export. Operations only: no account handles, links or names of individuals." },
@@ -156,7 +157,7 @@
   // programs under it. Every program with an `ask` belongs to exactly one group; sites first, then in development.
   var GROUPS = [
     { id: "g1", q: "Where is conflict or pressure building?", layers: ["systems", "human"],
-      programs: ["cop", "watchfloor", "context", "undertow", "relief", "headwind", "verdict"] },
+      programs: ["cop", "watchfloor", "context", "undertow", "relief", "readout", "headwind", "verdict"] },
     { id: "g2", q: "What's hitting networks, signals and satellites?", layers: ["cyber", "ems", "space"],
       programs: ["vigil", "noisefloor", "blackout", "fieldcast", "orbit", "launch"] },
     { id: "g3", q: "What's happening on the ground, at sea and in the air?", layers: ["air", "land"],
