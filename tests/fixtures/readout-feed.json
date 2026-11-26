@@ -1,0 +1,7 @@
+{
+ "type": "FeatureCollection",
+ "contract": "tic-feed/2",
+ "program": "readout",
+ "generated_at": "2026-11-07T15:00:00Z",
+ "features": []
+}

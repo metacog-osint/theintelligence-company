@@ -12,6 +12,7 @@ export const SITES = [
   { id: "context", url: "https://context.theintelligence.company/" },
   { id: "undertow", url: "https://undertow.theintelligence.company/" },
   { id: "relief", url: "https://relief.theintelligence.company/" },
+  { id: "readout", url: "https://readout.theintelligence.company/" },
   { id: "vigil", url: "https://vigil.theintelligence.company/" },
   { id: "blackout", url: "https://blackout.theintelligence.company/", expect: ".maplibregl-map" },
   { id: "noisefloor", url: "https://noisefloor.theintelligence.company/" },
