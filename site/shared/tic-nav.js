@@ -1,4 +1,4 @@
-/*! tic-nav.js v2.3.1 · The Intelligence Company house bar: a link home and a Programs menu · canonical copy:
+/*! tic-nav.js v2.3.2 · The Intelligence Company house bar: a link home and a Programs menu · canonical copy:
  *  the hub's site/shared/tic-nav.js (copy into each site with tic-nav.css; keep the version line).
  *  SPDX-License-Identifier: MIT. Copyright (c) 2026 The Intelligence Company. MIT in every repository it is
  *  copied into, whatever that repository's own licence.
@@ -28,6 +28,9 @@
  *    TicNav.minimized()      true when the bar is minimized
  *    TicNav.minimize(bool)   minimizes (true) or restores (false) it, and remembers the choice
  *  v1.13 (15 Nov 2026): Wake (shipping through maritime chokepoints, beta) in the Programs menu.
+ *
+ *  v2.3.2 (26 Nov 2026): Orbit's entry no longer lists scheduled launches, which moved to Launch at orbit-2.32;
+ *  Launch's entry names them.
  *
  *  v2.3.1 (25 Nov 2026): Verdict's menu entry links to its own address, verdict.theintelligence.company (the old
  *  github.io address redirects there).
@@ -106,12 +109,12 @@
       long: "Where GPS and other satellite navigation is jammed or spoofed, mapped every day from aircraft and ship position reports, with satellite and space-weather context." },
     { id: "orbit", name: "Orbit", href: "https://orbit.theintelligence.company", status: "beta", group: "layers", layer: "space",
       label: "Space · orbital activity",
-      short: "What changed in Earth orbit: launches, scheduled launches, reentries and satellite catalog changes.",
-      long: "What changed in Earth orbit, from public catalogs: orbital launches of the last 7 and 30 days, launches scheduled for the next 14 days, reentries, and changes to the satellite catalog between Orbit's own readings, with objects in orbit counted by owner. From Jonathan McDowell's GCAT (CC BY 4.0) and The Space Devs' Launch Library 2. Measurements and reports only; Orbit adds no judgment. Updated every six hours." },
+      short: "What changed in Earth orbit: launches, reentries, satellite catalog changes and the GEO belt.",
+      long: "What changed in Earth orbit, from public catalogs: orbital launches of the last 7 and 30 days, reentries, changes to the satellite catalog between Orbit's own readings, orbit changes in a watch list of satellites, and the GEO belt, with objects in orbit counted by owner. From Jonathan McDowell's GCAT (CC BY 4.0) and Space-Track. Scheduled launches are Launch's. Measurements and reports only; Orbit adds no judgment. Updated every six hours." },
     { id: "launch", name: "Launch", href: "https://launch.theintelligence.company", status: "beta", group: "layers", layer: "space",
       label: "Space · launch closures",
-      short: "Launch and reentry closure areas: what is announced now, which scheduled launches coincide, and each pad's history.",
-      long: "Launch and reentry closure areas from official notices: the FAA's space-operations flight restrictions in force, scheduled launches that coincide with an announced closure area in time, in time and place, or as a launch since dated, a searchable history of closures since 2023 with each notice's own text, and where each pad's closures fall. Worldwide NOTAMs wait on FAA access." },
+      short: "Launch and reentry closure areas and scheduled launches: what is announced now, which launches coincide, and each pad's history.",
+      long: "Launch and reentry closure areas from official notices: the FAA's space-operations flight restrictions in force, the launches scheduled worldwide (Launch Library 2) and those that coincide with an announced closure area in time, in time and place, or as a launch since dated, a searchable history of closures since 2023 with each notice's own text, and where each pad's closures fall. Worldwide NOTAMs wait on FAA access." },
     { id: "cordon", name: "Cordon", href: "https://cordon.theintelligence.company", status: "beta", group: "layers", layer: "air",
       label: "Air · hazard notices",
       short: "Where authorities warn people away.",
@@ -395,7 +398,7 @@
   }
 
   window.TicNav = {
-    version: "2.3.1", programs: PROGRAMS.slice(), mount: mount,
+    version: "2.3.2", programs: PROGRAMS.slice(), mount: mount,
     minimized: function () { return document.documentElement.classList.contains("tic-house-minimized"); },
     minimize: function (min) { if (setMini) setMini(min !== false, true); }
   };
