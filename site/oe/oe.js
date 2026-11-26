@@ -104,7 +104,7 @@
     { id: "context", name: "Context", status: "live", home: "human", reach: ["systems", "cyber", "ems", "space", "air", "land"], at: [752, 486],
       href: "https://context.theintelligence.company", ask: "How is the world's press framing each conflict?",
       line: "How the world's press covers each watched zone and topic: attention, escalation and framing, refreshed twice a day from GDELT." },
-    { id: "readout", name: "Readout", status: "beta", home: "human", reach: ["systems"], at: [694, 430], end: true,
+    { id: "readout", name: "Readout", status: "beta", home: "human", reach: ["systems"], at: [590, 444],
       href: "https://readout.theintelligence.company", ask: "Do governments' calm words match what the sensors saw?",
       line: "Official statements from the Kremlin, the UK government and the EU, sorted by the kind of claim they make (de-escalation, denial, assurance, threat, accusation) and held against the anomalies and warnings other TIC programs saw in the same countries within three days. Claims, not facts; a candidate say-do gap is a pointer to look, never a finding. UN Security Council and African Union lanes are built and held until their terms are cleared." },
     { id: "undertow", name: "Undertow", status: "beta", home: "human", reach: ["cyber", "systems"], at: [780, 426],
