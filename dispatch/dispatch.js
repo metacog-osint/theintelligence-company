@@ -38,20 +38,14 @@ export const JOBS = [
   // slips past midnight UTC loses the day. 17:30 UTC: 17:35 is Elements' slot. catalog.yml's own guard (stcat.due)
   // allows one read per UTC date, so later starts that day are no-ops. Public repo, so its minutes are free.
   { repo: "metacog-osint/orbit", workflow: "catalog.yml", ref: "main", minutes: [30], hours: [17] },
-  // Orbit's launch ledger every hour (16 Nov 2026, Tom's "yes, build it"): one Launch Library 2 pull of 14 launches
-  // (free limit 15 requests an hour), published on Orbit's public release `ledger`. :45 every hour but Blackout's
-  // (01, 05, 09, 13, 17, 21 UTC), where it starts at :55. Public repo, so its minutes are free. Its own cron is the
-  // fallback.
-  { repo: "metacog-osint/orbit", workflow: "ledger.yml", ref: "main", minutes: [45],
-    hours: [0, 2, 3, 4, 6, 7, 8, 10, 11, 12, 14, 15, 16, 18, 19, 20, 22, 23] },
-  { repo: "metacog-osint/orbit", workflow: "ledger.yml", ref: "main", minutes: [55], hours: [1, 5, 9, 13, 17, 21] },
   // Orbit's GEO region twice a day (16 Nov 2026, GEO move step 2): one Space-Track gp query for every object near
   // GEO, on the account Orbit's update run and Noisefloor's daily run also use (gp at most once an hour). 03:15 and
   // 15:15 UTC sit over two hours from Orbit's update starts (:55 past 00, 06, 12, 18), and geo.yml skips while
   // either of the others made a gp query within the hour, or when today's file was pulled under an hour ago, so its
   // own cron (03:17, 15:17) ends in about a minute after a dispatched run. Public repo, so its minutes are free.
   { repo: "metacog-osint/orbit", workflow: "geo.yml", ref: "main", minutes: [15], hours: [3, 15] },
-  // Launch every six hours (14 Nov 2026), 20 minutes after Orbit starts, since it reads Orbit's published snapshot.
+  // Launch every six hours (14 Nov 2026), 20 minutes after Orbit starts, since it reads GCAT launches from Orbit's
+  // published snapshot.
   // Private repo: 4 short one-job runs a day. Its own cron (:11 every 6 h) is the fallback.
   { repo: "metacog-osint/launch", workflow: "update.yml", ref: "main", minutes: [15], hours: [1, 7, 13, 19] },
   // Undertow every six hours (14 Nov 2026): its publishers disclose monthly to yearly, so four runs a day is plenty.
