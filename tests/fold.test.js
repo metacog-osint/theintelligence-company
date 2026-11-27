@@ -84,6 +84,26 @@ test("a short table that scrolls sideways on a phone is focusable and named; one
   } finally { await u.close(); }
 });
 
+test("a wide table in a tab the site hides and shows itself is focusable and named once shown, with no resize", async () => {
+  const wide = `<div id="pane" hidden><div class="scroll"><table id="t" data-tic-fold><caption>Routing</caption><thead><tr><th scope="col">Name</th><th scope="col">Detail</th></tr></thead>
+<tbody><tr><td>One</td><td>${"longtext".repeat(40)}</td></tr><tr><td>Two</td><td>x</td></tr></tbody></table></div></div>`;
+  const t = await open(wide, { phone: true });
+  try {
+    assert.equal(await t.page.$eval(".scroll", (e) => e.getAttribute("tabindex")), null, "nothing to scroll while the tab is hidden");
+    // The site's own tab switch: no tic-tabs group, so no tic-tabs:show event.
+    await t.page.evaluate(() => { document.getElementById("pane").hidden = false; });
+    await t.page.waitForFunction(() => document.querySelector(".scroll").getAttribute("tabindex") === "0");
+    const b = await t.page.$eval(".scroll", (e) => ({ role: e.getAttribute("role"), label: e.getAttribute("aria-label") }));
+    assert.deepEqual(b, { role: "region", label: "Routing: 2 rows, scrolls sideways" });
+    // Hidden again, nothing is claimed; shown again, it is named again.
+    await t.page.evaluate(() => { document.getElementById("pane").hidden = true; });
+    await t.page.waitForFunction(() => document.querySelector(".scroll").getAttribute("tabindex") === null);
+    await t.page.evaluate(() => { document.getElementById("pane").hidden = false; });
+    await t.page.waitForFunction(() => document.querySelector(".scroll").getAttribute("tabindex") === "0");
+    assert.deepEqual(t.errors, []);
+  } finally { await t.close(); }
+});
+
 test("phone: the same ten rows; a count attribute sets its own numbers, one for phones and one wider", async () => {
   const t = await open(TABLE(40), { phone: true });
   try {

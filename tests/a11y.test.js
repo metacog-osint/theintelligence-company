@@ -88,6 +88,15 @@ for (const colorScheme of ["light", "dark"]) {
         } finally { await t.close(); }
       });
     }
+    // v2.5: a page that opens with its own skip link keeps it first, so axe still counts it as a skip link (its
+    // region rule flagged the skip link while the bar's home link came before it).
+    test(`house bar after a page's skip link, ${phone ? "phone" : "desktop"}, ${colorScheme}`, async () => {
+      const t = await openStandIn(browser, { colorScheme, phone, bypassCSP: true, stickyHeader: true, skip: true });
+      try {
+        const v = await axe(t.page);
+        assert.deepEqual(v, [], explain(v));
+      } finally { await t.close(); }
+    });
     // v2.0: the menu with freshness dots and their words (on time, running late, no current data).
     test(`house bar menu with freshness dots, ${phone ? "phone" : "desktop"}, ${colorScheme}`, async () => {
       const t = await openStandIn(browser, { colorScheme, phone, bypassCSP: true, stickyHeader: true,
