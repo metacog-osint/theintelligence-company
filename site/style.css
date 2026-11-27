@@ -1,4 +1,4 @@
-/* The Intelligence Company hub. Design "The Briefing" (Tom picked it, 29 Oct 2026): Newsreader headlines over
+/* The Intelligence Company hub. Design "The Briefing" (chosen 29 Oct 2026): Newsreader headlines over
    IBM Plex, paper and navy with one amber accent. Fonts are served from /fonts (SIL OFL; licences beside them). */
 @font-face { font-family: "Newsreader"; font-style: normal; font-weight: 400 600; font-display: swap;
   src: url("fonts/newsreader-latin.woff2") format("woff2");

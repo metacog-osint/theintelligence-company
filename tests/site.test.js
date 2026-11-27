@@ -53,7 +53,7 @@ test("the product list runs COP first, then programs by home layer from Systems 
   assert.ok(order.length >= ids.length && layerOf);
 });
 
-test("How we work names no time-zone feature (the Time button already says the zone; Tom, 31 Oct and 15 Nov 2026)", () => {
+test("How we work names no time-zone feature (the Time button already says the zone; 31 Oct and 15 Nov 2026)", () => {
   const std = /<section id="standards"[\s\S]*?<\/section>/.exec(INDEX)[0];
   assert.ok(!/time zone|your clock/i.test(std));
 });
@@ -69,7 +69,7 @@ test("house bar v2.0: each program's layer is its home layer on the drawing, and
   assert.deepEqual(ranks, [...ranks].sort((a, b) => a - b), "PROGRAMS in tic-nav.js runs in the drawing's layer order");
 });
 
-test("COP is described the same way in the house bar and on the hub (Tom, 15 Nov 2026: convergence, not checking)", () => {
+test("COP is described the same way in the house bar and on the hub (15 Nov 2026: convergence, not checking)", () => {
   const cop = NAV.programs.find((p) => p.id === "cop");
   assert.equal(cop.long, OE.PROGRAMS.find((p) => p.id === "cop").line);
   for (const s of [cop.label, cop.short, cop.long]) assert.ok(!/\b(check|checks|verif)/i.test(s.replace("checked by Verdict", "")), s);
@@ -352,7 +352,7 @@ test("wording the notes rule out stays out (GNSS, Moorhead, Minnesota, 25-year)"
   }
 });
 
-test("Every program is one closed list that names every row and opens in place (Tom, 20 Nov 2026)", () => {
+test("Every program is one closed list that names every row and opens in place (20 Nov 2026)", () => {
   const fold = /<details class="plist-fold">([\s\S]*?)<\/details>/.exec(INDEX);
   assert.ok(fold, "the program list is a <details>");
   assert.ok(!/<details class="plist-fold"[^>]*\bopen\b/.test(INDEX), "it starts closed");
@@ -360,7 +360,7 @@ test("Every program is one closed list that names every row and opens in place (
   assert.equal(Number(/class="plist-n">(\d+)</.exec(fold[1])[1]), rows, "the count in its summary matches its rows");
 });
 
-test("reviewer front door: Listening Post is off the public lists, and the About wording holds (Tom, 21 Nov 2026)", () => {
+test("reviewer front door: Listening Post is off the public lists, and the About wording holds (21 Nov 2026)", () => {
   for (const [page, html] of Object.entries(HTML_PAGES)) assert.ok(!/listening ?post/i.test(html), `${page}: no Listening Post`);
   assert.ok(!NAV.programs.some((p) => p.id === "listeningpost"), "not in the house bar");
   assert.ok(/about half his career as a signals intelligence \(SIGINT\)/.test(INDEX));
@@ -378,7 +378,7 @@ test("Start here links the worked cases page, and each case says what it did not
   assert.ok(cs.length >= 1 && nots.length === cs.length, "every case has a 'does not establish' part");
 });
 
-test("the hub offers no paid work: no Work with us section, nav item or button (Tom, 18 Nov 2026: a personal project)", () => {
+test("the hub offers no paid work: no Work with us section, nav item or button (18 Nov 2026: a personal project)", () => {
   for (const [page, html] of Object.entries(HTML_PAGES)) {
     assert.ok(!/id="services"|href="#services"/.test(html), `${page}: the Work with us section and its links are gone`);
     assert.ok(!/work with us|tell us what you need|for every client|consulting/i.test(html), `${page}: no wording that offers work`);

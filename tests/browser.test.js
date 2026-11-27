@@ -347,7 +347,7 @@ describe("the hub design (15 Nov 2026)", () => {
     } finally { await t.close(); }
   });
 
-  test("How we work and About show in full without a click: no fold (Tom, 18 Nov 2026)", async () => {
+  test("How we work and About show in full without a click: no fold (18 Nov 2026)", async () => {
     const t = await open();
     try {
       for (const id of ["standards", "about"]) {
