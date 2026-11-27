@@ -1,0 +1,124 @@
+{
+  "note": "Extract of the doctrine kit's vocab/programs.json: layers and each program's home layer. Copied, not edited: refresh with `node check-live.js --update-registry`.",
+  "kit_version": "0.6.18",
+  "source": "https://github.com/metacog-osint/tic-doctrine/blob/b3a0cb65d7973e4fb5ef4d1ec917d4f53267d60c/vocab/programs.json",
+  "registry_version": "1.1",
+  "layers": [
+    {
+      "key": "systems",
+      "name": "Systems"
+    },
+    {
+      "key": "human",
+      "name": "Human"
+    },
+    {
+      "key": "cyber",
+      "name": "Cyberspace"
+    },
+    {
+      "key": "ems",
+      "name": "Electromagnetic spectrum",
+      "short": "Spectrum"
+    },
+    {
+      "key": "space",
+      "name": "Space"
+    },
+    {
+      "key": "air",
+      "name": "Air"
+    },
+    {
+      "key": "land",
+      "name": "Land and maritime"
+    }
+  ],
+  "all": "Every layer",
+  "programs": [
+    {
+      "id": "watchfloor",
+      "layer": "systems"
+    },
+    {
+      "id": "context",
+      "layer": "human"
+    },
+    {
+      "id": "vigil",
+      "layer": "cyber"
+    },
+    {
+      "id": "noisefloor",
+      "layer": "ems"
+    },
+    {
+      "id": "elements",
+      "layer": "land"
+    },
+    {
+      "id": "cordon",
+      "layer": "air"
+    },
+    {
+      "id": "vis",
+      "layer": "air"
+    },
+    {
+      "id": "blackout",
+      "layer": "cyber"
+    },
+    {
+      "id": "headwind",
+      "layer": "systems"
+    },
+    {
+      "id": "orbit",
+      "layer": "space"
+    },
+    {
+      "id": "launch",
+      "layer": "space"
+    },
+    {
+      "id": "undertow",
+      "layer": "human"
+    },
+    {
+      "id": "wake",
+      "layer": "land"
+    },
+    {
+      "id": "verdict",
+      "layer": "all"
+    },
+    {
+      "id": "cop",
+      "layer": "all"
+    },
+    {
+      "id": "fieldcast",
+      "layer": "space"
+    },
+    {
+      "id": "tempo",
+      "layer": "systems"
+    },
+    {
+      "id": "readout",
+      "layer": "human"
+    },
+    {
+      "id": "temper",
+      "layer": "human"
+    },
+    {
+      "id": "relief",
+      "layer": "human"
+    },
+    {
+      "id": "dead-drop",
+      "layer": null
+    }
+  ]
+}
