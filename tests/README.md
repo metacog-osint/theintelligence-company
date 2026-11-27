@@ -12,12 +12,13 @@ Checks for the hub site (`../site`), the house bar every program site carries, a
 | `related.test.js` | "Elsewhere today" (`tic-related.js`): the pick rules on a fixture index in Node (48 hours, day and month precision, own program, stale, expired, individuals, order); the card on a stand-in program page under a strict CSP: one per program, labels, links, one read without cookies, a failed read stays hidden, no read until the card nears the screen; axe light and dark | Node, Playwright, axe |
 | `tabs.test.js` | The sections row (`tic-tabs.js`): one group at a time on phones, every group on desktop, deep links into a group, keyboard, resize, no script; axe light and dark from the top of the page | Playwright, axe |
 | `a11y.test.js` | axe (WCAG 2.2 AA and best practices) in light and dark, desktop and phone; contrast of the drawing's labels | Playwright, axe |
+| `registry.test.js` | The drawing (`oe/oe.js` `LAYERS`, each program's `home`) and the house bar (`tic-nav.js` `GROUPS`, each program's `layer`) against the doctrine kit's program registry (`vocab/programs.json`: `layers`, each program's `layer`), read from the pinned extract `fixtures/kit-registry-layers.json`. Ids on one side only are listed in the test with why | Node only |
 | `feeds.test.js` | `check-live.js` itself, against a stand-in server | Node |
 | `veterans.test.js` | The Veterans Day planner's house rules and data: no inline code, CSP, page text (privacy, sources), deals vs stores vs drive tables | Node only |
 | `veterans-engine.test.js` | The planner's route engine (`engine.js`) | Node only |
 | `veterans-roads.test.js` | The Map's route line (`roads.js`): splitting OSRM's answer into legs, one request a second, legs kept, failures and timeouts stay straight | Node only |
 | `veterans-map.test.js` | The planner's Map in Chromium with a stand-in OSRM: only store coordinates are sent (never a start point or GPS position), the road line replaces the straight one, offline fallback, colours in light and dark | Playwright |
-| `check-live.js` | The fourteen live feeds have every field the hub reads (not a test; needs the internet) | Node |
+| `check-live.js` | The fourteen live feeds have every field the hub reads, and the pinned registry extract still matches the kit's current file (not a test; needs the internet). `--update-registry` rewrites the extract from the kit's `main` and records the commit | Node |
 
 ## Run
 
@@ -57,4 +58,6 @@ feeds against the same `SHAPES`.
 ## When a check fails
 
 The message names the rule and the file. Adding or renaming a program fails the list checks until `tic-nav.js`,
-`oe/oe.js`, `index.html` and `404.html` agree, and until the footer credits the new program's Sources page.
+`oe/oe.js`, `index.html` and `404.html` agree, and until the footer credits the new program's Sources page. It also
+fails `registry.test.js` until the kit's registry carries the program with the same layer (change the kit, then
+refresh the extract with `node check-live.js --update-registry`), or the test's `HUB_ONLY` list names it with why.

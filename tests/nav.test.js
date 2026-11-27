@@ -32,6 +32,19 @@ test("the bar mounts first in <body>, links home, and finds the program from the
   } finally { await t.close(); }
 });
 
+test("v2.5: when <body> opens with a skip link, the bar mounts after it, so the skip link is reached first", async () => {
+  const t = await open({ skip: true });
+  try {
+    const order = await t.page.evaluate(() => [...document.body.children].slice(0, 3).map((e) => e.className));
+    assert.deepEqual(order, ["skip", "tic-house", "tic-house-room"], "skip link, then the bar and its room");
+    await t.page.keyboard.press("Tab");
+    assert.equal(await t.page.evaluate(() => document.activeElement.className), "skip", "the first Tab reaches the skip link");
+    await t.page.keyboard.press("Tab");
+    assert.equal(await t.page.evaluate(() => document.activeElement.className), "tic-house-home", "the next reaches the bar");
+    assert.deepEqual(t.errors, []);
+  } finally { await t.close(); }
+});
+
 test("the menu lists every program in its group, opens in the same tab, and starts on the current program", async () => {
   const t = await open();
   try {
