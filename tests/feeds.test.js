@@ -2,11 +2,20 @@
 import { test, before, after } from "node:test";
 import assert from "node:assert/strict";
 import http from "node:http";
-import { checkFeed } from "./check-live.js";
+import { checkFeed, checkRegistry } from "./check-live.js";
 import { sample } from "./lib/feeds.js";
+import { readFixture } from "./lib/registry.js";
 
 let server, base;
+// A registry file rebuilt from the pinned extract, and the same with one program moved and one added.
+const PINNED = readFixture();
+const asRegistry = (x) => ({ version: x.registry_version, layers: { values: x.layers, all: x.all }, programs: x.programs });
+const MOVED = asRegistry(PINNED);
+MOVED.programs = MOVED.programs.map((p) => (p.id === "vis" ? { ...p, layer: "land" } : p)).concat([{ id: "newprog", layer: "space" }]);
 const ROUTES = {
+  "/programs.json": { json: asRegistry(PINNED) },
+  "/programs-moved.json": { json: MOVED },
+  "/init.py": { body: `__version__ = "${PINNED.kit_version}"\n` },
   "/board.json": { json: sample("NOISEFLOOR") },
   "/summary": { json: sample("WATCHFLOOR") },
   "/vigil-503": { status: 503, json: { error: "unsure" } },
@@ -49,4 +58,13 @@ test("missing fields, missing CORS, a missing Last-Modified and a non-JSON body 
   assert.ok((await checkFeed("VIGIL", base + "/no-cors")).out.some((p) => /Access-Control-Allow-Origin/.test(p)));
   assert.ok((await checkFeed("CORDON_FEED", base + "/feed-no-date.geojson")).out.some((p) => /Last-Modified/.test(p)));
   assert.deepEqual((await checkFeed("VIGIL", base + "/not-json")).out, ["not JSON"]);
+});
+
+test("the kit registry check passes when the layers match the pinned extract and lists each change when they don't", async () => {
+  const same = await checkRegistry(base + "/programs.json", base + "/init.py");
+  assert.deepEqual(same.out, []);
+  assert.ok(same.note.startsWith("kit " + PINNED.kit_version + " "), same.note);
+  const moved = await checkRegistry(base + "/programs-moved.json", base + "/init.py");
+  assert.deepEqual(moved.out, ["newprog added (layer space)", "vis: layer air -> land"]);
+  await assert.rejects(checkRegistry(base + "/missing.json", base + "/init.py"), /HTTP 404/);
 });

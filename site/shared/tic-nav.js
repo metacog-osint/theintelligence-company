@@ -1,4 +1,4 @@
-/*! tic-nav.js v2.4 · The Intelligence Company house bar: a link home and a Programs menu · canonical copy:
+/*! tic-nav.js v2.5 · The Intelligence Company house bar: a link home and a Programs menu · canonical copy:
  *  the hub's site/shared/tic-nav.js (copy into each site with tic-nav.css; keep the version line).
  *  SPDX-License-Identifier: MIT. Copyright (c) 2026 The Intelligence Company. MIT in every repository it is
  *  copied into, whatever that repository's own licence.
@@ -7,9 +7,10 @@
  *  labelled with its primary layer or topic, with a fuller description on mouse-over.
  *
  *  Classic script, no dependencies, CSP-safe (DOM calls only: no inline styles, no HTML strings). Load it at the end
- *  of <body> or with `defer`. It puts the bar first in <body>, or inside <div id="tic-nav"></div> if the page has one
- *  (use that when a fixed header would cover the bar). The current program is found from the host name, or from
- *  <script src="tic-nav.js" data-current="vigil">, and is marked "You are here". Program links open in the same tab:
+ *  of <body> or with `defer`. It puts the bar first in <body> (after the page's skip link, if <body> opens with one),
+ *  or inside <div id="tic-nav"></div> if the page has one (use that when a fixed header would cover the bar). The
+ *  current program is found from the host name, or from <script src="tic-nav.js" data-current="vigil">, and is
+ *  marked "You are here". Program links open in the same tab:
  *  this is site navigation. Keep PROGRAMS in step with the hub's oe/oe.js and product list.
  *    TicNav.mount(el?)   mounts the bar (done automatically once)
  *    TicNav.programs     the list below
@@ -28,6 +29,11 @@
  *    TicNav.minimized()      true when the bar is minimized
  *    TicNav.minimize(bool)   minimizes (true) or restores (false) it, and remembers the choice
  *  v1.13 (15 Nov 2026): Wake (shipping through maritime chokepoints, beta) in the Programs menu.
+ *
+ *  v2.5 (27 Nov 2026): a page's skip link stays the first thing a keyboard reaches. When <body> opens with skip
+ *  links (an <a> to a spot on the same page whose class begins "skip", as in <a class="skip" href="#main">), the bar
+ *  mounts after them instead of ahead of them. Accessibility checkers count a skip link only when no other link
+ *  comes before it, so the bar's home link had made them report the skip link as content outside any landmark.
  *
  *  v2.4 (26 Nov 2026): Dead Drop, the analyst toolbox, joins the Programs menu under a Tools heading at the end.
  *  Programs outside the drawing's layers (group "tools") show their topic under that heading, like the layers.
@@ -217,6 +223,21 @@
     return health;
   }
 
+  // v2.5: where the bar goes at the start of <body>: after any skip links it opens with. Scripts, styles and the like
+  // before or between them are passed over; the first other element ends the search.
+  function isSkipLink(n) {
+    return n.tagName === "A" && /^#./.test(n.getAttribute("href") || "") &&
+      Array.prototype.some.call(n.classList, function (c) { return /^skip/i.test(c); });
+  }
+  function afterSkipLinks(body) {
+    var at = body.firstChild;
+    for (var n = body.firstElementChild; n; n = n.nextElementSibling) {
+      if (isSkipLink(n)) at = n.nextSibling;
+      else if (!/^(SCRIPT|NOSCRIPT|TEMPLATE|STYLE|LINK|META)$/.test(n.tagName)) break;
+    }
+    return at;
+  }
+
   var mounted = false, setMini = null;
   function mount(target) {
     if (mounted) return;
@@ -399,12 +420,12 @@
 
     var slot = target || document.getElementById("tic-nav");
     if (slot) slot.append(nav, room);
-    else { document.body.insertBefore(room, document.body.firstChild); document.body.insertBefore(nav, room); }
+    else { var at = afterSkipLinks(document.body); document.body.insertBefore(room, at); document.body.insertBefore(nav, room); }
     root.classList.add("tic-house-on");
   }
 
   window.TicNav = {
-    version: "2.4", programs: PROGRAMS.slice(), mount: mount,
+    version: "2.5", programs: PROGRAMS.slice(), mount: mount,
     minimized: function () { return document.documentElement.classList.contains("tic-house-minimized"); },
     minimize: function (min) { if (setMini) setMini(min !== false, true); }
   };
