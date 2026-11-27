@@ -44,10 +44,12 @@ export const JOBS = [
   // either of the others made a gp query within the hour, or when today's file was pulled under an hour ago, so its
   // own cron (03:17, 15:17) ends in about a minute after a dispatched run. Public repo, so its minutes are free.
   { repo: "metacog-osint/orbit", workflow: "geo.yml", ref: "main", minutes: [15], hours: [3, 15] },
-  // Launch every six hours (14 Nov 2026), 20 minutes after Orbit starts, since it reads GCAT launches from Orbit's
-  // published snapshot.
-  // Private repo: 4 short one-job runs a day. Its own cron (:11 every 6 h) is the fallback.
-  { repo: "metacog-osint/launch", workflow: "update.yml", ref: "main", minutes: [15], hours: [1, 7, 13, 19] },
+  // Launch every hour, for new notices and Launch Library 2's flown launches: :45 every hour but Blackout's (01, 05,
+  // 09, 13, 17, 21 UTC), where it starts at :55. It reads GCAT launches from Orbit's published snapshot, which changes
+  // every six hours. Public repo, so its minutes are free. Its own cron is the fallback.
+  { repo: "metacog-osint/launch", workflow: "update.yml", ref: "main", minutes: [45],
+    hours: [0, 2, 3, 4, 6, 7, 8, 10, 11, 12, 14, 15, 16, 18, 19, 20, 22, 23] },
+  { repo: "metacog-osint/launch", workflow: "update.yml", ref: "main", minutes: [55], hours: [1, 5, 9, 13, 17, 21] },
   // Undertow every six hours (14 Nov 2026): its publishers disclose monthly to yearly, so four runs a day is plenty.
   // Private repo: 4 one-job runs of under a minute a day. Its own cron (:41 every 6 h) is the fallback.
   { repo: "metacog-osint/undertow", workflow: "update.yml", ref: "main", minutes: [30], hours: [2, 8, 14, 20] },
