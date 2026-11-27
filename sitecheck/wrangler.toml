@@ -5,9 +5,11 @@ compatibility_flags = ["nodejs_compat"]   # @cloudflare/puppeteer needs it
 workers_dev = true     # public, read-only JSON at https://tic-sitecheck.metacog.workers.dev/ (and /history)
 preview_urls = false
 
-# Twice a day, 05:10 and 17:10 UTC (11:10 PM and 11:10 AM CST). 19 sites one at a time take about 2 minutes of
-# browser time, so about 2 of the 10 browser-hours a month Workers Paid includes. Cron count on the account after
-# this: tic-dispatch, propertycast-trigger, vigil-ingestion, wake-ais and this one (Workers Paid allows 250).
+# Twice a day, 05:10 and 17:10 UTC (11:10 PM and 11:10 AM CST). The sites in sites.js, one at a time, take about a
+# minute of browser time (58 s on 26 Nov 2026), so about 1 of the 10 browser-hours a month Workers Paid includes. A
+# failed site's second try adds one more load and at most 20 s of waiting, and no page is opened after minute 12 of a
+# run (check.js OPEN_BY_MS). Cron count on the account after this: tic-dispatch, propertycast-trigger,
+# vigil-ingestion, wake-ais and this one (Workers Paid allows 250).
 [triggers]
 crons = ["10 5,17 * * *"]
 

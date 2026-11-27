@@ -3,16 +3,20 @@
 // scripts run (the house bar mounts), no uncaught script error, and, where a site has one, its map draws.
 //
 // The latest run is public JSON at the Worker's address (/; /history for the last runs), and a Healthchecks.io
-// check (secret HC_PING_URL) gets a ping each run, or /fail with the failures so Tom is emailed. COP's watchdog
-// checks that feeds are fresh; this checks that the pages work.
+// check (secret HC_PING_URL) gets a ping each run, or /fail, which emails the check's owner, when a site failed or
+// has not passed cleanly on several runs in a row (check.js STREAK_RUNS). COP's watchdog checks that feeds are fresh;
+// this checks that the pages work.
 import puppeteer from "@cloudflare/puppeteer";
 import { SITES } from "./sites.js";
 import { probe } from "./probe.js";
-import { judge, summarize, report, clip, checkWithRetry, LOAD_TIMEOUT_MS, EXPECT_TIMEOUT_MS, SETTLE_MS, HISTORY_RUNS } from "./check.js";
+import {
+  judge, summarize, brief, report, logLine, clip, checkAll, within,
+  REAL_CLOCK, LOAD_TIMEOUT_MS, EXPECT_TIMEOUT_MS, SETTLE_MS, HISTORY_RUNS, MIN_MAP_PX,
+} from "./check.js";
 
 const UA_SUFFIX = " tic-sitecheck (+https://theintelligence.company)";
 
-async function checkSite(browser, site) {
+async function checkSite(browser, site, clock) {
   const seen = { console_errors: [], page_errors: [], failed_requests: [] };
   const page = await browser.newPage();
   try {
@@ -21,16 +25,16 @@ async function checkSite(browser, site) {
     page.on("console", (m) => m.type() === "error" && seen.console_errors.push(clip(m.text())));
     page.on("pageerror", (e) => seen.page_errors.push(clip(e && e.message)));
     page.on("response", (r) => r.status() >= 400 && seen.failed_requests.push(clip(`${r.status()} ${r.url()}`)));
-    const t0 = Date.now();
+    const t0 = clock.now();
     const resp = await page.goto(site.url, { waitUntil: "load", timeout: LOAD_TIMEOUT_MS });
     seen.status = resp ? resp.status() : null;
     if (site.expect) {
       await page.waitForSelector(site.expect, { timeout: EXPECT_TIMEOUT_MS }).catch(() => {});
     } else {
-      await new Promise((r) => setTimeout(r, SETTLE_MS));
+      await clock.timer(SETTLE_MS).done;
     }
-    seen.probe = await page.evaluate(probe, site.expect || null);
-    seen.ms = Date.now() - t0;
+    seen.probe = await page.evaluate(probe, site.expect || null, MIN_MAP_PX);
+    seen.ms = clock.now() - t0;
   } catch (e) {
     seen.error = clip(e && e.message);
   } finally {
@@ -39,24 +43,31 @@ async function checkSite(browser, site) {
   return judge(site, seen);
 }
 
-export async function runChecks(env) {
-  const started = new Date();
-  const browser = await puppeteer.launch(env.BROWSER);
-  const results = [];
+// One run: every site through checkAll, then the record in KV, the Healthchecks ping and one log line. deps lets the
+// tests run it with a scripted browser and a mock clock; the Worker passes none.
+export async function runChecks(env, deps = {}) {
+  const {
+    launch = (binding) => puppeteer.launch(binding),
+    clock = REAL_CLOCK,
+    fetcher = (...a) => fetch(...a),
+    log = (line) => console.log(line),
+  } = deps;
+  const started = clock.now();
+  const browser = await launch(env.BROWSER);
+  let results;
   try {
-    // One page at a time: browser time is what's billed, and it keeps one slow site from crowding another. A site
-    // that fails is opened once more before it counts (checkWithRetry).
-    for (const site of SITES) results.push(await checkWithRetry((s) => checkSite(browser, s), site));
+    // One page at a time: browser time is what's billed, and it keeps one slow site from crowding another.
+    results = await checkAll(SITES, (s) => checkSite(browser, s, clock), clock, { start: started });
   } finally {
-    await browser.close().catch(() => {});
+    await within(clock, 10_000, browser.close().catch(() => {}), () => {});
   }
-  const run = summarize(results, started, new Date());
-  const history = (await env.RESULTS.get("history", "json").catch(() => null)) || [];
-  const brief = { finished_at: run.finished_at, ok: run.ok, sites: run.sites, failed: run.failed };
+  const stored = await env.RESULTS.get("history", "json").catch(() => null);
+  const history = Array.isArray(stored) ? stored : [];
+  const run = summarize(results, new Date(started), new Date(clock.now()), history);
   await env.RESULTS.put("latest", JSON.stringify(run));
-  await env.RESULTS.put("history", JSON.stringify([brief, ...history].slice(0, HISTORY_RUNS)));
-  await report(env.HC_PING_URL, run, (...a) => fetch(...a));
-  console.log(`sitecheck: ${run.ok} of ${run.sites} passed${run.failed.length ? `; failed: ${run.failed.join(", ")}` : ""}`);
+  await env.RESULTS.put("history", JSON.stringify([brief(run), ...history].slice(0, HISTORY_RUNS)));
+  await report(env.HC_PING_URL, run, fetcher);
+  log(logLine(run));
   return run;
 }
 
@@ -68,7 +79,9 @@ const HEADERS = {
 };
 
 export default {
-  // Awaited, not waitUntil: a scheduled run may last up to 15 minutes on Workers Paid; a run takes about 2.
+  // Awaited, not waitUntil. Cloudflare ends a scheduled run at 15 minutes of wall time. A run takes about a minute
+  // (58 s on 26 Nov 2026), and checkAll opens no page after minute 12 and cuts a try off at 60 s, so even a run in
+  // which every site hangs writes its record and pings by about minute 13.
   async scheduled(controller, env) {
     await runChecks(env);
   },
