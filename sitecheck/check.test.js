@@ -25,7 +25,7 @@ test("every program in the house bar, and the hub, is checked, once", () => {
   }
 });
 
-test("other work on the domain is checked but listed apart from the programs (Tom, 24 Nov 2026)", () => {
+test("other work on the domain is checked but listed apart from the programs (24 Nov 2026)", () => {
   assert.deepEqual(SITES.filter((s) => s.group === "other").map((s) => s.id), ["propertycast", "activation", "listeningpost"]);
   const other = { id: "o", url: "https://o.theintelligence.company/", group: "other" };
   const run = summarize([judge(site, good), judge(other, { ...good, status: 500 })], new Date(0), new Date(1000));

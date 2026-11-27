@@ -33,7 +33,7 @@ export const JOBS = [
   // Orbit every six hours (13 Nov 2026). GCAT republishes about once a day at no fixed time (headers seen 00:21 and
   // 10:18 UTC), so a run reads an update within six hours. Its own cron (:41 every 6 h) is the fallback.
   { repo: "metacog-osint/orbit", workflow: "update.yml", ref: "main", minutes: [55], hours: [0, 6, 12, 18] },
-  // Orbit's satellite catalog once a day (17 Nov 2026, Tom's yes). Space-Track's use policy allows the SATCAT read
+  // Orbit's satellite catalog once a day (17 Nov 2026, approved). Space-Track's use policy allows the SATCAT read
   // once per UTC date, after 17:00 UTC, and GitHub's own crons (17:23, 19:23, 21:23) fire hours late, so a start that
   // slips past midnight UTC loses the day. 17:30 UTC: 17:35 is Elements' slot. catalog.yml's own guard (stcat.due)
   // allows one read per UTC date, so later starts that day are no-ops. Public repo, so its minutes are free.
@@ -61,7 +61,7 @@ export const JOBS = [
   // well under a minute is about 240 Actions minutes a month. It reads the public snapshot, so it is kept off COP's
   // build slot (:20) and sits 40 minutes after it on the hours they share.
   { repo: "metacog-osint/cop", workflow: "watch.yml", ref: "main", minutes: [0], hours: [1, 4, 7, 10, 13, 16, 19, 22] },
-  // Noisefloor's COSMIC-2 day job (15 Nov 2026, Tom's yes): UCAR posts the day's archive at about 04:35 UTC and the
+  // Noisefloor's COSMIC-2 day job (15 Nov 2026, approved): UCAR posts the day's archive at about 04:35 UTC and the
   // day's limb S4 file is due by 14:00 UTC, so :50 from 04 to 13 UTC, skipping 09:50 (Headwind's slot). Public repo,
   // so its minutes are free. Its own crons are the fallback; its gate skips a day already published, so extra starts
   // end in about a minute.
@@ -72,7 +72,7 @@ export const JOBS = [
   // stations that post a day or two late. Public repo, so its minutes are free. Its own crons are the fallback; its
   // gate ends a start in about a minute when nothing new is posted.
   { repo: "metacog-osint/noise-floor", workflow: "ground-roti.yml", ref: "main", minutes: [30], hours: [9, 10, 11, 12, 13, 16, 22] },
-  // Noisefloor's ADS-B day job (17 Nov 2026, Tom's yes): adsb.lol posts day D at about 03:30 UTC on D+1, and GitHub's own
+  // Noisefloor's ADS-B day job (17 Nov 2026, approved): adsb.lol posts day D at about 03:30 UTC on D+1, and GitHub's own
   // crons (05:40, 12:40) fired at 12-14 UTC, so the day landed at 12:02-14:28 UTC on 1-16 Nov. :25 from 04 to 07
   // UTC (no minute is free in all of 04-09; 08:25 is Vis's) lands it in the early morning; a start with no new day
   // exits in a few minutes. Its CelesTrak and Space-Track steps run only on its own crons, so these hourly starts
@@ -121,7 +121,7 @@ const sleepMs = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 //
 // The report: every tick pings the check, with or without jobs due, so the check also goes red when the clock itself
 // stops (a dead-man). A tick where a start failed after its retries pings /fail with the failures, so Healthchecks
-// emails Tom at once rather than nothing at all (the 15 Nov suite review: Vis's starts failed for four days unseen).
+// emails the owner at once rather than nothing at all (the 15 Nov suite review: Vis's starts failed for four days unseen).
 // A failed ping never fails the tick.
 export async function run(env, when, jobs = JOBS, fetcher = (...a) => fetch(...a), { sleep = sleepMs, delays = RETRY_DELAYS_MS } = {}) {
   const list = due(jobs, when);
