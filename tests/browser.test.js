@@ -55,7 +55,7 @@ describe("Latest from the products", () => {
       assert.deepEqual(await latest(t.page, "watchfloor"), { meta: "Watchfloor · 6 Nov 2026",
         body: "Zone Alpha drew 2.40 times its usual news coverage, the furthest above normal of any zone.", topic: "Conflict warning:" });
       assert.deepEqual(await latest(t.page, "vigil"), { meta: "Vigil · 6 Nov 2026", body: sample("VIGIL").brief, topic: "Cyber threats:" });
-      assert.deepEqual(await latest(t.page, "cop"), { meta: "COP · 7 Nov 2026",
+      assert.deepEqual(await latest(t.page, "cop"), { meta: "COP · 7 Nov 2026, 11:30 AM CST", // generated_at 17:30Z is an instant: shown in the viewer's zone, named
         body: sample("COP_DIRECTION").summary, topic: "Where concern is moving:" });
       assert.match(await textOf(t.page, "#latest-record"), /^Forecast record: 8 scored, all 8 on the side we called \(3 independent questions; skill is held until 30\)\. Last scored: .+ We said 95%, and it happened\.$/);
       clean(t);
@@ -154,6 +154,7 @@ describe('"Updated … ago" in the product list', () => {
         Wake: "Updated 6 h ago", // its feed's generated_at 12:00; not in the sample COP health either
         Relief: "Updated 3 h ago", // its feed's generated_at 15:00; not in the sample COP health either
         Verdict: "Updated 1 h ago", // Last-Modified of its scores file, 17:00
+        "Dead Drop": null, // a toolbox with no data feed
       });
       clean(t);
     } finally { await t.close(); }

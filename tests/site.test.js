@@ -399,13 +399,30 @@ test("each Latest item keeps its bold topic and a body for the feed to fill", ()
   }
 });
 
+test("the COP item links COP's daily brief (ideas#259)", () => {
+  const cop = /<article class="latest-item" id="latest-cop">([\s\S]*?)<\/article>/.exec(INDEX)[1];
+  assert.match(cop, /<a class="latest-link" href="https:\/\/cop\.theintelligence\.company\/brief\/"[^>]*>Today's brief/);
+});
+
 test("no site file is left over from editing (backups, notes, scratch)", () => {
   const walk = (dir) => readdirSync(dir).flatMap((f) => {
     const p = path.join(dir, f);
     return statSync(p).isDirectory() ? walk(p) : [path.relative(SITE, p)];
   });
   for (const f of walk(SITE)) {
-    assert.ok(!/(\.bak|\.orig|\.tmp|~|\.md|\.log)$/i.test(f) && !/(^|[\\/])\./.test(f), `site/${f} would be deployed`);
+    assert.ok(!/(\.bak|\.orig|\.tmp|~|\.md|\.log)$/i.test(f) && !/(^|[\\/])\.(?!well-known[\\/]security\.txt$)/.test(f), `site/${f} would be deployed`);
   }
   assert.ok(existsSync(path.join(ROOT, "firebase.json")));
+});
+
+test("security.txt (RFC 9116) and favicon.ico are served", () => {
+  const st = read("site/.well-known/security.txt");
+  assert.match(st, /^Contact: mailto:support@theintelligence\.company$/m);
+  assert.match(st, /^Preferred-Languages: en$/m);
+  assert.match(st, /^Canonical: https:\/\/theintelligence\.company\/\.well-known\/security\.txt$/m);
+  const exp = /^Expires: (\d{4}-\d{2}-\d{2}T[\d:.]+Z)$/m.exec(st);
+  assert.ok(exp && Date.parse(exp[1]) > Date.now(), "Expires is a future UTC time (renew before it passes)");
+  const ign = JSON.parse(read("firebase.json")).hosting[0].ignore.join(" ");
+  assert.ok(!ign.includes("**/.*"), "the ignore list must not hide .well-known");
+  assert.ok(existsSync(path.join(SITE, "favicon.ico")), "site/favicon.ico exists");
 });

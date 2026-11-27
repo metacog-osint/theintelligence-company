@@ -115,11 +115,295 @@
     <li>Aircraft data: <a href="https://adsb.lol" target="_blank" rel="noopener" aria-describedby="newtab">adsb.lol&nbsp;<span aria-hidden="true">↗</span></a>
       (ODbL). Space weather: Kp from GFZ Potsdam (CC BY 4.0).</li>
   </ul>
+<h2 class="tagging-h" id="vigil-monai-label">Vigil: a medical-imaging tool added to CISA's list of exploited flaws, November 2026</h2>
+<p class="tagging-lede"><strong>The published finding.</strong> Vigil published
+<code>vigil:kev:CVE-2026-133968</code>: "CVE-2026-133968 (Project MONAI MONAI Label) added to CISA's KEV catalog
+on 23 Nov 2026; EPSS 0.04", and beside it <code>vigil:adp:CVE-2026-133968</code>, CISA's own assessment that
+exploitation is active. MONAI Label is an open-source tool for labelling medical images. Vigil marked the KEV
+entry routine, not unusual. Both items are on Vigil's
+<a href="https://vigil.theintelligence.company/vulnerabilities" target="_blank" rel="noopener" aria-describedby="newtab">vulnerabilities page&nbsp;<span aria-hidden="true">↗</span></a>
+and in COP.</p>
+
+<p class="tagging-lede"><strong>The sources it was checked against.</strong> Three public records, read again on
+24 Nov 2026:</p>
+<ul class="points">
+<li>CISA's Known Exploited Vulnerabilities (KEV) catalog, version 2026.11.24: added 23 Nov 2026 as a path
+traversal flaw that lets an unauthenticated remote attacker write files outside the intended directory,
+"potentially resulting in remote code execution". Federal agencies must act by 26 Nov 2026. Known ransomware
+campaign use: "Unknown".</li>
+<li>The CVE record, published 20 Nov 2026: versions before 0.8.6 are affected, and its description says the flaw
+was exploited in the wild from September 2026. Its CVSS 3.1 base score is 9.8 (critical).</li>
+<li>CISA's Vulnrichment assessment (SSVC), dated
+<time datetime="2026-11-23T20:42:05Z" data-tic="time">20:42 UTC on 23 Nov 2026</time>: exploitation active,
+automatable yes, technical impact total.</li>
+</ul>
+
+<h3 class="tagging-h">The exploit score, day by day</h3>
+<p class="tagging-lede">EPSS, from FIRST, is a model's probability that the flaw is exploited in the next 30 days,
+published daily. Vigil's item carries the score from the day CISA added the flaw; the next day's score was much
+higher.</p>
+<div class="tagging-scroll" tabindex="0" role="region" aria-label="EPSS scores for CVE-2026-133968, 21 to 24 Nov 2026">
+<table class="tagging-table">
+<thead><tr><th scope="col">Day</th><th scope="col">EPSS</th><th scope="col">Percentile</th><th scope="col">Note</th></tr></thead>
+<tbody>
+<tr><th scope="row">21 Nov</th><td>0.031</td><td>88th</td><td>CVE published the day before</td></tr>
+<tr><th scope="row">22 Nov</th><td>0.038</td><td>90th</td><td></td></tr>
+<tr><th scope="row">23 Nov</th><td>0.037</td><td>90th</td><td>Added to KEV; the score Vigil shows</td></tr>
+<tr><th scope="row">24 Nov</th><td>0.498</td><td>99th</td><td></td></tr>
+</tbody>
+</table>
+</div>
+
+<h3 class="tagging-h">What this establishes</h3>
+<ul class="points">
+<li>CISA lists the flaw as exploited in the wild and, separately, assesses exploitation as active. Vigil repeats
+CISA's statements without change. Both come from one publisher, so they are not two independent confirmations.</li>
+<li>Why Vigil kept it routine. Vigil's EPSS alert needs known ransomware use and a current score of at least 0.5.
+CISA gives ransomware use as unknown, and the score Vigil held was 0.037. Even the 24 Nov score, 0.498, would not
+have met the rule.</li>
+<li>How fast it moved: the CVE was published on 20 Nov and added to KEV three days later.</li>
+</ul>
+
+<h3 class="tagging-h">What it does not establish</h3>
+<ul class="points">
+<li>Who exploited the flaw, against whom, or how widely. The KEV entry names no attacker and no victim.</li>
+<li>That it has not been used for ransomware. "Unknown" means CISA does not know, not that it has not happened.</li>
+<li>Why the EPSS score jumped on 24 Nov. FIRST publishes the scores, not the reason a score changed, and the
+score is a model's estimate, not a count of attacks.</li>
+<li>How many MONAI Label servers can be reached from the internet. Vigil does not measure exposure.</li>
+<li>That version 0.8.6 fixes the flaw. That comes from the CVE record; Vigil did not test it.</li>
+</ul>
+
+<h3 class="tagging-h">Check it yourself</h3>
+<ul class="points">
+<li>KEV catalog:
+<a href="https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json" target="_blank" rel="noopener" aria-describedby="newtab">CISA's JSON feed&nbsp;<span aria-hidden="true">↗</span></a>
+(US public domain); search for <code>CVE-2026-133968</code>.</li>
+<li>CVE record and CISA's assessment:
+<a href="https://github.com/cisagov/vulnrichment/blob/develop/2026/133xxx/CVE-2026-133968.json" target="_blank" rel="noopener" aria-describedby="newtab">Vulnrichment file&nbsp;<span aria-hidden="true">↗</span></a>
+(CC0); the SSVC options are under the "CISA ADP Vulnrichment" container.</li>
+<li>EPSS:
+<a href="https://api.first.org/data/v1/epss?cve=CVE-2026-133968&amp;scope=time-series" target="_blank" rel="noopener" aria-describedby="newtab">FIRST's API, with recent days&nbsp;<span aria-hidden="true">↗</span></a>
+(free to use with attribution).</li>
+<li>Vigil's alert rule: the <code>EPSS_ALERT</code> rule in Vigil's
+<a href="https://github.com/metacog-osint/Vigil/blob/main/api/_lib/doctrineFeed.js" target="_blank" rel="noopener" aria-describedby="newtab">feed code&nbsp;<span aria-hidden="true">↗</span></a>.</li>
+</ul>
+<h2 class="tagging-h" id="cordon-egypt-advice">Cordon: four governments' travel advice for Egypt, November 2026</h2>
+<p class="tagging-lede"><strong>The published finding.</strong> Cordon carries each government's advice as its own
+item and does not merge them. For Egypt on 25 Nov 2026 it listed four, each with the date that government last
+changed it:</p>
+<ul class="points">
+<li><code>cordon:advisory:EG</code>, United States: "Level 2, Exercise Increased Caution" (24 Nov 2026).</li>
+<li><code>cordon:fcdo:egypt</code>, United Kingdom: "advises against all travel to parts and all but essential
+travel to parts" (27 Oct 2026).</li>
+<li><code>cordon:canada:EG</code>, Canada: "Exercise a high degree of caution (with regional advisories)"
+(12 Nov 2026).</li>
+<li><code>cordon:safetravel:EG</code>, New Zealand: "Exercise increased caution (other levels apply in some
+areas)" (31 Jul 2026).</li>
+</ul>
+
+<p class="tagging-lede"><strong>The sources it was checked against.</strong> Each government's own published advice,
+read again on 24 Nov 2026: the US State Department's travel advisory data, updated
+<time datetime="2026-11-24T00:00:00Z" data-tic="time">00:00 UTC on 24 Nov 2026</time>; the FCDO's page through
+GOV.UK's content API, updated
+<time datetime="2026-10-27T16:03:56Z" data-tic="time">16:03 UTC on 27 Oct 2026</time> ("Updated information
+about Regional tensions"); Global Affairs Canada's open data file for Egypt; and New Zealand's SafeTravel page,
+"Page updated 31 July 2026". Every date Cordon shows matches its source.</p>
+
+<h3 class="tagging-h">Where the advice agrees and where it differs</h3>
+<p class="tagging-lede">The overall levels look alike, but the regional advice under them does not. Wording is
+shortened from each source. New Zealand's regional detail was not checked for this case, so it is left out of the
+table.</p>
+<div class="tagging-scroll" tabindex="0" role="region" aria-label="Regional travel advice for Egypt from the US, UK and Canada">
+<table class="tagging-table">
+<thead><tr><th scope="col">Area</th><th scope="col">United States</th><th scope="col">United Kingdom</th><th scope="col">Canada</th></tr></thead>
+<tbody>
+<tr><th scope="row">North Sinai</th><td>Do not travel (Central and Northern Sinai)</td><td>Against all travel (North Sinai Governorate)</td><td>Avoid all travel (all of North Sinai, and parts of Port Said, Ismailia and Suez east of the canal)</td></tr>
+<tr><th scope="row">Libyan border</th><td>Do not travel (the border region)</td><td>Against all travel within 20 km, except El Salloum (all but essential)</td><td>Avoid all travel within 50 km</td></tr>
+<tr><th scope="row">Western Desert</th><td>Reconsider travel</td><td>Against all but essential travel west of the Nile Valley, with many towns and roads excepted</td><td>Avoid all travel west of the Giza-Luxor-Aswan-Abu Simbel road, with some oases and roads excepted</td></tr>
+<tr><th scope="row">Hala’ib Triangle</th><td>Do not travel</td><td>Against all but essential travel</td><td>Not named</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3 class="tagging-h">What this establishes</h3>
+<ul class="points">
+<li>What each government says and when it last changed it. Cordon reports the advice; it does not grade it.</li>
+<li>All three governments in the table tell their citizens to stay out of North Sinai entirely.</li>
+<li>Farther west they differ. On the Libyan border the band is 20 km for the UK and 50 km for Canada. For the
+Hala’ib Triangle the US says do not travel and the UK says against all but essential travel.</li>
+</ul>
+
+<h3 class="tagging-h">What it does not establish</h3>
+<ul class="points">
+<li>That any area is more or less dangerous than another. Each government advises its own citizens, and that
+advice also reflects how much help its embassy can give there, so a stricter level is not proof of greater
+danger.</li>
+<li>That the levels are on one scale. The US uses four numbered levels, and the UK states which areas it advises
+against. Canada and New Zealand each use their own wording. "Increased caution" from the US and "a high degree of
+caution" from Canada are not the same step.</li>
+<li>That the advice is current everywhere. New Zealand's page was last changed in July, and the UK's in October.
+An older date does not mean the advice is wrong, only that it has not been revised since.</li>
+<li>Why the governments differ. None of them publishes its reasoning beyond the advice itself.</li>
+</ul>
+
+<h3 class="tagging-h">Check it yourself</h3>
+<ul class="points">
+<li>United States:
+<a href="https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.egy.html" target="_blank" rel="noopener" aria-describedby="newtab">State Department advisory for Egypt&nbsp;<span aria-hidden="true">↗</span></a>
+(US public domain).</li>
+<li>United Kingdom:
+<a href="https://www.gov.uk/foreign-travel-advice/egypt/warnings-and-insurance" target="_blank" rel="noopener" aria-describedby="newtab">FCDO, warnings and insurance&nbsp;<span aria-hidden="true">↗</span></a>
+(Open Government Licence v3.0).</li>
+<li>Canada:
+<a href="https://travel.gc.ca/destinations/egypt" target="_blank" rel="noopener" aria-describedby="newtab">travel.gc.ca, Egypt&nbsp;<span aria-hidden="true">↗</span></a>
+(Open Government Licence - Canada).</li>
+<li>New Zealand:
+<a href="https://www.safetravel.govt.nz/destinations/egypt" target="_blank" rel="noopener" aria-describedby="newtab">SafeTravel, Egypt&nbsp;<span aria-hidden="true">↗</span></a>
+(CC BY 4.0).</li>
+</ul>
+<h2 class="tagging-h" id="undertow-google-russia">Undertow: a YouTube takedown Google links to Russia, August 2026</h2>
+<p class="tagging-lede"><strong>The published finding.</strong> Undertow published
+<code>UT-GOOGLE-0ff0742451</code>: "Google: 32 YouTube channels terminated, linked to Russia (2026-08)". Undertow
+rates its confidence low. It names Armenia, Ukraine and the United States as countries in Google's description, but
+does not mark them as targets. The item is on
+<a href="https://undertow.theintelligence.company/#UT-GOOGLE-0ff0742451" target="_blank" rel="noopener" aria-describedby="newtab">Undertow&nbsp;<span aria-hidden="true">↗</span></a>
+and in COP.</p>
+
+<p class="tagging-lede"><strong>The source it was checked against.</strong> Google's
+<a href="https://blog.google/security/influence-operations-bulletin-q3-2026/" target="_blank" rel="noopener" aria-describedby="newtab">Influence Operations Bulletin for Q3 2026&nbsp;<span aria-hidden="true">↗</span></a>,
+published 30 Oct 2026 and read again on 24 Nov 2026. Under August it lists one entry with 32 YouTube channels
+terminated in an investigation Google links to Russia. That entry gives the languages (Armenian, Polish, Romanian,
+Russian and Ukrainian) and says which countries the content criticised: Armenia, Ukraine and the United States.
+Google allows reuse of these facts and counts but not of the bulletin's text, so this case does not quote it.</p>
+
+<h3 class="tagging-h">How Undertow reads the entry</h3>
+<div class="tagging-scroll" tabindex="0" role="region" aria-label="How Undertow records Google's entry">
+<table class="tagging-table">
+<thead><tr><th scope="col">Field</th><th scope="col">Google's bulletin</th><th scope="col">Undertow's item</th></tr></thead>
+<tbody>
+<tr><th scope="row">What was removed</th><td>32 YouTube channels</td><td>32 YouTube channels</td></tr>
+<tr><th scope="row">When</th><td>Listed under August 2026</td><td>August 2026, to the month</td></tr>
+<tr><th scope="row">Origin</th><td>Linked to Russia</td><td>Russia, in Google's own words; where the operators were</td></tr>
+<tr><th scope="row">Other countries</th><td>Named as subjects of the content</td><td>Named, not marked as targets on the map</td></tr>
+<tr><th scope="row">Techniques</th><td>None described</td><td>No DISARM technique tagged</td></tr>
+<tr><th scope="row">Other publishers</th><td>None cited</td><td>No corroboration; one line of evidence</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3 class="tagging-h">What this establishes</h3>
+<ul class="points">
+<li>Google says it terminated 32 YouTube channels in August 2026 as part of an investigation it links to Russia.
+Undertow's count, month and wording match the bulletin.</li>
+<li>Why Undertow's confidence is low. The rubric it publishes caps confidence when there is only one line of
+evidence, and here it is Google's word alone. The evidence is easy to fake, and the method has no scored track
+record yet.</li>
+</ul>
+
+<h3 class="tagging-h">What it does not establish</h3>
+<ul class="points">
+<li>Who directed the campaign. "Linked to Russia" is where Google places the operators, not a finding that the
+Russian state ran it.</li>
+<li>That Armenia, Ukraine or the United States were targets. The bulletin says what the content criticised, not
+who it was aimed at, so Undertow does not put them on the map as targets.</li>
+<li>How many people saw the content. Google gives no views or subscribers for this entry.</li>
+<li>That it is part of any named operation. Google gives it no name, and no other publisher Undertow reads has
+reported it.</li>
+<li>Anything about the channels themselves. They have been removed, so neither Undertow nor a reader can check
+them.</li>
+</ul>
+
+<h3 class="tagging-h">Check it yourself</h3>
+<ul class="points">
+<li>Google's bulletin, linked above: the August section, the entry with 32 YouTube channels.</li>
+<li>The confidence rubric (<code>tic-confidence-1.0</code>):
+<a href="https://github.com/metacog-osint/tic-doctrine/blob/main/docs/confidence-rubric.md" target="_blank" rel="noopener" aria-describedby="newtab">in the TIC doctrine kit&nbsp;<span aria-hidden="true">↗</span></a>.</li>
+<li>The item in COP's feed:
+<a href="https://cop.theintelligence.company/data/today.geojson" target="_blank" rel="noopener" aria-describedby="newtab">today.geojson&nbsp;<span aria-hidden="true">↗</span></a>;
+search for <code>UT-GOOGLE-0ff0742451</code>.</li>
+</ul>
+
+<h2 class="tagging-h" id="cop-cameroon-triage">COP: an internet outage in Cameroon, read across three other programs, November 2026</h2>
+<p class="tagging-lede"><strong>The published finding.</strong> Blackout published
+<code>blackout:radar-anomaly:3123fd7f-5639-46ed-9a0a-c37e71706282</code>: a traffic anomaly on one Cameroonian
+network, AS15964 (CAMNET-AS), from
+<time datetime="2026-11-22T11:45:00Z" data-tic="time">11:45 UTC</time> to
+<time datetime="2026-11-22T13:30:00Z" data-tic="time">13:30 UTC</time> on 22 Nov 2026, which Cloudflare Radar
+flagged and marked verified. COP's outage triage then asked three other programs what they showed for Cameroon
+around that hour, and read the outage <strong>open</strong>. Elements had no significant hazard that began in the
+72 hours before. Cordon had no travel or embassy notice issued or raised in the 48 hours before. Watchfloor's press
+attention was not raised. The reading is on
+<a href="https://cop.theintelligence.company/" target="_blank" rel="noopener" aria-describedby="newtab">COP&nbsp;<span aria-hidden="true">↗</span></a>,
+under Outage triage.</p>
+
+<p class="tagging-lede"><strong>The sources it was checked against.</strong> COP's own daily archive shows when
+the item arrived. It is absent from the snapshots of 23 Nov at 00:20, 06:21 and 12:20 UTC and present from the
+18:20 UTC snapshot, about 29 hours after the anomaly ended, because Radar's verification came after the event. As a
+second instrument, IODA (Georgia Tech's Internet Outage Detection and Analysis) was asked for alerts on AS15964 and
+on Cameroon between 06:00 and 20:00 UTC on 22 Nov, on 25 Nov 2026. It returned none. The same query does return
+IODA's alerts for an outage that Blackout took from IODA (Tuvalu, 24 Nov), so the empty answer is IODA's, not a
+failed request.</p>
+
+<h3 class="tagging-h">How the reading is put together</h3>
+<div class="tagging-scroll" tabindex="0" role="region" aria-label="How COP's triage read the Cameroon outage">
+<table class="tagging-table">
+<thead><tr><th scope="col">Part</th><th scope="col">What COP shows</th><th scope="col">Where it comes from</th></tr></thead>
+<tbody>
+<tr><th scope="row">The outage</th><td>One network, 1 hour 45 minutes, verified by Cloudflare; no cause given</td><td>Blackout, from Cloudflare Radar (CC BY-NC 4.0)</td></tr>
+<tr><th scope="row">Hazards</th><td>Nothing found: one minor hazard and one already running, neither counted</td><td>Elements</td></tr>
+<tr><th scope="row">Notices</th><td>Nothing found: four older notices standing, not counted</td><td>Cordon</td></tr>
+<tr><th scope="row">Press attention</th><td>Nothing found: not raised</td><td>Watchfloor</td></tr>
+<tr><th scope="row">Base rate</th><td>In Cameroon an outage would have read open on 16 of 16 counted days, whatever its cause</td><td>COP's archive</td></tr>
+<tr><th scope="row">Replay</th><td>Open on 58.6% of documented 2025 shutdowns and 80.9% of the same countries' ordinary days; in Cameroon, 4 of 4 shutdowns read open, against 84.6% of 285 ordinary days</td><td>Access Now, #KeepItOn STOP, replayed through triage</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3 class="tagging-h">What this establishes</h3>
+<ul class="points">
+<li>Cloudflare saw an unusual drop in its own traffic from one Cameroonian network on 22 Nov 2026 and marked it
+verified. Blackout's item and COP's archive carry the same network, times and wording.</li>
+<li>None of the context triage looks for was there: no new hazard, no fresh notice, no unusual press attention in
+Cameroon around that hour, with each layer reporting current data.</li>
+<li>What "open" is worth. In Cameroon, almost every day reads open, and so did every documented Cameroonian
+shutdown of 2025. Here the reading adds little either way, and COP prints the base rate and the replay beside it
+to say so.</li>
+</ul>
+
+<h3 class="tagging-h">What it does not establish</h3>
+<ul class="points">
+<li>The cause. Radar gives none, and triage never names one: "open" means nothing else in COP explains the drop,
+not that someone ordered it.</li>
+<li>That it was a shutdown. A fault, maintenance or a power cut on one network looks the same in traffic.</li>
+<li>That the country was affected. Cloudflare saw one network; the other layers are read for the whole country,
+and IODA showed no alert for the network or the country.</li>
+<li>That nothing happened, from the empty layers. "Nothing found" covers only what those three programs read.</li>
+<li>How it ends. The drafted question beside it (whether OONI measures blocking rising in Cameroon in the 72 hours
+after) is a draft, not a registered forecast, and has no probability.</li>
+</ul>
+
+<h3 class="tagging-h">Check it yourself</h3>
+<ul class="points">
+<li>COP's reading:
+<a href="https://cop.theintelligence.company/data/triage.json" target="_blank" rel="noopener" aria-describedby="newtab">triage.json&nbsp;<span aria-hidden="true">↗</span></a>;
+search for <code>3123fd7f</code>. It changes with each build; every reading is kept in the
+<code>triage-log</code> release of COP's public repository.</li>
+<li>COP's archived snapshots:
+<a href="https://github.com/metacog-osint/cop/releases/tag/snapshots-2026-11" target="_blank" rel="noopener" aria-describedby="newtab">snapshots-2026-11&nbsp;<span aria-hidden="true">↗</span></a>,
+the files for 23 Nov.</li>
+<li>The network on Cloudflare Radar:
+<a href="https://radar.cloudflare.com/as15964" target="_blank" rel="noopener" aria-describedby="newtab">AS15964&nbsp;<span aria-hidden="true">↗</span></a>.</li>
+<li>IODA's view of Cameroon:
+<a href="https://ioda.inetintel.cc.gatech.edu/country/CM" target="_blank" rel="noopener" aria-describedby="newtab">IODA&nbsp;<span aria-hidden="true">↗</span></a>.</li>
+<li>The replay method and its figures:
+<a href="https://cop.theintelligence.company/scoring#triage" target="_blank" rel="noopener" aria-describedby="newtab">How COP reads it&nbsp;<span aria-hidden="true">↗</span></a>.</li>
+</ul>
 </main>
 
 <footer class="foot">
   <div class="wrap foot-inner">
-    <p>&copy; 2026 Thomas Brummer · The Intelligence Company · Fargo-Moorhead, ND/MN · Updated <time datetime="2026-11-24T17:00:00Z" data-tic="date" data-tic-year>24 Nov 2026</time></p>
+    <p>&copy; 2026 Thomas Brummer · The Intelligence Company · Fargo-Moorhead, ND/MN · Updated <time datetime="2026-11-25T04:00:00Z" data-tic="date" data-tic-year>25 Nov 2026</time></p>
     <p>No analytics or tracking. If you change the time settings or minimize the top bar, that choice stays in your browser.</p>
   </div>
 </footer>

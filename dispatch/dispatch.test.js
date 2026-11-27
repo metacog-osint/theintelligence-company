@@ -266,6 +266,21 @@ test("Verdict's calendar sync starts at 13:20 UTC and its due check at 14:15", (
   assert.deepEqual(due(JOBS, at(15, 14)).map((j) => j.workflow), ["due.yml"]);
 });
 
+test("Wake runs every six hours, at :55 past 04, 10, 16 and 22 UTC, an hour after Headwind", () => {
+  const w = JOBS.find((j) => j.repo === "metacog-osint/wake");
+  assert.equal(w.workflow, "update.yml");
+  assert.equal(w.ref, "main");
+  assert.deepEqual(w.minutes, [55]);
+  assert.deepEqual(w.hours, [4, 10, 16, 22]);
+  assert.deepEqual(due(JOBS, at(55, 4)).map((j) => j.repo), ["metacog-osint/wake"]);
+  assert.deepEqual(due(JOBS, at(55, 22)).map((j) => j.repo), ["metacog-osint/wake"]);
+  assert.deepEqual(due(JOBS, at(55, 3)).map((j) => j.repo), []);
+  assert.ok(!due(JOBS, at(55, 5)).some((j) => j.repo === "metacog-osint/wake"));
+  // Headwind's table is read an hour after Headwind starts.
+  const hw = JOBS.find((j) => j.repo === "metacog-osint/headwind");
+  for (const h of hw.hours) assert.ok(w.hours.includes((h + 1) % 24), `no Wake start an hour after Headwind at ${h}`);
+});
+
 test("the ESA ionosphere capture starts once every UTC hour, in a slot no other job has", () => {
   const ism = JOBS.filter((j) => j.repo === "metacog-osint/noise-floor-data");
   assert.ok(ism.every((j) => j.workflow === "ism-hourly.yml" && j.ref === "main"));

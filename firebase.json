@@ -3,18 +3,19 @@
     {
       "target": "hub",
       "public": "site",
-      "ignore": ["**/.*"],
+      "ignore": ["**/.!(well-known)"],
       "headers": [
         {"source": "**/*.@(html|js|css|json)", "headers": [{"key": "Cache-Control", "value": "no-cache"}]},
         {"source": "/", "headers": [{"key": "Cache-Control", "value": "no-cache"}]},
         {"source": "/veterans/veterans-day/**", "headers": [{"key": "Cache-Control", "value": "no-cache"}]},
         {"source": "/veterans/**/*.json", "headers": [{"key": "Cache-Control", "value": "no-cache"}]},
+        {"source": "/.well-known/security.txt", "headers": [{"key": "Content-Type", "value": "text/plain; charset=utf-8"}, {"key": "Cache-Control", "value": "no-cache"}]},
         {"source": "/fonts/**", "headers": [{"key": "Cache-Control", "value": "public, max-age=31536000"}]},
         {"source": "/img/**", "headers": [{"key": "Cache-Control", "value": "public, max-age=86400"}]},
         {"source": "**", "headers": [
           {"key": "X-Content-Type-Options", "value": "nosniff"},
           {"key": "Referrer-Policy", "value": "strict-origin-when-cross-origin"},
-          {"key": "Content-Security-Policy", "value": "default-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; style-src 'self'; script-src 'self'; connect-src 'self' https://launch.theintelligence.company https://noisefloor.theintelligence.company https://mc-api-odg3xhcd4a-uc.a.run.app https://vigil.theintelligence.company https://cop.theintelligence.company https://metacog-osint.github.io https://elements.theintelligence.company https://cordon.theintelligence.company https://vis.theintelligence.company https://blackout.theintelligence.company https://headwind.theintelligence.company https://orbit.theintelligence.company https://undertow.theintelligence.company https://relief.theintelligence.company https://wake.theintelligence.company https://api.weather.gov https://vetday.metacog.workers.dev https://router.project-osrm.org; frame-ancestors 'none'; base-uri 'self'"}
+          {"key": "Content-Security-Policy", "value": "default-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; style-src 'self'; script-src 'self'; connect-src 'self' https://launch.theintelligence.company https://noisefloor.theintelligence.company https://mc-api-odg3xhcd4a-uc.a.run.app https://vigil.theintelligence.company https://cop.theintelligence.company https://verdict.theintelligence.company https://elements.theintelligence.company https://cordon.theintelligence.company https://vis.theintelligence.company https://blackout.theintelligence.company https://headwind.theintelligence.company https://orbit.theintelligence.company https://undertow.theintelligence.company https://relief.theintelligence.company https://wake.theintelligence.company https://api.weather.gov https://vetday.metacog.workers.dev https://router.project-osrm.org; frame-ancestors 'none'; base-uri 'self'"}
         ]},
         {"source": "/shared/**", "headers": [{"key": "Access-Control-Allow-Origin", "value": "*"}]}
       ]
