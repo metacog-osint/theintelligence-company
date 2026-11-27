@@ -21,6 +21,7 @@ export const SITES = [
   { id: "vis", url: "https://vis.theintelligence.company/" },
   { id: "elements", url: "https://elements.theintelligence.company/", expect: ".leaflet-container" },
   { id: "wake", url: "https://wake.theintelligence.company/" },
+  { id: "deaddrop", url: "https://deaddrop.theintelligence.company/" },
   // Other work on the domain, not suite programs (Tom, 24 Nov 2026): still checked and still in the totals and the
   // Healthchecks ping, but listed apart, under other_work, so the run record does not present them as programs.
   { id: "propertycast", url: "https://propertycast.theintelligence.company/", expect: "canvas", group: "other" },

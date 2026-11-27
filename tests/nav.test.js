@@ -38,8 +38,8 @@ test("the menu lists every program in its group, opens in the same tab, and star
     await btn(t.page).click();
     assert.equal(await btn(t.page).getAttribute("aria-expanded"), "true");
     assert.deepEqual(await t.page.$$eval(".tic-house-group", (ps) => ps.map((p) => p.textContent)),
-      ["Every layer", "Systems", "Human", "Cyberspace", "Spectrum", "Space", "Air", "Land and maritime"],
-      "v2.0: one heading per layer, in the drawing's order; v2.3: no other projects");
+      ["Every layer", "Systems", "Human", "Cyberspace", "Spectrum", "Space", "Air", "Land and maritime", "Tools"],
+      "v2.0: one heading per layer, in the drawing's order; v2.3: no other projects; v2.4: Tools last");
     const items = await t.page.$$eval(".tic-house-item", (as) => as.map((a) => ({ href: a.getAttribute("href"), target: a.target })));
     const order = ["layers", "tools"].flatMap((g) => NAV.programs.filter((p) => p.group === g));
     assert.deepEqual(items.map((i) => i.href), order.map((p) => p.href));
@@ -448,7 +448,9 @@ test("v2.3: data-menu=\"off\" mounts the home link and the minimize button with 
 
 test("v2.3: the menu lists only the suite: no PropertyCast, Title 10 or Listening Post", () => {
   for (const id of ["propertycast", "activation", "listeningpost"]) assert.ok(!NAV.programs.some((p) => p.id === id), id);
-  assert.ok(NAV.programs.every((p) => p.group === "layers"));
+  assert.ok(NAV.programs.every((p) => p.group === "layers" || p.group === "tools"));
+  assert.deepEqual(NAV.programs.filter((p) => p.group === "tools").map((p) => p.id), ["deaddrop"], "v2.4: Dead Drop, under Tools");
+  assert.equal(NAV.programs[NAV.programs.length - 1].id, "deaddrop", "v2.4: Tools come last");
 });
 
 test("v2.0: under a layer's heading each program shows its topic, not the layer again", async () => {
@@ -457,7 +459,6 @@ test("v2.0: under a layer's heading each program shows its topic, not the layer 
     await btn(t.page).click();
     const labels = await t.page.$$eval(".tic-house-label", (ls) => ls.map((l) => l.textContent));
     const want = NAV.programs.map((p) => {
-      if (p.group === "tools") return p.label;
       const s = p.label.split(" · ").slice(1).join(" · ");
       return s.charAt(0).toUpperCase() + s.slice(1);
     });

@@ -1,4 +1,4 @@
-/*! tic-nav.js v2.3.2 · The Intelligence Company house bar: a link home and a Programs menu · canonical copy:
+/*! tic-nav.js v2.4 · The Intelligence Company house bar: a link home and a Programs menu · canonical copy:
  *  the hub's site/shared/tic-nav.js (copy into each site with tic-nav.css; keep the version line).
  *  SPDX-License-Identifier: MIT. Copyright (c) 2026 The Intelligence Company. MIT in every repository it is
  *  copied into, whatever that repository's own licence.
@@ -28,6 +28,9 @@
  *    TicNav.minimized()      true when the bar is minimized
  *    TicNav.minimize(bool)   minimizes (true) or restores (false) it, and remembers the choice
  *  v1.13 (15 Nov 2026): Wake (shipping through maritime chokepoints, beta) in the Programs menu.
+ *
+ *  v2.4 (26 Nov 2026): Dead Drop, the analyst toolbox, joins the Programs menu under a Tools heading at the end.
+ *  Programs outside the drawing's layers (group "tools") show their topic under that heading, like the layers.
  *
  *  v2.3.2 (26 Nov 2026): Orbit's entry no longer lists scheduled launches, which moved to Launch at orbit-2.32;
  *  Launch's entry names them.
@@ -130,12 +133,16 @@
     { id: "wake", name: "Wake", href: "https://wake.theintelligence.company", status: "beta", group: "layers", layer: "land",
       label: "Land and maritime · shipping chokepoints",
       short: "Ships crossing the world's maritime chokepoints, week by week, against their own normal.",
-      long: "Vessel transits through 28 maritime chokepoints, from Hormuz and Bab el-Mandeb to Malacca and Panama: IMF PortWatch's daily counts by ship type, as weekly means compared with the 90 days before and the same weeks a year earlier. Updated by hand once a week. Measurements only." }
+      long: "Vessel transits through 28 maritime chokepoints, from Hormuz and Bab el-Mandeb to Malacca and Panama: IMF PortWatch's daily counts by ship type, as weekly means compared with the 90 days before and the same weeks a year earlier. Updated by hand once a week. Measurements only." },
+    { id: "deaddrop", name: "Dead Drop", href: "https://deaddrop.theintelligence.company", status: "beta", group: "tools",
+      label: "Tools · analyst toolbox",
+      short: "Standalone analyst tools that run in the browser, each showing its method and reference.",
+      long: "A toolbox of 44 standalone analyst tools that run in the browser: orbits and space, launch, RF and comms, geography and maps, images and files, time, and reference. Each tool shows its method and its reference, and each is backed by an offline test." }
   ];
   var STATUS = { live: "Live", beta: "Beta", invite: "Invite only" };
   // v2.0: one heading per layer, in the hub drawing's order (oe/oe.js LAYERS), then the tools outside the drawing.
   var GROUPS = [["all", "Every layer"], ["systems", "Systems"], ["human", "Human"], ["cyber", "Cyberspace"],
-    ["ems", "Spectrum"], ["space", "Space"], ["air", "Air"], ["land", "Land and maritime"]];
+    ["ems", "Spectrum"], ["space", "Space"], ["air", "Air"], ["land", "Land and maritime"], ["tools", "Tools"]];
   // COP's health states, in words (COP's own legend calls a stale program "no current data").
   var FRESH = { fresh: "On time", late: "Running late", stale: "No current data" };
 
@@ -156,7 +163,6 @@
   function groupOf(p) { return p.group === "tools" ? "tools" : p.layer; }
   // Under a layer's heading the layer's name would repeat, so the item shows only the topic.
   function topicOf(p) {
-    if (p.group === "tools") return p.label;
     var i = p.label.indexOf(" · ");
     var t = i < 0 ? p.label : p.label.slice(i + 3);
     return t.charAt(0).toUpperCase() + t.slice(1);
@@ -398,7 +404,7 @@
   }
 
   window.TicNav = {
-    version: "2.3.2", programs: PROGRAMS.slice(), mount: mount,
+    version: "2.4", programs: PROGRAMS.slice(), mount: mount,
     minimized: function () { return document.documentElement.classList.contains("tic-house-minimized"); },
     minimize: function (min) { if (setMini) setMini(min !== false, true); }
   };
