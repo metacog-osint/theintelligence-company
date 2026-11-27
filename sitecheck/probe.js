@@ -3,16 +3,20 @@
 //
 // It reports what a visitor would notice: whether the house bar mounted (proof the page's scripts ran), whether a
 // map drew, and how much text the page shows. It reads nothing private: these are public pages.
-export function probe(expect) {
+export function probe(expect, minPx = 50) {
+  // Selector by selector, the first element with a visible size (at least minPx wide and high); failing that, the
+  // first element found at all, so the record shows what was there and how big it was.
   const pick = (sels) => {
+    let first = null;
     for (const s of sels) {
-      const el = document.querySelector(s);
-      if (el) {
+      for (const el of document.querySelectorAll(s)) {
         const r = el.getBoundingClientRect();
-        return { selector: s, width: Math.round(r.width), height: Math.round(r.height) };
+        const found = { selector: s, width: Math.round(r.width), height: Math.round(r.height) };
+        if (found.width >= minPx && found.height >= minPx) return found;
+        if (!first) first = found;
       }
     }
-    return null;
+    return first;
   };
   const nav = performance.getEntriesByType("navigation")[0];
   return {
