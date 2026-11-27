@@ -1,0 +1,28 @@
+name: sitecheck-test
+# Runs the site check Worker's tests (sitecheck/, node --test) on pull requests, so a change is tested before it is
+# merged. Nothing here deploys and no secret is used: sitecheck-deploy.yml tests again and deploys after a merge.
+on:
+  pull_request:
+    paths: ["sitecheck/**", "site/shared/tic-nav.js", ".github/workflows/sitecheck-test.yml"]
+permissions:
+  contents: read
+concurrency:
+  group: sitecheck-test-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: sitecheck
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: sitecheck/package-lock.json
+      - run: npm ci
+      - name: Test
+        run: node --test --test-reporter=spec
