@@ -200,14 +200,13 @@ test("one failing job doesn't stop another due at the same minute", async () => 
   assert.equal(calls.length, 2);
 });
 
-test("Launch runs every six hours, at :15 past 01, 07, 13 and 19 UTC, after Orbit", () => {
-  const la = JOBS.find((j) => j.repo === "metacog-osint/launch");
-  assert.equal(la.workflow, "update.yml");
-  assert.equal(la.ref, "main");
-  assert.deepEqual(la.minutes, [15]);
-  assert.deepEqual(la.hours, [1, 7, 13, 19]);
-  assert.deepEqual(due(JOBS, at(15, 7)).map((j) => j.repo), ["metacog-osint/launch"]);
-  assert.ok(!due(JOBS, at(15, 8)).some((j) => j.repo === "metacog-osint/launch"));
+test("Launch starts once every UTC hour, at :45, or :55 in Blackout's hours", () => {
+  const la = JOBS.filter((j) => j.repo === "metacog-osint/launch");
+  for (let h = 0; h < 24; h++) {
+    const starts = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55].filter((m) => due(la, at(m, h)).length > 0);
+    assert.deepEqual(starts, [1, 5, 9, 13, 17, 21].includes(h) ? [55] : [45], `hour ${h}`);
+  }
+  assert.ok(la.every((j) => j.workflow === "update.yml" && j.ref === "main"));
 });
 
 test("Noisefloor's COSMIC-2 day job runs at :50 from 04 to 13 UTC, except Headwind's 09:50", () => {
