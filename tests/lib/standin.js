@@ -7,6 +7,7 @@
 // v2.0: `health` serves COP's health check at https://cop.theintelligence.company/data/health.json (a fixture file name
 // in tests/fixtures, or { status } for a failure) with open CORS, and lets the page's CSP connect to COP, as a site
 // that turns on the freshness dots does. Requests to COP are counted in `healthHits`.
+// v2.5: `skip` opens <body> with a skip link, <a class="skip" href="#main">, as most program sites do.
 import { read } from "./source.js";
 import fs from "node:fs";
 import path from "node:path";
@@ -15,9 +16,10 @@ import { fileURLToPath } from "node:url";
 const FIXTURES = path.join(path.dirname(fileURLToPath(import.meta.url)), "..", "fixtures");
 const COP = "https://cop.theintelligence.company";
 
-const PAGE = ({ attrs = "", slot = false } = {}) => `<!doctype html><html lang="en"><head><meta charset="utf-8">
+const PAGE = ({ attrs = "", slot = false, skip = false } = {}) => `<!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1"><title>Stand-in product</title>
 <link rel="stylesheet" href="/tic-nav.css"><link rel="stylesheet" href="/page.css"></head><body>
+${skip ? '<a class="skip" href="#main">Skip to content</a>' : ""}
 ${slot ? '<div class="wrap"><a class="skip" href="#main">Skip to content</a><div id="tic-nav"></div></div>' : ""}
 <header class="product">A stand-in product header <a href="#limits">Limits</a></header>
 <main id="main"><h1>Stand-in product page</h1><p>Content.</p>
@@ -38,7 +40,7 @@ const CSP_COP = CSP + "; connect-src 'self' " + COP;
 
 export async function openStandIn(browser, { origin = "https://vigil.theintelligence.company", attrs = "", phone = false,
   width = 375, colorScheme = "light", bypassCSP = false, slot = false, stickyHeader = false, alsoServe = [],
-  reducedMotion = "no-preference", initScript = null, health = null } = {}) {
+  reducedMotion = "no-preference", initScript = null, health = null, skip = false } = {}) {
   const context = await browser.newContext({
     viewport: phone ? { width, height: 812 } : { width: 1440, height: 900 }, hasTouch: phone, isMobile: phone,
     colorScheme, bypassCSP, reducedMotion,
@@ -58,7 +60,7 @@ export async function openStandIn(browser, { origin = "https://vigil.theintellig
     }
     if (!served.includes(u.origin)) { strays.push(u.href); return route.abort(); }
     const headers = { "content-security-policy": health ? CSP_COP : CSP };
-    if (u.pathname === "/") return route.fulfill({ headers, contentType: "text/html", body: PAGE({ attrs, slot }) });
+    if (u.pathname === "/") return route.fulfill({ headers, contentType: "text/html", body: PAGE({ attrs, slot, skip }) });
     if (u.pathname === "/page.css") return route.fulfill({ headers, contentType: "text/css", body: PAGE_CSS({ stickyHeader }) });
     if (u.pathname === "/tic-nav.js") return route.fulfill({ headers, contentType: "text/javascript", body: read("site/shared/tic-nav.js") });
     if (u.pathname === "/tic-nav.css") return route.fulfill({ headers, contentType: "text/css", body: read("site/shared/tic-nav.css") });
