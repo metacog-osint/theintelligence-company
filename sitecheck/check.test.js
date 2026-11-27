@@ -4,7 +4,8 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { SITES } from "./sites.js";
-import { judge, summarize, report, clip } from "./check.js";
+import { judge, wanted, summarize, report, clip, DECLARED_MAX } from "./check.js";
+import { declared, probe } from "./probe.js";
 
 const good = { status: 200, ms: 4000, console_errors: [], page_errors: [], failed_requests: [],
   probe: { title: "X", house_bar: true, map: null, expect: null, text_chars: 900, load_ms: 1200 } };
@@ -117,4 +118,57 @@ test("evidence drops query strings and stays on one short line", () => {
   assert.equal(clip("404 https://api.example/x?key=SECRET&b=1"), "404 https://api.example/x?…");
   assert.equal(clip("a\n  b"), "a b");
   assert.equal(clip("x".repeat(500)).length, 160);
+});
+
+test("a page's own data-sitecheck says what it must draw; sites.js's expect is the fallback", () => {
+  assert.deepEqual(wanted(mapSite, "#map .canvas"), { selector: "#map .canvas", from: "page" }, "the page wins");
+  assert.deepEqual(wanted(site, " #board > * "), { selector: "#board > *", from: "page" }, "trimmed, and no expect needed");
+  assert.deepEqual(wanted(mapSite, null), { selector: ".maplibregl-map", from: "sites.js" }, "no attribute: the old selector");
+  assert.deepEqual(wanted(mapSite, ""), { selector: ".maplibregl-map", from: "sites.js" }, "an empty attribute is no attribute");
+  assert.deepEqual(wanted(mapSite, "x".repeat(DECLARED_MAX + 1)), { selector: ".maplibregl-map", from: "sites.js" }, "an absurd one is ignored");
+  assert.equal(wanted(site, null), null, "neither: only the house bar is checked");
+});
+
+test("a page that declares a selector fails when it did not draw it, and says the page named it", () => {
+  const declaredMissing = { ...good, wanted: wanted(site, "#board > *"), probe: { ...good.probe, expect: false } };
+  const r = judge(site, declaredMissing);
+  assert.equal(r.ok, false);
+  assert.match(r.problems[0], /^no #board > \* .*data-sitecheck/);
+  assert.equal(r.expect_from, "page");
+  const drawn = judge(site, { ...good, wanted: wanted(site, "#board > *"), probe: { ...good.probe, expect: true } });
+  assert.equal(drawn.ok, true);
+  assert.equal(drawn.expect_from, "page");
+  const bad = judge(site, { ...good, wanted: wanted(site, "#a >"), probe: { ...good.probe, expect: false, expect_invalid: true } });
+  assert.equal(bad.ok, false);
+  assert.match(bad.problems[0], /data-sitecheck is not a valid selector/);
+});
+
+test("a page missing the attribute is held to sites.js's expect; a page with neither still passes on the house bar", () => {
+  const missing = judge(mapSite, { ...good, wanted: wanted(mapSite, null), probe: { ...good.probe, expect: false } });
+  assert.equal(missing.ok, false);
+  assert.match(missing.problems[0], /no \.maplibregl-map \(the map or chart did not draw\)$/);
+  assert.equal(missing.expect_from, "sites.js");
+  const neither = judge(site, { ...good, wanted: wanted(site, null) });
+  assert.equal(neither.ok, true);
+  assert.equal(neither.expect_from, null);
+});
+
+test("probe reads the first data-sitecheck in the page and treats a bad selector as a failed draw, not a crash", () => {
+  const els = { "[data-sitecheck]": { getAttribute: () => "#map" }, ".good": {} };
+  globalThis.document = { title: "T", body: { innerText: "text" }, querySelector(sel) {
+    if (sel === "#a >") throw new SyntaxError("bad selector");
+    return els[sel] || null;
+  } };
+  globalThis.performance = { getEntriesByType: () => [] };
+  try {
+    assert.equal(declared(), "#map");
+    els["[data-sitecheck]"] = { getAttribute: () => "" };
+    assert.equal(declared(), null, "an empty value is no declaration");
+    delete els["[data-sitecheck]"];
+    assert.equal(declared(), null);
+    assert.equal(probe(".good").expect, true);
+    assert.equal(probe(".gone").expect, false);
+    assert.deepEqual([probe("#a >").expect, probe("#a >").expect_invalid], [false, true]);
+    assert.equal(probe(null).expect, null);
+  } finally { delete globalThis.document; delete globalThis.performance; }
 });

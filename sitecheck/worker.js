@@ -7,8 +7,8 @@
 // checks that feeds are fresh; this checks that the pages work.
 import puppeteer from "@cloudflare/puppeteer";
 import { SITES } from "./sites.js";
-import { probe } from "./probe.js";
-import { judge, summarize, report, clip, LOAD_TIMEOUT_MS, EXPECT_TIMEOUT_MS, SETTLE_MS, HISTORY_RUNS } from "./check.js";
+import { probe, declared } from "./probe.js";
+import { judge, wanted, summarize, report, clip, LOAD_TIMEOUT_MS, EXPECT_TIMEOUT_MS, SETTLE_MS, HISTORY_RUNS } from "./check.js";
 
 const UA_SUFFIX = " tic-sitecheck (+https://theintelligence.company)";
 
@@ -24,12 +24,14 @@ async function checkSite(browser, site) {
     const t0 = Date.now();
     const resp = await page.goto(site.url, { waitUntil: "load", timeout: LOAD_TIMEOUT_MS });
     seen.status = resp ? resp.status() : null;
-    if (site.expect) {
-      await page.waitForSelector(site.expect, { timeout: EXPECT_TIMEOUT_MS }).catch(() => {});
+    // The page's own data-sitecheck says what it draws; sites.js's `expect` is the fallback for a page without one.
+    seen.wanted = wanted(site, await page.evaluate(declared).catch(() => null));
+    if (seen.wanted) {
+      await page.waitForSelector(seen.wanted.selector, { timeout: EXPECT_TIMEOUT_MS }).catch(() => {});
     } else {
       await new Promise((r) => setTimeout(r, SETTLE_MS));
     }
-    seen.probe = await page.evaluate(probe, site.expect || null);
+    seen.probe = await page.evaluate(probe, seen.wanted ? seen.wanted.selector : null);
     seen.ms = Date.now() - t0;
   } catch (e) {
     seen.error = clip(e && e.message);
