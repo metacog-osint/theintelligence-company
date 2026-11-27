@@ -1,4 +1,4 @@
-/*! tic-nav.js v2.4 · The Intelligence Company house bar: a link home and a Programs menu · canonical copy:
+/*! tic-nav.js v2.4.1 · The Intelligence Company house bar: a link home and a Programs menu · canonical copy:
  *  the hub's site/shared/tic-nav.js (copy into each site with tic-nav.css; keep the version line).
  *  SPDX-License-Identifier: MIT. Copyright (c) 2026 The Intelligence Company. MIT in every repository it is
  *  copied into, whatever that repository's own licence.
@@ -29,6 +29,8 @@
  *    TicNav.minimize(bool)   minimizes (true) or restores (false) it, and remembers the choice
  *  v1.13 (15 Nov 2026): Wake (shipping through maritime chokepoints, beta) in the Programs menu.
  *
+ *  v2.4.1 (27 Nov 2026): Orbit's entry reads what is in orbit and what changed, Launch's leads with
+ *    scheduled launches, and each names the links between the two sites.
  *  v2.4 (26 Nov 2026): Dead Drop, the analyst toolbox, joins the Programs menu under a Tools heading at the end.
  *  Programs outside the drawing's layers (group "tools") show their topic under that heading, like the layers.
  *
@@ -112,12 +114,12 @@
       long: "Where GPS and other satellite navigation is jammed or spoofed, mapped every day from aircraft and ship position reports, with satellite and space-weather context." },
     { id: "orbit", name: "Orbit", href: "https://orbit.theintelligence.company", status: "beta", group: "layers", layer: "space",
       label: "Space · orbital activity",
-      short: "What changed in Earth orbit: launches, reentries, satellite catalog changes and the GEO belt.",
-      long: "What changed in Earth orbit, from public catalogs: orbital launches of the last 7 and 30 days, reentries, changes to the satellite catalog between Orbit's own readings, orbit changes in a watch list of satellites, and the GEO belt, with objects in orbit counted by owner. From Jonathan McDowell's GCAT (CC BY 4.0) and Space-Track. Scheduled launches are Launch's. Measurements and reports only; Orbit adds no judgment. Updated every six hours." },
+      short: "What is in Earth orbit and what changed: objects new to orbit, reentries and satellite catalog changes.",
+      long: "What is in Earth orbit and what changed, from public catalogs: objects new to orbit in the last 7 and 30 days with each launch's payloads, reentries, and changes to the satellite catalog between Orbit's own readings, with objects in orbit counted by owner. Each launch links to its record on Launch, which holds the schedule. From Jonathan McDowell's GCAT (CC BY 4.0) and Space-Track. Measurements and reports only; Orbit adds no judgment. Updated every six hours." },
     { id: "launch", name: "Launch", href: "https://launch.theintelligence.company", status: "beta", group: "layers", layer: "space",
-      label: "Space · launch closures",
-      short: "Launch and reentry closure areas and scheduled launches: what is announced now, which launches coincide, and each pad's history.",
-      long: "Launch and reentry closure areas from official notices: the FAA's space-operations flight restrictions in force, the launches scheduled worldwide (Launch Library 2) and those that coincide with an announced closure area in time, in time and place, or as a launch since dated, a searchable history of closures since 2023 with each notice's own text, and where each pad's closures fall. Worldwide NOTAMs wait on FAA access." },
+      label: "Space · launches and closures",
+      short: "Scheduled launches and their closure areas: what is announced now, which launches coincide, and each pad's history.",
+      long: "Launches and the closure areas around them: launches scheduled from The Space Devs' Launch Library 2, the FAA's space-operations flight restrictions in force, scheduled launches that coincide with an announced closure area in time, in time and place, or as a launch since dated, a searchable history of launches since 2012 and closures since 2023 with each notice's own text, and where each pad's closures fall. Each orbital launch links to its objects on Orbit. Observations only; Launch makes no forecasts. Worldwide NOTAMs wait on FAA access." },
     { id: "cordon", name: "Cordon", href: "https://cordon.theintelligence.company", status: "beta", group: "layers", layer: "air",
       label: "Air · hazard notices",
       short: "Where authorities warn people away.",
@@ -404,7 +406,7 @@
   }
 
   window.TicNav = {
-    version: "2.4", programs: PROGRAMS.slice(), mount: mount,
+    version: "2.4.1", programs: PROGRAMS.slice(), mount: mount,
     minimized: function () { return document.documentElement.classList.contains("tic-house-minimized"); },
     minimize: function (min) { if (setMini) setMini(min !== false, true); }
   };
