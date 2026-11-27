@@ -10,18 +10,33 @@ export const SETTLE_MS = 3_000;
 // Runs kept in KV under "history", newest first.
 export const HISTORY_RUNS = 28;
 
+// The longest selector a page may declare in data-sitecheck.
+export const DECLARED_MAX = 200;
+
+// What the page must have drawn: the selector the page declares in its own data-sitecheck attribute (so a redesign
+// that moves the map moves the check with it), else the site's `expect` in sites.js, else nothing. `declared` is the
+// attribute's value as probe.js's declared() read it, or null when the page has none.
+export function wanted(site, declared) {
+  const d = typeof declared === "string" ? declared.trim() : "";
+  if (d && d.length <= DECLARED_MAX) return { selector: d, from: "page" };
+  if (site.expect) return { selector: site.expect, from: "sites.js" };
+  return null;
+}
+
 // One site's verdict from what the browser saw. A site fails when a visitor would see it broken: no page (status
 // not 200 or the load timed out), an uncaught script error, no house bar (its scripts didn't run) or, where the site
 // has a map, no map. Console errors and failed requests are kept as evidence but don't fail it on their own: three
 // sites log a harmless 404 today (17 Nov 2026), and a check that is always red gets ignored.
 export function judge(site, seen) {
   const problems = [];
+  const want = seen.wanted || wanted(site, null);
   if (seen.error) problems.push(`did not load: ${seen.error}`);
   else if (seen.status !== 200) problems.push(`HTTP ${seen.status}`);
   if (!seen.error) {
     if (seen.page_errors && seen.page_errors.length) problems.push(`script error: ${seen.page_errors[0]}`);
     if (site.house !== false && seen.probe && !seen.probe.house_bar) problems.push("house bar missing (its scripts may not have run)");
-    if (site.expect && seen.probe && !seen.probe.expect) problems.push(`no ${site.expect} (the map or chart did not draw)`);
+    if (want && seen.probe && seen.probe.expect_invalid) problems.push(`data-sitecheck is not a valid selector: ${clip(want.selector)}`);
+    else if (want && seen.probe && !seen.probe.expect) problems.push(`no ${want.selector} (the map or chart did not draw${want.from === "page" ? "; the page's own data-sitecheck" : ""})`);
   }
   return {
     id: site.id,
@@ -29,6 +44,7 @@ export function judge(site, seen) {
     group: site.group === "other" ? "other" : "suite",
     ok: problems.length === 0,
     problems,
+    expect_from: want ? want.from : null,
     status: seen.status ?? null,
     ms: seen.ms ?? null,
     load_ms: seen.probe ? seen.probe.load_ms : null,
