@@ -4,7 +4,7 @@ compatibility_date = "2026-09-01"
 workers_dev = false    # no public URL
 preview_urls = false
 
-# Its own clock since 14 Nov 2026 (Tom's yes). From 5 to 14 Nov PropertyCast's trigger Worker called tick() every
+# Its own clock since 14 Nov 2026 (approved). From 5 to 14 Nov PropertyCast's trigger Worker called tick() every
 # 5 minutes through a service binding; that binding is gone. Nothing stops a job starting twice in one slot, so only
 # one clock may run it. Cron triggers are no longer scarce: Workers Paid (since 17 Nov 2026) allows 250 per account
 # (the free plan allowed 5), so count them from the Workers' configs when it matters rather than keeping a tally here.
@@ -13,7 +13,7 @@ crons = ["*/5 * * * *"]
 
 # Secret (uploaded by .github/workflows/dispatch-deploy.yml from the hub repo's GitHub secrets): DISPATCH_TOKEN
 # Optional secret HC_PING_URL: a Healthchecks.io check's ping address. Every tick pings it, and a tick where a start
-# failed after its retries pings /fail, so Healthchecks emails Tom (dispatch.js, report()). Uploaded by the deploy
+# failed after its retries pings /fail, so Healthchecks emails the owner (dispatch.js, report()). Uploaded by the deploy
 # workflow from the hub repo secret HC_DISPATCH_PING_URL when that is set.
 
 # Workers Logs (17 Nov 2026): one line per start and the thrown error of a failed tick, kept 7 days on Workers Paid.

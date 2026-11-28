@@ -1,7 +1,7 @@
 name: dispatch-deploy
 # Tests and deploys the Cloudflare Worker in dispatch/ (tic-dispatch), which starts Elements' and Cordon's update
 # workflows every 30 minutes because GitHub's own schedule fires only every 4 to 9 hours on this account.
-# Repo secrets, all set by Tom:
+# Repo secrets, all set by the owner:
 #   DISPATCH_TOKEN         fine-grained GitHub token: repositories elements and cordon only, Actions: read and write
 #   CLOUDFLARE_API_TOKEN   Cloudflare API token made from the "Edit Cloudflare Workers" template
 #   CLOUDFLARE_ACCOUNT_ID  the Cloudflare account ID

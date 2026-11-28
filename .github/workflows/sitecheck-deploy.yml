@@ -1,7 +1,7 @@
 name: sitecheck-deploy
 # Tests and deploys the Cloudflare Worker in sitecheck/ (tic-sitecheck), which opens every Intelligence Company site in
 # a headless browser twice a day (Cloudflare Browser Run, Workers Paid). Results: https://tic-sitecheck.metacog.workers.dev/
-# Repo secrets, set by Tom:
+# Repo secrets, set by the owner:
 #   CLOUDFLARE_API_TOKEN    Cloudflare API token made from the "Edit Cloudflare Workers" template (shared with dispatch)
 #   CLOUDFLARE_ACCOUNT_ID   the Cloudflare account ID
 #   HC_SITECHECK_PING_URL   optional: a Healthchecks.io check's ping address (period 12 h, grace 1 h)
